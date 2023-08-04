@@ -1,0 +1,209 @@
+:root {
+  --card-heading-font:35px;
+  --card-heading-font-responsive:30px;
+  --font-size: 20px;
+  --hig-paragraph: 16px;
+}
+img {
+  max-width: 100%;
+}
+main {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.cardHighLight {
+  width: 450px;
+  height: 500px;
+  padding: 2rem 0rem;
+  background: #fff;
+  position: relative;
+  z-index: 0;
+  box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.5);
+  transition: 0.5s ease;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.cardHeaderHeading {
+  font-size: var(--card-heading-font);
+  color: white;
+  text-align: center;
+  line-height: 40px;
+  margin-bottom: 0px;
+}
+.cardHighLight:hover {
+  transform: translateY(20px);
+}
+.HigParagraphh {
+  font-size: var(--font-size);
+  color: white;
+  text-align: center;
+}
+.cardHighLight:before {
+  content: "";
+  position: absolute;
+  /* top: 0; */
+  bottom: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  /* height: 100%; */
+  height: 25%;
+  /* background: linear-gradient(to bottom, rgba(0,176,155,0.5), rgba(150,201,61,1)); */
+  /* background: linear-gradient(rgb(0 0 0 / 67%), rgb(107 7 7 / 94%)); */
+  background: linear-gradient(rgb(0 0 0 / 0%), rgb(107 7 7 / 75%));
+
+  z-index: 2;
+  transition: all 0.5s;
+  opacity: 0;
+}
+
+.cardHighLight:hover:before {
+  opacity: 1;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3); /* Adjust the opacity as needed */
+}
+.cardHighLight > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.cardHighLight .info {
+  position: relative;
+  z-index: 3;
+  color: #fff;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.5s;
+}
+
+.cardHighLight:hover .info {
+  opacity: 1;
+  transform: translateY(0px);
+}
+
+.cardHighLight .info h1 {
+  margin: 0;
+}
+
+.cardHighLight .info p {
+  letter-spacing: 1px;
+  font-size: 20px;
+  margin: 8px 0 20px;
+}
+.cardMain{
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  height: 50%;
+  align-items: center
+}
+.cardMain1{
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  height: 50%;
+  margin-left: -3%;
+}
+.cardinner{
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+.cardHighLight .info .updateBtn {
+  text-decoration: none;
+  /* padding: 0.5rem 1rem; */
+  /* background: #fff; */
+  color: #ffffff;
+  font-size: 20px;
+  cursor: pointer;
+  transition: 0.4s ease;
+}
+.updateBtn {
+  width: 300px;
+  padding-top: 20px;
+  border-radius: 0px;
+  /* border-top: 3px solid white; */
+  display: flex;
+  justify-content: center;
+}
+.verticalTabGrid1 {
+  position: relative;
+  transition-duration: 0.9s;
+  transition: ease 0.3s;
+  height: 50vh;
+  width: 100%;
+  padding-top: 45vh;
+  z-index: 11111;
+}
+.verticalTabGrid1:before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  width: 0px;
+  height: 5px;
+  background-color: #054a91;
+  transition: ease 0.3s;
+}
+.verticalTabGrid1:hover:before {
+  width: 80%;
+}
+.info {
+  display: flex;
+  justify-content: center;
+}
+@media only screen and (min-width: 1020px) and (max-width: 1366px) {
+  .cardHighLight:hover .info {
+    opacity: 1;
+    transform: translateY(-15px);
+  }
+  .cardHeaderHeading{
+    font-size: var(--card-heading-font-responsive);
+    width: 100%;
+    text-align: center;
+    text-wrap: balance;
+    height:50px
+  }
+  .HigParagraphh{
+    font-size: var(--hig-paragraph);
+  }
+  .cardHighLight{
+    height:auto;
+  }
+  .cardMain{
+    height:60%;
+  }
+}
+@media only screen and (min-width: 1400px) and (max-width: 1600px) {
+    .cardHeaderHeading{
+        height:50px
+    }
+}
+@media screen and (max-width: 500px) {
+  .cardMain1 {
+    display:flex;
+ width: 100%;
+   gap: 25px;
+  margin-top: 200px;
+  align-items: center;
+  flex-direction: column;
+  margin-left: -3%;
+  padding: 10%;
+  }}

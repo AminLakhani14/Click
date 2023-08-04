@@ -1,0 +1,596 @@
+.css-1nrlq1o-MuiFormControl-root {
+  width: 100%;
+}
+
+.TooltipText {
+  color: black;
+  font-size: 20px;
+  width: 200px;
+  margin-top: -40px;
+  text-align: center;
+  height: 35px;
+  border-bottom: 1px solid black;
+}
+.TooltipSubText{
+  color: black;
+  font-size: 18px;
+  font-weight: 400;
+  margin-top: 5px;
+  text-align: center;
+  height: 30px;
+  user-select: none;
+  cursor: pointer;
+}
+.TooltipSubText2{
+  color: black;
+  font-size: 18px;
+  font-weight: 400;
+  margin-top: 5px;
+  text-align: center;
+  height: 30px;
+  user-select: none;
+}
+.TooltipSubText:hover{
+color:#720D1D
+}
+.cardMain {
+  display: flex;
+  width: 100%;
+  gap: 25px;
+  margin-top: 60px;
+}
+.cardMain1 {
+  display:flex;
+  /* / width: 80%; / */
+  gap: 60px;
+  margin-top: 50px;
+  align-items: center;
+}
+.cardResource {
+  display: flex;
+  width: 377px;
+  height: 250px;
+}
+
+.cardInnerLeft {
+  width: 50%;
+  height: 250px;
+  background-color: purple;
+}
+
+.cardInnerRight {
+  width: 50%;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  background-color: #f9f9f9;
+}
+
+.cardHeading {
+  font-size: 20px;
+  color: #054a91;
+  height: 170px;
+  padding: 14px;
+  font-weight: 700;
+  font-family: "Crimson Pro" !important;
+}
+
+.resourceButton {
+  height: 47px;
+  width: 140px;
+  margin-left: 18px;
+  border-radius: 7px;
+  background: #5aa1e3;
+  border: none;
+  color: white;
+  font-weight: 500;
+  font-size: 16px;
+  font-family: "Crimson Pro";
+}
+
+.resourceButton:hover {
+  background-color: #4092df;
+}
+
+.feedBackTextField {
+  background-color: rgb(255 255 255);
+  border-radius: 0;
+  border: 2px solid #cccccc;
+  width: 100% !important;
+  margin-top: 7px;
+}
+
+.feedBackTextField:focus {
+  background-color: rgb(255 255 255);
+  border-radius: 0;
+  width: 100% !important;
+  border: 2px solid #cccccc;
+}
+
+.css-1jy569b-MuiFormLabel-root-MuiInputLabel-root.Mui-focused{
+  color: #1976d2
+}
+
+.feedbackMUI .MuiFormLabel-root.MuiInputLabel-root.MuiInputLabel-shrink {
+  color: rgba(0, 0, 0, 0.6);
+  font-family: "Roboto","Helvetica","Arial",sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.4375em;
+  letter-spacing: 0.00938em;
+  padding: 0;
+  position: relative;
+  display: block;
+  transform-origin: top left;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: calc(133% - 32px);
+  position: absolute;
+  left: 10px !important;
+  top: 10px !important;
+  -webkit-transform: translate(14px, -9px) scale(0.75);
+  -moz-transform: translate(14px, -9px) scale(0.75);
+  -ms-transform: translate(14px, -9px) scale(0.75);
+  transform: translate(14px, -9px) scale(0.75);
+  -webkit-transition: color 200ms cubic-bezier(0.0, 0, 0.2, 1) 0ms,-webkit-transform 200ms cubic-bezier(0.0, 0, 0.2, 1) 0ms,max-width 200ms cubic-bezier(0.0, 0, 0.2, 1) 0ms;
+  transition: color 200ms cubic-bezier(0.0, 0, 0.2, 1) 0ms,transform 200ms cubic-bezier(0.0, 0, 0.2, 1) 0ms,max-width 200ms cubic-bezier(0.0, 0, 0.2, 1) 0ms;
+  z-index: 1;
+  pointer-events: auto;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+
+.sectorMUI .MuiFormLabel-root.MuiInputLabel-root.MuiInputLabel-shrink {
+  color: rgba(0, 0, 0, 0.6);
+  font-family: "Roboto","Helvetica","Arial",sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.4375em;
+  letter-spacing: 0.00938em;
+  padding: 0;
+  position: relative;
+  display: block;
+  transform-origin: top left;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: calc(133% - 32px);
+  position: absolute;
+  left: 10px !important;
+  top: 10px !important;
+  -webkit-transform: translate(14px, -9px) scale(0.75);
+  -moz-transform: translate(14px, -9px) scale(0.75);
+  -ms-transform: translate(14px, -9px) scale(0.75);
+  transform: translate(14px, -9px) scale(0.75);
+  -webkit-transition: color 200ms cubic-bezier(0.0, 0, 0.2, 1) 0ms,-webkit-transform 200ms cubic-bezier(0.0, 0, 0.2, 1) 0ms,max-width 200ms cubic-bezier(0.0, 0, 0.2, 1) 0ms;
+  transition: color 200ms cubic-bezier(0.0, 0, 0.2, 1) 0ms,transform 200ms cubic-bezier(0.0, 0, 0.2, 1) 0ms,max-width 200ms cubic-bezier(0.0, 0, 0.2, 1) 0ms;
+  z-index: 1;
+  pointer-events: auto;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.sectorMUI .MuiFormLabel-root.MuiInputLabel-shrink + div .MuiOutlinedInput-notchedOutline {
+  border: 3px solid #1976d2 !important;
+}
+
+.feedbackMUI .MuiFormLabel-root.MuiInputLabel-shrink + div .MuiOutlinedInput-notchedOutline {
+  border: 3px solid #1976d2 !important;
+}
+
+.feedBackTextArea {
+  background-color: rgb(255 255 255);
+  border-radius: 0;
+  height: 100px;
+  padding-left: 30px;
+  border: 2px solid #cccccc;
+  margin-top: 7px;
+}
+
+.feedBackTextArea:focus {
+  background-color: rgb(255 255 255);
+  border-radius: 0;
+  padding-left: 30px;
+  border: 2px solid #cccccc;
+}
+
+.textarea-focused {
+  border: 3px solid #1976d2 !important;
+  outline: none;
+}
+.navbarLeft {
+  display: flex;
+  height: 120px;
+  width: 30%;
+}
+
+.navlogo1 {
+  margin-left: 40px;
+  object-fit: contain;
+  height: 135px;
+  width: 135px;
+  margin-top: -4px;
+}
+
+.navlogo2 {
+  margin-left: 10px;
+  object-fit: contain;
+  width: 300px;
+  height: 135px;
+  margin-top: -4px;
+}
+
+.navbarRight {
+  width: 70%;
+  padding-top: 20px;
+}
+.genericnavbarRights {
+  width: 100%;
+  padding-top: 28px;
+}
+
+.menuMainDiv {
+  width: 97%;
+  margin-top: 16px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  height: 75px;
+}
+
+.aboutus-h1 {
+  font-size: 60px;
+  font-family: 'Crimson Pro';
+  font-weight: 700;
+  margin-top: 100px;
+  color: white;
+}
+
+.aboutUsParagraphh {
+  color: #595959;
+  font-size: 20px;
+}
+
+.regulatoryTextField {
+  background-color: rgb(255 255 255);
+  padding-left: 10px;
+  border-bottom: 1px solid black;
+  margin-bottom: 20px;
+}
+
+.regulatoryTextField:focus {
+  background-color: rgb(255 255 255) !important;
+}
+
+input.regulatoryTextField[type="text"]:focus {
+  outline: none;
+  border-bottom: 1px solid black;
+}
+
+.hrgrey {
+  border: 2px solid #CCCCCC;
+  opacity: 1;
+}
+
+.Group294-p {
+  margin-right: 85px;
+  font-size: 26px;
+  font-weight: 400;
+  color: #595959;
+  height: 99px;
+  width: 391px;
+  font-family: 'Crimson Pro';
+  font-style: normal;
+  line-height: 33px;
+  text-align: center;
+  padding-right: 44px;
+}
+
+.Group294-h6 {
+  margin-top: 75px;
+  color: #720D1D;
+  font-family: 'Crimson Pro';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 33px;
+  text-align: center;
+  text-decoration-line: underline;
+  margin-left: 65px;
+}
+
+.Group295 {
+  background: url("../assets/2.png");
+  width: 293px !important;
+  height: 238.3px;
+  margin-left: 115px;
+  background-repeat: no-repeat !important;
+}
+
+.Group295-h1 {
+  margin-left: -39px;
+  color: #0F5789;
+  align-items: center;
+  margin-top: 68px;
+  font-size: 40px;
+  margin-bottom: 16px;
+  font-weight: 500;
+  font-family: 'Crimson Pro';
+  font-style: normal;
+  line-height: 50px;
+  width: 419px;
+  height: 50px;
+
+  text-align: center;
+}
+
+.Group295-p {
+  margin-right: 85px;
+  font-size: 26px;
+  font-weight: 400;
+  color: #595959;
+  height: 99px;
+  width: 391px;
+  font-family: 'Crimson Pro';
+  font-style: normal;
+  line-height: 33px;
+  text-align: center;
+  padding-right: 44px;
+}
+
+.Group295-h6 {
+  margin-top: 75px;
+  color: #720D1D;
+  font-family: 'Crimson Pro';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 33px;
+  text-align: center;
+  text-decoration-line: underline;
+  margin-left: 40px;
+}
+
+.Group296 {
+  background: url("../assets/3.png");
+  width: 293px !important;
+  height: 238.3px;
+  margin-left: 115px;
+  background-repeat: no-repeat !important;
+}
+
+.Group296-h1 {
+  margin-left: -39px;
+  color: #0F5789;
+  align-items: center;
+  margin-top: 68px;
+  font-size: 40px;
+  margin-bottom: 16px;
+  font-weight: 500;
+  font-family: 'Crimson Pro';
+  font-style: normal;
+  line-height: 50px;
+  width: 419px;
+  height: 50px;
+
+  text-align: center;
+}
+
+.Group296-p {
+  margin-right: 85px;
+  font-size: 26px;
+  font-weight: 400;
+  color: #595959;
+  height: 99px;
+  width: 391px;
+  font-family: 'Crimson Pro';
+  font-style: normal;
+  line-height: 33px;
+  text-align: center;
+  padding-right: 44px;
+}
+
+.shapatar{
+  min-width: max-content;
+}
+
+.Group296-h6 {
+  margin-top: 75px;
+  color: #720D1D;
+  font-family: 'Crimson Pro';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 33px;
+  text-align: center;
+  text-decoration-line: underline;
+  margin-left: 86px;
+}
+
+
+.modalTextField {
+  background-color: rgb(255 255 255);
+  border-radius: 0;
+  padding-left: 10px;
+  border: 2px solid #cccccc;
+}
+
+.modalTextField:focus {
+  background-color: rgb(255 255 255);
+  border-radius: 0;
+  padding-left: 10px;
+  border: 2px solid #cccccc;
+}
+
+.amin {
+  border-style: solid;
+  border-radius: 4px;
+  width: 215px;
+  height: 34px;
+  font-family: 'Crimson Pro';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  border: none;
+  color: rgb(255, 255, 255);
+  background-color: #7a0202;
+  box-shadow: 0 2px 6px 0 rgba(227, 234, 239, .5);
+  filter: alpha(opacity=100);
+  opacity: 1;
+  padding: 9px 12px;
+  cursor: pointer;
+  transition: all 0.2s;
+  padding: 5px 10px 5px 10px;
+  text-align: left;
+}
+
+:where(.css-dev-only-do-not-override-k7429z).ant-tabs-card.ant-tabs-top>.ant-tabs-nav .ant-tabs-tab+.ant-tabs-tab,
+:where(.css-dev-only-do-not-override-k7429z).ant-tabs-card.ant-tabs-bottom>.ant-tabs-nav .ant-tabs-tab+.ant-tabs-tab,
+:where(.css-dev-only-do-not-override-k7429z).ant-tabs-card.ant-tabs-top>div>.ant-tabs-nav .ant-tabs-tab+.ant-tabs-tab,
+:where(.css-dev-only-do-not-override-k7429z).ant-tabs-card.ant-tabs-bottom>div>.ant-tabs-nav .ant-tabs-tab+.ant-tabs-tab {
+  background-color: #7a0202;
+  color: white;
+  margin-left: 2px;
+}
+
+:where(.css-dev-only-do-not-override-k7429z).ant-tabs-card.ant-tabs-top>.ant-tabs-nav .ant-tabs-tab-active,
+:where(.css-dev-only-do-not-override-k7429z).ant-tabs-card.ant-tabs-top>div>.ant-tabs-nav .ant-tabs-tab-active {
+  background-color: #7a0202;
+  color: white;
+  border-bottom-color: #ffffff;
+}
+
+:where(.css-dev-only-do-not-override-k7429z).ant-tabs .ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
+  color: white;
+  text-shadow: 0 0 0.25px currentcolor;
+}
+
+.cursorTooltip:hover {
+  cursor: pointer;
+}
+
+@media screen and (max-width: 500px) {
+  .navlogo1 {
+    margin-left: 5px;
+    object-fit: contain;
+    width: 62px;
+    height: 135px;
+    margin-top: -4px;
+  }
+
+  .navlogo2 {
+    margin-left: 4px;
+    object-fit: contain;
+    width: 170px;
+    height: 138px;
+    margin-top: -4px;
+  }
+  .navbarLeft {
+    width: 30vw;
+  }
+}
+
+
+@media only screen and (min-width: 1020px) and (max-width: 1366px) {
+  .navlogo1 {
+    margin-left: 10px;
+    object-fit: contain;
+    width: 80px;
+    height: 115px;
+    margin-top: -4px;
+  }
+
+  .navlogo2 {
+    width: 190px;
+    height: 130px;
+  }
+
+  .HeaderPadding {
+    padding-left: 2px;
+    padding-right: 2px !important;
+  }
+}
+
+.clickMainHeaderLogo {
+  width: 300px;
+  cursor: pointer;
+}
+
+.headerLogoImages {
+  width: 25px;
+  user-select: none;
+}
+
+@media only screen and (min-width: 1020px) and (max-width: 1440px) {
+  .navbarRight {
+    width: 77%;
+  }
+
+  .navbarLeft {
+    width: 23%;
+  }
+
+  .clickMainHeaderLogo {
+    width: 210px;
+  }
+
+  .headerLogoImages {
+    width: 20px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .menuMainDiv {
+    width: 100%;
+    margin-top: -10px;
+  }
+
+  .resourceButton {
+    padding-right: 6px;
+    padding-left: 6px;
+    width: 125px;
+    margin-left: 16px;
+  }
+}
+.css-1n4twyu-MuiInputBase-input-MuiOutlinedInput-input{
+  border-radius: 27px;
+  background-color:white !important;
+  height: 2.4000em !important;
+ 
+}
+.feedBackTextField {
+  background-color: rgb(255 255 255);
+  color: black;
+  border: 1px solid #cccccc;
+  width: 100% !important;
+  margin-top: 7px;
+  border-radius: 28px; 
+  /* / Apply the border-radius here / */
+}
+
+.feedBackTextField:focus {
+  background-color: rgb(255 255 255);
+  border-radius: 28px; 
+  /* / Keep the same border-radius here / */
+  width: 100% !important;
+  border: 1px solid #cccccc; 
+  /* / Revert to the normal border on focus / */
+  outline: none; 
+   /* Remove the default focus outline / */
+}
+
+
+.sectornestedscreens{
+  padding-bottom: 14px;
+}
+
+@media screen and (max-width: 500px) {
+  .sectornestedscreens {
+    padding-bottom: 0px;
+  }}

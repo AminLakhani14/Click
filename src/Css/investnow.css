@@ -1,0 +1,833 @@
+:root {
+  --main-heading:30px;
+  --font-size: 20px; /* Initial font size */
+}
+.steps {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  position: relative;
+}
+.steps::before {
+  content: "";
+  width: 100%;
+  display: block;
+  height: 4px;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  background-color: #0f5789;
+  z-index: 0;
+}
+.steps-container {
+  display: inline-block;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.steps__item {
+  width: 25px;
+  height: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  background-color: #0f5789;
+  border-radius: 50px;
+  margin-right: 65vh;
+}
+.steps__item--active {
+  background-color: #0f5789;
+}
+.steps__item--active ~ .steps__item {
+  background-color: #0f5789;
+}
+.steps__item--active:before {
+  right: 100%;
+  position: absolute;
+  background-color: #0f5789;
+  content: "";
+  width: 1000px;
+  height: 4px;
+  z-index: 1;
+}
+.steps__item:last-child {
+  margin-right: 0px;
+}
+.container {
+  max-width: 1140px;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.text-center {
+  text-align: center;
+}
+.z4 {
+  z-index: 4;
+}
+.z3 {
+  z-index: 3;
+}
+.z2 {
+  z-index: 2;
+}
+.z1 {
+  z-index: 1;
+}
+.breadCrumb {
+  height: 100px;
+  background-color: #f7f7f7;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+.investNowCard {
+  display: flex;
+  margin-top: 80px;
+  flex-direction: column;
+  /* width: 250px; */
+  height: 400px;
+  align-items: center;
+}
+.SiteMain2 {
+  width: 100%;
+  height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-repeat: no-repeat;
+  background-size: cover !important;
+}
+.SiteMain3 {
+  width: 100%;
+  height: 750px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-repeat: no-repeat;
+  background-size: cover !important;
+}
+.MobileOppurSiteMain3 {
+  width: 100%;
+  height: 360px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-repeat: no-repeat;
+  background-size: cover !important;
+}
+.siteHeader {
+  width: 100%;
+  height: 680px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-repeat: no-repeat;
+  background-size: cover !important;
+}
+.Investnow-h1 {
+  font-size: 60px;
+  font-family: "Crimson Pro";
+  font-weight: 700;
+  margin-top: 50px;
+  color: white;
+}
+.NewsAndInformation-h1 {
+  font-size: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  height: 525px;
+  width: 80%;
+  font-family: "Crimson Pro";
+  font-weight: 700;
+  margin-left: 50px;
+  color: white;
+}
+
+.feedbackpara{
+  font-size: 30px;
+  text-align: left;
+  font-size: 25px;
+  width: 105vh;
+}
+
+.NewsAndInformationDate {
+  width: 100%;
+  font-size: 30px;
+  margin-top: 15px;
+}
+
+.slide-in-left {
+  transition: transform 1.1s ease-in;
+  transform: translateY(0);
+}
+.slide-in-left.slide-out-left {
+  transform: translateY(300%);
+}
+
+.slide-in-Investerleft {
+  transition: transform 0.5s ease-in;
+  transform: translateY(0);
+}
+.slide-in-Investerleft.slide-out-Investerleft {
+  transform: translateY(300%);
+}
+
+.slide-in-down {
+  transition: transform 1.5s ease-in;
+  transform: translateX(0);
+}
+
+.slide-in-down.slide-out-down {
+  transform: translateX(-300%) !important;
+}
+
+.slide-in-downs {
+  transition: transform 1.5s ease-in;
+  transform: translateY(0);
+}
+
+.slide-in-downs.slide-out-downs {
+  transform: translateY(300%) !important;
+}
+
+.slide-in-downs1 {
+  transition: transform 2s ease-in;
+  transform: translateY(0);
+}
+
+.slide-in-downs1.slide-out-downs1 {
+  transform: translateY(300%) !important;
+}
+.slide-in-downs2 {
+  transition: transform 2.5s ease-in;
+  transform: translateY(0);
+}
+
+.slide-in-downs2.slide-out-downs2 {
+  transform: translateY(300%) !important;
+}
+
+.slide-in-up {
+  transition: transform 0.7s ease-in;
+  transform: translateY(0);
+}
+
+.slide-in-up.slide-out-up {
+  transform: translateY(300%) !important;
+}
+
+.slide-in-Publicationdown {
+  transition: transform 1.3s ease-in;
+  transform: translateY(0);
+}
+
+.slide-in-Publicationdown.slide-out-Publicationdown {
+  transform: translateY(200%) !important;
+}
+
+.slide-in-Publicationdowns {
+  transition: transform 1.8s ease-in;
+  transform: translateY(0);
+}
+
+.slide-in-Publicationdowns.slide-out-Publicationdowns {
+  transform: translateY(200%) !important;
+}
+
+.slide-in-Publicationleft {
+  transition: transform 1.5s ease-in;
+  transform: translateX(0);
+}
+
+.slide-in-Publicationleft.slide-out-Publicationleft {
+  transform: translateX(-300%) !important;
+}
+
+.slide-in-Publicationright {
+  transition: transform 1.5s ease-in;
+  transform: translateX(0);
+}
+
+.slide-in-Publicationright.slide-out-Publicationright {
+  transform: translateX(300%) !important;
+}
+
+/* 
+/ for Invest Now screen /
+
+/ for why Sindh main screen / */
+
+.slide-in-Sindhleft {
+  transition: transform 2.0s ease-in;
+  transform: translateX(0);
+}
+
+.slide-in-Sindhleft.slide-out-Sindhleft {
+  transform: translateX(-300%) !important;
+}
+
+
+.slide-in-SindhUP {
+  transition: transform 2.8s ease-in;
+  transform: translateY(0);
+}
+.slide-in-SindhUP.slide-out-SindhUP {
+  transform: translateY(100%);
+}
+
+
+.slide-in-SindhUPpara {
+  transition: transform 1.4s ease-in;
+  transform: translateY(0);
+}
+.slide-in-SindhUPpara.slide-out-SindhUPpara {
+  transform: translateY(100%);
+}
+
+
+/* / for why Sindh main screen / */
+
+.InvestnowParagraphh {
+  color: #595959;
+  font-size: 20px;
+}
+.Group294 {
+  background: url("../assets/1.png");
+  width: 293px !important;
+  height: 238.3px;
+  margin-left: 115px;
+  background-repeat: no-repeat !important;
+}
+.stageTextColor {
+  font-size: 32px;
+  color: #0f5789;
+  font-family: "Crimson Pro";
+}
+.secondaryLabelColor {
+  color: #595959;
+  font-size: 20px;
+  font-family: "Crimson Pro";
+  width: 280px;
+  text-align: center;
+  height: 110px;
+}
+.Group294-h1 {
+  margin-left: -39px;
+  color: #0f5789;
+  align-items: center;
+  margin-top: 68px;
+  font-size: 40px;
+  margin-bottom: 16px;
+  font-family: "Crimson Pro";
+  font-weight: 500;
+  font-family: "Crimson Pro";
+  font-style: normal;
+  line-height: 50px;
+  width: 419px;
+  height: 50px;
+  /* identical to box height */
+
+  text-align: center;
+}
+.InvestInSindhButton {
+  width: 253px;
+  height: 79px;
+  font-family: "Crimson Pro";
+  font-style: normal;
+  font-weight: 400;
+  font-size: var(--main-heading);
+  border: none;
+  color: rgb(255, 255, 255);
+  background: linear-gradient(180deg, #720d1d 0%, #1f0308 100%);
+  padding: 5px 10px 5px 10px;
+}
+.submitButton {
+  width: 100px;
+  height: 45px;
+  font-family: "Crimson Pro";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  border: none;
+  color: rgb(255, 255, 255);
+  background: linear-gradient(180deg, #720d1d 0%, #1f0308 100%);
+  padding: 1px 10px 5px 10px;
+}
+
+@media screen and (max-width: 500px) {
+  .submitButton{
+   width: 150px;
+   height: 50px;
+  }}
+
+.feedbacksubmitButton {
+  width: 200px;
+  height: 60px;
+  font-family: "sans-serif";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 25px;
+  border: none;
+  color: rgb(255, 255, 255);
+  background: linear-gradient(180deg, #720d1d 0%, #1f0308 100%);
+  padding: 1px 10px 5px 10px;
+  border-radius: 25px;
+}
+.Investorbackground {
+  width: 100%;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-repeat: no-repeat;
+  background-size: cover !important;
+  background: url("../assets/investorGuide.png");
+}
+.Investor {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 60px;
+  font-family: "Crimson Pro";
+  font-weight: 700;
+  margin-top: -360px !important;
+  color: white;
+  position: absolute;
+  width: 50% !important;
+  height: 67px;
+  font-style: normal;
+  line-height: 67px;
+  color: #0f5789;
+  margin-left: 90px;
+}
+.box {
+  margin-top: 50px !important;
+  background: white;
+  width: 256px !important;
+  height: 256px;
+  margin-left: 65px;
+}
+.cardInvest {
+  background-color: #ffffff;
+  display: flex;
+  width: 500px;
+  height: 210px;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+.cardInvestLeft {
+  margin-left: 30px;
+  margin-top: 30px;
+  width: 150px;
+  height: 150px;
+  background-color: #f7f7f7;
+}
+.cardInvestRight {
+  height: 180px;
+  margin-top: 20px;
+  width: 50%;
+  margin-left: 15px;
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+}
+.cardInvestHeading {
+  font-size: 20px;
+  color: #0f5789;
+  height: 40px;
+  padding: 14px;
+  font-weight: 700;
+  font-family: "Crimson Pro" !important;
+}
+.cardInvestPara {
+  margin-left: 15px;
+  margin-bottom: 100px;
+  color: #595959;
+  margin-top: -10px;
+  font-weight: 400;
+  font-size: 18px;
+  font-family: "Crimson Pro";
+}
+.publicationButton {
+  width: 357px;
+  height: 79px;
+  font-family: "Crimson Pro";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  border: none;
+  color: rgb(255, 255, 255);
+  background: linear-gradient(180deg, #720d1d 0%, #1f0308 100%);
+  margin-left: 65px;
+  margin-top: 70px;
+  padding: 5px 10px 5px 10px;
+}
+.highs {
+  height: 470px;
+  margin-top: 40px !important;
+  background-color: #f7f7f7;
+  align-items: baseline;
+}
+.muju {
+  background-color: white;
+  margin-top: 70px;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  height: 331px !important;
+  border-radius: 0px;
+  width: 328px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.7);
+  color: rgb(0, 0, 0);
+  justify-content: center;
+  padding-top: 0px;
+  margin-left: -3px !important;
+  transition: transform 0.2s;
+}
+.muju:hover {
+  -ms-transform: scale(1.5);
+  /* IE 9 */
+  -webkit-transform: scale(1.5);
+  /* Safari 3-8 */
+  transform: scale(1.1);
+}
+
+.muju__name {
+  margin-top: 15px;
+  font-size: 30px;
+  font-family: "Crimson Pro" !important;
+  font-weight: 700;
+  text-align: center;
+}
+.custom-select {
+  height: 45px;
+  width: 360px !important;
+  color: #0f5789;
+  padding-left: 15px;
+  font-weight: 500;
+  font-size: 18px;
+  border: 2px solid #cccccc;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  /* background-image: url('path-to-arrow-icon.png'); */
+  background-image: url("../assets/downArrow.svg");
+  background-position: right 10px center;
+  background-repeat: no-repeat;
+  background-size: 16px 16px;
+  padding-right: 25px;
+}
+
+.descriptionImage {
+  width: 80%;
+  display: flex;
+  height: 445px;
+  background-size: 100% !important;
+  background-repeat: no-repeat !important;
+  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)),
+    url("../assets/GROWTH.png");
+}
+
+.Frozen {
+  width: 80%;
+  background-repeat: no-repeat !important;
+  background-size: 100% !important;
+  height: 445px;
+  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)),
+    url("../assets/frozenFood.png");
+}
+.Loan {
+  width: 80%;
+  background-repeat: no-repeat !important;
+  background-size: 100% !important;
+  height: 445px;
+  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)),
+    url("../assets/loan.png");
+}
+
+.agriAndFoodHeading {
+  position: relative;
+  color: white;
+  font-size: 60px;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  /* height: 445px; */
+  align-items: center;
+}
+.dotsImage {
+  background: url("../assets/dots.png");
+  position: relative;
+  width: 280px;
+  height: 236px;
+  background-size: 191px;
+  left: 14vh;
+  top: -17.3vh;
+  background-repeat: no-repeat;
+}
+.dotsPoultry {
+  background: url("../assets/dots.png");
+  position: relative;
+  width: 280px;
+  height: 236px;
+  background-size: 191px;
+  right: 50px;
+  top: -17.3vh;
+  background-repeat: no-repeat;
+}
+.f-size {
+  font-size: 20px;
+  color: #595959;
+}
+.seizeOpportunity {
+  height: 395px;
+  width: 100%;
+  background: #f7f7f7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.width-25 {
+  width: 20% !important ;
+}
+.jcc {
+  justify-content: center;
+}
+.newsAndInformationCard {
+  width: 600px;
+  background-color: #fcfcfc;
+  height: 411px;
+  display: flex;
+  flex-direction: column;
+}
+.NewsTitleImage {
+  width: 100%;
+  position: relative;
+  height: 275px;
+  /* background-color: black; */
+}
+.NewsTitleHeading {
+  font-family: "Crimson Pro";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 45px;
+  margin-left: 45px;
+}
+.NewsTitleDate {
+  font-family: "Crimson Pro";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  margin-left: 45px;
+  margin-top: -15px;
+}
+.stageDiv {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  margin-bottom: 15px;
+  margin-top: 50px;
+  padding-left: 6vh;
+  padding-right: 7vh;
+}
+.incrementButtonMap {
+  width: 30px;
+  height: 33px;
+  background: #0f5789;
+  cursor: pointer;
+  font-size: 20px;
+  border-radius: 7px;
+  color: white;
+  user-select: none;
+  padding-left: 10px;
+  font-weight: bold;
+}
+.incrementButtonMap:hover {
+  background-color: #1e4f72;
+}
+.mobilePara {
+  font-size: 20px;
+  text-align: left;
+}
+@media screen and (max-width: 500px) {
+  .siteHeader {
+    height: 185px;
+  }
+  .SiteMain2 {
+    height: 185px;
+  }
+  .descriptionImage {
+    height: 200px;
+    margin-left: 0vh;
+    display: flex;
+    width: 86% !important;
+    background-size: 350px 200px !important;
+  }
+  .agriAndFoodHeading {
+    /* height: 205px; */
+    font-size: 22px;
+  }
+  .dotsImage {
+    background-size: 100px;
+    top: -12.3vh;
+    left: 0vh;
+  }
+  .dotsPoultry {
+    width: 100px;
+    right: 0vh;
+    background-size: 100px;
+    top: -12.3vh;
+  }
+  .InvestnowParagraphh {
+    font-size: 20px;
+  }
+  .f-size {
+    font-size: 20px;
+  }
+  .InvestInSindhButton {
+    width: 150px;
+    height: 45px;
+    font-size: var(--font-size);
+    padding: 5px 10px 8px 10px;
+  }
+  .seizeOpportunity {
+    height: 255px;
+  }
+  .Investnow-h1 {
+    font-size: 30px;
+    margin-top: 50px;
+  }
+  .steps__item {
+    margin-right: 15vh;
+    width: 15px;
+    height: 15px;
+  }
+  .stageDiv {
+    padding-left: 2vh;
+    padding-right: 2vh;
+  }
+  .stageTextColor {
+    font-size: 30px;
+  }
+  .investNowCard {
+    height: 280px;
+  }
+  .Investor {
+    margin-left: 20px;
+    font-size: 30px;
+    margin-top: 0px !important;
+    padding-bottom: 50px;
+    width: 350px !important;
+  }
+  .publicationButton {
+    width: 277px;
+    height: 45px;
+    font-size: 20px;
+    padding: 5px 10px 8px 10px;
+    margin-left: 20px;
+  }
+  .highs {
+    height: 850px;
+  }
+  .margin-top {
+    margin-top: -50px !important;
+  }
+  .Investorbackground {
+    flex-direction: column;
+    height: 1080px;
+    padding-top: 25px;
+    justify-content: unset;
+  }
+  .width-25 {
+    width: 100% !important;
+  }
+  .box {
+    width: 200px !important;
+    height: 200px;
+    margin-left: 90px;
+  }
+  .cardInvest {
+    margin-bottom: 60px;
+    width: 365px;
+  }
+}
+@media only screen and (min-width: 1024px) and (max-width: 1440px) {
+  .dotsImage {
+    top: -200px;
+    left: 9vh;
+  }
+  .dotsPoultry {
+    top: -200px;
+    left: 0vh;
+  }
+  .InvestInSindhButton {
+    font-size: var(--font-size);
+    height: 45px;
+  }
+}
+@media only screen and (min-width: 1450px) and (max-width: 1680px) {
+  .dotsImage {
+    top: -150px;
+  }
+  .dotsPoultry {
+    top: -150px;
+  }
+}
+.TeamCardHeader {
+  font-weight: 600;
+  font-family: "Crimson Pro";
+  font-style: normal;
+  color: black;
+  font-size: 60px;
+  line-height: 66.68px;
+  text-align: left;
+}
+.TeamCardDesignation {
+  font-weight: 400;
+  font-family: "Crimson Pro";
+  font-style: normal;
+  color: #595959;
+  font-size: 30px;
+  line-height: 33.34px;
+  text-align: left;
+}
+.TeamCardAbout {
+  font-weight: 400;
+  font-family: "Crimson Pro";
+  font-style: normal;
+  color: black;
+  font-size: 30px;
+  line-height: 66.68px;
+  text-align: left;
+}
+.before-text {
+  color: #0f5789;
+  font-weight: 500 !important;
+}
+.box1 {
+  margin-top: 50px !important;
+  background: #f7f7f7;
+  width: 256px !important;
+  height: 256px;
+  margin-left: 65px;
+}
+.circle-list {
+  list-style-type: circle !important;
+  padding-left: 20px;
+}
+.circle-list li::before {
+  content: "";
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: black;
+  margin-right: 5px;
+}
