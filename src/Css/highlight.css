@@ -13,7 +13,23 @@ main {
   justify-content: center;
   gap: 2rem;
 }
-
+.regulatoryCalculatorHead{
+  height: 100px;
+  background-color: #F7F7F7;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+.linkFont{
+  color:#720D1D;
+  font-size: 30px;
+  text-decoration: none;
+}
+.linkFont2{
+  color:black;
+  font-size: 30px;
+  display: contents;
+}
 .cardHighLight {
   width: 450px;
   height: 500px;

@@ -60,8 +60,8 @@ function Footer(props) {
             </div>
             </div>
             <div 
-            style={windowWidth <=1440 ?{paddingLeft:"45px"}:{ }}
-            className="row mt-5" >
+            style={windowWidth <=1440 ?{paddingLeft:"45px",alignItems:"baseline"}:{alignItems:"baseline" }}
+            className="row mt-5">
             <div className="col-md-3 footertext" style={windowWidth <500?{textAlign:"inherit" }:{ marginTop: "-50px",textAlign:"inherit"  }}>
               <h3 
                className={

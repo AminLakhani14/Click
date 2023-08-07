@@ -50,8 +50,10 @@ export default class RegulatoryCatalogCalculatorGrid extends React.PureComponent
   }
 
   updateSource() {
+    const changeValue = this.props.changeValue || []; // Add a check here
+
     const source = {
-      localdata: this.props.changeValue,
+      localdata: changeValue,
       datatype: "json",
       datafields: [
         { name: "timeLineText", type: "string" },
@@ -77,33 +79,59 @@ export default class RegulatoryCatalogCalculatorGrid extends React.PureComponent
 
   render() {
     const rowRenderer = (row, datafield, value, defaultHtml, column, rowdata) => {
-      const isEvenRow = datafield % 2 === 0;
+      const isEvenRow = row % 2 === 0;
       const backgroundColor = isEvenRow ? "red" : "blue";
       const style = `background-color: ${backgroundColor};`;
 
       return `<div style="${style}">${defaultHtml}</div>`;
     };
 
+    const changeValue = this.props.changeValue || []; // Add a check here
+    const totalValue = changeValue.reduce((total, item) => {
+    //  const feeValue = feeValue.replace(/[^\d]/g, '');
+      const feeValue = parseFloat(item.feeValue);
+      return isNaN(feeValue) ? total : total + feeValue;
+    }, 0);
+
     return (
-      <JqxGrid
-        ref={this.myGrid}
-        columnsheight={50}
-        rowsheight={50}
-        source={this.state.source}
-        columns={this.state.columns}
-        onRowclick={this.onRowclick}
-        height={300}
-        width={"100%"}
-        editable={false}
-        columnsresize={true}
-        columnsreorder={true}
-        showsortmenuitems={false}
-        autoloadstate={true}
-        autosavestate={true}
-        sortable={true}
-        columnsmenu={false}
-        rowrenderer={rowRenderer}
-      />
+      <div style={{ position: "relative" }}>
+        <JqxGrid
+          ref={this.myGrid}
+          columnsheight={50}
+          rowsheight={50}
+          source={this.state.source}
+          columns={this.state.columns}
+          onRowclick={this.onRowclick}
+          height={300}
+          width={"100%"}
+          editable={false}
+          columnsresize={true}
+          columnsreorder={true}
+          showsortmenuitems={false}
+          autoloadstate={true}
+          autosavestate={true}
+          sortable={true}
+          columnsmenu={false}
+          rowrenderer={rowRenderer}
+          showstatusbar={true} // Show the footer section
+        />
+        <div
+          style={{
+            borderTop: "1px solid #ddd",
+            height:"50px",
+            display:"flex",
+            position: "absolute",
+            bottom: 0, // Stick to the bottom
+            left: 0,
+            right: 0,
+            background: "#f2f2f2", // Gray background color
+            zIndex: 10, // Ensure it stays on top of the grid
+          }}
+        >
+          <div style={{ fontWeight: "bold" ,width:"501px",borderRight:"1px solid #E0E0E0",paddingTop:"11px",paddingLeft:"10px"}}>Total:</div>{" "}
+          <div style={{paddingTop:"11px",paddingLeft:"3px"}}>{totalValue.toFixed(2)}</div>
+        </div>
+      </div>
     );
   }
 }

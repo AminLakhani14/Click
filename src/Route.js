@@ -17,8 +17,9 @@ import Maps from "./Components/Maps";
 import Component from "./Components/Component";
 import Team from "./Components/Team";
 import GenericComponentOpportunity from "./Components/GenericComponentOpportunity";
-import RegulatoryCatalog from "./Components/RegulatoryCostCalculator";
 import RegulatoryCatalogCalculator from "./Components/RegulatoryCostCalculator";
+// import RegulatoryCatalogCalculator from "./Components/demo";
+
 import Poultry from "./Components/poultry";
 import FrozenF from "./Components/frozenfood";
 import Loan from "./Components/loan";
