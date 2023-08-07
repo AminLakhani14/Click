@@ -146,18 +146,20 @@ export default function FeedBack() {
                 }}
               />
             </div>
-            <div className="col-lg-4">
+            <div className="col-lg-4 ">
               <select
                 type="select"
-                className="feedBackTextField"
+                className="textField"
                 style={{
                   height: "53.5px",
-                  width: "width: 100%",
+                  width: "100%", // Remove the extra "width:" here
                   color: "#757775",
                   paddingTop: "10px",
+                  paddingRight: "30px", /* Add padding to the right side for the icon */
                   borderRadius: "25px",
                   fontFamily: "sans-serif",
                   padding: "10px",
+                  position: "relative" /* Add relative positioning to the select element */
                 }}
               >
                 <option value="volvo">College Education Department</option>
@@ -222,9 +224,9 @@ export default function FeedBack() {
                     color: "rgba(0, 0, 0, 0.87)",
                     padding: "20px",
                     width: "100%",
-                    fontSize: "1.1rem",
-                    fontWeight: "400",
-                    fontFamily: "Roboto",
+                    fontSize: "1.0rem",
+                    fontWeight: "200",
+                    fontFamily: "sans-serif",
                     resize: "none",
                     border: "none", // Remove the default border
                     outline: "none", // Remove the default outline

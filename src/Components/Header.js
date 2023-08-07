@@ -8,6 +8,7 @@ import "../Css/investnow.css";
 import sindh from "../assets/logo-sindh.png";
 import pak from "../assets/pak.png";
 import urdu from "../assets/urdu.png";
+import Sindhi from "../assets/Sindhi.png";
 import "../Css/resource.css";
 import { ReactComponent as Face2 } from "../assets/facebook.svg";
 import { ReactComponent as Face } from "../assets/facebookColor.svg";
@@ -27,7 +28,7 @@ import GenericHeader from "./genericHeader";
 import { Tooltip } from "antd";
 import { useMemo } from "react";
 
-function Header() {
+function Header(props) {
   const [isHovered, setIsHovered] = useState(false);
 
   const handleMouseEnterFaceBook = () => {
@@ -436,6 +437,35 @@ function Header() {
       </div>
     </div>
   );
+
+  // const [isUrdu, setIsUrdu] = useState(false);
+
+  // // Function to toggle language between English and Urdu
+  // const toggleLanguage = () => {
+  //   setIsUrdu((prevIsUrdu) => !prevIsUrdu);
+  // };
+
+  // // Object containing English and Urdu translations
+  // const translations = {
+  //   'hero-heading': {
+  //     en: 'Discover the Riches of Sindh\nInvest in a Thriving Future',
+  //     ur: 'سندھ کے دولت مند ہنر افزائی کریں۔ ایک خوشحال مستقبل میں سرمایہ کاری کریں۔',
+  //   },
+  //   'subHeroHeading': {
+  //     en: 'Explore the Province of Sindh and Discover its many assets and Potential for Growth and Investment',
+  //     ur: 'سندھ کے صوبے کا کھیتریں اور اس کی بے شمار خوبصورتیوں کو دریافت کریں اور ترقی اور سرمایہ کاری کے لئے اس کے ممکنات کا پتہ لگائیں۔',
+  //   },
+  //   'investButton': {
+  //     en: 'Invest Now',
+  //     ur: 'ابھی سرمایہ کاری کریں',
+  //   },
+  //   'calculatorButton': {
+  //     en: 'Regulatory Cost Calculator',
+  //     ur: 'ریگولیٹری لاگت کی کیلکولیٹر',
+  //   },
+  // };
+
+
   return (
     <>
       <div className="container-fluid" style={{ overflowX: "hidden" }}>
@@ -500,21 +530,31 @@ function Header() {
                   alt=""
                   style={{ marginLeft: "20px" }}
                 /> */}
-                {/* <img
+                 <img
                   className="headerLogoImages"
                   src={urdu}
                   alt=""
+                  onClick={props.toggleLanguage}
                   style={{ marginLeft: "20px", marginRight: "20px" }}
-                /> */}
+                /> 
+                <img
+                className="headerLogoImages"
+                src={Sindhi}
+                alt=""
+                onClick={props.toggleLanguage}
+                style={{ marginLeft: "20px", marginRight: "20px" }}
+              /> 
                 <a href="comingsoon.html">
                   <button type="button" className="login">
-                    <span>Login</span>
+                    <span>{props.translations['Login'][props.language]}
+                    </span>
                   </button>
                 </a>
                 &nbsp;&nbsp;
                 <Link to={"/feedback"} style={{ textDecoration: "none" }}>
                   <button type="button" className="feedback">
-                    <span>Feedback</span>
+                    <span>{props.translations['Feedback'][props.language]}
+                    </span>
                   </button>
                 </Link>
               </div>
@@ -527,7 +567,7 @@ function Header() {
               <div className={`header `}>
               <div className={"row "}>
                 <div className={" navbar boxshadowNavBar justify-content-end"} style={{width:"100%",paddingRight:"8px"}}>
-                  <ul style={{ marginBottom: "0px" }}>
+                  <ul style={props.language === 'ur' || props.language === 'sd'? {display:"flex", marginBottom: "0px",flexDirection:"row-reverse"}:{ marginBottom: "0px" }}>
                     <li>
                       <a
                         href="comingsoon.html"
@@ -535,7 +575,7 @@ function Header() {
                         className={"link"}
                       >
                         <Link className={"link"} to={"/home"}>
-                          Home
+                        {props.translations['home'][props.language]}
                         </Link>
                       </a>
                     </li>
@@ -546,19 +586,19 @@ function Header() {
                         className={"link"}
                       >
                         <Link className={"link"} to={"/WhySindh"}>
-                          Sindh at a Glance
+                        {props.translations['sindhATglance'][props.language]}
                         </Link>
                       </a>
                     </li>
                     <li>
                       <a title="" className={"link"}>
                         <Link className="link" to={"/InvestNow"}>
-                          Invest now
+                        {props.translations['InvestNow'][props.language]}
                         </Link>
                       </a>
                     </li>
                     <li>
-                        <div class="dropdown">
+                        <div class="dropdown"  style={props.language === 'ur' || props.language === 'sd'? {display:"flex",flexDirection:"row-reverse"}:{}}>
                           <span
                             style={{
                               marginRight: "5px",
@@ -567,45 +607,37 @@ function Header() {
                             className={"link"}
                           >
                             <Link className={"link"} to={"/Opportunity"}>
-                              Sectors and Opportunities
+                            {props.translations['Opportunities'][props.language]}
                             </Link>
                           </span>
                           <i
                             style={{ marginTop: "0px", marginLeft: "0px" }}
                             class="dropbtn iconDown hover-rotate fa fa-chevron-right"
                           ></i>
-                          <div class="dropdown-content">
+                          <div class="dropdown-content" style={props.language === 'ur' || props.language === 'sd'? {marginTop:"30px"}:{}}>
                             <div
                               class="nested-dropdown"
                               style={{ width: "100%" }}
                             >
                               <span
-                                style={{
-                                  display: "flex",
-                                  position: "relative",
-                                  width: "100%",
-                                }}
+                                style={props.language === 'ur' || props.language === 'sd' ? {display: "flex",width: "100%",flexDirection:"row-reverse"}:{display: "flex",position: "relative", width: "100%"}}
                               >
                                 <a
-                                  style={{
-                                    width: "300px",
-                                    paddingLeft: "15px",
-                                    height: "40px",
-                                    paddingTop: "8px",
-                                  }}
+                                  // style={{
+                                  //   width: "300px",
+                                  //   paddingLeft: "15px",
+                                  //   height: "40px",
+                                  //   paddingTop: "8px",
+                                  // }}
+                                  style={props.language === 'ur' || props.language === 'sd' ? { width: "210px",paddingLeft: "15px",height: "40px",paddingTop: "8px",display: "flex",flexDirection:"row-reverse"}:{ width: "300px",paddingLeft: "15px",height: "40px",paddingTop: "8px"}}
                                   href="#"
                                 >
                                   <Link className={"link"} to={"/manufacturing"}>
-                                  Manufacturing
+                                 {props.translations['Manufacturing'][props.language]}
                                   </Link>
                                 </a>
                                 <i
-                                  style={{
-                                    marginTop: "10px",
-                                    marginLeft: "0px",
-                                    position: "absolute",
-                                    right: "15px",
-                                  }}
+                                  style={props.language === 'ur' || props.language === 'sd' ? {marginTop: "10px",marginLeft: "0px",position: "absolute",left:"10px",display:"flex",flexDirection:"row-reverse"}:{marginTop: "10px",marginLeft: "0px",position: "absolute",right: "15px"}}
                                   class="dropbtn unique-iconDown unique-hover-rotate component fa fa-chevron-right"
                                 ></i>
                               </span>
@@ -614,7 +646,9 @@ function Header() {
                                 style={{ width: "200px" }}
                               >
                                 <Link className={""} to={"/ComingSoon"}>
-                                  <a href="#">Talk to expert </a>
+                                  <a href="#">
+                                 {props.translations['Talktoexpert'][props.language]}
+                                 </a>
                                 </Link>
                               </div>
                             </div>
@@ -624,32 +658,19 @@ function Header() {
                               style={{ width: "100%" }}
                             >
                               <span
-                                style={{
-                                  display: "flex",
-                                  position: "relative",
-                                  width: "100%",
-                                }}
+                                style={props.language === 'ur' || props.language === 'sd' ? {display: "flex",width: "100%",flexDirection:"row-reverse"}:{display: "flex",position: "relative", width: "100%"}}
                               >
                                 <a
-                                  style={{
-                                    width: "300px",
-                                    paddingLeft: "15px",
-                                    height: "40px",
-                                    paddingTop: "8px",
-                                  }}
+                                  style={props.language === 'ur' || props.language === 'sd' ? { width: "210px",paddingLeft: "15px",height: "40px",paddingTop: "8px",display: "flex",flexDirection:"row-reverse"}:{ width: "300px",paddingLeft: "15px",height: "40px",paddingTop: "8px"}}
+
                                   href="#"
                                 >
                                   <Link className={"link"} to={"/textile"}>
-                                  Textile
+                                  {props.translations['Textile'][props.language]}
                                   </Link>
                                 </a>
                                 <i
-                                  style={{
-                                    marginTop: "10px",
-                                    marginLeft: "0px",
-                                    position: "absolute",
-                                    right: "15px",
-                                  }}
+                                  style={props.language === 'ur' || props.language === 'sd' ? {marginTop: "10px",marginLeft: "0px",position: "absolute",left:"10px",display:"flex",flexDirection:"row-reverse"}:{marginTop: "10px",marginLeft: "0px",position: "absolute",right: "15px"}}
                                   class="dropbtn unique-iconDown unique-hover-rotate component fa fa-chevron-right"
                                 ></i>
                               </span>
@@ -658,7 +679,8 @@ function Header() {
                                 style={{ width: "200px", marginTop: "40px" }}
                               >
                                 <Link className={""} to={"/ComingSoon"}>
-                                  <a href="#">Talk to expert </a>
+                                  <a href="#">{props.translations['Talktoexpert'][props.language]}
+                                  </a>
                                 </Link>
                               </div>
                             </div>
@@ -668,32 +690,19 @@ function Header() {
                               style={{ width: "100%" }}
                             >
                               <span
-                                style={{
-                                  display: "flex",
-                                  position: "relative",
-                                  width: "100%",
-                                }}
+                                style={props.language === 'ur' || props.language === 'sd' ? {display: "flex",width: "100%",flexDirection:"row-reverse"}:{display: "flex",position: "relative", width: "100%"}}
+
                               >
                                 <a
-                                  style={{
-                                    width: "300px",
-                                    paddingLeft: "15px",
-                                    height: "40px",
-                                    paddingTop: "8px",
-                                  }}
+                                  style={props.language === 'ur' || props.language === 'sd' ? { width: "210px",paddingLeft: "15px",height: "40px",paddingTop: "8px",display: "flex",flexDirection:"row-reverse"}:{ width: "300px",paddingLeft: "15px",height: "40px",paddingTop: "8px"}}
                                   href="#"
                                 >
                                 <Link className={"link"} to={"/tourism"}>
-                                  Tourism
+                                {props.translations['Tourism'][props.language]}
                                 </Link>
                                 </a>
                                 <i
-                                  style={{
-                                    marginTop: "10px",
-                                    marginLeft: "0px",
-                                    position: "absolute",
-                                    right: "15px",
-                                  }}
+                                  style={props.language === 'ur' || props.language === 'sd' ? {marginTop: "10px",marginLeft: "0px",position: "absolute",left:"10px",display:"flex",flexDirection:"row-reverse"}:{marginTop: "10px",marginLeft: "0px",position: "absolute",right: "15px"}}
                                   class="dropbtn unique-iconDown unique-hover-rotate component fa fa-chevron-right"
                                 ></i>
                               </span>
@@ -702,7 +711,8 @@ function Header() {
                                 style={{ width: "200px", marginTop: "80px" }}
                               >
                                 <Link className={""} to={"/ComingSoon"}>
-                                  <a href="#">Talk to expert </a>
+                                  <a href="#">{props.translations['Talktoexpert'][props.language]}
+                                  </a>
                                 </Link>
                               </div>
                             </div>
@@ -712,32 +722,19 @@ function Header() {
                               style={{ width: "100%" }}
                             >
                               <span
-                                style={{
-                                  display: "flex",
-                                  position: "relative",
-                                  width: "100%",
-                                }}
+                                style={props.language === 'ur' || props.language === 'sd' ? {display: "flex",width: "100%",flexDirection:"row-reverse"}:{display: "flex",position: "relative", width: "100%"}}
                               >
                                 <a
-                                  style={{
-                                    width: "300px",
-                                    paddingLeft: "15px",
-                                    height: "40px",
-                                    paddingTop: "8px",
-                                  }}
+                                  style={props.language === 'ur' || props.language === 'sd' ? { width: "210px",paddingLeft: "15px",height: "40px",paddingTop: "8px",display: "flex",flexDirection:"row-reverse"}:{ width: "300px",paddingLeft: "15px",height: "40px",paddingTop: "8px"}}
                                   href="#"
                                 >
                                   <Link className={"link"} to={"/agriculture"}>
-                                  Agriculture
+                                {props.translations['Agriculture'][props.language]}
                                 </Link>
                                 </a>
                                 <i
-                                  style={{
-                                    marginTop: "10px",
-                                    marginLeft: "0px",
-                                    position: "absolute",
-                                    right: "15px",
-                                  }}
+                                  style={props.language === 'ur' || props.language === 'sd' ? {marginTop: "10px",marginLeft: "0px",display:"flex",flexDirection:"row-reverse",position: "absolute",left:"10px"}:{marginTop: "10px",marginLeft: "0px",position: "absolute",right: "15px"}}
+
                                   class="dropbtn unique-iconDown unique-hover-rotate component fa fa-chevron-right"
                                 ></i>
                               </span>
@@ -746,7 +743,7 @@ function Header() {
                                 style={{ width: "200px", marginTop: "120px" }}
                               >
                                 <Link className={""} to={"/ComingSoon"}>
-                                  <a href="#">Talk to expert </a>
+                                  <a href="#">{props.translations['Talktoexpert'][props.language]}</a>
                                 </Link>
                               </div>
                             </div>
@@ -756,33 +753,18 @@ function Header() {
                               style={{ width: "100%" }}
                             >
                               <span
-                                style={{
-                                  display: "flex",
-                                  position: "relative",
-                                  width: "100%",
-                                }}
+                                style={props.language === 'ur' || props.language === 'sd' ? {display: "flex",width: "100%",flexDirection:"row-reverse"}:{display: "flex",position: "relative", width: "100%"}}
                               >
                                 <a
-                                  style={{
-                                    width: "300px",
-                                    paddingLeft: "15px",
-                                    height: "40px",
-                                    paddingTop: "8px",
-                                  }}
+                                  style={props.language === 'ur' || props.language === 'sd' ? { width: "210px",paddingLeft: "15px",height: "40px",paddingTop: "8px",display: "flex",flexDirection:"row-reverse"}:{ width: "300px",paddingLeft: "15px",height: "40px",paddingTop: "8px"}}
                                   href="#"
                                 >
                                   <Link className={"link"} to={"/education"}>
-                                  Education
+                                {props.translations['Education'][props.language]}
                                 </Link>
-                                  
                                 </a>
                                 <i
-                                  style={{
-                                    marginTop: "10px",
-                                    marginLeft: "0px",
-                                    position: "absolute",
-                                    right: "15px",
-                                  }}
+                                style={props.language === 'ur' || props.language === 'sd' ? {marginTop: "10px",marginLeft: "0px",position: "absolute",left:"10px",display:"flex",flexDirection:"row-reverse",position: "absolute",left:"10px"}:{marginTop: "10px",marginLeft: "0px",position: "absolute",right: "15px"}}
                                   class="dropbtn unique-iconDown unique-hover-rotate component fa fa-chevron-right"
                                 ></i>
                               </span>
@@ -791,7 +773,7 @@ function Header() {
                                 style={{ width: "200px", marginTop: "160px" }}
                               >
                                 <Link className={""} to={"/ComingSoon"}>
-                                  <a href="#">Talk to expert </a>
+                                  <a href="#">{props.translations['Talktoexpert'][props.language]}</a>
                                 </Link>
                               </div>
                             </div>
@@ -801,32 +783,18 @@ function Header() {
                               style={{ width: "100%" }}
                             >
                               <span
-                                style={{
-                                  display: "flex",
-                                  position: "relative",
-                                  width: "100%",
-                                }}
+                              style={props.language === 'ur' || props.language === 'sd' ? {display: "flex",width: "100%",flexDirection:"row-reverse"}:{display: "flex",position: "relative", width: "100%"}}
                               >
                                 <a
-                                  style={{
-                                    width: "300px",
-                                    paddingLeft: "15px",
-                                    height: "40px",
-                                    paddingTop: "8px",
-                                  }}
+                                style={props.language === 'ur' || props.language === 'sd' ? { width: "210px",paddingLeft: "15px",height: "40px",paddingTop: "8px",display: "flex",flexDirection:"row-reverse"}:{ width: "300px",paddingLeft: "15px",height: "40px",paddingTop: "8px"}}
                                   href="#"
                                 >
                                   <Link className={"link"} to={"/energy"}>
-                                  Energy
+                                {props.translations['Energy'][props.language]}
                                 </Link>
                                 </a>
                                 <i
-                                  style={{
-                                    marginTop: "10px",
-                                    marginLeft: "0px",
-                                    position: "absolute",
-                                    right: "15px",
-                                  }}
+                                  style={props.language === 'ur' || props.language === 'sd' ? {marginTop: "10px",marginLeft: "0px",position: "absolute",left:"10px",display:"flex",flexDirection:"row-reverse"}:{marginTop: "10px",marginLeft: "0px",position: "absolute",right: "15px"}}
                                   class="dropbtn unique-iconDown unique-hover-rotate component fa fa-chevron-right"
                                 ></i>
                               </span>
@@ -835,7 +803,7 @@ function Header() {
                                 style={{ width: "200px", marginTop: "200px" }}
                               >
                                 <Link className={""} to={"/ComingSoon"}>
-                                  <a href="#">Talk to expert </a>
+                                  <a href="#">{props.translations['Talktoexpert'][props.language]}</a>
                                 </Link>
                               </div>
                             </div>
@@ -845,32 +813,18 @@ function Header() {
                               style={{ width: "100%" }}
                             >
                               <span
-                                style={{
-                                  display: "flex",
-                                  position: "relative",
-                                  width: "100%",
-                                }}
+                              style={props.language === 'ur' || props.language === 'sd' ? {display: "flex",width: "100%",flexDirection:"row-reverse"}:{display: "flex",position: "relative", width: "100%"}}
                               >
                                 <a
-                                  style={{
-                                    width: "300px",
-                                    paddingLeft: "15px",
-                                    height: "40px",
-                                    paddingTop: "8px",
-                                  }}
+                                style={props.language === 'ur' || props.language === 'sd' ? { width: "210px",paddingLeft: "15px",height: "40px",paddingTop: "8px",display: "flex",flexDirection:"row-reverse"}:{ width: "300px",paddingLeft: "15px",height: "40px",paddingTop: "8px"}}
                                   href="#"
                                 >
                                   <Link className={"link"} to={"/health"}>
-                                  Health
+                                {props.translations['Health'][props.language]}
                                 </Link>
                                 </a>
                                 <i
-                                  style={{
-                                    marginTop: "10px",
-                                    marginLeft: "0px",
-                                    position: "absolute",
-                                    right: "15px",
-                                  }}
+                                style={props.language === 'ur' || props.language === 'sd' ? {marginTop: "10px",marginLeft: "0px",display:"flex",position: "absolute",left:"10px",flexDirection:"row-reverse"}:{marginTop: "10px",marginLeft: "0px",position: "absolute",right: "15px"}}
                                   class="dropbtn unique-iconDown unique-hover-rotate component fa fa-chevron-right"
                                 ></i>
                               </span>
@@ -879,7 +833,7 @@ function Header() {
                                 style={{ width: "200px", marginTop: "240px" }}
                               >
                                 <Link className={""} to={"/ComingSoon"}>
-                                  <a href="#">Talk to expert </a>
+                                  <a href="#">{props.translations['Talktoexpert'][props.language]}</a>
                                 </Link>
                               </div>
                             </div>
@@ -889,32 +843,18 @@ function Header() {
                               style={{ width: "100%" }}
                             >
                               <span
-                                style={{
-                                  display: "flex",
-                                  position: "relative",
-                                  width: "100%",
-                                }}
+                              style={props.language === 'ur' || props.language === 'sd' ? {display: "flex",width: "100%",flexDirection:"row-reverse"}:{display: "flex",position: "relative", width: "100%"}}
                               >
                                 <a
-                                  style={{
-                                    width: "300px",
-                                    paddingLeft: "15px",
-                                    height: "40px",
-                                    paddingTop: "8px",
-                                  }}
+                                style={props.language === 'ur' || props.language === 'sd' ? { width: "210px",paddingLeft: "15px",height: "40px",paddingTop: "8px",display: "flex",flexDirection:"row-reverse"}:{ width: "300px",paddingLeft: "15px",height: "40px",paddingTop: "8px"}}
                                   href="#"
                                 >
                                   <Link className={"link"} to={"/informationtech"}>
-                                  Information Technology
+                                  {props.translations['InformationTechnology'][props.language]}
                                 </Link>
                                 </a>
                                 <i
-                                  style={{
-                                    marginTop: "10px",
-                                    marginLeft: "0px",
-                                    position: "absolute",
-                                    right: "15px",
-                                  }}
+                                style={props.language === 'ur' || props.language === 'sd' ? {marginTop: "10px",marginLeft: "0px",display:"flex",position: "absolute",left:"10px",flexDirection:"row-reverse"}:{marginTop: "10px",marginLeft: "0px",position: "absolute",right: "15px"}}
                                   class="dropbtn unique-iconDown unique-hover-rotate component fa fa-chevron-right"
                                 ></i>
                               </span>
@@ -923,7 +863,7 @@ function Header() {
                                 style={{ width: "200px", marginTop: "280px" }}
                               >
                                 <Link className={""} to={"/ComingSoon"}>
-                                  <a href="#">Talk to expert </a>
+                                  <a href="#">{props.translations['Talktoexpert'][props.language]}</a>
                                 </Link>
                               </div>
                             </div>
@@ -933,52 +873,52 @@ function Header() {
                     <li>
                       <a title="" className={"link"}>
                         <Link className="link" to={"/NewsAndInformation"}>
-                          News & Information
+                        {props.translations['NewsInformation'][props.language]}
                         </Link>
                       </a>
                     </li>
                     <li>
-                      <div class="dropdown">
+                      <div class="dropdown" style={props.language === 'ur' || props.language === 'sd'? {display:"flex",flexDirection:"row-reverse"}:{}}>
                         <span
                           style={{ marginRight: "5px", textDecoration: "none" }}
                           className={"link"}
                         >
-                          Resources
+                        {props.translations['Resources'][props.language]}
                         </span>
                         <i
                           style={{ marginTop: "0px", marginLeft: "0px" }}
                           class=" dropbtn iconDown hover-rotate fa fa-chevron-right"
                         ></i>
-                        <div class="dropdown-content">
+                        <div class="dropdown-content" style={props.language === 'ur' || props.language === 'sd'? {marginTop:"30px"}:{}}>
                           <Link className={""} to={"/resource"}>
                             <a target="_blank" href="">
                               {/* <Link className="link" to={"/ComingSoon"}> */}
-                              Download
-                              {/* </Link> */}
+                              {props.translations['Download'][props.language]}
                             </a>
                           </Link>
                           <Link className={""} to={"/regulatorycatalog"}>
-                            <a href="#">Regulatory Catalog</a>
+                            <a href="#">
+                            {props.translations['RegulatoryCatalog'][props.language]}
+                            </a>
                           </Link>
                         </div>
                       </div>
                     </li>
                     <li>
-                      <div class="dropdown">
+                      <div class="dropdown" style={props.language === 'ur' || props.language === 'sd'? {display:"flex",flexDirection:"row-reverse"}:{}}>
                         <span
                           style={{ marginRight: "5px", textDecoration: "none" }}
                           className={"link"}
-                        >
-                          About us
+                        > {props.translations['Aboutus'][props.language]}
                         </span>
                         <i
                           style={{ marginTop: "0px", marginLeft: "0px" }}
                           class="dropbtn iconDown hover-rotate fa fa-chevron-right"
                         ></i>
-                        <div class="dropdown-content">
+                        <div class="dropdown-content" style={props.language === 'ur' || props.language === 'sd'? {marginTop:"30px"}:{}}>
                           <Link className="" to={"/aboutus"}>
-                            <a target="_blank" href="">
-                              Vision
+                            <a target="_blank" href="" style={props.language === 'ur' || props.language === 'sd' ? {display:"flex",flexDirection:"row-reverse",marginRight:"-16px"}:{}} >
+                            {props.translations['Vision'][props.language]}
                             </a>
                           </Link>
                           <div
@@ -986,44 +926,40 @@ function Header() {
                             style={{ width: "100%" }}
                           >
                             <span
-                              style={{
-                                display: "flex",
-                                position: "relative",
-                                width: "100%",
-                              }}
+                              style={props.language === 'ur' || props.language === 'sd'? {display: "flex",flexDirection:"row-reverse",width: "100%",}:{display: "flex",position: "relative",width: "100%"}}
                             >
                               <a
-                                style={{
-                                  width: "100%",
-                                  paddingLeft: "30px",
-                                  height: "40px",
-                                  paddingTop: "8px",
-                                }}
+                              style={props.language === 'ur' || props.language === 'sd'? {width: "88%",paddingLeft: "30px",height: "40px",paddingTop: "8px",display:"flex",flexDirection:"row-reverse"}:{width: "100%",paddingLeft: "30px",height: "40px",paddingTop: "8px"}}
+
                                 href="#"
                               >
-                                Components
+                              {props.translations['Components'][props.language]}
                               </a>
                               <i
-                                style={{
-                                  marginTop: "10px",
-                                  marginLeft: "0px",
-                                  position: "absolute",
-                                  right: "15px",
-                                }}
+                                // style={{
+                                //   marginTop: "10px",
+                                //   marginLeft: "0px",
+                                //   position: "absolute",
+                                //   right: "15px",
+                                // }}
+                              style={props.language === 'ur' || props.language === 'sd'? {marginTop: "10px",marginLeft: "0px",display:"flex",flexDirection:"row-reverse"}:{marginTop: "10px",marginLeft: "0px",position: "absolute",right:"15px"}}
+
                                 class="dropbtn unique-iconDown unique-hover-rotate component fa fa-chevron-right"
                               ></i>
                             </span>
                             <div class="dropdown-content nested-content nested-right" style={{left:"auto"}}>
                               <Link className={""} to={"/Component"}>
-                                <a href="#">CLICK SID</a>
+                                <a href="#">{props.translations['CLICKSID'][props.language]}
+                                </a>
                               </Link>
                               <Link className={""} to={"/Team"}>
-                                <a href="#">Our Team</a>
+                                <a href="#">{props.translations['OurTeam'][props.language]}
+                                </a>
                               </Link>
                             </div>
                           </div>
                           <Link className={""} to={"/Team"}>
-                            <a href="#">CLICK SID</a>
+                            <a href="#" style={props.language === 'ur' || props.language === 'sd' ? {display:"flex",flexDirection:"row-reverse",marginRight:"-16px"}:{}}>{props.translations['CLICKSID'][props.language]}</a>
                           </Link>
                         </div>
                       </div>
@@ -1032,7 +968,7 @@ function Header() {
                     <li>
                       <a href="comingsoon.html" title="" className={"link"}>
                         <Link className="link" to={"/Maps"}>
-                          Maps
+                        {props.translations['Maps'][props.language]}
                         </Link>
                       </a>
                     </li>
@@ -1054,33 +990,36 @@ function Header() {
             </div>
             )}
           </div>
-          <div className=" px-5">
+          <div className=" px-5" style={props.language === 'ur' || props.language === 'sd'? {display:"flex",justifyContent:"end"}:{}}>
             <div
               className="col-lg-7 col-md-6 col-sm-12 col-xs-12 marginTopHeader"
             >
-              <h1 className="hero-heading" style={{textAlign:"inherit"}}>
-                Discover the Riches of Sindh<br></br> Invest in a Thriving
-                Future
-              </h1>
+              <h1 className="hero-heading" 
+              style={props.language === 'en' ? {textAlign:"start"}:props.language === 'ur' || props.language === 'sd' ?{textAlign:"end"}:{textAlign:"inherit"}}>
+              {props.translations['hero-heading'][props.language]}
+            </h1>
             </div>
           </div>
 
-          <div className=" px-5 ">
+          <div className=" px-5 " style={props.language === 'ur' || props.language === 'sd' ? {display:"flex",justifyContent:"end",textAlign:"end"}:{textAlign:"inherit"}}>
             <div className="col-lg-7 col-md-6 col-sm-12 col-xs-12">
-              <h2 className="subHeroHeading">
-                Explore the Province of Sindh and Discover its many assets and
-                Potential for Growth and Investment
-              </h2>
-              <div className="row mt-5 ">
-                <div className="col-lg-11 col-md-7 col-sm-7 col-xs-12 px-0">
+            <h2 className="subHeroHeading">
+            {props.translations['subHeroHeading'][props.language]}
+          </h2>
+              <div className="row mt-5 " >
+                <div className="col-lg-11 col-md-7 col-sm-7 col-xs-12 px-0" style={props.language === 'ur' ? {display:"flex",justifyContent:"end"}:{}}>
                   <Link className={""} to={"/investnow"}>
                     <button type="button" className="feedback">
-                      <span>Invest Now</span>
+                      <span>
+                      {props.translations['investButton'][props.language]}
+                      </span>
                     </button>
                   </Link>
                   <Link className={""} to={"/RegulatoryCatalogCalculator"}>
                     <button type="button" className="feedback">
-                      <span>Regulatory Cost Calculator</span>
+                    <span>
+                    {props.translations['calculatorButton'][props.language]}
+                    </span>
                     </button>
                   </Link>
                 </div>
@@ -1246,17 +1185,14 @@ function Header() {
             >
               <a
                 href="comingsoon.html"
-                style={{ paddingRight: "0px", zIndex: "0" }}
+                className={props.language === 'ur' || props.language === 'sd'? "LanguageUpdateHeader":"UpdateHeader" }
               >
                 <button type="button" className="update">
-                  <span>Updates</span>
+                  <span>{props.translations['Updates'][props.language]}</span>
                 </button>
               </a>
               <marquee className="marque">
-                PIU-CLICK SID is soliciting applications for Procurement &
-                Contracts Management Specialist & Manager Finance. Interested
-                applicants should carefully read the vacancy announcement on our
-                social media pages.
+              {props.translations['Headline'][props.language]}
               </marquee>
             </div>
           </div>
