@@ -88,7 +88,7 @@ export default function Maps() {
     } else {
       // For individual department checkboxes, update the corresponding flag
       Deps.forEach((dep) => {
-        updatedDisplay[dep] = newValue.includes(dep) ? 1 : null;
+        updatedDisplay[dep] = newValue.includes(dep) ? 1 : 0;
       });
   
       // Update individual department checkboxes
@@ -1095,6 +1095,7 @@ export default function Maps() {
   <Select
     labelId="demo-multiple-checkbox-label"
     id="demo-multiple-checkbox"
+    style={{textAlign:'left'}}
     multiple
     value={DepName}
     onChange={HandleChange}
