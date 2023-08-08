@@ -8,8 +8,102 @@ import MobileHeaderGeneric from "./MobileHeaderGeneric";
 import { Tooltip } from "antd";
 import karachimap from "../assets/karachimap.png";
 import { Link } from "react-router-dom";
+import { InputLabel } from "@mui/material";
+import OutlinedInput from '@mui/material/OutlinedInput';
+import {Button} from '@mui/material';
+import MenuItem from '@mui/material/MenuItem';
+import FormControl from '@mui/material/FormControl';
+import ListItemText from '@mui/material/ListItemText';
+import Select, { SelectChangeEvent } from '@mui/material/Select';
+import Checkbox from '@mui/material/Checkbox';
+
+
+const ITEM_HEIGHT = 48;
+const ITEM_PADDING_TOP = 8;
+const MenuProps = {
+  PaperProps: {
+    style: {
+      maxHeight: ITEM_HEIGHT * 4.5 + ITEM_PADDING_TOP,
+      width: 250,
+    },
+  },
+};
+
+const Deps = [
+  'All',
+  'Sindh Investment department',
+  'Labour Department',
+  'Local Government Department',
+  'Excise, Taxation & Taxation',
+  'Energy Department',
+  'School Education Department',
+  'Sindh Revenue Board',
+  'College Department',
+  'CS Sindh',
+  'Sindh Environment Protection Agency',
+  'Sindh Building Control Authority',
+  'Industrial Department',
+  'Sindh Food Authority',
+  'Board of Revenue Sindh',
+  'EDUCATION CITY',
+  'SEDF',
+  'Agriculture Department',
+  'P&D',
+  'CM Sindh',
+  'SEZMC',
+  'Sindh Employees Social Security Institution'
+];
+
 export default function Maps() {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+  const [departmentDisplay, setDepartmentDisplay] = useState({});
+
+ 
+  const [DepName, setDepName] = useState([]);
+
+  const HandleChange = (event) => {
+    const {
+      target: { value: newValue },
+    } = event;
+  
+    // Create a new object to hold the updated departmentDisplay state
+    const updatedDisplay = { ...departmentDisplay };
+  
+    if (newValue.includes("All")) {
+      // Toggle "All" checkbox state
+      if (DepName.includes("All")) {
+        // "All" checkbox was already selected, so unselect all and "All"
+        setDepName([]);
+        Deps.forEach((dep) => {
+          updatedDisplay[dep] = 0;
+        });
+      } else {
+        // "All" checkbox was not selected, so select all and "All"
+        setDepName(["All", ...Deps]);
+        Deps.forEach((dep) => {
+          updatedDisplay[dep] = 1;
+        });
+      }
+    } else {
+      // For individual department checkboxes, update the corresponding flag
+      Deps.forEach((dep) => {
+        updatedDisplay[dep] = newValue.includes(dep) ? 1 : null;
+      });
+  
+      // Update individual department checkboxes
+      setDepName(newValue.filter((dep) => dep !== "All" && dep !== ""));
+    }
+  
+    // Update the departmentDisplay state with the new object
+    setDepartmentDisplay(updatedDisplay);
+  };
+  
+  
+  
+    
+    
+  
 
   useEffect(() => {
     // Function to update the windowWidth state when the resize event occurs
@@ -25,6 +119,9 @@ export default function Maps() {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
+
+  
+
   const [isSticky, setIsSticky] = useState(false);
   const energyDepartment = (
     <div>
@@ -62,7 +159,7 @@ export default function Maps() {
     </div>
   );
   const SindhRevenueBoard = (
-    <div>
+    <div >
       <a
         style={{ textDecoration: "none", color: "white" }}
         href="https://www.google.com/maps/dir/Sindh+Revenue+Board+Karachi,+Shaheen+Complex,+3rd,+6th,+9th+and+12th+floor,+Civil+Lines,+Karachi,+Karachi+City,+Sindh,+Pakistan//@24.8508844,66.9781481,13z/data=!3m1!4b1!4m8!4m7!1m5!1m1!1s0x3eb33e0a54d24ab3:0xa79dcdbd2b4625a!2m2!1d67.0194336!2d24.8508901!1m0?entry=ttu"
@@ -493,6 +590,9 @@ export default function Maps() {
                   position: "absolute",
                   marginTop: "23px",
                   marginLeft: "-104px",
+                  display: departmentDisplay["School Education Department"] === 1 ? "block" : "none",
+
+
                 }}
                 className="cursorTooltip"
                 src={cricle}
@@ -512,6 +612,8 @@ export default function Maps() {
                   position: "absolute",
                   marginTop: `${160 + marginTop}px`,
                   marginLeft: `${-120 + marginLeft}px`,
+                  display: departmentDisplay["CM Sindh"] === 1 ? "block" : "none",
+
                 }}
                 src={cricle}
                 className="cursorTooltip"
@@ -531,6 +633,9 @@ export default function Maps() {
                   position: "absolute",
                   marginTop: `${158 + marginTop}px`,
                   marginLeft: `${-50 + marginLeft}px`,
+                  display: departmentDisplay["Sindh Revenue Board"] === 1 ? "block" : "none",
+
+
                 }}
                 className="cursorTooltip"
                 src={cricle}
@@ -550,6 +655,8 @@ export default function Maps() {
                   position: "absolute",
                   marginTop: `${238 + marginTop}px`,
                   marginLeft: `${-38 + marginLeft}px`,
+                  display: departmentDisplay["Energy Department"] === 1 ? "block" : "none",
+
                 }}
                 src={cricle}
                 className="cursorTooltip"
@@ -569,6 +676,8 @@ export default function Maps() {
                   position: "absolute",
                   marginTop: `${175 + marginTop}px`,
                   marginLeft: `${-100 + marginLeft}px`,
+                  display: departmentDisplay["College Department"] === 1 ? "block" : "none",
+
                 }}
                 src={cricle}
                 className="cursorTooltip"
@@ -588,6 +697,8 @@ export default function Maps() {
                   position: "absolute",
                   marginTop: `${103 + marginTop}px`,
                   marginLeft: `${-164 + marginLeft}px`,
+                  display: departmentDisplay["CS Sindh"] === 1 ? "block" : "none",
+
                 }}
                 src={cricle}
                 className="cursorTooltip"
@@ -607,6 +718,8 @@ export default function Maps() {
                   position: "absolute",
                   marginTop: `${140 + marginTop}px`,
                   marginLeft: `${-162 + marginLeft}px`,
+                  display: departmentDisplay["Sindh Environment Protection Agency"] === 1 ? "block" : "none",
+
                 }}
                 src={cricle}
                 className="cursorTooltip"
@@ -626,6 +739,9 @@ export default function Maps() {
                   position: "absolute",
                   marginTop: `${149 + marginTop}px`,
                   marginLeft: `${-179 + marginLeft}px`,
+                  display: departmentDisplay["Sindh Building Control Authority"] === 1 ? "block" : "none",
+                  
+
                 }}
                 src={cricle}
                 className="cursorTooltip"
@@ -645,6 +761,7 @@ export default function Maps() {
                   position: "absolute",
                   marginTop: `${189 + marginTop}px`,
                   marginLeft: `${-79 + marginLeft}px`,
+                  display: departmentDisplay["Industrial Department"] === 1 ? "block" : "none",
                 }}
                 src={cricle}
                 className="cursorTooltip"
@@ -664,6 +781,7 @@ export default function Maps() {
                   position: "absolute",
                   marginTop: `${201 + marginTop}px`,
                   marginLeft: `${-61 + marginLeft}px`,
+                  display: departmentDisplay["Sindh Food Authority"] === 1 ? "block" : "none",
                 }}
                 src={cricle}
                 className="cursorTooltip"
@@ -683,6 +801,7 @@ export default function Maps() {
                   position: "absolute",
                   marginTop: `${200 + marginTop}px`,
                   marginLeft: `${-156 + marginLeft}px`,
+                  display: departmentDisplay["Board of Revenue Sindh"] === 1 ? "block" : "none",
                 }}
                 src={cricle}
                 className="cursorTooltip"
@@ -702,6 +821,7 @@ export default function Maps() {
                   position: "absolute",
                   marginTop: `${259 + marginTop}px`,
                   marginLeft: `${-106 + marginLeft}px`,
+                  display: departmentDisplay["P&D"] === 1 ? "block" : "none",
                 }}
                 src={cricle}
                 className="cursorTooltip"
@@ -721,6 +841,7 @@ export default function Maps() {
                   position: "absolute",
                   marginTop: `${82 + marginTop}px`,
                   marginLeft: `${12 + marginLeft}px`,
+                  display: departmentDisplay["Sindh Healthcare Commission"] === 1 ? "block" : "none",
                 }}
                 src={cricle}
                 className="cursorTooltip"
@@ -740,6 +861,8 @@ export default function Maps() {
                   position: "absolute",
                   marginTop: `${108 + marginTop}px`,
                   marginLeft: `${19 + marginLeft}px`,
+                  display: departmentDisplay["Health Department"] === 1 ? "block" : "none",
+
                 }}
                 src={cricle}
                 className="cursorTooltip"
@@ -759,6 +882,7 @@ export default function Maps() {
                   position: "absolute",
                   marginTop: `${94 + marginTop}px`,
                   marginLeft: `${100 + marginLeft}px`,
+                  display: departmentDisplay["Sindh Employees Social Security Institution"] === 1 ? "block" : "none",
                 }}
                 src={cricle}
                 className="cursorTooltip"
@@ -778,6 +902,7 @@ export default function Maps() {
                   position: "absolute",
                   marginTop: `${63 + marginTop}px`,
                   marginLeft: `${236 + marginLeft}px`,
+                  display: departmentDisplay["Excise, Taxation & Taxation"] === 1 ? "block" : "none",
                 }}
                 src={cricle}
                 className="cursorTooltip"
@@ -797,6 +922,8 @@ export default function Maps() {
                   position: "absolute",
                   marginTop: `${23 + marginTop}px`,
                   marginLeft: `${201 + marginLeft}px`,
+                  display: departmentDisplay["Local Government Department"] === 1 ? "block" : "none",
+
                 }}
                 src={cricle}
                 className="cursorTooltip"
@@ -815,7 +942,10 @@ export default function Maps() {
                 style={{
                   position: "absolute",
                   marginTop: `${-25 + marginTop}px`,
-                  marginLeft: `${129 + marginLeft}px`,
+                  marginLeft: `${129 + marginLeft}px`,  
+                  display: departmentDisplay["Labour Department"] === 1 ? "block" : "none",
+
+                 
                 }}
                 src={cricle}
                 className="cursorTooltip"
@@ -835,6 +965,7 @@ export default function Maps() {
                   position: "absolute",
                   marginTop: `${146 + marginTop}px`,
                   marginLeft: `${126 + marginLeft}px`,
+                  display: departmentDisplay["Agriculture Department"] === 1 ? "block" : "none",
                 }}
                 src={cricle}
                 className="cursorTooltip"
@@ -855,6 +986,7 @@ export default function Maps() {
                   position: "absolute",
                   marginTop: `${-125 + marginTop}px`,
                   marginLeft: `${20 + marginLeft}px`,
+                  display: departmentDisplay["Sindh Investment department"] === 1 ? "block" : "none",
                 }}
                 src={cricle}
                 className="cursorTooltip"
@@ -874,6 +1006,9 @@ export default function Maps() {
                   position: "absolute",
                   marginTop: `${150 + marginTop}px`,
                   marginLeft: `${160 + marginLeft}px`,
+                  display: departmentDisplay["EODB"] === 1 ? "block" : "none",
+
+                  
                 }}
                 src={cricle}
                 className="cursorTooltip"
@@ -893,6 +1028,7 @@ export default function Maps() {
                   position: "absolute",
                   marginTop: `${-16 + marginTop}px`,
                   marginLeft: `${-26 + marginLeft}px`,
+                  display: departmentDisplay["SEZMC"] === 1 ? "block" : "none",
                 }}
                 src={cricle}
                 className="cursorTooltip"
@@ -912,7 +1048,9 @@ export default function Maps() {
                   position: "absolute",
                   marginTop: `${127 + marginTop}px`,
                   marginLeft: `${-98 + marginLeft}px`,
-                }}
+                  display: departmentDisplay["SEDF"] === 1 ? "block" : "none",
+
+                  }}
                 src={cricle}
                 className="cursorTooltip"
                 width={"10px"}
@@ -926,11 +1064,12 @@ export default function Maps() {
               title={eduCity}
               arrow={mergedArrow}
             >
-              <img
+              <img 
                 style={{
                   position: "absolute",
                   marginTop: `${209 + marginTop}px`,
                   marginLeft: `${-98 + marginLeft}px`,
+                  display: departmentDisplay["EDUCATION CITY"] === 1 ? "block" : "none",
                 }}
                 src={cricle}
                 className="cursorTooltip"
@@ -949,19 +1088,43 @@ export default function Maps() {
           paddingBottom: "40px",
         }}
       >
-        <a href="comingsoon.html">
-          <button
-            type="button"
-            className="InvestInSindhButton"
-            style={{ width: "300px" }}
-          >
-            <span style={{ width: "179px", height: "33px" }}>
-              View All Departments
-            </span>
-          </button>
-        </a>
+         {/* <a href="comingsoon.html"> */}
+    
+         <FormControl sx={{ m: 1, width: 300 }}>
+  <InputLabel style={{ color: 'black' }}>View All Departments</InputLabel>
+  <Select
+    labelId="demo-multiple-checkbox-label"
+    id="demo-multiple-checkbox"
+    multiple
+    value={DepName}
+    onChange={HandleChange}
+    input={<OutlinedInput label="View All Departments" />}
+    MenuProps={MenuProps}
+    renderValue={(selected) => {
+      if (selected.includes('All')) {
+        return 'All';
+      }
+      return selected.join(', ');
+    }}
+  >
+    {/* <MenuItem value="All">
+      <Checkbox checked={DepName.includes('All')} />
+      <ListItemText primary="All" />
+    </MenuItem> */}
+    {Deps.map((Dep) => (
+      <MenuItem key={Dep} value={Dep}>
+        <Checkbox checked={DepName.includes(Dep)} />
+        <ListItemText primary={Dep} />
+      </MenuItem>
+    ))}
+  </Select>
+</FormControl>
+
+    {/* </a> */}
       </div>
       <Footer />
     </>
   );
-}
+          }
+        
+

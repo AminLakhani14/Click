@@ -376,6 +376,7 @@ function Tourism(props) {
               </div>
             </div>
             <div className="col-lg-4">
+              <div className="textField">
               <TextField
                 id="outlined-controlled"
                 style={{ width: "100%" }}
@@ -387,6 +388,7 @@ function Tourism(props) {
                 size="small"
                 placeholder="Enter your job title"
               />
+            </div>
             </div>
           </div>
           <div className="row mt-4 sectornestedscreens">

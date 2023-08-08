@@ -594,3 +594,26 @@ input.regulatoryTextField[type="text"]:focus {
   .sectornestedscreens {
     padding-bottom: 0px;
   }}
+
+/* Global CSS or Component Stylesheet */
+.custom-select .MuiSelect-icon {
+  color: white;
+
+  
+}
+
+.css-3dzjca-MuiPaper-root-MuiPopover-paper-MuiMenu-paper {
+  max-height: 500px !important;
+  width: 325px !important;
+}
+
+
+.css-kk1bwy-MuiButtonBase-root-MuiMenuItem-root.Mui-selected {
+  background-color: rgba(25, 118, 210, 0.08);
+  width: 310px;
+}
+
+.css-kk1bwy-MuiButtonBase-root-MuiMenuItem-root {
+  min-height: auto;
+  width: 176px;
+}
