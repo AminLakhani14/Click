@@ -1,5 +1,5 @@
 import React from "react";
-function MobileMarque() {
+function MobileMarque(props) {
   return (
     <>
       <div
@@ -16,7 +16,8 @@ function MobileMarque() {
             }}>
               <a href="comingsoon.html">
                 <button type="button" className="feedback">
-                  <span>Updates</span>
+                  <span>{props.translations['Updates'][props.language]}
+                  </span>
                 </button>
               </a>
             </div>
@@ -27,10 +28,7 @@ function MobileMarque() {
             }}
             >
               <marquee>
-                PIU-CLICK LGD is soliciting applications for Procurement &
-                Contracts Management Specialist & Manager Finance. Interested
-                applicants should carefully read the vacancy announcement on our
-                social media pages.
+              {props.translations['Headline'][props.language]}
               </marquee>
             </div>
           </div>
