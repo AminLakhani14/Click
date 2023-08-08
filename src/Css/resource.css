@@ -663,3 +663,8 @@ input.regulatoryTextField[type="text"]:focus {
   min-height: auto;
   width: 176px;
 }
+
+.css-kk1bwy-MuiButtonBase-root-MuiMenuItem-root:hover {
+  min-height: auto;
+  width: 100%;
+}
