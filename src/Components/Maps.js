@@ -58,10 +58,8 @@ export default function Maps() {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
   const [departmentDisplay, setDepartmentDisplay] = useState({});
-   
-//  setDepartmentDisplay(initialDisplayState)
- 
-  const [DepName, setDepName] = useState(["All"]);
+  const [DepName, setDepName] = useState(['All']);
+
   useEffect(() => {
     // Initialize departmentDisplay with all departments set to 1
     const initialDisplay = {};
@@ -71,26 +69,38 @@ export default function Maps() {
     setDepartmentDisplay(initialDisplay);
     setDepName(['All', ...Deps]);
   }, []);
-
+     
   const HandleChange = (event) => {
     const {
       target: { value: newValue },
     } = event;
-  
-    // Create a new object to hold the updated departmentDisplay state
+
     const updatedDisplay = { ...departmentDisplay };
-  
-    if (newValue.includes("All")) {
-      // Toggle "All" checkbox state
-      if (DepName.includes("All")) {
-        // "All" checkbox was already selected, so unselect all and "All"
-        setDepName([]);
+
+    if (newValue.includes('All')) {
+      // // if (DepName.includes('All')) {
+      // //   // Unselect all departments and "All"
+      //   setDepName([]);
+      //   Deps.forEach((dep) => {
+      //     updatedDisplay[dep] = 0;
+      //   });
+      // }
+      if (DepName.includes('All')) {
+        // Uncheck the "All" checkbox when unticking individual department
+        setDepName(newValue.filter((dep) => dep !== 'All'));
         Deps.forEach((dep) => {
-          updatedDisplay[dep] = 0;
+          if (!newValue.includes(dep)) {
+            updatedDisplay[dep] = 0;
+          }
         });
-      } else {
-        // "All" checkbox was not selected, so select all and "All"
-        setDepName(["All", ...Deps]);
+      }
+    
+       
+      
+      
+      else {
+        // Select all departments and "All"
+        setDepName(['All', ...Deps]);
         Deps.forEach((dep) => {
           updatedDisplay[dep] = 1;
         });
@@ -100,15 +110,16 @@ export default function Maps() {
       Deps.forEach((dep) => {
         updatedDisplay[dep] = newValue.includes(dep) ? 1 : 0;
       });
-  
+
       // Update individual department checkboxes
-      setDepName(newValue.filter((dep) => dep !== "All" && dep !== ""));
+      setDepName(newValue.filter((dep) => dep !== 'All' && dep !== ''));
+
+     
     }
-  
+
     // Update the departmentDisplay state with the new object
     setDepartmentDisplay(updatedDisplay);
   };
-  
   
   
     
@@ -580,7 +591,7 @@ export default function Maps() {
           display: "flex",
           paddingBottom: "40px",
           marginTop: "-7.5px",
-          marginLeft:windowWidth <= 500 ?"230px":""
+          marginLeft:windowWidth <= 500 ?"30px":""
         }}
       >
          
@@ -634,7 +645,7 @@ export default function Maps() {
             justifyContent: "center",
             alignItems: "center",
             marginTop: window.innerWidth < 500? "-3rem": "5rem",
-            // marginLeft: window.innerWidth < 500? "-15rem": "",
+            marginLeft: window.innerWidth < 500? "-22rem": "",
             marginRight: window.innerWidth < 500? "-50px" :"320px"
           }}
         >

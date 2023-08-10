@@ -695,8 +695,8 @@ input.regulatoryTextField[type="text"]:focus {
 
 @media screen and (max-width: 500px) {
   .mapheight {
-  height: 419px !important;
-  max-width: 419px !important;
+  height: 400px !important;
+  max-width: 400px !important;
   }}
 
   @media screen and (max-width: 500px) {
