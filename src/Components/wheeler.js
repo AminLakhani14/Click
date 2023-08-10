@@ -3,6 +3,7 @@ import "../Css/header.css";
 import CircleSeg from "./practice";
 import asset1 from "../assets/asset1.svg";
 import SVG from 'react-inlinesvg';
+import { translations } from "../Transalation/Transalation";
 const wheelerInitialState = {
   deg: 45,
   value: 45,
@@ -62,7 +63,12 @@ function Wheeler(props) {
     setIsVisible2(false);
   };
 
-  console.log("Data", data);
+  // console.log("Data", data);
+
+
+  console.log("wheeler",translations)
+
+
 
   return (
     <>
@@ -82,15 +88,15 @@ function Wheeler(props) {
         <div className="body-box">
           <div className="row ">
             <div className="col-12 highlit-heading">
-              <h1 className="mainHeading">Awaiting Opportunities</h1>
+              <h1 className="mainHeading">
+                {translations["Awaiting"][props.language]}</h1>
             </div>
           </div>
           <div className="row" style={{ marginTop: "-20px" }}>
             <div className="col-lg-2"></div>
             <div className="col-lg-8 ph-reason">
               <p className="paragraphGeneric" style={{ color: "#5f5f5f" }}>
-                Sizeable and Attractive Opportunities available across all
-                Sectors
+              {translations["Attractives"][props.language]}
               </p>
             </div>
             <div className="col-lg-2"></div>

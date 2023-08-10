@@ -8,7 +8,10 @@ import urdu from "../assets/urdu.png";
 import "../Css/resource.css";
 import click from "../assets/click-logo1.png";
 import cardImage from "../assets/cardresource1.png";
-export default function GenericHeader() {
+import Sindhi from "../assets/Sindhi.png";
+import English from "../assets/English.png";
+
+export default function GenericHeader(props) {
   const [isSticky, setIsSticky] = useState(false);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
@@ -64,6 +67,8 @@ export default function GenericHeader() {
       }
     };
   }, []);
+
+
 
   return (
     <div
@@ -463,6 +468,22 @@ export default function GenericHeader() {
                     </div>
                   </div>
                 </div>
+                <div className="col-lg-6 col-md-6 col-sm-12 col-xs-12 r-side ">
+              <img
+                  className="headerLogoImages"
+                  src={props.language === "ur" ? English : urdu}
+                  alt=""
+                  onClick={props.toggleLanguage}
+                  style={{ marginLeft: "20px", marginRight: "20px" }}
+                />
+                <img
+                  className="headerLogoImages"
+                  src={Sindhi}
+                  alt=""
+                  onClick={props.toggleLanguage}
+                  style={{ marginLeft: "20px", marginRight: "20px" }}
+                />
+              </div>
               </li>
 
               <li className="HeaderPaddingRight">

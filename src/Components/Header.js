@@ -28,6 +28,8 @@ import { Link } from "react-router-dom";
 import GenericHeader from "./genericHeader";
 import { Tooltip } from "antd";
 import { useMemo } from "react";
+import { translations } from "../Transalation/Transalation";
+
 
 function Header(props) {
   const [isHovered, setIsHovered] = useState(false);
@@ -546,14 +548,14 @@ function Header(props) {
                 />
                 <a href="comingsoon.html">
                   <button type="button" className="login">
-                    <span>{props.translations["Login"][props.language]}</span>
+                    <span>{translations["Login"][props.language]}</span>
                   </button>
                 </a>
                 &nbsp;&nbsp;
                 <Link to={"/feedback"} style={{ textDecoration: "none" }}>
                   <button type="button" className="feedback">
                     <span>
-                      {props.translations["Feedback"][props.language]}
+                      {translations["Feedback"][props.language]}
                     </span>
                   </button>
                 </Link>
@@ -561,7 +563,7 @@ function Header(props) {
             </div>
             {isSticky === true ? (
               <div style={{ position: "relative", zIndex: "99999999999" }}>
-                <GenericHeader />
+                <GenericHeader translations={translations} language={props.language} toggleLanguage={props.toggleLanguage}/>
               </div>
             ) : (
               <div className={`header `}>
@@ -588,7 +590,7 @@ function Header(props) {
                           className={"link"}
                         >
                           <Link className={"link"} to={"/home"}>
-                            {props.translations["home"][props.language]}
+                            {translations["home"][props.language]}
                           </Link>
                         </a>
                       </li>
@@ -600,7 +602,7 @@ function Header(props) {
                         >
                           <Link className={"link"} to={"/WhySindh"}>
                             {
-                              props.translations["sindhATglance"][
+                              translations["sindhATglance"][
                                 props.language
                               ]
                             }
@@ -610,7 +612,7 @@ function Header(props) {
                       <li>
                         <a title="" className={"link"}>
                           <Link className="link" to={"/InvestNow"}>
-                            {props.translations["InvestNow"][props.language]}
+                            {translations["InvestNow"][props.language]}
                           </Link>
                         </a>
                       </li>
@@ -635,7 +637,7 @@ function Header(props) {
                           >
                             <Link className={"link"} to={"/Opportunity"}>
                               {
-                                props.translations["Opportunities"][
+                                translations["Opportunities"][
                                   props.language
                                 ]
                               }
@@ -705,7 +707,7 @@ function Header(props) {
                                     to={"/manufacturing"}
                                   >
                                     {
-                                      props.translations["Manufacturing"][
+                                      translations["Manufacturing"][
                                         props.language
                                       ]
                                     }
@@ -740,7 +742,7 @@ function Header(props) {
                                 <Link className={""} to={"/ComingSoon"}>
                                   <a href="#">
                                     {
-                                      props.translations["Talktoexpert"][
+                                      translations["Talktoexpert"][
                                         props.language
                                       ]
                                     }
@@ -792,7 +794,7 @@ function Header(props) {
                                 >
                                   <Link className={"link"} to={"/textile"}>
                                     {
-                                      props.translations["Textile"][
+                                      translations["Textile"][
                                         props.language
                                       ]
                                     }
@@ -827,7 +829,7 @@ function Header(props) {
                                 <Link className={""} to={"/ComingSoon"}>
                                   <a href="#">
                                     {
-                                      props.translations["Talktoexpert"][
+                                      translations["Talktoexpert"][
                                         props.language
                                       ]
                                     }
@@ -879,7 +881,7 @@ function Header(props) {
                                 >
                                   <Link className={"link"} to={"/tourism"}>
                                     {
-                                      props.translations["Tourism"][
+                                      translations["Tourism"][
                                         props.language
                                       ]
                                     }
@@ -914,7 +916,7 @@ function Header(props) {
                                 <Link className={""} to={"/ComingSoon"}>
                                   <a href="#">
                                     {
-                                      props.translations["Talktoexpert"][
+                                      translations["Talktoexpert"][
                                         props.language
                                       ]
                                     }
@@ -966,7 +968,7 @@ function Header(props) {
                                 >
                                   <Link className={"link"} to={"/agriculture"}>
                                     {
-                                      props.translations["Agriculture"][
+                                      translations["Agriculture"][
                                         props.language
                                       ]
                                     }
@@ -1001,7 +1003,7 @@ function Header(props) {
                                 <Link className={""} to={"/ComingSoon"}>
                                   <a href="#">
                                     {
-                                      props.translations["Talktoexpert"][
+                                      translations["Talktoexpert"][
                                         props.language
                                       ]
                                     }
@@ -1053,7 +1055,7 @@ function Header(props) {
                                 >
                                   <Link className={"link"} to={"/education"}>
                                     {
-                                      props.translations["Education"][
+                                      translations["Education"][
                                         props.language
                                       ]
                                     }
@@ -1090,7 +1092,7 @@ function Header(props) {
                                 <Link className={""} to={"/ComingSoon"}>
                                   <a href="#">
                                     {
-                                      props.translations["Talktoexpert"][
+                                      translations["Talktoexpert"][
                                         props.language
                                       ]
                                     }
@@ -1142,7 +1144,7 @@ function Header(props) {
                                 >
                                   <Link className={"link"} to={"/energy"}>
                                     {
-                                      props.translations["Energy"][
+                                      translations["Energy"][
                                         props.language
                                       ]
                                     }
@@ -1177,7 +1179,7 @@ function Header(props) {
                                 <Link className={""} to={"/ComingSoon"}>
                                   <a href="#">
                                     {
-                                      props.translations["Talktoexpert"][
+                                      translations["Talktoexpert"][
                                         props.language
                                       ]
                                     }
@@ -1229,7 +1231,7 @@ function Header(props) {
                                 >
                                   <Link className={"link"} to={"/health"}>
                                     {
-                                      props.translations["Health"][
+                                      translations["Health"][
                                         props.language
                                       ]
                                     }
@@ -1264,7 +1266,7 @@ function Header(props) {
                                 <Link className={""} to={"/ComingSoon"}>
                                   <a href="#">
                                     {
-                                      props.translations["Talktoexpert"][
+                                      translations["Talktoexpert"][
                                         props.language
                                       ]
                                     }
@@ -1319,7 +1321,7 @@ function Header(props) {
                                     to={"/informationtech"}
                                   >
                                     {
-                                      props.translations[
+                                      translations[
                                         "InformationTechnology"
                                       ][props.language]
                                     }
@@ -1354,7 +1356,7 @@ function Header(props) {
                                 <Link className={""} to={"/ComingSoon"}>
                                   <a href="#">
                                     {
-                                      props.translations["Talktoexpert"][
+                                      translations["Talktoexpert"][
                                         props.language
                                       ]
                                     }
@@ -1369,7 +1371,7 @@ function Header(props) {
                         <a title="" className={"link"}>
                           <Link className="link" to={"/NewsAndInformation"}>
                             {
-                              props.translations["NewsInformation"][
+                              translations["NewsInformation"][
                                 props.language
                               ]
                             }
@@ -1395,7 +1397,7 @@ function Header(props) {
                             }}
                             className={"link"}
                           >
-                            {props.translations["Resources"][props.language]}
+                            {translations["Resources"][props.language]}
                           </span>
                           <i
                             style={{ marginTop: "0px", marginLeft: "0px" }}
@@ -1412,13 +1414,13 @@ function Header(props) {
                             <Link className={""} to={"/resource"}>
                               <a target="_blank" href="">
                                 {/* <Link className="link" to={"/ComingSoon"}> */}
-                                {props.translations["Download"][props.language]}
+                                {translations["Download"][props.language]}
                               </a>
                             </Link>
                             <Link className={""} to={"/regulatorycatalog"}>
                               <a href="#">
                                 {
-                                  props.translations["RegulatoryCatalog"][
+                                  translations["RegulatoryCatalog"][
                                     props.language
                                   ]
                                 }
@@ -1447,7 +1449,7 @@ function Header(props) {
                             className={"link"}
                           >
                             {" "}
-                            {props.translations["Aboutus"][props.language]}
+                            {translations["Aboutus"][props.language]}
                           </span>
                           <i
                             style={{ marginTop: "0px", marginLeft: "0px" }}
@@ -1476,7 +1478,7 @@ function Header(props) {
                                     : {}
                                 }
                               >
-                                {props.translations["Vision"][props.language]}
+                                {translations["Vision"][props.language]}
                               </a>
                             </Link>
                             <div
@@ -1521,7 +1523,7 @@ function Header(props) {
                                   href="#"
                                 >
                                   {
-                                    props.translations["Components"][
+                                    translations["Components"][
                                       props.language
                                     ]
                                   }
@@ -1559,7 +1561,7 @@ function Header(props) {
                                 <Link className={""} to={"/Component"}>
                                   <a href="#">
                                     {
-                                      props.translations["CLICKSID"][
+                                      translations["CLICKSID"][
                                         props.language
                                       ]
                                     }
@@ -1568,7 +1570,7 @@ function Header(props) {
                                 <Link className={""} to={"/Team"}>
                                   <a href="#">
                                     {
-                                      props.translations["OurTeam"][
+                                      translations["OurTeam"][
                                         props.language
                                       ]
                                     }
@@ -1590,7 +1592,7 @@ function Header(props) {
                                     : {}
                                 }
                               >
-                                {props.translations["CLICKSID"][props.language]}
+                                {translations["CLICKSID"][props.language]}
                               </a>
                             </Link>
                           </div>
@@ -1600,7 +1602,7 @@ function Header(props) {
                       <li>
                         <a href="comingsoon.html" title="" className={"link"}>
                           <Link className="link" to={"/Maps"}>
-                            {props.translations["Maps"][props.language]}
+                            {translations["Maps"][props.language]}
                           </Link>
                         </a>
                       </li>
@@ -1641,7 +1643,7 @@ function Header(props) {
                     : { textAlign: "inherit" }
                 }
               >
-                {props.translations["hero-heading"][props.language]}
+                {translations["hero-heading"][props.language]}
               </h1>
             </div>
           </div>
@@ -1656,7 +1658,7 @@ function Header(props) {
           >
             <div className="col-lg-7 col-md-6 col-sm-12 col-xs-12">
               <h2 className="subHeroHeading">
-                {props.translations["subHeroHeading"][props.language]}
+                {translations["subHeroHeading"][props.language]}
               </h2>
               <div className="row mt-5 ">
                 <div
@@ -1670,14 +1672,14 @@ function Header(props) {
                   <Link className={""} to={"/investnow"}>
                     <button type="button" className="feedback">
                       <span>
-                        {props.translations["investButton"][props.language]}
+                        {translations["investButton"][props.language]}
                       </span>
                     </button>
                   </Link>
                   <Link className={""} to={"/RegulatoryCatalogCalculator"}>
                     <button type="button" className="feedback">
                       <span>
-                        {props.translations["calculatorButton"][props.language]}
+                        {translations["calculatorButton"][props.language]}
                       </span>
                     </button>
                   </Link>
@@ -1865,19 +1867,19 @@ function Header(props) {
                 }
               >
                 <button type="button" className="update">
-                  <span>{props.translations["Updates"][props.language]}</span>
+                  <span>{translations["Updates"][props.language]}</span>
                 </button>
               </a>
               {props.language === "ur" || props.language === "sd" ? (
                 <marquee className="marque" direction="right">
-                  {props.translations["Headline"][props.language]}
+                  {translations["Headline"][props.language]}
                 </marquee>
               ) : (
                 ""
               )}
               {props.language === "en" ? (
                 <marquee className="marque" direction="left">
-                  {props.translations["Headline"][props.language]}
+                  {translations["Headline"][props.language]}
                 </marquee>
               ) : (
                 ""
