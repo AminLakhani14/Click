@@ -58,9 +58,19 @@ export default function Maps() {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
   const [departmentDisplay, setDepartmentDisplay] = useState({});
-
+   
+//  setDepartmentDisplay(initialDisplayState)
  
-  const [DepName, setDepName] = useState([]);
+  const [DepName, setDepName] = useState(["All"]);
+  useEffect(() => {
+    // Initialize departmentDisplay with all departments set to 1
+    const initialDisplay = {};
+    Deps.forEach((dep) => {
+      initialDisplay[dep] = 1;
+    });
+    setDepartmentDisplay(initialDisplay);
+    setDepName(['All', ...Deps]);
+  }, []);
 
   const HandleChange = (event) => {
     const {
@@ -533,6 +543,7 @@ export default function Maps() {
             position: "absolute",
             zIndex: "1",
             gap: "5px",
+            marginLeft:"500px"
 
         }}
         >
@@ -563,6 +574,57 @@ export default function Maps() {
           </Tooltip>
         </div>
         <div
+        style={{
+          textAlign: "center",
+          justifyContent: "center",
+          display: "flex",
+          paddingBottom: "40px",
+          marginTop: "-7.5px",
+          marginLeft:windowWidth <= 500 ?"230px":""
+        }}
+      >
+         
+    
+         <FormControl sx={{ m: 1, width: 300, zIndex:2}}>
+  <InputLabel style={{ color: 'black' }}>View All Departments</InputLabel>
+  <Select
+    labelId="demo-multiple-checkbox-label"
+    id="demo-multiple-checkbox"
+    style={{textAlign:'left'}}
+    multiple
+    value={DepName}
+    onChange={HandleChange}
+    input={<OutlinedInput label="View All Departments" />}
+    // MenuProps={MenuProps}
+    renderValue={(selected) => {
+      if (selected.includes('All')) {
+        return 'All';
+      }
+      return selected.join(', ');
+    }}
+  >
+    {/* <MenuItem value="All">
+      <Checkbox checked={DepName.includes('All')} />
+      <ListItemText primary="All" />
+    </MenuItem> */}
+    {Deps.map((Dep) => (
+      <MenuItem 
+      key={Dep} value={Dep}>
+        <Checkbox style={window.innerWidth <= 500? {
+          width:"30%"
+        }:{
+         
+        }} 
+        checked={DepName.includes(Dep)} />
+        <ListItemText primary={Dep} />
+      </MenuItem>
+    ))}
+  </Select>
+</FormControl>
+
+    {/* </a> */}
+      </div>
+        <div
           // className="mt-5"
           
           style={{
@@ -571,7 +633,9 @@ export default function Maps() {
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
-            marginTop: window.innerWidth < 500? "-3rem": "3rem"
+            marginTop: window.innerWidth < 500? "-3rem": "5rem",
+            // marginLeft: window.innerWidth < 500? "-15rem": "",
+            marginRight: window.innerWidth < 500? "-50px" :"320px"
           }}
         >
           <img className="mapbgheight" 
@@ -583,6 +647,7 @@ export default function Maps() {
               display: "flex",
               justifyContent: "center",
               alignItems: "center",
+              // marginLeft:"600px"
             }}
           >
             <img className="mapheight"
@@ -1093,55 +1158,7 @@ export default function Maps() {
           </div>
         </div>
       </div>
-      <div
-        style={{
-          textAlign: "center",
-          justifyContent: "center",
-          display: "flex",
-          paddingBottom: "40px",
-        }}
-      >
-         {/* <a href="comingsoon.html"> */}
-    
-         <FormControl sx={{ m: 1, width: 300 }}>
-  <InputLabel style={{ color: 'black' }}>View All Departments</InputLabel>
-  <Select
-    labelId="demo-multiple-checkbox-label"
-    id="demo-multiple-checkbox"
-    style={{textAlign:'left'}}
-    multiple
-    value={DepName}
-    onChange={HandleChange}
-    input={<OutlinedInput label="View All Departments" />}
-    // MenuProps={MenuProps}
-    renderValue={(selected) => {
-      if (selected.includes('All')) {
-        return 'All';
-      }
-      return selected.join(', ');
-    }}
-  >
-    {/* <MenuItem value="All">
-      <Checkbox checked={DepName.includes('All')} />
-      <ListItemText primary="All" />
-    </MenuItem> */}
-    {Deps.map((Dep) => (
-      <MenuItem 
-      key={Dep} value={Dep}>
-        <Checkbox style={window.innerWidth <= 500? {
-          width:"30%"
-        }:{
-         
-        }} 
-        checked={DepName.includes(Dep)} />
-        <ListItemText primary={Dep} />
-      </MenuItem>
-    ))}
-  </Select>
-</FormControl>
-
-    {/* </a> */}
-      </div>
+      
       <Footer />
     </>
   );
