@@ -88,7 +88,7 @@ export default function Maps() {
     } else {
       // For individual department checkboxes, update the corresponding flag
       Deps.forEach((dep) => {
-        updatedDisplay[dep] = newValue.includes(dep) ? 1 : null;
+        updatedDisplay[dep] = newValue.includes(dep) ? 1 : 0;
       });
   
       // Update individual department checkboxes
@@ -488,7 +488,7 @@ export default function Maps() {
           justifyContent: "center",
           alignItems: "center",
           textAlign: "center",
-          paddingTop: "175px",
+          paddingTop:  window.innerWidth < 500? "22px": "175px"
         }}
       >
         <h1 className="mainHeading">Discover Sindh</h1>
@@ -517,14 +517,24 @@ export default function Maps() {
         style={{ display: "flex", justifyContent: "center" }}
       >
         <div
-          style={{
+          style={windowWidth <= 500 ? 
+            {
             display: "flex",
+            justifyContent: "end",
+            width: "380px",
+            position: "absolute",
+            zIndex: "1",
+            gap: "5px",
+          }:
+        {
+          display: "flex",
             justifyContent: "end",
             width: "800px",
             position: "absolute",
             zIndex: "1",
             gap: "5px",
-          }}
+
+        }}
         >
           <Tooltip
             overlayInnerStyle={{ borderRadius: "0px" }}
@@ -553,16 +563,19 @@ export default function Maps() {
           </Tooltip>
         </div>
         <div
-          className="mt-5"
+          // className="mt-5"
+          
           style={{
             height: "850px",
             width: "900px",
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
+            marginTop: window.innerWidth < 500? "-3rem": "3rem"
           }}
         >
-          <img src={mapbackground} width={"800px"} height="950px"></img>
+          <img className="mapbgheight" 
+          src={mapbackground} width={"800px"} height="950px"></img>
           <div
             style={{
               position: "absolute",
@@ -572,7 +585,7 @@ export default function Maps() {
               alignItems: "center",
             }}
           >
-            <img
+            <img className="mapheight"
               style={{ borderRadius: "377px" }}
               src={karachimap}
               width={width}
@@ -1095,11 +1108,12 @@ export default function Maps() {
   <Select
     labelId="demo-multiple-checkbox-label"
     id="demo-multiple-checkbox"
+    style={{textAlign:'left'}}
     multiple
     value={DepName}
     onChange={HandleChange}
     input={<OutlinedInput label="View All Departments" />}
-    MenuProps={MenuProps}
+    // MenuProps={MenuProps}
     renderValue={(selected) => {
       if (selected.includes('All')) {
         return 'All';
@@ -1112,8 +1126,14 @@ export default function Maps() {
       <ListItemText primary="All" />
     </MenuItem> */}
     {Deps.map((Dep) => (
-      <MenuItem key={Dep} value={Dep}>
-        <Checkbox checked={DepName.includes(Dep)} />
+      <MenuItem 
+      key={Dep} value={Dep}>
+        <Checkbox style={window.innerWidth <= 500? {
+          width:"30%"
+        }:{
+         
+        }} 
+        checked={DepName.includes(Dep)} />
         <ListItemText primary={Dep} />
       </MenuItem>
     ))}

@@ -659,7 +659,39 @@ input.regulatoryTextField[type="text"]:focus {
   width: 310px !important;
 }
 
+@media screen and (max-width: 500px){
+.css-kk1bwy-MuiButtonBase-root-MuiMenuItem-root.Mui-selected {
+  background-color: rgba(25, 118, 210, 0.08);
+  width: 100% !important;
+}}
+
+
 .css-kk1bwy-MuiButtonBase-root-MuiMenuItem-root {
   min-height: auto;
   width: 176px;
 }
+
+.css-kk1bwy-MuiButtonBase-root-MuiMenuItem-root:hover {
+  min-height: auto;
+  width: 100%;
+}
+
+@media screen and (max-width:500px)
+{
+  .css-kk1bwy-MuiButtonBase-root-MuiMenuItem-root{
+    min-height: auto;
+  width: 100%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .mapheight {
+  height: 407px !important;
+  }}
+
+  @media screen and (max-width: 500px) {
+    .mapbgheight {
+    height: 618px !important;
+    }}
+
+   
