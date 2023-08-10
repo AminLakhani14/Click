@@ -1191,7 +1191,7 @@ function Header(props) {
                   <span>{props.translations['Updates'][props.language]}</span>
                 </button>
               </a>
-              <marquee className="marque">
+              <marquee className={`marque ${props.language === 'ur' || props.language === 'sd' ? 'reverse' : ''}`} >
               {props.translations['Headline'][props.language]}
               </marquee>
             </div>
