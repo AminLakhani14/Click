@@ -30,7 +30,7 @@ const MenuProps = {
 };
 
 const Deps = [
-'All',
+  'All',
   'Sindh Investment department',
   'Labour Department',
   'Local Government Department',
@@ -76,53 +76,59 @@ export default function Maps() {
     } = event;
 
     const updatedDisplay = { ...departmentDisplay };
-    
+
     if (newValue.includes('All')) {
-      // if (DepName.includes('All')) {
-      // //   // Unselect all departments and "All"
-      //   setDepName([]);
-      //   Deps.forEach((dep) => {
-      //     updatedDisplay[dep] = 0;
-      //   });
-      // }
-     if (DepName.includes('All')) {
-        // Uncheck the "All" checkbox when unticking individual department
-        setDepName(newValue.filter((dep) => dep !== 'All'));
-        Deps.forEach((dep) => {
-          if (!newValue.includes(dep)) {
-            updatedDisplay[dep] = 0;
+      
+        if (DepName.includes('All')) {
+          // Unselect all departments and "All"
+          console.log("All func1");
+          if(newValue[0]=="All" && newValue[1] != "All"){
+            setDepName([]);
+            Deps.forEach((dep) => {
+                updatedDisplay[dep] = 0; 
+            });
+          }else{
+            setDepName(newValue.filter((dep) => dep !== 'All' && dep !== ''));
+            Deps.forEach((dep) => {
+              updatedDisplay["All"] = 0;
+              if(dep != "All"){
+                updatedDisplay[dep] = newValue.includes(dep) ? 1 : 0;
+              }else{
+                updatedDisplay[dep] = 0;
+              }
+              
+            });
           }
-      
-        });
-    
+        }
+
+        else {
+          // Select all departments and "All"
+          console.log("All func2");
+          setDepName(['All', ...Deps]);
+          Deps.forEach((dep) => {
+            updatedDisplay[dep] = 1;
+          });
+        }
      
-      }
-     
-    
-       
+        
       
-      
-      else {
-        // Select all departments and "All"
-        setDepName(['All', ...Deps]);
-        Deps.forEach((dep) => {
-          updatedDisplay[dep] = 1;
-        });
-      }
     } else {
       // For individual department checkboxes, update the corresponding flag
       Deps.forEach((dep) => {
+        console.log("Indivisual func2")
         updatedDisplay[dep] = newValue.includes(dep) ? 1 : 0;
       });
 
       // Update individual department checkboxes
-      setDepName(newValue.filter((dep) => dep !== 'All' && dep !== ''));
-
+      setDepName(newValue.filter((dep) => dep !== 'All' && dep !== ''));  
      
     }
 
+   
+
     // Update the departmentDisplay state with the new object
     setDepartmentDisplay(updatedDisplay);
+    
   };
   
   
@@ -542,7 +548,7 @@ export default function Maps() {
         style={{ display: "flex", justifyContent: "center" }}
       >
         <div
-          style={windowWidth <= 500 ?
+          style={windowWidth <= 500 ? 
             {
             display: "flex",
             justifyContent: "end",
@@ -550,7 +556,7 @@ export default function Maps() {
             position: "absolute",
             zIndex: "1",
             gap: "5px",
-            marginLeft: "0px"
+            marginLeft:"0px"
           }:
         {
           display: "flex",
@@ -650,7 +656,7 @@ export default function Maps() {
             justifyContent: "center",
             alignItems: "center",
             marginTop: window.innerWidth < 500? "-3rem": "5rem",
-            marginLeft: window.innerWidth < 500? "-24.5rem": "",
+            marginLeft: window.innerWidth < 500? "-22rem": "",
             marginRight: window.innerWidth < 500? "-50px" :"320px"
           }}
         >
@@ -1179,4 +1185,3 @@ export default function Maps() {
     </>
   );
           }
-        
