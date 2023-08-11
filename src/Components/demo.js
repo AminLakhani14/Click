@@ -1228,72 +1228,43 @@ export default function RegulatoryCatalogCalculator() {
     !param ? setChangeValue(filterData) : (filterData = filterData);
     return filterData;
   };
-  // const handleSubDepartments = (e) => {
-  //   debugger;
-  //   const selectedValue = e.target.value;
-  //   const departmentLabels = {
-  //     Urban: "Areas",
-  //     MontToMatric: "School Education and Literacy Department",
-  //     SindhHealthCareCommission: "Sindh Health Care Commission",
-  //     HealthDepartment: "Health Department",
-  //     IndustriesAndCommerce: "Industries and Commerce Department",
-  //     SindhEnvironmentalProtection: "Sindh Environmental Protection Agency",
-  //     SindhIndustrialTrading:
-  //       "Sindh Industrial Trading Estate (S.I.T.E) Limited",
-  //     SindhSamllIndustries: "Sindh Small Industries Corporation (SSIC)",
-  //     BoardOfRevenue: "Board of Revenue",
-  //     DistrictMuncipal: "District Municipal Corporation (DMC)",
-  //   };
-
-  //   let filterAreaData = [];
-  //   let subData = [...areas1];
-  //   let data = [...gridData];
-  //   let filterData = [];
-
-  //   if (departmentLabels[selectedValue]) {
-  //     setLabel1(departmentLabels[selectedValue]);
-  //     filterAreaData = subData.filter((x) => x.id === selectedValue);
-  //     setAreaDropdown1(filterAreaData);
-  //     filterData = data.filter((x) => x.id === selectedValue);
-  //     setEnableAreas1(true);
-  //   } else if (selectedValue !== "") {
-  //     setEnableAreas1(false);
-  //     filterData = data.filter((x) => x.id === selectedValue);
-  //   }
-  //   const updatedDropdowns = [...dropdowns];
-  //   updatedDropdowns[e] = value;
-  //   setDropdowns(updatedDropdowns);
-  // };
-  const handleSecondaryDropdownChange = (index, event) => {
+  const handleSubDepartments = (e) => {
     debugger;
-    const updatedSecondaryDropdowns = [...dropdowns];
-    const selectedValue = event.target.value;
+    const selectedValue = e.target.value;
+    const departmentLabels = {
+      Urban: "Areas",
+      MontToMatric: "School Education and Literacy Department",
+      SindhHealthCareCommission: "Sindh Health Care Commission",
+      HealthDepartment: "Health Department",
+      IndustriesAndCommerce: "Industries and Commerce Department",
+      SindhEnvironmentalProtection: "Sindh Environmental Protection Agency",
+      SindhIndustrialTrading:
+        "Sindh Industrial Trading Estate (S.I.T.E) Limited",
+      SindhSamllIndustries: "Sindh Small Industries Corporation (SSIC)",
+      BoardOfRevenue: "Board of Revenue",
+      DistrictMuncipal: "District Municipal Corporation (DMC)",
+    };
 
-    if (selectedValue in departmentLabels) {
-      const departmentLabel = departmentLabels[selectedValue];
-      const filterAreaData = areas1.filter((x) => x.id === selectedValue);
-      updatedSecondaryDropdowns[index].label = departmentLabel;
-      updatedSecondaryDropdowns[index].areaDropdown = filterAreaData;
-    } else {
-      updatedSecondaryDropdowns[index].label = "Areas";
-      updatedSecondaryDropdowns[index].areaDropdown = [];
+    let filterAreaData = [];
+    let subData = [...areas1];
+    let data = [...gridData];
+    let filterData = [];
+
+    if (departmentLabels[selectedValue]) {
+      setLabel1(departmentLabels[selectedValue]);
+      filterAreaData = subData.filter((x) => x.id === selectedValue);
+      setAreaDropdown1(filterAreaData);
+      filterData = data.filter((x) => x.id === selectedValue);
+      setEnableAreas1(true);
+    } else if (selectedValue !== "") {
+      setEnableAreas1(false);
+      filterData = data.filter((x) => x.id === selectedValue);
     }
+    const updatedDropdowns = [...dropdowns];
+    updatedDropdowns[e] = value;
+    setDropdowns(updatedDropdowns);
+  };
 
-    updatedSecondaryDropdowns[index].value = selectedValue;
-    setDropdowns(updatedSecondaryDropdowns);
-  };
-  const departmentLabels = {
-    Urban: "Areas",
-    MontToMatric: "School Education and Literacy Department",
-    SindhHealthCareCommission: "Sindh Health Care Commission",
-    HealthDepartment: "Health Department",
-    IndustriesAndCommerce: "Industries and Commerce Department",
-    SindhEnvironmentalProtection: "Sindh Environmental Protection Agency",
-    SindhIndustrialTrading: "Sindh Industrial Trading Estate (S.I.T.E) Limited",
-    SindhSamllIndustries: "Sindh Small Industries Corporation (SSIC)",
-    BoardOfRevenue: "Board of Revenue",
-    DistrictMuncipal: "District Municipal Corporation (DMC)",
-  };
   const handleArea = (e) => {
     debugger;
     let data = [...gridData];
@@ -1316,10 +1287,7 @@ export default function RegulatoryCatalogCalculator() {
   };
 
   const addDropdown = () => {
-    setDropdowns((prevDropdowns) => [
-      ...prevDropdowns,
-      { id: Date.now(), areaDropdown: [] },
-    ]);
+    setDropdowns(prevDropdowns => [...prevDropdowns, '']);
   };
   const deleteDropdown = (index) => {
     const updatedDropdowns = dropdowns.filter((_, i) => i !== index);
@@ -1438,9 +1406,9 @@ export default function RegulatoryCatalogCalculator() {
                   <div className="col-lg-3"></div>
                 )}
                 {/*--------------- Secondary Dropdown------------- */}
-                {dropdowns.map((dropdown, index) => (
+                {dropdowns.map((_, index) => (
                   <div
-                    key={dropdown.id}
+                    key={index}
                     style={
                       enableAreas === true
                         ? {
@@ -1456,9 +1424,7 @@ export default function RegulatoryCatalogCalculator() {
                           }
                     }
                   >
-                    <div
-                      style={{ display: "flex", gap: "15px", width: "100%" }}
-                    >
+                      <div style={{ display: "flex", gap: "15px",width:"100%" }}>
                       <FormControl
                         variant="outlined"
                         size="small"
@@ -1468,10 +1434,7 @@ export default function RegulatoryCatalogCalculator() {
                           Departments
                         </InputLabel>
                         <Select
-                          // value={dropdown.selectedValue}
-                          onChange={(event) =>
-                            handleSecondaryDropdownChange(index, event)
-                          }
+                          onChange={handleSubDepartments}
                           native
                           label="Departments"
                           inputProps={{
@@ -1496,44 +1459,43 @@ export default function RegulatoryCatalogCalculator() {
                         Delete
                       </button>
                     </div>
-                    {/*--------------- Secondary Sub-Dropdown------------- */}
+                {/*--------------- Secondary Sub-Dropdown------------- */}
                     {enableAreas1 === true ? (
-                      <div
-                        style={{ display: "flex", marginTop: "20px", width: "100%" }}
-                      >
-                        {dropdown.areaDropdown.length > 0 && (
-                          <FormControl
-                            variant="outlined"
-                            size="small"
-                            className="dropdown-width"
+                      <div style={{ display: "flex", gap: "15px",width:"100%" }}>
+                        <FormControl
+                          variant="outlined"
+                          size="small"
+                          onChange={handleSubArea}
+                          className="dropdown-width"
+                          style={{ marginTop: "20px" }}
+                        >
+                          <InputLabel htmlFor="outlined-age-native-simple">
+                            {label1}
+                          </InputLabel>
+                          <Select
+                            native
+                            label={label1}
+                            renderValue={areas1[0]}
+                            inputProps={{
+                              name: "case",
+                              id: "outlined-age-native-simple",
+                            }}
                           >
-                            <InputLabel htmlFor={`area-dropdown-${index}`}>
-                              {dropdown.label}
-                            </InputLabel>
-                            <Select
-                              native
-                              value={dropdown.value}
-                              onChange={(e) => handleSubArea(e)} // Call handleSubArea function
-                              label={dropdown.label}
-                              inputProps={{
-                                name: `area-dropdown-${index}`,
-                                id: `area-dropdown-${index}`,
-                              }}
-                            >
-                              {/* Area dropdown options */}
-                              {dropdown.areaDropdown.map((area) => (
-                                <option key={area.id} value={area.value}>
-                                  {area.text}
+                            {areaDropdown1.map((Val, index) => {
+                              return (
+                                <option key={index} value={Val.value}>
+                                  {Val.text}
                                 </option>
-                              ))}
-                            </Select>
-                          </FormControl>
-                        )}
+                              );
+                            })}
+                          </Select>
+                        </FormControl>
                         <div style={{ width: "26%" }}></div>
                       </div>
                     ) : (
                       <div className="col-lg-3"></div>
                     )}
+                  
                   </div>
                 ))}
               </div>

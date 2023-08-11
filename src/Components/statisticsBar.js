@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import '../Css/header.css'
-function StatisticsBar() {
+import { translations } from "../Transalation/Transalation";
+function StatisticsBar(props) {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
   useEffect(() => {
@@ -70,58 +71,58 @@ function StatisticsBar() {
   return (
     <>
       <div className=" bg-white" >
-        <div className="body-box mt-3" style={{height:"150px"}}>
+        <div className="body-box mt-3" style={{ height: "150px" }}>
           <div className="row ">
             <div className="col-12 mb-3">
               <h1 className="mainHeading"
-              style={
-                windowWidth < 500
-                  ? {
+                style={
+                  windowWidth < 500
+                    ? {
                     }
-                  : {
-                    display: "flex",
-                    justifyContent: "center"
-                  }
-              }
-              >Sindh Statistics</h1>
+                    : {
+                      display: "flex",
+                      justifyContent: "center"
+                    }
+                }
+              >{translations["statistics"][props.language]}</h1>
             </div>
           </div>
-          <div className="row mb-5 user" style={{backgroundColor: "#ffffff",marginTop:"-22px"}}>
-            <div 
-            className={
-              windowWidth < 500
-                ?
+          <div className="row mb-5 user" style={{ backgroundColor: "#ffffff", marginTop: "-22px" }}>
+            <div
+              className={
+                windowWidth < 500
+                  ?
                   "px-0"
-                : 
-                "col-lg-3"
-            }
-            style={windowWidth < 500 ?{width:"34%"}:{}}
+                  :
+                  "col-lg-3"
+              }
+              style={windowWidth < 500 ? { width: "34%" } : {}}
             >
               <h2 className="heading2">{count}Million +</h2>
-              <p className="paragraphGeneric">People in Sindh</p>
-            </div>
-            <div  className={
-              windowWidth < 500
-                ?
-                  "px-0"
-                : 
-                "col-lg-3"
-            }
-            style={windowWidth < 500 ?{width:"34%"}:{}}>
-              <h2 className="heading2">${count1} Billion </h2>
-              <p className="paragraphGeneric">GDP of Sindh</p>
+              <p className="paragraphGeneric">{translations["sindhpeople"][props.language]}</p>
             </div>
             <div className={
               windowWidth < 500
                 ?
-                  "px-0 mt-4"
-                : 
+                "px-0"
+                :
                 "col-lg-3"
             }
-            style={windowWidth < 500 ?{width:"32%"}:{}}
+              style={windowWidth < 500 ? { width: "34%" } : {}}>
+              <h2 className="heading2">${count1} Billion </h2>
+              <p className="paragraphGeneric">{translations["GDP"][props.language]}</p>
+            </div>
+            <div className={
+              windowWidth < 500
+                ?
+                "px-0 mt-4"
+                :
+                "col-lg-3"
+            }
+              style={windowWidth < 500 ? { width: "32%" } : {}}
             >
               <h2 className="heading2">{count2} Million</h2>
-              <p className="paragraphGeneric">People in Services Sector</p>
+              <p className="paragraphGeneric">{translations["Services"][props.language]}</p>
             </div>
           </div>
         </div>
