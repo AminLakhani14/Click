@@ -32,6 +32,7 @@ import { translations } from "../Transalation/Transalation";
 
 
 function Header(props) {
+  
   const [isHovered, setIsHovered] = useState(false);
 
   const handleMouseEnterFaceBook = () => {
@@ -467,6 +468,21 @@ function Header(props) {
   //     ur: 'ریگولیٹری لاگت کی کیلکولیٹر',
   //   },
   // };
+  function toggle(){
+    if ("scrollRestoration" in window.history) {
+      window.history.scrollRestoration = "manual";
+    }
+  
+    window.scrollTo(2800, 2800);
+  
+    // Restore scroll restoration to its default behavior
+    return () => {
+      if ("scrollRestoration" in window.history) {
+        window.history.scrollRestoration = "auto";
+      }
+    };
+  }
+  
 
   return (
     <>
@@ -739,8 +755,8 @@ function Header(props) {
                                 class="dropdown-content nested-content nested-right"
                                 style={{ width: "200px" }}
                               >
-                                <Link className={""} to={"/ComingSoon"}>
-                                  <a href="#">
+                                <Link onClick={toggle} className={""} to={"/manufacturing"}>
+                                  <a  href="#">
                                     {
                                       translations["Talktoexpert"][
                                         props.language
@@ -826,8 +842,8 @@ function Header(props) {
                                 class="dropdown-content nested-content nested-right"
                                 style={{ width: "200px", marginTop: "40px" }}
                               >
-                                <Link className={""} to={"/ComingSoon"}>
-                                  <a href="#">
+                                <Link  className={""} to={"/textile"}>
+                                  <a href="">
                                     {
                                       translations["Talktoexpert"][
                                         props.language

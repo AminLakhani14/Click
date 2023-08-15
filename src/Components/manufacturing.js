@@ -11,20 +11,36 @@ import buildingBridge from "../assets/buildingBridge.png";
 import manufacturebg from "../assets/manufacturebg.jpg";
 
 function Manufacturing(props) {
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   useEffect(() => {
-    if ("scrollRestoration" in window.history) {
-      window.history.scrollRestoration = "manual";
-    }
 
-    window.scrollTo(0, 0);
+    // Function to update the windowWidth state when the resize event occurs
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
 
-    // Restore scroll restoration to its default behavior
+    // Attach the event listener
+    window.addEventListener('resize', handleResize);
+
+    // Clean up the event listener on component unmount
     return () => {
-      if ("scrollRestoration" in window.history) {
-        window.history.scrollRestoration = "auto";
-      }
+      window.removeEventListener('resize', handleResize);
     };
   }, []);
+  // useEffect(() => {
+  //   if ("scrollRestoration" in window.history) {
+  //     window.history.scrollRestoration = "manual";
+  //   }
+
+  //   window.scrollTo(0, 0);
+
+  //   // Restore scroll restoration to its default behavior
+  //   return () => {
+  //     if ("scrollRestoration" in window.history) {
+  //       window.history.scrollRestoration = "auto";
+  //     }
+  //   };
+  // }, []);
   const [isVisible, setIsVisible] = useState(false);
   const [parentData, setParentData] = useState();
   const [showFullText, setShowFullText] = useState(false);
@@ -345,7 +361,7 @@ function Manufacturing(props) {
         >
           <div className="row sectornestedscreens" style={{ marginTop: "-16px" }}>
             <div className="col-lg-4">
-              <div class="textField">
+              {/* <div class="textField"> */}
                 <TextField
                   id="outlined-controlled"
                   style={{ width: "100%" }}
@@ -357,10 +373,10 @@ function Manufacturing(props) {
                   }}
                   placeholder="Enter your name"
                 />
-              </div>
+              {/* </div> */}
             </div>
             <div className="col-lg-4">
-              <div class="textField">
+              {/* <div class="textField"> */}
                 <TextField
                   id="outlined-controlled"
                   style={{ width: "100%" }}
@@ -372,7 +388,7 @@ function Manufacturing(props) {
                   size="small"
                   placeholder="Enter your company name"
                 />
-              </div>
+              {/* </div> */}
             </div>
             <div className="col-lg-4">
               <TextField
@@ -390,7 +406,7 @@ function Manufacturing(props) {
           </div>
           <div className="row mt-4 sectornestedscreens">
             <div className="col-lg-4">
-              <div class="textField">
+              {/* <div class="textField"> */}
                 <TextField
                 className="feedBackTextField"
                   id="outlined-controlled"
@@ -402,10 +418,10 @@ function Manufacturing(props) {
                   }}
                   placeholder="Enter your Email"
                 />
-              </div>
+              {/* </div> */}
             </div>
             <div className="col-lg-4">
-              <div class="textField">
+              {/* <div class="textField"> */}
                 <TextField
                 className="feedBackTextField"
                   id="outlined-controlled"
@@ -417,10 +433,10 @@ function Manufacturing(props) {
                   }}
                   placeholder="92123567901"
                 />
-              </div>
+              {/* </div> */}
             </div>
             <div className="col-lg-4">
-              <div class="textField">
+              {/* <div class="textField"> */}
                 <TextField
                 className="feedBackTextField"
                   id="outlined-controlled"
@@ -432,12 +448,12 @@ function Manufacturing(props) {
                   label="Subject"
                   placeholder="Write your feedback subject"
                 />
-              </div>
+              {/* </div> */}
             </div>
           </div>
           <div className="row mt-4 sectornestedscreens">
             <div className="col-lg-12">
-              <div class="textField">
+              {/* <div class="textField"> */}
                 <TextField
                   id="outlined-controlled"
                   size="small"
@@ -456,7 +472,7 @@ function Manufacturing(props) {
                   }}
                   placeholder="Write your feedback subject"
                 />
-              </div>
+              {/* </div> */}
             </div>
           </div>
           <div className="row">

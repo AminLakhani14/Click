@@ -12,6 +12,22 @@ import buildingBridge from "../assets/buildingBridge.png";
 import educationbg from "../assets/educationbg.png";
 
 function Education(props) {
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  useEffect(() => {
+
+    // Function to update the windowWidth state when the resize event occurs
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+
+    // Attach the event listener
+    window.addEventListener('resize', handleResize);
+
+    // Clean up the event listener on component unmount
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
   useEffect(() => {
     if ("scrollRestoration" in window.history) {
       window.history.scrollRestoration = "manual";
@@ -346,7 +362,7 @@ function Education(props) {
         >
           <div className="row sectornestedscreens" style={{ marginTop: "-16px" }}>
             <div className="col-lg-4">
-              <div class="textField">
+              {/* <div class="textField"> */}
                 <TextField
                   id="outlined-controlled"
                   style={{ width: "100%" }}
@@ -358,10 +374,10 @@ function Education(props) {
                   }}
                   placeholder="Enter your name"
                 />
-              </div>
+              {/* </div> */}
             </div>
             <div className="col-lg-4">
-              <div class="textField">
+              {/* <div class="textField"> */}
                 <TextField
                   id="outlined-controlled"
                   style={{ width: "100%" }}
@@ -373,7 +389,7 @@ function Education(props) {
                   size="small"
                   placeholder="Enter your company name"
                 />
-              </div>
+              {/* </div> */}
             </div>
             <div className="col-lg-4">
               <TextField
@@ -391,7 +407,7 @@ function Education(props) {
           </div>
           <div className="row mt-4 sectornestedscreens">
             <div className="col-lg-4">
-              <div class="textField">
+              {/* <div class="textField"> */}
                 <TextField
                 className="feedBackTextField"
                   id="outlined-controlled"
@@ -403,10 +419,10 @@ function Education(props) {
                   }}
                   placeholder="Enter your Email"
                 />
-              </div>
+              {/* </div> */}
             </div>
             <div className="col-lg-4">
-              <div class="textField">
+              {/* <div class="textField"> */}
                 <TextField
                 className="feedBackTextField"
                   id="outlined-controlled"
@@ -418,10 +434,10 @@ function Education(props) {
                   }}
                   placeholder="92123567901"
                 />
-              </div>
+              {/* </div> */}
             </div>
             <div className="col-lg-4">
-              <div class="textField">
+              {/* <div class="textField"> */}
                 <TextField
                 className="feedBackTextField"
                   id="outlined-controlled"
@@ -433,12 +449,12 @@ function Education(props) {
                   label="Subject"
                   placeholder="Write your feedback subject"
                 />
-              </div>
+              {/* </div> */}
             </div>
           </div>
           <div className="row mt-4 sectornestedscreens">
             <div className="col-lg-12">
-              <div class="textField">
+              {/* <div class="textField"> */}
                 <TextField
                   id="outlined-controlled"
                   size="small"
@@ -457,7 +473,7 @@ function Education(props) {
                   }}
                   placeholder="Write your feedback subject"
                 />
-              </div>
+              {/* </div> */}
             </div>
           </div>
           <div className="row">

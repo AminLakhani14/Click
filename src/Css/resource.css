@@ -699,31 +699,83 @@ input.regulatoryTextField[type="text"]:focus {
 margin-left: -20px !important;
 }}
 
-
+/* 
 @media screen and (max-width: 500px) {
   .mapheight {
   height: 400px !important;
   max-width: 400px !important;
-  }}
+  }} */
 
 
   @media screen and (max-width: 500px) {
     .mapbgheight {
-    height: 618px !important;
+    height: 550px !important;
+    width: 72% !important;
     }}
+
+  
 
 @media screen and (max-width: 500px){
   .css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root {
   width: 205px;
   }}
 
- @media screen and (max-width: 375px){
+ @media screen and (width: 375px){
 .mapheight {
     height: 376px !important;
     max-width: 364px !important;
 }}
 
-@media screen and (max-width:375px){ 
+@media screen and (width: 540px){
+  .mapheight{
+    height: 429px;
+    border-radius: 377px;
+    width: 441px;
+}
+  }
+
+
+
+@media screen and (max-width:500px){ 
 .css-1nf0req-MuiFormControl-root {
   width: 259px !important;
 }}
+
+@media screen and (max-width: 500px){
+.mapheight {
+    height: 364px !important;
+    max-width: 365px !important;
+}}
+
+@media screen and (width: 360px){
+.mapheight {
+    height: 316px !important;
+    max-width: 316px !important;
+  }}
+
+  @media screen and (width: 540px){
+    .zoominopts{
+      margin-left: 97px !important;
+    }}
+
+  @media screen and (max-width: 500px){
+      .zoominopts{
+        margin-left: 0px !important;
+      }}
+  @media screen and (width: 375px){
+        .zoominopts{
+          margin-left: -53px !important;
+        }}
+
+
+
+@media screen and (min-width: 768px) and (max-width: 912px) {
+          .zoominopts {
+              margin-left: 355px !important;
+          }
+      }
+      
+  @media screen and (width:1042) {
+          .zoominopts{
+            margin-left: -50px !important;
+          }}

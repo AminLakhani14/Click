@@ -67,8 +67,24 @@ export default function GenericHeader(props) {
       }
     };
   }, []);
+ 
+function toggle(){
+  if ("scrollRestoration" in window.history) {
+    window.history.scrollRestoration = "manual";
+  }
 
+  window.scrollTo(2800, 2800);
 
+  // Restore scroll restoration to its default behavior
+  return () => {
+    if ("scrollRestoration" in window.history) {
+      window.history.scrollRestoration = "auto";
+    }
+  };
+}
+
+  
+  
 
   return (
     <div
@@ -156,7 +172,8 @@ export default function GenericHeader(props) {
                           }}
                           href="#"
                         >
-                          <Link className={"link"} to={"/manufacturing"}>
+                          <Link  className={"link"} to={"/manufacturing"}>
+                          
                             Manufacturing
                           </Link>
                         </a>
@@ -174,8 +191,9 @@ export default function GenericHeader(props) {
                         class="dropdown-content nested-content nested-right"
                         style={{ width: "200px" }}
                       >
-                        <Link className={""} to={"/ComingSoon"}>
-                          <a href="#">Talk to expert </a>
+                        <Link className={""} to={"/manufacturing"}>
+                          <a  onClick={toggle} href="#">Talk to expert </a>
+      
                         </Link>
                       </div>
                     </div>
@@ -215,8 +233,8 @@ export default function GenericHeader(props) {
                         class="dropdown-content nested-content nested-right"
                         style={{ width: "200px", marginTop: "40px" }}
                       >
-                        <Link className={""} to={"/ComingSoon"}>
-                          <a href="#">Talk to expert </a>
+                        <Link className={""} to={"/textile"}>
+                          <a onClick={toggle} href="#">Talk to expert </a>
                         </Link>
                       </div>
                     </div>
@@ -256,8 +274,8 @@ export default function GenericHeader(props) {
                         class="dropdown-content nested-content nested-right"
                         style={{ width: "200px", marginTop: "80px" }}
                       >
-                        <Link className={""} to={"/ComingSoon"}>
-                          <a href="#">Talk to expert </a>
+                        <Link className={""} to={"/tourism"}>
+                          <a onClick={toggle} href="#">Talk to expert </a>
                         </Link>
                       </div>
                     </div>
@@ -297,8 +315,8 @@ export default function GenericHeader(props) {
                         class="dropdown-content nested-content nested-right"
                         style={{ width: "200px", marginTop: "120px" }}
                       >
-                        <Link className={""} to={"/ComingSoon"}>
-                          <a href="#">Talk to expert </a>
+                        <Link className={""} to={"/agriculture"}>
+                          <a  onClick={toggle} href="#">Talk to expert </a>
                         </Link>
                       </div>
                     </div>
@@ -338,7 +356,7 @@ export default function GenericHeader(props) {
                         class="dropdown-content nested-content nested-right"
                         style={{ width: "200px", marginTop: "160px" }}
                       >
-                        <Link className={""} to={"/ComingSoon"}>
+                        <Link onClick={toggle} className={""} to={"/education"}>
                           <a href="#">Talk to expert </a>
                         </Link>
                       </div>
@@ -379,7 +397,7 @@ export default function GenericHeader(props) {
                         class="dropdown-content nested-content nested-right"
                         style={{ width: "200px", marginTop: "200px" }}
                       >
-                        <Link className={""} to={"/ComingSoon"}>
+                        <Link onClick={toggle} className={""} to={"/energy"}>
                           <a href="#">Talk to expert </a>
                         </Link>
                       </div>
@@ -420,8 +438,8 @@ export default function GenericHeader(props) {
                         class="dropdown-content nested-content nested-right"
                         style={{ width: "200px", marginTop: "240px" }}
                       >
-                        <Link className={""} to={"/ComingSoon"}>
-                          <a href="#">Talk to expert </a>
+                        <Link  onClick={toggle} className={""} to={"/health"}>
+                          <a onClick={toggle} href="#">Talk to expert </a>
                         </Link>
                       </div>
                     </div>
@@ -461,7 +479,7 @@ export default function GenericHeader(props) {
                         class="dropdown-content nested-content nested-right"
                         style={{ width: "200px", marginTop: "280px" }}
                       >
-                        <Link className={""} to={"/ComingSoon"}>
+                        <Link onClick={toggle} className={""} to={"/informationtech"}>
                           <a href="#">Talk to expert </a>
                         </Link>
                       </div>
