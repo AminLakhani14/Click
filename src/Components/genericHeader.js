@@ -103,6 +103,22 @@ export default function GenericHeader(props) {
           </div>
           <div className="navbarRight">
             <ul>
+            <div className="r-side d-inline">
+              <img
+                  className="headerLogoImages"
+                  src={props.language === "ur" ? English : urdu}
+                  alt=""
+                  onClick={props.toggleLanguage}
+                  style={{ marginLeft: "20px", marginRight: "20px" }}
+                />
+                <img
+                  className="headerLogoImages"
+                  src={Sindhi}
+                  alt=""
+                  onClick={props.toggleLanguage}
+                  style={{ marginLeft: "20px", marginRight: "20px" }}
+                />
+              </div>
               <li className="HeaderPaddingRight">
                 <a href="comingsoon.html" title="Home Page" className={"link2"}>
                   <Link className={"link2"} to={"/home"}>
@@ -470,22 +486,6 @@ export default function GenericHeader(props) {
                     </div>
                   </div>
                 </div>
-                <div className="col-lg-6 col-md-6 col-sm-12 col-xs-12 r-side ">
-              <img
-                  className="headerLogoImages"
-                  src={props.language === "ur" ? English : urdu}
-                  alt=""
-                  onClick={props.toggleLanguage}
-                  style={{ marginLeft: "20px", marginRight: "20px" }}
-                />
-                <img
-                  className="headerLogoImages"
-                  src={Sindhi}
-                  alt=""
-                  onClick={props.toggleLanguage}
-                  style={{ marginLeft: "20px", marginRight: "20px" }}
-                />
-              </div>
               </li>
 
               <li className="HeaderPaddingRight">
