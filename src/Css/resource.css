@@ -706,6 +706,7 @@ margin-left: -20px !important;
   max-width: 400px !important;
   }}
 
+
   @media screen and (max-width: 500px) {
     .mapbgheight {
     height: 618px !important;
@@ -716,4 +717,13 @@ margin-left: -20px !important;
   width: 205px;
   }}
 
- 
+ @media screen and (max-width: 375px){
+.mapheight {
+    height: 376px !important;
+    max-width: 364px !important;
+}}
+
+@media screen and (max-width:375px){ 
+.css-1nf0req-MuiFormControl-root {
+  width: 259px !important;
+}}

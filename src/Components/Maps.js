@@ -56,6 +56,20 @@ const Deps = [
 
 export default function Maps() {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  useEffect(() => {
+    // Function to update the windowWidth state when the resize event occurs
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+
+    // Attach the event listener
+    window.addEventListener('resize', handleResize);
+
+    // Clean up the event listener on component unmount
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
 
   const [departmentDisplay, setDepartmentDisplay] = useState({});
   const [DepName, setDepName] = useState(['All']);
