@@ -16,6 +16,7 @@ import ManufacturingFocus from "../assets/ManufacturingFocus.svg";
 import Textile from "../assets/Textile.svg";
 import TextileFocus from "../assets/TextileFocus.svg";
 import "../Css/header.css";
+import { translations } from "../Transalation/Transalation";
 
 const brownColor = "#720D1D";
 
@@ -24,13 +25,14 @@ const CircleSeg = (props) => {
     props.setData(segments[0]);
   }, []);
 
+
   const [segments, setSegments] = useState([
     {
       value: 45,
       color: "#e6e6e6",
       image: Tourisim,
       focusImage: TourisimFocus,
-      Program: "Tourism",
+      Program:translations["Tourism"][props.language],
       Percentage: 50,
       Description: "Approx US$1.6 Billion (2019-2020)",
       wheat: "4 Million ",
@@ -163,7 +165,7 @@ const CircleSeg = (props) => {
       color: "#e6e6e6",
       image: Textile,
       focusImage: TextileFocus,
-      Program: "Textile",
+      Program: translations["Textile"][props.language],
       Percentage: 50,
       Description: "Approx US$1.6 Billion (2019-2020)",
       wheat: "4 Million ",
@@ -178,13 +180,19 @@ const CircleSeg = (props) => {
       boxColor: "#f9a932",
     },
   ]);
+  
+ 
+
+  // console.log("amin lakhani",translations)
+  // console.log("language",translations["Tourism"][props.language])
+
   const [segmentsClone] = useState([
     {
       value: 45,
       color: "#e6e6e6",
       image: Tourisim,
       focusImage: TourisimFocus,
-      Program: "Tourism",
+      Program:translations["Tourism"][props.language],
       Percentage: 50,
       Description: "Approx US$1.6 Billion (2019-2020)",
       wheat: "4 Million ",
@@ -317,7 +325,7 @@ const CircleSeg = (props) => {
       color: "#e6e6e6",
       image: Textile,
       focusImage: TextileFocus,
-      Program: "Textile",
+      Program:  translations["Textile"][props.language],
       Percentage: 50,
       Description: "Approx US$1.6 Billion (2019-2020)",
       wheat: "4 Million ",
@@ -332,6 +340,8 @@ const CircleSeg = (props) => {
       boxColor: "#f9a932",
     },
   ]);
+
+  
 
   const totalValue = segments.reduce(
     (total, segment) => total + segment.value,
@@ -399,6 +409,35 @@ const CircleSeg = (props) => {
   const centerY = 100; // y-coordinate of the center of the circular path
   const radius = 120; // radius of the circular path
   const iconRadius = 14; // Radius of the small icon-like circle
+  const getKeyVal = () => {
+    debugger
+    let value = '';
+    for (const key in translations) {
+      if (key == 'Tourism' && key == 'Textile'&& key == 'Education' ) {
+        value = translations[key];
+        // console.log("amin",value);
+        // console.log("lakhani",key);
+
+      }
+    }
+    return value;
+  }
+  
+  useEffect(()=>{
+    debugger;
+    if(Array.isArray(segments) && segments.length > 0){
+      const _segments = JSON.parse(JSON.stringify(segments));
+      _segments.forEach((item)=>{
+        const _tranVal = getKeyVal();
+        if(_tranVal){
+          item.Program =  translations[_tranVal][props.language];
+        }
+      });
+
+      setSegments(_segments);
+    }
+   
+  },[props.language]);
   return (
     <div
       style={{

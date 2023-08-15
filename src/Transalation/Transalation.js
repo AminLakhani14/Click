@@ -81,7 +81,7 @@ export const translations = {
       sd:  'ٽيڪسٽائل',
     },
     'Tourism':{
-      en: 'Tourism',
+      en: 'Tourism', 
       ur: 'سياحت',
       sd:  'سياحت',
     },
