@@ -81,7 +81,7 @@ export default function Maps() {
       
         if (DepName.includes('All')) {
           // Unselect all departments and "All"
-          console.log("All func1");
+         
           if(newValue[0]=="All" && newValue[1] != "All"){
             setDepName([]);
             Deps.forEach((dep) => {
@@ -103,7 +103,7 @@ export default function Maps() {
 
         else {
           // Select all departments and "All"
-          console.log("All func2");
+        
           setDepName(['All', ...Deps]);
           Deps.forEach((dep) => {
             updatedDisplay[dep] = 1;
@@ -124,8 +124,10 @@ export default function Maps() {
      
     }
 
-   
-
+    if(newValue.length == 21){
+      console.log("fix all checbox");
+      setDepName(["All",...Deps]);
+    }
     // Update the departmentDisplay state with the new object
     setDepartmentDisplay(updatedDisplay);
     
