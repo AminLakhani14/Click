@@ -56,49 +56,96 @@ const Deps = [
 
 export default function Maps() {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  useEffect(() => {
+    // Function to update the windowWidth state when the resize event occurs
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+
+    // Attach the event listener
+    window.addEventListener('resize', handleResize);
+
+    // Clean up the event listener on component unmount
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
 
   const [departmentDisplay, setDepartmentDisplay] = useState({});
+  const [DepName, setDepName] = useState(['All']);
 
- 
-  const [DepName, setDepName] = useState([]);
-
+  useEffect(() => {
+    // Initialize departmentDisplay with all departments set to 1
+    const initialDisplay = {};
+    Deps.forEach((dep) => {
+      initialDisplay[dep] = 1;
+    });
+    setDepartmentDisplay(initialDisplay);
+    setDepName(['All', ...Deps]);
+  }, []);
+     
   const HandleChange = (event) => {
     const {
       target: { value: newValue },
     } = event;
-  
-    // Create a new object to hold the updated departmentDisplay state
+
     const updatedDisplay = { ...departmentDisplay };
-  
-    if (newValue.includes("All")) {
-      // Toggle "All" checkbox state
-      if (DepName.includes("All")) {
-        // "All" checkbox was already selected, so unselect all and "All"
-        setDepName([]);
-        Deps.forEach((dep) => {
-          updatedDisplay[dep] = 0;
-        });
-      } else {
-        // "All" checkbox was not selected, so select all and "All"
-        setDepName(["All", ...Deps]);
-        Deps.forEach((dep) => {
-          updatedDisplay[dep] = 1;
-        });
-      }
+
+    if (newValue.includes('All')) {
+      
+        if (DepName.includes('All')) {
+          // Unselect all departments and "All"
+         
+          if(newValue[0]=="All" && newValue[1] != "All"){
+            setDepName([]);
+            Deps.forEach((dep) => {
+                updatedDisplay[dep] = 0; 
+            });
+          }else{
+            setDepName(newValue.filter((dep) => dep !== 'All' && dep !== ''));
+            Deps.forEach((dep) => {
+              updatedDisplay["All"] = 0;
+              if(dep != "All"){
+                updatedDisplay[dep] = newValue.includes(dep) ? 1 : 0;
+              }else{
+                updatedDisplay[dep] = 0;
+              }
+              
+            });
+          }
+        }
+
+        else {
+          // Select all departments and "All"
+        
+          setDepName(['All', ...Deps]);
+          Deps.forEach((dep) => {
+            updatedDisplay[dep] = 1;
+          });
+        }
+     
+        
+      
     } else {
       // For individual department checkboxes, update the corresponding flag
       Deps.forEach((dep) => {
+        console.log("Indivisual func2")
         updatedDisplay[dep] = newValue.includes(dep) ? 1 : 0;
       });
-  
+
       // Update individual department checkboxes
-      setDepName(newValue.filter((dep) => dep !== "All" && dep !== ""));
+      setDepName(newValue.filter((dep) => dep !== 'All' && dep !== ''));  
+     
     }
-  
+
+    if(newValue.length == 21){
+      console.log("fix all checbox");
+      setDepName(["All",...Deps]);
+    }
     // Update the departmentDisplay state with the new object
     setDepartmentDisplay(updatedDisplay);
+    
   };
-  
   
   
     
@@ -525,6 +572,7 @@ export default function Maps() {
             position: "absolute",
             zIndex: "1",
             gap: "5px",
+            marginLeft:"0px"
           }:
         {
           display: "flex",
@@ -533,6 +581,7 @@ export default function Maps() {
             position: "absolute",
             zIndex: "1",
             gap: "5px",
+            marginLeft:window.innerWidth = 820? "-50px": "500px"
 
         }}
         >
@@ -563,6 +612,57 @@ export default function Maps() {
           </Tooltip>
         </div>
         <div
+        style={{
+          textAlign: "center",
+          justifyContent: "center",
+          display: "flex",
+          paddingBottom: "40px",
+          marginTop: "-7.5px",
+          marginLeft:windowWidth <= 500 ?"30px":""
+        }}
+      >
+         
+    
+         <FormControl sx={{ m: 1, width: 300, zIndex:2}}>
+  <InputLabel style={{ color: 'black' }}>View All Departments</InputLabel>
+  <Select
+    labelId="demo-multiple-checkbox-label"
+    id="demo-multiple-checkbox"
+    style={{textAlign:'left'}}
+    multiple
+    value={DepName}
+    onChange={HandleChange}
+    input={<OutlinedInput label="View All Departments" />}
+    // MenuProps={MenuProps}
+    renderValue={(selected) => {
+      if (selected.includes('All')) {
+        return 'All';
+      }
+      return selected.join(', ');
+    }}
+  >
+    {/* <MenuItem value="All">
+      <Checkbox checked={DepName.includes('All')} />
+      <ListItemText primary="All" />
+    </MenuItem> */}
+    {Deps.map((Dep) => (
+      <MenuItem 
+      key={Dep} value={Dep}>
+        <Checkbox style={window.innerWidth <= 500? {
+          width:"30%"
+        }:{
+         
+        }} 
+        checked={DepName.includes(Dep)} />
+        <ListItemText primary={Dep} />
+      </MenuItem>
+    ))}
+  </Select>
+</FormControl>
+
+    {/* </a> */}
+      </div>
+        <div
           // className="mt-5"
           
           style={{
@@ -571,7 +671,9 @@ export default function Maps() {
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
-            marginTop: window.innerWidth < 500? "-3rem": "3rem"
+            marginTop: window.innerWidth < 500? "-3rem": "5rem",
+            marginLeft: window.innerWidth < 500? "-22rem": "",
+            marginRight: window.innerWidth < 500? "-50px" :"320px"
           }}
         >
           <img className="mapbgheight" 
@@ -583,6 +685,7 @@ export default function Maps() {
               display: "flex",
               justifyContent: "center",
               alignItems: "center",
+              // marginLeft:"600px"
             }}
           >
             <img className="mapheight"
@@ -1093,58 +1196,8 @@ export default function Maps() {
           </div>
         </div>
       </div>
-      <div
-        style={{
-          textAlign: "center",
-          justifyContent: "center",
-          display: "flex",
-          paddingBottom: "40px",
-        }}
-      >
-         {/* <a href="comingsoon.html"> */}
-    
-         <FormControl sx={{ m: 1, width: 300 }}>
-  <InputLabel style={{ color: 'black' }}>View All Departments</InputLabel>
-  <Select
-    labelId="demo-multiple-checkbox-label"
-    id="demo-multiple-checkbox"
-    style={{textAlign:'left'}}
-    multiple
-    value={DepName}
-    onChange={HandleChange}
-    input={<OutlinedInput label="View All Departments" />}
-    // MenuProps={MenuProps}
-    renderValue={(selected) => {
-      if (selected.includes('All')) {
-        return 'All';
-      }
-      return selected.join(', ');
-    }}
-  >
-    {/* <MenuItem value="All">
-      <Checkbox checked={DepName.includes('All')} />
-      <ListItemText primary="All" />
-    </MenuItem> */}
-    {Deps.map((Dep) => (
-      <MenuItem 
-      key={Dep} value={Dep}>
-        <Checkbox style={window.innerWidth <= 500? {
-          width:"30%"
-        }:{
-         
-        }} 
-        checked={DepName.includes(Dep)} />
-        <ListItemText primary={Dep} />
-      </MenuItem>
-    ))}
-  </Select>
-</FormControl>
-
-    {/* </a> */}
-      </div>
+      
       <Footer />
     </>
   );
           }
-        
-
