@@ -23,7 +23,6 @@ const wheelerInitialState = {
 };
 function Wheeler(props) {
   const [data, setData] = useState({});
-  console.log(data, "sdfsdfss");
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
   useEffect(() => {
@@ -108,7 +107,7 @@ function Wheeler(props) {
             style={{ display: "flex", alignItems: "inherit" }}
           >
             <div className="col-lg-6">
-              <CircleSeg getSegmentData={getSegmentData} setData={setData} />
+              <CircleSeg translations={translations} language={props.language}  getSegmentData={getSegmentData} setData={setData} />
             </div>
             <div className="col-lg-6">
               <div

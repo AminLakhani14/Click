@@ -14,6 +14,7 @@ import English from "../assets/English.png";
 export default function GenericHeader(props) {
   const [isSticky, setIsSticky] = useState(false);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const [childLanguage, setchildLanguage] = useState({});
 
   useEffect(() => {
     const handleScroll = () => {
@@ -67,6 +68,7 @@ export default function GenericHeader(props) {
       }
     };
   }, []);
+
 
 
 
