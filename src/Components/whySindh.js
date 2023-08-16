@@ -7,7 +7,8 @@ import thread from "../assets/thread.png";
 import cement from "../assets/cement.png";
 import "../Css/header.css";
 import { Link } from "react-router-dom";
-function WhySindh() {
+import { translations } from "../Transalation/Transalation";
+function WhySindh(props) {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
   useEffect(() => {
@@ -45,7 +46,7 @@ function WhySindh() {
                       }
                 }
               >
-               Sindh at a Glance
+              {translations["sindhATglance"][props.language]}
               </h1>
             </div>
           </div>
@@ -59,9 +60,7 @@ function WhySindh() {
               <p
                 className={"favorite"}
               >
-                Favourable Environment, Strategic Location, Growing Economy,
-                Natural Resources, Investment Opportunities, And Supportive
-                Government Policies.
+                {translations["FavourEnvironment"][props.language]}
               </p>
             </div>
             <div className="col-lg-2"></div>
@@ -89,7 +88,7 @@ function WhySindh() {
                   <div className="media-body" style={{ width: "150px" }}>
                     <h3 className="ch-title">1.3 Trillion </h3>
                     <p className="card-subtitle" style={windowWidth <500 ?{textAlign:"start"}:{}}>
-                      Cubic Feet of Natural Gas Production
+                    {translations["NaturalGas"][props.language]}
                     </p>
                   </div>
                 </div>
@@ -116,7 +115,8 @@ function WhySindh() {
                   </a>
                   <div className="media-body" style={{ width: "150px" }}>
                     <h3 className="ch-title">184 Billion</h3>
-                    <p className="card-subtitle" style={windowWidth <500 ?{textAlign:"start"}:{}}>Tonnes of Coal Reserves</p>
+                    <p className="card-subtitle" style={windowWidth <500 ?{textAlign:"start"}:{}}>
+                      {translations["TonOfCoal"][props.language]}</p>
                   </div>
                 </div>
               </div>
@@ -143,7 +143,7 @@ function WhySindh() {
                   <div className="media-body" style={{ width: "150px" }}>
                     <h3 className="ch-title">10,000+ Megawatts</h3>
                     <p className="card-subtitle" style={windowWidth <500 ?{textAlign:"start"}:{}}>
-                      Of Electricity Generation Capacity
+                    {translations["ElectricityGeneration"][props.language]}
                     </p>
                   </div>
                 </div>
@@ -173,7 +173,7 @@ function WhySindh() {
                   <div className="media-body" style={{ width: "150px" }}>
                     <h3 className="ch-title">70% </h3>
                     <p className="card-subtitle" style={windowWidth <500 ?{textAlign:"start"}:{}}>
-                      Of Pakistan's Total Fish Production
+                    {translations["TotalFish"][props.language]}
                     </p>
                   </div>
                 </div>
@@ -201,7 +201,7 @@ function WhySindh() {
                   <div className="media-body" style={{ width: "150px" }}>
                     <h3 className="ch-title">600+</h3>
                     <p className="card-subtitle" style={windowWidth <500 ?{textAlign:"start"}:{}}>
-                      Textile Mills with over 300,000 workers
+                    {translations["TextileMills"][props.language]}
                     </p>
                   </div>
                 </div>
@@ -227,7 +227,8 @@ function WhySindh() {
                   </a>
                   <div className="media-body" style={{ width: "150px" }}>
                     <h3 className="ch-title">123 Million</h3>
-                    <p className="card-subtitle" style={windowWidth <500 ?{textAlign:"start"}:{}}>Tonnes of Cement Production</p>
+                    <p className="card-subtitle" style={windowWidth <500 ?{textAlign:"start"}:{}}>
+                       {translations["TonOfCement"][props.language]}</p>
                   </div>
                 </div>
               </div>

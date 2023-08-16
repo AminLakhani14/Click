@@ -71,17 +71,17 @@ function Home(props) {
      {windowWidth <=500 ?<MobileWheeler isVisible2={isVisible2} toggleVisibility={toggleVisibility} toggleVisibility2={toggleVisibility2}/>:
      <Wheeler language={language} setLanguage={setLanguage}  isVisible2={isVisible2} toggleVisibility={toggleVisibility} toggleVisibility2={toggleVisibility2}/>
     }
-     <Highlights/>
-     <WhySindh />
+     <Highlights language={language} setLanguage={setLanguage}/>
+     <WhySindh  language={language} setLanguage={setLanguage}/>
      {windowWidth <=500 ?<MobileMessage />:
-     <Message />}
+     <Message language={language} setLanguage={setLanguage}/>}
      {windowWidth <=500 ?<MobileTestimonial />:
-     <Testimonial />}
+     <Testimonial language={language} setLanguage={setLanguage}/>}
 
      {windowWidth <=500 ?<MobileGallery />:
-     <Gallery />}
+     <Gallery language={language} setLanguage={setLanguage}/>}
      
-     <Footer isVisible2={isVisible2}/>
+     <Footer isVisible2={isVisible2} language={language} setLanguage={setLanguage}/>
     </>
   );
 }

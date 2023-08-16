@@ -20,330 +20,183 @@ import { translations } from "../Transalation/Transalation";
 
 const brownColor = "#720D1D";
 
+function getTranslations(languageCode) {
+  const result = {};
+  
+  for (const key in translations) {
+      if (translations[key][languageCode]) {
+          result[key] = translations[key][languageCode];
+      }
+  }
+  
+  return result;
+}
+
+const getArr = (lang) => [
+  {
+    value: 45,
+    color: "#e6e6e6",
+    image: Tourisim,
+    focusImage: TourisimFocus,
+    Program:getTranslations(lang)['Tourism'],
+    Percentage: 50,
+    Description: "Approx US$1.6 Billion (2019-2020)",
+    wheat: "4 Million ",
+    subweat: getTranslations(lang)["Wheat"],
+    Rice: "1.9 Million ",
+    subrice: getTranslations(lang)["Rice"],
+    sugarcane: "4.2 Million",
+    subsugarcane: getTranslations(lang)["Sugarcane"],
+    cotton: "2.3 Million",
+    subcotton: getTranslations(lang)["Cotton"],
+    textXaxis: "250",
+    boxColor: "#720d1d",
+  },
+  {
+    value: 45,
+    color: "#e6e6e6",
+    image: Agriculture,
+    focusImage: AgricultureFocus,
+    Program: getTranslations(lang)["Agriculture"],
+    Percentage: 50,
+    Description: "Approx US$1.6 Billion (2019-2020)",
+    wheat: "4 Million ",
+    subweat: getTranslations(lang)["Wheat"],
+    Rice: "1.9 Million ",
+    subrice: getTranslations(lang)["Rice"],
+    sugarcane: "4.2 Million",
+    subsugarcane: getTranslations(lang)["Sugarcane"],
+    cotton: "2.3 Million",
+    subcotton: getTranslations(lang)["Cotton"],
+    textXaxis: "185",
+    boxColor: "#4B7145",
+  },
+  {
+    value: 45,
+    color: "#e6e6e6",
+    image: Education,
+    focusImage: EducationFocus,
+    Program: getTranslations(lang)["Education"],
+    Percentage: 50,
+    Description: "Approx US$1.6 Billion (2019-2020)",
+    wheat: "4 Million ",
+    subweat: getTranslations(lang)["Wheat"],
+    Rice: "1.9 Million ",
+    subrice: getTranslations(lang)["Rice"],
+    sugarcane: "4.2 Million",
+    subsugarcane: getTranslations(lang)["Sugarcane"],
+    cotton: "2.3 Million",
+    subcotton: getTranslations(lang)["Cotton"],
+    textXaxis: "15",
+    boxColor: "#75b3dd",
+  },
+  {
+    value: 45,
+    color: "#e6e6e6",
+    image: Energy,
+    focusImage: EnergyFocus,
+    Program: getTranslations(lang)["Energy"],
+    Percentage: 50,
+    Description: "Approx US$1.6 Billion (2019-2020)",
+    wheat: "4 Million ",
+    subweat: getTranslations(lang)["Wheat"],
+    Rice: "1.9 Million ",
+    subrice: getTranslations(lang)["Rice"],
+    sugarcane: "4.2 Million",
+    subsugarcane: getTranslations(lang)["Sugarcane"],
+    cotton: "2.3 Million",
+    subcotton: getTranslations(lang)["Cotton"],
+    textXaxis: "-50",
+    boxColor: "#bbcf3e",
+  },
+  {
+    value: 45,
+    color: "#e6e6e6",
+    image: Health,
+    focusImage: HealthFocus,
+    Program: getTranslations(lang)["Health"],
+    Percentage: 50,
+    Description: "Approx US$1.6 Billion (2019-2020)",
+    wheat: "4 Million ",
+    subweat: getTranslations(lang)["Wheat"],
+    Rice: "1.9 Million ",
+    subrice: getTranslations(lang)["Rice"],
+    sugarcane: "4.2 Million",
+    subsugarcane: getTranslations(lang)["Sugarcane"],
+    cotton: "2.3 Million",
+    subcotton: getTranslations(lang)["Cotton"],
+    textXaxis: "-50",
+    boxColor: "#0f5789",
+  },
+  {
+    value: 45,
+    color: "#e6e6e6",
+    image: IT,
+    focusImage: ITFocus,
+    Program: getTranslations(lang)["InformationTechnology"],
+    Percentage: 50,
+    Description: "Approx US$1.6 Billion (2019-2020)",
+    wheat: "4 Million ",
+    subweat: getTranslations(lang)["Wheat"],
+    Rice: "1.9 Million ",
+    subrice: getTranslations(lang)["Rice"],
+    sugarcane: "4.2 Million",
+    subsugarcane: getTranslations(lang)["Sugarcane"],
+    cotton: "2.3 Million",
+    subcotton: getTranslations(lang)["Cotton"],
+    textXaxis: "-10",
+    boxColor: "#996b95",
+  },
+  {
+    value: 45,
+    color: "#e6e6e6",
+    image: Manufacturing,
+    focusImage: ManufacturingFocus,
+    Program: getTranslations(lang)['Manufacturing'],
+    Percentage: 50,
+    Description: "Approx US$1.6 Billion (2019-2020)",
+    wheat: "4 Million ",
+    subweat: getTranslations(lang)["Wheat"],
+    Rice: "1.9 Million ",
+    subrice: getTranslations(lang)["Rice"],
+    sugarcane: "4.2 Million",
+    subsugarcane: getTranslations(lang)["Sugarcane"],
+    cotton: "2.3 Million",
+    subcotton: getTranslations(lang)["Cotton"],
+    textXaxis: "192",
+    boxColor: "#868372",
+  },
+  {
+    value: 45,
+    color: "#e6e6e6",
+    image: Textile,
+    focusImage: TextileFocus,
+    Program: getTranslations(lang)["Textile"],
+    Percentage: 50,
+    Description: "Approx US$1.6 Billion (2019-2020)",
+    wheat: "4 Million ",
+    subweat: getTranslations(lang)["Wheat"],
+    Rice: "1.9 Million ",
+    subrice: getTranslations(lang)["Rice"],
+    sugarcane: "4.2 Million",
+    subsugarcane: getTranslations(lang)["Sugarcane"],
+    cotton: "2.3 Million",
+    subcotton: getTranslations(lang)["Cotton"],
+    textXaxis: "248",
+    boxColor: "#f9a932",
+  },
+]
+
+const colors = [ "#720d1d", "#4B7145", "#75B3DD", "#BBCF3E", "#0F5789", "#996B95", "#868372", "#f9a932", ];
+
 const CircleSeg = (props) => {
+  const [segments, setSegments] = useState(getArr(props.language));
+  
   useEffect(() => {
     props.setData(segments[0]);
   }, []);
-
-
-  const [segments, setSegments] = useState([
-    {
-      value: 45,
-      color: "#e6e6e6",
-      image: Tourisim,
-      focusImage: TourisimFocus,
-      Program:translations["Tourism"][props.language],
-      Percentage: 50,
-      Description: "Approx US$1.6 Billion (2019-2020)",
-      wheat: "4 Million ",
-      subweat: "Tons of Wheat",
-      Rice: "1.9 Million ",
-      subrice: "Tons of Rice",
-      sugarcane: "4.2 Million",
-      subsugarcane: "Tons of Sugarcane",
-      cotton: "2.3 Million",
-      subcotton: "Bales of Cotton",
-      textXaxis: "250",
-      boxColor: "#720d1d",
-    },
-    {
-      value: 45,
-      color: "#e6e6e6",
-      image: Agriculture,
-      focusImage: AgricultureFocus,
-      Program: "Agriculture",
-      Percentage: 50,
-      Description: "Approx US$1.6 Billion (2019-2020)",
-      wheat: "4 Million ",
-      subweat: "Tons of Wheat",
-      Rice: "1.9 Million ",
-      subrice: "Tons of Rice",
-      sugarcane: "4.2 Million",
-      subsugarcane: "Tons of Sugarcane",
-      cotton: "2.3 Million",
-      subcotton: "Bales of Cotton",
-      textXaxis: "185",
-      boxColor: "#4B7145",
-    },
-    {
-      value: 45,
-      color: "#e6e6e6",
-      image: Education,
-      focusImage: EducationFocus,
-      Program: "Education",
-      Percentage: 50,
-      Description: "Approx US$1.6 Billion (2019-2020)",
-      wheat: "4 Million ",
-      subweat: "Tons of Wheat",
-      Rice: "1.9 Million ",
-      subrice: "Tons of Rice",
-      sugarcane: "4.2 Million",
-      subsugarcane: "Tons of Sugarcane",
-      cotton: "2.3 Million",
-      subcotton: "Bales of Cotton",
-      textXaxis: "15",
-      boxColor: "#75b3dd",
-    },
-    {
-      value: 45,
-      color: "#e6e6e6",
-      image: Energy,
-      focusImage: EnergyFocus,
-      Program: "Energy",
-      Percentage: 50,
-      Description: "Approx US$1.6 Billion (2019-2020)",
-      wheat: "4 Million ",
-      subweat: "Tons of Wheat",
-      Rice: "1.9 Million ",
-      subrice: "Tons of Rice",
-      sugarcane: "4.2 Million",
-      subsugarcane: "Tons of Sugarcane",
-      cotton: "2.3 Million",
-      subcotton: "Bales of Cotton",
-      textXaxis: "-50",
-      boxColor: "#bbcf3e",
-    },
-    {
-      value: 45,
-      color: "#e6e6e6",
-      image: Health,
-      focusImage: HealthFocus,
-      Program: "Health",
-      Percentage: 50,
-      Description: "Approx US$1.6 Billion (2019-2020)",
-      wheat: "4 Million ",
-      subweat: "Tons of Wheat",
-      Rice: "1.9 Million ",
-      subrice: "Tons of Rice",
-      sugarcane: "4.2 Million",
-      subsugarcane: "Tons of Sugarcane",
-      cotton: "2.3 Million",
-      subcotton: "Bales of Cotton",
-      textXaxis: "-50",
-      boxColor: "#0f5789",
-    },
-    {
-      value: 45,
-      color: "#e6e6e6",
-      image: IT,
-      focusImage: ITFocus,
-      Program: "Information Technology",
-      Percentage: 50,
-      Description: "Approx US$1.6 Billion (2019-2020)",
-      wheat: "4 Million ",
-      subweat: "Tons of Wheat",
-      Rice: "1.9 Million ",
-      subrice: "Tons of Rice",
-      sugarcane: "4.2 Million",
-      subsugarcane: "Tons of Sugarcane",
-      cotton: "2.3 Million",
-      subcotton: "Bales of Cotton",
-      textXaxis: "-10",
-      boxColor: "#996b95",
-    },
-    {
-      value: 45,
-      color: "#e6e6e6",
-      image: Manufacturing,
-      focusImage: ManufacturingFocus,
-      Program: "Manufacturing",
-      Percentage: 50,
-      Description: "Approx US$1.6 Billion (2019-2020)",
-      wheat: "4 Million ",
-      subweat: "Tons of wheat",
-      Rice: "1.9 Million ",
-      subrice: "Tons of Rice",
-      sugarcane: "4.2 Million",
-      subsugarcane: "Tons of Sugarcane",
-      cotton: "2.3 Million",
-      subcotton: "Bales of Cotton",
-      textXaxis: "192",
-      boxColor: "#868372",
-    },
-    {
-      value: 45,
-      color: "#e6e6e6",
-      image: Textile,
-      focusImage: TextileFocus,
-      Program: translations["Textile"][props.language],
-      Percentage: 50,
-      Description: "Approx US$1.6 Billion (2019-2020)",
-      wheat: "4 Million ",
-      subweat: "Tons of Wheat",
-      Rice: "1.9 Million ",
-      subrice: "Tons of Rice",
-      sugarcane: "4.2 Million",
-      subsugarcane: "Tons of Sugarcane",
-      cotton: "2.3 Million",
-      subcotton: "Bales of Cotton",
-      textXaxis: "248",
-      boxColor: "#f9a932",
-    },
-  ]);
   
- 
-
-  // console.log("amin lakhani",translations)
-  // console.log("language",translations["Tourism"][props.language])
-
-  const [segmentsClone] = useState([
-    {
-      value: 45,
-      color: "#e6e6e6",
-      image: Tourisim,
-      focusImage: TourisimFocus,
-      Program:translations["Tourism"][props.language],
-      Percentage: 50,
-      Description: "Approx US$1.6 Billion (2019-2020)",
-      wheat: "4 Million ",
-      subweat: "Tons of Wheat",
-      Rice: "1.9 Million ",
-      subrice: "Tons of Rice",
-      sugarcane: "4.2 Million",
-      subsugarcane: "Tons of Sugarcane",
-      cotton: "2.3 Million",
-      subcotton: "Bales of Cotton",
-      textXaxis: "250",
-      boxColor: "#720d1d",
-    },
-    {
-      value: 45,
-      color: "#e6e6e6",
-      image: Agriculture,
-      focusImage: AgricultureFocus,
-      Program: "Agriculture",
-      Percentage: 50,
-      Description: "Approx US$1.6 Billion (2019-2020)",
-      wheat: "4 Million ",
-      subweat: "Tons of Wheat",
-      Rice: "1.9 Million ",
-      subrice: "Tons of Rice",
-      sugarcane: "4.2 Million",
-      subsugarcane: "Tons of Sugarcane",
-      cotton: "2.3 Million",
-      subcotton: "Bales of Cotton",
-      textXaxis: "185",
-      boxColor: "#4B7145",
-    },
-    {
-      value: 45,
-      color: "#e6e6e6",
-      image: Education,
-      focusImage: EducationFocus,
-      Program: "Education",
-      Percentage: 50,
-      Description: "Approx US$1.6 Billion (2019-2020)",
-      wheat: "4 Million ",
-      subweat: "Tons of Wheat",
-      Rice: "1.9 Million ",
-      subrice: "Tons of Rice",
-      sugarcane: "4.2 Million",
-      subsugarcane: "Tons of Sugarcane",
-      cotton: "2.3 Million",
-      subcotton: "Bales of Cotton",
-      textXaxis: "15",
-      boxColor: "#75b3dd",
-    },
-    {
-      value: 45,
-      color: "#e6e6e6",
-      image: Energy,
-      focusImage: EnergyFocus,
-      Program: "Energy",
-      Percentage: 50,
-      Description: "Approx US$1.6 Billion (2019-2020)",
-      wheat: "4 Million ",
-      subweat: "Tons of Wheat",
-      Rice: "1.9 Million ",
-      subrice: "Tons of Rice",
-      sugarcane: "4.2 Million",
-      subsugarcane: "Tons of Sugarcane",
-      cotton: "2.3 Million",
-      subcotton: "Bales of Cotton",
-      textXaxis: "-50",
-      boxColor: "#bbcf3e",
-    },
-    {
-      value: 45,
-      color: "#e6e6e6",
-      image: Health,
-      focusImage: HealthFocus,
-      Program: "Health",
-      Percentage: 50,
-      Description: "Approx US$1.6 Billion (2019-2020)",
-      wheat: "4 Million ",
-      subweat: "Tons of Wheat",
-      Rice: "1.9 Million ",
-      subrice: "Tons of Rice",
-      sugarcane: "4.2 Million",
-      subsugarcane: "Tons of Sugarcane",
-      cotton: "2.3 Million",
-      subcotton: "Bales of Cotton",
-      textXaxis: "-50",
-      boxColor: "#0f5789",
-    },
-    {
-      value: 45,
-      color: "#e6e6e6",
-      image: IT,
-      focusImage: ITFocus,
-      Program: "Information Technology",
-      Percentage: 50,
-      Description: "Approx US$1.6 Billion (2019-2020)",
-      wheat: "4 Million ",
-      subweat: "Tons of Wheat",
-      Rice: "1.9 Million ",
-      subrice: "Tons of Rice",
-      sugarcane: "4.2 Million",
-      subsugarcane: "Tons of Sugarcane",
-      cotton: "2.3 Million",
-      subcotton: "Bales of Cotton",
-      textXaxis: "-10",
-      boxColor: "#996b95",
-    },
-    {
-      value: 45,
-      color: "#e6e6e6",
-      image: Manufacturing,
-      focusImage: ManufacturingFocus,
-      Program: "Manufacturing",
-      Percentage: 50,
-      Description: "Approx US$1.6 Billion (2019-2020)",
-      wheat: "4 Million ",
-      subweat: "Tons of wheat",
-      Rice: "1.9 Million ",
-      subrice: "Tons of Rice",
-      sugarcane: "4.2 Million",
-      subsugarcane: "Tons of Sugarcane",
-      cotton: "2.3 Million",
-      subcotton: "Bales of Cotton",
-      textXaxis: "192",
-      boxColor: "#868372",
-    },
-    {
-      value: 45,
-      color: "#e6e6e6",
-      image: Textile,
-      focusImage: TextileFocus,
-      Program:  translations["Textile"][props.language],
-      Percentage: 50,
-      Description: "Approx US$1.6 Billion (2019-2020)",
-      wheat: "4 Million ",
-      subweat: "Tons of Wheat",
-      Rice: "1.9 Million ",
-      subrice: "Tons of Rice",
-      sugarcane: "4.2 Million",
-      subsugarcane: "Tons of Sugarcane",
-      cotton: "2.3 Million",
-      subcotton: "Bales of Cotton",
-      textXaxis: "248",
-      boxColor: "#f9a932",
-    },
-  ]);
-
-  
-
-  const totalValue = segments.reduce(
+  const totalValue = segments?.reduce(
     (total, segment) => total + segment.value,
     0
   );
@@ -365,26 +218,14 @@ const CircleSeg = (props) => {
   }, []);
   const [selectedSegmentIndex, setSelectedSegmentIndex] = useState(null);
   const [centerCircleColor, setCenterCircleColor] = useState(brownColor);
-  const colors = [
-    " #720d1d",
-    "#4B7145",
-    "#75B3DD",
-    "#BBCF3E",
-    "#0F5789",
-    "#996B95",
-    "#868372",
-    "#f9a932",
-  ];
+  
   const handleClick = (index, segment) => {
     let updatedSegments = [...segments];
     //   props.setData(updatedSegments[index]);
     if (typeof index === "number") {
       if (selectedSegmentIndex !== null) {
         // Revert the previously selected segment to its initial state
-        updatedSegments[selectedSegmentIndex] = {
-          ...segmentsClone[selectedSegmentIndex],
-          color: segmentsClone[selectedSegmentIndex].color, // Reset the color to its initial value
-        };
+        updatedSegments[selectedSegmentIndex] ={...getArr(props.language)[selectedSegmentIndex], color: getArr(props.language)[selectedSegmentIndex].color}
       }
 
       // Assign the predefined color to the new segment
@@ -409,35 +250,11 @@ const CircleSeg = (props) => {
   const centerY = 100; // y-coordinate of the center of the circular path
   const radius = 120; // radius of the circular path
   const iconRadius = 14; // Radius of the small icon-like circle
-  const getKeyVal = () => {
-    debugger
-    let value = '';
-    for (const key in translations) {
-      if (key == 'Tourism' && key == 'Textile'&& key == 'Education' ) {
-        value = translations[key];
-        // console.log("amin",value);
-        // console.log("lakhani",key);
 
-      }
-    }
-    return value;
-  }
-  
   useEffect(()=>{
-    debugger;
-    if(Array.isArray(segments) && segments.length > 0){
-      const _segments = JSON.parse(JSON.stringify(segments));
-      _segments.forEach((item)=>{
-        const _tranVal = getKeyVal();
-        if(_tranVal){
-          item.Program =  translations[_tranVal][props.language];
-        }
-      });
+    setSegments(getArr(props.language))
+  },[props.language])
 
-      setSegments(_segments);
-    }
-   
-  },[props.language]);
   return (
     <div
       style={{

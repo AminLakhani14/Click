@@ -6,7 +6,8 @@ import card3 from "../assets/card3.png";
 import card4 from "../assets/card4.png";
 import { useEffect } from "react";
 import { useState } from "react";
-function Highlights() {
+import { translations } from "../Transalation/Transalation";
+function Highlights(props) {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
   useEffect(() => {
@@ -46,7 +47,7 @@ function Highlights() {
                       }
                 }
               >
-                Highlights
+                {translations["Highlights"][props.language]}
               </h1>
             </div>
           </div>
@@ -58,15 +59,15 @@ function Highlights() {
               <img src={card1} alt="" />
               <div class="overlay"></div>
               <div className="cardMain">
-                <p className="cardHeaderHeading">Ease of doing Business</p>
+                <p className="cardHeaderHeading">{translations["EasYdata"][props.language]}</p>
                 <p className="HigParagraphh cardinner">
-                  The focus of all reforms efforts is to facilitate Government
+                {translations["facilitatedTEXT"][props.language]}
                 </p>
               </div>
               <div className="verticalTabGrid1">
                 <div class="info">
                   <a href="#" class="updateBtn">
-                    Update
+                    {translations["UpdatedData"][props.language]}
                   </a>
                 </div>
               </div>
@@ -76,9 +77,9 @@ function Highlights() {
               <img src={card2} alt="" />
               <div class="overlay"></div>
               <div className="cardMain">
-                <p className="cardHeaderHeading">Economy</p>
+                <p className="cardHeaderHeading">{translations["Economies"][props.language]}</p>
                 <p className="HigParagraphh cardinner">
-                  We are 24th Largest Economy
+                {translations["EconTEXT"][props.language]}
                 </p>
               </div>
               <div className="verticalTabGrid1">
@@ -86,7 +87,7 @@ function Highlights() {
                   {/* <h1>Heading</h1> */}
 
                   <a href="#" class="updateBtn">
-                    Update
+                  {translations["UpdatedData"][props.language]}
                   </a>
                 </div>
               </div>
@@ -97,11 +98,11 @@ function Highlights() {
               <div class="overlay"></div>
               <div className="cardMain">
                 <p className="cardHeaderHeading">
-                  Investment & Sector Policies
+                {translations["iNVEstText"][props.language]}
                 </p>
                 <p className="HigParagraphh cardinner">
                   {" "}
-                  Sindh offers liberal Investment
+                  {translations["LibiNVEstText"][props.language]}
                 </p>
               </div>
               <div className="verticalTabGrid1">
@@ -109,7 +110,7 @@ function Highlights() {
                   {/* <h1>Heading</h1> */}
 
                   <a href="#" class="updateBtn">
-                    Update
+                  {translations["UpdatedData"][props.language]}
                   </a>
                 </div>
               </div>
@@ -118,16 +119,16 @@ function Highlights() {
               <img src={card4} alt="" />
               <div class="overlay"></div>
               <div className="cardMain">
-                <p className="cardHeaderHeading">Special Economic Zone</p>
+                <p className="cardHeaderHeading"> {translations["EconomicZonesText"][props.language]}</p>
                 <p className="HigParagraphh cardinner">
-                  Is a blanket term for various types of Specialized Zones
+                {translations["blanketText"][props.language]}
                 </p>
               </div>
 
               <div className="verticalTabGrid1">
                 <div class="info">
                   <a href="#" class="updateBtn">
-                    Update
+                  {translations["UpdatedData"][props.language]}
                   </a>
                 </div>
               </div>
