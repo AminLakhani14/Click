@@ -68,7 +68,21 @@ export default function GenericHeader(props) {
       }
     };
   }, []);
-
+  function gototop(){
+    if ("scrollRestoration" in window.history) {
+      window.history.scrollRestoration = "manual";
+    }
+  
+    window.scrollTo(0, 0);
+  
+    // Restore scroll restoration to its default behavior
+    return () => {
+      if ("scrollRestoration" in window.history) {
+        window.history.scrollRestoration = "auto";
+      }
+    };
+  }
+   
 
 
 
@@ -166,6 +180,7 @@ export default function GenericHeader(props) {
                         }}
                       >
                         <a
+                        onClick={gototop}
                           style={{
                             width: "300px",
                             paddingLeft: "15px",
@@ -174,9 +189,10 @@ export default function GenericHeader(props) {
                           }}
                           href="#"
                         >
-                          <Link className={"link"} to={"/manufacturing"}>
-                            Manufacturing
-                          </Link>
+                         <Link  onClick={() => { window.scrollTo({ top: 0, left: 0, behavior: "smooth" }); }} className={"link"} to={"/manufacturing"}>
+                          
+                          Manufacturing
+                        </Link>
                         </a>
                         <i
                           style={{
@@ -192,8 +208,9 @@ export default function GenericHeader(props) {
                         class="dropdown-content nested-content nested-right"
                         style={{ width: "200px" }}
                       >
-                        <Link className={""} to={"/ComingSoon"}>
-                          <a href="#">Talk to expert </a>
+                        <Link nClick={() => { window.scrollTo({ top: 2800, left: 0, behavior: "smooth" }); }} className={""} to={"/manufacturing"}>
+                          <a onClick={() => { window.scrollTo({ top: 2800, left: 0, behavior: "smooth" }); }} href="#">Talk to expert </a>
+      
                         </Link>
                       </div>
                     </div>
@@ -215,7 +232,7 @@ export default function GenericHeader(props) {
                           }}
                           href="#"
                         >
-                          <Link className={"link"} to={"/textile"}>
+                          <Link onClick={() => { window.scrollTo({ top: 0, left: 0, behavior: "smooth" }); }} className={"link"} to={"/textile"}>
                             Textile
                           </Link>
                         </a>
@@ -233,8 +250,8 @@ export default function GenericHeader(props) {
                         class="dropdown-content nested-content nested-right"
                         style={{ width: "200px", marginTop: "40px" }}
                       >
-                        <Link className={""} to={"/ComingSoon"}>
-                          <a href="#">Talk to expert </a>
+                       <Link className={""} to={"/textile"}>
+                          <a onClick={() => { window.scrollTo({ top: 2800, left: 0, behavior: "smooth" }); }} href="#">Talk to expert </a>
                         </Link>
                       </div>
                     </div>
@@ -256,7 +273,7 @@ export default function GenericHeader(props) {
                           }}
                           href="#"
                         >
-                          <Link className={"link"} to={"/tourism"}>
+                          <Link onClick={() => { window.scrollTo({ top: 0, left: 0, behavior: "smooth" }); }}  className={"link"} to={"/tourism"}>
                             Tourism
                           </Link>
                         </a>
@@ -274,8 +291,8 @@ export default function GenericHeader(props) {
                         class="dropdown-content nested-content nested-right"
                         style={{ width: "200px", marginTop: "80px" }}
                       >
-                        <Link className={""} to={"/ComingSoon"}>
-                          <a href="#">Talk to expert </a>
+                         <Link className={""} to={"/tourism"}>
+                          <a onClick={() => { window.scrollTo({ top: 2800, left: 0, behavior: "smooth" }); }} href="#">Talk to expert </a>
                         </Link>
                       </div>
                     </div>
@@ -297,7 +314,7 @@ export default function GenericHeader(props) {
                           }}
                           href="#"
                         >
-                          <Link className={"link"} to={"/agriculture"}>
+                          <Link onClick={() => { window.scrollTo({ top: 0, left: 0, behavior: "smooth" }); }} className={"link"} to={"/agriculture"}>
                             Agriculture
                           </Link>
                         </a>
@@ -315,8 +332,8 @@ export default function GenericHeader(props) {
                         class="dropdown-content nested-content nested-right"
                         style={{ width: "200px", marginTop: "120px" }}
                       >
-                        <Link className={""} to={"/ComingSoon"}>
-                          <a href="#">Talk to expert </a>
+                        <Link className={""} to={"/agriculture"}>
+                          <a onClick={() => { window.scrollTo({ top: 2800, left: 0, behavior: "smooth" }); }} href="#">Talk to expert </a>
                         </Link>
                       </div>
                     </div>
@@ -338,7 +355,7 @@ export default function GenericHeader(props) {
                           }}
                           href="#"
                         >
-                          <Link className={"link"} to={"/education"}>
+                          <Link onClick={() => { window.scrollTo({ top: 0, left: 0, behavior: "smooth" }); }} className={"link"} to={"/education"}>
                             Education
                           </Link>
                         </a>
@@ -356,8 +373,8 @@ export default function GenericHeader(props) {
                         class="dropdown-content nested-content nested-right"
                         style={{ width: "200px", marginTop: "160px" }}
                       >
-                        <Link className={""} to={"/ComingSoon"}>
-                          <a href="#">Talk to expert </a>
+                         <Link  className={""} to={"/education"}>
+                          <a  onClick={() => { window.scrollTo({ top: 2800, left: 0, behavior: "smooth" }); }}  href="#">Talk to expert </a>
                         </Link>
                       </div>
                     </div>
@@ -379,7 +396,7 @@ export default function GenericHeader(props) {
                           }}
                           href="#"
                         >
-                          <Link className={"link"} to={"/energy"}>
+                         <Link onClick={() => { window.scrollTo({ top: 0, left: 0, behavior: "smooth" }); }} className={"link"} to={"/energy"}>
                             Energy
                           </Link>
                         </a>
@@ -397,7 +414,7 @@ export default function GenericHeader(props) {
                         class="dropdown-content nested-content nested-right"
                         style={{ width: "200px", marginTop: "200px" }}
                       >
-                        <Link className={""} to={"/ComingSoon"}>
+                        <Link onClick={() => { window.scrollTo({ top: 2800, left: 0, behavior: "smooth" }); }} className={""} to={"/energy"}>
                           <a href="#">Talk to expert </a>
                         </Link>
                       </div>
@@ -420,7 +437,7 @@ export default function GenericHeader(props) {
                           }}
                           href="#"
                         >
-                          <Link className={"link"} to={"/health"}>
+                          <Link  onClick={() => { window.scrollTo({ top: 0, left: 0, behavior: "smooth" }); }} className={"link"} to={"/health"}>
                             Health
                           </Link>
                         </a>
@@ -438,8 +455,8 @@ export default function GenericHeader(props) {
                         class="dropdown-content nested-content nested-right"
                         style={{ width: "200px", marginTop: "240px" }}
                       >
-                        <Link className={""} to={"/ComingSoon"}>
-                          <a href="#">Talk to expert </a>
+                        <Link   className={""} to={"/health"}>
+                          <a onClick={() => { window.scrollTo({ top: 2800, left: 0, behavior: "smooth" }); }} href="#">Talk to expert </a>
                         </Link>
                       </div>
                     </div>
@@ -461,7 +478,7 @@ export default function GenericHeader(props) {
                           }}
                           href="#"
                         >
-                          <Link className={"link"} to={"/informationtech"}>
+                          <Link onClick={() => { window.scrollTo({ top: 0, left: 0, behavior: "smooth" }); }} className={"link"} to={"/informationtech"}>
                             Information Technology
                           </Link>
                         </a>
@@ -479,8 +496,8 @@ export default function GenericHeader(props) {
                         class="dropdown-content nested-content nested-right"
                         style={{ width: "200px", marginTop: "280px" }}
                       >
-                        <Link className={""} to={"/ComingSoon"}>
-                          <a href="#">Talk to expert </a>
+                       <Link  className={""} to={"/informationtech"}>
+                          <a onClick={() => { window.scrollTo({ top: 2800, left: 0, behavior: "smooth" }); }} href="#">Talk to expert </a>
                         </Link>
                       </div>
                     </div>

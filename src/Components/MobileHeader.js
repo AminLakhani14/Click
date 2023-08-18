@@ -8,8 +8,11 @@ import { useState } from "react";
 import { useEffect } from "react";
 import "../Css/newcss.css";
 import $ from "jquery";
-
-function MobileHome() {
+import English from "../assets/English.png";
+import urdu from "../assets/urdu.png";
+import Sindhi from "../assets/Sindhi.png";
+import { translations } from "../Transalation/Transalation";
+function MobileHome(props) {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
   useEffect(() => {
@@ -39,22 +42,22 @@ function MobileHome() {
     false, // For "Health"
     false, // For "Information Technology
   ]);
-  
+
   const handleLabelTextClick = (index) => {
     // Proceed with redirection
     if (index === 0) {
       window.location.href = "/#/Opportunity";
-    } 
+    }
   };
 
-  
+
   const handleIconClick = (index) => {
     // Toggle the dropdown state
     const newDropdownStates = [...dropdownStates];
     newDropdownStates[index] = !newDropdownStates[index];
     setDropdownStates(newDropdownStates);
   };
-  
+
   const closeDropdown = (index) => {
     // Close the dropdown
     const newDropdownStates = [...dropdownStates];
@@ -106,7 +109,7 @@ function MobileHome() {
         <div className={"navbar"}>
           <div
             className="navbarLeft"
-            style={{ position: "absolute", top: "0",zIndex:"11" }}
+            style={{ position: "absolute", top: "0", zIndex: "11" }}
           >
             <Link to={"/home"} style={{ display: "flex" }}>
               <img className=" navlogo1" src={sindh} alt="" width="35%"></img>
@@ -133,17 +136,17 @@ function MobileHome() {
               style={
                 windowWidth <= 500
                   ? {
-                      marginTop: "15px",
-                      marginBottom: "-4px",
-                      width: "90%",
-                      display: "flex",
-                      justifyContent: "flex-end",
-                    }
+                    marginTop: "15px",
+                    marginBottom: "-4px",
+                    width: "90%",
+                    display: "flex",
+                    justifyContent: "flex-end",
+                  }
                   : {
-                      marginLeft: "80px",
-                      marginTop: "15px",
-                      marginBottom: "-4px",
-                    }
+                    marginLeft: "80px",
+                    marginTop: "15px",
+                    marginBottom: "-4px",
+                  }
               }
             >
               <img
@@ -152,7 +155,21 @@ function MobileHome() {
                 alt=""
                 width="25"
                 height="25"
-                style={{marginTop:"3px"}}
+                style={{ marginTop: "3px" }}
+              />
+              <img
+                className="headerLogoImages"
+                src={props.language === "ur" ? English : urdu}
+                alt=""
+                onClick={props.toggleLanguage}
+                style={{ marginLeft: "10px", marginRight: "15px" }}
+              />
+              <img
+                className="headerLogoImages"
+                src={Sindhi}
+                alt=""
+                onClick={props.toggleLanguage}
+                style={{ marginLeft: "0px", marginRight: "0px" }}
               />
               <a href="comingsoon.html" title="" width="10">
                 <i className="fa-sharp fa-solid fa-magnifying-glass"></i>
@@ -162,520 +179,1182 @@ function MobileHome() {
               <div className={"row"}>
                 <div className={" navbar justify-content-end"}>
                   {(toggleMenu || screenWidth > 500) && (
-                   <nav style={{ marginTop: "30px" }}>
-                   <label
-                     for="drop"
-                     className="toggle"
-                     style={{ background: "white" }}
-                   >
-                     <i
-                       style={{ Top: "-25px" }}
-                       // onClick={toggleNav}
-                       //   onClick={showtoggleNav}
-                       className="fa-solid fa-bars toggleMenu"
-                     ></i>
-                   </label>
-                   <input type="checkbox" id="drop" />
-                   <ul className="menu">
-                     <li
-                       style={{
-                         borderBottom: "1px solid transparent !important",
-                       }}
-                     >
-                       <Link className="link toggle2" to={"/home"}>
-                         Home
-                       </Link>
-                     </li>
-                     <li
-                       style={{
-                         borderBottom: "1px solid transparent !important",
-                       }}
-                     >
-                       <Link className="link toggle2" to={"/WhySindh"}>
-                       Sindh at a Glance
-                       </Link>
-                     </li>
-                     <li
-                       style={{
-                         borderBottom: "1px solid transparent !important",
-                       }}
-                     >
-                       <Link className="link toggle2" to={"/InvestNow"}>
-                         Invest now
-                       </Link>
-                     </li>
-                     <li>
-                     <label
-                     htmlFor="drop-5"
-                     className={`d-flex toggle toggle2`}
-                   >
-                   <Link to={"/manufacturing"} style={{width:"212px",padding:"0px",fontSize:"20px"}}>
-                     Sectors and Opportunities
-                     </Link>
-                     {dropdownStates[0] ? (
-                       <span
-                       style={{display:"contents"}}
-                         className="minus"
-                         onClick={() => handleIconClick(0)} // Click on icon to open/close the dropdown
-                         onMouseEnter={() => handleIconClick(0)} // Hover on icon to open/close the dropdown
-                          onMouseLeave={() => closeDropdown(0)} // Leave icon to close the dropdown
-                       ></span>
-                     ) : (
-                       <span 
-                       style={{display:"contents"}}
-                         className="plus"
-                         onClick={() => handleIconClick(0)} // Click on icon to open/close the dropdown
-                         onMouseEnter={() => handleIconClick(0)} // Hover on icon to open/close the dropdown
-                         onMouseLeave={() => closeDropdown(0)} // Leave ico/ Leave icon to close the dropdown
-                       ></span>
-                     )}
-                   </label>
-
-                       <input type="checkbox" id="drop-5" />
-                       <ul>
-                         <li className="borderline">
-                         <label
-                         htmlFor="drop-6"
-                         className="d-flex mobiledropdowntoggle toggle toggle2"
-                       >
-                       <Link to={"/manufacturing"} style={{width:"195px",padding:"0px"}}>
-                         Manufacturing
-                         </Link>
-                         {dropdownStates[1] ? (
-                           <span
-                           style={{display:"contents"}}
-                             className="minus"
-                             onClick={() => handleIconClick(1)} // Click on icon to open/close the dropdown
-                             onMouseEnter={() => handleIconClick(1)} // Hover on icon to open/close the dropdown
-                             onMouseLeave={() => closeDropdown(1)} // Leave ico icon to close the dropdown
-                           ></span>
-                         ) : (
-                           <span
-                             className="plus"
-                           style={{display:"contents"}}
-                             onClick={() => handleIconClick(1)} // Click on icon to open/close the dropdown
-                             onMouseEnter={() => handleIconClick(1)} // Hover on icon to open/close the dropdown
-                             onMouseLeave={() => closeDropdown(1)} // Leave ico icon eave icon to close the dropdown
-                           ></span>
-                         )}
-                       
-                       </label>
-                           <input type="checkbox" id="drop-6" />
-                           <ul>
-                             <li className="b-none borderline">
-                               <Link
-                                 className="link toggle2 mobilenesteddropdowntoggle"
-                                 to={"/aboutus"}
-                               >
-                                 Talk to Expert
-                               </Link>
-                             </li>
-                           </ul>
-                         </li>
-                         <li className="">
-                           <label
-                             for="drop-7"
-                             className="d-flex mobiledropdowntoggle toggle toggle2"
-                           >
-                             <Link to={"/textile"} style={{width:"195px",padding:"0px"}}>
-                             Textile
-                             </Link>
-                             {dropdownStates[2] ? (
-                                 <span
-                                   className="minus"
-                                   style={{display:"contents"}}
-                                   onClick={() => handleIconClick(2)} // Click on icon to open/close the dropdown
-                                       onMouseEnter={() => handleIconClick(2)} // Hover on icon to open/close the dropdown
-                                   onMouseLeave={() => closeDropdown(2)} eave icon to close the dropdown
-                                 ></span>
-                               ) : (
-                                 <span
-                                     style={{display:"contents"}}
-                                   className="plus"
-                                   onClick={() => handleIconClick(2)} // Click on icon to open/close the dropdown
-                                   onMouseEnter={() => handleIconClick(2)} // Hover on icon to open/close the dropdown
-                                         onMouseLeave={() => closeDropdown(2)} // Leave icon to close the dropdown
-                                 ></span>
-                               )}
-                           </label>
-                           <input type="checkbox" id="drop-7" />
-                           <ul>
-                             <li className="b-none borderline">
-                               <Link
-                                 className="link toggle2 mobilenesteddropdowntoggle"
-                                 to={"/aboutus"}
-                               >
-                                 Talk to Expert
-                               </Link>
-                             </li>
-                           </ul>
-                         </li>
-                         <li className="">
-                           <label
-                             for="drop-8"
-                             className="d-flex mobiledropdowntoggle toggle toggle2"
-                           >
-                              <Link to={"/tourism"} style={{width:"195px",padding:"0px"}}>
-                             Tourism 
-                         </Link>
-                             {dropdownStates[3] ? (
-                                 <span
-                                   style={{display:"contents"}}
-                                   className="minus"
-                                   onClick={() => handleIconClick(3)} // Click on icon to open/close the dropdown
-                                   onMouseEnter={() => handleIconClick(3)} // Hover on icon to open/close the dropdown
-                                   onMouseLeave={() => closeDropdown(3)} // Leave icon to close the dropdown
-                                 ></span>
-                               ) : (
-                                 <span
-                                   style={{display:"contents"}}
-                                   className="plus"
-                                   onClick={() => handleIconClick(3)} // Click on icon to open/close the dropdown
-                                   onMouseEnter={() => handleIconClick(3)} // Hover on icon to open/close the dropdown
-                                   onMouseLeave={() => closeDropdown(3)} // Leave icon to close the dropdown
-                                 ></span>
-                               )}
-                           </label>
-                           <input type="checkbox" id="drop-8" />
-                           <ul>
-                             <li className="b-none borderline">
-                               <Link
-                                 className="link toggle2 mobilenesteddropdowntoggle"
-                                 to={"/aboutus"}
-                               >
-                                 Talk to Expert
-                               </Link>
-                             </li>
-                           </ul>
-                         </li>
-                         <li className="">
-                           <label
-                             for="drop-9"
-                             className="d-flex mobiledropdowntoggle toggle toggle2"
-                           >
-                            <Link to={"/agriculture"} style={{width:"195px",padding:"0px"}}>
-                             Agriculture  
-                             </Link>
-                             {dropdownStates[4] ? (
-                                 <span
-                                 style={{display:"contents"}}
-                                   className="minus"
-                                   onClick={() => handleIconClick(4)} // Click on icon to open/close the dropdown
-                                   onMouseEnter={() => handleIconClick(4)} // Hover on icon to open/close the dropdown
-                                   onMouseLeave={() => closeDropdown(4)} // Leave icon to close the dropdown
-                                 ></span>
-                               ) : (
-                                 <span
-                                   className="plus"
-                                 style={{display:"contents"}}
-                                   onClick={() => handleIconClick(4)} // Click on icon to open/close the dropdown
-                                   onMouseEnter={() => handleIconClick(4)} // Hover on icon to open/close the dropdown
-                                   onMouseLeave={() => closeDropdown(4)} // Leave icon to close the dropdown
-                                 ></span>
-                               )}
-                           </label>
-                           <input type="checkbox" id="drop-9" />
-                           <ul>
-                             <li className="b-none borderline">
-                               <Link
-                                 className="link toggle2 mobilenesteddropdowntoggle"
-                                 to={"/aboutus"}
-                               >
-                                 Talk to Expert
-                               </Link>
-                             </li>
-                           </ul>
-                         </li>
-                         <li className="">
-                           <label
-                             for="drop-10"
-                             className="d-flex mobiledropdowntoggle toggle toggle2"
-                           >
-                           <Link to={"/education"} style={{width:"195px",padding:"0px"}}>
-                             Eduction  
-                             </Link>
-                             {dropdownStates[5] ? (
-                                 <span
-                                   className="minus"
-                                 style={{display:"contents"}}
-                                   onClick={() => handleIconClick(5)} // Click on icon to open/close the dropdown
-                                   onMouseEnter={() => handleIconClick(5)} // Hover on icon to open/close the dropdown
-                                   onMouseLeave={() => closeDropdown(5)} // Leave icon to close the dropdown
-                                 ></span>
-                               ) : (
-                                 <span
-                                   className="plus"
-                                   style={{display:"contents"}}
-                                   onClick={() => handleIconClick(5)} // Click on icon to open/close the dropdown
-                                   onMouseEnter={() => handleIconClick(5)} // Hover on icon to open/close the dropdown
-                                   onMouseLeave={() => closeDropdown(5)} // Leave icon to close the dropdown
-                                 ></span>
-                               )}
-                           </label>
-                           <input type="checkbox" id="drop-10" />
-                           <ul>
-                             <li className="b-none borderline">
-                               <Link
-                                 className="link toggle2 mobilenesteddropdowntoggle"
-                                 to={"/aboutus"}
-                               >
-                                 Talk to Expert
-                               </Link>
-                             </li>
-                           </ul>
-                         </li>
-                         <li className="">
-                           <label
-                             for="drop-11"
-                             className="d-flex mobiledropdowntoggle toggle toggle2"
-                           >
-                           <Link to={"/energy"} style={{width:"195px",padding:"0px"}}>
-                             Energy 
-                             </Link>
-                             {dropdownStates[6] ? (
-                                 <span
-                                   className="minus"
-                                   style={{display:"contents"}}
-                                   onClick={() => handleIconClick(6)} // Click on icon to open/close the dropdown
-                                   onMouseEnter={() => handleIconClick(6)} // Hover on icon to open/close the dropdown
-                                   onMouseLeave={() => closeDropdown(6)} // Leave icon to close the dropdown
-                                 ></span>
-                               ) : (
-                                 <span
-                                   className="plus"
-                                   style={{display:"contents"}}
-                                   onClick={() => handleIconClick(6)} // Click on icon to open/close the dropdown
-                                   onMouseEnter={() => handleIconClick(6)} // Hover on icon to open/close the dropdown
-                                   onMouseLeave={() => closeDropdown(6)} // Leave icon to close the dropdown
-                                 ></span>
-                               )}
-                           </label>
-                           <input type="checkbox" id="drop-11" />
-                           <ul>
-                             <li className="b-none borderline">
-                               <Link
-                                 className="link toggle2 mobilenesteddropdowntoggle"
-                                 to={"/aboutus"}
-                               >
-                                 Talk to Expert
-                               </Link>
-                             </li>
-                           </ul>
-                         </li>
-                         <li className="">
-                           <label
-                             for="drop-12"
-                             className="d-flex mobiledropdowntoggle toggle toggle2"
-                             onClick={() => handleLabelTextClick(7)}
-                           >
-                           <Link to={"/health"} style={{width:"195px",padding:"0px"}}>
-                             Health 
-                             </Link>
-                             {dropdownStates[7] ? (
-                                 <span style={{display:"contents"}}
-                                   className="minus"
-                                   onClick={() => handleIconClick(7)} // Click on icon to open/close the dropdown
-                                   onMouseEnter={() => handleIconClick(7)} // Hover on icon to open/close the dropdown
-                                   onMouseLeave={() => closeDropdown(7)} // Leave icon to close the dropdown
-                                 ></span>
-                               ) : (
-                                 <span 
-                                 style={{display:"contents"}}
-                                   className="plus"
-                                   onClick={() => handleIconClick(7)} // Click on icon to open/close the dropdown
-                                   onMouseEnter={() => handleIconClick(7)} // Hover on icon to open/close the dropdown
-                                   onMouseLeave={() => closeDropdown(7)} // Leave icon to close the dropdown
-                                 ></span>
-                               )}
-                           </label>
-                           <input type="checkbox" id="drop-12" />
-                           <ul>
-                             <li className="b-none borderline">
-                               <Link
-                                 className="link toggle2 mobilenesteddropdowntoggle"
-                                 to={"/aboutus"}
-                               >
-                                 Talk to Expert
-                               </Link>
-                             </li>
-                           </ul>
-                         </li>
-                         <li className="b-none ">
-                           <label
-                             for="drop-13"
-                             className="d-flex mobiledropdowntoggle toggle toggle2"
-                           >
-                             <Link to={"/informationtech"} style={{width:"195px",padding:"0px"}}>
-                             Information Technology  
-                             </Link>
-                             {dropdownStates[8] ? (
-                                 <span style={{display:"contents"}}
-                                   className="minus"
-                                   onClick={() => handleIconClick(8)} // Click on icon to open/close the dropdown
-                                   onMouseEnter={() => handleIconClick(8)} // Hover on icon to open/close the dropdown
-                                   onMouseLeave={() => closeDropdown(8)} // Leave icon to close the dropdown
-                                 ></span>
-                               ) : (
-                                 <span style={{display:"contents"}}
-                                   className="plus"
-                                   onClick={() => handleIconClick(8)} // Click on icon to open/close the dropdown
-                                   onMouseEnter={() => handleIconClick(8)} // Hover on icon to open/close the dropdown
-                                   onMouseLeave={() => closeDropdown(8)} // Leave icon to close the dropdown
-                                 ></span>
-                               )}
-                           </label>
-                           <input type="checkbox" id="drop-13" />
-                           <ul>
-                             <li className="b-none borderline">
-                               <Link
-                                 className="link toggle2 mobilenesteddropdowntoggle"
-                                 to={"/aboutus"}
-                               >
-                                 Talk to Expert
-                               </Link>
-                             </li>
-                           </ul>
-                         </li>
-                       </ul>
-                     </li>
-                     <li
-                       style={{
-                         borderBottom: "1px solid transparent !important",
-                       }}
-                     >
-                       <Link
-                         className="link toggle2"
-                         to={"/NewsAndInformation"}
-                       >
-                         News & Information
-                       </Link>
-                     </li>
-                     <li className="">
-                       <label for="drop-2" className="d-flex toggle toggle2">
-                       <Link to={"/resource"} style={{width:"212px",padding:"0px",fontSize:"20px"}}>
-                         Resources 
-                         </Link>
-                         {dropdownStates[11] ? (
-                             <span
-                             style={{display:"contents"}}
-                               className="minus"
-                               onClick={() => handleIconClick(11)} // Click on icon to open/close the dropdown
-                               onMouseEnter={() => handleIconClick(11)} // Hover on icon to open/close the dropdown
-                               onMouseLeave={() => closeDropdown(11)} // Leave ico icon to close the dropdown
-                             ></span>
-                           ) : (
-                             <span
-                               className="plus"
-                             style={{display:"contents"}}
-                               onClick={() => handleIconClick(11)} // Click on icon to open/close the dropdown
-                               onMouseEnter={() => handleIconClick(11)} // Hover on icon to open/close the dropdown
-                               onMouseLeave={() => closeDropdown(11)} // Leave ico icon eave icon to close the dropdown
-                             ></span>
-                           )}
-                       </label>
-                       <input type="checkbox" id="drop-2" />
-                       <ul>
-                         <li className="borderline">
-                           <Link className="link toggle2 mobilenesteddropdowntoggle2" to={"/resource"}>
-                             Download
-                           </Link>
-                         </li>
-                         <li className="b-none">
-                           <Link
-                             className="link toggle2 mobilenesteddropdowntoggle2"
-                             to={"/regulatorycatalog"}
-                           >
-                             Regulatory Catalog
-                           </Link>
-                         </li>
-                       </ul>
-                     </li>
-                     <li>
-                       <label 
-                       for="drop-3"
-                        className="d-flex toggle toggle2">
-                         <Link to={"/aboutus"} style={{width:"212px",padding:"0px",fontSize:"20px"}}>
-                         About Us 
+                    <nav style={{ marginTop: "30px" }}>
+                      <label
+                        for="drop"
+                        className="toggle"
+                        style={{ background: "white" }}
+                      >
+                        <i
+                          style={{ Top: "-25px" }}
+                          // onClick={toggleNav}
+                          //   onClick={showtoggleNav}
+                          className="fa-solid fa-bars toggleMenu"
+                        ></i>
+                      </label>
+                      <input type="checkbox" id="drop" />
+                      <ul
+                        className="menu">
+                        <li
+                          style={
+                            props.language === "ur" || props.language === "sd"
+                              ? {
+                                display: "flex",
+                                flexDirection: "row-reverse",
+                                borderBottom: "1px solid transparent !important",
+                              }
+                              : { borderBottom: "1px solid transparent !important" }
+                          }
+                        >
+                          <Link className="link toggle2" to={"/home"}>
+                            {translations["home"][props.language]}
                           </Link>
-                          {dropdownStates[9] ? (
-                             <span
-                             style={{display:"contents"}}
-                               className="minus"
-                               onClick={() => handleIconClick(9)} // Click on icon to open/close the dropdown
-                               onMouseEnter={() => handleIconClick(9)} // Hover on icon to open/close the dropdown
+                        </li>
+                        <li
+                          style={
+                            props.language === "ur" || props.language === "sd"
+                              ? {
+                                display: "flex",
+                                flexDirection: "row-reverse",
+                                borderBottom: "1px solid transparent !important",
+                              }
+                              : { borderBottom: "1px solid transparent !important" }
+                          }
+                        >
+                          <Link className="link toggle2" to={"/WhySindh"}>
+                            {
+                              translations["sindhATglance"][
+                              props.language
+                              ]
+                            }
+                          </Link>
+                        </li>
+                        <li
+                          style={
+                            props.language === "ur" || props.language === "sd"
+                              ? {
+                                display: "flex",
+                                flexDirection: "row-reverse",
+                                borderBottom: "1px solid transparent !important",
+                              }
+                              : { borderBottom: "1px solid transparent !important" }
+                          }
+                        >
+                          <Link className="link toggle2" to={"/InvestNow"}>
+                            {translations["InvestNow"][props.language]}
+                          </Link>
+                        </li>
+                        <li style={
+                            props.language === "ur" || props.language === "sd"
+                              ? {
+                                textAlign:"right",
+                              }
+                              : { }
+                          }>
+                          <label
+                            htmlFor="drop-5"
+                            className={`d-flex toggle toggle2`}
+                            style={
+                              props.language === "ur" || props.language === "sd"
+                                ? {
+                                  display: "flex",
+                                  flexDirection: "row-reverse",
+                                }
+                                : { }
+                            }
+                          >
+                            <Link to={"/manufacturing"} style={{ width: "212px", padding: "0px", fontSize: "20px" }}>
+                              {
+                                translations["Opportunities"][
+                                props.language
+                                ]
+                              }
+                            </Link>
+                            {dropdownStates[0] ? (
+                              <span
+                              style={
+                                props.language === "ur" || props.language === "sd"
+                                  ? {
+                                    display: "flex",
+                                  }
+                                  : { display: "contents" }
+                              }
+                                className="minus"
+                                onClick={() => handleIconClick(0)} // Click on icon to open/close the dropdown
+                                onMouseEnter={() => handleIconClick(0)} // Hover on icon to open/close the dropdown
+                                onMouseLeave={() => closeDropdown(0)} // Leave icon to close the dropdown
+                              ></span>
+                            ) : (
+                              <span
+                              style={
+                                props.language === "ur" || props.language === "sd"
+                                  ? {
+                                    display: "flex",
+                                    marginLeft: "-70px",
+                                  }
+                                  : { display: "contents" }
+                              }
+                                className="plus"
+                                onClick={() => handleIconClick(0)} // Click on icon to open/close the dropdown
+                                onMouseEnter={() => handleIconClick(0)} // Hover on icon to open/close the dropdown
+                                onMouseLeave={() => closeDropdown(0)} // Leave ico/ Leave icon to close the dropdown
+                              ></span>
+                            )}
+                          </label>
+
+                          <input type="checkbox" id="drop-5" />
+                          <ul>
+                            <li
+                              className="borderline">
+                              <label
+                                style={
+                                  props.language === "ur" || props.language === "sd"
+                                    ? {
+                                      display: "flex",
+                                      flexDirection: "row-reverse",
+                                      textAlign: "right",
+                                      marginLeft: "0px",
+                                    }
+                                    : {}
+                                }
+                                htmlFor="drop-6"
+                                className="d-flex mobiledropdowntoggle toggle toggle2"
+                              >
+                                <Link to={"/manufacturing"} style={{ width: "195px", padding: "0px" }}>
+                                  {
+                                    translations["Manufacturing"][
+                                    props.language
+                                    ]
+                                  }
+                                </Link>
+                                {dropdownStates[1] ? (
+                                  <span
+                                  style={
+                                    props.language === "ur" || props.language === "sd"
+                                      ? {
+                                        display: "flex",
+                                        marginRight: "115px",
+                                      }
+                                      : { display: "contents" }
+                                  }
+                                    className="minus"
+                                    onClick={() => handleIconClick(1)} // Click on icon to open/close the dropdown
+                                    onMouseEnter={() => handleIconClick(1)} // Hover on icon to open/close the dropdown
+                                    onMouseLeave={() => closeDropdown(1)} // Leave ico icon to close the dropdown
+                                  ></span>
+                                ) : (
+                                  <span
+                                    className="plus"
+                                    style={
+                                      props.language === "ur" || props.language === "sd"
+                                        ? {
+                                          display: "flex",
+                                          marginRight: "115px",
+                                        }
+                                        : { display: "contents" }
+                                    }
+                                    onClick={() => handleIconClick(1)} // Click on icon to open/close the dropdown
+                                    onMouseEnter={() => handleIconClick(1)} // Hover on icon to open/close the dropdown
+                                    onMouseLeave={() => closeDropdown(1)} // Leave ico icon eave icon to close the dropdown
+                                  ></span>
+                                )}
+
+                              </label>
+                              <input type="checkbox" id="drop-6" />
+                              <ul>
+                                <li className="b-none borderline"
+                                style={
+                                  props.language === "ur" || props.language === "sd"
+                                    ? {
+                                      textAlign: "right"
+                                    }
+                                    : {}
+                                }
+                                >
+                                  <Link
+                                    className="link toggle2 mobilenesteddropdowntoggle"
+                                    to={"/aboutus"}
+                                    style={
+                                      props.language === "ur" || props.language === "sd"
+                                        ? {
+                                          display: "flex",
+                                          flexDirection: "row-reverse",
+                                          textAlign: "right"
+                                        }
+                                        : {}
+                                    }
+                                  >
+                                    {
+                                      translations["Talktoexpert"][
+                                      props.language
+                                      ]
+                                    }
+                                  </Link>
+                                </li>
+                              </ul>
+                            </li>
+                            <li className=""
+                             >
+                              <label
+                                for="drop-7"
+                                className="d-flex mobiledropdowntoggle toggle toggle2"
+                                style={
+                                  props.language === "ur" || props.language === "sd"
+                                    ? {
+                                      display: "flex",
+                                      flexDirection: "row-reverse",
+                                      textAlign: "right",
+                                      marginLeft: "0px",
+                                    }
+                                    : {}
+                                }
+                              >
+                                <Link to={"/textile"} style={{ width: "195px", padding: "0px" }}>
+                                  {
+                                    translations["Textile"][
+                                    props.language
+                                    ]
+                                  }
+                                </Link>
+                                {dropdownStates[2] ? (
+                                  <span
+                                    className="minus"
+                                    style={
+                                      props.language === "ur" || props.language === "sd"
+                                        ? {
+                                          display: "flex",
+                                          marginRight: "115px",
+                                        }
+                                        : { display: "contents" }
+                                    }
+                                    onClick={() => handleIconClick(2)} // Click on icon to open/close the dropdown
+                                    onMouseEnter={() => handleIconClick(2)} // Hover on icon to open/close the dropdown
+                                    onMouseLeave={() => closeDropdown(2)} eave icon to close the dropdown
+                                  ></span>
+                                ) : (
+                                  <span
+                                  style={
+                                    props.language === "ur" || props.language === "sd"
+                                      ? {
+                                        display: "flex",
+                                        marginRight: "115px",
+                                      }
+                                      : { display: "contents" }
+                                  }
+                                    className="plus"
+                                    onClick={() => handleIconClick(2)} // Click on icon to open/close the dropdown
+                                    onMouseEnter={() => handleIconClick(2)} // Hover on icon to open/close the dropdown
+                                    onMouseLeave={() => closeDropdown(2)} // Leave icon to close the dropdown
+                                  ></span>
+                                )}
+                              </label>
+                              <input type="checkbox" id="drop-7" />
+                              <ul>
+                                <li className="b-none borderline">
+                                  <Link
+                                  style={
+                                    props.language === "ur" || props.language === "sd"
+                                      ? {
+                                        display: "flex",
+                                        flexDirection: "row-reverse",
+                                        textAlign: "right"
+                                      }
+                                      : {}
+                                  }
+                                    className="link toggle2 mobilenesteddropdowntoggle"
+                                    to={"/aboutus"}
+                                  >
+                                    {
+                                      translations["Talktoexpert"][
+                                      props.language
+                                      ]
+                                    }
+                                  </Link>
+                                </li>
+                              </ul>
+                            </li>
+                            <li style={
+                              props.language === "ur" || props.language === "sd"
+                                ? {
+                                  textAlign:"right,"
+                                }
+                                : {}
+                            }>
+                              <label
+                                for="drop-8"
+                                className="d-flex mobiledropdowntoggle toggle toggle2"
+                                style={
+                                  props.language === "ur" || props.language === "sd"
+                                    ? {
+                                      display: "flex",
+                                      flexDirection: "row-reverse",
+                                      textAlign: "right",
+                                      marginLeft: "0px",
+                                    }
+                                    : {}
+                                }
+                              >
+                                <Link to={"/tourism"} style={{ width: "195px", padding: "0px" }}>
+                                  {
+                                    translations["Tourism"][
+                                    props.language
+                                    ]
+                                  }
+                                </Link>
+                                {dropdownStates[3] ? (
+                                  <span
+                                  style={
+                                    props.language === "ur" || props.language === "sd"
+                                      ? {
+                                        display: "flex",
+                                        marginRight: "115px",
+                                      }
+                                      : { display: "contents" }
+                                  }
+                                    className="minus"
+                                    onClick={() => handleIconClick(3)} // Click on icon to open/close the dropdown
+                                    onMouseEnter={() => handleIconClick(3)} // Hover on icon to open/close the dropdown
+                                    onMouseLeave={() => closeDropdown(3)} // Leave icon to close the dropdown
+                                  ></span>
+                                ) : (
+                                  <span
+                                  style={
+                                    props.language === "ur" || props.language === "sd"
+                                      ? {
+                                        display: "flex",
+                                        marginRight: "115px",
+                                      }
+                                      : { display: "contents" }
+                                  }
+                                    className="plus"
+                                    onClick={() => handleIconClick(3)} // Click on icon to open/close the dropdown
+                                    onMouseEnter={() => handleIconClick(3)} // Hover on icon to open/close the dropdown
+                                    onMouseLeave={() => closeDropdown(3)} // Leave icon to close the dropdown
+                                  ></span>
+                                )}
+                              </label>
+                              <input type="checkbox" id="drop-8" />
+                              <ul>
+                                <li className="b-none borderline">
+                                  <Link
+                                    className="link toggle2 mobilenesteddropdowntoggle"
+                                    to={"/aboutus"}
+                                    style={
+                                      props.language === "ur" || props.language === "sd"
+                                        ? {
+                                          display: "flex",
+                                          flexDirection: "row-reverse",
+                                          textAlign: "right"
+                                        }
+                                        : {}
+                                    }
+                                  >
+                                    {
+                                      translations["Talktoexpert"][
+                                      props.language
+                                      ]
+                                    }
+                                  </Link>
+                                </li>
+                              </ul>
+                            </li>
+                            <li  style={
+                              props.language === "ur" || props.language === "sd"
+                                ? {
+                                  textAlign:"right,"
+                                }
+                                : { }
+                            }>
+                              <label
+                                for="drop-9"
+                                className="d-flex mobiledropdowntoggle toggle toggle2"
+                                style={
+                                  props.language === "ur" || props.language === "sd"
+                                    ? {
+                                      display: "flex",
+                                      flexDirection: "row-reverse",
+                                      textAlign: "right",
+                                      marginLeft: "0px",
+                                    }
+                                    : { }
+                                }
+                              >
+                                <Link to={"/agriculture"} style={{ width: "195px", padding: "0px" }}>
+                                  {
+                                      translations["Agriculture"][
+                                        props.language
+                                      ]
+                                    }
+                                </Link>
+                                {dropdownStates[4] ? (
+                                  <span
+                                  style={
+                                    props.language === "ur" || props.language === "sd"
+                                      ? {
+                                        display: "flex",
+                                        marginRight: "115px",
+                                      }
+                                      : { display: "contents" }
+                                  }
+                                    className="minus"
+                                    onClick={() => handleIconClick(4)} // Click on icon to open/close the dropdown
+                                    onMouseEnter={() => handleIconClick(4)} // Hover on icon to open/close the dropdown
+                                    onMouseLeave={() => closeDropdown(4)} // Leave icon to close the dropdown
+                                  ></span>
+                                ) : (
+                                  <span
+                                    className="plus"
+                                    style={
+                                      props.language === "ur" || props.language === "sd"
+                                        ? {
+                                          display: "flex",
+                                          marginRight: "115px",
+                                        }
+                                        : { display: "contents" }
+                                    }
+                                    onClick={() => handleIconClick(4)} // Click on icon to open/close the dropdown
+                                    onMouseEnter={() => handleIconClick(4)} // Hover on icon to open/close the dropdown
+                                    onMouseLeave={() => closeDropdown(4)} // Leave icon to close the dropdown
+                                  ></span>
+                                )}
+                              </label>
+                              <input type="checkbox" id="drop-9" />
+                              <ul>
+                                <li className="b-none borderline">
+                                  <Link
+                                    className="link toggle2 mobilenesteddropdowntoggle"
+                                    to={"/aboutus"}
+                                    style={
+                                      props.language === "ur" || props.language === "sd"
+                                        ? {
+                                          display: "flex",
+                                          flexDirection: "row-reverse",
+                                          textAlign: "right"
+                                        }
+                                        : {}
+                                    }
+                                  >
+                                    {
+                                      translations["Talktoexpert"][
+                                      props.language
+                                      ]
+                                    }
+                                  </Link>
+                                </li>
+                              </ul>
+                            </li>
+                            <li  style={
+                              props.language === "ur" || props.language === "sd"
+                                ? {
+                                  textAlign:"right,"
+                                }
+                                : { }
+                            }>
+                              <label
+                                for="drop-10"
+                                className="d-flex mobiledropdowntoggle toggle toggle2"
+                                style={
+                                  props.language === "ur" || props.language === "sd"
+                                    ? {
+                                      display: "flex",
+                                      flexDirection: "row-reverse",
+                                      textAlign: "right",
+                                      marginLeft: "0px",
+                                    }
+                                    : { }
+                                }
+                              >
+                                <Link to={"/education"} style={{ width: "195px", padding: "0px" }}>
+                                {
+                                      translations["Education"][
+                                        props.language
+                                      ]
+                                    }
+                                </Link>
+                                {dropdownStates[5] ? (
+                                  <span
+                                    className="minus"
+                                    style={
+                                      props.language === "ur" || props.language === "sd"
+                                        ? {
+                                          display: "flex",
+                                          marginRight: "115px",
+                                        }
+                                        : { display: "contents" }
+                                    }
+                                    onClick={() => handleIconClick(5)} // Click on icon to open/close the dropdown
+                                    onMouseEnter={() => handleIconClick(5)} // Hover on icon to open/close the dropdown
+                                    onMouseLeave={() => closeDropdown(5)} // Leave icon to close the dropdown
+                                  ></span>
+                                ) : (
+                                  <span
+                                    className="plus"
+                                    style={
+                                      props.language === "ur" || props.language === "sd"
+                                        ? {
+                                          display: "flex",
+                                          marginRight: "115px",
+                                        }
+                                        : { display: "contents" }
+                                    }
+                                    onClick={() => handleIconClick(5)} // Click on icon to open/close the dropdown
+                                    onMouseEnter={() => handleIconClick(5)} // Hover on icon to open/close the dropdown
+                                    onMouseLeave={() => closeDropdown(5)} // Leave icon to close the dropdown
+                                  ></span>
+                                )}
+                              </label>
+                              <input type="checkbox" id="drop-10" />
+                              <ul>
+                                <li className="b-none borderline">
+                                  <Link
+                                    className="link toggle2 mobilenesteddropdowntoggle"
+                                    to={"/aboutus"}
+                                    style={
+                                      props.language === "ur" || props.language === "sd"
+                                        ? {
+                                          display: "flex",
+                                          flexDirection: "row-reverse",
+                                          textAlign: "right"
+                                        }
+                                        : {}
+                                    }
+                                  >
+                                    {
+                                      translations["Talktoexpert"][
+                                      props.language
+                                      ]
+                                    }
+                                  </Link>
+                                </li>
+                              </ul>
+                            </li>
+                            <li style={
+                              props.language === "ur" || props.language === "sd"
+                                ? {
+                                  textAlign: "right",
+                                }
+                                : { }
+                            }>
+                              <label
+                                for="drop-11"
+                                className="d-flex mobiledropdowntoggle toggle toggle2"
+                                style={
+                                  props.language === "ur" || props.language === "sd"
+                                    ? {
+                                      display: "flex",
+                                      flexDirection: "row-reverse",
+                                      textAlign:"right",
+                                      marginLeft: "0px",
+                                    }
+                                    : { }
+                                }
+                              >
+                                <Link to={"/energy"} style={{ width: "195px", padding: "0px" }}>
+                                   {
+                                      translations["Energy"][
+                                        props.language
+                                      ]
+                                    }
+                                </Link>
+                                {dropdownStates[6] ? (
+                                  <span
+                                    className="minus"
+                                    style={
+                                      props.language === "ur" || props.language === "sd"
+                                        ? {
+                                          display: "flex",
+                                          marginRight: "115px",
+                                        }
+                                        : { display: "contents" }
+                                    }
+                                    onClick={() => handleIconClick(6)} // Click on icon to open/close the dropdown
+                                    onMouseEnter={() => handleIconClick(6)} // Hover on icon to open/close the dropdown
+                                    onMouseLeave={() => closeDropdown(6)} // Leave icon to close the dropdown
+                                  ></span>
+                                ) : (
+                                  <span
+                                    className="plus"
+                                    style={
+                                      props.language === "ur" || props.language === "sd"
+                                        ? {
+                                          display: "flex",
+                                          marginRight: "115px",
+                                        }
+                                        : { display: "contents" }
+                                    }
+                                    onClick={() => handleIconClick(6)} // Click on icon to open/close the dropdown
+                                    onMouseEnter={() => handleIconClick(6)} // Hover on icon to open/close the dropdown
+                                    onMouseLeave={() => closeDropdown(6)} // Leave icon to close the dropdown
+                                  ></span>
+                                )}
+                              </label>
+                              <input type="checkbox" id="drop-11" />
+                              <ul>
+                                <li 
+                                style={
+                                      props.language === "ur" || props.language === "sd"
+                                        ? {
+                                          textAlign: "right"
+                                        }
+                                        : {}
+                                    } className="b-none borderline">
+                                  <Link
+                                  style={
+                                    props.language === "ur" || props.language === "sd"
+                                      ? {
+                                        display: "flex",
+                                        flexDirection: "row-reverse",
+                                        textAlign: "right"
+                                      }
+                                      : {}
+                                  }
+                                    className="link toggle2 mobilenesteddropdowntoggle"
+                                    to={"/aboutus"}
+                                  >
+                                    {
+                                      translations["Talktoexpert"][
+                                      props.language
+                                      ]
+                                    }
+                                  </Link>
+                                </li>
+                              </ul>
+                            </li>
+                            <li style={
+                              props.language === "ur" || props.language === "sd"
+                                ? {
+                                  textAlign: "right"
+                                }
+                                : { }
+                            }>
+                              <label
+                                for="drop-12"
+                                className="d-flex mobiledropdowntoggle toggle toggle2"
+                                style={
+                                  props.language === "ur" || props.language === "sd"
+                                    ? {
+                                      display: "flex",
+                                      flexDirection: "row-reverse",
+                                      textAlign: "right",
+                                      marginLeft: "0px",
+                                    }
+                                    : { }
+                                }
+                                onClick={() => handleLabelTextClick(7)}
+                              >
+                                <Link to={"/health"} style={{ width: "195px", padding: "0px" }}>
+                                {
+                                      translations["Health"][
+                                        props.language
+                                      ]
+                                    }
+                                </Link>
+                                {dropdownStates[7] ? (
+                                  <span style={
+                                    props.language === "ur" || props.language === "sd"
+                                      ? {
+                                        display: "flex",
+                                        marginRight: "115px",
+                                      }
+                                      : { display: "contents" }
+                                  }
+                                    className="minus"
+                                    onClick={() => handleIconClick(7)} // Click on icon to open/close the dropdown
+                                    onMouseEnter={() => handleIconClick(7)} // Hover on icon to open/close the dropdown
+                                    onMouseLeave={() => closeDropdown(7)} // Leave icon to close the dropdown
+                                  ></span>
+                                ) : (
+                                  <span
+                                  style={
+                                    props.language === "ur" || props.language === "sd"
+                                      ? {
+                                        display: "flex",
+                                        marginRight: "115px",
+                                      }
+                                      : { display: "contents" }
+                                  }
+                                    className="plus"
+                                    onClick={() => handleIconClick(7)} // Click on icon to open/close the dropdown
+                                    onMouseEnter={() => handleIconClick(7)} // Hover on icon to open/close the dropdown
+                                    onMouseLeave={() => closeDropdown(7)} // Leave icon to close the dropdown
+                                  ></span>
+                                )}
+                              </label>
+                              <input type="checkbox" id="drop-12" />
+                              <ul>
+                                <li style={
+                                      props.language === "ur" || props.language === "sd"
+                                        ? {
+                                          textAlign: "right"
+                                        }
+                                        : {}
+                                    } className="b-none borderline">
+                                  <Link
+                                    className="link toggle2 mobilenesteddropdowntoggle"
+                                    to={"/aboutus"}
+                                  >
+                                    {
+                                      translations["Talktoexpert"][
+                                      props.language
+                                      ]
+                                    }
+                                  </Link>
+                                </li>
+                              </ul>
+                            </li>
+                            <li  className="b-none " 
+                            style={
+                              props.language === "ur" || props.language === "sd"
+                                ? {
+                                  textAlign: "right"
+                                }
+                                : { }
+                            }
+                            >
+                              <label
+                                for="drop-13"
+                                className="d-flex mobiledropdowntoggle toggle toggle2"
+                                style={
+                                  props.language === "ur" || props.language === "sd"
+                                    ? {
+                                      display: "flex",
+                                      flexDirection: "row-reverse",
+                                      textAlign: "right",
+                                      marginLeft: "0px",
+                                    }
+                                    : {}
+                                }
+                              >
+                                <Link to={"/informationtech"} 
+                                style={
+                                  props.language === "ur" || props.language === "sd"
+                                    ? {
+                                      width: "195px",
+                                       padding: "0px" ,
+                                      marginLeft: "-30px",
+                                    }
+                                    : {width: "195px", padding: "0px" }
+                                }>
+                                {
+                                      translations[
+                                        "InformationTechnology"
+                                      ][props.language]
+                                    }
+                                </Link>
+                                {dropdownStates[8] ? (
+                                  <span style={
+                                    props.language === "ur" || props.language === "sd"
+                                      ? {
+                                        display: "flex",
+                                        marginRight: "115px",
+                                      }
+                                      : { display: "contents" }
+                                  }
+                                    className="minus"
+                                    onClick={() => handleIconClick(8)} // Click on icon to open/close the dropdown
+                                    onMouseEnter={() => handleIconClick(8)} // Hover on icon to open/close the dropdown
+                                    onMouseLeave={() => closeDropdown(8)} // Leave icon to close the dropdown
+                                  ></span>
+                                ) : (
+                                  <span style={
+                                    props.language === "ur" || props.language === "sd"
+                                      ? {
+                                        display: "flex",
+                                        marginRight: "115px",
+                                      }
+                                      : { display: "contents" }
+                                  }
+                                    className="plus"
+                                    onClick={() => handleIconClick(8)} // Click on icon to open/close the dropdown
+                                    onMouseEnter={() => handleIconClick(8)} // Hover on icon to open/close the dropdown
+                                    onMouseLeave={() => closeDropdown(8)} // Leave icon to close the dropdown
+                                  ></span>
+                                )}
+                              </label>
+                              <input type="checkbox" id="drop-13" />
+                              <ul>
+                                <li style={
+                                  props.language === "ur" || props.language === "sd"
+                                    ? {
+                                      textAlign: "right"
+                                    }
+                                    : {}
+                                } className="b-none borderline">
+                                  <Link
+                                  style={
+                                    props.language === "ur" || props.language === "sd"
+                                      ? {
+                                        display: "flex",
+                                        flexDirection: "row-reverse",
+                                        textAlign: "right"
+                                      }
+                                      : {}
+                                  }
+                                    className="link toggle2 mobilenesteddropdowntoggle"
+                                    to={"/aboutus"}
+                                  >
+                                    {
+                                      translations["Talktoexpert"][
+                                      props.language
+                                      ]
+                                    }
+                                  </Link>
+                                </li>
+                              </ul>
+                            </li>
+                          </ul>
+                        </li>
+                        <li
+                      style={
+                        props.language === "ur" || props.language === "sd"
+                          ? {
+                            display: "flex",
+                            flexDirection: "row-reverse",
+                            borderBottom: "1px solid transparent !important",
+                          }
+                          : { borderBottom: "1px solid transparent !important" }
+                      }
+                        >
+                          <Link
+                            className="link toggle2"
+                            to={"/NewsAndInformation"}
+                          >
+                           {
+                              translations["NewsInformation"][
+                                props.language
+                              ]
+                            }
+                          </Link>
+                        </li>
+                        <li style={
+                            props.language === "ur" || props.language === "sd"
+                              ? {
+                                textAlign:"right",
+                              }
+                              : { }
+                          } className="">
+                          <label for="drop-2" className="d-flex toggle toggle2"
+                          style={
+                            props.language === "ur" || props.language === "sd"
+                              ? {
+                                display: "flex",
+                                flexDirection: "row-reverse",
+                              }
+                              : { }
+                          }
+                          >
+                            <Link to={"/resource"} 
+                            style={{ width: "212px", padding: "0px", fontSize: "20px" }}>
+                               {translations["Resources"][props.language]}
+                            </Link>
+                            {dropdownStates[11] ? (
+                              <span
+                              className="minus"
+                                style={
+                                  props.language === "ur" || props.language === "sd"
+                                    ? {
+                                      display: "flex",
+                                      marginLeft: "-70px",
+                                    }
+                                    : { display: "contents" }
+                                }
+                                onClick={() => handleIconClick(11)} // Click on icon to open/close the dropdown
+                                onMouseEnter={() => handleIconClick(11)} // Hover on icon to open/close the dropdown
+                                onMouseLeave={() => closeDropdown(11)} // Leave ico icon to close the dropdown
+                              ></span>
+                            ) : (
+                              <span
+                                className="plus"
+                                style={
+                                  props.language === "ur" || props.language === "sd"
+                                    ? {
+                                      display: "flex",
+                                      marginLeft: "-70px",
+                                    }
+                                    : { display: "contents" }
+                                }
+                                onClick={() => handleIconClick(11)} // Click on icon to open/close the dropdown
+                                onMouseEnter={() => handleIconClick(11)} // Hover on icon to open/close the dropdown
+                                onMouseLeave={() => closeDropdown(11)} // Leave ico icon eave icon to close the dropdown
+                              ></span>
+                            )}
+                          </label>
+                          <input type="checkbox" id="drop-2" />
+                          <ul>
+                            <li className="borderline"
+                            style={
+                              props.language === "ur" || props.language === "sd"
+                                ? {
+                                  textAlign: "right"
+                                }
+                                : {}
+                            }
+                            >
+                              <Link 
+                              style={
+                                props.language === "ur" || props.language === "sd"
+                                  ? {
+                                    display: "flex",
+                                    flexDirection: "row-reverse",
+                                    textAlign: "right"
+                                  }
+                                  : {}
+                              }
+                              className="link toggle2 mobilenesteddropdowntoggle2" to={"/resource"}>
+                                {translations["Download"][props.language]}
+                              </Link>
+                            </li>
+                            <li className="b-none"
+                            style={
+                              props.language === "ur" || props.language === "sd"
+                                ? {
+                                  textAlign: "right"
+                                }
+                                : {}
+                            }>
+                              <Link
+                              style={
+                                props.language === "ur" || props.language === "sd"
+                                  ? {
+                                    display: "flex",
+                                    flexDirection: "row-reverse",
+                                    textAlign: "right"
+                                  }
+                                  : {}
+                              }
+                                className="link toggle2 mobilenesteddropdowntoggle2"
+                                to={"/regulatorycatalog"}
+                              >
+                                {
+                                  translations["RegulatoryCatalog"][
+                                    props.language
+                                  ]
+                                }
+                              </Link>
+                            </li>
+                          </ul>
+                        </li>
+                        <li style={
+                            props.language === "ur" || props.language === "sd"
+                              ? {
+                                textAlign:"right",
+                              }
+                              : { }
+                          } >
+                          <label
+                            for="drop-3"
+                            style={
+                              props.language === "ur" || props.language === "sd"
+                                ? {
+                                  display: "flex",
+                                  flexDirection: "row-reverse",
+                                }
+                                : { }
+                            }
+                            className="d-flex toggle toggle2">
+                            <Link to={"/aboutus"} style={{ width: "212px", padding: "0px", fontSize: "20px" }}>
+                            {translations["Aboutus"][props.language]}
+                            </Link>
+                            {dropdownStates[9] ? (
+                              <span
+                              style={
+                                props.language === "ur" || props.language === "sd"
+                                  ? {
+                                    display: "flex",
+                                    marginLeft: "-70px",
+                                  }
+                                  : { display: "contents" }
+                              }
+                                className="minus"
+                                onClick={() => handleIconClick(9)} // Click on icon to open/close the dropdown
+                                onMouseEnter={() => handleIconClick(9)} // Hover on icon to open/close the dropdown
                                 onMouseLeave={() => closeDropdown(9)} // Leave icon to close the dropdown
-                             ></span>
-                           ) : (
-                             <span 
-                             style={{display:"contents"}}
-                               className="plus"
-                               onClick={() => handleIconClick(9)} // Click on icon to open/close the dropdown
-                               onMouseEnter={() => handleIconClick(9)} // Hover on icon to open/close the dropdown
-                               onMouseLeave={() => closeDropdown(9)} // Leave ico/ Leave icon to close the dropdown
-                             ></span>
-                           )}
-                       </label>
-                       <input type="checkbox" id="drop-3" />
-                       <ul>
-                         <li className="borderline">
-                           <Link className="link toggle2 mobilenesteddropdowntoggle2" to={"/aboutus"}>
-                             Vision
-                           </Link>
-                         </li>
-                         <li className="">
-                           <label for="drop-4" className="d-flex toggle toggle2 mobiledropdowntoggle">
-                         <Link to={"/Component"} style={{width:"195px",padding:"0px",marginLeft:"8px"}}>
-                           Component 
-                         </Link>
-                         {dropdownStates[10] ? (
-                             <span
-                             style={{display:"contents"}}
-                               className="minus"
-                               onClick={() => handleIconClick(10)} // Click on icon to open/close the dropdown
-                               onMouseEnter={() => handleIconClick(10)} // Hover on icon to open/close the dropdown
-                               onMouseLeave={() => closeDropdown(10)} // Leave ico icon to close the dropdown
-                             ></span>
-                           ) : (
-                             <span
-                               className="plus"
-                             style={{display:"contents"}}
-                               onClick={() => handleIconClick(10)} // Click on icon to open/close the dropdown
-                               onMouseEnter={() => handleIconClick(10)} // Hover on icon to open/close the dropdown
-                               onMouseLeave={() => closeDropdown(10)} // Leave ico icon eave icon to close the dropdown
-                             ></span>
-                           )}
-                           </label>
-                           <input type="checkbox" id="drop-4" />
-                           <ul>
-                             <li className="borderline">
-                               <Link
-                                 className="link toggle2 mobilenesteddropdowntoggle"
-                                 to={"/aboutus"}
-                               >
-                                 CLICK SID
-                               </Link>
-                             </li>
-                             <li className="b-none">
-                               <Link
-                                 className="link toggle2 mobilenesteddropdowntoggle"
-                                 to={"/aboutus"}
-                               >
-                                 Our Team
-                               </Link>
-                             </li>
-                           </ul>
-                         </li>
-                         <li className="b-none">
-                         <label for="drop-4" className="d-flex toggle toggle2 mobiledropdowntoggle">
-                           <Link style={{width:"195px",padding:"0px",marginLeft:"8px"}} to={"/aboutus"}>
-                             NEW Component
-                           </Link>
-                           </label>
-                         </li>
-                       </ul>
-                     </li>
-                   </ul>
-                 </nav>
+                              ></span>
+                            ) : (
+                              <span
+                              style={
+                                props.language === "ur" || props.language === "sd"
+                                  ? {
+                                    display: "flex",
+                                    marginLeft: "-70px",
+                                  }
+                                  : { display: "contents" }
+                              }
+                                className="plus"
+                                onClick={() => handleIconClick(9)} // Click on icon to open/close the dropdown
+                                onMouseEnter={() => handleIconClick(9)} // Hover on icon to open/close the dropdown
+                                onMouseLeave={() => closeDropdown(9)} // Leave ico/ Leave icon to close the dropdown
+                              ></span>
+                            )}
+                          </label>
+                          <input type="checkbox" id="drop-3" />
+                          <ul>
+                            <li className="borderline" style={
+                              props.language === "ur" || props.language === "sd"
+                                ? {
+                                  textAlign: "right"
+                                }
+                                : {}
+                            }>
+                              <Link className="link toggle2 mobilenesteddropdowntoggle2" to={"/aboutus"}>
+                              {translations["Vision"][props.language]}
+                              </Link>
+                            </li>
+                            <li >
+                              <label style={
+                                props.language === "ur" || props.language === "sd"
+                                  ? {
+                                    display: "flex",
+                                    flexDirection: "row-reverse",
+                                    textAlign: "right",
+                                    marginLeft: "0px",
+                                  }
+                                  : {}
+                              } for="drop-4" className="d-flex toggle toggle2 mobiledropdowntoggle">
+                                <Link to={"/Component"} style={{ width: "195px", padding: "0px", marginLeft: "8px" }}>
+                                {
+                                    translations["Components"][
+                                      props.language
+                                    ]
+                                  }
+                                </Link>
+                                {dropdownStates[10] ? (
+                                  <span
+                                  style={
+                                    props.language === "ur" || props.language === "sd"
+                                      ? {
+                                        display: "flex",
+                                        marginLeft: "-70px",
+                                      }
+                                      : { display: "contents" }
+                                  }
+                                    className="minus"
+                                    onClick={() => handleIconClick(10)} // Click on icon to open/close the dropdown
+                                    onMouseEnter={() => handleIconClick(10)} // Hover on icon to open/close the dropdown
+                                    onMouseLeave={() => closeDropdown(10)} // Leave ico icon to close the dropdown
+                                  ></span>
+                                ) : (
+                                  <span
+                                    className="plus"
+                                    style={
+                                      props.language === "ur" || props.language === "sd"
+                                        ? {
+                                          display: "flex",
+                                          marginLeft: "-70px",
+                                        }
+                                        : { display: "contents" }
+                                    }
+                                    onClick={() => handleIconClick(10)} // Click on icon to open/close the dropdown
+                                    onMouseEnter={() => handleIconClick(10)} // Hover on icon to open/close the dropdown
+                                    onMouseLeave={() => closeDropdown(10)} // Leave ico icon eave icon to close the dropdown
+                                  ></span>
+                                )}
+                              </label>
+                              <input type="checkbox" id="drop-4" />
+                              <ul>
+                                <li className="borderline" style={
+                                  props.language === "ur" || props.language === "sd"
+                                    ? {
+                                      textAlign: "right"
+                                    }
+                                    : {}
+                                }>
+                                  <Link
+                                    className="link toggle2 mobilenesteddropdowntoggle"
+                                    to={"/aboutus"}
+                                    style={
+                                      props.language === "ur" || props.language === "sd"
+                                        ? {
+                                          display: "flex",
+                                          flexDirection: "row-reverse",
+                                          textAlign: "right"
+                                        }
+                                        : {}
+                                    }
+                                  >
+                                    {
+                                      translations["CLICKSID"][
+                                        props.language
+                                      ]
+                                    }
+                                  </Link>
+                                </li>
+                                <li className="b-none" style={
+                                  props.language === "ur" || props.language === "sd"
+                                    ? {
+                                      textAlign: "right"
+                                    }
+                                    : {}
+                                }>
+                                  <Link
+                                  style={
+                                    props.language === "ur" || props.language === "sd"
+                                      ? {
+                                        display: "flex",
+                                        flexDirection: "row-reverse",
+                                        textAlign: "right"
+                                      }
+                                      : {}
+                                  }
+                                    className="link toggle2 mobilenesteddropdowntoggle"
+                                    to={"/aboutus"}
+                                  >
+                                    {
+                                      translations["OurTeam"][
+                                        props.language
+                                      ]
+                                    }
+                                  </Link>
+                                </li>
+                              </ul>
+                            </li>
+                            <li className="b-none" >
+                              <label style={
+                            props.language === "ur" || props.language === "sd"
+                              ? {
+                                display: "flex",
+                                flexDirection: "row-reverse",
+                                marginLeft:"0px"
+                              }
+                              : { }
+                                }   for="drop-4" className="d-flex toggle toggle2 mobiledropdowntoggle">
+                                <Link 
+                                 style={
+                                  props.language === "ur" || props.language === "sd"
+                                    ? {
+                                      width: "195px", padding: "0px", marginLeft: "8px",
+                                      display: "flex",
+                                      flexDirection: "row-reverse",
+                                    }
+                                    : {width: "195px", padding: "0px", marginLeft: "8px"  }
+                                      }
+                                to={"/aboutus"}>
+                                {translations["CLICKSID"][props.language]}
+                                </Link>
+                              </label>
+                            </li>
+                          </ul>
+                        </li>
+                        <li
+                          style={
+                            props.language === "ur" || props.language === "sd"
+                              ? {
+                                display: "flex",
+                                flexDirection: "row-reverse",
+                              }
+                              : { }
+                          }
+                        >
+                          <Link className="link toggle2" to={"/Maps"}>
+                            {
+                              translations["Maps"][
+                              props.language
+                              ]
+                            }
+                          </Link>
+                        </li>
+                      </ul>
+                    </nav>
                   )}
                 </div>
               </div>
@@ -704,7 +1383,7 @@ function MobileHome() {
                     width: "100%",
                   }}
                 >
-                  Discover the Riches of Sindh Invest in a Thriving Future
+                  {translations["hero-heading"][props.language]}
                 </h6>
               </div>
             </div>
@@ -723,21 +1402,29 @@ function MobileHome() {
                     fontWeight: "400",
                   }}
                 >
-                  Explore The Province Of Sindh And Discover Its Many Assets And
-                  Potential For Growth And Investment
+                  {translations["subHeroHeading"][props.language]}
                 </p>
                 <div className="row">
                   <div
                     className="col-lg-6 col-md-6 col-sm-6 col-xs-12 "
-                    style={{
-                      display: "flex",
-                      justifyContent: "center",
-                      alignItems: "center",
-                    }}
-                  >
+                    style={
+                      props.language === "ur" ||
+                        props.language === "sd"
+                        ? {
+                          display: "flex",
+                          justifyContent: "center",
+                          alignItems: "center",
+                          marginTop: "-20px"
+                        }
+                        : {
+                          display: "flex",
+                          justifyContent: "center",
+                          alignItems: "center",
+                        }
+                    }>
                     <Link className={""} to={"/investnow"}>
                       <button type="button" className="feedback">
-                        <span>Invest now</span>
+                        <span>{translations["investButton"][props.language]}</span>
                       </button>
                     </Link>
                   </div>
@@ -751,7 +1438,7 @@ function MobileHome() {
                   >
                     <a href="comingsoon.html">
                       <button type="button" className="feedback">
-                        <span>Regulatory Cost Calculator</span>
+                        <span>{translations["calculatorButton"][props.language]}</span>
                       </button>
                     </a>
                   </div>

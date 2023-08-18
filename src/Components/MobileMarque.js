@@ -1,4 +1,5 @@
 import React from "react";
+import { translations } from "../Transalation/Transalation";
 function MobileMarque(props) {
   return (
     <>
@@ -16,7 +17,7 @@ function MobileMarque(props) {
             }}>
               <a href="comingsoon.html">
                 <button type="button" className="feedback">
-                  <span>{props.translations['Updates'][props.language]}
+                  <span>{translations['Updates'][props.language]}
                   </span>
                 </button>
               </a>
@@ -28,7 +29,7 @@ function MobileMarque(props) {
             }}
             >
               <marquee>
-              {props.translations['Headline'][props.language]}
+              {translations['Headline'][props.language]}
               </marquee>
             </div>
           </div>

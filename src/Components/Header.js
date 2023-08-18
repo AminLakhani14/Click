@@ -705,6 +705,7 @@ function Header(props) {
                                   <Link
                                     className={"link"}
                                     to={"/manufacturing"}
+                                    onClick={() => { window.scrollTo({ top: 0, left: 0, behavior: "smooth" }); }}
                                   >
                                     {
                                       translations["Manufacturing"][
@@ -739,8 +740,8 @@ function Header(props) {
                                 class="dropdown-content nested-content nested-right"
                                 style={{ width: "200px" }}
                               >
-                                <Link className={""} to={"/ComingSoon"}>
-                                  <a href="#">
+                                <Link  className={""} to={"/manufacturing"}>
+                                  <a onClick={() => { window.scrollTo({ top: 2800, left: 0, behavior: "smooth" }); }} >
                                     {
                                       translations["Talktoexpert"][
                                         props.language
@@ -792,7 +793,7 @@ function Header(props) {
                                   }
                                   href="#"
                                 >
-                                  <Link className={"link"} to={"/textile"}>
+                                  <Link onClick={() => { window.scrollTo({ top: 0, left: 0, behavior: "smooth" }); }} className={"link"} to={"/textile"}>
                                     {
                                       translations["Textile"][
                                         props.language
@@ -826,8 +827,8 @@ function Header(props) {
                                 class="dropdown-content nested-content nested-right"
                                 style={{ width: "200px", marginTop: "40px" }}
                               >
-                                <Link className={""} to={"/ComingSoon"}>
-                                  <a href="#">
+                                <Link  className={""} to={"/textile"}>
+                                  <a onClick={() => { window.scrollTo({ top: 2800, left: 0, behavior: "smooth" }); }} href="#">
                                     {
                                       translations["Talktoexpert"][
                                         props.language
@@ -879,7 +880,10 @@ function Header(props) {
                                   }
                                   href="#"
                                 >
-                                  <Link className={"link"} to={"/tourism"}>
+                                  <Link 
+                                  onClick={() => 
+                                  { window.scrollTo({ top: 0, left: 0, behavior: "smooth" }); }}
+                                    className={"link"} to={"/tourism"}>
                                     {
                                       translations["Tourism"][
                                         props.language
@@ -913,8 +917,8 @@ function Header(props) {
                                 class="dropdown-content nested-content nested-right"
                                 style={{ width: "200px", marginTop: "80px" }}
                               >
-                                <Link className={""} to={"/ComingSoon"}>
-                                  <a href="#">
+                                <Link className={""} to={"/tourism"} >
+                                  <a onClick={() => { window.scrollTo({ top: 2800, left: 0, behavior: "smooth" }); }}  href="#">
                                     {
                                       translations["Talktoexpert"][
                                         props.language
@@ -966,7 +970,10 @@ function Header(props) {
                                   }
                                   href="#"
                                 >
-                                  <Link className={"link"} to={"/agriculture"}>
+                                  <Link 
+                                  onClick={() => 
+                                  { window.scrollTo({ top: 0, left: 0, behavior: "smooth" }); }}  
+                                  className={"link"} to={"/agriculture"}>
                                     {
                                       translations["Agriculture"][
                                         props.language
@@ -1000,8 +1007,8 @@ function Header(props) {
                                 class="dropdown-content nested-content nested-right"
                                 style={{ width: "200px", marginTop: "120px" }}
                               >
-                                <Link className={""} to={"/ComingSoon"}>
-                                  <a href="#">
+                                <Link className={""} to={"/agriculture"}>
+                                  <a href="#" onClick={() => { window.scrollTo({ top: 2800, left: 0, behavior: "smooth" }); }}  >
                                     {
                                       translations["Talktoexpert"][
                                         props.language
@@ -1053,7 +1060,9 @@ function Header(props) {
                                   }
                                   href="#"
                                 >
-                                  <Link className={"link"} to={"/education"}>
+                                  <Link 
+                                  onClick={() => { window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+                                   }} className={"link"} to={"/education"}>
                                     {
                                       translations["Education"][
                                         props.language
@@ -1089,8 +1098,8 @@ function Header(props) {
                                 class="dropdown-content nested-content nested-right"
                                 style={{ width: "200px", marginTop: "160px" }}
                               >
-                                <Link className={""} to={"/ComingSoon"}>
-                                  <a href="#">
+                                <Link className={""} to={"/education"}>
+                                  <a onClick={() => { window.scrollTo({ top: 2800, left: 0, behavior: "smooth" }); }}  href="#">
                                     {
                                       translations["Talktoexpert"][
                                         props.language
@@ -1142,7 +1151,9 @@ function Header(props) {
                                   }
                                   href="#"
                                 >
-                                  <Link className={"link"} to={"/energy"}>
+                                  <Link 
+                                  onClick={() => { window.scrollTo({ top: 0, left: 0, behavior: "smooth" }); }}
+                                   className={"link"} to={"/energy"}>
                                     {
                                       translations["Energy"][
                                         props.language
@@ -1176,8 +1187,8 @@ function Header(props) {
                                 class="dropdown-content nested-content nested-right"
                                 style={{ width: "200px", marginTop: "200px" }}
                               >
-                                <Link className={""} to={"/ComingSoon"}>
-                                  <a href="#">
+                                <Link  className={""} to={"/energy"}>
+                                  <a onClick={() => { window.scrollTo({ top: 2800, left: 0, behavior: "smooth" }); }} href="#">
                                     {
                                       translations["Talktoexpert"][
                                         props.language
@@ -1229,7 +1240,7 @@ function Header(props) {
                                   }
                                   href="#"
                                 >
-                                  <Link className={"link"} to={"/health"}>
+                                  <Link onClick={() => { window.scrollTo({ top: 0, left: 0, behavior: "smooth" }); }} className={"link"} to={"/health"}>
                                     {
                                       translations["Health"][
                                         props.language
@@ -1263,8 +1274,8 @@ function Header(props) {
                                 class="dropdown-content nested-content nested-right"
                                 style={{ width: "200px", marginTop: "240px" }}
                               >
-                                <Link className={""} to={"/ComingSoon"}>
-                                  <a href="#">
+                                <Link  className={""} to={"/health"}>
+                                  <a onClick={() => { window.scrollTo({ top: 2800, left: 0, behavior: "smooth" }); }} href="#">
                                     {
                                       translations["Talktoexpert"][
                                         props.language
@@ -1317,8 +1328,10 @@ function Header(props) {
                                   href="#"
                                 >
                                   <Link
+                                  onClick={() => { window.scrollTo({ top: 0, left: 0, behavior: "smooth" }); }}
                                     className={"link"}
                                     to={"/informationtech"}
+                                    
                                   >
                                     {
                                       translations[
@@ -1353,8 +1366,8 @@ function Header(props) {
                                 class="dropdown-content nested-content nested-right"
                                 style={{ width: "200px", marginTop: "280px" }}
                               >
-                                <Link className={""} to={"/ComingSoon"}>
-                                  <a href="#">
+                                <Link  className={""}  to={"/informationtech"}>
+                                  <a onClick={() => { window.scrollTo({ top: 2800, left: 0, behavior: "smooth"  }); }} href="#">
                                     {
                                       translations["Talktoexpert"][
                                         props.language
@@ -1690,7 +1703,12 @@ function Header(props) {
           </div>
 
           {isSticky === false ? (
-            <div className="sticky-icon">
+            <div
+            className={
+              props.language === "ur" || props.language === "sd"
+                ? "Nonsticky-icon"
+                : "sticky-icon"
+            }>
               <a href="" target="_blank" className="">
                 {" "}
                 <div>
@@ -1769,7 +1787,11 @@ function Header(props) {
               </a>
             </div>
           ) : (
-            <div className="sticky-icon">
+            <div className={
+              props.language === "ur" || props.language === "sd"
+                ? "Nonsticky-icon"
+                : "sticky-icon"
+            }>
               <a href="" target="_blank" className="">
                 {" "}
                 <div>

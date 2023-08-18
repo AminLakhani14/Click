@@ -10,6 +10,7 @@ import quote from "../assets/quote.png";
 import muradAli from "../assets/muradalishah.png";
 import muradalishahBW from "../assets/muradalishahBW.jpeg";
 import { Carousel } from "@trendyol-js/react-carousel";
+import { translations } from "../Transalation/Transalation";
 
 const imageMapColor = {
   "qasim_Id": qasim,
@@ -25,7 +26,7 @@ const imageMapBW = {
 };
 
 let ID = "qasim_Id"
-function Message() {
+function Message(props) {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
   useEffect(() => {
@@ -48,23 +49,61 @@ function Message() {
     {
       id: "qasim_Id",
       img:qasim,
-      name:"Syed Qasim Naveed Qamar",
-      subtitle:" Special Assistant to Chief Minister for Investment and Public Private Partnerships",
-      desc:`Introducing the Sindh Investment website by CLICK, your gateway to profitable opportunities in our vibrant province. As Chief Minister of Sindh, I understand the crucial role investments play in driving economic growth. This comprehensive platform provides essential information, incentives, and seamless connections with authorities across various sectors. Join us in shaping a prosperous future for Sindh through strategic investments and unlocking its immense potential.`,
+      // name:"Syed Qasim Naveed Qamar",
+      name: {
+        en: "Syed Qasim Naveed Qamar",
+        ur: "سید قاسم نوید قمر",
+        sd: "سيد قاسم نويد قمر",
+      },
+      subtitle: {
+        en: "Special Assistant to Chief Minister for Investment and Public Private Partnerships",
+        ur: "وزیراعظم کے خصوصی معاون برائے سرمایہ کاری اور عوامی نجی شراکت",
+        sd: "سردار سرکار جو انویسٽمينٽ ۽ عوامي نجي شراڪت جي لاءِ خصوصي معاون",
+      },
+      desc: {
+        en: `Introducing the Sindh Investment website by CLICK, your gateway to profitable opportunities in our vibrant province. As Chief Minister of Sindh, I understand the crucial role investments play in driving economic growth. This comprehensive platform provides essential information, incentives, and seamless connections with authorities across various sectors. Join us in shaping a prosperous future for Sindh through strategic investments and unlocking its immense potential.`,
+        ur: "کلک پر سندھ انویسٹمنٹ ویب سائٹ کا مشہوری پذیر کریں، آپ کے منافع کی ممکنات کی راہ کھولنے والے آپ کے دروازے کے طور پر. سندھ کے وزیراعلیٰ کے طور پر، میں سمجھتا ہوں کہ سرمایہ کاری کی کردار اقتصادی ترقی کو بڑھانے میں کردار ادا کرتی ہے۔ یہ مکمل پلیٹ فارم ضروری معلومات، مراعات، اور مختلف شعبوں میں اختیارات کے ساتھ بے رکاوٹ رابطے فراہم کرتا ہے. ہمارے ساتھ آئیں اور سندھ کے لئے ایک خوشحال مستقبل کو شکل دینے میں استراتیجی سرمایہ کاری کے ذریعے اور اس کے عظیم ممکنات کو کھولنے میں شامل ہوں",
+        sd: "اسان جي متحرڪ صوبي ۾ منافعي جي موقعن لاءِ پنهنجي گيٽ وي تي ڪلڪ ڪري سنڌ انويسٽمينٽ ويب سائيٽ متعارف ڪرايو. سنڌ جي وڏي وزير جي حيثيت ۾، مان سمجهان ٿو ته سيڙپڪاري جو اهم ڪردار معاشي ترقي کي هلائڻ ۾ ادا ڪندو آهي. هي جامع پليٽ فارم مختلف شعبن ۾ اختيارين سان ضروري معلومات، ترغيب، ۽ بي ترتيب رابطا فراهم ڪري ٿو. اسٽريٽجڪ سيڙپڪاري ذريعي سنڌ جي خوشحال مستقبل کي ترتيب ڏيڻ ۽ ان جي وسيع امڪانن کي کولڻ ۾ اسان سان شامل ٿيو."
+      },
     },
     {
       id:"img2",
       img:mng1,
-      name:"Tameezuddin Khero",
-      subtitle:"Secretary Investment, Government of Sindh",
-      desc:`Introducing the Sindh Investment website by CLICK, your gateway to profitable opportunities in our vibrant province. As Chief Minister of Sindh, I understand the crucial role investments play in driving economic growth. This comprehensive platform provides essential information, incentives, and seamless connections with authorities across various sectors. Join us in shaping a prosperous future for Sindh through strategic investments and unlocking its immense potential.`,
+      name: {
+        en: "Tameezuddin Khero",
+        ur: "تمیز الدین خیرو",
+        sd: "تميز الدين ڪيريو",
+      },
+      subtitle: {
+        en: "Secretary Investment, Government of Sindh",
+        ur: "سیکرٹری سرمایہ کاری حکومت سندھ",
+        sd: "سيڪريٽري سيڙپڪاري، سنڌ حڪومت",
+      },
+      desc: {
+        en: `Introducing the Sindh Investment website by CLICK, your gateway to profitable opportunities in our vibrant province. As Chief Minister of Sindh, I understand the crucial role investments play in driving economic growth. This comprehensive platform provides essential information, incentives, and seamless connections with authorities across various sectors. Join us in shaping a prosperous future for Sindh through strategic investments and unlocking its immense potential.`,
+        ur: "کلک پر سندھ انویسٹمنٹ ویب سائٹ کا مشہوری پذیر کریں، آپ کے منافع کی ممکنات کی راہ کھولنے والے آپ کے دروازے کے طور پر. سندھ کے وزیراعلیٰ کے طور پر، میں سمجھتا ہوں کہ سرمایہ کاری کی کردار اقتصادی ترقی کو بڑھانے میں کردار ادا کرتی ہے۔ یہ مکمل پلیٹ فارم ضروری معلومات، مراعات، اور مختلف شعبوں میں اختیارات کے ساتھ بے رکاوٹ رابطے فراہم کرتا ہے. ہمارے ساتھ آئیں اور سندھ کے لئے ایک خوشحال مستقبل کو شکل دینے میں استراتیجی سرمایہ کاری کے ذریعے اور اس کے عظیم ممکنات کو کھولنے میں شامل ہوں",
+        sd: "اسان جي متحرڪ صوبي ۾ منافعي جي موقعن لاءِ پنهنجي گيٽ وي تي ڪلڪ ڪري سنڌ انويسٽمينٽ ويب سائيٽ متعارف ڪرايو. سنڌ جي وڏي وزير جي حيثيت ۾، مان سمجهان ٿو ته سيڙپڪاري جو اهم ڪردار معاشي ترقي کي هلائڻ ۾ ادا ڪندو آهي. هي جامع پليٽ فارم مختلف شعبن ۾ اختيارين سان ضروري معلومات، ترغيب، ۽ بي ترتيب رابطا فراهم ڪري ٿو. اسٽريٽجڪ سيڙپڪاري ذريعي سنڌ جي خوشحال مستقبل کي ترتيب ڏيڻ ۽ ان جي وسيع امڪانن کي کولڻ ۾ اسان سان شامل ٿيو."
+      },
     },
     {
       id:"img3",
       img:mng2,
-      name:"Anwar Ali Shar",
-      subtitle:"Project Director CLICK, Investment Department Government of Sindh.",
-      desc:`Introducing the Sindh Investment website by CLICK, your gateway to profitable opportunities in our vibrant province. As Chief Minister of Sindh, I understand the crucial role investments play in driving economic growth. This comprehensive platform provides essential information, incentives, and seamless connections with authorities across various sectors. Join us in shaping a prosperous future for Sindh through strategic investments and unlocking its immense potential.`,
+      name: {
+        en: "Anwar Ali Shar",
+        ur: "تمیز الدین خیرو",
+        sd: "تميز الدين ڪيريو",
+      },
+      subtitle: {
+        en: "Project Director CLICK, Investment Department Government of Sindh.",
+        ur: "پراجیکٹ ڈائریکٹر کلک کریں، محکمہ سرمایہ کاری حکومت سندھ۔",
+        sd: "پراجيڪٽ ڊائريڪٽر انويسٽمينٽ ڊپارٽمينٽ حڪومت سنڌ تي ڪلڪ ڪريو.",
+      },
+      desc: {
+        en: `Introducing the Sindh Investment website by CLICK, your gateway to profitable opportunities in our vibrant province. As Chief Minister of Sindh, I understand the crucial role investments play in driving economic growth. This comprehensive platform provides essential information, incentives, and seamless connections with authorities across various sectors. Join us in shaping a prosperous future for Sindh through strategic investments and unlocking its immense potential.`,
+        ur: "کلک پر سندھ انویسٹمنٹ ویب سائٹ کا مشہوری پذیر کریں، آپ کے منافع کی ممکنات کی راہ کھولنے والے آپ کے دروازے کے طور پر. سندھ کے وزیراعلیٰ کے طور پر، میں سمجھتا ہوں کہ سرمایہ کاری کی کردار اقتصادی ترقی کو بڑھانے میں کردار ادا کرتی ہے۔ یہ مکمل پلیٹ فارم ضروری معلومات، مراعات، اور مختلف شعبوں میں اختیارات کے ساتھ بے رکاوٹ رابطے فراہم کرتا ہے. ہمارے ساتھ آئیں اور سندھ کے لئے ایک خوشحال مستقبل کو شکل دینے میں استراتیجی سرمایہ کاری کے ذریعے اور اس کے عظیم ممکنات کو کھولنے میں شامل ہوں",
+        sd: "اسان جي متحرڪ صوبي ۾ منافعي جي موقعن لاءِ پنهنجي گيٽ وي تي ڪلڪ ڪري سنڌ انويسٽمينٽ ويب سائيٽ متعارف ڪرايو. سنڌ جي وڏي وزير جي حيثيت ۾، مان سمجهان ٿو ته سيڙپڪاري جو اهم ڪردار معاشي ترقي کي هلائڻ ۾ ادا ڪندو آهي. هي جامع پليٽ فارم مختلف شعبن ۾ اختيارين سان ضروري معلومات، ترغيب، ۽ بي ترتيب رابطا فراهم ڪري ٿو. اسٽريٽجڪ سيڙپڪاري ذريعي سنڌ جي خوشحال مستقبل کي ترتيب ڏيڻ ۽ ان جي وسيع امڪانن کي کولڻ ۾ اسان سان شامل ٿيو."
+
+      },
     },
   ]
 
@@ -117,7 +156,7 @@ function Message() {
         <div className="body-box mb-5">
           <div className="row">
             <div className="col-12 highlit-heading">
-              <h1 className="mainHeading">Messages</h1>
+              <h1 className="mainHeading"> {translations["Messages"][props.language]}</h1>
             </div>
           </div>
           <div className="row justify-content-center">
@@ -235,18 +274,28 @@ function Message() {
                   </a>
                   <div className="media-body">
                     {/* <h3 className="title">Syed Qasim Naveed Qamar </h3> */}
-                    <h3 className="title">{imgFormData.name} </h3>
+                    <h3 className="title">{imgFormData.name[props.language]}</h3>
                     <p
                       className="card-subtitle"
-                      style={{ fontWeight: "400", color: "rgb(163, 163, 163)" }}
+                      style={
+                        props.language === "ur" || props.language === "sd"
+                          ? { display: "contents", fontWeight: "400", color: "rgb(163, 163, 163)" }
+                          : {fontWeight: "400", color: "rgb(163, 163, 163)" }
+                      }
                     >
-                     {imgFormData.subtitle}
+                     {imgFormData.subtitle[props.language]}
                     </p>
                   </div>
                 </div>
                 <div className="mt-3">
-                  <p className="sub-title text-md-start">
-                    {imgFormData.desc}
+                  <p 
+                   className={
+                    props.language === "ur" || props.language === "sd"
+                      ? "sub-title paragraphAlign"
+                      : "sub-title text-md-start"
+                  }
+                  >
+                  {imgFormData.desc[props.language]}
                   </p>
                 </div>
               </div>

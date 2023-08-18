@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import MobileCircleSeg from "./MobileCircleSeg";
 import SVG from 'react-inlinesvg';
 import asset1 from "../assets/asset1.svg";
+import { translations } from "../Transalation/Transalation";
 
 const wheelerInitialState = {
   deg: 45,
@@ -73,7 +74,7 @@ function MobileWheeler(props) {
                 className="mainHeading"
      
               >
-                Awaiting Opportunities
+                {translations["Awaiting"][props.language]}
               </h1>
             </div>
           </div>
@@ -85,8 +86,7 @@ function MobileWheeler(props) {
                   fontSize: "20px",
                 }}
               >
-                Sizeable and Attractive Opportunities available across all
-                Sectors
+                {translations["Attractives"][props.language]}
               </p>
             </div>
           </div>
@@ -98,6 +98,8 @@ function MobileWheeler(props) {
           >
             <div className="col-lg-6">
               <MobileCircleSeg
+                translations={translations} 
+                language={props.language}
                 getSegmentData={getSegmentData}
                 setData={setData}
               />

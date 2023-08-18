@@ -10,8 +10,9 @@ import calculators from "../assets/calculators.svg";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
 import { useState } from "react";
+import { getTranslatedText, translations } from "../Transalation/Transalation";
 
-function Gallery() {
+function Gallery(props) {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
   useEffect(() => {
@@ -28,18 +29,28 @@ function Gallery() {
       window.removeEventListener('resize', handleResize);
     };
   }, []);
+  const [languageChangeKey, setLanguageChangeKey] = useState(0); // Track language change
+
+  useEffect(() => {
+    // Update the key to trigger a re-render
+    setLanguageChangeKey(languageChangeKey + 1);
+  }, [props.language]);  // Listen for changes in props.language
+
+
+
   return (
     <>
       <div className=" bg-help">
         <div className="body-box">
           <div className="row">
             <div className="col-12 highlit-heading pb-5">
-              <h1 className="mainHeading"  data-aos="fade-up" >How we Help</h1>
+              <h1 className="mainHeading"  data-aos="fade-up" >{translations["Help"][props.language]}</h1>
             </div>
           </div>
           <div className="row justify-content-center">
             <div className={windowWidth <=1440?"col-lg-9 pe-0 ps-0":"col-lg-8 pe-0 ps-0"}>
               <Carousel
+              key={languageChangeKey} 
                 show={windowWidth <=500?1:3}
                 // slide={windowWidth <=500?1:3}
                 swiping={true}
@@ -82,7 +93,7 @@ function Gallery() {
                         draggable="false"
                       ></img>
                     </div>
-                    <p className="card__name">B-READY</p>
+                    <p className="card__name">{translations["BREADY"][props.language]}</p>
                   </li>
                 </div>
                 </div>
@@ -100,7 +111,7 @@ function Gallery() {
                         draggable="false"
                       ></img>
                     </div>
-                    <p className="card__name" style={{marginBottom: "18px"}}>Request Information</p>
+                    <p className="card__name" style={{marginBottom: "18px"}}>{translations["RequestInformation"][props.language]}</p>
                   </li>
                 </div>
                 </div>
@@ -111,7 +122,7 @@ function Gallery() {
                     <div className="img">
                       <img src={feedback} alt="img" draggable="false" style={{width:"67px"}}></img>
                     </div>
-                    <p className="card__name">Feedback</p>
+                    <p className="card__name">{translations["Feedback"][props.language]}</p>
                   </li>
                   ‍
                 </div>
@@ -124,7 +135,7 @@ function Gallery() {
                       <img src={calculators} alt="img" draggable="false" style={{width:"67px"}}></img>
                     </div>
                     <p className="card__name" style={{marginBottom: "-28px"}}>
-                      Regulatory Cost <br /> Calculator
+                    {translations["RegulatoryCost"][props.language]} <br /> {translations["Calculator"][props.language]}
                     </p>
                   </li>
                 </div>
@@ -141,7 +152,7 @@ function Gallery() {
                         draggable="false"
                       ></img>
                     </div>
-                    <p className="card__name">Karachi Fund</p>
+                    <p className="card__name">{translations["KarachiFund"][props.language]}</p>
                   </li>
                 </div>
                 </div>

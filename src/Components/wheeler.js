@@ -212,7 +212,8 @@ function Wheeler(props) {
                           <div className="col-sm-6">
                             <h1 id="box-title1" style={{color:`${data.boxColor}`}} className="heading-1">
                               {/* 4 Million */}
-                              {wheelerFormData.wheat}
+                              {/* {wheelerFormData.wheat} */}
+                              4{translations["Million"][props.language]}
                             </h1>
                             <p id="box-subtitle1" style={{color:`${data.boxColor}`}} className="phra-2">
                               {/* tons of wheat */}
@@ -222,7 +223,8 @@ function Wheeler(props) {
                           <div className="col-sm-6">
                             <h1 id="box-title2" style={{color:`${data.boxColor}`}}  className="heading-1">
                               {/* 1.9 Million */}
-                              {wheelerFormData.Rice}
+                              {/* {wheelerFormData.Rice} */}
+                              1.9{translations["Million"][props.language]}
                             </h1>
                             <p id="box-subtitle2" style={{color:`${data.boxColor}`}} className="phra-2">
                               {/* tons of rice */}
@@ -234,7 +236,9 @@ function Wheeler(props) {
                           <div className="col-sm-6">
                             <h1 id="box-title3" style={{color:`${data.boxColor}`}} className="heading-1">
                               {/* 4.2 Million */}
-                              {wheelerFormData.sugarcane}
+                              {/* {wheelerFormData.sugarcane} */}
+                              4.2{translations["Million"][props.language]}
+
                             </h1>
                             <p id="box-subtitle3" style={{color:`${data.boxColor}`}} className="phra-2">
                               {/* tons of sugarcane */}
@@ -244,7 +248,9 @@ function Wheeler(props) {
                           <div className="col-sm-6">
                             <h1 id="box-title4" style={{color:`${data.boxColor}`}} className="heading-1">
                               {/* 2.3 Million */}
-                              {wheelerFormData.cotton}
+                              {/* {wheelerFormData.cotton} */}
+                              2.3{translations["Million"][props.language]}
+
                             </h1>
                             <p id="box-subtitle4" style={{color:`${data.boxColor}`}} className="phra-2">
                               {/* bales of cotton */}

@@ -68,7 +68,7 @@ function Home(props) {
     // <Marque />
    }
      <StatisticsBar language={language} setLanguage={setLanguage} />
-     {windowWidth <=500 ?<MobileWheeler isVisible2={isVisible2} toggleVisibility={toggleVisibility} toggleVisibility2={toggleVisibility2}/>:
+     {windowWidth <=500 ?<MobileWheeler language={language} setLanguage={setLanguage} isVisible2={isVisible2} toggleVisibility={toggleVisibility} toggleVisibility2={toggleVisibility2}/>:
      <Wheeler language={language} setLanguage={setLanguage}  isVisible2={isVisible2} toggleVisibility={toggleVisibility} toggleVisibility2={toggleVisibility2}/>
     }
      <Highlights language={language} setLanguage={setLanguage}/>

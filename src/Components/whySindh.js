@@ -86,7 +86,7 @@ function WhySindh(props) {
                     <img src={naturalgas} width="60" height="60"></img>
                   </a>
                   <div className="media-body" style={{ width: "150px" }}>
-                    <h3 className="ch-title">1.3 Trillion </h3>
+                    <h3 className="ch-title">1.3 {translations["Trillion"][props.language]} </h3>
                     <p className="card-subtitle" style={windowWidth <500 ?{textAlign:"start"}:{}}>
                     {translations["NaturalGas"][props.language]}
                     </p>
@@ -114,7 +114,7 @@ function WhySindh(props) {
                     <img src={mining} width="60" height="60"></img>
                   </a>
                   <div className="media-body" style={{ width: "150px" }}>
-                    <h3 className="ch-title">184 Billion</h3>
+                    <h3 className="ch-title">184 {translations["Billion"][props.language]}</h3>
                     <p className="card-subtitle" style={windowWidth <500 ?{textAlign:"start"}:{}}>
                       {translations["TonOfCoal"][props.language]}</p>
                   </div>
@@ -141,7 +141,7 @@ function WhySindh(props) {
                     <img src={electricity} width="60" height="60"></img>
                   </a>
                   <div className="media-body" style={{ width: "150px" }}>
-                    <h3 className="ch-title">10,000+ Megawatts</h3>
+                    <h3 className="ch-title">10,000+ {translations["Megawatts"][props.language]}</h3>
                     <p className="card-subtitle" style={windowWidth <500 ?{textAlign:"start"}:{}}>
                     {translations["ElectricityGeneration"][props.language]}
                     </p>
@@ -226,7 +226,7 @@ function WhySindh(props) {
                     <img src={cement} width="60" height="60"></img>
                   </a>
                   <div className="media-body" style={{ width: "150px" }}>
-                    <h3 className="ch-title">123 Million</h3>
+                    <h3 className="ch-title">123 {translations["Million"][props.language]}</h3>
                     <p className="card-subtitle" style={windowWidth <500 ?{textAlign:"start"}:{}}>
                        {translations["TonOfCement"][props.language]}</p>
                   </div>
@@ -243,7 +243,7 @@ function WhySindh(props) {
                     type="button"
                     className="InvestInSindhButton"
                   >
-                    <span className="px-3">Explore Opportunities</span>
+                    <span className="px-3">{translations["Explore"][props.language]}</span>
                   </button>
                 </Link>
               </a>

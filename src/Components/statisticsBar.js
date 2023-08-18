@@ -98,7 +98,7 @@ function StatisticsBar(props) {
               }
               style={windowWidth < 500 ? { width: "34%" } : {}}
             >
-              <h2 className="heading2">{count}Million +</h2>
+              <h2 className="heading2">{count}{translations["Million"][props.language]} +</h2>
               <p className="paragraphGeneric">{translations["sindhpeople"][props.language]}</p>
             </div>
             <div className={
@@ -109,7 +109,7 @@ function StatisticsBar(props) {
                 "col-lg-3"
             }
               style={windowWidth < 500 ? { width: "34%" } : {}}>
-              <h2 className="heading2">${count1} Billion </h2>
+              <h2 className="heading2">${count1} {translations["Billion"][props.language]} </h2>
               <p className="paragraphGeneric">{translations["GDP"][props.language]}</p>
             </div>
             <div className={
@@ -121,7 +121,7 @@ function StatisticsBar(props) {
             }
               style={windowWidth < 500 ? { width: "32%" } : {}}
             >
-              <h2 className="heading2">{count2} Million</h2>
+              <h2 className="heading2">{count2} {translations["Million"][props.language]}</h2>
               <p className="paragraphGeneric">{translations["Services"][props.language]}</p>
             </div>
           </div>

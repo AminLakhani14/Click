@@ -1063,6 +1063,14 @@ path {
   display: flex;
   flex-direction: column;
 }
+.Nonsticky-icon {
+  z-index: 1;
+  position: fixed;
+  top: 48%;
+  width: 80px;
+  display: flex;
+  flex-direction: column;
+}
 
 .sticky-icon a {
   font-size: 22px;
@@ -1076,6 +1084,20 @@ path {
 .sticky-icon a:hover i {
   transform: rotate(360deg);
 }
+
+.Nonsticky-icon a {
+  font-size: 22px;
+}
+
+.Nonsticky-icon a:hover {
+  color: #fff;
+  fill: brown;
+}
+
+.Nonsticky-icon a:hover i {
+  transform: rotate(360deg);
+}
+
 
 .Facebook {
   /* background-color: #2C80D3; */
@@ -1109,6 +1131,18 @@ path {
   transition: all 0.5s;
 }
 
+.Nonsticky-icon a i {
+  background-color: #fff;
+  height: 40px;
+  width: 40px;
+  color: #000;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  margin-right: 20px;
+  transition: all 0.5s;
+}
+
 .sticky-icon a i.fa-facebook-f {
   background-color: #fff;
   color: #2c80d3;
@@ -1118,6 +1152,17 @@ path {
   background-color: #fff;
   color: #2c80d3;
 }
+
+.Nonsticky-icon a i.fa-facebook-f {
+  background-color: #fff;
+  color: #2c80d3;
+}
+
+.Nonsticky-icon a i.fa-linkedin {
+  background-color: #fff;
+  color: #2c80d3;
+}
+
 
 .FAQ {
   background-color: #7a1413;
@@ -1144,6 +1189,21 @@ path {
   color: #53c5ff;
 }
 
+
+.Nonsticky-icon a img.faqs {
+  background-color: #02020200;
+  color: #414141;
+}
+
+.Nonsticky-icon a i.fa-youtube {
+  background-color: #fff;
+  color: #fa0910;
+}
+
+.Nonsticky-icon a i.fa-twitter {
+  background-color: #fff;
+  color: #53c5ff;
+}
 .dropbtn {
   color: black;
   background-color: transparent;
@@ -1511,6 +1571,9 @@ path {
   .sticky-icon {
     display: none;
   }
+  .Nonsticky-icon {
+    display: none;
+  }
 
   header {
     height: auto;
@@ -1687,4 +1750,7 @@ path {
 
 .footerTop{
   margin-top: 370px !important;
+}
+.paragraphAlign{
+text-align: right;
 }
