@@ -12,6 +12,22 @@ import buildingBridge from "../assets/buildingBridge.png";
 import health from "../assets/health.jpg"
 
 function Health(props) {
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  useEffect(() => {
+
+    // Function to update the windowWidth state when the resize event occurs
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+
+    // Attach the event listener
+    window.addEventListener('resize', handleResize);
+
+    // Clean up the event listener on component unmount
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
   useEffect(() => {
     if ("scrollRestoration" in window.history) {
       window.history.scrollRestoration = "manual";
@@ -332,7 +348,7 @@ function Health(props) {
         >
           <div className="row sectornestedscreens" style={{ marginTop: "-16px" }}>
             <div className="col-lg-4">
-              <div class="textField">
+              {/* <div class="textField"> */}
                 <TextField
                   id="outlined-controlled"
                   style={{ width: "100%" }}
@@ -344,10 +360,10 @@ function Health(props) {
                   }}
                   placeholder="Enter your name"
                 />
-              </div>
+              {/* </div> */}
             </div>
             <div className="col-lg-4">
-              <div class="textField">
+              {/* <div class="textField"> */}
                 <TextField
                   id="outlined-controlled"
                   style={{ width: "100%" }}
@@ -359,7 +375,7 @@ function Health(props) {
                   size="small"
                   placeholder="Enter your company name"
                 />
-              </div>
+              {/* </div> */}
             </div>
             <div className="col-lg-4">
               <TextField
@@ -377,7 +393,7 @@ function Health(props) {
           </div>
           <div className="row mt-4 sectornestedscreens">
             <div className="col-lg-4">
-              <div class="textField">
+              {/* <div class="textField"> */}
                 <TextField
                 className="feedBackTextField"
                   id="outlined-controlled"
@@ -389,10 +405,10 @@ function Health(props) {
                   }}
                   placeholder="Enter your Email"
                 />
-              </div>
+              {/* </div> */}
             </div>
             <div className="col-lg-4">
-              <div class="textField">
+              {/* <div class="textField"> */}
                 <TextField
                 className="feedBackTextField"
                   id="outlined-controlled"
@@ -404,10 +420,10 @@ function Health(props) {
                   }}
                   placeholder="92123567901"
                 />
-              </div>
+              {/* </div> */}
             </div>
             <div className="col-lg-4">
-              <div class="textField">
+              {/* <div class="textField"> */}
                 <TextField
                 className="feedBackTextField"
                   id="outlined-controlled"
@@ -419,12 +435,12 @@ function Health(props) {
                   label="Subject"
                   placeholder="Write your feedback subject"
                 />
-              </div>
+              {/* </div> */}
             </div>
           </div>
           <div className="row mt-4 sectornestedscreens">
             <div className="col-lg-12">
-              <div class="textField">
+              {/* <div class="textField"> */}
                 <TextField
                   id="outlined-controlled"
                   size="small"
@@ -443,7 +459,7 @@ function Health(props) {
                   }}
                   placeholder="Write your feedback subject"
                 />
-              </div>
+              {/* </div> */}
             </div>
           </div>
           <div className="row">

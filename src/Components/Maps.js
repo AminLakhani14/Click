@@ -152,20 +152,20 @@ export default function Maps() {
     
   
 
-  useEffect(() => {
-    // Function to update the windowWidth state when the resize event occurs
-    const handleResize = () => {
-      setWindowWidth(window.innerWidth);
-    };
+  // useEffect(() => {
+  //   // Function to update the windowWidth state when the resize event occurs
+  //   const handleResize = () => {
+  //     setWindowWidth(window.innerWidth);
+  //   };
 
-    // Attach the event listener
-    window.addEventListener("resize", handleResize);
+  //   // Attach the event listener
+  //   window.addEventListener("resize", handleResize);
 
-    // Clean up the event listener on component unmount
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
+  //   // Clean up the event listener on component unmount
+  //   return () => {
+  //     window.removeEventListener("resize", handleResize);
+  //   };
+  // }, []);
 
   
 
@@ -563,8 +563,9 @@ export default function Maps() {
         className="mt-3"
         style={{ display: "flex", justifyContent: "center" }}
       >
-        <div
-          style={windowWidth <= 500 ? 
+        <div className="zoominopts"
+          // style={windowWidth <= 500 ? 
+          style={
             {
             display: "flex",
             justifyContent: "end",
@@ -572,18 +573,23 @@ export default function Maps() {
             position: "absolute",
             zIndex: "1",
             gap: "5px",
-            marginLeft:"0px"
-          }:
-        {
-          display: "flex",
-            justifyContent: "end",
-            width: "800px",
-            position: "absolute",
-            zIndex: "1",
-            gap: "5px",
-            marginLeft:window.innerWidth = 820? "-50px": "500px"
-
-        }}
+            marginLeft:"500px"
+            
+          }}
+        // {
+        //   display: "flex",
+        //     justifyContent: "end",
+        //     width: "800px",
+        //     position: "absolute",
+        //     zIndex: "1",
+        //     gap: "5px",
+        //     marginLeft: (window.innerWidth === 820) || (window.innerWidth === 912) || (window.innerWidth <= 1042)
+        //     ? "-50px":"500px"
+           
+           
+          
+            
+        // }}
         >
           <Tooltip
             overlayInnerStyle={{ borderRadius: "0px" }}
