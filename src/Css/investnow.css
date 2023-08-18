@@ -348,8 +348,8 @@
   padding: 5px 10px 5px 10px;
 }
 .submitButton {
-  width: 100px;
-  height: 45px;
+  width: 150px;
+  height: 50px;
   font-family: "Crimson Pro";
   font-style: normal;
   font-weight: 400;
@@ -358,6 +358,7 @@
   color: rgb(255, 255, 255);
   background: linear-gradient(180deg, #720d1d 0%, #1f0308 100%);
   padding: 1px 10px 5px 10px;
+  border-radius: 20px;
 }
 
 @media screen and (max-width: 500px) {
@@ -528,7 +529,7 @@
   width: 80%;
   display: flex;
   height: 445px;
-  background-size: 100% !important;
+  background-size: 100% 100% !important;
   background-repeat: no-repeat !important;
   background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)),
     url("../assets/GROWTH.png");
@@ -560,6 +561,7 @@
   justify-content: center;
   /* height: 445px; */
   align-items: center;
+  text-align: center;
 }
 .dotsImage {
   background: url("../assets/dots.png");
@@ -568,9 +570,12 @@
   height: 236px;
   background-size: 191px;
   left: 14vh;
-  top: -17.3vh;
+  top:-17.3vh;
   background-repeat: no-repeat;
 }
+
+
+
 .dotsPoultry {
   background: url("../assets/dots.png");
   position: relative;
@@ -656,6 +661,89 @@
   font-size: 20px;
   text-align: left;
 }
+
+@media screen and (width: 540px){
+  .descriptionImage {
+    height: 200px;
+    margin-left: 0vh;
+    display: flex;
+    width: 86% !important;
+    background-size: 470px 200px !important;
+  }
+  .dotsImage {
+    background-size: 100px;
+    top: -12.3vh;
+    left: 0vh;
+  }
+  .dotsPoultry {
+    width: 100px;
+    right: 0vh;
+    background-size: 100px;
+    top: -12.3vh;
+  }
+  .agriAndFoodHeading {
+    /* height: 205px; */
+    font-size: 29px;
+  }
+}
+
+@media screen and (width: 912px){
+  .descriptionImage {
+    height: 403px;
+    margin-left: 0vh;
+    display: flex;
+    width: 86% !important;
+    background-size: 806px 393px !important;
+  }
+  .dotsImage {
+    background-size: 100px;
+    top: -5.300000000000001vh;
+    left: 0vh;
+  }
+  .dotsPoultry {
+    width: 100px;
+    right: 0vh;
+    background-size: 100px;
+    top:-5.300000000000001vh;
+  }
+  .agriAndFoodHeading {
+    /* height: 205px; */
+    font-size: 29px;
+  }
+  .InvestnowParagraphh {
+    font-size: 30px;
+  }
+  .f-size {
+    font-size: 30px;
+  }
+}
+
+
+@media screen and (min-width: 768px) and (max-width: 825px) {
+  .descriptionImage {
+    height: 300px;
+    margin-left: 0vh;
+    display: flex;
+    width: 86% !important;
+    background-size: 714px 300px !important;
+  }
+  .dotsImage {
+    background-size: 100px;
+    top: -7.300000000000001vh;
+    left: 0vh;
+  }
+  .dotsPoultry {
+    width: 100px;
+    right: 0vh;
+    background-size: 100px;
+    top: -7.300000000000001vh;
+  }
+  .agriAndFoodHeading {
+    /* height: 205px; */
+    font-size: 29px;
+  }
+}
+
 @media screen and (max-width: 500px) {
   .siteHeader {
     height: 185px;

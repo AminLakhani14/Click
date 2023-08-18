@@ -30,20 +30,7 @@ function Textile(props) {
       window.removeEventListener('resize', handleResize);
     };
   }, []);
-  useEffect(() => {
-    if ("scrollRestoration" in window.history) {
-      window.history.scrollRestoration = "manual";
-    }
-
-    window.scrollTo(0, 0);
-
-    // Restore scroll restoration to its default behavior
-    return () => {
-      if ("scrollRestoration" in window.history) {
-        window.history.scrollRestoration = "auto";
-      }
-    };
-  }, []);
+ 
   const [isVisible, setIsVisible] = useState(false);
   const [parentData, setParentData] = useState();
   const [showFullText, setShowFullText] = useState(false);
@@ -105,18 +92,18 @@ function Textile(props) {
       </div>
       <div className="row breadCrumb">
         <div
-          style={{ display: "flex", justifyContent: "center", width: "100%" }}
+          style={{ display: "flex", justifyContent: "center", width: "100%", flexDirection:(window.innerWidth>= 280) && (window.innerWidth <=320)? "column": "row" }}
         >
           <Link
             to={"/home"}
             style={{
               color: "#720D1D",
-              fontSize: "30px",
+              fontSize: (window.innerWidth>= 280) && (window.innerWidth <=320)? "0px": "30px",
               textDecoration: "none",
             }}
           >
             <h5
-              style={{ display: "contents", color: "black", fontSize: "30px" }}
+              style={{ display: "contents", color: "black", fontSize:  window.innerWidth <= 500? "20px": "30px",}}
             >
               Home {value}
             </h5>
@@ -125,12 +112,12 @@ function Textile(props) {
             to={"/Opportunity"}
             style={{
               color: "#720D1D",
-              fontSize: "30px",
+              fontSize: (window.innerWidth>= 280) && (window.innerWidth <=320)? "0px": "30px",
               textDecoration: "none",
             }}
           >
             <h4
-              style={{ display: "contents", color: "black", fontSize: "30px" }}
+              style={{ display: "contents", color: "black", fontSize:  window.innerWidth <= 500? "20px": "30px", }}
             >
               Opportunities {value}
             </h4>
@@ -143,13 +130,15 @@ function Textile(props) {
               textDecoration: "none",
             }}
           > */}
-          <div style={{ paddingTop: "9px" }}>
+          <div style= { {paddingTop:(window.innerWidth >= 280 && window.innerWidth <= 320)?"4px":
+              (window.innerWidth <= 500)? "19px":
+            "9px" }}>
             <h4
               style={{
                 display: "contents",
                 cursor: "pointer",
                 color: "#720D1D",
-                fontSize: "30px",
+                fontSize:  window.innerWidth <= 500? "20px": "30px",
               }}
             >
               Textile
@@ -318,7 +307,7 @@ function Textile(props) {
         </div>
       </div>
       <div
-        className="row justify-content-center "
+        className="row justify-content-center  divheight "
         style={{
           background: "#F7F7F7",
           height: "710px",
@@ -333,6 +322,7 @@ function Textile(props) {
             paddingTop: "60px",
             paddingTop: "50px",
             marginBottom: "75px",
+            textAlign:"center"
           }}
         >
           {" "}
@@ -343,7 +333,10 @@ function Textile(props) {
           style={{
             background: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(${textilebg})`,
             backgroundSize: "cover",
-            height: "600px",
+            height: window.innerWidth <= 500 ? "760px" :
+            window.innerWidth === 540? 700: 
+            window.innerWidth >= 768 && window.innerWidth <= 912? 
+            "700px":"600px", 
             width: "100%",
             marginTop: "-20px",
             padding: "60px 60px 0px 60px",
@@ -396,7 +389,7 @@ function Textile(props) {
             {/* </div> */}
             </div>
           </div>
-          <div className="row mt-3 sectornestedscreens">
+          <div className="row mt-4 sectornestedscreens">
             <div className="col-lg-4">
               {/* <div class="textField"> */}
                 <TextField
@@ -443,8 +436,8 @@ function Textile(props) {
               {/* </div> */}
             </div>
           </div>
-          <div className="row mt-3 sectornestedscreens">
-            <div className="col-lg-12">
+          <div className="row  sectornestedscreens" style={{marginTop:"0.3rem"}}>
+            <div className="col-lg-12 mt-4">
               {/* <div class="textField"> */}
               <TextField
                   id="outlined-controlled"
@@ -468,7 +461,7 @@ function Textile(props) {
             </div>
           </div>
           <div className="row">
-            <div className="col-lg-12 mt-4">
+            <div className="col-lg-12 mt-4 tocentersubmitbutton" >
               <button type="button" className="submitButton">
                 <span>Submit</span>
               </button>

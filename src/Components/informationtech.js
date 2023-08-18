@@ -28,20 +28,7 @@ function InformationTechnology(props) {
       window.removeEventListener('resize', handleResize);
     };
   }, []);
-  useEffect(() => {
-    if ("scrollRestoration" in window.history) {
-      window.history.scrollRestoration = "manual";
-    }
-
-    window.scrollTo(0, 0);
-
-    // Restore scroll restoration to its default behavior
-    return () => {
-      if ("scrollRestoration" in window.history) {
-        window.history.scrollRestoration = "auto";
-      }
-    };
-  }, []);
+ 
   const [isVisible, setIsVisible] = useState(false);
   const [parentData, setParentData] = useState();
   const [showFullText, setShowFullText] = useState(false);
@@ -60,11 +47,11 @@ function InformationTechnology(props) {
   }, []);
   let value = ">";
   const location = useLocation();
-  useEffect(() => {
-    debugger;
-    const data = location.state;
-    setParentData(data);
-  }, [location]);
+  // useEffect(() => {
+  //   debugger;
+  //   const data = location.state;
+  //   setParentData(data);
+  // }, [location]);
   const imageList = [
     "Abundant Agricultural Resources: Sindh boasts rich and fertile lands, a favorable climate, and ample water resources, making it ideal for agricultural production. The region is known for growing a wide variety of crops, including wheat, rice, cotton, sugarcane, fruits, and vegetables, offering a diverse range of investment opportunities.",
     "Value Addition Through Food Processing: Sindh presents significant opportunities for value addition through food processing. By leveraging modern processing techniques, packaging, and quality control measures, businesses can enhance the value and shelf life of agricultural produce, catering to both domestic and international markets.",
@@ -108,18 +95,18 @@ function InformationTechnology(props) {
       </div>
       <div className="row breadCrumb">
         <div
-          style={{ display: "flex", justifyContent: "center", width: "100%" }}
+          style={{ display: "flex", justifyContent: "center", width: "100%", flexDirection:(window.innerWidth>= 280) && (window.innerWidth <=425)? "column": "row" }}
         >
           <Link
             to={"/home"}
             style={{
               color: "#720D1D",
-              fontSize: "30px",
+              fontSize:(window.innerWidth>= 280) && (window.innerWidth <=420)? "0px": "30px",
               textDecoration: "none",
             }}
           >
             <h5
-              style={{ display: "contents", color: "black", fontSize: "30px" }}
+              style={{ display: "contents", color: "black", fontSize: window.innerWidth <= 540? "20px": "30px" }}
             >
               Home {value}
             </h5>
@@ -127,13 +114,14 @@ function InformationTechnology(props) {
           <Link
             to={"/Opportunity"}
             style={{
+              display:"inline",
               color: "#720D1D",
-              fontSize: "30px",
+              fontSize: (window.innerWidth>= 280) && (window.innerWidth <=420)? "0px": "30px",
               textDecoration: "none",
             }}
           >
             <h4
-              style={{ display: "contents", color: "black", fontSize: "30px" }}
+              style={{ display: "inline", color: "black", fontSize:window.innerWidth <= 540? "20px": "30px", }}
             >
               Opportunities {value}
             </h4>
@@ -146,13 +134,15 @@ function InformationTechnology(props) {
               textDecoration: "none",
             }}
           > */}
-          <div style={{ paddingTop: "9px" }}>
+          <div style={ {paddingTop:(window.innerWidth >= 280 && window.innerWidth <= 420)?"4px":
+              (window.innerWidth <= 540)? "19px":
+            "9px" }}>
             <h4
               style={{
                 display: "contents",
                 cursor: "pointer",
                 color: "#720D1D",
-                fontSize: "30px",
+                fontSize: window.innerWidth <= 540? "20px": "30px",
               }}
             >
               Information Technology
@@ -327,7 +317,7 @@ function InformationTechnology(props) {
         </div>
       </div>
       <div
-        className="row justify-content-center "
+        className="row justify-content-center divheight "
         style={{
           background: "#F7F7F7",
           height: "710px",
@@ -342,6 +332,7 @@ function InformationTechnology(props) {
             paddingTop: "60px",
             paddingTop: "50px",
             marginBottom: "75px",
+            textAlign:"center"
           }}
         >
           {" "}
@@ -351,7 +342,10 @@ function InformationTechnology(props) {
           className="col-lg-12 sectorMUI"
           style={{
             background: `linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),url(${infotechbg})`,backgroundSize: "100% 100%",
-            height: window.innerWidth <= 500 ? "760px": "600px",
+            height: window.innerWidth <= 500 ? "760px" :
+                window.innerWidth === 540? 668: 
+                window.innerWidth >= 768 && window.innerWidth <= 912? 
+                "700px":"600px", 
              backgroundRepeat: "no-repeat",
              marginTop: "-20px",
              padding: "60px 60px 0px 60px",
@@ -449,8 +443,8 @@ function InformationTechnology(props) {
               {/* </div> */}
             </div>
           </div>
-          <div className="row mt-4 sectornestedscreens">
-            <div className="col-lg-12">
+          <div className="row  sectornestedscreens">
+            <div className="col-lg-12 mt-4">
               {/* <div class="textField"> */}
                 <TextField
                   id="outlined-controlled"
@@ -474,7 +468,7 @@ function InformationTechnology(props) {
             {/* </div> */}
           </div>
           <div className="row">
-            <div className="col-lg-12 mt-4">
+            <div className="col-lg-12 mt-4 tocentersubmitbutton">
               <button type="button" className="submitButton">
                 <span>Submit</span>
               </button>

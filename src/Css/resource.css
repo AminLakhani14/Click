@@ -628,10 +628,27 @@ input.regulatoryTextField[type="text"]:focus {
   padding-bottom: 14px;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (min-width: 0px) and (max-width:990px) {
   .sectornestedscreens {
     padding-bottom: 0px;
+    gap:15px;
   }}
+
+@media screen and (min-width: 768px) and (max-width:912px) {
+    .sectornestedscreens {
+      padding-bottom: 0px;
+      gap:15px;
+      --bs-gutter-x: 12.5rem !important;
+
+    }}
+    
+@media screen and (min-width: 280px) and (max-width:320px) {
+      .sectornestedscreens {
+        --bs-gutter-x: 0rem !important;
+       margin-left: -8px !important;
+  
+      }}
+
 
   .UpdateHeader{
     padding-right: 0;
@@ -715,10 +732,6 @@ margin-left: -20px !important;
 
   
 
-@media screen and (max-width: 500px){
-  .css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root {
-  width: 205px;
-  }}
 
  @media screen and (width: 375px){
 .mapheight {
@@ -726,13 +739,14 @@ margin-left: -20px !important;
     max-width: 364px !important;
 }}
 
-@media screen and (width: 540px){
+@media only screen and (width: 540px){
   .mapheight{
-    height: 429px;
-    border-radius: 377px;
-    width: 441px;
+    height: 429px !important;
+    border-radius: 377px !important;
+    width: 441px !important;
 }
   }
+
 
 
 
@@ -761,6 +775,7 @@ margin-left: -20px !important;
   @media screen and (max-width: 500px){
       .zoominopts{
         margin-left: 0px !important;
+        /* display: none !important; */
       }}
   @media screen and (width: 375px){
         .zoominopts{
@@ -779,3 +794,68 @@ margin-left: -20px !important;
           .zoominopts{
             margin-left: -50px !important;
           }}
+
+ /* For Laptop screens in maps*/ 
+ @media  screen and (max-width:1550px){
+    .mapheight{
+      width: 600px;
+    height: 600px;
+    }
+
+} 
+
+@media  screen and (max-width:1550px){
+  .css-1nf0req-MuiFormControl-root{
+   margin-left: 151px;
+  }
+
+}
+
+@media  screen and (max-width:540px) {
+.tocentersubmitbutton{
+  justify-content: center !important;
+    display: flex !important;
+}
+}
+
+/* @media  screen and (max-width:500px) {
+  .tocentersubmitbutton{
+    justify-content: center !important;
+      display: flex !important;
+  }
+  } */
+
+
+
+@media screen and (width:540px){
+  .divheight{
+        height: 812px !important;
+  }}
+
+  
+  
+    @media screen and (min-width: 768px) and (max-width:912px) {
+      .divheight {
+       
+        height:850px !important;
+      }}
+
+
+      @media screen and (min-width: 768px) and (max-width:912px) {
+        .tocentersubmitbutton {
+          justify-content: center !important;
+          display: flex !important;
+         
+        }}
+
+/*  for the textfields of feedback expert forms on mobile screen  */
+@media screen and (max-width: 500px){
+  .css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root {
+  width: 65vw !important;
+  }}
+
+
+
+
+
+
