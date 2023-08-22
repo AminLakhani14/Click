@@ -73,7 +73,7 @@ function Home(props) {
     }
      <Highlights language={language} setLanguage={setLanguage}/>
      <WhySindh  language={language} setLanguage={setLanguage}/>
-     {windowWidth <=500 ?<MobileMessage />:
+     {windowWidth <=500 ?<MobileMessage language={language} setLanguage={setLanguage} />:
      <Message language={language} setLanguage={setLanguage}/>}
      {windowWidth <=500 ?<MobileTestimonial />:
      <Testimonial language={language} setLanguage={setLanguage}/>}
