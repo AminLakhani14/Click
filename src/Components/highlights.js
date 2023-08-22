@@ -7,7 +7,10 @@ import card4 from "../assets/card4.png";
 import { useEffect } from "react";
 import { useState } from "react";
 import { translations } from "../Transalation/Transalation";
+import { useSelector } from "react-redux";
 function Highlights(props) {
+  const {language} = useSelector((state)=>state.language)
+
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
   useEffect(() => {
@@ -47,7 +50,7 @@ function Highlights(props) {
                       }
                 }
               >
-                {translations["Highlights"][props.language]}
+                {translations["Highlights"][language]}
               </h1>
             </div>
           </div>
@@ -59,15 +62,15 @@ function Highlights(props) {
               <img src={card1} alt="" />
               <div class="overlay"></div>
               <div className="cardMain">
-                <p className="cardHeaderHeading">{translations["EasYdata"][props.language]}</p>
+                <p className="cardHeaderHeading">{translations["EasYdata"][language]}</p>
                 <p className="HigParagraphh cardinner">
-                {translations["facilitatedTEXT"][props.language]}
+                {translations["facilitatedTEXT"][language]}
                 </p>
               </div>
               <div className="verticalTabGrid1">
                 <div class="info">
                   <a href="#" class="updateBtn">
-                    {translations["UpdatedData"][props.language]}
+                    {translations["UpdatedData"][language]}
                   </a>
                 </div>
               </div>
@@ -77,9 +80,9 @@ function Highlights(props) {
               <img src={card2} alt="" />
               <div class="overlay"></div>
               <div className="cardMain">
-                <p className="cardHeaderHeading">{translations["Economies"][props.language]}</p>
+                <p className="cardHeaderHeading">{translations["Economies"][language]}</p>
                 <p className="HigParagraphh cardinner">
-                {translations["EconTEXT"][props.language]}
+                {translations["EconTEXT"][language]}
                 </p>
               </div>
               <div className="verticalTabGrid1">
@@ -87,7 +90,7 @@ function Highlights(props) {
                   {/* <h1>Heading</h1> */}
 
                   <a href="#" class="updateBtn">
-                  {translations["UpdatedData"][props.language]}
+                  {translations["UpdatedData"][language]}
                   </a>
                 </div>
               </div>
@@ -98,11 +101,11 @@ function Highlights(props) {
               <div class="overlay"></div>
               <div className="cardMain">
                 <p className="cardHeaderHeading">
-                {translations["iNVEstText"][props.language]}
+                {translations["iNVEstText"][language]}
                 </p>
                 <p className="HigParagraphh cardinner">
                   {" "}
-                  {translations["LibiNVEstText"][props.language]}
+                  {translations["LibiNVEstText"][language]}
                 </p>
               </div>
               <div className="verticalTabGrid1">
@@ -110,7 +113,7 @@ function Highlights(props) {
                   {/* <h1>Heading</h1> */}
 
                   <a href="#" class="updateBtn">
-                  {translations["UpdatedData"][props.language]}
+                  {translations["UpdatedData"][language]}
                   </a>
                 </div>
               </div>
@@ -119,16 +122,16 @@ function Highlights(props) {
               <img src={card4} alt="" />
               <div class="overlay"></div>
               <div className="cardMain">
-                <p className="cardHeaderHeading"> {translations["EconomicZonesText"][props.language]}</p>
+                <p className="cardHeaderHeading"> {translations["EconomicZonesText"][language]}</p>
                 <p className="HigParagraphh cardinner">
-                {translations["blanketText"][props.language]}
+                {translations["blanketText"][language]}
                 </p>
               </div>
 
               <div className="verticalTabGrid1">
                 <div class="info">
                   <a href="#" class="updateBtn">
-                  {translations["UpdatedData"][props.language]}
+                  {translations["UpdatedData"][language]}
                   </a>
                 </div>
               </div>

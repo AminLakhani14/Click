@@ -1,6 +1,9 @@
 import React from "react";
 import { translations } from "../Transalation/Transalation";
+import { useSelector } from "react-redux";
 function MobileMarque(props) {
+  const {language} = useSelector((state)=>state.language)
+
   return (
     <>
       <div
@@ -17,7 +20,7 @@ function MobileMarque(props) {
             }}>
               <a href="comingsoon.html">
                 <button type="button" className="feedback">
-                  <span>{translations['Updates'][props.language]}
+                  <span>{translations['Updates'][language]}
                   </span>
                 </button>
               </a>
@@ -29,7 +32,7 @@ function MobileMarque(props) {
             }}
             >
               <marquee>
-              {translations['Headline'][props.language]}
+              {translations['Headline'][language]}
               </marquee>
             </div>
           </div>

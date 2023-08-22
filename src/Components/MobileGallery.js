@@ -7,8 +7,13 @@ import rate from "../assets/rate.png";
 import calculator from "../assets/calculator.png";
 import { useEffect } from "react";
 import { useRef } from "react";
+import world from "../assets/world.jpg";
+import { translations } from "../Transalation/Transalation";
+import { useSelector } from "react-redux";
 
-function MobileGallery() {
+function MobileGallery(props) {
+  const {language} = useSelector((state)=>state.language)
+
   const carouselRef = useRef(null);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
@@ -35,6 +40,12 @@ function MobileGallery() {
     // Render the Carousel component or perform any other necessary actions
     // once the parent container element exists.
   }, []);
+    const [languageChangeKey, setLanguageChangeKey] = useState(0); // Track language change
+
+  useEffect(() => {
+    // Update the key to trigger a re-render
+    setLanguageChangeKey(languageChangeKey + 1);
+  }, [language]);  // Listen for changes in language
 
   return (
     <>
@@ -51,7 +62,7 @@ function MobileGallery() {
                   marginLeft: "25px",
                 }}
               >
-                How we Help
+                {translations["Help"][language]}
               </h1>
             </div>
           </div>
@@ -62,6 +73,7 @@ function MobileGallery() {
               ref={carouselRef}
             >
               <Carousel
+              key={languageChangeKey} 
                 show={1}
                 slide={1}
                 swiping={false} 
@@ -93,6 +105,21 @@ function MobileGallery() {
                   </div>
                 }
               >
+                 <div style={{marginRight:"10px"}}>
+                <div>
+                  {" "}
+                  <li className="card">
+                    <div className="img">
+                      <img
+                        src={world}
+                        alt="img"
+                        draggable="false"
+                      ></img>
+                    </div>
+                    <p className="card__name">{translations["BREADY"][language]}</p>
+                  </li>
+                </div>
+                </div>
                 <div style={{ marginRight: "10px" }}>
                   <div>
                     {" "}
@@ -104,7 +131,7 @@ function MobileGallery() {
                           draggable="false"
                         ></img>
                       </div>
-                      <p className="mobilecard__name">Request Information</p>
+                      <p className="mobilecard__name">{translations["RequestInformation"][language]}</p>
                     </li>
                   </div>
                 </div>
@@ -115,7 +142,7 @@ function MobileGallery() {
                       <div className="img">
                         <img src={rate} alt="img" draggable="false"></img>
                       </div>
-                      <p className="mobilecard__name">Feedback</p>
+                      <p className="mobilecard__name">{translations["Feedback"][language]}</p>
                     </li>
                     ‍
                   </div>
@@ -127,9 +154,9 @@ function MobileGallery() {
                       <div className="img">
                         <img src={calculator} alt="img" draggable="false"></img>
                       </div>
-                      <p className="mobilecard__name">
-                        Regulatory Cost <br /> Calculator
-                      </p>
+                      <p className="card__name" style={{marginBottom: "-28px"}}>
+                    {translations["RegulatoryCost"][language]} <br /> {translations["Calculator"][language]}
+                    </p>
                     </li>
                   </div>
                 </div>
@@ -145,7 +172,7 @@ function MobileGallery() {
                           draggable="false"
                         ></img>
                       </div>
-                      <p className="mobilecard__name">Karachi Fund</p>
+                      <p className="mobilecard__name">{translations["KarachiFund"][language]}</p>
                     </li>
                   </div>
                 </div>

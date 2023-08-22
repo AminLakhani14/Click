@@ -118,7 +118,7 @@ export default function GenericHeader(props) {
           <div className="navbarRight">
             <ul>
             <div className="r-side d-inline">
-              <img
+            <img
                   className="headerLogoImages"
                   src={props.language === "ur" ? English : urdu}
                   alt=""
@@ -127,9 +127,10 @@ export default function GenericHeader(props) {
                 />
                 <img
                   className="headerLogoImages"
-                  src={Sindhi}
+                  src={props.language === "sd" ? English : Sindhi}
+                  // src={Sindhi}
                   alt=""
-                  onClick={props.toggleLanguage}
+                  onClick={props.SindhitoggleLanguage}
                   style={{ marginLeft: "20px", marginRight: "20px" }}
                 />
               </div>

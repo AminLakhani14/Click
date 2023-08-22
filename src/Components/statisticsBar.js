@@ -1,7 +1,10 @@
 import React, { useEffect, useState } from "react";
 import '../Css/header.css'
 import { translations } from "../Transalation/Transalation";
+import { useSelector } from "react-redux";
 function StatisticsBar(props) {
+  const {language} = useSelector((state)=>state.language)
+
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
   useEffect(() => {
@@ -84,7 +87,7 @@ function StatisticsBar(props) {
                       justifyContent: "center"
                     }
                 }
-              >{translations["statistics"][props.language]}</h1>
+              >{translations["statistics"][language]}</h1>
             </div>
           </div>
           <div className="row mb-5 user" style={{ backgroundColor: "#ffffff", marginTop: "-22px" }}>
@@ -98,8 +101,8 @@ function StatisticsBar(props) {
               }
               style={windowWidth < 500 ? { width: "34%" } : {}}
             >
-              <h2 className="heading2">{count}{translations["Million"][props.language]} +</h2>
-              <p className="paragraphGeneric">{translations["sindhpeople"][props.language]}</p>
+              <h2 className="heading2">{count}{translations["Million"][language]} +</h2>
+              <p className="paragraphGeneric">{translations["sindhpeople"][language]}</p>
             </div>
             <div className={
               windowWidth < 500
@@ -109,8 +112,8 @@ function StatisticsBar(props) {
                 "col-lg-3"
             }
               style={windowWidth < 500 ? { width: "34%" } : {}}>
-              <h2 className="heading2">${count1} {translations["Billion"][props.language]} </h2>
-              <p className="paragraphGeneric">{translations["GDP"][props.language]}</p>
+              <h2 className="heading2">${count1} {translations["Billion"][language]} </h2>
+              <p className="paragraphGeneric">{translations["GDP"][language]}</p>
             </div>
             <div className={
               windowWidth < 500
@@ -121,8 +124,8 @@ function StatisticsBar(props) {
             }
               style={windowWidth < 500 ? { width: "32%" } : {}}
             >
-              <h2 className="heading2">{count2} {translations["Million"][props.language]}</h2>
-              <p className="paragraphGeneric">{translations["Services"][props.language]}</p>
+              <h2 className="heading2">{count2} {translations["Million"][language]}</h2>
+              <p className="paragraphGeneric">{translations["Services"][language]}</p>
             </div>
           </div>
         </div>

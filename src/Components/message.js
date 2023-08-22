@@ -11,6 +11,7 @@ import muradAli from "../assets/muradalishah.png";
 import muradalishahBW from "../assets/muradalishahBW.jpeg";
 import { Carousel } from "@trendyol-js/react-carousel";
 import { translations } from "../Transalation/Transalation";
+import { useSelector } from "react-redux";
 
 const imageMapColor = {
   "qasim_Id": qasim,
@@ -27,6 +28,8 @@ const imageMapBW = {
 
 let ID = "qasim_Id"
 function Message(props) {
+  const {language} = useSelector((state)=>state.language)
+
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
   useEffect(() => {
@@ -156,7 +159,7 @@ function Message(props) {
         <div className="body-box mb-5">
           <div className="row">
             <div className="col-12 highlit-heading">
-              <h1 className="mainHeading"> {translations["Messages"][props.language]}</h1>
+              <h1 className="mainHeading"> {translations["Messages"][language]}</h1>
             </div>
           </div>
           <div className="row justify-content-center">
@@ -274,28 +277,28 @@ function Message(props) {
                   </a>
                   <div className="media-body">
                     {/* <h3 className="title">Syed Qasim Naveed Qamar </h3> */}
-                    <h3 className="title">{imgFormData.name[props.language]}</h3>
+                    <h3 className="title">{imgFormData.name[language]}</h3>
                     <p
                       className="card-subtitle"
                       style={
-                        props.language === "ur" || props.language === "sd"
+                        language === "ur" || language === "sd"
                           ? { display: "contents", fontWeight: "400", color: "rgb(163, 163, 163)" }
                           : {fontWeight: "400", color: "rgb(163, 163, 163)" }
                       }
                     >
-                     {imgFormData.subtitle[props.language]}
+                     {imgFormData.subtitle[language]}
                     </p>
                   </div>
                 </div>
                 <div className="mt-3">
                   <p 
                    className={
-                    props.language === "ur" || props.language === "sd"
+                    language === "ur" || language === "sd"
                       ? "sub-title paragraphAlign"
                       : "sub-title text-md-start"
                   }
                   >
-                  {imgFormData.desc[props.language]}
+                  {imgFormData.desc[language]}
                   </p>
                 </div>
               </div>

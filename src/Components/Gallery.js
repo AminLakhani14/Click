@@ -11,8 +11,11 @@ import "aos/dist/aos.css";
 import { useEffect } from "react";
 import { useState } from "react";
 import { getTranslatedText, translations } from "../Transalation/Transalation";
+import { useSelector } from "react-redux";
 
 function Gallery(props) {
+  const {language} = useSelector((state)=>state.language)
+
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
   useEffect(() => {
@@ -34,7 +37,7 @@ function Gallery(props) {
   useEffect(() => {
     // Update the key to trigger a re-render
     setLanguageChangeKey(languageChangeKey + 1);
-  }, [props.language]);  // Listen for changes in props.language
+  }, [language]);  // Listen for changes in language
 
 
 
@@ -44,7 +47,7 @@ function Gallery(props) {
         <div className="body-box">
           <div className="row">
             <div className="col-12 highlit-heading pb-5">
-              <h1 className="mainHeading"  data-aos="fade-up" >{translations["Help"][props.language]}</h1>
+              <h1 className="mainHeading"  data-aos="fade-up" >{translations["Help"][language]}</h1>
             </div>
           </div>
           <div className="row justify-content-center">
@@ -93,7 +96,7 @@ function Gallery(props) {
                         draggable="false"
                       ></img>
                     </div>
-                    <p className="card__name">{translations["BREADY"][props.language]}</p>
+                    <p className="card__name">{translations["BREADY"][language]}</p>
                   </li>
                 </div>
                 </div>
@@ -111,7 +114,7 @@ function Gallery(props) {
                         draggable="false"
                       ></img>
                     </div>
-                    <p className="card__name" style={{marginBottom: "18px"}}>{translations["RequestInformation"][props.language]}</p>
+                    <p className="card__name" style={{marginBottom: "18px"}}>{translations["RequestInformation"][language]}</p>
                   </li>
                 </div>
                 </div>
@@ -122,7 +125,7 @@ function Gallery(props) {
                     <div className="img">
                       <img src={feedback} alt="img" draggable="false" style={{width:"67px"}}></img>
                     </div>
-                    <p className="card__name">{translations["Feedback"][props.language]}</p>
+                    <p className="card__name">{translations["Feedback"][language]}</p>
                   </li>
                   ‍
                 </div>
@@ -135,7 +138,7 @@ function Gallery(props) {
                       <img src={calculators} alt="img" draggable="false" style={{width:"67px"}}></img>
                     </div>
                     <p className="card__name" style={{marginBottom: "-28px"}}>
-                    {translations["RegulatoryCost"][props.language]} <br /> {translations["Calculator"][props.language]}
+                    {translations["RegulatoryCost"][language]} <br /> {translations["Calculator"][language]}
                     </p>
                   </li>
                 </div>
@@ -152,7 +155,7 @@ function Gallery(props) {
                         draggable="false"
                       ></img>
                     </div>
-                    <p className="card__name">{translations["KarachiFund"][props.language]}</p>
+                    <p className="card__name">{translations["KarachiFund"][language]}</p>
                   </li>
                 </div>
                 </div>

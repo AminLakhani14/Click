@@ -11,8 +11,12 @@ import letter from "../assets/letter.png";
 import investNowImg from "../assets/ship.png";
 import MobileHeaderGeneric from "./MobileHeaderGeneric";
 import "aos/dist/aos.css";
+import { useSelector } from "react-redux";
+import { translations } from "../Transalation/Transalation";
 
 function InvestNow() {
+  const {language} = useSelector((state)=>state.language)
+
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
   useEffect(() => {
@@ -46,6 +50,7 @@ function InvestNow() {
 
   let value = ">";
 
+
   return (
     <>
       {windowWidth <= 500 ? <MobileHeaderGeneric /> : <GenericHeader />}
@@ -56,6 +61,7 @@ function InvestNow() {
       )}
       <div style={{ background: `url(${investNowImg})` }} className="SiteMain2">
         <h1 data-aos="fade-up" className="Investnow-h1">
+        {/* {translations["InvestNow"][data.language]} */}
           Invest now
         </h1>
       </div>
