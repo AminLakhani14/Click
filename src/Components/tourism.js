@@ -30,20 +30,6 @@ function Tourism(props) {
   }, []);
 
   
-  useEffect(() => {
-    if ("scrollRestoration" in window.history) {
-      window.history.scrollRestoration = "manual";
-    }
-
-    window.scrollTo(0, 0);
-
-    // Restore scroll restoration to its default behavior
-    return () => {
-      if ("scrollRestoration" in window.history) {
-        window.history.scrollRestoration = "auto";
-      }
-    };
-  }, []);
   const [isVisible, setIsVisible] = useState(false);
   const [parentData, setParentData] = useState();
   const [showFullText, setShowFullText] = useState(false);
@@ -111,18 +97,18 @@ function Tourism(props) {
       </div>
       <div className="row breadCrumb">
         <div
-          style={{ display: "flex", justifyContent: "center", width: "100%" }}
+          style={{ display: "flex", justifyContent: "center", width: "100%", flexDirection:(window.innerWidth>= 280) && (window.innerWidth <=320)? "column": "row" }}
         >
           <Link
             to={"/home"}
             style={{
               color: "#720D1D",
-              fontSize: "30px",
+              fontSize: (window.innerWidth>= 280) && (window.innerWidth <=320)? "0px": "30px",
               textDecoration: "none",
             }}
           >
             <h5
-              style={{ display: "contents", color: "black", fontSize: "30px" }}
+              style={{ display: "contents", color: "black", fontSize:  window.innerWidth <= 500? "20px": "30px", }}
             >
               Home {value}
             </h5>
@@ -131,12 +117,12 @@ function Tourism(props) {
             to={"/Opportunity"}
             style={{
               color: "#720D1D",
-              fontSize: "30px",
+              fontSize:  (window.innerWidth>= 280) && (window.innerWidth <=320)? "0px": "30px",
               textDecoration: "none",
             }}
           >
             <h4
-              style={{ display: "contents", color: "black", fontSize: "30px" }}
+              style={{ display: "contents", color: "black", fontSize:window.innerWidth <= 500? "20px": "30px",  }}
             >
               Opportunities {value}
             </h4>
@@ -149,13 +135,15 @@ function Tourism(props) {
               textDecoration: "none",
             }}
           > */}
-          <div style={{ paddingTop: "9px" }}>
+          <div style={ {paddingTop:(window.innerWidth >= 280 && window.innerWidth <= 320)?"4px":
+              (window.innerWidth <= 500)? "19px":
+            "9px" }}>
             <h4
               style={{
                 display: "contents",
                 cursor: "pointer",
                 color: "#720D1D",
-                fontSize: "30px",
+                fontSize: window.innerWidth <= 500? "20px": "30px",
               }}
             >
               Tourism

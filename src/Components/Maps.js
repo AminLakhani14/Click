@@ -88,7 +88,7 @@ export default function Maps() {
     const {
       target: { value: newValue },
     } = event;
-
+console.log(newValue)
     const updatedDisplay = { ...departmentDisplay };
 
     if (newValue.includes('All')) {
@@ -147,7 +147,20 @@ export default function Maps() {
     
   };
   
-  
+  useEffect(() => {
+    if ("scrollRestoration" in window.history) {
+      window.history.scrollRestoration = "manual";
+    }
+
+    window.scrollTo(0, 0);
+
+    // Restore scroll restoration to its default behavior
+    return () => {
+      if ("scrollRestoration" in window.history) {
+        window.history.scrollRestoration = "auto";
+      }
+    };
+  }, []);
     
     
   
