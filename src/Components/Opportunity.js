@@ -11,12 +11,14 @@ import loan from "../assets/loan.png";
 import MobileHeaderGeneric from "./MobileHeaderGeneric";
 import { useNavigate } from "react-router-dom";
 import sindhAssembly from "../assets/sindhAssemblywomen.png";
+import { useSelector } from "react-redux";
+import { translations } from "../Transalation/Transalation";
 import "aos/dist/aos.css";
 import AOS from "aos";
 function Opportunity() {
   let value = ">";
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-
+  const {language} = useSelector((state)=>state.language)
   useEffect(() => {
     // Function to update the windowWidth state when the resize event occurs
     const handleResize = () => {
@@ -121,7 +123,7 @@ function Opportunity() {
         }
       >
         <h1 data-aos="fade-up" className="Investnow-h1">
-          Opportunities
+        {translations["Opportunities"][language]}
         </h1>
       </div>
       <div className="row breadCrumb">
@@ -182,7 +184,7 @@ function Opportunity() {
           className="mainHeading"
           data-aos="fade-up"
         >
-          Explore Lucrative Opportunities in Sindh
+         {translations["opportunityhead1"][language]}
         </h1>
         <div
           className="col-lg-10"
@@ -200,11 +202,7 @@ function Opportunity() {
             //   isVisibleUnleash ? "" : "slide-out-left"
             // }`}
           >
-            Explore a myriad of exciting opportunities in Sindh, Pakistan's
-            vibrant province. From thriving industries to emerging sectors,
-            Sindh offers a fertile ground for investment, innovation, and
-            growth, presenting a gateway to unparalleled prospects and a pathway
-            to prosperity.
+           {translations["opportunitypara1"][language]}
           </p>
         </div>
       </div>
@@ -217,7 +215,7 @@ function Opportunity() {
           }}
         >
           <label className="agriAndFoodHeading" data-aos="fade-up">
-            Agriculture & Food Processing{" "}
+            {translations['AgricultureandFoodP'][language]}
           </label>
         </div>
       </div>
@@ -228,11 +226,7 @@ function Opportunity() {
       >
         <div className="col-lg-5">
           <label data-aos="fade-up" className={" f-size"}>
-            Harvest Success in Sindh's Bountiful Fields. Dive into the fertile
-            agricultural landscape of Sindh and explore the vast potential for
-            investment and growth in the agriculture and food processing
-            sectors, where abundant resources, favorable climate, and a rich
-            farming heritage converge to create a recipe for success.
+            {translations['opportunitypara2'][language]}
           </label>
         </div>
       </div>
@@ -243,15 +237,21 @@ function Opportunity() {
             justifyContent: "center",
             display: "flex",
           }}
-        >
-          <button
-            onClick={OpenGenericOpportunity}
-            type="button"
-            className="InvestInSindhButton"
+        > 
+        <button 
+        
+        type="button"
+        className="InvestInSindhButton"
+         onClick={() => { window.scrollTo({ top: 0, left: 0, behavior: "smooth" }); }}>
+          <Link
+            to={"/agriculture"}
+            
+            style={{textDecoration:"none", color:"white"}}
           >
             <span id="Agriculture" style={{ width: "179px", height: "33px" }}>
-              Learn More
+            {translations['LearnMore'][language]}
             </span>
+          </Link>
           </button>
         </div>
       </div>
@@ -264,7 +264,7 @@ function Opportunity() {
           }}
         >
           <label data-aos="fade-up" className={"agriAndFoodHeading"}>
-            Poultry
+           {translations['Poultry'][language]}
           </label>
         </div>
       </div>
@@ -277,13 +277,7 @@ function Opportunity() {
       >
         <div className="col-lg-5">
           <label data-aos="fade-up" className={"f-size"}>
-            Flock to Profitable Ventures in Sindh's Poultry Industry. Capitalize
-            on the booming demand for poultry products in Sindh as we offer you
-            a gateway to tap into a thriving industry supported by
-            state-of-the-art facilities, advanced farming techniques, and a
-            strong market presence. Explore the potential for sustainable growth
-            and profitability in the poultry sector and seize the opportunity to
-            feather your business's success.
+            {translations["opportunitypara3"][language]}
           </label>
         </div>
       </div>
@@ -315,7 +309,7 @@ function Opportunity() {
                   href="src/Components/poultry.js"
                 >
                   {" "}
-                  Learn More
+                  {translations['LearnMore'][language]}
                 </a>
               </Link>
             </span>
@@ -332,7 +326,7 @@ function Opportunity() {
           }}
         >
           <label data-aos="fade-up" className={"agriAndFoodHeading"}>
-            Frozen food & Processing
+            {translations['frozenfoodandp'][language]}
           </label>
         </div>
       </div>
@@ -343,12 +337,7 @@ function Opportunity() {
       >
         <div className="col-lg-5">
           <label data-aos="fade-up" className={"f-size"}>
-            Unleash the Potential of Sindh's Frozen Food Industry. Discover the
-            lucrative prospects of frozen food and processing in Sindh, where
-            cutting-edge facilities, quality standards, and a growing market
-            demand converge to create a recipe for success. Capitalize on this
-            opportunity to meet the evolving needs of consumers and carve your
-            niche in the thriving frozen food industry.
+           {translations['opportunitypara4'][language]}
           </label>
         </div>
       </div>
@@ -375,7 +364,7 @@ function Opportunity() {
                   style={{ textDecoration: "none", color: "white" }}
                   href="src/Components/frozenfood.js"
                 >
-                  Learn More{" "}
+                  {translations['LearnMore'][language]}{" "}
                 </a>
               </Link>
             </span>
@@ -391,7 +380,7 @@ function Opportunity() {
           }}
         >
           <label data-aos="fade-up" className={"agriAndFoodHeading"}>
-            Loan & Grant Facilitation
+            {translations['LoanandGrant'][language]}
           </label>
         </div>
       </div>
@@ -404,13 +393,7 @@ function Opportunity() {
       >
         <div className="col-lg-5">
           <label data-aos="fade-up" className={"f-size"}>
-            Unlock Financial Support for Your Business Ambitions in Sindh.
-            Navigate the financial landscape with ease as we provide
-            comprehensive assistance in securing loans and grants, connecting
-            you to the right resources and institutions that foster
-            entrepreneurship and fuel growth. Take advantage of our facilitation
-            services to access the funding you need and propel your business
-            forward in Sindh.
+          {translations['opportunitypara5'][language]}
           </label>
         </div>
       </div>
@@ -437,7 +420,7 @@ function Opportunity() {
                   style={{ textDecoration: "none", color: "white" }}
                   href="src/Components/Loan.js"
                 >
-                  Learn More{" "}
+                 {translations['LearnMore'][language]}{" "}
                 </a>
               </Link>
             </span>
@@ -446,7 +429,7 @@ function Opportunity() {
       </div>
       <div className="seizeOpportunity">
         <h1 data-aos="fade-up" className={"mainHeading"}>
-          Seize the Opportunity
+        {translations['SeizeTheOpportunity'][language]}
         </h1>
         <div
           className="mt-2"
@@ -457,9 +440,9 @@ function Opportunity() {
           }}
         >
           {/* <a href="comingsoon.html"> */}
-          <button type="button" className="InvestInSindhButton">
+          <button type="button"  className={language === "en"?"InvestInSindhButton":"InvestinSindhbuttonforUrduandSindhi"}>
             <span style={{ width: "179px", height: "33px" }}>
-              Invest in Sindh
+            {translations['InvestSindh'][language]}
             </span>
           </button>
           {/* </a> */}

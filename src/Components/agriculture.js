@@ -9,10 +9,14 @@ import MobileHeaderGeneric from "./MobileHeaderGeneric";
 import TextField from "@mui/material/TextField";
 import sindhAssembly from "../assets/sindhAssemblywomen.png";
 import agricult from "../assets/agricult.png";
+import { useSelector } from "react-redux";
+import { translations } from "../Transalation/Transalation";
 import "../Css/resource.css";
 
 function Agriculture(props) {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const {language} = useSelector((state)=>state.language)
+ 
   useEffect(() => {
 
     // Function to update the windowWidth state when the resize event occurs
@@ -87,7 +91,7 @@ function Agriculture(props) {
             isVisible ? "" : "slide-out-left"
           }`}
         >
-          Agriculture
+          {translations['AgricultureandFoodP'][language]}
         </h1>
       </div>
       <div className="row breadCrumb">
@@ -331,7 +335,7 @@ function Agriculture(props) {
           }}
         >
           {" "}
-          Contact Our Agriculture Expert
+          Contact Our Agriculture and Food Processing Expert
         </label>
         <div
           className="col-lg-12 sectorMUI"
