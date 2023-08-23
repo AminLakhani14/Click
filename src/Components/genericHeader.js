@@ -8,8 +8,11 @@ import urdu from "../assets/urdu.png";
 import "../Css/resource.css";
 import click from "../assets/click-logo1.png";
 import cardImage from "../assets/cardresource1.png";
+import { setLanguage } from "../Redux/Reducer/languageSlice";
+
 import Sindhi from "../assets/Sindhi.png";
 import English from "../assets/English.png";
+import { useDispatch, useSelector } from "react-redux";
 
 export default function GenericHeader(props) {
   const [isSticky, setIsSticky] = useState(false);
@@ -83,9 +86,30 @@ export default function GenericHeader(props) {
     };
   }
    
+  const {language} = useSelector((state)=>state.language)
+  const dispatch = useDispatch()
+
+  const toggleLanguage = () => {
+    if(language == 'ur'){
+      dispatch(setLanguage('en'));
+    }else{
+      dispatch(setLanguage('ur'));
+    }
+  
+};
+
+const SindhitoggleLanguage = () => {
+  if(language == 'sd'){
+    dispatch(setLanguage('en'));
+  }else{
+    dispatch(setLanguage('sd'));
+  }
+    
+};
 
 
 
+console.log("hello",props.toggleLanguage);
   return (
     <div
       className={"genericheader  sticky  "}
@@ -118,18 +142,19 @@ export default function GenericHeader(props) {
           <div className="navbarRight">
             <ul>
             <div className="r-side d-inline">
-              <img
+            <img
                   className="headerLogoImages"
-                  src={props.language === "ur" ? English : urdu}
+                  src={language === "ur" ? English : urdu}
                   alt=""
-                  onClick={props.toggleLanguage}
+                  onClick={toggleLanguage}
                   style={{ marginLeft: "20px", marginRight: "20px" }}
                 />
                 <img
                   className="headerLogoImages"
-                  src={Sindhi}
+                  src={language === "sd" ? English : Sindhi}
+                  // src={Sindhi}
                   alt=""
-                  onClick={props.toggleLanguage}
+                  onClick={SindhitoggleLanguage}
                   style={{ marginLeft: "20px", marginRight: "20px" }}
                 />
               </div>

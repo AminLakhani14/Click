@@ -15,6 +15,8 @@ import dongxin from "../assets/dongxin.png";
 import { Carousel } from "@trendyol-js/react-carousel";
 import licensed from "../assets/licensed-img.png"
 import chineseBW from "../assets/chinaBW.png";
+import { translations } from "../Transalation/Transalation";
+import { useSelector } from "react-redux";
 
 const imageMapColor = {
   "GndE": chinese,
@@ -29,44 +31,94 @@ const imageMapBW = {
   "dhColor": dhBlack
 };
 let ID = "GndE"
-function MobileTestimonial() {
-    const array =[
-        {
-          id: "GndE",
-          img:chinese,
-          name:'Henry Lawrence "Larry" Culp, Jr',
-          subtitle:" Chairman and Chief Executive Officer",
-          desc:`We have been impressed with the Sindh Government's commitment to creating a favorable business environment in the Province. Their efforts to improve infrastructure and streamline business regulations have made it easier for us to invest in the region, and we are excited about the opportunities that Sindh presents.`,
-          mainImage:henry,
-          altImage:chinese,
-        },
-        {
-          id:"china",
-          img:chinaMobile,
-          name:'DONG Xin',
-          subtitle:"Executive Director and Chief Executive Officer",
-          desc:`The Sindh Government's support for our project has been instrumental in its success. Their dedication to creating a favorable investment climate, combined with their commitment to sustainability and responsible business practices, have helped us to achieve our goals while contributing to the development of the region.`,
-          mainImage:dongxin,
-          altImage:chinaMobile,
-        },
-        {
-          id:"engroColor",
-          img:engroColor,
-          name:'Henry Lawrence "Larry" Culp, Jr',
-          subtitle:"Chairman and Chief Executive Officer",
-          desc:`We have been impressed with the Sindh Government's commitment to creating a favorable business environment in the province. Their efforts to improve infrastructure and streamline business regulations have made it easier for us to invest in the region, and we are excited about the opportunities that Sindh presents.`,
-          mainImage:henry,
-          altImage:engroColor,
-        },
-        {
-          id:"dhColor",
-          img:dhColor,
-          name:'Henry Lawrence "Larry" Culp, Jr',
-          subtitle:"Chairman and Chief Executive Officer",
-          desc:`We have been impressed with the Sindh Government's commitment to creating a favorable business environment in the province. Their efforts to improve infrastructure and streamline business regulations have made it easier for us to invest in the region, and we are excited about the opportunities that Sindh presents.`,
-          mainImage:henry,
-          altImage:dhColor,
-        }
+function MobileTestimonial(props) {
+  const {language} = useSelector((state)=>state.language)
+
+  const array =[
+    {
+      id: "GndE",
+      img:chinese,
+      name: {
+        en: 'Henry Lawrence "Larry" Culp, Jr',
+        ur: 'ہنری لارنس "لیری" کلپ، جونیئر',
+        sd: 'هينري لارنس "ليري" ڪلپ، جونيئر',
+      },
+      subtitle: {
+        en: 'Chairman and Chief Executive Officer',
+        ur: 'چیئرمین اور چیف ایگزیکٹو آفیسر',
+        sd: 'چيئرمين ۽ چيف ايگزيڪيوٽو آفيسر',
+      },
+      desc: {
+        en: `We have been impressed with the Sindh government's commitment to creating a favorable business environment in the province. Their efforts to improve infrastructure and streamline business regulations have made it easier for us to invest in the region, and we are excited about the opportunities that Sindh presents.`,
+        ur: "ہم صوبے میں کاروبار کے لیے سازگار ماحول پیدا کرنے کے لیے حکومت سندھ کے عزم سے بہت متاثر ہوئے ہیں۔ انفراسٹرکچر کو بہتر بنانے اور کاروباری ضوابط کو ہموار کرنے کی ان کی کوششوں نے ہمارے لیے خطے میں سرمایہ کاری کو آسان بنا دیا ہے، اور ہم سندھ کے پیش کردہ مواقع کے بارے میں پرجوش ہیں",
+        sd: 'اسان صوبي ۾ ڪاروباري ماحول پيدا ڪرڻ لاءِ سنڌ حڪومت جي عزم کان متاثر ٿيا آهيون. بنيادي ڍانچي کي بهتر بڻائڻ ۽ ڪاروباري ضابطن کي منظم ڪرڻ لاءِ انهن جي ڪوششن اسان لاءِ خطي ۾ سيڙپڪاري ڪرڻ کي آسان بڻائي ڇڏيو آهي، ۽ اسان انهن موقعن لاءِ پرجوش آهيون جيڪي سنڌ پيش ڪري رهيا آهن.',
+      },
+      mainImage:henry,
+      altImage:chinese,
+    },
+    {
+      id:"china",
+      img:chinaMobile,
+      name: {
+        en: 'DONG Xin',
+        ur: 'ڈونگ زین',
+        sd: 'ڈونگ زین',
+      },
+      subtitle: {
+        en: 'Executive Director and Chief Executive Officer',
+        ur: 'ایگزیکٹو ڈائریکٹر اور چیف ایگزیکٹو آفیسر',
+        sd: 'ايگزيڪيوٽو ڊائريڪٽر ۽ چيف ايگزيڪيوٽو آفيسر',
+      },
+      desc: {
+        en: `The Sindh government's support for our project has been instrumental in its success. Their dedication to creating a favorable investment climate, combined with their commitment to sustainability and responsible business practices, have helped us to achieve our goals while contributing to the development of the region.`,
+        ur: 'ہمارے منصوبے کی کامیابی میں سندھ حکومت کا تعاون اہم ہے۔ سرمایہ کاری کے لیے سازگار ماحول پیدا کرنے کے لیے ان کی لگن، پائیداری اور ذمہ دارانہ کاروباری طریقوں کے لیے ان کے عزم کے ساتھ مل کر، خطے کی ترقی میں اپنا حصہ ڈالتے ہوئے اپنے مقاصد کو حاصل کرنے میں ہماری مدد کرتی ہے',
+        sd: 'اسان جي منصوبي لاءِ سنڌ حڪومت جي مدد ان جي ڪاميابي ۾ اهم ڪردار ادا ڪري رهي آهي. هڪ سازگار سيڙپڪار ماحول پيدا ڪرڻ لاءِ انهن جي وقف، استحڪام ۽ ذميوار ڪاروباري عملن جي انهن جي عزم سان گڏ، خطي جي ترقي ۾ حصو وٺندي اسان کي پنهنجا مقصد حاصل ڪرڻ ۾ مدد ڪئي آهي',
+      },
+      mainImage:dongxin,
+      altImage:chinaMobile,
+    },
+    {
+      id:"engroColor",
+      img:engroColor,
+      name: {
+        en: 'Henry Lawrence "Larry" Culp, Jr',
+        ur: 'ہنری لارنس "لیری" کلپ، جونیئر',
+        sd: 'هينري لارنس "ليري" ڪلپ، جونيئر',
+      },
+      subtitle: {
+        en: 'Chairman and Chief Executive Officer',
+        ur: 'چیئرمین اور چیف ایگزیکٹو آفیسر',
+        sd: 'چيئرمين ۽ چيف ايگزيڪيوٽو آفيسر',
+      },
+      desc: {
+        en: `We have been impressed with the Sindh government's commitment to creating a favorable business environment in the province. Their efforts to improve infrastructure and streamline business regulations have made it easier for us to invest in the region, and we are excited about the opportunities that Sindh presents.`,
+        ur: "ہم صوبے میں کاروبار کے لیے سازگار ماحول پیدا کرنے کے لیے حکومت سندھ کے عزم سے بہت متاثر ہوئے ہیں۔ انفراسٹرکچر کو بہتر بنانے اور کاروباری ضوابط کو ہموار کرنے کی ان کی کوششوں نے ہمارے لیے خطے میں سرمایہ کاری کو آسان بنا دیا ہے، اور ہم سندھ کے پیش کردہ مواقع کے بارے میں پرجوش ہیں",
+        sd: 'اسان صوبي ۾ ڪاروباري ماحول پيدا ڪرڻ لاءِ سنڌ حڪومت جي عزم کان متاثر ٿيا آهيون. بنيادي ڍانچي کي بهتر بڻائڻ ۽ ڪاروباري ضابطن کي منظم ڪرڻ لاءِ انهن جي ڪوششن اسان لاءِ خطي ۾ سيڙپڪاري ڪرڻ کي آسان بڻائي ڇڏيو آهي، ۽ اسان انهن موقعن لاءِ پرجوش آهيون جيڪي سنڌ پيش ڪري رهيا آهن.',
+      },
+      mainImage:henry,
+      altImage:engroColor,
+    },
+    {
+      id:"dhColor",
+      img:dhColor,
+      name: {
+        en: 'Henry Lawrence "Larry" Culp, Jr',
+        ur: 'ہنری لارنس "لیری" کلپ، جونیئر',
+        sd: 'هينري لارنس "ليري" ڪلپ، جونيئر',
+      },
+      subtitle: {
+        en: 'Chairman and Chief Executive Officer',
+        ur: 'چیئرمین اور چیف ایگزیکٹو آفیسر',
+        sd: 'چيئرمين ۽ چيف ايگزيڪيوٽو آفيسر',
+      },
+      desc: {
+        en: `We have been impressed with the Sindh government's commitment to creating a favorable business environment in the province. Their efforts to improve infrastructure and streamline business regulations have made it easier for us to invest in the region, and we are excited about the opportunities that Sindh presents.`,
+        ur: "ہم صوبے میں کاروبار کے لیے سازگار ماحول پیدا کرنے کے لیے حکومت سندھ کے عزم سے بہت متاثر ہوئے ہیں۔ انفراسٹرکچر کو بہتر بنانے اور کاروباری ضوابط کو ہموار کرنے کی ان کی کوششوں نے ہمارے لیے خطے میں سرمایہ کاری کو آسان بنا دیا ہے، اور ہم سندھ کے پیش کردہ مواقع کے بارے میں پرجوش ہیں",
+        sd: 'اسان صوبي ۾ ڪاروباري ماحول پيدا ڪرڻ لاءِ سنڌ حڪومت جي عزم کان متاثر ٿيا آهيون. بنيادي ڍانچي کي بهتر بڻائڻ ۽ ڪاروباري ضابطن کي منظم ڪرڻ لاءِ انهن جي ڪوششن اسان لاءِ خطي ۾ سيڙپڪاري ڪرڻ کي آسان بڻائي ڇڏيو آهي، ۽ اسان انهن موقعن لاءِ پرجوش آهيون جيڪي سنڌ پيش ڪري رهيا آهن.',
+      },
+      mainImage:henry,
+      altImage:dhColor,
+    }
       ]
     
     const [imgFormData, setimgFormData] = useState({img: array[0]?.img, name: array[0]?.name, subtitle: array[0]?.subtitle, desc: array[0]?.desc ,mainImage: array[0]?.mainImage})
@@ -136,7 +188,7 @@ function MobileTestimonial() {
                     fontFamily: "Crimson Pro !important",
                     fontSize: "30px",
                     marginLeft: "-30px"
-               }}>Testimonials</h1>
+               }}>{translations["Testimonials"][language]}</h1>
                 </div>
             </div>
              <div className="row justify-content-center mt-3">
@@ -242,18 +294,27 @@ function MobileTestimonial() {
                     <img src={quote} width="60" height="60"></img>
                   </a>
                   <div className="media-body">
-                    <h3 className="title">{imgFormData?.name} </h3>
+                    <h3 className="title">{imgFormData?.name[language]}</h3>
                     <p
                       className="card-subtitle"
-                      style={{ fontWeight: "400", color: "rgb(163, 163, 163)" }}
+                      style={
+                        language === "ur" || language === "sd"
+                          ? { display: "contents", fontWeight: "400", color: "rgb(163, 163, 163)" }
+                          : {fontWeight: "400", color: "rgb(163, 163, 163)" }
+                      }
                     >
-                     {imgFormData?.subtitle}
+                     {imgFormData?.subtitle[language]}
                     </p>
                   </div>
                 </div>
                 <div className="mt-3">
-                  <p className="sub-title">
-                    {imgFormData?.desc}
+                  <p className="sub-title"
+                  style={
+                    language === "ur" || language === "sd"
+                      ? {textAlign:"end"}
+                      : {textAlign:"inherit" }
+                  }>
+                  {imgFormData?.desc[language]}
                   </p>
                 </div>
               </div>

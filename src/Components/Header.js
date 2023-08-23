@@ -29,9 +29,12 @@ import GenericHeader from "./genericHeader";
 import { Tooltip } from "antd";
 import { useMemo } from "react";
 import { translations } from "../Transalation/Transalation";
+import { useSelector } from "react-redux";
 
 
 function Header(props) {
+const {language} = useSelector((state)=>state.language)
+
   const [isHovered, setIsHovered] = useState(false);
 
   const handleMouseEnterFaceBook = () => {
@@ -468,6 +471,7 @@ function Header(props) {
   //   },
   // };
 
+
   return (
     <>
       <div className="container-fluid" style={{ overflowX: "hidden" }}>
@@ -534,28 +538,29 @@ function Header(props) {
                 /> */}
                 <img
                   className="headerLogoImages"
-                  src={props.language === "ur" ? English : urdu}
+                  src={language === "ur" ? English : urdu}
                   alt=""
                   onClick={props.toggleLanguage}
                   style={{ marginLeft: "20px", marginRight: "20px" }}
                 />
                 <img
                   className="headerLogoImages"
-                  src={Sindhi}
+                  src={language === "sd" ? English : Sindhi}
+                  // src={Sindhi}
                   alt=""
-                  onClick={props.toggleLanguage}
+                  onClick={props.SindhitoggleLanguage}
                   style={{ marginLeft: "20px", marginRight: "20px" }}
                 />
                 <a href="comingsoon.html">
                   <button type="button" className="login">
-                    <span>{translations["Login"][props.language]}</span>
+                    <span>{translations["Login"][language]}</span>
                   </button>
                 </a>
                 &nbsp;&nbsp;
                 <Link to={"/feedback"} style={{ textDecoration: "none" }}>
                   <button type="button" className="feedback">
                     <span>
-                      {translations["Feedback"][props.language]}
+                      {translations["Feedback"][language]}
                     </span>
                   </button>
                 </Link>
@@ -563,7 +568,7 @@ function Header(props) {
             </div>
             {isSticky === true ? (
               <div style={{ position: "relative", zIndex: "99999999999" }}>
-                <GenericHeader translations={translations} language={props.language} toggleLanguage={props.toggleLanguage}/>
+                <GenericHeader toggleLanguage={props.toggleLanguage} SindhitoggleLanguage={props.SindhitoggleLanguage}/>
               </div>
             ) : (
               <div className={`header `}>
@@ -574,7 +579,7 @@ function Header(props) {
                   >
                     <ul
                       style={
-                        props.language === "ur" || props.language === "sd"
+                        language === "ur" || language === "sd"
                           ? {
                               display: "flex",
                               marginBottom: "0px",
@@ -590,7 +595,7 @@ function Header(props) {
                           className={"link"}
                         >
                           <Link className={"link"} to={"/home"}>
-                            {translations["home"][props.language]}
+                            {translations["home"][language]}
                           </Link>
                         </a>
                       </li>
@@ -603,7 +608,7 @@ function Header(props) {
                           <Link className={"link"} to={"/WhySindh"}>
                             {
                               translations["sindhATglance"][
-                                props.language
+                                language
                               ]
                             }
                           </Link>
@@ -612,7 +617,7 @@ function Header(props) {
                       <li>
                         <a title="" className={"link"}>
                           <Link className="link" to={"/InvestNow"}>
-                            {translations["InvestNow"][props.language]}
+                            {translations["InvestNow"][language]}
                           </Link>
                         </a>
                       </li>
@@ -620,7 +625,7 @@ function Header(props) {
                         <div
                           class="dropdown"
                           style={
-                            props.language === "ur" || props.language === "sd"
+                            language === "ur" || language === "sd"
                               ? {
                                   display: "flex",
                                   flexDirection: "row-reverse",
@@ -638,7 +643,7 @@ function Header(props) {
                             <Link className={"link"} to={"/Opportunity"}>
                               {
                                 translations["Opportunities"][
-                                  props.language
+                                  language
                                 ]
                               }
                             </Link>
@@ -650,7 +655,7 @@ function Header(props) {
                           <div
                             class="dropdown-content"
                             style={
-                              props.language === "ur" || props.language === "sd"
+                              language === "ur" || language === "sd"
                                 ? { marginTop: "30px" }
                                 : {}
                             }
@@ -661,8 +666,8 @@ function Header(props) {
                             >
                               <span
                                 style={
-                                  props.language === "ur" ||
-                                  props.language === "sd"
+                                  language === "ur" ||
+                                  language === "sd"
                                     ? {
                                         display: "flex",
                                         width: "100%",
@@ -683,8 +688,8 @@ function Header(props) {
                                   //   paddingTop: "8px",
                                   // }}
                                   style={
-                                    props.language === "ur" ||
-                                    props.language === "sd"
+                                    language === "ur" ||
+                                    language === "sd"
                                       ? {
                                           width: "210px",
                                           paddingLeft: "15px",
@@ -709,15 +714,15 @@ function Header(props) {
                                   >
                                     {
                                       translations["Manufacturing"][
-                                        props.language
+                                        language
                                       ]
                                     }
                                   </Link>
                                 </a>
                                 <i
                                   style={
-                                    props.language === "ur" ||
-                                    props.language === "sd"
+                                    language === "ur" ||
+                                    language === "sd"
                                       ? {
                                           marginTop: "10px",
                                           marginLeft: "0px",
@@ -744,7 +749,7 @@ function Header(props) {
                                   <a onClick={() => { window.scrollTo({ top: 2800, left: 0, behavior: "smooth" }); }} >
                                     {
                                       translations["Talktoexpert"][
-                                        props.language
+                                        language
                                       ]
                                     }
                                   </a>
@@ -758,8 +763,8 @@ function Header(props) {
                             >
                               <span
                                 style={
-                                  props.language === "ur" ||
-                                  props.language === "sd"
+                                  language === "ur" ||
+                                  language === "sd"
                                     ? {
                                         display: "flex",
                                         width: "100%",
@@ -774,8 +779,8 @@ function Header(props) {
                               >
                                 <a
                                   style={
-                                    props.language === "ur" ||
-                                    props.language === "sd"
+                                    language === "ur" ||
+                                    language === "sd"
                                       ? {
                                           width: "210px",
                                           paddingLeft: "15px",
@@ -796,15 +801,15 @@ function Header(props) {
                                   <Link onClick={() => { window.scrollTo({ top: 0, left: 0, behavior: "smooth" }); }} className={"link"} to={"/textile"}>
                                     {
                                       translations["Textile"][
-                                        props.language
+                                        language
                                       ]
                                     }
                                   </Link>
                                 </a>
                                 <i
                                   style={
-                                    props.language === "ur" ||
-                                    props.language === "sd"
+                                    language === "ur" ||
+                                    language === "sd"
                                       ? {
                                           marginTop: "10px",
                                           marginLeft: "0px",
@@ -831,7 +836,7 @@ function Header(props) {
                                   <a onClick={() => { window.scrollTo({ top: 2800, left: 0, behavior: "smooth" }); }} href="#">
                                     {
                                       translations["Talktoexpert"][
-                                        props.language
+                                        language
                                       ]
                                     }
                                   </a>
@@ -845,8 +850,8 @@ function Header(props) {
                             >
                               <span
                                 style={
-                                  props.language === "ur" ||
-                                  props.language === "sd"
+                                  language === "ur" ||
+                                  language === "sd"
                                     ? {
                                         display: "flex",
                                         width: "100%",
@@ -861,8 +866,8 @@ function Header(props) {
                               >
                                 <a
                                   style={
-                                    props.language === "ur" ||
-                                    props.language === "sd"
+                                    language === "ur" ||
+                                    language === "sd"
                                       ? {
                                           width: "210px",
                                           paddingLeft: "15px",
@@ -886,15 +891,15 @@ function Header(props) {
                                     className={"link"} to={"/tourism"}>
                                     {
                                       translations["Tourism"][
-                                        props.language
+                                        language
                                       ]
                                     }
                                   </Link>
                                 </a>
                                 <i
                                   style={
-                                    props.language === "ur" ||
-                                    props.language === "sd"
+                                    language === "ur" ||
+                                    language === "sd"
                                       ? {
                                           marginTop: "10px",
                                           marginLeft: "0px",
@@ -921,7 +926,7 @@ function Header(props) {
                                   <a onClick={() => { window.scrollTo({ top: 2800, left: 0, behavior: "smooth" }); }}  href="#">
                                     {
                                       translations["Talktoexpert"][
-                                        props.language
+                                        language
                                       ]
                                     }
                                   </a>
@@ -935,8 +940,8 @@ function Header(props) {
                             >
                               <span
                                 style={
-                                  props.language === "ur" ||
-                                  props.language === "sd"
+                                  language === "ur" ||
+                                  language === "sd"
                                     ? {
                                         display: "flex",
                                         width: "100%",
@@ -951,8 +956,8 @@ function Header(props) {
                               >
                                 <a
                                   style={
-                                    props.language === "ur" ||
-                                    props.language === "sd"
+                                    language === "ur" ||
+                                    language === "sd"
                                       ? {
                                           width: "210px",
                                           paddingLeft: "15px",
@@ -976,15 +981,15 @@ function Header(props) {
                                   className={"link"} to={"/agriculture"}>
                                     {
                                       translations["Agriculture"][
-                                        props.language
+                                        language
                                       ]
                                     }
                                   </Link>
                                 </a>
                                 <i
                                   style={
-                                    props.language === "ur" ||
-                                    props.language === "sd"
+                                    language === "ur" ||
+                                    language === "sd"
                                       ? {
                                           marginTop: "10px",
                                           marginLeft: "0px",
@@ -1011,7 +1016,7 @@ function Header(props) {
                                   <a href="#" onClick={() => { window.scrollTo({ top: 2800, left: 0, behavior: "smooth" }); }}  >
                                     {
                                       translations["Talktoexpert"][
-                                        props.language
+                                        language
                                       ]
                                     }
                                   </a>
@@ -1025,8 +1030,8 @@ function Header(props) {
                             >
                               <span
                                 style={
-                                  props.language === "ur" ||
-                                  props.language === "sd"
+                                  language === "ur" ||
+                                  language === "sd"
                                     ? {
                                         display: "flex",
                                         width: "100%",
@@ -1041,8 +1046,8 @@ function Header(props) {
                               >
                                 <a
                                   style={
-                                    props.language === "ur" ||
-                                    props.language === "sd"
+                                    language === "ur" ||
+                                    language === "sd"
                                       ? {
                                           width: "210px",
                                           paddingLeft: "15px",
@@ -1065,15 +1070,15 @@ function Header(props) {
                                    }} className={"link"} to={"/education"}>
                                     {
                                       translations["Education"][
-                                        props.language
+                                        language
                                       ]
                                     }
                                   </Link>
                                 </a>
                                 <i
                                   style={
-                                    props.language === "ur" ||
-                                    props.language === "sd"
+                                    language === "ur" ||
+                                    language === "sd"
                                       ? {
                                           marginTop: "10px",
                                           marginLeft: "0px",
@@ -1102,7 +1107,7 @@ function Header(props) {
                                   <a onClick={() => { window.scrollTo({ top: 2800, left: 0, behavior: "smooth" }); }}  href="#">
                                     {
                                       translations["Talktoexpert"][
-                                        props.language
+                                        language
                                       ]
                                     }
                                   </a>
@@ -1116,8 +1121,8 @@ function Header(props) {
                             >
                               <span
                                 style={
-                                  props.language === "ur" ||
-                                  props.language === "sd"
+                                  language === "ur" ||
+                                  language === "sd"
                                     ? {
                                         display: "flex",
                                         width: "100%",
@@ -1132,8 +1137,8 @@ function Header(props) {
                               >
                                 <a
                                   style={
-                                    props.language === "ur" ||
-                                    props.language === "sd"
+                                    language === "ur" ||
+                                    language === "sd"
                                       ? {
                                           width: "210px",
                                           paddingLeft: "15px",
@@ -1156,15 +1161,15 @@ function Header(props) {
                                    className={"link"} to={"/energy"}>
                                     {
                                       translations["Energy"][
-                                        props.language
+                                        language
                                       ]
                                     }
                                   </Link>
                                 </a>
                                 <i
                                   style={
-                                    props.language === "ur" ||
-                                    props.language === "sd"
+                                    language === "ur" ||
+                                    language === "sd"
                                       ? {
                                           marginTop: "10px",
                                           marginLeft: "0px",
@@ -1191,7 +1196,7 @@ function Header(props) {
                                   <a onClick={() => { window.scrollTo({ top: 2800, left: 0, behavior: "smooth" }); }} href="#">
                                     {
                                       translations["Talktoexpert"][
-                                        props.language
+                                        language
                                       ]
                                     }
                                   </a>
@@ -1205,8 +1210,8 @@ function Header(props) {
                             >
                               <span
                                 style={
-                                  props.language === "ur" ||
-                                  props.language === "sd"
+                                  language === "ur" ||
+                                  language === "sd"
                                     ? {
                                         display: "flex",
                                         width: "100%",
@@ -1221,8 +1226,8 @@ function Header(props) {
                               >
                                 <a
                                   style={
-                                    props.language === "ur" ||
-                                    props.language === "sd"
+                                    language === "ur" ||
+                                    language === "sd"
                                       ? {
                                           width: "210px",
                                           paddingLeft: "15px",
@@ -1243,15 +1248,15 @@ function Header(props) {
                                   <Link onClick={() => { window.scrollTo({ top: 0, left: 0, behavior: "smooth" }); }} className={"link"} to={"/health"}>
                                     {
                                       translations["Health"][
-                                        props.language
+                                        language
                                       ]
                                     }
                                   </Link>
                                 </a>
                                 <i
                                   style={
-                                    props.language === "ur" ||
-                                    props.language === "sd"
+                                    language === "ur" ||
+                                    language === "sd"
                                       ? {
                                           marginTop: "10px",
                                           marginLeft: "0px",
@@ -1278,7 +1283,7 @@ function Header(props) {
                                   <a onClick={() => { window.scrollTo({ top: 2800, left: 0, behavior: "smooth" }); }} href="#">
                                     {
                                       translations["Talktoexpert"][
-                                        props.language
+                                        language
                                       ]
                                     }
                                   </a>
@@ -1292,8 +1297,8 @@ function Header(props) {
                             >
                               <span
                                 style={
-                                  props.language === "ur" ||
-                                  props.language === "sd"
+                                  language === "ur" ||
+                                  language === "sd"
                                     ? {
                                         display: "flex",
                                         width: "100%",
@@ -1308,8 +1313,8 @@ function Header(props) {
                               >
                                 <a
                                   style={
-                                    props.language === "ur" ||
-                                    props.language === "sd"
+                                    language === "ur" ||
+                                    language === "sd"
                                       ? {
                                           width: "210px",
                                           paddingLeft: "15px",
@@ -1336,14 +1341,14 @@ function Header(props) {
                                     {
                                       translations[
                                         "InformationTechnology"
-                                      ][props.language]
+                                      ][language]
                                     }
                                   </Link>
                                 </a>
                                 <i
                                   style={
-                                    props.language === "ur" ||
-                                    props.language === "sd"
+                                    language === "ur" ||
+                                    language === "sd"
                                       ? {
                                           marginTop: "10px",
                                           marginLeft: "0px",
@@ -1370,7 +1375,7 @@ function Header(props) {
                                   <a onClick={() => { window.scrollTo({ top: 2800, left: 0, behavior: "smooth"  }); }} href="#">
                                     {
                                       translations["Talktoexpert"][
-                                        props.language
+                                        language
                                       ]
                                     }
                                   </a>
@@ -1385,7 +1390,7 @@ function Header(props) {
                           <Link className="link" to={"/NewsAndInformation"}>
                             {
                               translations["NewsInformation"][
-                                props.language
+                                language
                               ]
                             }
                           </Link>
@@ -1395,7 +1400,7 @@ function Header(props) {
                         <div
                           class="dropdown"
                           style={
-                            props.language === "ur" || props.language === "sd"
+                            language === "ur" || language === "sd"
                               ? {
                                   display: "flex",
                                   flexDirection: "row-reverse",
@@ -1410,7 +1415,7 @@ function Header(props) {
                             }}
                             className={"link"}
                           >
-                            {translations["Resources"][props.language]}
+                            {translations["Resources"][language]}
                           </span>
                           <i
                             style={{ marginTop: "0px", marginLeft: "0px" }}
@@ -1419,7 +1424,7 @@ function Header(props) {
                           <div
                             class="dropdown-content"
                             style={
-                              props.language === "ur" || props.language === "sd"
+                              language === "ur" || language === "sd"
                                 ? { marginTop: "30px" }
                                 : {}
                             }
@@ -1427,14 +1432,14 @@ function Header(props) {
                             <Link className={""} to={"/resource"}>
                               <a target="_blank" href="">
                                 {/* <Link className="link" to={"/ComingSoon"}> */}
-                                {translations["Download"][props.language]}
+                                {translations["Download"][language]}
                               </a>
                             </Link>
                             <Link className={""} to={"/regulatorycatalog"}>
                               <a href="#">
                                 {
                                   translations["RegulatoryCatalog"][
-                                    props.language
+                                    language
                                   ]
                                 }
                               </a>
@@ -1446,7 +1451,7 @@ function Header(props) {
                         <div
                           class="dropdown"
                           style={
-                            props.language === "ur" || props.language === "sd"
+                            language === "ur" || language === "sd"
                               ? {
                                   display: "flex",
                                   flexDirection: "row-reverse",
@@ -1462,7 +1467,7 @@ function Header(props) {
                             className={"link"}
                           >
                             {" "}
-                            {translations["Aboutus"][props.language]}
+                            {translations["Aboutus"][language]}
                           </span>
                           <i
                             style={{ marginTop: "0px", marginLeft: "0px" }}
@@ -1471,7 +1476,7 @@ function Header(props) {
                           <div
                             class="dropdown-content"
                             style={
-                              props.language === "ur" || props.language === "sd"
+                              language === "ur" || language === "sd"
                                 ? { marginTop: "30px" }
                                 : {}
                             }
@@ -1481,8 +1486,8 @@ function Header(props) {
                                 target="_blank"
                                 href=""
                                 style={
-                                  props.language === "ur" ||
-                                  props.language === "sd"
+                                  language === "ur" ||
+                                  language === "sd"
                                     ? {
                                         display: "flex",
                                         flexDirection: "row-reverse",
@@ -1491,7 +1496,7 @@ function Header(props) {
                                     : {}
                                 }
                               >
-                                {translations["Vision"][props.language]}
+                                {translations["Vision"][language]}
                               </a>
                             </Link>
                             <div
@@ -1500,8 +1505,8 @@ function Header(props) {
                             >
                               <span
                                 style={
-                                  props.language === "ur" ||
-                                  props.language === "sd"
+                                  language === "ur" ||
+                                  language === "sd"
                                     ? {
                                         display: "flex",
                                         flexDirection: "row-reverse",
@@ -1516,8 +1521,8 @@ function Header(props) {
                               >
                                 <a
                                   style={
-                                    props.language === "ur" ||
-                                    props.language === "sd"
+                                    language === "ur" ||
+                                    language === "sd"
                                       ? {
                                           width: "88%",
                                           paddingLeft: "30px",
@@ -1537,7 +1542,7 @@ function Header(props) {
                                 >
                                   {
                                     translations["Components"][
-                                      props.language
+                                      language
                                     ]
                                   }
                                 </a>
@@ -1549,8 +1554,8 @@ function Header(props) {
                                   //   right: "15px",
                                   // }}
                                   style={
-                                    props.language === "ur" ||
-                                    props.language === "sd"
+                                    language === "ur" ||
+                                    language === "sd"
                                       ? {
                                           marginTop: "10px",
                                           marginLeft: "0px",
@@ -1575,7 +1580,7 @@ function Header(props) {
                                   <a href="#">
                                     {
                                       translations["CLICKSID"][
-                                        props.language
+                                        language
                                       ]
                                     }
                                   </a>
@@ -1584,7 +1589,7 @@ function Header(props) {
                                   <a href="#">
                                     {
                                       translations["OurTeam"][
-                                        props.language
+                                        language
                                       ]
                                     }
                                   </a>
@@ -1595,8 +1600,8 @@ function Header(props) {
                               <a
                                 href="#"
                                 style={
-                                  props.language === "ur" ||
-                                  props.language === "sd"
+                                  language === "ur" ||
+                                  language === "sd"
                                     ? {
                                         display: "flex",
                                         flexDirection: "row-reverse",
@@ -1605,7 +1610,7 @@ function Header(props) {
                                     : {}
                                 }
                               >
-                                {translations["CLICKSID"][props.language]}
+                                {translations["CLICKSID"][language]}
                               </a>
                             </Link>
                           </div>
@@ -1615,7 +1620,7 @@ function Header(props) {
                       <li>
                         <a href="comingsoon.html" title="" className={"link"}>
                           <Link className="link" to={"/Maps"}>
-                            {translations["Maps"][props.language]}
+                            {translations["Maps"][language]}
                           </Link>
                         </a>
                       </li>
@@ -1640,7 +1645,7 @@ function Header(props) {
           <div
             className=" px-5"
             style={
-              props.language === "ur" || props.language === "sd"
+              language === "ur" || language === "sd"
                 ? { display: "flex", justifyContent: "end" }
                 : {}
             }
@@ -1649,14 +1654,14 @@ function Header(props) {
               <h1
                 className="hero-heading"
                 style={
-                  props.language === "en"
+                  language === "en"
                     ? { textAlign: "start" }
-                    : props.language === "ur" || props.language === "sd"
+                    : language === "ur" || language === "sd"
                     ? { textAlign: "end" }
                     : { textAlign: "inherit" }
                 }
               >
-                {translations["hero-heading"][props.language]}
+                {translations["hero-heading"][language]}
               </h1>
             </div>
           </div>
@@ -1664,20 +1669,20 @@ function Header(props) {
           <div
             className=" px-5 "
             style={
-              props.language === "ur" || props.language === "sd"
+              language === "ur" || language === "sd"
                 ? { display: "flex", justifyContent: "end", textAlign: "end" }
                 : { textAlign: "inherit" }
             }
           >
             <div className="col-lg-7 col-md-6 col-sm-12 col-xs-12">
               <h2 className="subHeroHeading">
-                {translations["subHeroHeading"][props.language]}
+                {translations["subHeroHeading"][language]}
               </h2>
               <div className="row mt-5 ">
                 <div
                   className="col-lg-11 col-md-7 col-sm-7 col-xs-12 px-0"
                   style={
-                    props.language === "ur"
+                    language === "ur"
                       ? { display: "flex", justifyContent: "end" }
                       : {}
                   }
@@ -1685,14 +1690,14 @@ function Header(props) {
                   <Link className={""} to={"/investnow"}>
                     <button type="button" className="feedback">
                       <span>
-                        {translations["investButton"][props.language]}
+                        {translations["investButton"][language]}
                       </span>
                     </button>
                   </Link>
                   <Link className={""} to={"/RegulatoryCatalogCalculator"}>
                     <button type="button" className="feedback">
                       <span>
-                        {translations["calculatorButton"][props.language]}
+                        {translations["calculatorButton"][language]}
                       </span>
                     </button>
                   </Link>
@@ -1705,7 +1710,7 @@ function Header(props) {
           {isSticky === false ? (
             <div
             className={
-              props.language === "ur" || props.language === "sd"
+              language === "ur" || language === "sd"
                 ? "Nonsticky-icon"
                 : "sticky-icon"
             }>
@@ -1788,7 +1793,7 @@ function Header(props) {
             </div>
           ) : (
             <div className={
-              props.language === "ur" || props.language === "sd"
+              language === "ur" || language === "sd"
                 ? "Nonsticky-icon"
                 : "sticky-icon"
             }>
@@ -1855,7 +1860,7 @@ function Header(props) {
             <div
               className="col-lg-12 updates mx-5"
               style={
-                props.language === "ur" || props.language === "sd"
+                language === "ur" || language === "sd"
                   ? {
                       paddingRight: "60px",
                       position: "relative",
@@ -1883,25 +1888,25 @@ function Header(props) {
               <a
                 href="comingsoon.html"
                 className={
-                  props.language === "ur" || props.language === "sd"
+                  language === "ur" || language === "sd"
                     ? "LanguageUpdateHeader"
                     : "UpdateHeader"
                 }
               >
                 <button type="button" className="update">
-                  <span>{translations["Updates"][props.language]}</span>
+                  <span>{translations["Updates"][language]}</span>
                 </button>
               </a>
-              {props.language === "ur" || props.language === "sd" ? (
+              {language === "ur" || language === "sd" ? (
                 <marquee className="marque" direction="right">
-                  {translations["Headline"][props.language]}
+                  {translations["Headline"][language]}
                 </marquee>
               ) : (
                 ""
               )}
-              {props.language === "en" ? (
+              {language === "en" ? (
                 <marquee className="marque" direction="left">
-                  {translations["Headline"][props.language]}
+                  {translations["Headline"][language]}
                 </marquee>
               ) : (
                 ""

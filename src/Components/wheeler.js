@@ -4,14 +4,17 @@ import CircleSeg from "./practice";
 import asset1 from "../assets/asset1.svg";
 import SVG from 'react-inlinesvg';
 import { translations } from "../Transalation/Transalation";
+import { useSelector } from "react-redux";
 
 function Wheeler(props) {
+  const {language} = useSelector((state)=>state.language)
+
   const wheelerInitialState = {
     deg: 45,
     value: 45,
     color: "#A9A9A9",
     image: "Agriculture",
-    Program: translations["Agriculture"][props.language],
+    Program: translations["Agriculture"][language],
     Percentage: 50,
     Description: "Approx US$1.6 Billion (2019-2020)",
     wheat: "4 Million ",
@@ -87,14 +90,14 @@ function Wheeler(props) {
           <div className="row ">
             <div className="col-12 highlit-heading">
               <h1 className="mainHeading">
-                {translations["Awaiting"][props.language]}</h1>
+                {translations["Awaiting"][language]}</h1>
             </div>
           </div>
           <div className="row" style={{ marginTop: "-20px" }}>
             <div className="col-lg-2"></div>
             <div className="col-lg-8 ph-reason">
               <p className="paragraphGeneric" style={{ color: "#5f5f5f" }}>
-              {translations["Attractives"][props.language]}
+              {translations["Attractives"][language]}
               </p>
             </div>
             <div className="col-lg-2"></div>
@@ -106,7 +109,7 @@ function Wheeler(props) {
             style={{ display: "flex", alignItems: "inherit" }}
           >
             <div className="col-lg-6">
-              <CircleSeg translations={translations} language={props.language}  getSegmentData={getSegmentData} setData={setData} />
+              <CircleSeg translations={translations} language={language}  getSegmentData={getSegmentData} setData={setData} />
             </div>
             <div className="col-lg-6">
               <div
@@ -186,7 +189,7 @@ function Wheeler(props) {
                         </div>
 
                         <div className="col-sm-6">
-                          <h4 className="heading-1" style={{color:`${data.boxColor}`}}>{translations["SectorStatistics"][props.language]}</h4>
+                          <h4 className="heading-1" style={{color:`${data.boxColor}`}}>{translations["SectorStatistics"][language]}</h4>
                         </div>
                         <div>
                           <div className="hr"></div>
@@ -196,11 +199,11 @@ function Wheeler(props) {
                       <div className="row">
                         <div className="col-sm-10 ">
                           <h1 className="heading-1" style={{color:`${data.boxColor}`}} id="">
-                          {translations["Crops"][props.language]}
+                          {translations["Crops"][language]}
                           </h1>
                           <p id="segmentText" style={{color:`${data.boxColor}`}} className="phra-2">
                             {/* Approx US$1.6 Billion (2019-2020) */}
-                            {translations["Dollor"][props.language]}
+                            {translations["Dollor"][language]}
                           </p>
                         </div>
                         <div>
@@ -213,22 +216,22 @@ function Wheeler(props) {
                             <h1 id="box-title1" style={{color:`${data.boxColor}`}} className="heading-1">
                               {/* 4 Million */}
                               {/* {wheelerFormData.wheat} */}
-                              4{translations["Million"][props.language]}
+                              4{translations["Million"][language]}
                             </h1>
                             <p id="box-subtitle1" style={{color:`${data.boxColor}`}} className="phra-2">
                               {/* tons of wheat */}
-                              {translations["Wheat"][props.language]}
+                              {translations["Wheat"][language]}
                             </p>
                           </div>
                           <div className="col-sm-6">
                             <h1 id="box-title2" style={{color:`${data.boxColor}`}}  className="heading-1">
                               {/* 1.9 Million */}
                               {/* {wheelerFormData.Rice} */}
-                              1.9{translations["Million"][props.language]}
+                              1.9{translations["Million"][language]}
                             </h1>
                             <p id="box-subtitle2" style={{color:`${data.boxColor}`}} className="phra-2">
                               {/* tons of rice */}
-                              {translations["Rice"][props.language]}
+                              {translations["Rice"][language]}
                             </p>
                           </div>
                         </div>
@@ -237,24 +240,24 @@ function Wheeler(props) {
                             <h1 id="box-title3" style={{color:`${data.boxColor}`}} className="heading-1">
                               {/* 4.2 Million */}
                               {/* {wheelerFormData.sugarcane} */}
-                              4.2{translations["Million"][props.language]}
+                              4.2{translations["Million"][language]}
 
                             </h1>
                             <p id="box-subtitle3" style={{color:`${data.boxColor}`}} className="phra-2">
                               {/* tons of sugarcane */}
-                              {translations["Sugarcane"][props.language]}
+                              {translations["Sugarcane"][language]}
                             </p>
                           </div>
                           <div className="col-sm-6">
                             <h1 id="box-title4" style={{color:`${data.boxColor}`}} className="heading-1">
                               {/* 2.3 Million */}
                               {/* {wheelerFormData.cotton} */}
-                              2.3{translations["Million"][props.language]}
+                              2.3{translations["Million"][language]}
 
                             </h1>
                             <p id="box-subtitle4" style={{color:`${data.boxColor}`}} className="phra-2">
                               {/* bales of cotton */}
-                              {translations["Cotton"][props.language]}
+                              {translations["Cotton"][language]}
                             </p>
                           </div>
                         </div>
@@ -268,7 +271,7 @@ function Wheeler(props) {
                                 className="feedback"
                                 style={{ width: "100%",background:`${data.boxColor}` }}
                               >
-                                <span>{translations["B1"][props.language]}</span>
+                                <span>{translations["B1"][language]}</span>
                               </button>
                             </a>
                             <br />
@@ -280,7 +283,7 @@ function Wheeler(props) {
                                 className="feedback"
                                 style={{ width: "100%" ,background:`${data.boxColor}`}}
                               >
-                                <span>{translations["B2"][props.language]}</span>
+                                <span>{translations["B2"][language]}</span>
                               </button>
                             </a>
                           </div>
