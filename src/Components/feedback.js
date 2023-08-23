@@ -6,12 +6,30 @@ import Footer from "./footer";
 import GenericHeader from "./genericHeader";
 import "../Css/investnow.css";
 import BG1 from "../assets/BG1.jpg";
+import { useEffect } from "react";
 
 import { Box, TextField, TextareaAutosize } from "@mui/material";
 import MobileHeaderGeneric from "./MobileHeaderGeneric";
 
 export default function FeedBack() {
+
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  useEffect(() => {
+
+    // Function to update the windowWidth state when the resize event occurs
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+
+    // Attach the event listener
+    window.addEventListener('resize', handleResize);
+
+    // Clean up the event listener on component unmount
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+  
   const [isTextareaFocused, setIsTextareaFocused] = useState(false);
   let value = ">";
 
@@ -40,12 +58,12 @@ export default function FeedBack() {
           }}
         >
           <p
-            className={window.innerWidth < 500 ? "mobilePara" : "feedbackpara"}
+            className={window.innerWidth <= 540 ? "mobileparaforfeedback" : "feedbackpara"} style={{fontSize:window.innerWidth === 280 || window.innerWidth ===320 ? "17.5px": " "}}
           >
             We are always looking for ways to deliver an exceptional experience
             to our customers and investors. Your feedback is vital for us to
             achieve this goal. Please use the form below to share your insights
-            and suggestions on how we can improve our services. We value your
+            and suggestions on how we can improve our services. We value your7.5
             time and contribution in helping us grow and succeed. Thank you for
             your support and trust.
           </p>
@@ -55,14 +73,14 @@ export default function FeedBack() {
       <div
         className="row justify-content-center feedbackMUI"
         style={{
-          height: "700px",
+          height: window.innerWidth <= 912 ? "930px":"700px",
           background: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(${BG1})`,
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
         }}
       >
-        <div className="col-lg-9">
-          <div className="row justify-content-center px-5 mt-5">
+        <div className="col-lg-9" style={{height:window.innerWidth <= 912? "950px" :" ",marginTop: window.innerWidth >= 1024? "-49px": "30px"}} >
+          <div className="row justify-content-center px-5 mt-5 gapbwfields">
             <div className="col-lg-4">
               <TextField
                 className="feedBackTextField"
@@ -98,7 +116,7 @@ export default function FeedBack() {
               />
             </div>
           </div>
-          <div className="row justify-content-center px-5 mt-5">
+          <div className="row justify-content-center px-5  gapbwfields" style={{marginTop:window.innerWidth <= 912? "1.5rem": "3rem"}}>
             <div className="col-lg-4">
               <TextField
                 className="feedBackTextField"
@@ -134,7 +152,7 @@ export default function FeedBack() {
               />
             </div>
           </div>
-          <div className="row px-5 mt-5">
+          <div className=  "row  px-5  gapbwfields" style={{marginTop:window.innerWidth <= 912? "1.5rem": "3rem"}}>
             <div className="col-lg-4">
               <TextField
                 className="feedBackTextField"
@@ -211,8 +229,8 @@ export default function FeedBack() {
             </div>
           </div>
           <div
-            className="row justify-content-center px-5 mt-5 "
-            style={{ marginTop: "20px" }}
+            className="row justify-content-center px-5 gapfields "
+            style={{marginTop:window.innerWidth <= 912? "1rem": "3rem"}} 
           >
             <div className="col-lg-12">
               <Box>
@@ -231,6 +249,7 @@ export default function FeedBack() {
                     border: "none", // Remove the default border
                     outline: "none", // Remove the default outline
                     transition: "border-color 0.3s",
+                    overflow: "hidden",
                   }}
                   placeholder="Give your valuable feedback here…"
                   onFocus={() => setIsTextareaFocused(true)}
@@ -239,21 +258,15 @@ export default function FeedBack() {
               </Box>
             </div>
           </div>
-          <div
-            style={{
-              width: "170px",
-              paddingBottom: "10px",
-              paddingLeft: "6px",
-              paddingTop: "50px",
-              display: "flex",
-              marginLeft: "60px",
-            }}
-          >
-            <button type="button" className="feedbacksubmitButton">
-              <span>Submit</span>
-            </button>
+          <div className="row">
+            <div className="col-lg-12 mt-4 tocentersubmitbutton" style={{marginLeft: window.innerWidth >= 1024? "52px": "0px"}} >
+              <button type="button" className="submitButton">
+                <span>Submit</span>
+              </button>
+            </div>
           </div>
-        </div>
+          </div>
+    
       </div>
 
       <Footer />

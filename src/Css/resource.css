@@ -434,7 +434,7 @@ input.regulatoryTextField[type="text"]:focus {
   padding-right: 44px;
 }
 
-.shapatar{
+.circle{
   min-width: max-content;
 }
 
@@ -853,6 +853,72 @@ margin-left: -20px !important;
   .css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root {
   width: 65vw !important;
   }}
+
+/* for the feedback.js form on mobile screens */
+
+
+@media  screen and (min-width: 280px) and (max-width:320px){
+  .gapbwfields{
+    gap:15px;
+    --bs-gutter-x: -0.5rem !important;
+   width: fit-content;
+   
+  }
+  
+}
+
+
+@media  screen and (min-width: 325px) and (max-width:530px){
+  .gapbwfields{
+    gap:15px;
+    width: fit-content;
+   
+  }
+  
+}
+
+
+
+@media  screen and (min-width: 325px) and (max-width:530px){
+  .gapfields{
+    gap:15px;
+    
+   
+  }
+  
+}
+@media  screen and (min-width: 768px) and (max-width:912px){
+  .gapfields{
+    gap:15px;
+    --bs-gutter-x: 15.5rem !important;
+   
+   
+  }
+  
+}
+
+
+
+
+@media  screen and (width:540px){
+  .gapbwfields{
+    gap:15px;
+    
+   
+  }
+  
+}
+
+@media  screen and (min-width: 768px) and (max-width:912px){
+  .gapbwfields{
+    gap:15px;
+    --bs-gutter-x: 15.5rem !important;
+   
+   
+  }
+  
+}
+
 
 
 
