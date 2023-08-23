@@ -518,9 +518,9 @@ export const translations = {
     sd: "ترقي ۽ فرصت کي ختم ڪريو",
   },
   'Version': {
-    en: 'Welcome to the world of endless possibilities in Sindh, Pakistan.This page is your gateway to exploring the vast potential thatawaits investors like you. Sindh offers a strategic location, a thriving business ecosystem, and a rich cultural heritage that sets the stage for remarkable growth. With abundant resources, a skilled workforce, and favorable investment policies, Sindh presents a landscape teeming with opportunities across various sectors. Whether you seek to expand your existing ventures or embark on new ventures, investing in Sindh can be the catalyst for your success. Join us on this journey of growth, innovation, and prosperity as we unlock the boundless opportunities together.',
-    sd: "سنڌ، پاڪستان ۾ لامحدود امڪانن جي دنيا ۾ ڀليڪار. هي صفحو توهان جي وسيع امڪانن کي ڳولڻ جو دروازو آهي جيڪو توهان وانگر سيڙپڪارن جو انتظار ڪري رهيو آهي. سنڌ هڪ اسٽريٽجڪ مقام، هڪ ترقي پذير ڪاروباري ماحوليات، ۽ هڪ شاهوڪار ثقافتي ورثو پيش ڪري ٿو جيڪو قابل ذڪر ترقي لاءِ اسٽيج مقرر ڪري ٿو. وسيع وسيلن، هڪ ماهر افرادي قوت، ۽ سازگار سيڙپڪاري پاليسين سان، سنڌ مختلف شعبن ۾ موقعن سان ڀرپور منظر پيش ڪري ٿي. ڇا توهان پنهنجي موجوده منصوبن کي وڌائڻ چاهيو ٿا يا نوان منصوبا شروع ڪرڻ چاهيو ٿا، سنڌ ۾ سيڙپڪاري توهان جي ڪاميابيءَ لاءِ ڪارگر ثابت ٿي سگهي ٿي. ترقي، جدت ۽ خوشحالي جي هن سفر ۾ اسان سان شامل ٿيو جيئن اسان ان لاڪ لامحدود موقعن کي گڏ ڪريون",
-    ur: "سندھ، پاکستان میں لامتناہی امکانات کی دنیا میں خوش آمدید۔ یہ صفحہ آپ کے وسیع امکانات کو تلاش کرنے کا گیٹ وے ہے جس کا آپ جیسے سرمایہ کار انتظار کر رہے ہیں۔ سندھ ایک اسٹریٹجک محل وقوع، فروغ پزیر کاروباری ماحولیاتی نظام، اور ایک بھرپور ثقافتی ورثہ پیش کرتا ہے جو قابل ذکر ترقی کی منزلیں طے کرتا ہے۔ وافر وسائل، ہنر مند افرادی قوت اور سازگار سرمایہ کاری کی پالیسیوں کے ساتھ، سندھ مختلف شعبوں میں مواقعوں سے بھرپور منظر پیش کرتا ہے۔ چاہے آپ اپنے موجودہ منصوبوں کو بڑھانا چاہتے ہیں یا نئے منصوبے شروع کرنا چاہتے ہیں، سندھ میں سرمایہ کاری آپ کی کامیابی کا محرک ثابت ہوسکتی ہے۔ ترقی، اختراع اور خوشحالی کے اس سفر میں ہمارے ساتھ شامل ہوں کیونکہ ہم ایک ساتھ لاتعداد مواقع کو کھولتے ہیں",
+    en: 'Version',
+    sd: "ورژن",
+    ur: "ورژن",
   },
   'Stage': {
     en: 'Stage',
