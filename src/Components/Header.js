@@ -568,7 +568,7 @@ const {language} = useSelector((state)=>state.language)
             </div>
             {isSticky === true ? (
               <div style={{ position: "relative", zIndex: "99999999999" }}>
-                <GenericHeader  translations={translations} language={language} toggleLanguage={props.toggleLanguage} SindhitoggleLanguage={props.SindhitoggleLanguage}/>
+                <GenericHeader toggleLanguage={props.toggleLanguage} SindhitoggleLanguage={props.SindhitoggleLanguage}/>
               </div>
             ) : (
               <div className={`header `}>

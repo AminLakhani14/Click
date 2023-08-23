@@ -62,7 +62,7 @@ function InvestNow() {
       <div style={{ background: `url(${investNowImg})` }} className="SiteMain2">
         <h1 data-aos="fade-up" className="Investnow-h1">
         {/* {translations["InvestNow"][data.language]} */}
-          Invest now
+        {translations["InvestNow"][language]}
         </h1>
       </div>
       <div className="row breadCrumb">
@@ -99,7 +99,7 @@ function InvestNow() {
             : 
             "mainHeading"
         }>
-          Unleash Growth and Opportunity
+          {translations["Growth"][language]}
         </h1>
         <div
           className="col-lg-10"
@@ -114,29 +114,19 @@ function InvestNow() {
                 ? "mobilePara"
                 : "InvestnowParagraphh"
             }>
-            Welcome to the world of endless possibilities in Sindh, Pakistan.
-            This page is your gateway to exploring the vast potential that
-            awaits investors like you. Sindh offers a strategic location, a
-            thriving business ecosystem, and a rich cultural heritage that sets
-            the stage for remarkable growth. With abundant resources, a skilled
-            workforce, and favorable investment policies, Sindh presents a
-            landscape teeming with opportunities across various sectors. Whether
-            you seek to expand your existing ventures or embark on new ventures,
-            investing in Sindh can be the catalyst for your success. Join us on
-            this journey of growth, innovation, and prosperity as we unlock the
-            boundless opportunities together.
+            {translations["Version"][language]}
           </p>
         </div>
       </div>
       <div className="stageDiv">
         <div data-aos="fade-up" className="stageTextColor">
-          Stage 1
+        {translations["Stage"][language]} 1
         </div>
         <div data-aos="fade-up" className="stageTextColor">
-          Stage 2
+        {translations["Stage"][language]} 2
         </div>
         <div data-aos="fade-up" className="stageTextColor">
-          Stage 3
+        {translations["Stage"][language]} 3
         </div>
       </div>
       <div class="container text-center">
@@ -153,11 +143,10 @@ function InvestNow() {
           <div className="investNowCard">
             <img data-aos="fade-up" src={Bank} width="100" height="100"></img>
             <label data-aos="fade-up" className="stageTextColor">
-              Register Your Company
+            {translations["RegisteryourCOMP"][language]}
             </label>
             <label data-aos="fade-up" className="secondaryLabelColor">
-              The first step in launching your business in Sindh is to register
-              your company.
+             {translations["launching"][language]}
             </label>
             <Link
               data-aos="fade-up"
@@ -167,7 +156,7 @@ function InvestNow() {
                 fontSize: "20px",
               }}
             >
-              Register
+              {translations["Register"][language]}
             </Link>
           </div>
         </div>
@@ -180,11 +169,10 @@ function InvestNow() {
               height="100"
             ></img>
             <label data-aos="fade-up" className="stageTextColor">
-              Open a Bank Account
+            {translations["BankAccount"][language]}
             </label>
             <label data-aos="fade-up" className="secondaryLabelColor">
-              The next vital step in establishing your business in Sindh is to
-              open a bank account.
+            {translations["establishing"][language]}
             </label>
             <Link
               data-aos="fade-up"
@@ -194,7 +182,7 @@ function InvestNow() {
                 fontSize: "20px",
               }}
             >
-              Register
+              {translations["Register"][language]}
             </Link>
           </div>
         </div>
@@ -202,11 +190,10 @@ function InvestNow() {
           <div className="investNowCard">
             <img data-aos="fade-up" src={letter} width="100" height="100"></img>
             <label data-aos="fade-up" className="stageTextColor">
-              Apply for a STRN
+            {translations["STRN"][language]}
             </label>
             <label data-aos="fade-up" className="secondaryLabelColor">
-              Ensure compliance and broaden your market reach by applying for a
-              Sales Tax Registration Number (SPRL).
+            {translations["SalesTax"][language]}
             </label>
             <Link
               data-aos="fade-up"
@@ -216,7 +203,7 @@ function InvestNow() {
                 fontSize: "20px",
               }}
             >
-              Apply for STRN
+              {translations["STRN"][language]}
             </Link>
           </div>
         </div>
@@ -241,7 +228,7 @@ function InvestNow() {
           <a href="comingsoon.html">
             <button type="button" className="InvestInSindhButton">
               <span style={{ width: "179px", height: "33px" }}>
-                Invest in Sindh
+              {translations["InvestSindh"][language]}
               </span>
             </button>
           </a>
@@ -254,7 +241,7 @@ function InvestNow() {
             justifyContent: "center",
           }}
         >
-          Investor’s Guide
+          {translations["InvestorGuide"][language]}
         </h1>
         <div className="width-25">
           <div data-aos="fade-down-right" className="box"></div>
@@ -283,8 +270,8 @@ function InvestNow() {
               <img width="100%" height="150px"></img>
             </div>
             <div className="cardInvestRight">
-              <h2 className="cardInvestHeading">Publication Title</h2>
-              <p className="cardInvestPara">Short description...</p>
+              <h2 className="cardInvestHeading">{translations["PublicationTitle"][language]}</h2>
+              <p className="cardInvestPara">{translations["Shortdescription"][language]}</p>
             </div>
           </div>
         </div>
@@ -298,8 +285,8 @@ function InvestNow() {
               <img width="100%" height="150px"></img>
             </div>
             <div className="cardInvestRight">
-              <h2 className="cardInvestHeading">Publication Title</h2>
-              <p className="cardInvestPara">Short description...</p>
+            <h2 className="cardInvestHeading">{translations["PublicationTitle"][language]}</h2>
+              <p className="cardInvestPara">{translations["Shortdescription"][language]}</p>
             </div>
           </div>
         </div>
@@ -322,8 +309,8 @@ function InvestNow() {
               <img width="100%" height="150px"></img>
             </div>
             <div className="cardInvestRight">
-              <h2 className="cardInvestHeading">Publication Title</h2>
-              <p className="cardInvestPara">Short description...</p>
+            <h2 className="cardInvestHeading">{translations["PublicationTitle"][language]}</h2>
+              <p className="cardInvestPara">{translations["Shortdescription"][language]}</p>
             </div>
           </div>
         </div>
@@ -337,8 +324,8 @@ function InvestNow() {
               <img width="100%" height="150px"></img>
             </div>
             <div className="cardInvestRight">
-              <h2 className="cardInvestHeading">Publication Title</h2>
-              <p className="cardInvestPara">Short description...</p>
+            <h2 className="cardInvestHeading">{translations["PublicationTitle"][language]}</h2>
+              <p className="cardInvestPara">{translations["Shortdescription"][language]}</p>
             </div>
           </div>
         </div>
@@ -354,7 +341,7 @@ function InvestNow() {
         >
           <a href="comingsoon.html">
             <button type="button" className="publicationButton">
-              <span>View More Publications</span>
+              <span>{translations["MorePublications"][language]}</span>
             </button>
           </a>
         </div>
@@ -375,7 +362,7 @@ function InvestNow() {
               ></img>
             </div>
             <p data-aos="fade-up" className="muju__name">
-              Request Information
+            {translations["RequestInformation"][language]}
             </p>
           </li>
         </div>
@@ -394,7 +381,7 @@ function InvestNow() {
               ></img>
             </div>
             <p data-aos="fade-up" className="muju__name">
-              Share Your Feedback
+            {translations["ShareYourFeedback"][language]}
             </p>
           </li>
         </div>
