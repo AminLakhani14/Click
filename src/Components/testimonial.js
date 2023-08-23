@@ -16,6 +16,7 @@ import { Carousel } from "@trendyol-js/react-carousel";
 import licensed from "../assets/licensed-img.png"
 import chineseBW from "../assets/chinaBW.png";
 import { translations } from "../Transalation/Transalation";
+import { useSelector } from "react-redux";
 
 const imageMapColor = {
   "GndE": chinese,
@@ -118,6 +119,8 @@ function Testimonial(props) {
         }
       ]
     
+      const {language} = useSelector((state)=>state.language)
+
     const [imgFormData, setimgFormData] = useState({img: array[0]?.img, name: array[0]?.name, subtitle: array[0]?.subtitle, desc: array[0]?.desc ,mainImage: array[0]?.mainImage})
     const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
@@ -182,7 +185,7 @@ function Testimonial(props) {
             <div className="row">
                 <div className="col-12 highlit-heading">
                     <h1 className="mainHeading" >
-                    {translations["Testimonials"][props.language]}
+                    {translations["Testimonials"][language]}
                     </h1>
                 </div>
             </div>
@@ -307,27 +310,27 @@ function Testimonial(props) {
                     <img src={quote} width="60" height="60"></img>
                   </a>
                   <div className="media-body">
-                    <h3 className="title">{imgFormData?.name[props.language]}</h3>
+                    <h3 className="title">{imgFormData?.name[language]}</h3>
                     <p
                       className="card-subtitle"
                       style={
-                        props.language === "ur" || props.language === "sd"
+                        language === "ur" || language === "sd"
                           ? { display: "contents", fontWeight: "400", color: "rgb(163, 163, 163)" }
                           : {fontWeight: "400", color: "rgb(163, 163, 163)" }
                       }
                     >
-                      {imgFormData?.subtitle[props.language]}
+                      {imgFormData?.subtitle[language]}
                     </p>
                   </div>
                 </div>
                 <div className="mt-3">
                   <p className="sub-title" 
                    style={
-                    props.language === "ur" || props.language === "sd"
+                    language === "ur" || language === "sd"
                       ? {textAlign:"end"}
                       : {textAlign:"inherit" }
                   }>
-                  {imgFormData?.desc[props.language]}
+                  {imgFormData?.desc[language]}
                   </p>
                 </div>
               </div>

@@ -8,7 +8,10 @@ import cement from "../assets/cement.png";
 import "../Css/header.css";
 import { Link } from "react-router-dom";
 import { translations } from "../Transalation/Transalation";
+import { useSelector } from "react-redux";
 function WhySindh(props) {
+  const {language} = useSelector((state)=>state.language)
+
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
   useEffect(() => {
@@ -46,7 +49,7 @@ function WhySindh(props) {
                       }
                 }
               >
-              {translations["sindhATglance"][props.language]}
+              {translations["sindhATglance"][language]}
               </h1>
             </div>
           </div>
@@ -60,7 +63,7 @@ function WhySindh(props) {
               <p
                 className={"favorite"}
               >
-                {translations["FavourEnvironment"][props.language]}
+                {translations["FavourEnvironment"][language]}
               </p>
             </div>
             <div className="col-lg-2"></div>
@@ -86,9 +89,9 @@ function WhySindh(props) {
                     <img src={naturalgas} width="60" height="60"></img>
                   </a>
                   <div className="media-body" style={{ width: "150px" }}>
-                    <h3 className="ch-title">1.3 {translations["Trillion"][props.language]} </h3>
+                    <h3 className="ch-title">1.3 {translations["Trillion"][language]} </h3>
                     <p className="card-subtitle" style={windowWidth <500 ?{textAlign:"start"}:{}}>
-                    {translations["NaturalGas"][props.language]}
+                    {translations["NaturalGas"][language]}
                     </p>
                   </div>
                 </div>
@@ -114,9 +117,9 @@ function WhySindh(props) {
                     <img src={mining} width="60" height="60"></img>
                   </a>
                   <div className="media-body" style={{ width: "150px" }}>
-                    <h3 className="ch-title">184 {translations["Billion"][props.language]}</h3>
+                    <h3 className="ch-title">184 {translations["Billion"][language]}</h3>
                     <p className="card-subtitle" style={windowWidth <500 ?{textAlign:"start"}:{}}>
-                      {translations["TonOfCoal"][props.language]}</p>
+                      {translations["TonOfCoal"][language]}</p>
                   </div>
                 </div>
               </div>
@@ -141,9 +144,9 @@ function WhySindh(props) {
                     <img src={electricity} width="60" height="60"></img>
                   </a>
                   <div className="media-body" style={{ width: "150px" }}>
-                    <h3 className="ch-title">10,000+ {translations["Megawatts"][props.language]}</h3>
+                    <h3 className="ch-title">10,000+ {translations["Megawatts"][language]}</h3>
                     <p className="card-subtitle" style={windowWidth <500 ?{textAlign:"start"}:{}}>
-                    {translations["ElectricityGeneration"][props.language]}
+                    {translations["ElectricityGeneration"][language]}
                     </p>
                   </div>
                 </div>
@@ -173,7 +176,7 @@ function WhySindh(props) {
                   <div className="media-body" style={{ width: "150px" }}>
                     <h3 className="ch-title">70% </h3>
                     <p className="card-subtitle" style={windowWidth <500 ?{textAlign:"start"}:{}}>
-                    {translations["TotalFish"][props.language]}
+                    {translations["TotalFish"][language]}
                     </p>
                   </div>
                 </div>
@@ -201,7 +204,7 @@ function WhySindh(props) {
                   <div className="media-body" style={{ width: "150px" }}>
                     <h3 className="ch-title">600+</h3>
                     <p className="card-subtitle" style={windowWidth <500 ?{textAlign:"start"}:{}}>
-                    {translations["TextileMills"][props.language]}
+                    {translations["TextileMills"][language]}
                     </p>
                   </div>
                 </div>
@@ -226,9 +229,9 @@ function WhySindh(props) {
                     <img src={cement} width="60" height="60"></img>
                   </a>
                   <div className="media-body" style={{ width: "150px" }}>
-                    <h3 className="ch-title">123 {translations["Million"][props.language]}</h3>
+                    <h3 className="ch-title">123 {translations["Million"][language]}</h3>
                     <p className="card-subtitle" style={windowWidth <500 ?{textAlign:"start"}:{}}>
-                       {translations["TonOfCement"][props.language]}</p>
+                       {translations["TonOfCement"][language]}</p>
                   </div>
                 </div>
               </div>
@@ -243,7 +246,7 @@ function WhySindh(props) {
                     type="button"
                     className="InvestInSindhButton"
                   >
-                    <span className="px-3">{translations["Explore"][props.language]}</span>
+                    <span className="px-3">{translations["Explore"][language]}</span>
                   </button>
                 </Link>
               </a>

@@ -512,9 +512,84 @@ export const translations = {
     ur: " یافتہ تقویت ذریعہ کے معلومات تک رسائی",
     sd:"  ڪيل پاران رسائي جي  معلومات", 
   },
+  'Growth': {
+    en: 'Unleash Growth and Opportunity',
+    ur: "ترقی اور مواقع کو دور کریں",
+    sd: "ترقي ۽ فرصت کي ختم ڪريو",
+  },
   'Version': {
-    en: 'Version',
-    ur: "ورژن",
-    sd: "نسخو",
+    en: 'Welcome to the world of endless possibilities in Sindh, Pakistan.This page is your gateway to exploring the vast potential thatawaits investors like you. Sindh offers a strategic location, a thriving business ecosystem, and a rich cultural heritage that sets the stage for remarkable growth. With abundant resources, a skilled workforce, and favorable investment policies, Sindh presents a landscape teeming with opportunities across various sectors. Whether you seek to expand your existing ventures or embark on new ventures, investing in Sindh can be the catalyst for your success. Join us on this journey of growth, innovation, and prosperity as we unlock the boundless opportunities together.',
+    sd: "سنڌ، پاڪستان ۾ لامحدود امڪانن جي دنيا ۾ ڀليڪار. هي صفحو توهان جي وسيع امڪانن کي ڳولڻ جو دروازو آهي جيڪو توهان وانگر سيڙپڪارن جو انتظار ڪري رهيو آهي. سنڌ هڪ اسٽريٽجڪ مقام، هڪ ترقي پذير ڪاروباري ماحوليات، ۽ هڪ شاهوڪار ثقافتي ورثو پيش ڪري ٿو جيڪو قابل ذڪر ترقي لاءِ اسٽيج مقرر ڪري ٿو. وسيع وسيلن، هڪ ماهر افرادي قوت، ۽ سازگار سيڙپڪاري پاليسين سان، سنڌ مختلف شعبن ۾ موقعن سان ڀرپور منظر پيش ڪري ٿي. ڇا توهان پنهنجي موجوده منصوبن کي وڌائڻ چاهيو ٿا يا نوان منصوبا شروع ڪرڻ چاهيو ٿا، سنڌ ۾ سيڙپڪاري توهان جي ڪاميابيءَ لاءِ ڪارگر ثابت ٿي سگهي ٿي. ترقي، جدت ۽ خوشحالي جي هن سفر ۾ اسان سان شامل ٿيو جيئن اسان ان لاڪ لامحدود موقعن کي گڏ ڪريون",
+    ur: "سندھ، پاکستان میں لامتناہی امکانات کی دنیا میں خوش آمدید۔ یہ صفحہ آپ کے وسیع امکانات کو تلاش کرنے کا گیٹ وے ہے جس کا آپ جیسے سرمایہ کار انتظار کر رہے ہیں۔ سندھ ایک اسٹریٹجک محل وقوع، فروغ پزیر کاروباری ماحولیاتی نظام، اور ایک بھرپور ثقافتی ورثہ پیش کرتا ہے جو قابل ذکر ترقی کی منزلیں طے کرتا ہے۔ وافر وسائل، ہنر مند افرادی قوت اور سازگار سرمایہ کاری کی پالیسیوں کے ساتھ، سندھ مختلف شعبوں میں مواقعوں سے بھرپور منظر پیش کرتا ہے۔ چاہے آپ اپنے موجودہ منصوبوں کو بڑھانا چاہتے ہیں یا نئے منصوبے شروع کرنا چاہتے ہیں، سندھ میں سرمایہ کاری آپ کی کامیابی کا محرک ثابت ہوسکتی ہے۔ ترقی، اختراع اور خوشحالی کے اس سفر میں ہمارے ساتھ شامل ہوں کیونکہ ہم ایک ساتھ لاتعداد مواقع کو کھولتے ہیں",
+  },
+  'Stage': {
+    en: 'Stage',
+    ur: "اسٹیج",
+    sd: "اسٽيج",
+  },
+  'RegisteryourCOMP': {
+    en: 'Register Your Company',
+    ur: "اپنی کمپنی کو رجسٹر کریں",
+    sd: "پنھنجي ڪمپني کي رجسٽر ڪريو",
+  },
+  'Register': {
+    en: 'Register',
+    ur: "رجسٹر کریں",
+    sd: "رجسٽر",
+  },
+  'launching': {
+    en: 'The first step in launching your business in Sindh is to register your company.',
+    ur: "سندھ میں اپنا کاروبار شروع کرنے کا پہلا قدم اپنی کمپنی کو رجسٹر کرنا ہے",
+    sd: "سنڌ ۾ پنهنجو ڪاروبار شروع ڪرڻ جو پهريون قدم توهان جي ڪمپني کي رجسٽر ڪرڻ آهي",
+  },
+  'BankAccount': {
+    en: 'Open a Bank Account',
+    ur: "رجسٹر کریں",
+    sd: "هڪ بئنڪ اڪائونٽ کوليو",
+  },
+  'establishing': {
+    en: 'The next vital step in establishing your business in Sindh is to open a bank account.',
+    ur: "سندھ میں اپنا کاروبار قائم کرنے کا اگلا اہم مرحلہ بینک اکاؤنٹ کھولنا ہے",
+    sd: "سنڌ ۾ پنهنجو ڪاروبار قائم ڪرڻ لاءِ ايندڙ اهم قدم هڪ بئنڪ اڪائونٽ کولڻ آهي",
+  },
+  'STRN': {
+    en: 'Apply for a STRN',
+    ur: "کے لیے درخواست دیں STRN",
+    sd: "لاءِ درخواست ڏيو STRN",
+  },
+  'SalesTax': {
+    en: 'Ensure compliance and broaden your market reach by applying for a Sales Tax Registration Number (SPRL).',
+    ur: "سیلز ٹیکس رجسٹریشن نمبر (SPRL) کے لیے درخواست دے کر تعمیل کو یقینی بنائیں اور اپنی مارکیٹ تک رسائی کو وسیع کریں۔",
+    sd: "سيلز ٽيڪس رجسٽريشن نمبر (SPRL) لاءِ درخواست ڪندي تعميل کي يقيني بڻايو ۽ پنهنجي مارڪيٽ جي پهچ کي وڌايو.",
+  },
+  'InvestSindh': {
+    en: 'Invest in Sindh',
+    ur: "سندھ میں سرمایہ کاری کریں",
+    sd: "سنڌ ۾ سيڙپڪاري ڪريو",
+  },
+  'InvestorGuide': {
+    en: 'Investor’s Guide',
+    ur: "سرمایہ کار گائیڈ",
+    sd: "سيڙپڪار جي رهنمائي",
+  },
+  'PublicationTitle': {
+    en: 'Publication Title',
+    ur: "اشاعت کا عنوان",
+    sd: "اشاعت جو عنوان",
+  },
+  'Shortdescription': {
+    en: 'Short description...',
+    ur: "مختصر کوائف",
+    sd: "مختصر وضاحت",
+  },
+  'ShareYourFeedback': {
+    en: 'Share Your Feedback',
+    ur: "اپنی رائے شیئر کریں",
+    sd: "پنهنجا تاثرات شيئر ڪريو",
+  },
+  'MorePublications': {
+    en: 'View More Publications',
+    ur: "مزید اشاعتیں دیکھیں",
+    sd: "وڌيڪ اشاعتون ڏسو",
   },
 };

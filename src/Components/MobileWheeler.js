@@ -3,6 +3,7 @@ import MobileCircleSeg from "./MobileCircleSeg";
 import SVG from 'react-inlinesvg';
 import asset1 from "../assets/asset1.svg";
 import { translations } from "../Transalation/Transalation";
+import { useSelector } from "react-redux";
 
 const wheelerInitialState = {
   deg: 45,
@@ -22,6 +23,8 @@ const wheelerInitialState = {
   subcotton: "Bales of Cotton",
 };
 function MobileWheeler(props) {
+  const {language} = useSelector((state)=>state.language)
+
   const [data, setData] = useState({});
   console.log(data, "sdfsdfss");
 
@@ -61,6 +64,8 @@ function MobileWheeler(props) {
   // const toggleVisibility2 = () => {
   //   setIsVisible2(false);
   // };
+
+
   return (
     <>
       <div
@@ -74,7 +79,7 @@ function MobileWheeler(props) {
                 className="mainHeading"
      
               >
-                {translations["Awaiting"][props.language]}
+                {translations["Awaiting"][language]}
               </h1>
             </div>
           </div>
@@ -86,7 +91,7 @@ function MobileWheeler(props) {
                   fontSize: "20px",
                 }}
               >
-                {translations["Attractives"][props.language]}
+                {translations["Attractives"][language]}
               </p>
             </div>
           </div>
@@ -98,8 +103,8 @@ function MobileWheeler(props) {
           >
             <div className="col-lg-6">
               <MobileCircleSeg
-                translations={translations} 
-                language={props.language}
+               translations={translations}
+                language={language}
                 getSegmentData={getSegmentData}
                 setData={setData}
               />
@@ -166,7 +171,7 @@ function MobileWheeler(props) {
                           marginLeft: "-14px",
                         }}
                       >
-                        Sector Statistics
+                        {translations["SectorStatistics"][language]}
                       </label>
                     </div>
                     <div>
@@ -186,7 +191,7 @@ function MobileWheeler(props) {
                           color:`${data.boxColor}`
                         }}
                       >
-                        Value of Major Crops:
+                        {translations["Crops"][language]}
                       </h1>
                       <p
                         id="segmentText"
@@ -199,7 +204,7 @@ function MobileWheeler(props) {
                         }}
                       >
                         {/* Approx US$1.6 Billion (2019-2020) */}
-                        {wheelerFormData.Description}
+                        {translations["Dollor"][language]}
                       </p>
                     </div>
                     <div>
@@ -220,7 +225,7 @@ function MobileWheeler(props) {
                           className="heading-1"
                         >
                           {/* 4 Million */}
-                          {wheelerFormData.wheat}
+                          4{translations["Million"][language]}
                         </h1>
                         <p
                           id="box-subtitle1"
@@ -233,7 +238,7 @@ function MobileWheeler(props) {
                           className="phra-2"
                         >
                           {/* tons of wheat */}
-                          {wheelerFormData.subweat}
+                          1.9{translations["Million"][language]}
                         </p>
                       </div>
                       <div className="col-6">
@@ -248,7 +253,7 @@ function MobileWheeler(props) {
                           className="heading-1"
                         >
                           {/* 1.9 Million */}
-                          {wheelerFormData.Rice}
+                          1.9{translations["Million"][language]}
                         </h1>
                         <p
                           id="box-subtitle2"
@@ -261,7 +266,7 @@ function MobileWheeler(props) {
                           className="phra-2"
                         >
                           {/* tons of rice */}
-                          {wheelerFormData.subrice}
+                          {translations["Rice"][language]}
                         </p>
                       </div>
                     </div>
@@ -278,7 +283,7 @@ function MobileWheeler(props) {
                           className=""
                         >
                           {/* 4.2 Million */}
-                          {wheelerFormData.sugarcane}
+                          4.2{translations["Million"][language]}
                         </h1>
                         <p
                           style={{
@@ -291,7 +296,7 @@ function MobileWheeler(props) {
                           className=""
                         >
                           {/* tons of sugarcane */}
-                          {wheelerFormData.subsugarcane}
+                          {translations["Sugarcane"][language]}
                         </p>
                       </div>
                       <div className="col-6 mb-3">
@@ -306,7 +311,7 @@ function MobileWheeler(props) {
                           className=""
                         >
                           {/* 2.3 Million */}
-                          {wheelerFormData.cotton}
+                          2.3{translations["Million"][language]}
                         </h1>
                         <p
                           id="box-subtitle4"
@@ -319,7 +324,7 @@ function MobileWheeler(props) {
                           className=""
                         >
                           {/* bales of cotton */}
-                          {wheelerFormData.subcotton}
+                          {translations["Cotton"][language]}
                         </p>
                       </div>
                     </div>
@@ -332,7 +337,7 @@ function MobileWheeler(props) {
                             className="feedback"
                             style={{ width: "100%", fontSize: "13px",background:`${data.boxColor}`  }}
                           >
-                            <span>Learn more about this Sector</span>
+                            <span>{translations["B1"][language]}</span>
                           </button>
                         </a>
                         <br />
@@ -344,7 +349,7 @@ function MobileWheeler(props) {
                             className="feedback"
                             style={{ width: "100%", fontSize: "13px",background:`${data.boxColor}` }}
                           >
-                            <span>View all Sectors</span>
+                            <span>{translations["B2"][language]}</span>
                           </button>
                         </a>
                       </div>

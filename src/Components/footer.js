@@ -5,7 +5,10 @@ import clickLogo from "../assets/click-logo.png";
 import infoLogo from "../assets/infoaccess.png";
 import { TextField } from "@mui/material";
 import { translations } from "../Transalation/Transalation";
+import { useSelector } from "react-redux";
 function Footer(props) {
+  const {language} = useSelector((state)=>state.language)
+
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
   useEffect(() => {
@@ -38,7 +41,7 @@ function Footer(props) {
         >
           <div className="row mt-4"
             style={
-              props.language === "ur" || props.language === "sd"
+              language === "ur" || language === "sd"
                 ? {
                   display: "flex",
                   flexDirection: "row-reverse",
@@ -63,13 +66,13 @@ function Footer(props) {
                 }
                 style={windowWidth < 500 ? { marginLeft: "0px" } : windowWidth <= 1440 ? { marginLeft: "45px", textAlign: "inherit" } : { textAlign: "inherit" }}
               >
-                {translations["FooterText"][props.language]}
+                {translations["FooterText"][language]}
               </p>
             </div>
           </div>
           <div
             style={
-              props.language === "ur" || props.language === "sd"
+              language === "ur" || language === "sd"
               ? {
                   display: "flex",
                   flexDirection: "row-reverse",
@@ -83,7 +86,7 @@ function Footer(props) {
             className="row mt-5">
             <div className="col-md-3 footertext" 
             style={ 
-              props.language === "ur" || props.language === "sd"
+              language === "ur" || language === "sd"
             ? { textAlign: "right" }
             :
               windowWidth < 500 ? { textAlign: "inherit" } 
@@ -94,7 +97,7 @@ function Footer(props) {
                     ? "mobileheading"
                     : "heading"
                 }
-                style={windowWidth < 500 ? {} : { textAlign: "inherit" }}>{translations["RelatedLinks"][props.language]}</h3>
+                style={windowWidth < 500 ? {} : { textAlign: "inherit" }}>{translations["RelatedLinks"][language]}</h3>
               <a href="http://lgdsindh.gov.pk/" target="_blank" className="resource-link">
                 <span
                   className={
@@ -102,7 +105,7 @@ function Footer(props) {
                       ? "sub-footertitle ft-links"
                       : "sub-title ft-links"
                   }>
-                  {translations["LocalDeparment"][props.language]}
+                  {translations["LocalDeparment"][language]}
                 </span>
               </a>
               <br />
@@ -112,7 +115,7 @@ function Footer(props) {
                     ? "sub-footertitle ft-links"
                     : "sub-title ft-links"
                 }>
-                  {translations["SRB"][props.language]}
+                  {translations["SRB"][language]}
                 </span>
               </a>{" "}
               <br />
@@ -122,7 +125,7 @@ function Footer(props) {
                     ? "sub-footertitle ft-links"
                     : "sub-title ft-links"
                 }>
-                   {translations["SBCA"][props.language]}
+                   {translations["SBCA"][language]}
                 </span>
               </a>{" "}
               <br />
@@ -132,7 +135,7 @@ function Footer(props) {
                     ? "sub-footertitle ft-links"
                     : "sub-title ft-links"
                 }>
-                  {translations["SHC"][props.language]}
+                  {translations["SHC"][language]}
                 </span>
               </a>
               <br />
@@ -142,7 +145,7 @@ function Footer(props) {
                     ? "sub-footertitle ft-links"
                     : "sub-title ft-links"
                 }>
-                  {translations["SEPA"][props.language]}
+                  {translations["SEPA"][language]}
                 </span>
               </a>
               <br />
@@ -152,7 +155,7 @@ function Footer(props) {
                     ? "sub-footertitle ft-links"
                     : "sub-title ft-links"
                 }>
-                  {translations["SFA"][props.language]}
+                  {translations["SFA"][language]}
                 </span>
               </a>
               <br />
@@ -161,11 +164,11 @@ function Footer(props) {
                   window.innerWidth <= 1366
                     ? "sub-footertitle ft-links"
                     : "sub-title ft-links"
-                }>{translations["CD"][props.language]}</span>
+                }>{translations["CD"][language]}</span>
               </a>
             </div>
             <div className="col-lg-3 footertext"  style={ 
-              props.language === "ur" || props.language === "sd"
+              language === "ur" || language === "sd"
             ? { textAlign: "right",marginTop: "-32px", }
             :
               windowWidth < 500 ? { textAlign: "inherit" } 
@@ -174,13 +177,13 @@ function Footer(props) {
                 window.innerWidth <= 1366
                   ? "mobileheading"
                   : "heading"
-              } style={windowWidth < 500 ? {} : { textAlign: "inherit" }}>{translations["RelatedLinks"][props.language]}</h3>
+              } style={windowWidth < 500 ? {} : { textAlign: "inherit" }}>{translations["RelatedLinks"][language]}</h3>
               <a href="https://sindhinvestment.gos.pk/" target="_blank" className="resource-link">
                 <span className={
                   window.innerWidth <= 1366
                     ? "sub-footertitle ft-links"
                     : "sub-title ft-links"
-                }>{translations["SID"][props.language]}</span>
+                }>{translations["SID"][language]}</span>
               </a>
               <br />
               <a href="https://industries.sindh.gov.pk/" target="_blank" className="resource-link">
@@ -189,7 +192,7 @@ function Footer(props) {
                     ? "sub-footertitle ft-links"
                     : "sub-title ft-links"
                 }>
-                  {translations["ID"][props.language]}
+                  {translations["ID"][language]}
                 </span>
               </a>
               <br />
@@ -199,7 +202,7 @@ function Footer(props) {
                     ? "sub-footertitle ft-links"
                     : "sub-title ft-links"
                 }>
-                  {translations["AD"][props.language]}
+                  {translations["AD"][language]}
                 </span>
               </a>
               <br />
@@ -208,7 +211,7 @@ function Footer(props) {
                   window.innerWidth <= 1366
                     ? "sub-footertitle ft-links"
                     : "sub-title ft-links"
-                }>{translations["ED"][props.language]}</span>
+                }>{translations["ED"][language]}</span>
               </a>
               <br />
               <a href="http://www.sindheducation.gov.pk/" target="_blank" className="resource-link">
@@ -217,7 +220,7 @@ function Footer(props) {
                     ? "sub-footertitle ft-links"
                     : "sub-title ft-links"
                 }>
-                  {translations["SED"][props.language]}
+                  {translations["SED"][language]}
                 </span>
               </a>
               <br />
@@ -226,14 +229,14 @@ function Footer(props) {
                   window.innerWidth <= 1366
                     ? "sub-footertitle ft-links"
                     : "sub-title ft-links"
-                }>{translations["HD"][props.language]}</span>
+                }>{translations["HD"][language]}</span>
               </a>
 
             </div>
             <div
               className="col-lg-3 " 
               style={
-                props.language === "ur" || props.language === "sd"
+                language === "ur" || language === "sd"
                   ? { textAlign: "right" }
                   : {}
               }
@@ -244,12 +247,12 @@ function Footer(props) {
                   : "heading"
               } 
               style={ 
-                props.language === "ur" || props.language === "sd"
+                language === "ur" || language === "sd"
               ? { textAlign: "right",marginTop: "-17px"  }
               :
                 windowWidth < 500 ? { paddingTop: "16px"  } 
                 : {paddingTop: "16px", textAlign: "initial", marginTop: "-56px"  }}
-              >{translations["Contact"][props.language]}</h3>
+              >{translations["Contact"][language]}</h3>
               <address
                 className={
                   window.innerWidth <= 1366
@@ -266,10 +269,10 @@ function Footer(props) {
                     }
                 }
               >
-                {translations["Floor"][props.language]}, <br />
-                {translations["Shahrah"][props.language]},
+                {translations["Floor"][language]}, <br />
+                {translations["Shahrah"][language]},
                 <br />
-                {translations["Karachi"][props.language]}
+                {translations["Karachi"][language]}
               </address>
               <p
                 className={
@@ -298,7 +301,7 @@ function Footer(props) {
                   : "col-lg-3"
               }
               style={ 
-                props.language === "ur" || props.language === "sd"
+                language === "ur" || language === "sd"
               ? { textAlign: "right",marginTop: "-90px" }
               :
                 windowWidth < 500 ? {marginTop: "-90px"} 
@@ -310,12 +313,12 @@ function Footer(props) {
                   : "heading"
               } 
               style={ 
-                props.language === "ur" || props.language === "sd"
+                language === "ur" || language === "sd"
               ? { textAlign: "right" }
               :
                 windowWidth < 500 ? {} 
                 : {textAlign: "inherit"}}>
-                {translations["Resources"][props.language]}</h3>
+                {translations["Resources"][language]}</h3>
               <a href="comingsoon.html" className="resource-link">
                 <span
                   className={
@@ -323,7 +326,7 @@ function Footer(props) {
                       ? "sub-footertitle ft-links"
                       : "sub-title ft-links"
                   }
-                >{translations["Presentations"][props.language]}</span>
+                >{translations["Presentations"][language]}</span>
               </a>
               <br />
               <a href="comingsoon.html" className="resource-link">
@@ -331,7 +334,7 @@ function Footer(props) {
                   window.innerWidth <= 1366
                     ? "sub-footertitle ft-links"
                     : "sub-title ft-links"
-                }>{translations["Notifications"][props.language]}</span>
+                }>{translations["Notifications"][language]}</span>
               </a>
               <br />
               <a href="comingsoon.html" className="resource-link">
@@ -339,7 +342,7 @@ function Footer(props) {
                   window.innerWidth <= 1366
                     ? "sub-footertitle ft-links"
                     : "sub-title ft-links"
-                }>{translations["Downloads"][props.language]} </span>
+                }>{translations["Downloads"][language]} </span>
               </a>{" "}
               <br />
               <a href="comingsoon.html" className="resource-link">
@@ -347,12 +350,12 @@ function Footer(props) {
                   window.innerWidth <= 1366
                     ? "sub-footertitle ft-links"
                     : "sub-title ft-links"
-                }>{translations["RegulatoryCatalog"][props.language]}</span>
+                }>{translations["RegulatoryCatalog"][language]}</span>
               </a>
             </div>
             <form action="" style={windowWidth < 500 ? { marginBottom: "-30px", marginTop: "20px" } : {}}>
               <div className="row" 
-              style={props.language === "ur" ||props.language === "sd" ? {display: "flex",flexDirection: "row-reverse"}: windowWidth < 500 ? { gap: "20px" } : { marginTop: "15px" }}>
+              style={language === "ur" ||language === "sd" ? {display: "flex",flexDirection: "row-reverse"}: windowWidth < 500 ? { gap: "20px" } : { marginTop: "15px" }}>
                 <div
                   className={windowWidth < 500 ? "col-lg-6" : windowWidth <= 1366 ? "col-lg-3" : "col-lg-2"}
                   style={
@@ -376,7 +379,7 @@ function Footer(props) {
                 <div className={windowWidth <= 1440 ? "col-lg-3" : "col-lg-2 mt-2"}>
                   <a href="comingsoon.html">
                     <button type="button" className="feedback ft-btn">
-                      <span>{translations["Newsletter"][props.language]}</span>
+                      <span>{translations["Newsletter"][language]}</span>
                     </button>
                   </a>
                 </div>
@@ -455,7 +458,7 @@ function Footer(props) {
           <div
             className="col-12 mb-2 copy-right"
             style={
-              props.language === "ur" ||props.language === "sd" ? 
+              language === "ur" ||language === "sd" ? 
               {display: "flex",flexDirection: "row-reverse",overflow: "hidden",}
               :
               {display: "flex",
@@ -466,7 +469,7 @@ function Footer(props) {
           >
             <div>
               <p style={windowWidth < 500 ? { fontWeight: "bold", fontSize: "10px" } : { fontWeight: "bold", marginTop: "11px" }}>
-              {translations["Version"][props.language]} 0.07.07.0023
+              {translations["Version"][language]} 0.07.07.0023
               </p>
             </div>
             <div
@@ -480,7 +483,7 @@ function Footer(props) {
                 className="sub-title "
                 style={windowWidth < 500 ? { marginTop: "0px" } : { fontWeight: "bold", marginTop: "11px" }}
               >
-                {translations["Copyright"][props.language]}
+                {translations["Copyright"][language]}
               </p>
             </div>
             <div
@@ -504,7 +507,7 @@ function Footer(props) {
                 className="sub-title "
                 style={windowWidth < 500 ? { marginTop: "0px" } : { fontWeight: "bold", marginTop: "10px" }}
               >
-                {translations["Powered"][props.language]}
+                {translations["Powered"][language]}
               </p>
               <img
                 style={{ marginTop: "1px" }}

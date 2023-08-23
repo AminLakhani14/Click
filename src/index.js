@@ -6,7 +6,8 @@ import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'aos/dist/aos.css';
 import AOS from 'aos';
-
+import { store } from './Redux/Reducer/store';
+import { Provider } from 'react-redux';
 AOS.init({
   duration: 1200,
 })
@@ -14,7 +15,9 @@ AOS.init({
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
+    <Provider store={store}>
     <App />
+    </Provider>
   </React.StrictMode>
 );
 

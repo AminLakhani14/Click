@@ -15,9 +15,12 @@ import MobileWheeler from "./MobileWheeler";
 import MobileMessage from "./MobileMessage";
 import MobileTestimonial from "./MobileTestimonial";
 import MobileGallery from "./MobileGallery";
+import { useDispatch, useSelector } from "react-redux";
+import { setLanguage } from "../Redux/Reducer/languageSlice";
 function Home(props) {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-
+   const dispatch = useDispatch()
+   const {language} = useSelector((state)=>state.language)
   useEffect(() => {
     // Function to update the windowWidth state when the resize event occurs
     const handleResize = () => {
@@ -42,46 +45,50 @@ function Home(props) {
     setIsVisible2(false);
   };
 
-  const [language, setLanguage] = useState('en');
+
 
   // Function to toggle language between English, Urdu, and Sindhi
   const toggleLanguage = () => {
-    if (language === 'en') {
-      setLanguage('ur');
-    } else if (language === 'ur') {
-      setLanguage('sd');
-    } else {
-      setLanguage('en');
-      
-    }
+      if(language == 'ur'){
+        dispatch(setLanguage('en'));
+      }else{
+        dispatch(setLanguage('ur'));
+      }
+    
   };
-    // setIsUrdu((prevIsUrdu) => !prevIsUrdu);
-  
 
-  // Object containing English and Urdu  
+  const SindhitoggleLanguage = () => {
+    if(language == 'sd'){
+      dispatch(setLanguage('en'));
+    }else{
+      dispatch(setLanguage('sd'));
+    }
+      
+  };
+  
   return (
     <>
-     {windowWidth <=500 ?<MobileHome language={language} setLanguage={setLanguage} toggleLanguage={toggleLanguage} />:
-     <Header  language={language} setLanguage={setLanguage} toggleLanguage={toggleLanguage}/>
+     {windowWidth <=500 ?<MobileHome SindhitoggleLanguage={SindhitoggleLanguage} toggleLanguage={toggleLanguage} />:
+     <Header SindhitoggleLanguage={SindhitoggleLanguage} toggleLanguage={toggleLanguage}/>
     }
-    {windowWidth <=500 ?<MobileMarque language={language} setLanguage={setLanguage} toggleLanguage={toggleLanguage}/>:""
+    {windowWidth <=500 ?<MobileMarque  toggleLanguage={toggleLanguage}/>:""
     // <Marque />
    }
-     <StatisticsBar language={language} setLanguage={setLanguage} />
-     {windowWidth <=500 ?<MobileWheeler language={language} setLanguage={setLanguage} isVisible2={isVisible2} toggleVisibility={toggleVisibility} toggleVisibility2={toggleVisibility2}/>:
-     <Wheeler language={language} setLanguage={setLanguage}  isVisible2={isVisible2} toggleVisibility={toggleVisibility} toggleVisibility2={toggleVisibility2}/>
+     <StatisticsBar />
+     {windowWidth <=500 ?<MobileWheeler  isVisible2={isVisible2} toggleVisibility={toggleVisibility} toggleVisibility2={toggleVisibility2}/>:
+     <Wheeler    isVisible2={isVisible2} toggleVisibility={toggleVisibility} toggleVisibility2={toggleVisibility2}/>
     }
-     <Highlights language={language} setLanguage={setLanguage}/>
-     <WhySindh  language={language} setLanguage={setLanguage}/>
-     {windowWidth <=500 ?<MobileMessage />:
-     <Message language={language} setLanguage={setLanguage}/>}
+     <Highlights />
+     <WhySindh  />
+     {windowWidth <=500 ?<MobileMessage  />:
+     <Message />}
      {windowWidth <=500 ?<MobileTestimonial />:
-     <Testimonial language={language} setLanguage={setLanguage}/>}
+     <Testimonial />}
 
      {windowWidth <=500 ?<MobileGallery />:
-     <Gallery language={language} setLanguage={setLanguage}/>}
+     <Gallery />}
      
-     <Footer isVisible2={isVisible2} language={language} setLanguage={setLanguage}/>
+     <Footer isVisible2={isVisible2} />
     </>
   );
 }

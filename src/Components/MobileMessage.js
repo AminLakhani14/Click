@@ -2,14 +2,16 @@ import React, {useState} from "react";
 import "../Css/wheeler.css";
 import qasim from "../assets/qasim.png";
 import qasimBW from "../assets/qasimBW.jpeg";
-import mng1 from "../assets/mng1.png";
-import mng1BW from "../assets/mng1BW.jpeg";
+import mng1 from "../assets/mng1.jpg";
 import mng2 from "../assets/mng2.png";
 import mng2BW from "../assets/mng2BW.jpeg";
 import quote from "../assets/quote.png";
 import muradAli from "../assets/muradalishah.png";
 import muradalishahBW from "../assets/muradalishahBW.jpeg";
 import { Carousel } from "@trendyol-js/react-carousel";
+import { translations } from "../Transalation/Transalation";
+import { useSelector } from "react-redux";
+
 
 const imageMapColor = {
   "qasim_Id": qasim,
@@ -19,71 +21,74 @@ const imageMapColor = {
 };  
 const imageMapBW = {
   "qasim_Id": qasimBW,
-  "img2": mng1BW,
+  "img2": mng1,
   "img3": mng2BW,
   "img4": muradalishahBW
 };
 
 let ID = "qasim_Id"
-function  MobileMessage() {
+function  MobileMessage(props) {
   const [innerWidth,innerHeight] = useState(window)
   // shahab
   const array =[
     {
       id: "qasim_Id",
       img:qasim,
-      name:"Syed Qasim Naveed Qamar",
-      subtitle:" Special Assistant to Chief Minister for Investment and Public Private Partnerships",
-      desc:`The purpose of Local Government Department of Sindh and Competitive & Livable City of Karachi- CLICK Project is to  provide an organized system where councils exercise their  power and responsibilities to work together for peace, order
-      and good governance of their municipal districts and this is
-      what we are working together. Local Government Sindh is
-      design with the purpose of creating order in ways that serve
-      our general public democratically, it serves a two-fold
-      purpose. No political system is considered complete and
-      democratic if it does not have a system of strong Local
-      Government.`,
+      // name:"Syed Qasim Naveed Qamar",
+      name: {
+        en: "Syed Qasim Naveed Qamar",
+        ur: "سید قاسم نوید قمر",
+        sd: "سيد قاسم نويد قمر",
+      },
+      subtitle: {
+        en: "Special Assistant to Chief Minister for Investment and Public Private Partnerships",
+        ur: "وزیراعظم کے خصوصی معاون برائے سرمایہ کاری اور عوامی نجی شراکت",
+        sd: "سردار سرکار جو انویسٽمينٽ ۽ عوامي نجي شراڪت جي لاءِ خصوصي معاون",
+      },
+      desc: {
+        en: `Introducing the Sindh Investment website by CLICK, your gateway to profitable opportunities in our vibrant province. As Chief Minister of Sindh, I understand the crucial role investments play in driving economic growth. This comprehensive platform provides essential information, incentives, and seamless connections with authorities across various sectors. Join us in shaping a prosperous future for Sindh through strategic investments and unlocking its immense potential.`,
+        ur: "کلک پر سندھ انویسٹمنٹ ویب سائٹ کا مشہوری پذیر کریں، آپ کے منافع کی ممکنات کی راہ کھولنے والے آپ کے دروازے کے طور پر. سندھ کے وزیراعلیٰ کے طور پر، میں سمجھتا ہوں کہ سرمایہ کاری کی کردار اقتصادی ترقی کو بڑھانے میں کردار ادا کرتی ہے۔ یہ مکمل پلیٹ فارم ضروری معلومات، مراعات، اور مختلف شعبوں میں اختیارات کے ساتھ بے رکاوٹ رابطے فراہم کرتا ہے. ہمارے ساتھ آئیں اور سندھ کے لئے ایک خوشحال مستقبل کو شکل دینے میں استراتیجی سرمایہ کاری کے ذریعے اور اس کے عظیم ممکنات کو کھولنے میں شامل ہوں",
+        sd: "اسان جي متحرڪ صوبي ۾ منافعي جي موقعن لاءِ پنهنجي گيٽ وي تي ڪلڪ ڪري سنڌ انويسٽمينٽ ويب سائيٽ متعارف ڪرايو. سنڌ جي وڏي وزير جي حيثيت ۾، مان سمجهان ٿو ته سيڙپڪاري جو اهم ڪردار معاشي ترقي کي هلائڻ ۾ ادا ڪندو آهي. هي جامع پليٽ فارم مختلف شعبن ۾ اختيارين سان ضروري معلومات، ترغيب، ۽ بي ترتيب رابطا فراهم ڪري ٿو. اسٽريٽجڪ سيڙپڪاري ذريعي سنڌ جي خوشحال مستقبل کي ترتيب ڏيڻ ۽ ان جي وسيع امڪانن کي کولڻ ۾ اسان سان شامل ٿيو."
+      },
     },
     {
       id:"img2",
       img:mng1,
-      name:"Syed Qasim Naveed Qamar",
-      subtitle:"Special Assistant to Chief Minister for Investment and Public Private Partnerships",
-      desc:`The purpose of Local Government Department of Sindh and Competitive & Livable City of Karachi- CLICK Project is to  provide an organized system where councils exercise their  power and responsibilities to work together for peace, order
-      and good governance of their municipal districts and this is
-      what we are working together. Local Government Sindh is
-      design with the purpose of creating order in ways that serve
-      our general public democratically, it serves a two-fold
-      purpose. No political system is considered complete and
-      democratic if it does not have a system of strong Local
-      Government.`,
+      name: {
+        en: "Tameezuddin Khero",
+        ur: "تمیز الدین خیرو",
+        sd: "تميز الدين ڪيريو",
+      },
+      subtitle: {
+        en: "Secretary Investment, Government of Sindh",
+        ur: "سیکرٹری سرمایہ کاری حکومت سندھ",
+        sd: "سيڪريٽري سيڙپڪاري، سنڌ حڪومت",
+      },
+      desc: {
+        en: `Introducing the Sindh Investment website by CLICK, your gateway to profitable opportunities in our vibrant province. As Chief Minister of Sindh, I understand the crucial role investments play in driving economic growth. This comprehensive platform provides essential information, incentives, and seamless connections with authorities across various sectors. Join us in shaping a prosperous future for Sindh through strategic investments and unlocking its immense potential.`,
+        ur: "کلک پر سندھ انویسٹمنٹ ویب سائٹ کا مشہوری پذیر کریں، آپ کے منافع کی ممکنات کی راہ کھولنے والے آپ کے دروازے کے طور پر. سندھ کے وزیراعلیٰ کے طور پر، میں سمجھتا ہوں کہ سرمایہ کاری کی کردار اقتصادی ترقی کو بڑھانے میں کردار ادا کرتی ہے۔ یہ مکمل پلیٹ فارم ضروری معلومات، مراعات، اور مختلف شعبوں میں اختیارات کے ساتھ بے رکاوٹ رابطے فراہم کرتا ہے. ہمارے ساتھ آئیں اور سندھ کے لئے ایک خوشحال مستقبل کو شکل دینے میں استراتیجی سرمایہ کاری کے ذریعے اور اس کے عظیم ممکنات کو کھولنے میں شامل ہوں",
+        sd: "اسان جي متحرڪ صوبي ۾ منافعي جي موقعن لاءِ پنهنجي گيٽ وي تي ڪلڪ ڪري سنڌ انويسٽمينٽ ويب سائيٽ متعارف ڪرايو. سنڌ جي وڏي وزير جي حيثيت ۾، مان سمجهان ٿو ته سيڙپڪاري جو اهم ڪردار معاشي ترقي کي هلائڻ ۾ ادا ڪندو آهي. هي جامع پليٽ فارم مختلف شعبن ۾ اختيارين سان ضروري معلومات، ترغيب، ۽ بي ترتيب رابطا فراهم ڪري ٿو. اسٽريٽجڪ سيڙپڪاري ذريعي سنڌ جي خوشحال مستقبل کي ترتيب ڏيڻ ۽ ان جي وسيع امڪانن کي کولڻ ۾ اسان سان شامل ٿيو."
+      },
     },
     {
       id:"img3",
       img:mng2,
-      name:"Syed Qasim Naveed Qamar",
-      subtitle:"Special Assistant to Chief Minister for Investment and Public Private Partnerships",
-      desc:`The purpose of Local Government Department of Sindh and Competitive & Livable City of Karachi- CLICK Project is to  provide an organized system where councils exercise their  power and responsibilities to work together for peace, order
-      and good governance of their municipal districts and this is
-      what we are working together. Local Government Sindh is
-      design with the purpose of creating order in ways that serve
-      our general public democratically, it serves a two-fold
-      purpose. No political system is considered complete and
-      democratic if it does not have a system of strong Local
-      Government.`,
-    },
-    {
-      id:"img4",
-      img:muradAli,
-      name:"Syed Qasim Naveed Qamar",
-      subtitle:" Special Assistant to Chief Minister for Investment and Public Private Partnerships",
-      desc:`The purpose of Local Government Department of Sindh and Competitive & Livable City of Karachi- CLICK Project is to  provide an organized system where councils exercise their  power and responsibilities to work together for peace, order
-      and good governance of their municipal districts and this is
-      what we are working together. Local Government Sindh is
-      design with the purpose of creating order in ways that serve
-      our general public democratically, it serves a two-fold
-      purpose. No political system is considered complete and
-      democratic if it does not have a system of strong Local
-      Government.`,
+      name: {
+        en: "Anwar Ali Shar",
+        ur: "تمیز الدین خیرو",
+        sd: "تميز الدين ڪيريو",
+      },
+      subtitle: {
+        en: "Project Director CLICK, Investment Department Government of Sindh.",
+        ur: "پراجیکٹ ڈائریکٹر کلک کریں، محکمہ سرمایہ کاری حکومت سندھ۔",
+        sd: "پراجيڪٽ ڊائريڪٽر انويسٽمينٽ ڊپارٽمينٽ حڪومت سنڌ تي ڪلڪ ڪريو.",
+      },
+      desc: {
+        en: `Introducing the Sindh Investment website by CLICK, your gateway to profitable opportunities in our vibrant province. As Chief Minister of Sindh, I understand the crucial role investments play in driving economic growth. This comprehensive platform provides essential information, incentives, and seamless connections with authorities across various sectors. Join us in shaping a prosperous future for Sindh through strategic investments and unlocking its immense potential.`,
+        ur: "کلک پر سندھ انویسٹمنٹ ویب سائٹ کا مشہوری پذیر کریں، آپ کے منافع کی ممکنات کی راہ کھولنے والے آپ کے دروازے کے طور پر. سندھ کے وزیراعلیٰ کے طور پر، میں سمجھتا ہوں کہ سرمایہ کاری کی کردار اقتصادی ترقی کو بڑھانے میں کردار ادا کرتی ہے۔ یہ مکمل پلیٹ فارم ضروری معلومات، مراعات، اور مختلف شعبوں میں اختیارات کے ساتھ بے رکاوٹ رابطے فراہم کرتا ہے. ہمارے ساتھ آئیں اور سندھ کے لئے ایک خوشحال مستقبل کو شکل دینے میں استراتیجی سرمایہ کاری کے ذریعے اور اس کے عظیم ممکنات کو کھولنے میں شامل ہوں",
+        sd: "اسان جي متحرڪ صوبي ۾ منافعي جي موقعن لاءِ پنهنجي گيٽ وي تي ڪلڪ ڪري سنڌ انويسٽمينٽ ويب سائيٽ متعارف ڪرايو. سنڌ جي وڏي وزير جي حيثيت ۾، مان سمجهان ٿو ته سيڙپڪاري جو اهم ڪردار معاشي ترقي کي هلائڻ ۾ ادا ڪندو آهي. هي جامع پليٽ فارم مختلف شعبن ۾ اختيارين سان ضروري معلومات، ترغيب، ۽ بي ترتيب رابطا فراهم ڪري ٿو. اسٽريٽجڪ سيڙپڪاري ذريعي سنڌ جي خوشحال مستقبل کي ترتيب ڏيڻ ۽ ان جي وسيع امڪانن کي کولڻ ۾ اسان سان شامل ٿيو."
+
+      },
     }
   ]
 
@@ -130,6 +135,8 @@ function  MobileMessage() {
      }, 600);
     }   
   };
+  const {language} = useSelector((state)=>state.language)
+
   return (
     <>
       <div className="pt-5 px-2">
@@ -140,7 +147,7 @@ function  MobileMessage() {
                     fontFamily: "Crimson Pro !important",
                     fontSize: "30px",
                     marginLeft: "-30px"
-               }}>Messages</h1>
+               }}> {translations["Messages"][language]}</h1>
             </div>
           </div>
           <div className="row justify-content-center mt-3">
@@ -192,7 +199,7 @@ function  MobileMessage() {
                     <img
                     id="img2"
                     //  src={array[1].img}
-                    src={mng1BW}
+                    src={mng1}
                       alt=""
                       width="110"
                       height="110"
@@ -208,20 +215,6 @@ function  MobileMessage() {
                      id="img3"
                       // src={array[2].img}
                       src={mng2BW}
-                      alt=""
-                      width="110"
-                      height="110"
-                      style={{ borderRadius: "45%" }}
-                    ></img>
-                  </div>
-                </div>
-                <div>
-                  <div className="item "  onClick={clickCarouselImage}>
-                    {" "}
-                    <img
-                     id="img4"
-                      // src={array[3].img}
-                      src={muradalishahBW}
                       alt=""
                       width="110"
                       height="110"
@@ -252,18 +245,32 @@ function  MobileMessage() {
                   </a>
                   <div className="media-body" style={{width:"304px"}}>
                     {/* <h3 className="title">Syed Qasim Naveed Qamar </h3> */}
-                    <h3 className="title">{imgFormData.name} </h3>
+                    <h3 className="title">{imgFormData.name[language]}</h3>
                     <p
                       className="card-subtitle"
-                      style={{ fontWeight: "400", color: "rgb(163, 163, 163)",textAlign:"left"}}
+                      style={
+                        language === "ur" || language === "sd"
+                          ? { display: "contents", fontWeight: "400", color: "rgb(163, 163, 163)",textAlign:"left" }
+                          : {fontWeight: "400", color: "rgb(163, 163, 163)",textAlign:"left" }
+                      }
                     >
-                     {imgFormData.subtitle}
+                      {imgFormData.subtitle[language]}
                     </p>
                   </div>
                 </div>
                 <div className="mt-3">
-                  <p className="sub-title">
-                    {imgFormData.desc}
+                  <p
+                  style={
+                    language === "ur" || language === "sd"
+                      ? { }
+                      : {textAlign:"initial"}
+                  }
+                  className={
+                    language === "ur" || language === "sd"
+                      ? "sub-title paragraphAlign"
+                      : "sub-title "
+                  }>
+                    {imgFormData.desc[language]}
                   </p>
                 </div>
               </div>

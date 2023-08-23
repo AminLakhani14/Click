@@ -12,7 +12,10 @@ import English from "../assets/English.png";
 import urdu from "../assets/urdu.png";
 import Sindhi from "../assets/Sindhi.png";
 import { translations } from "../Transalation/Transalation";
+import { useSelector } from "react-redux";
 function MobileHome(props) {
+  const {language} = useSelector((state)=>state.language)
+
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
   useEffect(() => {
@@ -149,28 +152,21 @@ function MobileHome(props) {
                   }
               }
             >
-              <img
-                className="accessibility"
-                src={accessibility}
-                alt=""
-                width="25"
-                height="25"
-                style={{ marginTop: "3px" }}
-              />
-              <img
-                className="headerLogoImages"
-                src={props.language === "ur" ? English : urdu}
-                alt=""
-                onClick={props.toggleLanguage}
-                style={{ marginLeft: "10px", marginRight: "15px" }}
-              />
-              <img
-                className="headerLogoImages"
-                src={Sindhi}
-                alt=""
-                onClick={props.toggleLanguage}
-                style={{ marginLeft: "0px", marginRight: "0px" }}
-              />
+                <img
+                  className="headerLogoImages"
+                  src={language === "ur" ? English : urdu}
+                  alt=""
+                  onClick={props.toggleLanguage}
+                  style={{ marginLeft: "20px", marginRight: "20px" }}
+                />
+                <img
+                  className="headerLogoImages"
+                  src={language === "sd" ? English : Sindhi}
+                  // src={Sindhi}
+                  alt=""
+                  onClick={props.SindhitoggleLanguage}
+                  style={{ marginLeft: "20px", marginRight: "20px" }}
+                />
               <a href="comingsoon.html" title="" width="10">
                 <i className="fa-sharp fa-solid fa-magnifying-glass"></i>
               </a>
@@ -197,7 +193,7 @@ function MobileHome(props) {
                         className="menu">
                         <li
                           style={
-                            props.language === "ur" || props.language === "sd"
+                            language === "ur" || language === "sd"
                               ? {
                                 display: "flex",
                                 flexDirection: "row-reverse",
@@ -207,12 +203,12 @@ function MobileHome(props) {
                           }
                         >
                           <Link className="link toggle2" to={"/home"}>
-                            {translations["home"][props.language]}
+                            {translations["home"][language]}
                           </Link>
                         </li>
                         <li
                           style={
-                            props.language === "ur" || props.language === "sd"
+                            language === "ur" || language === "sd"
                               ? {
                                 display: "flex",
                                 flexDirection: "row-reverse",
@@ -224,14 +220,14 @@ function MobileHome(props) {
                           <Link className="link toggle2" to={"/WhySindh"}>
                             {
                               translations["sindhATglance"][
-                              props.language
+                              language
                               ]
                             }
                           </Link>
                         </li>
                         <li
                           style={
-                            props.language === "ur" || props.language === "sd"
+                            language === "ur" || language === "sd"
                               ? {
                                 display: "flex",
                                 flexDirection: "row-reverse",
@@ -241,11 +237,11 @@ function MobileHome(props) {
                           }
                         >
                           <Link className="link toggle2" to={"/InvestNow"}>
-                            {translations["InvestNow"][props.language]}
+                            {translations["InvestNow"][language]}
                           </Link>
                         </li>
                         <li style={
-                            props.language === "ur" || props.language === "sd"
+                            language === "ur" || language === "sd"
                               ? {
                                 textAlign:"right",
                               }
@@ -255,7 +251,7 @@ function MobileHome(props) {
                             htmlFor="drop-5"
                             className={`d-flex toggle toggle2`}
                             style={
-                              props.language === "ur" || props.language === "sd"
+                              language === "ur" || language === "sd"
                                 ? {
                                   display: "flex",
                                   flexDirection: "row-reverse",
@@ -266,14 +262,14 @@ function MobileHome(props) {
                             <Link to={"/manufacturing"} style={{ width: "212px", padding: "0px", fontSize: "20px" }}>
                               {
                                 translations["Opportunities"][
-                                props.language
+                                language
                                 ]
                               }
                             </Link>
                             {dropdownStates[0] ? (
                               <span
                               style={
-                                props.language === "ur" || props.language === "sd"
+                                language === "ur" || language === "sd"
                                   ? {
                                     display: "flex",
                                   }
@@ -287,7 +283,7 @@ function MobileHome(props) {
                             ) : (
                               <span
                               style={
-                                props.language === "ur" || props.language === "sd"
+                                language === "ur" || language === "sd"
                                   ? {
                                     display: "flex",
                                     marginLeft: "-70px",
@@ -308,7 +304,7 @@ function MobileHome(props) {
                               className="borderline">
                               <label
                                 style={
-                                  props.language === "ur" || props.language === "sd"
+                                  language === "ur" || language === "sd"
                                     ? {
                                       display: "flex",
                                       flexDirection: "row-reverse",
@@ -323,14 +319,14 @@ function MobileHome(props) {
                                 <Link to={"/manufacturing"} style={{ width: "195px", padding: "0px" }}>
                                   {
                                     translations["Manufacturing"][
-                                    props.language
+                                    language
                                     ]
                                   }
                                 </Link>
                                 {dropdownStates[1] ? (
                                   <span
                                   style={
-                                    props.language === "ur" || props.language === "sd"
+                                    language === "ur" || language === "sd"
                                       ? {
                                         display: "flex",
                                         marginRight: "115px",
@@ -346,7 +342,7 @@ function MobileHome(props) {
                                   <span
                                     className="plus"
                                     style={
-                                      props.language === "ur" || props.language === "sd"
+                                      language === "ur" || language === "sd"
                                         ? {
                                           display: "flex",
                                           marginRight: "115px",
@@ -364,7 +360,7 @@ function MobileHome(props) {
                               <ul>
                                 <li className="b-none borderline"
                                 style={
-                                  props.language === "ur" || props.language === "sd"
+                                  language === "ur" || language === "sd"
                                     ? {
                                       textAlign: "right"
                                     }
@@ -375,7 +371,7 @@ function MobileHome(props) {
                                     className="link toggle2 mobilenesteddropdowntoggle"
                                     to={"/aboutus"}
                                     style={
-                                      props.language === "ur" || props.language === "sd"
+                                      language === "ur" || language === "sd"
                                         ? {
                                           display: "flex",
                                           flexDirection: "row-reverse",
@@ -386,7 +382,7 @@ function MobileHome(props) {
                                   >
                                     {
                                       translations["Talktoexpert"][
-                                      props.language
+                                      language
                                       ]
                                     }
                                   </Link>
@@ -399,7 +395,7 @@ function MobileHome(props) {
                                 for="drop-7"
                                 className="d-flex mobiledropdowntoggle toggle toggle2"
                                 style={
-                                  props.language === "ur" || props.language === "sd"
+                                  language === "ur" || language === "sd"
                                     ? {
                                       display: "flex",
                                       flexDirection: "row-reverse",
@@ -412,7 +408,7 @@ function MobileHome(props) {
                                 <Link to={"/textile"} style={{ width: "195px", padding: "0px" }}>
                                   {
                                     translations["Textile"][
-                                    props.language
+                                    language
                                     ]
                                   }
                                 </Link>
@@ -420,7 +416,7 @@ function MobileHome(props) {
                                   <span
                                     className="minus"
                                     style={
-                                      props.language === "ur" || props.language === "sd"
+                                      language === "ur" || language === "sd"
                                         ? {
                                           display: "flex",
                                           marginRight: "115px",
@@ -434,7 +430,7 @@ function MobileHome(props) {
                                 ) : (
                                   <span
                                   style={
-                                    props.language === "ur" || props.language === "sd"
+                                    language === "ur" || language === "sd"
                                       ? {
                                         display: "flex",
                                         marginRight: "115px",
@@ -453,7 +449,7 @@ function MobileHome(props) {
                                 <li className="b-none borderline">
                                   <Link
                                   style={
-                                    props.language === "ur" || props.language === "sd"
+                                    language === "ur" || language === "sd"
                                       ? {
                                         display: "flex",
                                         flexDirection: "row-reverse",
@@ -466,7 +462,7 @@ function MobileHome(props) {
                                   >
                                     {
                                       translations["Talktoexpert"][
-                                      props.language
+                                      language
                                       ]
                                     }
                                   </Link>
@@ -474,7 +470,7 @@ function MobileHome(props) {
                               </ul>
                             </li>
                             <li style={
-                              props.language === "ur" || props.language === "sd"
+                              language === "ur" || language === "sd"
                                 ? {
                                   textAlign:"right,"
                                 }
@@ -484,7 +480,7 @@ function MobileHome(props) {
                                 for="drop-8"
                                 className="d-flex mobiledropdowntoggle toggle toggle2"
                                 style={
-                                  props.language === "ur" || props.language === "sd"
+                                  language === "ur" || language === "sd"
                                     ? {
                                       display: "flex",
                                       flexDirection: "row-reverse",
@@ -497,14 +493,14 @@ function MobileHome(props) {
                                 <Link to={"/tourism"} style={{ width: "195px", padding: "0px" }}>
                                   {
                                     translations["Tourism"][
-                                    props.language
+                                    language
                                     ]
                                   }
                                 </Link>
                                 {dropdownStates[3] ? (
                                   <span
                                   style={
-                                    props.language === "ur" || props.language === "sd"
+                                    language === "ur" || language === "sd"
                                       ? {
                                         display: "flex",
                                         marginRight: "115px",
@@ -519,7 +515,7 @@ function MobileHome(props) {
                                 ) : (
                                   <span
                                   style={
-                                    props.language === "ur" || props.language === "sd"
+                                    language === "ur" || language === "sd"
                                       ? {
                                         display: "flex",
                                         marginRight: "115px",
@@ -540,7 +536,7 @@ function MobileHome(props) {
                                     className="link toggle2 mobilenesteddropdowntoggle"
                                     to={"/aboutus"}
                                     style={
-                                      props.language === "ur" || props.language === "sd"
+                                      language === "ur" || language === "sd"
                                         ? {
                                           display: "flex",
                                           flexDirection: "row-reverse",
@@ -551,7 +547,7 @@ function MobileHome(props) {
                                   >
                                     {
                                       translations["Talktoexpert"][
-                                      props.language
+                                      language
                                       ]
                                     }
                                   </Link>
@@ -559,7 +555,7 @@ function MobileHome(props) {
                               </ul>
                             </li>
                             <li  style={
-                              props.language === "ur" || props.language === "sd"
+                              language === "ur" || language === "sd"
                                 ? {
                                   textAlign:"right,"
                                 }
@@ -569,7 +565,7 @@ function MobileHome(props) {
                                 for="drop-9"
                                 className="d-flex mobiledropdowntoggle toggle toggle2"
                                 style={
-                                  props.language === "ur" || props.language === "sd"
+                                  language === "ur" || language === "sd"
                                     ? {
                                       display: "flex",
                                       flexDirection: "row-reverse",
@@ -582,14 +578,14 @@ function MobileHome(props) {
                                 <Link to={"/agriculture"} style={{ width: "195px", padding: "0px" }}>
                                   {
                                       translations["Agriculture"][
-                                        props.language
+                                        language
                                       ]
                                     }
                                 </Link>
                                 {dropdownStates[4] ? (
                                   <span
                                   style={
-                                    props.language === "ur" || props.language === "sd"
+                                    language === "ur" || language === "sd"
                                       ? {
                                         display: "flex",
                                         marginRight: "115px",
@@ -605,7 +601,7 @@ function MobileHome(props) {
                                   <span
                                     className="plus"
                                     style={
-                                      props.language === "ur" || props.language === "sd"
+                                      language === "ur" || language === "sd"
                                         ? {
                                           display: "flex",
                                           marginRight: "115px",
@@ -625,7 +621,7 @@ function MobileHome(props) {
                                     className="link toggle2 mobilenesteddropdowntoggle"
                                     to={"/aboutus"}
                                     style={
-                                      props.language === "ur" || props.language === "sd"
+                                      language === "ur" || language === "sd"
                                         ? {
                                           display: "flex",
                                           flexDirection: "row-reverse",
@@ -636,7 +632,7 @@ function MobileHome(props) {
                                   >
                                     {
                                       translations["Talktoexpert"][
-                                      props.language
+                                      language
                                       ]
                                     }
                                   </Link>
@@ -644,7 +640,7 @@ function MobileHome(props) {
                               </ul>
                             </li>
                             <li  style={
-                              props.language === "ur" || props.language === "sd"
+                              language === "ur" || language === "sd"
                                 ? {
                                   textAlign:"right,"
                                 }
@@ -654,7 +650,7 @@ function MobileHome(props) {
                                 for="drop-10"
                                 className="d-flex mobiledropdowntoggle toggle toggle2"
                                 style={
-                                  props.language === "ur" || props.language === "sd"
+                                  language === "ur" || language === "sd"
                                     ? {
                                       display: "flex",
                                       flexDirection: "row-reverse",
@@ -667,7 +663,7 @@ function MobileHome(props) {
                                 <Link to={"/education"} style={{ width: "195px", padding: "0px" }}>
                                 {
                                       translations["Education"][
-                                        props.language
+                                        language
                                       ]
                                     }
                                 </Link>
@@ -675,7 +671,7 @@ function MobileHome(props) {
                                   <span
                                     className="minus"
                                     style={
-                                      props.language === "ur" || props.language === "sd"
+                                      language === "ur" || language === "sd"
                                         ? {
                                           display: "flex",
                                           marginRight: "115px",
@@ -690,7 +686,7 @@ function MobileHome(props) {
                                   <span
                                     className="plus"
                                     style={
-                                      props.language === "ur" || props.language === "sd"
+                                      language === "ur" || language === "sd"
                                         ? {
                                           display: "flex",
                                           marginRight: "115px",
@@ -710,7 +706,7 @@ function MobileHome(props) {
                                     className="link toggle2 mobilenesteddropdowntoggle"
                                     to={"/aboutus"}
                                     style={
-                                      props.language === "ur" || props.language === "sd"
+                                      language === "ur" || language === "sd"
                                         ? {
                                           display: "flex",
                                           flexDirection: "row-reverse",
@@ -721,7 +717,7 @@ function MobileHome(props) {
                                   >
                                     {
                                       translations["Talktoexpert"][
-                                      props.language
+                                      language
                                       ]
                                     }
                                   </Link>
@@ -729,7 +725,7 @@ function MobileHome(props) {
                               </ul>
                             </li>
                             <li style={
-                              props.language === "ur" || props.language === "sd"
+                              language === "ur" || language === "sd"
                                 ? {
                                   textAlign: "right",
                                 }
@@ -739,7 +735,7 @@ function MobileHome(props) {
                                 for="drop-11"
                                 className="d-flex mobiledropdowntoggle toggle toggle2"
                                 style={
-                                  props.language === "ur" || props.language === "sd"
+                                  language === "ur" || language === "sd"
                                     ? {
                                       display: "flex",
                                       flexDirection: "row-reverse",
@@ -752,7 +748,7 @@ function MobileHome(props) {
                                 <Link to={"/energy"} style={{ width: "195px", padding: "0px" }}>
                                    {
                                       translations["Energy"][
-                                        props.language
+                                        language
                                       ]
                                     }
                                 </Link>
@@ -760,7 +756,7 @@ function MobileHome(props) {
                                   <span
                                     className="minus"
                                     style={
-                                      props.language === "ur" || props.language === "sd"
+                                      language === "ur" || language === "sd"
                                         ? {
                                           display: "flex",
                                           marginRight: "115px",
@@ -775,7 +771,7 @@ function MobileHome(props) {
                                   <span
                                     className="plus"
                                     style={
-                                      props.language === "ur" || props.language === "sd"
+                                      language === "ur" || language === "sd"
                                         ? {
                                           display: "flex",
                                           marginRight: "115px",
@@ -792,7 +788,7 @@ function MobileHome(props) {
                               <ul>
                                 <li 
                                 style={
-                                      props.language === "ur" || props.language === "sd"
+                                      language === "ur" || language === "sd"
                                         ? {
                                           textAlign: "right"
                                         }
@@ -800,7 +796,7 @@ function MobileHome(props) {
                                     } className="b-none borderline">
                                   <Link
                                   style={
-                                    props.language === "ur" || props.language === "sd"
+                                    language === "ur" || language === "sd"
                                       ? {
                                         display: "flex",
                                         flexDirection: "row-reverse",
@@ -813,7 +809,7 @@ function MobileHome(props) {
                                   >
                                     {
                                       translations["Talktoexpert"][
-                                      props.language
+                                      language
                                       ]
                                     }
                                   </Link>
@@ -821,7 +817,7 @@ function MobileHome(props) {
                               </ul>
                             </li>
                             <li style={
-                              props.language === "ur" || props.language === "sd"
+                              language === "ur" || language === "sd"
                                 ? {
                                   textAlign: "right"
                                 }
@@ -831,7 +827,7 @@ function MobileHome(props) {
                                 for="drop-12"
                                 className="d-flex mobiledropdowntoggle toggle toggle2"
                                 style={
-                                  props.language === "ur" || props.language === "sd"
+                                  language === "ur" || language === "sd"
                                     ? {
                                       display: "flex",
                                       flexDirection: "row-reverse",
@@ -845,13 +841,13 @@ function MobileHome(props) {
                                 <Link to={"/health"} style={{ width: "195px", padding: "0px" }}>
                                 {
                                       translations["Health"][
-                                        props.language
+                                        language
                                       ]
                                     }
                                 </Link>
                                 {dropdownStates[7] ? (
                                   <span style={
-                                    props.language === "ur" || props.language === "sd"
+                                    language === "ur" || language === "sd"
                                       ? {
                                         display: "flex",
                                         marginRight: "115px",
@@ -866,7 +862,7 @@ function MobileHome(props) {
                                 ) : (
                                   <span
                                   style={
-                                    props.language === "ur" || props.language === "sd"
+                                    language === "ur" || language === "sd"
                                       ? {
                                         display: "flex",
                                         marginRight: "115px",
@@ -883,7 +879,7 @@ function MobileHome(props) {
                               <input type="checkbox" id="drop-12" />
                               <ul>
                                 <li style={
-                                      props.language === "ur" || props.language === "sd"
+                                      language === "ur" || language === "sd"
                                         ? {
                                           textAlign: "right"
                                         }
@@ -895,7 +891,7 @@ function MobileHome(props) {
                                   >
                                     {
                                       translations["Talktoexpert"][
-                                      props.language
+                                      language
                                       ]
                                     }
                                   </Link>
@@ -904,7 +900,7 @@ function MobileHome(props) {
                             </li>
                             <li  className="b-none " 
                             style={
-                              props.language === "ur" || props.language === "sd"
+                              language === "ur" || language === "sd"
                                 ? {
                                   textAlign: "right"
                                 }
@@ -915,7 +911,7 @@ function MobileHome(props) {
                                 for="drop-13"
                                 className="d-flex mobiledropdowntoggle toggle toggle2"
                                 style={
-                                  props.language === "ur" || props.language === "sd"
+                                  language === "ur" || language === "sd"
                                     ? {
                                       display: "flex",
                                       flexDirection: "row-reverse",
@@ -927,7 +923,7 @@ function MobileHome(props) {
                               >
                                 <Link to={"/informationtech"} 
                                 style={
-                                  props.language === "ur" || props.language === "sd"
+                                  language === "ur" || language === "sd"
                                     ? {
                                       width: "195px",
                                        padding: "0px" ,
@@ -938,12 +934,12 @@ function MobileHome(props) {
                                 {
                                       translations[
                                         "InformationTechnology"
-                                      ][props.language]
+                                      ][language]
                                     }
                                 </Link>
                                 {dropdownStates[8] ? (
                                   <span style={
-                                    props.language === "ur" || props.language === "sd"
+                                    language === "ur" || language === "sd"
                                       ? {
                                         display: "flex",
                                         marginRight: "115px",
@@ -957,7 +953,7 @@ function MobileHome(props) {
                                   ></span>
                                 ) : (
                                   <span style={
-                                    props.language === "ur" || props.language === "sd"
+                                    language === "ur" || language === "sd"
                                       ? {
                                         display: "flex",
                                         marginRight: "115px",
@@ -974,7 +970,7 @@ function MobileHome(props) {
                               <input type="checkbox" id="drop-13" />
                               <ul>
                                 <li style={
-                                  props.language === "ur" || props.language === "sd"
+                                  language === "ur" || language === "sd"
                                     ? {
                                       textAlign: "right"
                                     }
@@ -982,7 +978,7 @@ function MobileHome(props) {
                                 } className="b-none borderline">
                                   <Link
                                   style={
-                                    props.language === "ur" || props.language === "sd"
+                                    language === "ur" || language === "sd"
                                       ? {
                                         display: "flex",
                                         flexDirection: "row-reverse",
@@ -995,7 +991,7 @@ function MobileHome(props) {
                                   >
                                     {
                                       translations["Talktoexpert"][
-                                      props.language
+                                      language
                                       ]
                                     }
                                   </Link>
@@ -1006,7 +1002,7 @@ function MobileHome(props) {
                         </li>
                         <li
                       style={
-                        props.language === "ur" || props.language === "sd"
+                        language === "ur" || language === "sd"
                           ? {
                             display: "flex",
                             flexDirection: "row-reverse",
@@ -1021,13 +1017,13 @@ function MobileHome(props) {
                           >
                            {
                               translations["NewsInformation"][
-                                props.language
+                                language
                               ]
                             }
                           </Link>
                         </li>
                         <li style={
-                            props.language === "ur" || props.language === "sd"
+                            language === "ur" || language === "sd"
                               ? {
                                 textAlign:"right",
                               }
@@ -1035,7 +1031,7 @@ function MobileHome(props) {
                           } className="">
                           <label for="drop-2" className="d-flex toggle toggle2"
                           style={
-                            props.language === "ur" || props.language === "sd"
+                            language === "ur" || language === "sd"
                               ? {
                                 display: "flex",
                                 flexDirection: "row-reverse",
@@ -1045,13 +1041,13 @@ function MobileHome(props) {
                           >
                             <Link to={"/resource"} 
                             style={{ width: "212px", padding: "0px", fontSize: "20px" }}>
-                               {translations["Resources"][props.language]}
+                               {translations["Resources"][language]}
                             </Link>
                             {dropdownStates[11] ? (
                               <span
                               className="minus"
                                 style={
-                                  props.language === "ur" || props.language === "sd"
+                                  language === "ur" || language === "sd"
                                     ? {
                                       display: "flex",
                                       marginLeft: "-70px",
@@ -1066,7 +1062,7 @@ function MobileHome(props) {
                               <span
                                 className="plus"
                                 style={
-                                  props.language === "ur" || props.language === "sd"
+                                  language === "ur" || language === "sd"
                                     ? {
                                       display: "flex",
                                       marginLeft: "-70px",
@@ -1083,7 +1079,7 @@ function MobileHome(props) {
                           <ul>
                             <li className="borderline"
                             style={
-                              props.language === "ur" || props.language === "sd"
+                              language === "ur" || language === "sd"
                                 ? {
                                   textAlign: "right"
                                 }
@@ -1092,7 +1088,7 @@ function MobileHome(props) {
                             >
                               <Link 
                               style={
-                                props.language === "ur" || props.language === "sd"
+                                language === "ur" || language === "sd"
                                   ? {
                                     display: "flex",
                                     flexDirection: "row-reverse",
@@ -1101,12 +1097,12 @@ function MobileHome(props) {
                                   : {}
                               }
                               className="link toggle2 mobilenesteddropdowntoggle2" to={"/resource"}>
-                                {translations["Download"][props.language]}
+                                {translations["Download"][language]}
                               </Link>
                             </li>
                             <li className="b-none"
                             style={
-                              props.language === "ur" || props.language === "sd"
+                              language === "ur" || language === "sd"
                                 ? {
                                   textAlign: "right"
                                 }
@@ -1114,7 +1110,7 @@ function MobileHome(props) {
                             }>
                               <Link
                               style={
-                                props.language === "ur" || props.language === "sd"
+                                language === "ur" || language === "sd"
                                   ? {
                                     display: "flex",
                                     flexDirection: "row-reverse",
@@ -1127,7 +1123,7 @@ function MobileHome(props) {
                               >
                                 {
                                   translations["RegulatoryCatalog"][
-                                    props.language
+                                    language
                                   ]
                                 }
                               </Link>
@@ -1135,7 +1131,7 @@ function MobileHome(props) {
                           </ul>
                         </li>
                         <li style={
-                            props.language === "ur" || props.language === "sd"
+                            language === "ur" || language === "sd"
                               ? {
                                 textAlign:"right",
                               }
@@ -1144,7 +1140,7 @@ function MobileHome(props) {
                           <label
                             for="drop-3"
                             style={
-                              props.language === "ur" || props.language === "sd"
+                              language === "ur" || language === "sd"
                                 ? {
                                   display: "flex",
                                   flexDirection: "row-reverse",
@@ -1153,12 +1149,12 @@ function MobileHome(props) {
                             }
                             className="d-flex toggle toggle2">
                             <Link to={"/aboutus"} style={{ width: "212px", padding: "0px", fontSize: "20px" }}>
-                            {translations["Aboutus"][props.language]}
+                            {translations["Aboutus"][language]}
                             </Link>
                             {dropdownStates[9] ? (
                               <span
                               style={
-                                props.language === "ur" || props.language === "sd"
+                                language === "ur" || language === "sd"
                                   ? {
                                     display: "flex",
                                     marginLeft: "-70px",
@@ -1173,7 +1169,7 @@ function MobileHome(props) {
                             ) : (
                               <span
                               style={
-                                props.language === "ur" || props.language === "sd"
+                                language === "ur" || language === "sd"
                                   ? {
                                     display: "flex",
                                     marginLeft: "-70px",
@@ -1190,19 +1186,19 @@ function MobileHome(props) {
                           <input type="checkbox" id="drop-3" />
                           <ul>
                             <li className="borderline" style={
-                              props.language === "ur" || props.language === "sd"
+                              language === "ur" || language === "sd"
                                 ? {
                                   textAlign: "right"
                                 }
                                 : {}
                             }>
                               <Link className="link toggle2 mobilenesteddropdowntoggle2" to={"/aboutus"}>
-                              {translations["Vision"][props.language]}
+                              {translations["Vision"][language]}
                               </Link>
                             </li>
                             <li >
                               <label style={
-                                props.language === "ur" || props.language === "sd"
+                                language === "ur" || language === "sd"
                                   ? {
                                     display: "flex",
                                     flexDirection: "row-reverse",
@@ -1214,14 +1210,14 @@ function MobileHome(props) {
                                 <Link to={"/Component"} style={{ width: "195px", padding: "0px", marginLeft: "8px" }}>
                                 {
                                     translations["Components"][
-                                      props.language
+                                      language
                                     ]
                                   }
                                 </Link>
                                 {dropdownStates[10] ? (
                                   <span
                                   style={
-                                    props.language === "ur" || props.language === "sd"
+                                    language === "ur" || language === "sd"
                                       ? {
                                         display: "flex",
                                         marginLeft: "-70px",
@@ -1237,7 +1233,7 @@ function MobileHome(props) {
                                   <span
                                     className="plus"
                                     style={
-                                      props.language === "ur" || props.language === "sd"
+                                      language === "ur" || language === "sd"
                                         ? {
                                           display: "flex",
                                           marginLeft: "-70px",
@@ -1253,7 +1249,7 @@ function MobileHome(props) {
                               <input type="checkbox" id="drop-4" />
                               <ul>
                                 <li className="borderline" style={
-                                  props.language === "ur" || props.language === "sd"
+                                  language === "ur" || language === "sd"
                                     ? {
                                       textAlign: "right"
                                     }
@@ -1263,7 +1259,7 @@ function MobileHome(props) {
                                     className="link toggle2 mobilenesteddropdowntoggle"
                                     to={"/aboutus"}
                                     style={
-                                      props.language === "ur" || props.language === "sd"
+                                      language === "ur" || language === "sd"
                                         ? {
                                           display: "flex",
                                           flexDirection: "row-reverse",
@@ -1274,13 +1270,13 @@ function MobileHome(props) {
                                   >
                                     {
                                       translations["CLICKSID"][
-                                        props.language
+                                        language
                                       ]
                                     }
                                   </Link>
                                 </li>
                                 <li className="b-none" style={
-                                  props.language === "ur" || props.language === "sd"
+                                  language === "ur" || language === "sd"
                                     ? {
                                       textAlign: "right"
                                     }
@@ -1288,7 +1284,7 @@ function MobileHome(props) {
                                 }>
                                   <Link
                                   style={
-                                    props.language === "ur" || props.language === "sd"
+                                    language === "ur" || language === "sd"
                                       ? {
                                         display: "flex",
                                         flexDirection: "row-reverse",
@@ -1301,7 +1297,7 @@ function MobileHome(props) {
                                   >
                                     {
                                       translations["OurTeam"][
-                                        props.language
+                                        language
                                       ]
                                     }
                                   </Link>
@@ -1310,7 +1306,7 @@ function MobileHome(props) {
                             </li>
                             <li className="b-none" >
                               <label style={
-                            props.language === "ur" || props.language === "sd"
+                            language === "ur" || language === "sd"
                               ? {
                                 display: "flex",
                                 flexDirection: "row-reverse",
@@ -1320,7 +1316,7 @@ function MobileHome(props) {
                                 }   for="drop-4" className="d-flex toggle toggle2 mobiledropdowntoggle">
                                 <Link 
                                  style={
-                                  props.language === "ur" || props.language === "sd"
+                                  language === "ur" || language === "sd"
                                     ? {
                                       width: "195px", padding: "0px", marginLeft: "8px",
                                       display: "flex",
@@ -1329,7 +1325,7 @@ function MobileHome(props) {
                                     : {width: "195px", padding: "0px", marginLeft: "8px"  }
                                       }
                                 to={"/aboutus"}>
-                                {translations["CLICKSID"][props.language]}
+                                {translations["CLICKSID"][language]}
                                 </Link>
                               </label>
                             </li>
@@ -1337,7 +1333,7 @@ function MobileHome(props) {
                         </li>
                         <li
                           style={
-                            props.language === "ur" || props.language === "sd"
+                            language === "ur" || language === "sd"
                               ? {
                                 display: "flex",
                                 flexDirection: "row-reverse",
@@ -1348,7 +1344,7 @@ function MobileHome(props) {
                           <Link className="link toggle2" to={"/Maps"}>
                             {
                               translations["Maps"][
-                              props.language
+                              language
                               ]
                             }
                           </Link>
@@ -1383,7 +1379,7 @@ function MobileHome(props) {
                     width: "100%",
                   }}
                 >
-                  {translations["hero-heading"][props.language]}
+                  {translations["hero-heading"][language]}
                 </h6>
               </div>
             </div>
@@ -1402,14 +1398,14 @@ function MobileHome(props) {
                     fontWeight: "400",
                   }}
                 >
-                  {translations["subHeroHeading"][props.language]}
+                  {translations["subHeroHeading"][language]}
                 </p>
                 <div className="row">
                   <div
                     className="col-lg-6 col-md-6 col-sm-6 col-xs-12 "
                     style={
-                      props.language === "ur" ||
-                        props.language === "sd"
+                      language === "ur" ||
+                        language === "sd"
                         ? {
                           display: "flex",
                           justifyContent: "center",
@@ -1424,7 +1420,7 @@ function MobileHome(props) {
                     }>
                     <Link className={""} to={"/investnow"}>
                       <button type="button" className="feedback">
-                        <span>{translations["investButton"][props.language]}</span>
+                        <span>{translations["investButton"][language]}</span>
                       </button>
                     </Link>
                   </div>
@@ -1438,7 +1434,7 @@ function MobileHome(props) {
                   >
                     <a href="comingsoon.html">
                       <button type="button" className="feedback">
-                        <span>{translations["calculatorButton"][props.language]}</span>
+                        <span>{translations["calculatorButton"][language]}</span>
                       </button>
                     </a>
                   </div>
