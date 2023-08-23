@@ -833,7 +833,7 @@ export default function RegulatoryCatalogCalculator(props) {
 
       <div
         className="shadow-sm bg-white  "
-        style={{ paddingTop: "30px", height: "550px" }}
+        style={{ paddingTop: "30px", height: "auto",paddingBottom:"50px" }}
       >
         <div
           className="row"
@@ -924,41 +924,16 @@ export default function RegulatoryCatalogCalculator(props) {
                 );
               })}
             </div>
-            {/* <div style={{display:"flex",flexDirection:"column",gap:"20px"}}>
-            <button
-              className="update"
-              style={{ width: "100%", height: "39px" }}
-              onClick={clickAdd}
-            >
-              Add More
-            </button>
-            {arr1.map((val, ind) => {
-                return (
-                  <>
-                    {ind > 0 ? (
-                     <button className="update" style={{ width: "100%", height: "39px" }} onClick={() => DeleteItems(ind)}> Delete</button>
-                    ) : (
-                      ""
-                    )}
-                   </>
-                );
-              })}
-              </div> */}
           </div>
 
           <div className="col-lg-5 ">
             <RegulatoryCatalogCalculatorGrid changeValue={arr2} />
           </div>
         </div>
-
-        <div className="row">
-          <div className="col-lg-3"></div>
-          <div className="col-lg-5"></div>
-          <div className="col-lg-4"></div>
-        </div>
-        <div className="row"></div>
       </div>
-      <Footer />
+      <div>
+        <Footer />
+      </div>
     </>
   );
 }
