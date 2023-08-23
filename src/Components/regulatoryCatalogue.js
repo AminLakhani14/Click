@@ -2047,7 +2047,7 @@ export default function RegulatoryCatalogue() {
 
   const filterData = (event) => {
     try {
-        debugger;
+         ;
         let filterValue = event.target.value;
         if (filterValue.trim() !== "") {
 

@@ -135,7 +135,7 @@ export default class DemoGrid extends React.Component {
   }
 
   Cellclick (event) {
-    debugger
+     
     if (event.args.datafield === "detail") {
         this.props.setOpenModal(true);
     }

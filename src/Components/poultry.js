@@ -60,7 +60,7 @@ function Poultry(props) {
   let value = ">";
   const location = useLocation();
   useEffect(() => {
-    debugger;
+     ;
     const data = location.state;
     setParentData(data);
   }, [location]);

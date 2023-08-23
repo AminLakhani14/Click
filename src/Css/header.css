@@ -1567,7 +1567,9 @@ path {
   .navbar {
     display: none;
   }
-
+  .footerTop{
+    margin-top: 280px !important;
+  }
   .sticky-icon {
     display: none;
   }
@@ -1748,9 +1750,7 @@ path {
 }
 
 
-.footerTop{
-  margin-top: 370px !important;
-}
+
 .paragraphAlign{
 text-align: right;
 }

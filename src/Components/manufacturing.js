@@ -43,7 +43,19 @@ function Manufacturing(props) {
   //   };
   // }, []);
 
-  
+  const [language, setLanguage] = useState('en');
+
+  // Function to toggle language between English, Urdu, and Sindhi
+  const toggleLanguage = () => {
+    if (language === 'en') {
+      setLanguage('ur');
+    } else if (language === 'ur') {
+      setLanguage('sd');
+    } else {
+      setLanguage('en');
+      
+    }
+  };
 
   const [isVisible, setIsVisible] = useState(false);
   const [parentData, setParentData] = useState();
@@ -64,7 +76,7 @@ function Manufacturing(props) {
   let value = ">";
   const location = useLocation();
   // useEffect(() => {
-  //   debugger;
+  //    ;
   //   const data = location.state;
   //   setParentData(data);
   // }, [location]);
@@ -500,7 +512,9 @@ function Manufacturing(props) {
           </div>
         </div>
       </div>
-      <Footer />
+      <div className="footerTop">
+      <Footer  language={language} setLanguage={setLanguage}/>
+      </div>
     </>
   );
 }

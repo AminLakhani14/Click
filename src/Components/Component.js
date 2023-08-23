@@ -1,16 +1,31 @@
-import React, { useState ,useRef } from "react";
+import React, { useState ,useRef,useEffect } from "react";
 import GenericHeader from "./genericHeader";
 import "../Css/resource.css";
 import Footer from "./footer";
 import DetailModal from "./DetailModal";
+import MobileHeaderGeneric from "./MobileHeaderGeneric";
 
 
 export default function Component() {
- 
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  useEffect(() => {
+    // Function to update the windowWidth state when the resize event occurs
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+
+    // Attach the event listener
+    window.addEventListener('resize', handleResize);
+
+    // Clean up the event listener on component unmount
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
 
   return (
     <>
-      <GenericHeader />
+      {windowWidth <= 500 ? <MobileHeaderGeneric /> : <GenericHeader />}
       <div
         className="row"
         style={{
@@ -54,7 +69,9 @@ export default function Component() {
       </div>
 
     
-      <Footer />
+      <div className="footerTop">
+      <Footer  />
+      </div>
     </>
   );
 }
