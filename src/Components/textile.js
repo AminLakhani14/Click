@@ -4,6 +4,7 @@ import Footer from "./footer";
 import { Link, useLocation } from "react-router-dom";
 import "../Css/investnow.css";
 import "../Css/textField.css";
+import "../Css/resource.css";
 
 import MobileHeaderGeneric from "./MobileHeaderGeneric";
 import TextField from "@mui/material/TextField";
@@ -315,6 +316,7 @@ function Textile(props) {
         }}
       >
         <label
+        
           className="mainHeading"
           style={{
             display: "flex",
@@ -342,11 +344,11 @@ function Textile(props) {
             padding: "60px 60px 0px 60px",
           }}
         >
-          <div className="row sectornestedscreens" style={{marginTop:"-16px"}}>
+          <div className="row sectornestedscreens"  style={{ marginTop:window.innerWidth >= 1024? "48px ":  "-16px" }}>
             <div className="col-lg-4">
               {/* <div class="textField"> */}
                 <TextField
-                  id="outlined-controlled"
+                  // id="outlined-controlled"
                   style={{ width: "100%" }}
                   label="Name"
                   className="feedBackTextField"
@@ -446,14 +448,16 @@ function Textile(props) {
                   style={{
                     width: "100%",
                     borderRadius: "38px",
-                    marginLeft:"7px",
+                    marginLeft:"0px",
                     marginTop:"-4px"
                   }}
                   label="Message"
                   multiline
                   rows={4}
                   InputProps={{
-                    style: { borderRadius: "30px", border: "none" }, // Remove the border
+                    style: {borderRadius: "30px", border: "none",   paddingTop:"10px", 
+                    paddingLeft:"20px", 
+                    paddingRight:"27px"},
                   }}
                   placeholder="Write your feedback subject"
                 />

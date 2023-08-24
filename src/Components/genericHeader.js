@@ -71,20 +71,8 @@ export default function GenericHeader(props) {
       }
     };
   }, []);
-  function gototop(){
-    if ("scrollRestoration" in window.history) {
-      window.history.scrollRestoration = "manual";
-    }
-  
-    window.scrollTo(0, 0);
-  
-    // Restore scroll restoration to its default behavior
-    return () => {
-      if ("scrollRestoration" in window.history) {
-        window.history.scrollRestoration = "auto";
-      }
-    };
-  }
+ 
+ 
    
   const {language} = useSelector((state)=>state.language)
   const dispatch = useDispatch()
@@ -205,7 +193,7 @@ console.log("hello",props.toggleLanguage);
                         }}
                       >
                         <a
-                        onClick={gototop}
+                       
                           style={{
                             width: "300px",
                             paddingLeft: "15px",
@@ -215,7 +203,7 @@ console.log("hello",props.toggleLanguage);
                           href="#"
                         >
                          <Link  onClick={() => { window.scrollTo({ top: 0, left: 0, behavior: "smooth" }); }} className={"link"} to={"/manufacturing"}>
-                          
+                      
                           Manufacturing
                         </Link>
                         </a>
@@ -233,8 +221,8 @@ console.log("hello",props.toggleLanguage);
                         class="dropdown-content nested-content nested-right"
                         style={{ width: "200px" }}
                       >
-                        <Link nClick={() => { window.scrollTo({ top: 2800, left: 0, behavior: "smooth" }); }} className={""} to={"/manufacturing"}>
-                          <a onClick={() => { window.scrollTo({ top: 2800, left: 0, behavior: "smooth" }); }} href="#">Talk to expert </a>
+                        <Link nClick={() => { window.scrollTo({ top: 4000, left: 0, behavior: "smooth" }); }} className={""} to={"/manufacturing"}>
+                          <a onClick={() => { window.scrollTo({ top: 4000, left: 0, behavior: "smooth" }); }} href="#">Talk to expert </a>
       
                         </Link>
                       </div>
@@ -358,7 +346,7 @@ console.log("hello",props.toggleLanguage);
                         style={{ width: "200px", marginTop: "120px" }}
                       >
                         <Link className={""} to={"/agriculture"}>
-                          <a onClick={() => { window.scrollTo({ top: 2800, left: 0, behavior: "smooth" }); }} href="#">Talk to expert </a>
+                          <a onClick={() => { window.scrollTo({ top: 2800, left: 0, behavior: "smooth" }); }} href="">Talk to expert </a>
                         </Link>
                       </div>
                     </div>
