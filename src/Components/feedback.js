@@ -13,8 +13,413 @@ import MobileHeaderGeneric from "./MobileHeaderGeneric";
 export default function FeedBack() {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [isTextareaFocused, setIsTextareaFocused] = useState(false);
-  let value = ">";
+  const [enableAreas, setEnableAreas] = useState(true);
+  const [areaDropdown, setAreaDropdown] = useState([
+    { id: "Urban", text: "Urban" },
+    { id: "Rural", text: "Rural" },
+  ]);
+  const [label, setLabel] = useState("Areas");
 
+  const areas = [
+    //College Education Department Dropdown
+    { id: "Urban", value: "Urban", text: "Urban" },
+    { id: "Urban", value: "Rural", text: "Rural" },
+    //Labour
+    {
+      id: "labour",
+      value: "labour",
+      text: "Same",
+    },
+    {
+      id: "labour",
+      value: "labour",
+      text: "10 Days",
+    },
+    //School Education and Literacy Department Dropdown
+    {
+      id: "MontToMatric",
+      value: "MontToMatric",
+      text: "Institutions from Montessori up to Class-X",
+    },
+    {
+      id: "MontToMatric",
+      value: "HigherAndSecondary",
+      text: "Higher Secondary School",
+    },
+    {
+      id: "MontToMatric",
+      value: "OALevel",
+      text: 'Institutions of "O" & "A" Level',
+    },
+    {
+      id: "MontToMatric",
+      value: "HigherLearning",
+      text: "Degree awarding institutes and universities including Institutions having academic linkage / foreign collaboration/affiliation with any other institutions of higher learning",
+    },
+    //Agriculture Dropdown
+    {
+      id: "Agriculture",
+      value: "BeddedMedical",
+      text: "2 1-24 bedded Medical Centre/ Hospital",
+    },
+    {
+      id: "Agriculture",
+      value: "AboveBeddedMedical",
+      text: " 25 and above bedded Hospital",
+    },
+    {
+      id: "Agriculture",
+      value: "AlreadyRegistered",
+      text: "Any change in the already registered HCE",
+    },
+    //HealthDepartment Dropdown
+    {
+      id: "HealthDepartment",
+      value: "HealthDepartment",
+      text: "License to sell Drugs by Way of Retail Sale (Form-6)",
+    },
+    {
+      id: "HealthDepartment",
+      value: "Wholesale",
+      text: "License to sell Drugs by Way of Wholesale 7A",
+    },
+    {
+      id: "HealthDepartment",
+      value: "Pharmacy",
+      text: "License to sell Drugs in Pharmacy (Form-8)",
+    },
+    {
+      id: "HealthDepartment",
+      value: "NarcoticsandOtherControlledDrugs",
+      text: "License to sell Narcotics and Other Controlled Drugs/ Substances (Form-9)",
+    },
+    {
+      id: "HealthDepartment",
+      value: "IndenterofDrugs",
+      text: "License to Manufacturer /Importer /Indenter of Drugs (Form-7)",
+    },
+    //SindhHealthCareCommission Dropdown
+    {
+      id: "SindhHealthCareCommission",
+      value: "SindhHealthCareCommission",
+      text: " Single specialty (i.e general practitioner, homeo, tibb, detist, nursing/ maternity home, laboratories, radiology centre etc.",
+    },
+    {
+      id: "SindhHealthCareCommission",
+      value: "BeddedMedical",
+      text: "2 1-24 bedded Medical Centre/ Hospital",
+    },
+    {
+      id: "SindhHealthCareCommission",
+      value: "AboveBeddedMedical",
+      text: " 25 and above bedded Hospital",
+    },
+    {
+      id: "SindhHealthCareCommission",
+      value: "AlreadyRegistered",
+      text: "Any change in the already registered HCE",
+    },
+
+    //IndustriesAndCommerce Dropdown
+    {
+      id: "IndustriesAndCommerce",
+      value: "IndustriesAndCommerce",
+      text: "Registration Certificate of Partnership Firm",
+    },
+    {
+      id: "IndustriesAndCommerce",
+      value: "RegistrationCertificateofAmendment",
+      text: "Registration Certificate of Amendment/Dissolution /Rectification in Partnership Firm",
+    },
+    {
+      id: "IndustriesAndCommerce",
+      value: "RegistrationofNewBoiler",
+      text: "Registration of New Boiler",
+    },
+    {
+      id: "IndustriesAndCommerce",
+      value: "RegistrationofOldBoiler",
+      text: "Registration of Old Boiler",
+    },
+    {
+      id: "IndustriesAndCommerce",
+      value: "ApprovalofPlanandParticularsofNewBoiler",
+      text: "Approval of Plan and Particulars of Boilers Acceptable for Registration (New Boiler)",
+    },
+    {
+      id: "IndustriesAndCommerce",
+      value: "ApprovalofPlanandParticularsofUsedBoiler",
+      text: "Approval of Plan and Particulars of Boilers Acceptable for Registration (Used Boiler)",
+    },
+    {
+      id: "IndustriesAndCommerce",
+      value: "TransferofOwnership",
+      text: "Transfer of Ownership",
+    },
+    //Sindh Environment Protection Department
+    {
+      id: "SindhEnvironmentalProtection",
+      value: "SindhEnvironmentalProtection",
+      text: "License for Handling of Hazardous Substances",
+    },
+    {
+      id: "SindhEnvironmentalProtection",
+      value: "NonHazardousSubstances",
+      text: "License to Waste Contractor for Handling of Hazardous Substances and Non-Hazardous substances",
+    },
+    {
+      id: "SindhEnvironmentalProtection",
+      value: "ApprovalUnderSection17",
+      text: "Approval Under Section 17 (IEE/EIA/EC)",
+    },
+    {
+      id: "SindhEnvironmentalProtection",
+      value: "ApprovalofanEnvironmentalManagementPlan",
+      text: "Approval of an Environmental Management Plan",
+    },
+    {
+      id: "SindhEnvironmentalProtection",
+      value: "CertificationofEnvironmentalLab",
+      text: "Certification of Environmental Lab",
+    },
+    {
+      id: "SindhEnvironmentalProtection",
+      value: "ApprovalofHospitalWasteManagementPlan",
+      text: "Approval of Hospital Waste Management Plan",
+    },
+    //Sindh Industrial Trading Estate
+    {
+      id: "SindhIndustrialTrading",
+      value: "SindhIndustrialTrading",
+      text: "Allotment of Land/ Plot",
+    },
+    {
+      id: "SindhIndustrialTrading",
+      value: "ApprovalofBuildingDrawing",
+      text: "Approval of Building Drawing",
+    },
+    {
+      id: "SindhIndustrialTrading",
+      value: "ApprovalofCompletion(Block)Plan",
+      text: "Approval of Completion (Block) Plan",
+    },
+    {
+      id: "SindhIndustrialTrading",
+      value: "CollectionOfAdditionalTradeFee",
+      text: "Collection of Additional Trade Fee",
+    },
+    {
+      id: "SindhIndustrialTrading",
+      value: "Subdivision",
+      text: "Subdivision/ Amalgamation/ Transfer/ Subletting/ Extension of Land or Plot/ Change in Constitution/ change in Constitution",
+    },
+    {
+      id: "SindhIndustrialTrading",
+      value: "IssuanceofLeaseDeed",
+      text: "Issuance of Lease Deed",
+    },
+    {
+      id: "SindhIndustrialTrading",
+      value: "NOCforUtilities",
+      text: "NOC for Utilities (Electricity, Gas, Cable, PTCL)",
+    },
+    {
+      id: "SindhIndustrialTrading",
+      value: "NOCforMortgage",
+      text: "NOC for Mortgage",
+    },
+    {
+      id: "SindhIndustrialTrading",
+      value: "NOCforRoadCutting",
+      text: "NOC for Road Cutting",
+    },
+    {
+      id: "SindhIndustrialTrading",
+      value: "NOCforcarparking",
+      text: "NOC for car parking/ beautification",
+    },
+    // Sindh Small Industries Corporation (SSIC)
+    {
+      id: "SindhSamllIndustries",
+      value: "SindhSamllIndustries",
+      text: "Allotment Order of Land/ Plot",
+    },
+    {
+      id: "SindhSamllIndustries",
+      value: "ApprovalofDrawing",
+      text: "Approval of Drawing",
+    },
+    {
+      id: "SindhSamllIndustries",
+      value: "SubdivisionTransfer",
+      text: "Subdivision/Transfer/ Amalgamation/ Change in constitution (Corporate Setup)/ Change in Trade/ Subletting trade/ Conversion of plot from Industrial to Commercial/ CNG petroleum station/ Godowns & Distribution",
+    },
+    {
+      id: "SindhSamllIndustries",
+      value: "NOCforUtilitiesSI",
+      text: "NOC for Utilities (Electricity, Telephone, Gas, Water)",
+    },
+    {
+      id: "SindhSamllIndustries",
+      value: "NOCforRoadCuttingSI",
+      text: "NOC for Road Cutting",
+    },
+    {
+      id: "SindhSamllIndustries",
+      value: "IssuanceofLeaseDraftSI",
+      text: "Issuance of Lease Draft",
+    },
+    {
+      id: "SindhSamllIndustries",
+      value: "NOCforMortgageSI",
+      text: "NOC for Mortgage",
+    },
+    {
+      id: "SindhSamllIndustries",
+      value: "UnauthorizedConstructionSI",
+      text: "Un- authorized Construction",
+    },
+    //Board Of Revenue
+    {
+      id: "BoardOfRevenue",
+      value: "BoardOfRevenue",
+      text: "Issuance of the True Copy of Land Record",
+    },
+    {
+      id: "BoardOfRevenue",
+      value: "RegistrationofDocument",
+      text: "Registration of Document",
+    },
+    //District Muncipal Corporation
+    {
+      id: "DistrictMuncipal",
+      value: "DistrictMuncipal",
+      text: "Trade License",
+    },
+    {
+      id: "DistrictMuncipal",
+      value: "RoadCuttingPermission",
+      text: "Road Cutting Permission",
+    },
+    {
+      id: "DistrictMuncipal",
+      value: "PermissionforHoldingFairs",
+      text: "NOC/Permission for Holding Fairs, Events, Tournaments, and other Public Gatherings at DMC Central's Jurisdiction",
+    },
+    {
+      id: "DistrictMuncipal",
+      value: "PermissionforKeepingBuildingMaterial",
+      text: "Permission for Keeping Building Material on Roads during Construction",
+    },
+    {
+      id: "DistrictMuncipal",
+      value: "PermissionforSportsActivities",
+      text: "NOC/Permission for Holding Different Kind of Sports Activities in Playgrounds, Gymnasium, Sports Complex & Facilities of DMC-Central",
+    },
+    {
+      id: "DistrictMuncipal",
+      value: "PermissionforNurseriesandParks",
+      text: "NOC/Permission for Establishment of Nurseries in parks, Playgrounds & Open spaces of DMC-Centra",
+    },
+  ];
+  const department = [
+    { value: "Urban", text: "College Education Department" },
+    { value: "labour", text: "Labour and Human Resources Department" },
+    { value: "SFA", text: "Sindh Food Authority (SFA)" },
+    { value: "HealthDepartment", text: "Health Department" },
+    { value: "MontToMatric", text: "School Education and Literacy Department" },
+    {
+      value: "SindhHealthCareCommission",
+      text: "Sindh Health Care Commission",
+    },
+    {
+      value: "IndustriesAndCommerce",
+      text: "Industries and Commerce Department",
+    },
+    {
+      value: "SindhEnvironmentalProtection",
+      text: "Sindh Environmental Protection Agency (SEPA)",
+    },
+    {
+      value: "SindhBuildingControl",
+      text: "Sindh Building Control Authority (SBCA)",
+    },
+    { value: "Agriculture", text: "Agriculture Department" },
+    {
+      value: "SindhIndustrialTrading",
+      text: "Sindh Industrial Trading Estate (S.I.T.E) Limited",
+    },
+    {
+      value: "SindhSamllIndustries",
+      text: "Sindh Small Industries Corporation (SSIC)",
+    },
+    { value: "BoardOfRevenue", text: "Board of Revenue" },
+    { value: "DistrictMuncipal", text: "District Municipal Corporation (DMC)" },
+    {
+      value: "KarachiMetropolitan",
+      text: "Karachi Metropolitan Corporation (KMC)",
+    },
+    { value: "EnergyDepartment", text: "Energy Department" },
+    {
+      value: "SindhEmployeesSecurity",
+      text: "Sindh Employees Social Security Institution (SESSI)",
+    },
+    {
+      value: "ExciseTaxation",
+      text: "Excise, Taxation & Narcotics Control Department",
+    },
+    { value: "SindhRevenueBoard", text: "Sindh Revenue Board" },
+    { value: "LocalGovernment", text: "Local Government Department" },
+    {
+      value: "KarachiWaterAndSewerage",
+      text: "Karachi Water &amp; Sewerage Board",
+    },
+  ];
+  const handleDepartments = (e, param) => {
+    debugger;
+    const selectedValue = e.target.value;
+    const departmentLabels = {
+      Urban: "Areas",
+      labour:"Labour",
+      MontToMatric: "School Education and Literacy Department",
+      SindhHealthCareCommission: "Sindh Health Care Commission",
+      HealthDepartment: "Health Department",
+      IndustriesAndCommerce: "Industries and Commerce Department",
+      SindhEnvironmentalProtection: "Sindh Environmental Protection Agency",
+      SindhIndustrialTrading:
+        "Sindh Industrial Trading Estate (S.I.T.E) Limited",
+      SindhSamllIndustries: "Sindh Small Industries Corporation (SSIC)",
+      BoardOfRevenue: "Board of Revenue",
+      DistrictMuncipal: "District Municipal Corporation (DMC)",
+    };
+
+    let filterData = [];
+    let filterAreaData = [];
+    let subData = [...areas];
+    // let data = [...gridData];
+
+    if (departmentLabels[selectedValue]) {
+      setLabel(departmentLabels[selectedValue]);
+      filterAreaData = subData.filter((x) => x.id === selectedValue);
+      setAreaDropdown(filterAreaData);
+      // filterData = data.filter((x) => x.id === selectedValue);
+      setEnableAreas(true);
+    } else if (selectedValue !== "") {
+      setEnableAreas(false);
+      // filterData = data.filter((x) => x.id === selectedValue);
+    }
+
+    // !param ? setChangeValue(filterData) : (filterData = filterData);
+    return filterData;
+  };
+  const handleArea = (e) => {
+    debugger;
+    const selectedValue = e.target.value;
+    let filterData = [];
+    // if (selectedValue !== "") {
+    //   filterData = data.filter((x) => x.id === selectedValue);
+    // }
+  };
   return (
     <>
       {windowWidth <= 500 ? <MobileHeaderGeneric /> : <GenericHeader />}
@@ -149,7 +554,9 @@ export default function FeedBack() {
             <div className="col-lg-4 ">
               <select
                 type="select"
+                onChange={handleDepartments}
                 className="textField"
+                label="Department"
                 style={{
                   height: "53.5px",
                   width: "100%", // Remove the extra "width:" here
@@ -162,52 +569,45 @@ export default function FeedBack() {
                   position: "relative" /* Add relative positioning to the select element */
                 }}
               >
-                <option value="volvo">College Education Department</option>
-                <option value="saab">
-                  Labour and Human Resources Department
-                </option>
-                <option value="opel">Sindh Food Authority (SFA)</option>
-                <option value="Health">Health Department</option>
-                <option value="School">
-                  School Education and Literacy Department
-                </option>
-                <option value="Care">Sindh Health Care Commission</option>
-                <option value="Commerce">
-                  Industries and Commerce Department
-                </option>
-                <option value="Environmental">
-                  Sindh Environmental Protection Agency (SEPA)
-                </option>
-                <option value="Building">
-                  Sindh Building Control Authority (SBCA)
-                </option>
-                <option value="Agriculture">Agriculture Department</option>
-                <option value="Industrial">
-                  Sindh Industrial Trading Estate (S.I.T.E) Limited
-                </option>
-                <option value="Corporation">
-                  Sindh Small Industries Corporation (SSIC)
-                </option>
-                <option value="Revenue">Board of Revenue</option>
-                <option value="Municipal">
-                  District Municipal Corporation (DMC)
-                </option>
-                <option value="Metropolitan">
-                  Karachi Metropolitan Corporation (KMC)
-                </option>
-                <option value="Energy">Energy Department</option>
-                <option value="Security">
-                  Sindh Employees Social Security Institution (SESSI)
-                </option>
-                <option value="Taxation">
-                  Excise, Taxation &amp; Narcotics Control Department
-                </option>
-                <option value="Board">Sindh Revenue Board</option>
-                <option value="Department">Local Government Department</option>
-                <option value="Sewerage">
-                  Karachi Water &amp; Sewerage Board{" "}
-                </option>
+                {department.map((Val, index) => {
+                  return (
+                    <option key={index} value={Val.value}>
+                      {Val.text}
+                    </option>
+                  );
+                })}
               </select>
+            </div>
+            <div className="col-lg-4 ">
+              {enableAreas === true ? (<>
+                <select
+                  type="select"
+                  onChange={handleArea}
+                  className="textField"
+                  label={label}
+                  renderValue={areas[0]}
+                  style={{
+                    height: "53.5px",
+                    width: "100%", // Remove the extra "width:" here
+                    color: "#757775",
+                    paddingTop: "10px",
+                   borderRadius: "25px",
+                    fontFamily: "sans-serif",
+                    padding: "10px 36px 10px 10px",
+                    position: "relative" /* Add relative positioning to the select element */
+                  }}
+                >
+                  {areaDropdown.map((Val, index) => {
+                    return (
+                      <option key={index} value={Val.value}>
+                        {Val.text}
+                      </option>
+                    );
+                  })}
+                </select>
+              </>) : (
+                <div className="col-lg-3"></div>
+              )}
             </div>
           </div>
           <div
