@@ -657,10 +657,29 @@
 .incrementButtonMap:hover {
   background-color: #1e4f72;
 }
+
+
 .mobilePara {
   font-size: 20px;
   text-align: left;
 }
+
+/* only on feedbackform */
+.mobileparaforfeedback{
+  font-size: 20px;
+  text-align:center;
+  margin-top: -35px !important;
+}
+
+@media screen and (width:280){
+.mobileparaforfeedback{
+  font-size: 17px !important;
+  text-align:center;
+  margin-top: -35px !important;
+}}
+
+
+
 
 @media screen and (width: 540px){
   .descriptionImage {
