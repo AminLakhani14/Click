@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Header from "./Header";
 import Marque from './marque';
 import StatisticsBar from "./statisticsBar";
@@ -65,11 +65,48 @@ function Home(props) {
     }
       
   };
+
+
+  const handleSearch = () => {
+    const searchText = searchTextRef.current.value;
+    const elements = document.getElementsByClassName('highlightable');
+
+    for (const element of elements) {
+      const text = element.textContent || element.innerText;
+      const matchIndex = text.indexOf(searchText);
+
+      if (matchIndex !== -1) {
+        const beforeText = text.substring(0, matchIndex);
+        const matchText = text.substring(
+          matchIndex,
+          matchIndex + searchText.length
+        );
+        const afterText = text.substring(matchIndex + searchText.length);
+
+        // Apply bold style to the matching text
+        const styledHTML = `
+          ${beforeText}<span class="bold">${matchText}</span>${afterText}
+        `;
+        element.innerHTML = styledHTML;
+
+        // Scroll to the element
+        element.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        console.log(matchText)
+
+        return; // Stop searching after finding the first match
+      } else {
+        // Reset the element's innerHTML if no match is found
+        element.innerHTML = text;
+      }
+    }
+  };
+  const searchTextRef = useRef(null);
+
   
   return (
     <>
      {windowWidth <=500 ?<MobileHome SindhitoggleLanguage={SindhitoggleLanguage} toggleLanguage={toggleLanguage} />:
-     <Header SindhitoggleLanguage={SindhitoggleLanguage} toggleLanguage={toggleLanguage}/>
+     <Header searchTextRef={searchTextRef} handleSearch={handleSearch} SindhitoggleLanguage={SindhitoggleLanguage} toggleLanguage={toggleLanguage}/>
     }
     {windowWidth <=500 ?<MobileMarque  toggleLanguage={toggleLanguage}/>:""
     // <Marque />

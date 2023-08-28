@@ -1754,3 +1754,7 @@ path {
 .paragraphAlign{
 text-align: right;
 }
+.bold{
+  font-weight: bolder;
+  background-color: pink;
+}
