@@ -334,7 +334,7 @@ const arr = [
       //   "1. The Sindh Environmental Protection Act, 2014. 2. Sindh Environmental Protection Agency (Environmental Assessment) Regulations, 2021.",
       // jurisdiction: "Sindh",
       timeLine: "EC (15 days) \n▪ IEE (30 days) \n▪ EIA (60 days)",
-      fee: "Up to 20 Million Rs.50,000 \nAbove 20 Million up to 100 Million Rs.100,000 \nAbove 100 Milliion up to 200Million Rs.200,000 \nAbove 200 Million up to 500 Million Rs.400,000 \nAbove 500 Million Rs.600,000\nReview fee for Environmental Checklist or EMP is\nPKR 40,000.\n",
+      fee: "As per schedule",
       // officials:
       //   "Director/ Deputy Director \nAssistant Director \nEnvironmental Inspector ▪ DG (SEPA)  \nExpert Committee",
         // validity: "",                   
@@ -365,7 +365,7 @@ const arr = [
       //   "1. The Sindh Environmental Protection Act, 2014. \n2. Sindh Environmental Quality Standards (Certification of Environmental Laboratories) Regulations, 2014.",
       // jurisdiction: "Sindh",
       timeLine: "7 Days",
-      fee: "Rs.20000 Security Fee\nRs.50000 Certificate Fee",
+      fee: "As pe schedule",
       // officials:
       //   "Director/ Deputy Director \nAssistant Director \nEnvironmental Inspector ▪ DG (SEPA)  \nExpert Committee",
         // validity: "",                   
@@ -396,7 +396,7 @@ const arr = [
       // prevailing: "Karachi Building &amp;Town Planning Regulations, 2002",
       // jurisdiction: "Karachi",
       timeLine: "5 days for Cat-I \n&amp; 60 Days for Cat-II, III &amp; IV",
-      fee: "Residential area category I. I-A. II. III. IX &amp; X.  Rs.15 PSF\nArea category IV. V. VI. VII &amp;. VIII Rs.11 PSF\nCommercial Public Sale Projects\nArea Cat I. I-A. II. III. IX &amp; X Rs.20 PSF\nArea CatI V.V. VII. VII&amp; VIII Rs.16 PSF\nIndustrial Scrutiny fee for industrial plot, which \nis situated beyond 50km from \nMunicipal Limit All Cat: Rs.18 Rs.1\nAmanities Rs.11 PSF",
+      fee: "As per  schudule",
       // officials:
       //   "Assistant Director (Technical) \nData Entry Operator (One Window Facility) \nDeputy Director \nDirector",
         // validity: "",                   
@@ -412,7 +412,7 @@ const arr = [
       //   "Karachi Building &amp;Town Planning Regulations, 2002 Amended up to Date. 2021",
       // jurisdiction: "Karachi",
       timeLine: "5 days for Cat-I \n&amp; 60 Days for Cat-II, III &amp; IV",
-      fee: "Residential area category I. I-A. II. III. IX &amp; X.  Rs.15 PSF\nArea category IV. V. VI. VII &amp;. VIII Rs.11 PSF\nCommercial Public Sale Projects\nArea Cat I. I-A. II. III. IX &amp; X Rs.20 PSF\nArea CatI V.V. VII. VII&amp; VIII Rs.16 PSF\nIndustrial Scrutiny fee for industrial plot, which \nis situated beyond 50km from \nMunicipal Limit All Cat: Rs.18 Rs.1\nAmanities Rs.11 PSF",
+      fee: "As per schedule",
       // officials:
       //   "Assistant Director (Technical) \nData Entry Operator (One Window Facility) \nDeputy Director \nDirector",
         // validity: "",                   
@@ -427,7 +427,7 @@ const arr = [
       // prevailing: "Karachi Building &amp;Town Planning Regulations, 2002",
       // jurisdiction: "Karachi",
       timeLine: "5 days for Cat-I \n&amp; 60 Days for Cat-II, III &amp; IV",
-      fee: "Residential area category I. I-A. II. III. IX &amp; X.  Rs.15 PSF\nArea category IV. V. VI. VII &amp;. VIII Rs.11 PSF\nCommercial Public Sale Projects\nArea Cat I. I-A. II. III. IX &amp; X Rs.20 PSF\nArea CatI V.V. VII. VII&amp; VIII Rs.16 PSF\nIndustrial Scrutiny fee for industrial plot, which \nis situated beyond 50km from \nMunicipal Limit All Cat: Rs.18 Rs.1\nAmanities Rs.11 PSF",
+      fee: "As per schedule",
       // officials:
       //   "Assistant Director (Technical) \nData Entry Operator (One Window Facility) \nBuilder Inspector \nDeputy Director \nDirector \nDirector General (SBCA)",
         // validity: "",                   
@@ -443,7 +443,7 @@ const arr = [
       // prevailing: "Karachi Building &amp;Town Planning Regulations, 2002.",
       // jurisdiction: "Karachi",
       timeLine: "15 days for Cat I \nand 60 Days for Cat-II, III &amp; IV",
-      fee: "Cat A-l Rs. 5000/- \nCat : 2 I 5000/- 3 II 2500/- 4 III 2500/- 5 IV 1500/- 6 V 700/- 7 VI 700/-",
+      fee: "As per schedule",
       // officials:
       //   "Assistant Director (Technical) \nData Entry Operator (One Window Facility) \nBuilder Inspector \nDeputy Director \nDirector \nDirector General (SBCA)",
         // validity: "",                   
@@ -458,7 +458,7 @@ const arr = [
       // prevailing: "Karachi Building &amp;Town Planning Regulations, 2002.",
       // jurisdiction: "Karachi",
       timeLine: "15 days for Cat I \nand 60 Days for Cat-II, III &amp; IV",
-      fee: "The registration fee for different categories of building plan is defined. Fee ranges from PKR 1.00 per sq ft. to\nPKR. 20.00 per sq ft.\nSee Page 32  of EY Sprint 3 As Is",
+      fee: "As per schedule",
       // officials:
       //   "Assistant Director (Technical) \nData Entry Operator (One Window Facility)\nDeputy Director \nDirector",
         // validity: "",                   
@@ -678,7 +678,7 @@ const arr = [
       //   "Pest control Ordinance, 1971 and Rules 1973.\nSindh Fertilizer Control Act, 1994 and Rules, 1999.",
       // jurisdiction: "Sindh",
       timeLine: "1 Month",
-      fee: "Pesticide Rs.200,000/- \nFertilizer Rs. 50,000/-",
+      fee: "As per schedule",
       // officials:
       //   "Secretary (Agriculture) \nDirector General (DG) \nTechnical Committee \nSub Committee (Inspector) of Technical Committee",
         // validity: "",                   
@@ -709,7 +709,7 @@ const arr = [
       //   "Agricultural Produce Markets Act, 1939. \nAgricultural Produce Market Rules, 1940.",
       // jurisdiction: "Sindh",
       timeLine: "7-10 days",
-      fee: "Rs. 1,000 (for Factories - A group) \nRs. 500 (for wholesaler – B group) \nRs. 100 (for Retailers – C group)",
+      fee: "As per schedule",
       // officials:
       //   "Concerned Circle In-charge \nInspector \nLicense In-charge \nSecretary (Market Committee)\nChairman (Market Committee)\n",
         // validity: "",                   
@@ -830,7 +830,7 @@ const arr = [
       prevailing: "By Laws",
       // jurisdiction: "Sindh",
       timeLine: "14 days",
-      fee:"",
+      fee:"50000",
       officials:
         "Office Superintendent\nAD/ DD (Admin) \nDirector (Admin) \nSecretary MD",
         // validity: "",                   
@@ -1150,7 +1150,7 @@ const arr = [
         "Sindh Local Government Act 2013\n\nThe Sindh People’s\nLocal Council (Land) Rules 1975",
       // jurisdiction: "Karachi",
       timeLine: "15 days",
-      fee: "Mutation of land fee is 2% of the Sale Deed.",
+      fee: "As per schedule",
       officials:
         "▪ Director Land\n▪ Concerned Additional Director\n▪ Concerned Deputy Director\n▪ Assistant Director\n▪ Assistant Accounts Officer",
         // validity: "",                   
@@ -1165,7 +1165,7 @@ const arr = [
       prevailing:"",
       // jurisdiction: "Karachi",
       timeLine: "15 days",
-      fee: "The fee is according to Council Resolution (CR)\n by the department and authorized by the Administrator.",
+      fee: "As per schedule",
       officials:
         "▪ Director Land\n▪ Concerned Additional Director\n▪ Concerned Deputy Director\n▪ Assistant Director\n▪ Assistant Account Officer",
         // validity: "",                   
@@ -1180,7 +1180,7 @@ const arr = [
       prevailing:"",
       // jurisdiction: "Karachi",
       timeLine: "15 days",
-      fee: "The Registration fee is according to Council Resolution (CR) notified by the department and authorized by the\n\nAdministrator.",
+      fee: "As per schedule",
       officials:
         "▪ Director Land\n▪ Concerned Additional Director\n▪ Concerned Deputy Director\n▪ Assistant Director\n▪ Assistant Account Officer",
         // validity: "",                   
@@ -1195,7 +1195,7 @@ const arr = [
       prevailing:"",
       // jurisdiction: "Karachi",
       timeLine: "1 month",
-      fee: "The Registration fee is in accordance with Council Resolution (CR) notified by the department and authorized by\n\nthe Administrator.",
+      fee: "As per schedule",
       officials:
         "▪ Director Land\n▪ Concerned Additional Director\n▪ Concerned Deputy Director\n▪ Assistant Director\n▪ Land Inspector/ Surveyor\n▪ Assistant Account Officer",
         // validity: "",                   
@@ -1210,7 +1210,7 @@ const arr = [
       prevailing:"",
       // jurisdiction: "Karachi",
       timeLine: "15 days",
-      fee: "Mutation of land fee is 4% of Sale Deed.",
+      fee: "As per schedule",
       officials:
         "▪ Project Director\n▪ Concerned Deputy Director\n▪ Assistant Director\n▪ Assistant Account Officer",
         // validity: "",                   
@@ -1225,7 +1225,7 @@ const arr = [
       prevailing:"",
       // jurisdiction: "Karachi",
       timeLine: "15 days",
-      fee: "Residential Rs.1000\nCommercial Rs.2000",
+      fee: "As per schedule",
       officials:
         "▪ Project Director\n▪ Concerned Deputy Director\n▪ Assistant Director\n▪ Assistant Account Officer",
         // validity: "",                   
@@ -1240,7 +1240,7 @@ const arr = [
       prevailing:"",
       // jurisdiction: "Karachi",
       timeLine: "15 days",
-      fee: "Residential Rs.10,000\nResidential Cum Commercial Rs.15,000\nCommercial Rs.20,000",
+      fee: "As per schedule",
       officials:
         "▪ Project Director\n▪ Concerned Deputy Director\n▪ Assistant Director\n▪ Assistant Account Officer",
         // validity: "",                   
@@ -1255,7 +1255,7 @@ const arr = [
       prevailing:"",
       // jurisdiction: "Karachi",
       timeLine: "1 month",
-      fee: "See slab on page 351-352 of EY Report",
+      fee: "As per schedule",
       officials:
         "▪ Project Director\n▪ Concerned Deputy Director\n▪ Assistant Director\n▪ Assistant Account Officer",
         // validity: "",                   
@@ -1270,7 +1270,7 @@ const arr = [
       prevailing:"",
       // jurisdiction: "Karachi",
       timeLine: "1 month",
-      fee: "See slab on page 358-359 of Ey report",
+      fee: "As per schedule",
       officials:
         "▪ Project Director\n▪ Concerned Deputy Director\n▪ Assistant Director\n▪ Assistant Account Officer",
         // validity: "",                   
@@ -1285,7 +1285,7 @@ const arr = [
       prevailing:"",
       // jurisdiction: "Karachi",
       timeLine: "15 days",
-      fee: "Residential Per Sq Yard Rs.100\nCommerical per sq yard Rs.200",
+      fee: "As per schedule",
       officials:
         "▪ Project Director\n▪ Concerned Deputy Director\n▪ Assistant Director\n▪ Assistant Account Officer",
         // validity: "",                   
@@ -1301,7 +1301,7 @@ const arr = [
         "The Sindh Katchi Abadi Act 1987\n\nThe Sindh People\nLocal Council (Land)\nRules, 1975",
       // jurisdiction: "Karachi",
       timeLine: "15 Days",
-      fee: "Mutation of land fee is 4% of Sale Deed.",
+      fee: "As per schedule",
       officials:
         "▪ Director Katchi Abadi\n▪ Concerned Deputy Director\n▪ Assistant Director\n▪ Land Surveyor/Inspector\n▪ Scrutiny Committee\n▪ Assistant Account Officer",
         // validity: "",                   
@@ -1316,7 +1316,7 @@ const arr = [
       prevailing:"",
       // jurisdiction: "Karachi",
       timeLine: "15 Days",
-      fee: "Resedential Rs.1000\nCommercial Rs.2000",
+      fee: "As per schedule",
       officials:
         "▪ Director Katchi Abadi\n▪ Concerned Deputy Director\n▪ Assistant Director\n▪ Land Surveyor/Inspector\n▪ Assistant Account Officer",
         // validity: "",                   
@@ -1331,7 +1331,7 @@ const arr = [
       prevailing:"",
       // jurisdiction: "Karachi",
       timeLine: "15 Days",
-      fee: "Residential Rs.10,000\nResidential Cum Commercial Rs.15,000\nCommercial Rs.20,000",
+      fee: "As per schedule",
       officials:
         "▪ Director Katchi Abadi\n▪ Concerned Deputy Director\n▪ Assistant Director\n▪ Land Surveyor/Inspector\n▪ Assistant Account Officer",
         // validity: "",                   
@@ -1346,7 +1346,7 @@ const arr = [
       prevailing:"",
       // jurisdiction: "Karachi",
       timeLine: "1 Month",
-      fee: "Page 386 of EY Report As is Sprint 3",
+      fee: "As per schedule",
       officials:
         "▪ Director Katchi Abadi\n▪ Concerned Deputy Director\n▪ Assistant Director\n▪ Land Surveyor/Inspector\n▪ Scrutiny Committee\n▪ Assistant Account Officer",
         // validity: "",                   
@@ -1361,7 +1361,7 @@ const arr = [
       prevailing:"",
       // jurisdiction: "Karachi",
       timeLine: "15 Days",
-      fee: "Residential Per Sq Yard Rs.100\nCommerical per sq yard Rs.200",
+      fee: "As per schedule",
       officials:
         "▪ Director Katchi Abadi\n▪ Concerned Deputy Director\n▪ Assistant Director\n▪ Land Surveyor/Inspector\n▪ Assistant Account Officer",
         // validity: "",                   
@@ -1393,7 +1393,7 @@ const arr = [
       prevailing:"",
       // jurisdiction: "Karachi",
       timeLine: "15 Days",
-      fee: "District Nort Rs.15000\nDistrict East Rs.10000\nDistrict Centeral Rs.7500\nDistrict West Rs.5000",
+      fee: "As per schedule",
       officials:
         "▪ Director Anti Encroachment\n▪ Concerned Deputy Director\n▪ Inspector\n▪ Assistant Account Officer",
         // validity: "",                   
@@ -1409,7 +1409,7 @@ const arr = [
       prevailing:"",
       // jurisdiction: "Karachi",
       timeLine: "15 Days",
-      fee: "Commercial Building &amp; Complex\nOn Streed Rs.10 Per Sq Ft\nOn Footpath Rs.5 Per Sq Ft\n\nResedential\nOn street Rs.5 Per Sq Ft\nOn Footpath Rs.3 Per Sq Ft",
+      fee: "As per schedule",
       officials:
         "▪ Director Anti Encroachment\n▪ Concerned Deputy Director\n▪ Inspector\n▪ Assistant Account Officer",
         // validity: "",                   
@@ -1424,7 +1424,7 @@ const arr = [
       prevailing:"",
       // jurisdiction: "Karachi",
       timeLine: "15 Days",
-      fee: "Karachi Zoo &amp; Park Rs.7000 Per Hour\nSecurity Deposit Rs.25000\n\nIn Karachi Zoo Rs.10,000 Per Hour\nSecurity Deposit Rs.50,000\n\nKarachi Safari Park Rs.7,000\nSecuirty Deposit Rs.25000",
+      fee: "As per schedule",
       officials:
         "▪ Director Safari Park/ Karachi Zoo\n▪ Concerned Additional Director\n▪ Deputy Director\n▪ Assistant Director\n▪ Assistant Account Officer",
         // validity: "",                   
@@ -1439,7 +1439,7 @@ const arr = [
       prevailing:"",
       // jurisdiction: "Karachi",
       timeLine: "15 Days",
-      fee: "See Page 418-419-420 of EY Sprint 3 As Is report",
+      fee: "As per schedule",
       officials:
         "▪ Director Advertisement\n▪ Metropolitan Commissioner\n▪ Deputy Director\n▪ Inspector\n▪ Engineering Department\n▪ Assistant Director\n▪ Assistant Account Officer",
         // validity: "",                   
@@ -1454,7 +1454,7 @@ const arr = [
       prevailing:"",
       // jurisdiction: "Karachi",
       timeLine: "15 Days",
-      fee: "See Page 427 of Ey Sprint 3 As is report",
+      fee: "As per schedule",
       officials:
         "▪ Director General (Technical Services)\n▪ Concerned Chief Engineer \n▪ Superintendent Engineer (Engineering Department)\n▪ Executive Engineer (Engineering Department)\n▪ Assistant Executive Engineer \n▪ Superintendent Engineer (Quality Control)\n▪ Executive Engineer (Quality Control)\n▪ Account Branch",
         // validity: "",                   
@@ -1515,7 +1515,7 @@ const arr = [
       prevailing:"",
       // jurisdiction: "Sindh",
       timeLine: "NA",
-      fee: "Rs.100 \nLate Fee: Rs.150",
+      fee: "As per schedule",
       officials: "Electric Inspector",
       // validity: "",                   
       // renewalFee:""
@@ -1529,7 +1529,7 @@ const arr = [
       prevailing:"",
       // jurisdiction: "Sindh",
       timeLine: "NA",
-      fee: "Rs.500\nLate Fee Rs.750",
+      fee: "As per schedule",
       officials: "Electric Inspector",
       // validity: "",                   
       // renewalFee:""
@@ -1615,7 +1615,7 @@ const arr = [
       prevailing: "Motor Vehicle Registration Act, 1965",
       // jurisdiction: "Sindh",
       timeLine: "7 days",
-      fee: "Page 55 of EY AS IS Sprint 2",
+      fee: "As per schedule",
       officials:
         "▪ Counter In-Charge\n▪ Head Cashier \n▪ Motor Registration Authority\n▪ Staff from Card Section\n▪ Staff from Return File Section\n▪ Staff from Scanning Section",
         // validity: "",                   
@@ -1630,7 +1630,7 @@ const arr = [
       prevailing:"",
       // jurisdiction: "Sindh",
       timeLine: "7 days",
-      fee: "Motorcycle Rs.200/-\nM/Cars, Jeeps, etc. up to 800 cc Engine Power Rs.800/-\nM/Cars, Jeeps, etc. from 801 cc to 2,000 cc Engine Power Rs.1,000/-\nRickshaws Rs.400/-\nTractors Rs.1,000/",
+      fee: "As per schedule",
       officials:
         '"▪ Counter In-Charge\n▪ Head Cashier \n▪ Motor Registration Authority\n▪ Staff from Card Section\n▪ Staff from Return File Section\n▪ Staff from Scanning Section"',
         // validity: "",                   
@@ -1645,7 +1645,7 @@ const arr = [
       prevailing:"",
       // jurisdiction: "Sindh",
       timeLine: "7 days",
-      fee: "Big Vehicle Rs.1,500/-\nSmall Vehicle Rs.1,250/-",
+      fee: "As per schedule",
       officials:
         '▪ Counter In-Charge\n▪ Head Cashier \n▪ Motor Registration Authority\n▪ Staff from Card Section\n▪ Staff from Return File Section\n▪ Staff from Scanning Section"""',
         // validity: "",                   
@@ -1675,7 +1675,7 @@ const arr = [
         "▪ Sindh Finance Act 1964\n▪ Sindh Professions, Trades, Calling &amp; Employment \nTax  Rules, 1976",
       // jurisdiction: "Sindh",
       timeLine: "Same Day",
-      fee: "See page 64-65 of Sprint 2 EY AS is REport",
+      fee: "As per schedule",
       officials:
         "▪ Chief Minister, Sindh\n▪ Chief Secretary/ Secretary \n▪ Section Officer \n▪ Director General Excise \n▪ Regional Director \n▪ Concerned District Officer\n▪ Concerned Assistant ETO/Concerned Inspector",
         // validity: "",                   
@@ -1691,7 +1691,7 @@ const arr = [
         "▪ Prohibition (Enforcement of Hadd) Order 1979\n▪ Sindh Prohibition Rules 1979",
       // jurisdiction: "Sindh",
       timeLine: "1 Month",
-      fee: "Distillery License for intoxicating Liquor 30,000/- per annum\nEstablishment Charges 3,500,000/- per annum\n",
+      fee: "As per schedule",
       officials:
         "▪ Chief Minister, Sindh\n▪ Chief Secretary/ Secretary \n▪ Section Officer \n▪ Director General Excise \n▪ Regional Director \n▪ Concerned District Officer\n▪ Concerned Assistant ETO/Concerned Inspector",
         // validity: "",                   
@@ -1706,7 +1706,7 @@ const arr = [
       prevailing:"",
       // jurisdiction: "Sindh",
       timeLine: "1 Month",
-      fee: "Manufacturing of PMFL License 30,000/- per annum\nEstablishment Charges 3,500,000/- per annum",
+      fee: "As per schedule",
       officials:"",
       // validity: "",                   
       // renewalFee:""
@@ -1720,7 +1720,7 @@ const arr = [
       prevailing:"",
       // jurisdiction: "Sindh",
       timeLine: "1 Month",
-      fee: "Establishing a Brewery for Beer 30,000/- per annum\nEstablishment Charges 35,00,000/- per annum",
+      fee: "As per schedule",
       officials:"",
       // validity: "",                   
       // renewalFee:""
@@ -1765,7 +1765,7 @@ const arr = [
         "▪ The Sindh Abkari act 1878\n▪ Sindh Excise Manual Volume-I\n",
       // jurisdiction: "Sindh",
       timeLine: "1 Month",
-      fee: "Distillery License for manufacturing of Ethanol 30,000/- per annum\nEstablishment Fee 3,500,000/- per annum\n",
+      fee: "As per schedule",
       officials:
         "▪ Regional Director \n▪ District Officer (DO)/ETO\n▪ Assistant ETO/ Inspector \n▪ Director General (DG) Excise",
         // validity: "",                   
@@ -1822,7 +1822,7 @@ const arr = [
       prevailing:"",
       // jurisdiction: "Sindh",
       timeLine: "1 Month",
-      fee: "Denatured Spirit License for Retail-Sale 2400/- per anum (License fee) and \n2400/- per anum (Bottling Fee)",
+      fee: "As per schedule",
       officials:"",
       // validity: "",                   
       // renewalFee:""
@@ -1837,7 +1837,7 @@ const arr = [
         '"▪ Prohibition (Enforcement of Hadd) Order 1979\n▪ Sindh Prohibition Rules 1979"\n\n\n\n',
       // jurisdiction: "Sindh",
       timeLine: "1 Month",
-      fee: "Denatured Spirit License for Retail-Sale 2400/- per anum (License fee) and \n2400/- per anum (Bottling Fee)",
+      fee: "As per schedule",
       officials:"",
       // validity: "",                   
       // renewalFee:""
@@ -1865,7 +1865,7 @@ const arr = [
       prevailing:"",
       // jurisdiction: "Sindh",
       timeLine: "1 Month",
-      fee: "Permit for Hotels for Retail Sale of \nIntoxicating Liquor Average rent one day X 100\n",
+      fee: "As per schedule",
       officials:
         '▪ Chief Minister, Sindh\n▪ Chief Secretary/ Secretary \n▪ Section Officer \n▪ Director General Excise \n▪ Regional Director \n▪ Concerned District Officer\n▪ Concerned Assistant ETO/Concerned Inspector"\n\n\n\n',
         // validity: "",                   
@@ -1928,7 +1928,7 @@ const arr = [
       prevailing:"",
       // jurisdiction: "Sindh",
       timeLine: "1 Month",
-      fee: "Permission to use Rectified Spirit in the \nManufacturing of Spirituous / Medicinal/ Toilet \nPreparation\n15,000/- per annum\nPermission to use Rectified Spirit in the \nManufacturing Homeopathic Medicine Preparation 600/- per annum \nEstablishment Charges 3,500,000/- per anum",
+      fee: "As per schedule",
       officials:
         "▪ Regional Director \n▪ District Officer (DO)/ETO\n▪ Assistant ETO/ Inspector \n▪ Director General (DG) Excise",
         // validity: "",                   
@@ -1944,7 +1944,7 @@ const arr = [
       prevailing:"",
       // jurisdiction: "Sindh",
       timeLine: "3 Days",
-      fee: "Transport Permit for Beer 76/- Per Liter \nTransport Permit for PMFL 2,160/- per Proof Gallon \nTransport Permit for Denatured Spirit 10/- per Bulk Gallon \nVend Fee 6/- per Bulk Gallon Transport Permit for Methanol \n10/- per bulk gallon \nVend Fee 6/- per Bulk Gallon",
+      fee: "As per schedule",
       officials:
         "▪ District Officer \n▪ Deputy Director \n▪ Director \n▪ Director General",
         // validity: "",                   
@@ -1961,7 +1961,7 @@ const arr = [
         '"▪ The Sindh Abkari act 1878\n▪ Sindh Excise Manual Volume-I\n\n\n',
       // jurisdiction: "Sindh",
       timeLine: "1 Month",
-      fee: "fee challan of Rs. 60/-\nTransport Permit for Beer Rs.02/- per bottle of Beer\nTransport Permit for PMFL Rs.15/- per unit of PMFL\nTransport Permit for Methanol Rs.10/- per bulk Gallon and Vend fee of \nRs. 6 /- per bulk Gallon (both collected together)",
+      fee: "As per schedule",
       officials:
         "▪ District Officer \n▪ Deputy Director \n▪ Director \n▪ Director General",
         // validity: "",                   
@@ -2006,7 +2006,7 @@ const arr = [
         "Karachi Water and Sewerage Board Standard \nOperating Procedures 2016 ",
       // jurisdiction: "Karachi",
       timeLine: 21,
-      fee: "The fee depends on various factors like:\n▪ Size of the plot\n▪ Story of the building\n▪ Type of connection (consumer / bulk / industrial)\n▪ Size of the flat\nFollowing charges are paid by the consumer at the time of issuance of the Sanction Letter:\n▪ Water Charges\n▪ Security Deposit\n▪ Sewerage Charge\n",
+      fee: "As per schedule",
       officials:
         "▪ DMD Technical Services\n▪ SUB- Engineer \n▪ RRG Department\n▪ MD KWSB",
         // validity: "",                   
@@ -2021,7 +2021,7 @@ const arr = [
         "Sub-Soil Water (Extraction and Consumption) \nRegulations 2018",
       // jurisdiction: "Karachi",
       timeLine: "Varies",
-      fee: "Non-refundable license fee per borehole Rs. 100,000/-\nOne-time advance security deposit per borehole Rs. 90,000/-\nMonthly license fee per bore hole Rs. 30,000/-\r",
+      fee: "As per schedule",
       officials:
         "▪ Superintending Engineer\n▪ Committee\n▪ Sub- Engineer \n▪ RRG Department\n▪ MD KWSB\n",
         // validity: "",                   
