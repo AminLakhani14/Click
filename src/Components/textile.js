@@ -13,7 +13,26 @@ import buildingBridge from "../assets/buildingBridge.png";
 import  textilebg    from "../assets/textilebg.jpg"
 
 
+
 function Textile(props) {
+  
+  const loc = useLocation();
+  useEffect(() => {
+    let lm  = document.getElementById(loc.hash.slice(1));
+    
+    if (lm) {
+      lm.scrollIntoView({ behavior: 'smooth' });
+    }
+    else
+    {
+      window.scrollTo({top:0, left:0, behavior:'smooth'})
+      }
+  }, [loc]);
+   
+
+
+
+
 
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   useEffect(() => {
@@ -300,14 +319,15 @@ function Textile(props) {
             type="button"
             className="InvestInSindhButton"
             onClick={handleLearnMoreClick2}
-          >
-            <span style={{ width: "179px", height: "33px" }}>
+          > 
+            <span id="expertform" style={{ width: "179px", height: "33px" }}>
               {showFullText2 ? "Read Less" : "Read More"}
             </span>
           </button>
         </div>
       </div>
-      <div
+     
+      <div 
         className="row justify-content-center  divheight "
         style={{
           background: "#F7F7F7",
@@ -473,6 +493,7 @@ function Textile(props) {
           </div>
         </div>
       </div>
+    
       <Footer />
     </>
   );

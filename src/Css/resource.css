@@ -161,7 +161,7 @@ color:#720D1D
   display: block;
   transform-origin: top left;
   white-space: nowrap;
-  overflow: hidden;
+  /* overflow: hidden; */
   text-overflow: ellipsis;
   max-width: calc(133% - 32px);
   position: absolute;
@@ -194,7 +194,7 @@ color:#720D1D
   display: block;
   transform-origin: top left;
   white-space: nowrap;
-  overflow: hidden;
+  /* overflow: hidden; */
   text-overflow: ellipsis;
   max-width: calc(133% - 32px);
   position: absolute;

@@ -35,6 +35,20 @@ import { useSelector } from "react-redux";
 function Header(props) {
 const {language} = useSelector((state)=>state.language)
 
+
+const scrollToSection = (sectionid) => {
+ 
+  const section = document.getElementById(sectionid);
+ 
+  if (section) {
+    console.log(sectionid); 
+    section.scrollIntoView({ behavior: "smooth" });
+   
+  }
+};
+
+
+
   const [isHovered, setIsHovered] = useState(false);
 
   const handleMouseEnterFaceBook = () => {
@@ -745,8 +759,8 @@ const {language} = useSelector((state)=>state.language)
                                 class="dropdown-content nested-content nested-right"
                                 style={{ width: "200px" }}
                               >
-                                <Link  className={""} to={"/manufacturing"}>
-                                  <a onClick={() => { window.scrollTo({ top: 2800, left: 0, behavior: "smooth" }); }} >
+                                <Link  className={""} to={"/manufacturing#expertform"}>
+                                  <a href="#" >
                                     {
                                       translations["Talktoexpert"][
                                         language
@@ -832,8 +846,8 @@ const {language} = useSelector((state)=>state.language)
                                 class="dropdown-content nested-content nested-right"
                                 style={{ width: "200px", marginTop: "40px" }}
                               >
-                                <Link  className={""} to={"/textile"}>
-                                  <a onClick={() => { window.scrollTo({ top: 2800, left: 0, behavior: "smooth" }); }} href="#">
+                                <Link  className={""} to={"/textile#expertform"}>
+                                  <a  href="#">
                                     {
                                       translations["Talktoexpert"][
                                         language
@@ -922,8 +936,8 @@ const {language} = useSelector((state)=>state.language)
                                 class="dropdown-content nested-content nested-right"
                                 style={{ width: "200px", marginTop: "80px" }}
                               >
-                                <Link className={""} to={"/tourism"} >
-                                  <a onClick={() => { window.scrollTo({ top: 2800, left: 0, behavior: "smooth" }); }}  href="#">
+                                <Link className={""} to={"/tourism#expertform"} >
+                                  <a   href="#">
                                     {
                                       translations["Talktoexpert"][
                                         language
@@ -1012,8 +1026,8 @@ const {language} = useSelector((state)=>state.language)
                                 class="dropdown-content nested-content nested-right"
                                 style={{ width: "200px", marginTop: "120px" }}
                               >
-                                <Link className={""} to={"/agriculture"}>
-                                  <a href="#" onClick={() => { window.scrollTo({ top: 2800, left: 0, behavior: "smooth" }); }}  >
+                                <Link className={""} to={"/agriculture#expertform"}>
+                                  <a  href="#"  >
                                     {
                                       translations["Talktoexpert"][
                                         language
@@ -1103,8 +1117,8 @@ const {language} = useSelector((state)=>state.language)
                                 class="dropdown-content nested-content nested-right"
                                 style={{ width: "200px", marginTop: "160px" }}
                               >
-                                <Link className={""} to={"/education"}>
-                                  <a onClick={() => { window.scrollTo({ top: 2800, left: 0, behavior: "smooth" }); }}  href="#">
+                                <Link className={""} to={"/education#expertform"}>
+                                  <a  href="#">
                                     {
                                       translations["Talktoexpert"][
                                         language
@@ -1192,8 +1206,8 @@ const {language} = useSelector((state)=>state.language)
                                 class="dropdown-content nested-content nested-right"
                                 style={{ width: "200px", marginTop: "200px" }}
                               >
-                                <Link  className={""} to={"/energy"}>
-                                  <a onClick={() => { window.scrollTo({ top: 2800, left: 0, behavior: "smooth" }); }} href="#">
+                                <Link  className={""} to={"/energy#expertform"}>
+                                  <a href="#">
                                     {
                                       translations["Talktoexpert"][
                                         language
@@ -1279,8 +1293,8 @@ const {language} = useSelector((state)=>state.language)
                                 class="dropdown-content nested-content nested-right"
                                 style={{ width: "200px", marginTop: "240px" }}
                               >
-                                <Link  className={""} to={"/health"}>
-                                  <a onClick={() => { window.scrollTo({ top: 2800, left: 0, behavior: "smooth" }); }} href="#">
+                                <Link  className={""} to={"/health#expertform"}>
+                                  <a  href="#">
                                     {
                                       translations["Talktoexpert"][
                                         language
@@ -1371,8 +1385,8 @@ const {language} = useSelector((state)=>state.language)
                                 class="dropdown-content nested-content nested-right"
                                 style={{ width: "200px", marginTop: "280px" }}
                               >
-                                <Link  className={""}  to={"/informationtech"}>
-                                  <a onClick={() => { window.scrollTo({ top: 2800, left: 0, behavior: "smooth"  }); }} href="#">
+                                <Link  className={""}  to={"/informationtech#expertform"}>
+                                  <a  href="#">
                                     {
                                       translations["Talktoexpert"][
                                         language

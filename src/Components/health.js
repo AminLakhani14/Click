@@ -12,6 +12,19 @@ import buildingBridge from "../assets/buildingBridge.png";
 import health from "../assets/health.jpg"
 
 function Health(props) {
+
+  const loc = useLocation();
+  useEffect(() => {
+    let lm  = document.getElementById(loc.hash.slice(1));
+    
+    if (lm) {
+      lm.scrollIntoView({ behavior: 'smooth' });
+    }
+    else
+    {
+      window.scrollTo({top:0, left:0, behavior:'smooth'})
+      }
+  }, [loc])
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   useEffect(() => {
 
@@ -298,7 +311,7 @@ function Health(props) {
             className="InvestInSindhButton"
             onClick={handleLearnMoreClick2}
           >
-            <span style={{ width: "179px", height: "33px" }}>
+            <span  id="expertform" style={{ width: "179px", height: "33px" }}>
               {showFullText2 ? "Read Less" : "Read More"}
             </span>
           </button>

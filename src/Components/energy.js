@@ -13,6 +13,18 @@ import energybg from "../assets/energybg.png";
 
 function Energy(props) {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const loc = useLocation();
+  useEffect(() => {
+    let lm  = document.getElementById(loc.hash.slice(1));
+    
+    if (lm) {
+      lm.scrollIntoView({ behavior: 'smooth' });
+    }
+    else
+    {
+      window.scrollTo({top:0, left:0, behavior:'smooth'})
+      }
+  }, [loc])
   useEffect(() => {
 
     // Function to update the windowWidth state when the resize event occurs
@@ -309,7 +321,7 @@ function Energy(props) {
             className="InvestInSindhButton"
             onClick={handleLearnMoreClick2}
           >
-            <span style={{ width: "179px", height: "33px" }}>
+            <span id="expertform"   style={{ width: "179px", height: "33px" }}>
               {showFullText2 ? "Read Less" : "Read More"}
             </span>
           </button>

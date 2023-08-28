@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import accessibility from "../assets/accessibility.png";
 import "../Css/header.css";
 import sindh from "../assets/logo-sindh.png";
@@ -12,12 +12,26 @@ import { setLanguage } from "../Redux/Reducer/languageSlice";
 
 import Sindhi from "../assets/Sindhi.png";
 import English from "../assets/English.png";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch, useSelector, } from "react-redux";
+
+
 
 export default function GenericHeader(props) {
   const [isSticky, setIsSticky] = useState(false);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [childLanguage, setchildLanguage] = useState({});
+
+
+
+
+
+
+  
+
+
+
+
+
 
   useEffect(() => {
     const handleScroll = () => {
@@ -221,8 +235,8 @@ console.log("hello",props.toggleLanguage);
                         class="dropdown-content nested-content nested-right"
                         style={{ width: "200px" }}
                       >
-                        <Link nClick={() => { window.scrollTo({ top: 4000, left: 0, behavior: "smooth" }); }} className={""} to={"/manufacturing"}>
-                          <a onClick={() => { window.scrollTo({ top: 4000, left: 0, behavior: "smooth" }); }} href="#">Talk to expert </a>
+                        <Link  className={""} to={"/manufacturing#expertform"}>
+                          <a  href="#">Talk to expert </a>
       
                         </Link>
                       </div>
@@ -263,8 +277,8 @@ console.log("hello",props.toggleLanguage);
                         class="dropdown-content nested-content nested-right"
                         style={{ width: "200px", marginTop: "40px" }}
                       >
-                       <Link className={""} to={"/textile"}>
-                          <a onClick={() => { window.scrollTo({ top: 2800, left: 0, behavior: "smooth" }); }} href="#">Talk to expert </a>
+                       <Link className={""} to="/textile#expertform">
+                          <a  href="#">Talk to expert </a>
                         </Link>
                       </div>
                     </div>
@@ -304,8 +318,8 @@ console.log("hello",props.toggleLanguage);
                         class="dropdown-content nested-content nested-right"
                         style={{ width: "200px", marginTop: "80px" }}
                       >
-                         <Link className={""} to={"/tourism"}>
-                          <a onClick={() => { window.scrollTo({ top: 2800, left: 0, behavior: "smooth" }); }} href="#">Talk to expert </a>
+                         <Link className={""} to={"/tourism#expertform"}>
+                          <a  href="#">Talk to expert </a>
                         </Link>
                       </div>
                     </div>
@@ -345,8 +359,8 @@ console.log("hello",props.toggleLanguage);
                         class="dropdown-content nested-content nested-right"
                         style={{ width: "200px", marginTop: "120px" }}
                       >
-                        <Link className={""} to={"/agriculture"}>
-                          <a onClick={() => { window.scrollTo({ top: 2800, left: 0, behavior: "smooth" }); }} href="">Talk to expert </a>
+                        <Link className={""} to={"/agriculture#expertform"}>
+                          <a  href="">Talk to expert </a>
                         </Link>
                       </div>
                     </div>
@@ -386,8 +400,8 @@ console.log("hello",props.toggleLanguage);
                         class="dropdown-content nested-content nested-right"
                         style={{ width: "200px", marginTop: "160px" }}
                       >
-                         <Link  className={""} to={"/education"}>
-                          <a  onClick={() => { window.scrollTo({ top: 2800, left: 0, behavior: "smooth" }); }}  href="#">Talk to expert </a>
+                         <Link  className={""} to={"/education#expertform"}>
+                          <a   href="#">Talk to expert </a>
                         </Link>
                       </div>
                     </div>
@@ -427,7 +441,7 @@ console.log("hello",props.toggleLanguage);
                         class="dropdown-content nested-content nested-right"
                         style={{ width: "200px", marginTop: "200px" }}
                       >
-                        <Link onClick={() => { window.scrollTo({ top: 2800, left: 0, behavior: "smooth" }); }} className={""} to={"/energy"}>
+                        <Link  className={""} to={"/energy#expertform"}>
                           <a href="#">Talk to expert </a>
                         </Link>
                       </div>
@@ -468,8 +482,8 @@ console.log("hello",props.toggleLanguage);
                         class="dropdown-content nested-content nested-right"
                         style={{ width: "200px", marginTop: "240px" }}
                       >
-                        <Link   className={""} to={"/health"}>
-                          <a onClick={() => { window.scrollTo({ top: 2800, left: 0, behavior: "smooth" }); }} href="#">Talk to expert </a>
+                        <Link   className={""} to={"/health#expertform"}>
+                          <a  href="#">Talk to expert </a>
                         </Link>
                       </div>
                     </div>
@@ -509,8 +523,8 @@ console.log("hello",props.toggleLanguage);
                         class="dropdown-content nested-content nested-right"
                         style={{ width: "200px", marginTop: "280px" }}
                       >
-                       <Link  className={""} to={"/informationtech"}>
-                          <a onClick={() => { window.scrollTo({ top: 2800, left: 0, behavior: "smooth" }); }} href="#">Talk to expert </a>
+                       <Link  className={""} to={"/informationtech#expertform"}>
+                          <a  href="#">Talk to expert </a>
                         </Link>
                       </div>
                     </div>

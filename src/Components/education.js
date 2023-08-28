@@ -10,9 +10,22 @@ import TextField from "@mui/material/TextField";
 import sindhAssembly from "../assets/sindhAssemblywomen.png";
 import buildingBridge from "../assets/buildingBridge.png";
 import educationbg from "../assets/educationbg.png";
+import educationinnerpic1 from "../assets/educationinnerpic1.jpg";
 
 function Education(props) {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const loc = useLocation();
+  useEffect(() => {
+    let lm  = document.getElementById(loc.hash.slice(1));
+    
+    if (lm) {
+      lm.scrollIntoView({ behavior: 'smooth' });
+    }
+    else
+    {
+      window.scrollTo({top:0, left:0, behavior:'smooth'})
+      }
+  }, [loc])
   useEffect(() => {
 
     // Function to update the windowWidth state when the resize event occurs
@@ -190,7 +203,7 @@ function Education(props) {
         <div
           className="col-lg-9 descriptionImage"
           style={{
-            background: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(${sindhAssembly})`,
+            background: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(${educationinnerpic1})`,
           }}
         >
           <label className="agriAndFoodHeading">
@@ -309,7 +322,7 @@ function Education(props) {
             className="InvestInSindhButton"
             onClick={handleLearnMoreClick2}
           >
-            <span style={{ width: "179px", height: "33px" }}>
+            <span id="expertform" style={{ width: "179px", height: "33px" }}>
               {showFullText2 ? "Read Less" : "Read More"}
             </span>
           </button>
