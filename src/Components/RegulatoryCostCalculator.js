@@ -65,7 +65,7 @@ const Drop2Data = (value) => {
         {
           id: "SFA",
           timeLineText: "7 Days",
-          feeValue: "",
+          feeValue: "500",
           validityYear: "",
           text: "SFA",
           value: "SFA",
@@ -642,7 +642,6 @@ const Dropdown = (props) => {
   ]);
   const handleChange = (event) => {
     debugger;
-
     setSelectedValue(event.target.value);
     let arr = [...props.arr];
     arr.splice(props.ind, 1, event.target.value);

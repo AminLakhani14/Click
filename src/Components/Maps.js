@@ -1110,7 +1110,7 @@ console.log(newValue)
             </Tooltip>
             <Tooltip
               overlayInnerStyle={{ borderRadius: "0px"}}
-              className="shapatar"
+              className="circle"
               color={"#0F5789"}
               placement="top"
               title={sindhInvestmentDept}
