@@ -13,6 +13,9 @@ import { setLanguage } from "../Redux/Reducer/languageSlice";
 import Sindhi from "../assets/Sindhi.png";
 import English from "../assets/English.png";
 import { useDispatch, useSelector } from "react-redux";
+import { useMemo } from "react";
+import { Tooltip } from "antd";
+import { handleSearch } from "../Route";
 
 export default function GenericHeader(props) {
   const [isSticky, setIsSticky] = useState(false);
@@ -71,13 +74,13 @@ export default function GenericHeader(props) {
       }
     };
   }, []);
-  function gototop(){
+  function gototop() {
     if ("scrollRestoration" in window.history) {
       window.history.scrollRestoration = "manual";
     }
-  
+
     window.scrollTo(0, 0);
-  
+
     // Restore scroll restoration to its default behavior
     return () => {
       if ("scrollRestoration" in window.history) {
@@ -85,31 +88,60 @@ export default function GenericHeader(props) {
       }
     };
   }
-   
-  const {language} = useSelector((state)=>state.language)
+
+  const { language } = useSelector((state) => state.language)
   const dispatch = useDispatch()
 
   const toggleLanguage = () => {
-    if(language == 'ur'){
+    if (language == 'ur') {
       dispatch(setLanguage('en'));
-    }else{
+    } else {
       dispatch(setLanguage('ur'));
     }
-  
-};
 
-const SindhitoggleLanguage = () => {
-  if(language == 'sd'){
-    dispatch(setLanguage('en'));
-  }else{
-    dispatch(setLanguage('sd'));
-  }
-    
-};
+  };
+
+  const SindhitoggleLanguage = () => {
+    if (language == 'sd') {
+      dispatch(setLanguage('en'));
+    } else {
+      dispatch(setLanguage('sd'));
+    }
+
+  };
+  const [arrow, setArrow] = useState("Show");
+
+  const mergedArrow = useMemo(() => {
+    if (arrow === "Hide") {
+      return false;
+    }
+    if (arrow === "Show") {
+      return true;
+    }
+    return {
+      pointAtCenter: true,
+    };
+  }, [arrow]);
+
+  const [searchInput, setSearchInput] = useState('');
+  const SearchBox = ( 
+    <div
+      className="d-flex justify-content-between"
+      style={{ width: "325px", height: "60px" }}
+    >
+      <input
+          type="text"
+          id="searchText"
+          style={{ width: "240px", maxWidth: "240px", height: "60px" }}
+          value={searchInput}
+          onChange={(e) => setSearchInput(e.target.value)}
+        />
+        <button className="update" onClick={handleSearch}>Search</button>
+    </div>
+  );
 
 
-
-console.log("hello",props.toggleLanguage);
+  console.log("hello", props.toggleLanguage);
   return (
     <div
       className={"genericheader  sticky  "}
@@ -125,15 +157,15 @@ console.log("hello",props.toggleLanguage);
                 style={
                   windowWidth <= 1366
                     ? {
-                        marginLeft: "15px",
-                        marginRight: "-4px",
-                        marginTop: "39px",
-                      }
+                      marginLeft: "15px",
+                      marginRight: "-4px",
+                      marginTop: "39px",
+                    }
                     : {
-                        marginLeft: "22px",
-                        marginRight: "7px",
-                        marginTop: "39px",
-                      }
+                      marginLeft: "22px",
+                      marginRight: "7px",
+                      marginTop: "39px",
+                    }
                 }
               ></div>
               <img src={click} alt="" className="navlogo2"></img>
@@ -141,8 +173,8 @@ console.log("hello",props.toggleLanguage);
           </div>
           <div className="navbarRight">
             <ul>
-            <div className="r-side d-inline">
-            <img
+              <div className="r-side d-inline">
+                <img
                   className="headerLogoImages"
                   src={language === "ur" ? English : urdu}
                   alt=""
@@ -205,7 +237,7 @@ console.log("hello",props.toggleLanguage);
                         }}
                       >
                         <a
-                        onClick={gototop}
+                          onClick={gototop}
                           style={{
                             width: "300px",
                             paddingLeft: "15px",
@@ -214,10 +246,10 @@ console.log("hello",props.toggleLanguage);
                           }}
                           href="#"
                         >
-                         <Link  onClick={() => { window.scrollTo({ top: 0, left: 0, behavior: "smooth" }); }} className={"link"} to={"/manufacturing"}>
-                          
-                          Manufacturing
-                        </Link>
+                          <Link onClick={() => { window.scrollTo({ top: 0, left: 0, behavior: "smooth" }); }} className={"link"} to={"/manufacturing"}>
+
+                            Manufacturing
+                          </Link>
                         </a>
                         <i
                           style={{
@@ -235,7 +267,7 @@ console.log("hello",props.toggleLanguage);
                       >
                         <Link nClick={() => { window.scrollTo({ top: 2800, left: 0, behavior: "smooth" }); }} className={""} to={"/manufacturing"}>
                           <a onClick={() => { window.scrollTo({ top: 2800, left: 0, behavior: "smooth" }); }} href="#">Talk to expert </a>
-      
+
                         </Link>
                       </div>
                     </div>
@@ -275,7 +307,7 @@ console.log("hello",props.toggleLanguage);
                         class="dropdown-content nested-content nested-right"
                         style={{ width: "200px", marginTop: "40px" }}
                       >
-                       <Link className={""} to={"/textile"}>
+                        <Link className={""} to={"/textile"}>
                           <a onClick={() => { window.scrollTo({ top: 2800, left: 0, behavior: "smooth" }); }} href="#">Talk to expert </a>
                         </Link>
                       </div>
@@ -298,7 +330,7 @@ console.log("hello",props.toggleLanguage);
                           }}
                           href="#"
                         >
-                          <Link onClick={() => { window.scrollTo({ top: 0, left: 0, behavior: "smooth" }); }}  className={"link"} to={"/tourism"}>
+                          <Link onClick={() => { window.scrollTo({ top: 0, left: 0, behavior: "smooth" }); }} className={"link"} to={"/tourism"}>
                             Tourism
                           </Link>
                         </a>
@@ -316,7 +348,7 @@ console.log("hello",props.toggleLanguage);
                         class="dropdown-content nested-content nested-right"
                         style={{ width: "200px", marginTop: "80px" }}
                       >
-                         <Link className={""} to={"/tourism"}>
+                        <Link className={""} to={"/tourism"}>
                           <a onClick={() => { window.scrollTo({ top: 2800, left: 0, behavior: "smooth" }); }} href="#">Talk to expert </a>
                         </Link>
                       </div>
@@ -398,8 +430,8 @@ console.log("hello",props.toggleLanguage);
                         class="dropdown-content nested-content nested-right"
                         style={{ width: "200px", marginTop: "160px" }}
                       >
-                         <Link  className={""} to={"/education"}>
-                          <a  onClick={() => { window.scrollTo({ top: 2800, left: 0, behavior: "smooth" }); }}  href="#">Talk to expert </a>
+                        <Link className={""} to={"/education"}>
+                          <a onClick={() => { window.scrollTo({ top: 2800, left: 0, behavior: "smooth" }); }} href="#">Talk to expert </a>
                         </Link>
                       </div>
                     </div>
@@ -421,7 +453,7 @@ console.log("hello",props.toggleLanguage);
                           }}
                           href="#"
                         >
-                         <Link onClick={() => { window.scrollTo({ top: 0, left: 0, behavior: "smooth" }); }} className={"link"} to={"/energy"}>
+                          <Link onClick={() => { window.scrollTo({ top: 0, left: 0, behavior: "smooth" }); }} className={"link"} to={"/energy"}>
                             Energy
                           </Link>
                         </a>
@@ -462,7 +494,7 @@ console.log("hello",props.toggleLanguage);
                           }}
                           href="#"
                         >
-                          <Link  onClick={() => { window.scrollTo({ top: 0, left: 0, behavior: "smooth" }); }} className={"link"} to={"/health"}>
+                          <Link onClick={() => { window.scrollTo({ top: 0, left: 0, behavior: "smooth" }); }} className={"link"} to={"/health"}>
                             Health
                           </Link>
                         </a>
@@ -480,7 +512,7 @@ console.log("hello",props.toggleLanguage);
                         class="dropdown-content nested-content nested-right"
                         style={{ width: "200px", marginTop: "240px" }}
                       >
-                        <Link   className={""} to={"/health"}>
+                        <Link className={""} to={"/health"}>
                           <a onClick={() => { window.scrollTo({ top: 2800, left: 0, behavior: "smooth" }); }} href="#">Talk to expert </a>
                         </Link>
                       </div>
@@ -521,7 +553,7 @@ console.log("hello",props.toggleLanguage);
                         class="dropdown-content nested-content nested-right"
                         style={{ width: "200px", marginTop: "280px" }}
                       >
-                       <Link  className={""} to={"/informationtech"}>
+                        <Link className={""} to={"/informationtech"}>
                           <a onClick={() => { window.scrollTo({ top: 2800, left: 0, behavior: "smooth" }); }} href="#">Talk to expert </a>
                         </Link>
                       </div>
@@ -632,11 +664,26 @@ console.log("hello",props.toggleLanguage);
                 </a>
               </li>
               <li className="HeaderPaddingRight">
-                <a href="comingsoon.html" title="" width="10">
-                  <i
-                    className="fa-sharp fa-solid fa-magnifying-glass"
-                    style={{ color: "#000000" }}
-                  ></i>
+                <a title="" width="10">
+                  <Tooltip
+                    overlayInnerStyle=
+                    {{
+                      borderRadius: "0px",
+                      width: "350px",
+                      minWidth: "350px",
+                      position: "relative",
+                      right: "100px"
+                    }}
+                    color={"#Ffffff"}
+                    placement="bottomLeft"
+                    title={SearchBox}
+                    arrow={mergedArrow}
+                  >
+                    <i
+                     className="fa-sharp fa-solid fa-magnifying-glass"
+                     style={{ color: "#000000" }}
+                    ></i>
+                  </Tooltip>
                 </a>
               </li>
             </ul>

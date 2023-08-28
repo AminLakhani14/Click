@@ -32,6 +32,7 @@ import { translations } from "../Transalation/Transalation";
 import { useSelector } from "react-redux";
 import { Button, TextField } from "@mui/material";
 import Search from "antd/es/input/Search";
+import { handleSearch, searchText } from "../Route";
 
 
 function Header(props) {
@@ -481,14 +482,23 @@ function Header(props) {
   //     }
   //   }
   // };
+  console.log("naem",props.HeaderSearch)
+  console.log("text",props.Text)
 
-  const SearchBox = (
+  const [searchInput, setSearchInput] = useState('');
+  const SearchBox = ( 
     <div
       className="d-flex justify-content-between"
       style={{ width: "325px", height: "60px" }}
     >
-      <input type="text" ref={props.searchTextRef}style={{ width: "240px",maxWidth:"240px", height: "60px" }} />
-      <button className="update" onClick={props.handleSearch}>Search</button>
+      <input
+          type="text"
+          id="searchText"
+          style={{ width: "240px", maxWidth: "240px", height: "60px" }}
+          value={searchInput}
+          onChange={(e) => setSearchInput(e.target.value)}
+        />
+        <button className="update" onClick={handleSearch}>Search</button>
     </div>
   );
 
@@ -590,7 +600,7 @@ function Header(props) {
             </div>
             {isSticky === true ? (
               <div style={{ position: "relative", zIndex: "99999999999" }}>
-                <GenericHeader toggleLanguage={props.toggleLanguage} SindhitoggleLanguage={props.SindhitoggleLanguage} />
+                <GenericHeader toggleLanguage={props.toggleLanguage} SindhitoggleLanguage={props.SindhitoggleLanguage} handleSearch={props.handleSearch}  searchTextRef={props.searchTextRef}/>
               </div>
             ) : (
               <div className={`header `}>
@@ -1949,8 +1959,7 @@ function Header(props) {
           </div>
         </div>
       </div >
-      <div className="highlightable">Amin</div>
-      <div className="highlightable">Ghufran</div>
+      <div className="highlightable">AMIN</div>
     </>
   );
 }
