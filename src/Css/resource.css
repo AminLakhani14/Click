@@ -921,7 +921,24 @@ margin-left: -20px !important;
 
 
 
+/* for text area of feedback expert forms */
+.MuiFormControl-root.MuiTextField-root.feedBackTextField.css-1u3bzj6-MuiFormControl-root-MuiTextField-root{
+  border-radius:61px !important ;
+}
+
+.css-1qxw4jt-MuiInputBase-root-MuiOutlinedInput-root{
+  border-radius: 60px !important;
+}
 
 
+
+label#\:rd\:-label {
+  left: 1px !important;
+  top: 8px !important;
+}
+
+#expert-section{
+  display: block;
+}
 
 

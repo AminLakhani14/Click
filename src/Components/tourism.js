@@ -350,7 +350,7 @@ function Tourism(props) {
 
           }}
         >
-          <div className="row sectornestedscreens" style={{ marginTop: "-16px" }}>
+          <div className="row sectornestedscreens"  style={{ marginTop:window.innerWidth >= 1024? "48px ":  "-16px" }}>
             <div className="col-lg-4">
               {/* <div class="textField"> */}
                 <TextField
@@ -454,7 +454,7 @@ function Tourism(props) {
                   style={{
                     width: "100%",
                     borderRadius: "38px",
-                    marginLeft:"7px",
+                    marginLeft:"0px",
                     marginTop:"-4px"
                   }}
                   label="Message"

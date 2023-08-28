@@ -9,7 +9,10 @@ import EconomicPowerHouse from "../assets/EconomicPowerHouse.png";
 import buildingBridge from "../assets/buildingBridge.png";
 import diverseHorizon from "../assets/diverseHorizon.png";
 import MobileHeaderGeneric from "./MobileHeaderGeneric";
+import { useSelector } from "react-redux";
+import { translations } from "../Transalation/Transalation";
 function WhySindhMain() {
+  const {language} = useSelector((state)=>state.language)
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
   useEffect(() => {
@@ -48,7 +51,8 @@ function WhySindhMain() {
 
       <div style={{ background: `url(${whySindh})` }} className="siteHeader">
         <h1 data-aos="fade-up" className="Investnow-h1">
-          Why Sindh
+         
+          {translations["WhySindh"][language]}
         </h1>
       </div>
       <div className="row breadCrumb">
@@ -85,7 +89,7 @@ function WhySindhMain() {
               : "mainHeading"
           }
         >
-          Discover the Advantages of Sindh
+         {translations["DAOS"][language]}
         </h1>
         <div
           className="col-lg-10"
@@ -102,18 +106,8 @@ function WhySindhMain() {
                 :  "InvestnowParagraphh" 
             }
           >
-            Uncover the remarkable advantages that Sindh, Pakistan's vibrant
-            province, holds for investors and businesses alike. Sindh boasts a
-            strategic location, serving as a key trade route between East and
-            West, providing access to a vast consumer market. Its thriving
-            industries, including textiles, manufacturing, agriculture, and
-            services, offer ample investment opportunities. With a skilled
-            workforce, supportive government policies, and a growing
-            infrastructure, Sindh provides a conducive business environment.
-            Explore this section to learn more about the favorable tax
-            incentives, abundant resources, and cultural richness that make
-            Sindh an enticing destination for those seeking growth,
-            profitability, and a strong competitive edge.
+           
+           {translations["WhySind1stpara"][language]}
           </p>
         </div>
       </div>
@@ -128,7 +122,7 @@ function WhySindhMain() {
           <label className={"agriAndFoodHeading"}
             data-aos="fade-up"
           >
-            Gateway to Growth
+          {translations["GatewayToGrowth"][language]}            
           </label>
         </div>
       </div>
@@ -142,12 +136,7 @@ function WhySindhMain() {
             className={"f-size"}
             data-aos="fade-up"
           >
-            Unlocking Opportunities through Sindh's Strategic Location, Sindh
-            has a strategic geographical location, serving as a major gateway
-            between Central Asia, the Middle East, and South Asia. It provides
-            access to important trade routes, including the Arabian Sea, making
-            it an ideal location for businesses looking to establish connections
-            and expand their market reach.
+           {translations["WhySindh2ndpara"][language]}
           </label>
         </div>
       </div>
@@ -168,7 +157,7 @@ function WhySindhMain() {
                   to={"/gateway"}
                 >
                   <span style={{ textDecoration: "none", color: "white" }}>
-                    Learn More{" "}
+                    {translations['LearnMore'][language]}
                   </span>
                 </Link>
               </span>
@@ -188,7 +177,7 @@ function WhySindhMain() {
             className={"agriAndFoodHeading"}
             data-aos="fade-up"
           >
-            Economic Powerhouse
+             {translations["EconomicPowerhouse"][language]}
           </label>
         </div>
       </div>
@@ -204,12 +193,7 @@ function WhySindhMain() {
           className={"f-size"}
           data-aos="fade-up"
           >
-            Sindh's Thriving Sectors Drive Investment Potential, Sindh is one of
-            the most economically significant provinces in Pakistan. It boasts a
-            diverse economy, with thriving sectors such as agriculture,
-            manufacturing, services, and finance. The province's economic growth
-            is driven by its vibrant cities like Karachi, which is the financial
-            and commercial hub of Pakistan.
+            {translations['WhySindh3rdpara'][language]}
           </label>
         </div>
       </div>
@@ -232,7 +216,7 @@ function WhySindhMain() {
                 >
                   <span style={{ textDecoration: "none", color: "white" }}>
                     {" "}
-                    Learn More{" "}
+                    {translations['LearnMore'][language]}
                   </span>
                 </Link>
               </span>
@@ -254,7 +238,7 @@ function WhySindhMain() {
           className={"agriAndFoodHeading"}
           data-aos="fade-up"
           >
-            Building Bridges to Success
+            {translations["BuildingBridgestoS"][language]}
           </label>
         </div>
       </div>
@@ -267,12 +251,7 @@ function WhySindhMain() {
           <label
            className={"f-size "}
            data-aos="fade-up">
-            Sindh's Infrastructure Development Attracts Investors, Sindh has
-            been focusing on improving its infrastructure to facilitate business
-            activities and attract investments. There have been significant
-            investments in transportation, including road networks, ports, and
-            airports, which enhance connectivity within the province and with
-            the rest of the country.
+             {translations["WhySindh4thpara"][language]}
           </label>
         </div>
       </div>
@@ -293,7 +272,7 @@ function WhySindhMain() {
                   to={"/buildingbridges"}
                 >
                   <span style={{ textDecoration: "none", color: "white" }}>
-                    Learn More{" "}
+                  {translations['LearnMore'][language]}
                   </span>
                 </Link>
               </span>
@@ -313,7 +292,7 @@ function WhySindhMain() {
           <label
           className="agriAndFoodHeading" data-aos="fade-up"
           >
-            Diverse Horizons
+           {translations["DiverseHorizons"][language]}
           </label>
         </div>
       </div>
@@ -328,15 +307,7 @@ function WhySindhMain() {
           <label
           className="f-size" data-aos="fade-up"
           >
-            Exploring Lucrative Investment Opportunities in Sindh's Sectors,
-            Sindh offers a range of investment opportunities across various
-            sectors. For instance, the agriculture sector presents opportunities
-            in crop cultivation, livestock farming, and fisheries. The
-            manufacturing sector is expanding, with potential investments in
-            textiles, garments, chemicals, and engineering goods. Additionally,
-            the province provides a favorable environment for investment in
-            sectors such as information technology, renewable energy, and real
-            estate.
+            {translations["WhySindh5thpara"][language]}
           </label>
         </div>
       </div>
@@ -357,7 +328,7 @@ function WhySindhMain() {
               >
                 <span style={{ textDecoration: "none", color: "white" }}>
                   {" "}
-                  Learn More{" "}
+                  {translations['LearnMore'][language]}
                 </span>
               </Link>
             </button>
@@ -372,7 +343,7 @@ function WhySindhMain() {
               : "mainHeading"
           }
         >
-          Seize the Opportunity
+          {translations['SeizeTheOpportunity'][language]}
         </h1>
         <div
           className="mt-2"
@@ -383,9 +354,9 @@ function WhySindhMain() {
           }}
         >
           <a href="comingsoon.html">
-            <button type="button" className="InvestInSindhButton">
+            <button type="button" className={language === "en"?"InvestInSindhButton":"InvestinSindhbuttonforUrduandSindhi"}>
               <span style={{ width: "179px", height: "33px" }}>
-                Invest in Sindh
+                {translations['InvestSindh'][language]}
               </span>
             </button>
           </a>

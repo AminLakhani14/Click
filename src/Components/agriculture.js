@@ -9,10 +9,14 @@ import MobileHeaderGeneric from "./MobileHeaderGeneric";
 import TextField from "@mui/material/TextField";
 import sindhAssembly from "../assets/sindhAssemblywomen.png";
 import agricult from "../assets/agricult.png";
+import { useSelector } from "react-redux";
+import { translations } from "../Transalation/Transalation";
 import "../Css/resource.css";
 
 function Agriculture(props) {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const {language} = useSelector((state)=>state.language)
+ 
   useEffect(() => {
 
     // Function to update the windowWidth state when the resize event occurs
@@ -87,7 +91,7 @@ function Agriculture(props) {
             isVisible ? "" : "slide-out-left"
           }`}
         >
-          Agriculture
+          {translations['AgricultureandFoodP'][language]}
         </h1>
       </div>
       <div className="row breadCrumb">
@@ -331,9 +335,9 @@ function Agriculture(props) {
           }}
         >
           {" "}
-          Contact Our Agriculture Expert
+          Contact Our Agriculture and Food Processing Expert
         </label>
-        <div
+        <div id="expert-section"
           className="col-lg-12 sectorMUI"
           style={{
             background: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(${agricult})`,backgroundSize:window.innerWidth <= 500 ? "100% 100%": "cover",
@@ -346,7 +350,7 @@ function Agriculture(props) {
             padding: "60px 60px 0px 60px",
           }}
         >
-          <div className="row sectornestedscreens" style={{ marginTop: "-16px" }}>
+          <div className="row sectornestedscreens"  style={{ marginTop:window.innerWidth >= 1024? "48px ":  "-16px" }}>
             <div className="col-lg-4">
               {/* <div class="textField"> */}
                 <TextField
@@ -442,20 +446,25 @@ function Agriculture(props) {
             <div className="col-lg-12 mt-4">
               {/* <div class="textField"> */}
                 <TextField
-                  id="outlined-controlled"
+                  // id="fortextarea"
                   size="small"
                  className="feedBackTextField"
                   style={{
                     width: "100%",
                     borderRadius: "38px",
-                    marginLeft:"7px",
-                    marginTop:"-4px"
+                    marginLeft:"0px",
+                    marginTop:"-4px",
+                  
                   }}
                   label="Message"
                   multiline
                   rows={4}
                   InputProps={{
-                    style: { borderRadius: "30px", border: "none" }, // Remove the border
+                    style: { borderRadius: "30px", border: "none",   paddingTop:"10px", 
+                    paddingLeft:"20px", 
+                    paddingRight:"27px",
+                    
+                   }, // Remove the border
                   }}
                   placeholder="Write your feedback subject"
                 />

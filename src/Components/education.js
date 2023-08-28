@@ -353,7 +353,7 @@ function Education(props) {
       
           }}
         >
-          <div className="row sectornestedscreens" style={{ marginTop: "-16px" }}>
+          <div className="row sectornestedscreens" style={{ marginTop:window.innerWidth >= 1024? "48px ":  "-16px" }}>
             <div className="col-lg-4">
               {/* <div class="textField"> */}
                 <TextField
@@ -455,15 +455,19 @@ function Education(props) {
                   style={{
                     width: "100%",
                     borderRadius: "38px",
-                    marginLeft:"7px",
-                    marginTop:"-4px"
+                    marginLeft:"0px",
+                    marginTop:"-4px",
+                   
+                    
                   }}
-                  label="Message"
+                  
+                  
                   multiline
                   rows={4}
                   InputProps={{
-                    style: { borderRadius: "30px", border: "none" }, // Remove the border
+                    style: { borderRadius: "30px", border: "none", paddingTop:10, paddingLeft:20, paddingRight:25 }, // Remove the border
                   }}
+                  label="Message"
                   placeholder="Write your feedback subject"
                 />
               {/* </div> */}

@@ -339,7 +339,7 @@ function Health(props) {
             padding: "60px 60px 0px 60px",
           }}
         >
-          <div className="row sectornestedscreens" style={{ marginTop: "-16px" }}>
+          <div className="row sectornestedscreens"  style={{ marginTop:window.innerWidth >= 1024? "48px ":  "-16px" }}>
             <div className="col-lg-4">
               {/* <div class="textField"> */}
                 <TextField
@@ -441,14 +441,16 @@ function Health(props) {
                   style={{
                     width: "100%",
                     borderRadius: "38px",
-                    marginLeft:"7px",
+                    marginLeft:"0px",
                     marginTop:"-4px"
                   }}
                   label="Message"
                   multiline
                   rows={4}
                   InputProps={{
-                    style: { borderRadius: "30px", border: "none" }, // Remove the border
+                    style: { borderRadius: "30px", border: "none",   paddingTop:"10px", 
+                    paddingLeft:"20px", 
+                    paddingRight:"27px"}, // Remove the border
                   }}
                   placeholder="Write your feedback subject"
                 />
