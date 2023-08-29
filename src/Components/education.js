@@ -61,7 +61,7 @@ function Education(props) {
   let value = ">";
   const location = useLocation();
   // useEffect(() => {
-  //   debugger;
+  //    ;
   //   const data = location.state;
   //   setParentData(data);
   // }, [location]);
@@ -495,7 +495,9 @@ function Education(props) {
           </div>
         </div>
       </div>
-      <Footer />
+      <div className="footerTop">
+      <Footer  />
+      </div>
     </>
   );
 }

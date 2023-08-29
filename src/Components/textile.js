@@ -74,7 +74,7 @@ function Textile(props) {
   let value = ">";
   const location = useLocation();
   useEffect(() => {
-    debugger;
+     ;
     const data = location.state;
     setParentData(data);
   }, [location]);
@@ -95,8 +95,10 @@ function Textile(props) {
  "Government Support and Incentives: The Sindh government has introduced various initiatives, schemes, and incentives to support and promote the agriculture and food processing sector. These include subsidies for modern machinery, financial assistance for infrastructure development, access to credit facilities, and specialized training programs, creating a conducive environment for business growth.",
  "Export Potential: Sindh's agriculture and food processing sector has significant export potential. With the ability to meet international quality standards, businesses can tap into global markets and benefit from increasing demand for high-quality agricultural products and processed food items.",
  "Sustainable Practices and Organic Farming: There is a growing trend towards sustainable agriculture and organic farming practices. Sindh provides ample opportunities for businesses to capitalize on the increasing consumer preference for organic and sustainable food products, positioning themselves as leaders in the industry.",
- "Collaboration and Research Opportunities: Sindh offers collaborative opportunities between the government, industry stakeholders, and research institutions. By fostering partnerships and supporting research and development initiatives, the sector benefits from innovation, knowledge exchange, and the development of new technologies."]
-  return (
+ "Collaboration and Research Opportunities: Sindh offers collaborative opportunities between the government, industry stakeholders, and research institutions. By fostering partnerships and supporting research and development initiatives, the sector benefits from innovation, knowledge exchange, and the development of new technologies."
+];
+ 
+ return (
     <>
       {window.innerWidth <= 500 ? <MobileHeaderGeneric /> : <GenericHeader />}
       {window.innerWidth <= 500 ? (
@@ -497,9 +499,12 @@ function Textile(props) {
           </div>
         </div>
       </div>
+
     
-      <Footer />
+    <div className="footerTop">
+    <Footer  />
+    </div>
     </>
   );
-}
+                } 
 export default Textile;

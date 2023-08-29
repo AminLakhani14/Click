@@ -151,7 +151,7 @@ function Testimonial(props) {
     }
     const clickCarouselImage = (event) => {
       try {
-        debugger;
+         ;
         if(event) {
           let Id = event?.target?.id
 

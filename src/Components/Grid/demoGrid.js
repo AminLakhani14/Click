@@ -56,12 +56,14 @@ export default class DemoGrid extends React.Component {
 
   onRowclick(event) {
     try {
+      debugger;
       if (event !== null && event !== undefined) {
         const row = event.args.row.bounddata
         const body = {
           index: event.args.rowindex,
           row: row
         }
+        this.props?.GetGridData(row);
         console.log(body);
       }
 
@@ -135,7 +137,7 @@ export default class DemoGrid extends React.Component {
   }
 
   Cellclick (event) {
-    debugger
+     
     if (event.args.datafield === "detail") {
         this.props.setOpenModal(true);
     }
@@ -148,6 +150,7 @@ export default class DemoGrid extends React.Component {
         columnsheight={50}
         rowsheight={50}
         autorowheight={true}
+        onRowclick={this.onRowclick}
         source={this.state.source}
         columns={this.state.columns}
         onRowselect={this.onRowclick}

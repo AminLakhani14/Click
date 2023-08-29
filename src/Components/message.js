@@ -126,7 +126,7 @@ function Message(props) {
   }
   const clickCarouselImage = (event) => {
     try {
-      debugger;
+       ;
       if(event) {
         let Id = event?.target?.id
         resetImageSlider(ID)

@@ -66,7 +66,7 @@ function Tourism(props) {
 
   const location = useLocation();
   useEffect(() => {
-    debugger;
+     ;
     const data = location.state;
     setParentData(data);
   }, [location]);
@@ -497,7 +497,9 @@ function Tourism(props) {
           </div>
         </div>
       </div>
-      <Footer />
+      <div className="footerTop">
+      <Footer  />
+      </div>
     </>
   );
 }
