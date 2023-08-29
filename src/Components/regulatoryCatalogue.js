@@ -2033,7 +2033,7 @@ export default function RegulatoryCatalogue() {
   const gridRef = useRef(null);
   const [dataForGrid, setdataForGrid] = useState(arr)
   const [dataForGridClone,] = useState(arr)
-
+  const [licenceData, setLicenceData] = useState({});
   const [openModal,setOpenModal] = useState(false)
 
   const openDetailModal = () => {
@@ -2076,12 +2076,21 @@ export default function RegulatoryCatalogue() {
 // Assuming you have an array of objects called 'data' containing your data
 
 // Specify the value you want to filter
+const GetGridData = (data) =>{
+  try {
+    debugger;
+    console.log('RowData', data);
+    setLicenceData(data);
+  } catch (error) {
+    console.log(error);
+  }
+};
 
 
 // Print the filtered data
   return (
     <>
-   {openModal && <DetailModal openDetailModal={openDetailModal} closeDetailModal={closeDetailModal}/>}
+   {openModal && <DetailModal licenceData={licenceData} openDetailModal={openDetailModal} closeDetailModal={closeDetailModal} dataForGrid={dataForGrid}/>}
       <GenericHeader />
       <div
         className="row"
@@ -2173,7 +2182,7 @@ export default function RegulatoryCatalogue() {
       </div>
       <div className="row mb-5">
         <div className="col-lg-12">
-          <DemoGrid ref={gridRef} data={dataForGrid}  setOpenModal={setOpenModal} openModal={openModal}/>
+          <DemoGrid ref={gridRef} data={dataForGrid}  setOpenModal={setOpenModal} openModal={openModal} GetGridData={GetGridData} />
         </div>
       </div>
       <Footer />

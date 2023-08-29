@@ -305,6 +305,17 @@ const areas1 = [
   //College Education Department Dropdown
   { id: "Urban", value: "Urban", text: "Urban" },
   { id: "Urban", value: "Rural", text: "Rural" },
+  //Labour
+  {
+    id: "labour",
+    value: "labour",
+    text: "Institutions from Montessori up to Class-X",
+  },
+  {
+    id: "labour",
+    value: "labour",
+    text: "Institutions from Montessori up to Class-X",
+  },
   //School Education and Literacy Department Dropdown
   {
     id: "MontToMatric",
