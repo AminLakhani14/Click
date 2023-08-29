@@ -10,7 +10,11 @@ import MobileHeaderGeneric from "./MobileHeaderGeneric";
 import TextField from "@mui/material/TextField";
 import sindhAssembly from "../assets/sindhAssemblywomen.png";
 import buildingBridge from "../assets/buildingBridge.png";
-import  textilebg    from "../assets/textilebg.jpg"
+import  textilebg    from "../assets/textilebg.jpg";
+import  textileinnerpic1   from "../assets/textileinnerpic1.jpg";
+import  textileinnerpic2   from "../assets/textileinnerpic2.jpg"
+
+
 
 
 
@@ -207,11 +211,11 @@ function Textile(props) {
         <div
           className="col-lg-9 descriptionImage"
           style={{
-            background: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(${sindhAssembly})`,
+            background: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(${textileinnerpic1})`,
           }}
         >
           <label className="agriAndFoodHeading">
-            Opportunities in the Agriculture & Food Processing Sector
+            Opportunities in the Textile Sector
           </label>
         </div>
       </div>

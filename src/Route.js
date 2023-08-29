@@ -36,6 +36,52 @@ import DiverseHorizon from "./Components/diversehorizon";
 import Agriculture from "./Components/agriculture";
 import Energy from "./Components/energy";
 
+export let searchText = '';
+
+export const handleSearch = () => {
+  let matchText = '';
+  searchText = document.getElementById('searchText').value;
+  const elements = document.getElementsByClassName('highlightable');
+
+  for (const element of elements) {
+    const text = element.textContent || element.innerText;
+    const matchIndices = [];
+
+    let matchIndex = text.indexOf(searchText);
+
+    while (matchIndex !== -1) {
+      matchIndices.push(matchIndex);
+      matchIndex = text.indexOf(searchText, matchIndex + searchText.length);
+    }
+
+    if (matchIndices.length > 0) {
+      const matchesHTML = matchIndices.map((index, i) => {
+        const beforeText = text.substring(
+          i === 0 ? 0 : matchIndices[i - 1] + searchText.length,
+          index
+        );
+        matchText = text.substring(index, index + searchText.length);
+        return `${beforeText}<span class="bold">${matchText}</span>`;
+      });
+
+      const afterText = text.substring(
+        matchIndices[matchIndices.length - 1] + searchText.length
+      );
+
+      // Apply the styled HTML with all matches highlighted
+      const styledHTML = `${matchesHTML.join('')}${afterText}`;
+      element.innerHTML = styledHTML;
+
+      // Scroll to the element
+      element.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    } else {
+      // Reset the element's innerHTML if no match is found
+      element.innerHTML = text;
+      console.log(matchText);
+    }
+  }
+};
+
 export const router = createHashRouter([
   {
     path: "/",

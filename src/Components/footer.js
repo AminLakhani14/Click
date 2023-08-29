@@ -62,7 +62,7 @@ function Footer(props) {
                 className={
                   window.innerWidth <= 1366
                     ? "sub-footertitle"
-                    : "sub-title"
+                    : "sub-title highlightable"
                 }
                 style={windowWidth < 500 ? { marginLeft: "0px" } : windowWidth <= 1440 ? { marginLeft: "45px", textAlign: "inherit" } : { textAlign: "inherit" }}
               >

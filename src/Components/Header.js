@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 // import click from "../assets/click-logo1.png";
 import Group8364 from "../assets/Group8364.png";
 import accessibility from "../assets/accessibility.png";
@@ -30,24 +30,13 @@ import { Tooltip } from "antd";
 import { useMemo } from "react";
 import { translations } from "../Transalation/Transalation";
 import { useSelector } from "react-redux";
+import { Button, TextField } from "@mui/material";
+import Search from "antd/es/input/Search";
+import { handleSearch, searchText } from "../Route";
 
 
 function Header(props) {
 const {language} = useSelector((state)=>state.language)
-
-
-const scrollToSection = (sectionid) => {
- 
-  const section = document.getElementById(sectionid);
- 
-  if (section) {
-    console.log(sectionid); 
-    section.scrollIntoView({ behavior: "smooth" });
-   
-  }
-};
-
-
 
   const [isHovered, setIsHovered] = useState(false);
 
@@ -458,32 +447,61 @@ const scrollToSection = (sectionid) => {
     </div>
   );
 
-  // const [isUrdu, setIsUrdu] = useState(false);
 
-  // // Function to toggle language between English and Urdu
-  // const toggleLanguage = () => {
-  //   setIsUrdu((prevIsUrdu) => !prevIsUrdu);
-  // };
 
-  // // Object containing English and Urdu translations
-  // const translations = {
-  //   'hero-heading': {
-  //     en: 'Discover the Riches of Sindh\nInvest in a Thriving Future',
-  //     ur: 'سندھ کے دولت مند ہنر افزائی کریں۔ ایک خوشحال مستقبل میں سرمایہ کاری کریں۔',
-  //   },
-  //   'subHeroHeading': {
-  //     en: 'Explore the Province of Sindh and Discover its many assets and Potential for Growth and Investment',
-  //     ur: 'سندھ کے صوبے کا کھیتریں اور اس کی بے شمار خوبصورتیوں کو دریافت کریں اور ترقی اور سرمایہ کاری کے لئے اس کے ممکنات کا پتہ لگائیں۔',
-  //   },
-  //   'investButton': {
-  //     en: 'Invest Now',
-  //     ur: 'ابھی سرمایہ کاری کریں',
-  //   },
-  //   'calculatorButton': {
-  //     en: 'Regulatory Cost Calculator',
-  //     ur: 'ریگولیٹری لاگت کی کیلکولیٹر',
-  //   },
+  // const handleSearch = () => {
+  //   const searchText = searchTextRef.current.value;
+  //   const elements = document.getElementsByClassName('highlightable');
+
+  //   for (const element of elements) {
+  //     const text = element.textContent || element.innerText;
+  //     const matchIndex = text.indexOf(searchText);
+
+  //     if (matchIndex !== -1) {
+  //       const beforeText = text.substring(0, matchIndex);
+  //       const matchText = text.substring(
+  //         matchIndex,
+  //         matchIndex + searchText.length
+  //       );
+  //       const afterText = text.substring(matchIndex + searchText.length);
+
+  //       // Apply bold style to the matching text
+  //       const styledHTML = `
+  //         ${beforeText}<span class="bold">${matchText}</span>${afterText}
+  //       `;
+  //       element.innerHTML = styledHTML;
+
+  //       // Scroll to the element
+  //       element.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  //       console.log(matchText)
+
+  //       return; // Stop searching after finding the first match
+  //     } else {
+  //       // Reset the element's innerHTML if no match is found
+  //       element.innerHTML = text;
+  //     }
+  //   }
   // };
+  console.log("naem",props.HeaderSearch)
+  console.log("text",props.Text)
+
+  const [searchInput, setSearchInput] = useState('');
+  const SearchBox = ( 
+    <div
+      className="d-flex justify-content-between"
+      style={{ width: "325px", height: "60px" }}
+    >
+      <input
+          type="text"
+          id="searchText"
+          style={{ width: "240px", maxWidth: "240px", height: "60px" }}
+          value={searchInput}
+          onChange={(e) => setSearchInput(e.target.value)}
+        />
+        <button className="update" onClick={handleSearch}>Search</button>
+    </div>
+  );
+
 
 
   return (
@@ -582,7 +600,7 @@ const scrollToSection = (sectionid) => {
             </div>
             {isSticky === true ? (
               <div style={{ position: "relative", zIndex: "99999999999" }}>
-                <GenericHeader toggleLanguage={props.toggleLanguage} SindhitoggleLanguage={props.SindhitoggleLanguage}/>
+                <GenericHeader toggleLanguage={props.toggleLanguage} SindhitoggleLanguage={props.SindhitoggleLanguage} handleSearch={props.handleSearch}  searchTextRef={props.searchTextRef}/>
               </div>
             ) : (
               <div className={`header `}>
@@ -595,10 +613,10 @@ const scrollToSection = (sectionid) => {
                       style={
                         language === "ur" || language === "sd"
                           ? {
-                              display: "flex",
-                              marginBottom: "0px",
-                              flexDirection: "row-reverse",
-                            }
+                            display: "flex",
+                            marginBottom: "0px",
+                            flexDirection: "row-reverse",
+                          }
                           : { marginBottom: "0px" }
                       }
                     >
@@ -622,7 +640,7 @@ const scrollToSection = (sectionid) => {
                           <Link className={"link"} to={"/WhySindh"}>
                             {
                               translations["sindhATglance"][
-                                language
+                              language
                               ]
                             }
                           </Link>
@@ -641,9 +659,9 @@ const scrollToSection = (sectionid) => {
                           style={
                             language === "ur" || language === "sd"
                               ? {
-                                  display: "flex",
-                                  flexDirection: "row-reverse",
-                                }
+                                display: "flex",
+                                flexDirection: "row-reverse",
+                              }
                               : {}
                           }
                         >
@@ -657,7 +675,7 @@ const scrollToSection = (sectionid) => {
                             <Link className={"link"} to={"/Opportunity"}>
                               {
                                 translations["Opportunities"][
-                                  language
+                                language
                                 ]
                               }
                             </Link>
@@ -681,17 +699,17 @@ const scrollToSection = (sectionid) => {
                               <span
                                 style={
                                   language === "ur" ||
-                                  language === "sd"
+                                    language === "sd"
                                     ? {
-                                        display: "flex",
-                                        width: "100%",
-                                        flexDirection: "row-reverse",
-                                      }
+                                      display: "flex",
+                                      width: "100%",
+                                      flexDirection: "row-reverse",
+                                    }
                                     : {
-                                        display: "flex",
-                                        position: "relative",
-                                        width: "100%",
-                                      }
+                                      display: "flex",
+                                      position: "relative",
+                                      width: "100%",
+                                    }
                                 }
                               >
                                 <a
@@ -703,21 +721,21 @@ const scrollToSection = (sectionid) => {
                                   // }}
                                   style={
                                     language === "ur" ||
-                                    language === "sd"
+                                      language === "sd"
                                       ? {
-                                          width: "210px",
-                                          paddingLeft: "15px",
-                                          height: "40px",
-                                          paddingTop: "8px",
-                                          display: "flex",
-                                          flexDirection: "row-reverse",
-                                        }
+                                        width: "210px",
+                                        paddingLeft: "15px",
+                                        height: "40px",
+                                        paddingTop: "8px",
+                                        display: "flex",
+                                        flexDirection: "row-reverse",
+                                      }
                                       : {
-                                          width: "300px",
-                                          paddingLeft: "15px",
-                                          height: "40px",
-                                          paddingTop: "8px",
-                                        }
+                                        width: "300px",
+                                        paddingLeft: "15px",
+                                        height: "40px",
+                                        paddingTop: "8px",
+                                      }
                                   }
                                   href="#"
                                 >
@@ -728,7 +746,7 @@ const scrollToSection = (sectionid) => {
                                   >
                                     {
                                       translations["Manufacturing"][
-                                        language
+                                      language
                                       ]
                                     }
                                   </Link>
@@ -736,21 +754,21 @@ const scrollToSection = (sectionid) => {
                                 <i
                                   style={
                                     language === "ur" ||
-                                    language === "sd"
+                                      language === "sd"
                                       ? {
-                                          marginTop: "10px",
-                                          marginLeft: "0px",
-                                          position: "absolute",
-                                          left: "10px",
-                                          display: "flex",
-                                          flexDirection: "row-reverse",
-                                        }
+                                        marginTop: "10px",
+                                        marginLeft: "0px",
+                                        position: "absolute",
+                                        left: "10px",
+                                        display: "flex",
+                                        flexDirection: "row-reverse",
+                                      }
                                       : {
-                                          marginTop: "10px",
-                                          marginLeft: "0px",
-                                          position: "absolute",
-                                          right: "15px",
-                                        }
+                                        marginTop: "10px",
+                                        marginLeft: "0px",
+                                        position: "absolute",
+                                        right: "15px",
+                                      }
                                   }
                                   class="dropbtn unique-iconDown unique-hover-rotate component fa fa-chevron-right"
                                 ></i>
@@ -759,11 +777,11 @@ const scrollToSection = (sectionid) => {
                                 class="dropdown-content nested-content nested-right"
                                 style={{ width: "200px" }}
                               >
-                                <Link  className={""} to={"/manufacturing#expertform"}>
+                                <Link className={""} to={"/manufacturing#expertform"}>
                                   <a href="#" >
                                     {
                                       translations["Talktoexpert"][
-                                        language
+                                      language
                                       ]
                                     }
                                   </a>
@@ -778,44 +796,44 @@ const scrollToSection = (sectionid) => {
                               <span
                                 style={
                                   language === "ur" ||
-                                  language === "sd"
+                                    language === "sd"
                                     ? {
-                                        display: "flex",
-                                        width: "100%",
-                                        flexDirection: "row-reverse",
-                                      }
+                                      display: "flex",
+                                      width: "100%",
+                                      flexDirection: "row-reverse",
+                                    }
                                     : {
-                                        display: "flex",
-                                        position: "relative",
-                                        width: "100%",
-                                      }
+                                      display: "flex",
+                                      position: "relative",
+                                      width: "100%",
+                                    }
                                 }
                               >
                                 <a
                                   style={
                                     language === "ur" ||
-                                    language === "sd"
+                                      language === "sd"
                                       ? {
-                                          width: "210px",
-                                          paddingLeft: "15px",
-                                          height: "40px",
-                                          paddingTop: "8px",
-                                          display: "flex",
-                                          flexDirection: "row-reverse",
-                                        }
+                                        width: "210px",
+                                        paddingLeft: "15px",
+                                        height: "40px",
+                                        paddingTop: "8px",
+                                        display: "flex",
+                                        flexDirection: "row-reverse",
+                                      }
                                       : {
-                                          width: "300px",
-                                          paddingLeft: "15px",
-                                          height: "40px",
-                                          paddingTop: "8px",
-                                        }
+                                        width: "300px",
+                                        paddingLeft: "15px",
+                                        height: "40px",
+                                        paddingTop: "8px",
+                                      }
                                   }
                                   href="#"
                                 >
                                   <Link onClick={() => { window.scrollTo({ top: 0, left: 0, behavior: "smooth" }); }} className={"link"} to={"/textile"}>
                                     {
                                       translations["Textile"][
-                                        language
+                                      language
                                       ]
                                     }
                                   </Link>
@@ -823,21 +841,21 @@ const scrollToSection = (sectionid) => {
                                 <i
                                   style={
                                     language === "ur" ||
-                                    language === "sd"
+                                      language === "sd"
                                       ? {
-                                          marginTop: "10px",
-                                          marginLeft: "0px",
-                                          position: "absolute",
-                                          left: "10px",
-                                          display: "flex",
-                                          flexDirection: "row-reverse",
-                                        }
+                                        marginTop: "10px",
+                                        marginLeft: "0px",
+                                        position: "absolute",
+                                        left: "10px",
+                                        display: "flex",
+                                        flexDirection: "row-reverse",
+                                      }
                                       : {
-                                          marginTop: "10px",
-                                          marginLeft: "0px",
-                                          position: "absolute",
-                                          right: "15px",
-                                        }
+                                        marginTop: "10px",
+                                        marginLeft: "0px",
+                                        position: "absolute",
+                                        right: "15px",
+                                      }
                                   }
                                   class="dropbtn unique-iconDown unique-hover-rotate component fa fa-chevron-right"
                                 ></i>
@@ -846,11 +864,11 @@ const scrollToSection = (sectionid) => {
                                 class="dropdown-content nested-content nested-right"
                                 style={{ width: "200px", marginTop: "40px" }}
                               >
-                                <Link  className={""} to={"/textile#expertform"}>
+                                <Link className={""} to={"/textile#expertform"}>
                                   <a  href="#">
                                     {
                                       translations["Talktoexpert"][
-                                        language
+                                      language
                                       ]
                                     }
                                   </a>
@@ -865,47 +883,46 @@ const scrollToSection = (sectionid) => {
                               <span
                                 style={
                                   language === "ur" ||
-                                  language === "sd"
+                                    language === "sd"
                                     ? {
-                                        display: "flex",
-                                        width: "100%",
-                                        flexDirection: "row-reverse",
-                                      }
+                                      display: "flex",
+                                      width: "100%",
+                                      flexDirection: "row-reverse",
+                                    }
                                     : {
-                                        display: "flex",
-                                        position: "relative",
-                                        width: "100%",
-                                      }
+                                      display: "flex",
+                                      position: "relative",
+                                      width: "100%",
+                                    }
                                 }
                               >
                                 <a
                                   style={
                                     language === "ur" ||
-                                    language === "sd"
+                                      language === "sd"
                                       ? {
-                                          width: "210px",
-                                          paddingLeft: "15px",
-                                          height: "40px",
-                                          paddingTop: "8px",
-                                          display: "flex",
-                                          flexDirection: "row-reverse",
-                                        }
+                                        width: "210px",
+                                        paddingLeft: "15px",
+                                        height: "40px",
+                                        paddingTop: "8px",
+                                        display: "flex",
+                                        flexDirection: "row-reverse",
+                                      }
                                       : {
-                                          width: "300px",
-                                          paddingLeft: "15px",
-                                          height: "40px",
-                                          paddingTop: "8px",
-                                        }
+                                        width: "300px",
+                                        paddingLeft: "15px",
+                                        height: "40px",
+                                        paddingTop: "8px",
+                                      }
                                   }
                                   href="#"
                                 >
-                                  <Link 
-                                  onClick={() => 
-                                  { window.scrollTo({ top: 0, left: 0, behavior: "smooth" }); }}
+                                  <Link
+                                    onClick={() => { window.scrollTo({ top: 0, left: 0, behavior: "smooth" }); }}
                                     className={"link"} to={"/tourism"}>
                                     {
                                       translations["Tourism"][
-                                        language
+                                      language
                                       ]
                                     }
                                   </Link>
@@ -913,21 +930,21 @@ const scrollToSection = (sectionid) => {
                                 <i
                                   style={
                                     language === "ur" ||
-                                    language === "sd"
+                                      language === "sd"
                                       ? {
-                                          marginTop: "10px",
-                                          marginLeft: "0px",
-                                          position: "absolute",
-                                          left: "10px",
-                                          display: "flex",
-                                          flexDirection: "row-reverse",
-                                        }
+                                        marginTop: "10px",
+                                        marginLeft: "0px",
+                                        position: "absolute",
+                                        left: "10px",
+                                        display: "flex",
+                                        flexDirection: "row-reverse",
+                                      }
                                       : {
-                                          marginTop: "10px",
-                                          marginLeft: "0px",
-                                          position: "absolute",
-                                          right: "15px",
-                                        }
+                                        marginTop: "10px",
+                                        marginLeft: "0px",
+                                        position: "absolute",
+                                        right: "15px",
+                                      }
                                   }
                                   class="dropbtn unique-iconDown unique-hover-rotate component fa fa-chevron-right"
                                 ></i>
@@ -937,10 +954,10 @@ const scrollToSection = (sectionid) => {
                                 style={{ width: "200px", marginTop: "80px" }}
                               >
                                 <Link className={""} to={"/tourism#expertform"} >
-                                  <a   href="#">
+                                  <a  href="#">
                                     {
                                       translations["Talktoexpert"][
-                                        language
+                                      language
                                       ]
                                     }
                                   </a>
@@ -955,47 +972,46 @@ const scrollToSection = (sectionid) => {
                               <span
                                 style={
                                   language === "ur" ||
-                                  language === "sd"
+                                    language === "sd"
                                     ? {
-                                        display: "flex",
-                                        width: "100%",
-                                        flexDirection: "row-reverse",
-                                      }
+                                      display: "flex",
+                                      width: "100%",
+                                      flexDirection: "row-reverse",
+                                    }
                                     : {
-                                        display: "flex",
-                                        position: "relative",
-                                        width: "100%",
-                                      }
+                                      display: "flex",
+                                      position: "relative",
+                                      width: "100%",
+                                    }
                                 }
                               >
                                 <a
                                   style={
                                     language === "ur" ||
-                                    language === "sd"
+                                      language === "sd"
                                       ? {
-                                          width: "210px",
-                                          paddingLeft: "15px",
-                                          height: "40px",
-                                          paddingTop: "8px",
-                                          display: "flex",
-                                          flexDirection: "row-reverse",
-                                        }
+                                        width: "210px",
+                                        paddingLeft: "15px",
+                                        height: "40px",
+                                        paddingTop: "8px",
+                                        display: "flex",
+                                        flexDirection: "row-reverse",
+                                      }
                                       : {
-                                          width: "300px",
-                                          paddingLeft: "15px",
-                                          height: "40px",
-                                          paddingTop: "8px",
-                                        }
+                                        width: "300px",
+                                        paddingLeft: "15px",
+                                        height: "40px",
+                                        paddingTop: "8px",
+                                      }
                                   }
                                   href="#"
                                 >
-                                  <Link 
-                                  onClick={() => 
-                                  { window.scrollTo({ top: 0, left: 0, behavior: "smooth" }); }}  
-                                  className={"link"} to={"/agriculture"}>
+                                  <Link
+                                    onClick={() => { window.scrollTo({ top: 0, left: 0, behavior: "smooth" }); }}
+                                    className={"link"} to={"/agriculture"}>
                                     {
                                       translations["Agriculture"][
-                                        language
+                                      language
                                       ]
                                     }
                                   </Link>
@@ -1003,21 +1019,21 @@ const scrollToSection = (sectionid) => {
                                 <i
                                   style={
                                     language === "ur" ||
-                                    language === "sd"
+                                      language === "sd"
                                       ? {
-                                          marginTop: "10px",
-                                          marginLeft: "0px",
-                                          display: "flex",
-                                          flexDirection: "row-reverse",
-                                          position: "absolute",
-                                          left: "10px",
-                                        }
+                                        marginTop: "10px",
+                                        marginLeft: "0px",
+                                        display: "flex",
+                                        flexDirection: "row-reverse",
+                                        position: "absolute",
+                                        left: "10px",
+                                      }
                                       : {
-                                          marginTop: "10px",
-                                          marginLeft: "0px",
-                                          position: "absolute",
-                                          right: "15px",
-                                        }
+                                        marginTop: "10px",
+                                        marginLeft: "0px",
+                                        position: "absolute",
+                                        right: "15px",
+                                      }
                                   }
                                   class="dropbtn unique-iconDown unique-hover-rotate component fa fa-chevron-right"
                                 ></i>
@@ -1030,7 +1046,7 @@ const scrollToSection = (sectionid) => {
                                   <a  href="#"  >
                                     {
                                       translations["Talktoexpert"][
-                                        language
+                                      language
                                       ]
                                     }
                                   </a>
@@ -1045,46 +1061,47 @@ const scrollToSection = (sectionid) => {
                               <span
                                 style={
                                   language === "ur" ||
-                                  language === "sd"
+                                    language === "sd"
                                     ? {
-                                        display: "flex",
-                                        width: "100%",
-                                        flexDirection: "row-reverse",
-                                      }
+                                      display: "flex",
+                                      width: "100%",
+                                      flexDirection: "row-reverse",
+                                    }
                                     : {
-                                        display: "flex",
-                                        position: "relative",
-                                        width: "100%",
-                                      }
+                                      display: "flex",
+                                      position: "relative",
+                                      width: "100%",
+                                    }
                                 }
                               >
                                 <a
                                   style={
                                     language === "ur" ||
-                                    language === "sd"
+                                      language === "sd"
                                       ? {
-                                          width: "210px",
-                                          paddingLeft: "15px",
-                                          height: "40px",
-                                          paddingTop: "8px",
-                                          display: "flex",
-                                          flexDirection: "row-reverse",
-                                        }
+                                        width: "210px",
+                                        paddingLeft: "15px",
+                                        height: "40px",
+                                        paddingTop: "8px",
+                                        display: "flex",
+                                        flexDirection: "row-reverse",
+                                      }
                                       : {
-                                          width: "300px",
-                                          paddingLeft: "15px",
-                                          height: "40px",
-                                          paddingTop: "8px",
-                                        }
+                                        width: "300px",
+                                        paddingLeft: "15px",
+                                        height: "40px",
+                                        paddingTop: "8px",
+                                      }
                                   }
                                   href="#"
                                 >
-                                  <Link 
-                                  onClick={() => { window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
-                                   }} className={"link"} to={"/education"}>
+                                  <Link
+                                    onClick={() => {
+                                      window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+                                    }} className={"link"} to={"/education"}>
                                     {
                                       translations["Education"][
-                                        language
+                                      language
                                       ]
                                     }
                                   </Link>
@@ -1092,23 +1109,23 @@ const scrollToSection = (sectionid) => {
                                 <i
                                   style={
                                     language === "ur" ||
-                                    language === "sd"
+                                      language === "sd"
                                       ? {
-                                          marginTop: "10px",
-                                          marginLeft: "0px",
-                                          position: "absolute",
-                                          left: "10px",
-                                          display: "flex",
-                                          flexDirection: "row-reverse",
-                                          position: "absolute",
-                                          left: "10px",
-                                        }
+                                        marginTop: "10px",
+                                        marginLeft: "0px",
+                                        position: "absolute",
+                                        left: "10px",
+                                        display: "flex",
+                                        flexDirection: "row-reverse",
+                                        position: "absolute",
+                                        left: "10px",
+                                      }
                                       : {
-                                          marginTop: "10px",
-                                          marginLeft: "0px",
-                                          position: "absolute",
-                                          right: "15px",
-                                        }
+                                        marginTop: "10px",
+                                        marginLeft: "0px",
+                                        position: "absolute",
+                                        right: "15px",
+                                      }
                                   }
                                   class="dropbtn unique-iconDown unique-hover-rotate component fa fa-chevron-right"
                                 ></i>
@@ -1121,7 +1138,7 @@ const scrollToSection = (sectionid) => {
                                   <a  href="#">
                                     {
                                       translations["Talktoexpert"][
-                                        language
+                                      language
                                       ]
                                     }
                                   </a>
@@ -1136,46 +1153,46 @@ const scrollToSection = (sectionid) => {
                               <span
                                 style={
                                   language === "ur" ||
-                                  language === "sd"
+                                    language === "sd"
                                     ? {
-                                        display: "flex",
-                                        width: "100%",
-                                        flexDirection: "row-reverse",
-                                      }
+                                      display: "flex",
+                                      width: "100%",
+                                      flexDirection: "row-reverse",
+                                    }
                                     : {
-                                        display: "flex",
-                                        position: "relative",
-                                        width: "100%",
-                                      }
+                                      display: "flex",
+                                      position: "relative",
+                                      width: "100%",
+                                    }
                                 }
                               >
                                 <a
                                   style={
                                     language === "ur" ||
-                                    language === "sd"
+                                      language === "sd"
                                       ? {
-                                          width: "210px",
-                                          paddingLeft: "15px",
-                                          height: "40px",
-                                          paddingTop: "8px",
-                                          display: "flex",
-                                          flexDirection: "row-reverse",
-                                        }
+                                        width: "210px",
+                                        paddingLeft: "15px",
+                                        height: "40px",
+                                        paddingTop: "8px",
+                                        display: "flex",
+                                        flexDirection: "row-reverse",
+                                      }
                                       : {
-                                          width: "300px",
-                                          paddingLeft: "15px",
-                                          height: "40px",
-                                          paddingTop: "8px",
-                                        }
+                                        width: "300px",
+                                        paddingLeft: "15px",
+                                        height: "40px",
+                                        paddingTop: "8px",
+                                      }
                                   }
                                   href="#"
                                 >
-                                  <Link 
-                                  onClick={() => { window.scrollTo({ top: 0, left: 0, behavior: "smooth" }); }}
-                                   className={"link"} to={"/energy"}>
+                                  <Link
+                                    onClick={() => { window.scrollTo({ top: 0, left: 0, behavior: "smooth" }); }}
+                                    className={"link"} to={"/energy"}>
                                     {
                                       translations["Energy"][
-                                        language
+                                      language
                                       ]
                                     }
                                   </Link>
@@ -1183,21 +1200,21 @@ const scrollToSection = (sectionid) => {
                                 <i
                                   style={
                                     language === "ur" ||
-                                    language === "sd"
+                                      language === "sd"
                                       ? {
-                                          marginTop: "10px",
-                                          marginLeft: "0px",
-                                          position: "absolute",
-                                          left: "10px",
-                                          display: "flex",
-                                          flexDirection: "row-reverse",
-                                        }
+                                        marginTop: "10px",
+                                        marginLeft: "0px",
+                                        position: "absolute",
+                                        left: "10px",
+                                        display: "flex",
+                                        flexDirection: "row-reverse",
+                                      }
                                       : {
-                                          marginTop: "10px",
-                                          marginLeft: "0px",
-                                          position: "absolute",
-                                          right: "15px",
-                                        }
+                                        marginTop: "10px",
+                                        marginLeft: "0px",
+                                        position: "absolute",
+                                        right: "15px",
+                                      }
                                   }
                                   class="dropbtn unique-iconDown unique-hover-rotate component fa fa-chevron-right"
                                 ></i>
@@ -1210,7 +1227,7 @@ const scrollToSection = (sectionid) => {
                                   <a href="#">
                                     {
                                       translations["Talktoexpert"][
-                                        language
+                                      language
                                       ]
                                     }
                                   </a>
@@ -1225,44 +1242,44 @@ const scrollToSection = (sectionid) => {
                               <span
                                 style={
                                   language === "ur" ||
-                                  language === "sd"
+                                    language === "sd"
                                     ? {
-                                        display: "flex",
-                                        width: "100%",
-                                        flexDirection: "row-reverse",
-                                      }
+                                      display: "flex",
+                                      width: "100%",
+                                      flexDirection: "row-reverse",
+                                    }
                                     : {
-                                        display: "flex",
-                                        position: "relative",
-                                        width: "100%",
-                                      }
+                                      display: "flex",
+                                      position: "relative",
+                                      width: "100%",
+                                    }
                                 }
                               >
                                 <a
                                   style={
                                     language === "ur" ||
-                                    language === "sd"
+                                      language === "sd"
                                       ? {
-                                          width: "210px",
-                                          paddingLeft: "15px",
-                                          height: "40px",
-                                          paddingTop: "8px",
-                                          display: "flex",
-                                          flexDirection: "row-reverse",
-                                        }
+                                        width: "210px",
+                                        paddingLeft: "15px",
+                                        height: "40px",
+                                        paddingTop: "8px",
+                                        display: "flex",
+                                        flexDirection: "row-reverse",
+                                      }
                                       : {
-                                          width: "300px",
-                                          paddingLeft: "15px",
-                                          height: "40px",
-                                          paddingTop: "8px",
-                                        }
+                                        width: "300px",
+                                        paddingLeft: "15px",
+                                        height: "40px",
+                                        paddingTop: "8px",
+                                      }
                                   }
                                   href="#"
                                 >
                                   <Link onClick={() => { window.scrollTo({ top: 0, left: 0, behavior: "smooth" }); }} className={"link"} to={"/health"}>
                                     {
                                       translations["Health"][
-                                        language
+                                      language
                                       ]
                                     }
                                   </Link>
@@ -1270,21 +1287,21 @@ const scrollToSection = (sectionid) => {
                                 <i
                                   style={
                                     language === "ur" ||
-                                    language === "sd"
+                                      language === "sd"
                                       ? {
-                                          marginTop: "10px",
-                                          marginLeft: "0px",
-                                          display: "flex",
-                                          position: "absolute",
-                                          left: "10px",
-                                          flexDirection: "row-reverse",
-                                        }
+                                        marginTop: "10px",
+                                        marginLeft: "0px",
+                                        display: "flex",
+                                        position: "absolute",
+                                        left: "10px",
+                                        flexDirection: "row-reverse",
+                                      }
                                       : {
-                                          marginTop: "10px",
-                                          marginLeft: "0px",
-                                          position: "absolute",
-                                          right: "15px",
-                                        }
+                                        marginTop: "10px",
+                                        marginLeft: "0px",
+                                        position: "absolute",
+                                        right: "15px",
+                                      }
                                   }
                                   class="dropbtn unique-iconDown unique-hover-rotate component fa fa-chevron-right"
                                 ></i>
@@ -1297,7 +1314,7 @@ const scrollToSection = (sectionid) => {
                                   <a  href="#">
                                     {
                                       translations["Talktoexpert"][
-                                        language
+                                      language
                                       ]
                                     }
                                   </a>
@@ -1312,49 +1329,49 @@ const scrollToSection = (sectionid) => {
                               <span
                                 style={
                                   language === "ur" ||
-                                  language === "sd"
+                                    language === "sd"
                                     ? {
-                                        display: "flex",
-                                        width: "100%",
-                                        flexDirection: "row-reverse",
-                                      }
+                                      display: "flex",
+                                      width: "100%",
+                                      flexDirection: "row-reverse",
+                                    }
                                     : {
-                                        display: "flex",
-                                        position: "relative",
-                                        width: "100%",
-                                      }
+                                      display: "flex",
+                                      position: "relative",
+                                      width: "100%",
+                                    }
                                 }
                               >
                                 <a
                                   style={
                                     language === "ur" ||
-                                    language === "sd"
+                                      language === "sd"
                                       ? {
-                                          width: "210px",
-                                          paddingLeft: "15px",
-                                          height: "40px",
-                                          paddingTop: "8px",
-                                          display: "flex",
-                                          flexDirection: "row-reverse",
-                                        }
+                                        width: "210px",
+                                        paddingLeft: "15px",
+                                        height: "40px",
+                                        paddingTop: "8px",
+                                        display: "flex",
+                                        flexDirection: "row-reverse",
+                                      }
                                       : {
-                                          width: "300px",
-                                          paddingLeft: "15px",
-                                          height: "40px",
-                                          paddingTop: "8px",
-                                        }
+                                        width: "300px",
+                                        paddingLeft: "15px",
+                                        height: "40px",
+                                        paddingTop: "8px",
+                                      }
                                   }
                                   href="#"
                                 >
                                   <Link
-                                  onClick={() => { window.scrollTo({ top: 0, left: 0, behavior: "smooth" }); }}
+                                    onClick={() => { window.scrollTo({ top: 0, left: 0, behavior: "smooth" }); }}
                                     className={"link"}
                                     to={"/informationtech"}
-                                    
+
                                   >
                                     {
                                       translations[
-                                        "InformationTechnology"
+                                      "InformationTechnology"
                                       ][language]
                                     }
                                   </Link>
@@ -1362,21 +1379,21 @@ const scrollToSection = (sectionid) => {
                                 <i
                                   style={
                                     language === "ur" ||
-                                    language === "sd"
+                                      language === "sd"
                                       ? {
-                                          marginTop: "10px",
-                                          marginLeft: "0px",
-                                          display: "flex",
-                                          position: "absolute",
-                                          left: "10px",
-                                          flexDirection: "row-reverse",
-                                        }
+                                        marginTop: "10px",
+                                        marginLeft: "0px",
+                                        display: "flex",
+                                        position: "absolute",
+                                        left: "10px",
+                                        flexDirection: "row-reverse",
+                                      }
                                       : {
-                                          marginTop: "10px",
-                                          marginLeft: "0px",
-                                          position: "absolute",
-                                          right: "15px",
-                                        }
+                                        marginTop: "10px",
+                                        marginLeft: "0px",
+                                        position: "absolute",
+                                        right: "15px",
+                                      }
                                   }
                                   class="dropbtn unique-iconDown unique-hover-rotate component fa fa-chevron-right"
                                 ></i>
@@ -1389,7 +1406,7 @@ const scrollToSection = (sectionid) => {
                                   <a  href="#">
                                     {
                                       translations["Talktoexpert"][
-                                        language
+                                      language
                                       ]
                                     }
                                   </a>
@@ -1404,7 +1421,7 @@ const scrollToSection = (sectionid) => {
                           <Link className="link" to={"/NewsAndInformation"}>
                             {
                               translations["NewsInformation"][
-                                language
+                              language
                               ]
                             }
                           </Link>
@@ -1416,9 +1433,9 @@ const scrollToSection = (sectionid) => {
                           style={
                             language === "ur" || language === "sd"
                               ? {
-                                  display: "flex",
-                                  flexDirection: "row-reverse",
-                                }
+                                display: "flex",
+                                flexDirection: "row-reverse",
+                              }
                               : {}
                           }
                         >
@@ -1453,7 +1470,7 @@ const scrollToSection = (sectionid) => {
                               <a href="#">
                                 {
                                   translations["RegulatoryCatalog"][
-                                    language
+                                  language
                                   ]
                                 }
                               </a>
@@ -1467,9 +1484,9 @@ const scrollToSection = (sectionid) => {
                           style={
                             language === "ur" || language === "sd"
                               ? {
-                                  display: "flex",
-                                  flexDirection: "row-reverse",
-                                }
+                                display: "flex",
+                                flexDirection: "row-reverse",
+                              }
                               : {}
                           }
                         >
@@ -1501,12 +1518,12 @@ const scrollToSection = (sectionid) => {
                                 href=""
                                 style={
                                   language === "ur" ||
-                                  language === "sd"
+                                    language === "sd"
                                     ? {
-                                        display: "flex",
-                                        flexDirection: "row-reverse",
-                                        marginRight: "-16px",
-                                      }
+                                      display: "flex",
+                                      flexDirection: "row-reverse",
+                                      marginRight: "-16px",
+                                    }
                                     : {}
                                 }
                               >
@@ -1520,43 +1537,43 @@ const scrollToSection = (sectionid) => {
                               <span
                                 style={
                                   language === "ur" ||
-                                  language === "sd"
+                                    language === "sd"
                                     ? {
-                                        display: "flex",
-                                        flexDirection: "row-reverse",
-                                        width: "100%",
-                                      }
+                                      display: "flex",
+                                      flexDirection: "row-reverse",
+                                      width: "100%",
+                                    }
                                     : {
-                                        display: "flex",
-                                        position: "relative",
-                                        width: "100%",
-                                      }
+                                      display: "flex",
+                                      position: "relative",
+                                      width: "100%",
+                                    }
                                 }
                               >
                                 <a
                                   style={
                                     language === "ur" ||
-                                    language === "sd"
+                                      language === "sd"
                                       ? {
-                                          width: "88%",
-                                          paddingLeft: "30px",
-                                          height: "40px",
-                                          paddingTop: "8px",
-                                          display: "flex",
-                                          flexDirection: "row-reverse",
-                                        }
+                                        width: "88%",
+                                        paddingLeft: "30px",
+                                        height: "40px",
+                                        paddingTop: "8px",
+                                        display: "flex",
+                                        flexDirection: "row-reverse",
+                                      }
                                       : {
-                                          width: "100%",
-                                          paddingLeft: "30px",
-                                          height: "40px",
-                                          paddingTop: "8px",
-                                        }
+                                        width: "100%",
+                                        paddingLeft: "30px",
+                                        height: "40px",
+                                        paddingTop: "8px",
+                                      }
                                   }
                                   href="#"
                                 >
                                   {
                                     translations["Components"][
-                                      language
+                                    language
                                     ]
                                   }
                                 </a>
@@ -1569,19 +1586,19 @@ const scrollToSection = (sectionid) => {
                                   // }}
                                   style={
                                     language === "ur" ||
-                                    language === "sd"
+                                      language === "sd"
                                       ? {
-                                          marginTop: "10px",
-                                          marginLeft: "0px",
-                                          display: "flex",
-                                          flexDirection: "row-reverse",
-                                        }
+                                        marginTop: "10px",
+                                        marginLeft: "0px",
+                                        display: "flex",
+                                        flexDirection: "row-reverse",
+                                      }
                                       : {
-                                          marginTop: "10px",
-                                          marginLeft: "0px",
-                                          position: "absolute",
-                                          right: "15px",
-                                        }
+                                        marginTop: "10px",
+                                        marginLeft: "0px",
+                                        position: "absolute",
+                                        right: "15px",
+                                      }
                                   }
                                   class="dropbtn unique-iconDown unique-hover-rotate component fa fa-chevron-right"
                                 ></i>
@@ -1594,7 +1611,7 @@ const scrollToSection = (sectionid) => {
                                   <a href="#">
                                     {
                                       translations["CLICKSID"][
-                                        language
+                                      language
                                       ]
                                     }
                                   </a>
@@ -1603,7 +1620,7 @@ const scrollToSection = (sectionid) => {
                                   <a href="#">
                                     {
                                       translations["OurTeam"][
-                                        language
+                                      language
                                       ]
                                     }
                                   </a>
@@ -1615,12 +1632,12 @@ const scrollToSection = (sectionid) => {
                                 href="#"
                                 style={
                                   language === "ur" ||
-                                  language === "sd"
+                                    language === "sd"
                                     ? {
-                                        display: "flex",
-                                        flexDirection: "row-reverse",
-                                        marginRight: "-16px",
-                                      }
+                                      display: "flex",
+                                      flexDirection: "row-reverse",
+                                      marginRight: "-16px",
+                                    }
                                     : {}
                                 }
                               >
@@ -1639,15 +1656,28 @@ const scrollToSection = (sectionid) => {
                         </a>
                       </li>
                       <li>
-                        <a href="comingsoon.html" title="" width="10">
-                          <i
-                            className="fa-sharp fa-solid fa-magnifying-glass"
-                            style={
-                              isSticky
-                                ? { color: "#000000" }
-                                : { color: "#ffffff" }
-                            }
-                          ></i>
+                        <a  title="" width="10">
+                          <Tooltip
+                            overlayInnerStyle=
+                            {{ borderRadius: "0px",
+                            width: "350px",
+                            minWidth: "350px",
+                             position: "relative",
+                             right: "100px"}}
+                            color={"#Ffffff"}
+                            placement="bottomLeft"
+                            title={SearchBox}
+                            arrow={mergedArrow}
+                          >
+                            <i
+                              className="fa-sharp fa-solid fa-magnifying-glass"
+                              style={
+                                isSticky
+                                  ? { color: "#000000" }
+                                  : { color: "#ffffff" }
+                              }
+                            ></i>
+                          </Tooltip>
                         </a>
                       </li>
                     </ul>
@@ -1666,13 +1696,13 @@ const scrollToSection = (sectionid) => {
           >
             <div className="col-lg-7 col-md-6 col-sm-12 col-xs-12 marginTopHeader">
               <h1
-                className="hero-heading"
+                className="hero-heading highlightable"
                 style={
                   language === "en"
                     ? { textAlign: "start" }
                     : language === "ur" || language === "sd"
-                    ? { textAlign: "end" }
-                    : { textAlign: "inherit" }
+                      ? { textAlign: "end" }
+                      : { textAlign: "inherit" }
                 }
               >
                 {translations["hero-heading"][language]}
@@ -1689,7 +1719,7 @@ const scrollToSection = (sectionid) => {
             }
           >
             <div className="col-lg-7 col-md-6 col-sm-12 col-xs-12">
-              <h2 className="subHeroHeading">
+              <h2 className="subHeroHeading highlightable">
                 {translations["subHeroHeading"][language]}
               </h2>
               <div className="row mt-5 ">
@@ -1702,7 +1732,7 @@ const scrollToSection = (sectionid) => {
                   }
                 >
                   <Link className={""} to={"/investnow"}>
-                    <button type="button" className="feedback">
+                    <button type="button" className="feedback highlightable">
                       <span>
                         {translations["investButton"][language]}
                       </span>
@@ -1723,11 +1753,11 @@ const scrollToSection = (sectionid) => {
 
           {isSticky === false ? (
             <div
-            className={
-              language === "ur" || language === "sd"
-                ? "Nonsticky-icon"
-                : "sticky-icon"
-            }>
+              className={
+                language === "ur" || language === "sd"
+                  ? "Nonsticky-icon"
+                  : "sticky-icon"
+              }>
               <a href="" target="_blank" className="">
                 {" "}
                 <div>
@@ -1876,22 +1906,22 @@ const scrollToSection = (sectionid) => {
               style={
                 language === "ur" || language === "sd"
                   ? {
-                      paddingRight: "60px",
-                      position: "relative",
-                      height: "96vh",
-                      display: "flex",
-                      alignItems: "end",
-                      display: "flex",
-                      flexDirection: "row-reverse",
-                    }
+                    paddingRight: "60px",
+                    position: "relative",
+                    height: "96vh",
+                    display: "flex",
+                    alignItems: "end",
+                    display: "flex",
+                    flexDirection: "row-reverse",
+                  }
                   : windowWidth <= 1440
-                  ? {
+                    ? {
                       position: "relative",
                       height: "96vh",
                       display: "flex",
                       alignItems: "end",
                     }
-                  : {
+                    : {
                       position: "relative",
                       height: "97vh",
                       display: "flex",
@@ -1928,7 +1958,8 @@ const scrollToSection = (sectionid) => {
             </div>
           </div>
         </div>
-      </div>
+      </div >
+      <div className="highlightable">AMIN</div>
     </>
   );
 }
