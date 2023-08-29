@@ -3,6 +3,7 @@ import { Button, Modal, Tabs } from 'antd';
 import TextArea from 'antd/es/input/TextArea';
 import { Input, Space } from 'antd';
 import DocumentGrid from './Grid/DocumentGrid';
+import { TextField } from '@mui/material';
 
 const DetailModal = (props) => {
   const [open, setOpen] = useState(false);
@@ -80,16 +81,20 @@ const DetailModal = (props) => {
             <div className='row'>
 
             <div className="col-lg-6" style={{marginBottom: "30px"}}>
-            <div className='row'>
-            <label>License/Permit/NOC/Registration Name</label>
-            <div style={{ marginBottom: "8px" }}>
-              <input
-              size={"Small"}
-                className="modalTextField"
+            <div className='row px-3'>
+              <TextField
+              className="modalTextField"
+              id="outlined-controlled"
+            label = "License/Permit/NOC/Registration Name"
+             style={{ marginBottom: "8px" }}
+              
+              size="small"
+                
                 type="text"
                 placeholder="Write your feedback subject"
-              />
-            </div>
+               />
+            
+           
             </div>
 
             <div className='row'>
@@ -100,15 +105,16 @@ const DetailModal = (props) => {
             </div>
 
 
-            <div className='row'>
-            <label>Issuing Department</label>
-            <div style={{ marginBottom: "8px" }}>
-              <input
-                className="modalTextField"
-                type="text"
-                placeholder="Write your feedback subject"
-              />
-            </div>
+            <div className='row px-3'>
+            <TextField
+             className="modalTextField"
+             id='outline-controlled'
+             label ="Issuing Department"
+             style={{ marginBottom: "8px" }}
+             type="text"
+             placeholder="Write your feedback subject"
+             
+            />
             </div>
 
             <div className='row'>
