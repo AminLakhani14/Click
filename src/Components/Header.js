@@ -525,9 +525,20 @@ const {language} = useSelector((state)=>state.language)
               <div className="col-lg-6 l-side px-5">
                 <div
                   style={
-                    windowWidth <= 1440
-                      ? { width: "21%", height: "130px" }
-                      : { width: "16%", height: "150px" }
+                    // windowWidth <= 1440
+                    //   ? { width: "21%", height: "130px" }
+                    //   : { width: "16%", height: "150px" }
+                    windowWidth <= 1366
+                    ? {
+                      marginLeft: "15px",
+                      marginRight: "-4px",
+                      // marginTop: "39px",
+                    }
+                    : {
+                      marginLeft: "22px",
+                      marginRight: "7px",
+                      // marginTop: "39px",
+                    }
                   }
                 >
                   <img
@@ -1959,7 +1970,6 @@ const {language} = useSelector((state)=>state.language)
           </div>
         </div>
       </div >
-      <div className="highlightable">AMIN</div>
     </>
   );
 }

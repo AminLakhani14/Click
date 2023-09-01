@@ -31,7 +31,8 @@ function Footer(props) {
         window.innerWidth <= 500
           ? "footerTop"
           : "mt-5"
-      } >
+      }
+       >
         <div
           className={
             window.innerWidth <= 1440
@@ -469,7 +470,7 @@ function Footer(props) {
           >
             <div>
               <p style={windowWidth < 500 ? { fontWeight: "bold", fontSize: "10px" } : { fontWeight: "bold", marginTop: "11px" }}>
-              {translations["Version"][language]} 0.07.07.0023
+              {translations["Version"][language]} 0.01.09.0023
               </p>
             </div>
             <div

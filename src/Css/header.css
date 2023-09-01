@@ -1550,9 +1550,15 @@ path {
     width: 315px !important;
   }
 
-  .vl {
+  /* .vl {
     margin-left: 9px !important;
     margin-right: 0px !important;
+    margin-top: 39px !important;
+  } */
+  /* /// logo gray verticle line center align with both logos // */
+.vl {
+    margin-left: 8px !important;
+    margin-right: 1px !important;
     margin-top: 39px !important;
   }
 
@@ -1568,7 +1574,8 @@ path {
     display: none;
   }
   .footerTop{
-    margin-top: 280px !important;
+    /* margin-top: 280px !important; */
+    width: 100%;
   }
   .sticky-icon {
     display: none;
@@ -1757,4 +1764,13 @@ text-align: right;
 .bold{
   font-weight: bolder;
   background-color: pink;
+}
+.header_logo_container {
+  width: "21%";
+  height: "130px"
+}
+@media only screen and (min-width: 1200px) and (max-width: 1920px){
+  .vl{
+   margin-left: 15px;
+  }
 }
