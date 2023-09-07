@@ -157,8 +157,9 @@ export default function GenericHeader(props) {
       <div className={""} style={{ width: "100%" }}>
         <div className={"navbar"}>
           <div className="navbarLeft">
-            <Link to={"/home"} style={{ display: "flex" }}>
+            <a href="https://www.sindh.gov.pk/" target="" style={{ display: "flex" }}>
               <img className=" navlogo1" src={sindh} alt=""></img>
+              </a>
               <div
                 className="vl"
                 style={
@@ -175,18 +176,21 @@ export default function GenericHeader(props) {
                     }
                 }
               ></div>
+              <Link to={"/home"}>
+
               <img src={click} alt="" className="navlogo2"></img>
-            </Link>
+              </Link>
           </div>
-          <div className="navbarRight">
+          <div className="navbarRight" >
             <ul>
               <div className="r-side d-inline">
                 <img
                   className="headerLogoImages"
                   src={language === "ur" ? English : urdu}
+                  style={language == "ur" ?{height:"10px",width:"50px",marginLeft: "20px", marginRight: "20px"}:{marginLeft: "20px", marginRight: "20px"}}                  
                   alt=""
                   onClick={toggleLanguage}
-                  style={{ marginLeft: "20px", marginRight: "20px" }}
+                  // style={{ marginLeft: "20px", marginRight: "20px" }}
                 />
                 <img
                   className="headerLogoImages"
@@ -194,7 +198,7 @@ export default function GenericHeader(props) {
                   // src={Sindhi}
                   alt=""
                   onClick={SindhitoggleLanguage}
-                  style={{ marginLeft: "20px", marginRight: "20px" }}
+                  style={language == "sd" ?{height:"10px",width:"50px",marginLeft: "20px", marginRight: "20px"}:{marginLeft: "20px", marginRight: "20px"}}
                 />
               </div>
               <li className="HeaderPaddingRight">
@@ -610,7 +614,7 @@ export default function GenericHeader(props) {
                     About us
                   </span>
                   <i
-                    style={{ marginTop: "0px", marginLeft: "0px" }}
+                    style={{ marginTop: "0px", marginLeft: "0px" ,}}
                     class="dropbtn hover-rotate fa fa-chevron-right"
                   ></i>
                   <div class="dropdown-content">

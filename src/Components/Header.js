@@ -541,6 +541,7 @@ const {language} = useSelector((state)=>state.language)
                     }
                   }
                 >
+                  <a href="https://www.sindh.gov.pk/" target="_blank">
                   <img
                     src={sindh}
                     alt=""
@@ -548,6 +549,7 @@ const {language} = useSelector((state)=>state.language)
                     width={windowWidth <= 1440 ? "95" : "115"}
                     height={windowWidth <= 1440 ? "115" : "135"}
                   />
+                </a>
                 </div>
                 <div className="vl"></div>
                 <img
@@ -584,7 +586,8 @@ const {language} = useSelector((state)=>state.language)
                   src={language === "ur" ? English : urdu}
                   alt=""
                   onClick={props.toggleLanguage}
-                  style={{ marginLeft: "20px", marginRight: "20px" }}
+                  // style={{ marginLeft: "20px", marginRight: "20px" }}
+                  style={language == "ur" ?{height:"10px",width:"50px",marginLeft: "20px", marginRight: "20px"}:{marginLeft: "20px", marginRight: "20px"}}
                 />
                 <img
                   className="headerLogoImages"
@@ -592,7 +595,8 @@ const {language} = useSelector((state)=>state.language)
                   // src={Sindhi}
                   alt=""
                   onClick={props.SindhitoggleLanguage}
-                  style={{ marginLeft: "20px", marginRight: "20px" }}
+                  // style={{ marginLeft: "20px", marginRight: "20px" }}
+                  style={language == "sd" ?{height:"10px",width:"50px",marginLeft: "20px", marginRight: "20px"}:{marginLeft: "20px", marginRight: "20px"}}
                 />
                 <a href="comingsoon.html">
                   <button type="button" className="login">
@@ -692,8 +696,18 @@ const {language} = useSelector((state)=>state.language)
                             </Link>
                           </span>
                           <i
-                            style={{ marginTop: "0px", marginLeft: "0px" }}
+                            // style={{ marginTop: "0px", marginLeft: "0px" }}
                             class="dropbtn iconDown hover-rotate fa fa-chevron-right"
+                            style={
+                              language === "ur" ||
+                                language === "sd"
+                                ? {
+                                  marginTop: "5px", marginRight: "3px"
+                                }
+                                : {
+                                  marginTop: "0px", marginLeft: "0px"
+                                }
+                            }
                           ></i>
                           <div
                             class="dropdown-content"
@@ -1460,7 +1474,17 @@ const {language} = useSelector((state)=>state.language)
                             {translations["Resources"][language]}
                           </span>
                           <i
-                            style={{ marginTop: "0px", marginLeft: "0px" }}
+                            // style={{ marginTop: "0px", marginLeft: "0px" }}
+                            style={
+                              language === "ur" ||
+                                language === "sd"
+                                ? {
+                                  marginTop: "5px", marginRight: "5px"
+                                }
+                                : {
+                                  marginTop: "0px", marginLeft: "0px"
+                                }
+                            }
                             class=" dropbtn iconDown hover-rotate fa fa-chevron-right"
                           ></i>
                           <div
@@ -1512,7 +1536,17 @@ const {language} = useSelector((state)=>state.language)
                             {translations["Aboutus"][language]}
                           </span>
                           <i
-                            style={{ marginTop: "0px", marginLeft: "0px" }}
+                            // style={{ marginTop: "5px", marginRight: "5px",}}
+                            style={
+                              language === "ur" ||
+                                language === "sd"
+                                ? {
+                                  marginTop: "5px", marginRight: "5px"
+                                }
+                                : {
+                                  marginTop: "0px", marginLeft: "0px"
+                                }
+                            }
                             class="dropbtn iconDown hover-rotate fa fa-chevron-right"
                           ></i>
                           <div

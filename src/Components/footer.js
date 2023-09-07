@@ -59,6 +59,7 @@ function Footer(props) {
                 style={windowWidth <= 1440 ? { marginTop: "-40px", marginBottom: "-40px" } : { marginTop: "-40px", marginBottom: "-40px", marginLeft: "-56px" }}
 
               ></img>
+
               <p
                 className={
                   window.innerWidth <= 1366
@@ -84,7 +85,7 @@ function Footer(props) {
               { paddingLeft: "45px", alignItems: "baseline" } 
               : 
             { alignItems: "baseline" }}
-            className="row mt-5">
+            className={[windowWidth <500 ? "footer_content mt-2":"row mt-5",windowWidth <500 ? "footer_content mt-2":{}].join(" ")}>
             <div className="col-md-3 footertext" 
             style={ 
               language === "ur" || language === "sd"
@@ -355,30 +356,33 @@ function Footer(props) {
               </a>
             </div>
             <form action="" style={windowWidth < 500 ? { marginBottom: "-30px", marginTop: "20px" } : {}}>
-              <div className="row" 
-              style={language === "ur" ||language === "sd" ? {display: "flex",flexDirection: "row-reverse"}: windowWidth < 500 ? { gap: "20px" } : { marginTop: "15px" }}>
+              <div className="row" style={language === "ur" ||language === "sd" ? {display: "flex",flexDirection: "row-reverse"}: windowWidth < 500 ? { gap: "20px" } : { marginTop: "15px" }}>
                 <div
-                  className={windowWidth < 500 ? "col-lg-6" : windowWidth <= 1366 ? "col-lg-3" : "col-lg-2"}
+                  className={windowWidth < 500 ? "col-lg-6 email" : windowWidth <= 1366 ? "col-lg-3" : "col-lg-2"}
                   style={
                     windowWidth < 500
                       ? {
                         marginLeft: "5px",
+                        // backgroundColor:"red",
+                        width:"100%"
                       }
                       : { paddingLeft: "45px" }
                   }
+
                 >
                   <TextField
                     id="outlined-controlled"
-                    style={{ width: "100%" }}
+                    // style={{  backgroundColor:"blue"}}
                     size="small"
-                    label="Email"
+                    style={{padding:"0px",width:"100%"}}
                     placeholder="Enter email address"
+                    className={"email"}
                   />
                   {/* <input type="email" placeholder="Enter email address" /> */}
                 </div>
 
                 <div className={windowWidth <= 1440 ? "col-lg-3" : "col-lg-2 mt-2"}>
-                  <a href="comingsoon.html">
+                  <a href="comingsoon.html" className="comingsoon">
                     <button type="button" className="feedback ft-btn">
                       <span>{translations["Newsletter"][language]}</span>
                     </button>
@@ -448,7 +452,7 @@ function Footer(props) {
 
         <div className="row mb-3">
           <div
-            class=" mt-1"
+            className={windowWidth <500 ? "mt-5":"mt-1"}
             style={{ border: '1px solid #c4c4c4', width: '100%', marginTop: '1px' }}>
           </div>
         </div>
@@ -470,7 +474,7 @@ function Footer(props) {
           >
             <div>
               <p style={windowWidth < 500 ? { fontWeight: "bold", fontSize: "10px" } : { fontWeight: "bold", marginTop: "11px" }}>
-              {translations["Version"][language]} 0.01.09.0023
+              {translations["Version"][language]} 0.05.09.0023
               </p>
             </div>
             <div

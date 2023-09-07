@@ -1,16 +1,21 @@
-import React, { useRef, useState } from 'react';
-import { Button, Modal, Tabs } from 'antd';
-import TextArea from 'antd/es/input/TextArea';
-import { Input, Space } from 'antd';
-import DocumentGrid from './Grid/DocumentGrid';
-import { TextField } from '@mui/material';
-import { color } from 'd3';
+import React, { useRef, useState } from "react";
+import { Button, Modal, Tabs } from "antd";
+import TextArea from "antd/es/input/TextArea";
+import { Input, Space } from "antd";
+import DocumentGrid from "./Grid/DocumentGrid";
+import { TextField } from "@mui/material";
+import { color } from "d3";
 
 const DetailModal = (props) => {
   const [open, setOpen] = useState(false);
   const [disabled, setDisabled] = useState(true);
-  const [bounds, setBounds] = useState({ left: 0, top: 0, bottom: 0, right: 0 });
-  const draggleRef = useRef < HTMLDivElement > (null);
+  const [bounds, setBounds] = useState({
+    left: 0,
+    top: 0,
+    bottom: 0,
+    right: 0,
+  });
+  const draggleRef = useRef < HTMLDivElement > null;
 
   const showModal = () => {
     setOpen(true);
@@ -31,15 +36,14 @@ const DetailModal = (props) => {
   };
   const { Search } = Input;
 
-
   return (
     <>
       <Modal
         title={
           <div
             style={{
-              width: '1000px',
-              cursor: 'move',
+              width: "1000px",
+              cursor: "move",
             }}
             onMouseOver={() => {
               if (disabled) {
@@ -49,8 +53,8 @@ const DetailModal = (props) => {
             onMouseOut={() => {
               setDisabled(true);
             }}
-            onFocus={() => { }}
-            onBlur={() => { }}
+            onFocus={() => {}}
+            onBlur={() => {}}
           >
             UPDATE OF LICENSES
           </div>
@@ -66,97 +70,91 @@ const DetailModal = (props) => {
           defaultActiveKey="1"
           items={[
             {
-              label: 'Department Info',
-              key: '1',
+              label: "Department Info",
+              key: "1",
               children: (
                 <div style={{ height: "295px" }}>
-                  <div className='row align-items-baseline'>
-
+                  <div className="row align-items-baseline">
                     <div className="col-lg-6" style={{ marginBottom: "30px" }}>
-                      <div className='row'>
+                      <div className="row">
                         <TextField
-                        id='outline-controlled'
-                        style={{ marginBottom: "8px", }}
-                        label = "License/Permit/NOC/Registration" 
-                        size="small"
-                        disabled={true}
-                        className="modalTextField"
-                        type="text"
-                        value={props?.licenceData?.rlcoID}
-                         
-                          
-                            
-                           
-                            
-                       />
-                     
-                      </div>
-
-                      <div className='row'>
-                        <TextField
-                        label ="Issuing Department"
-                         style={{ marginBottom: "8px" }}
-                          
-                            className="modalTextField"
-                            disabled={true}
-                            value={props?.licenceData?.issuingDepartment}
-                            type="text"
-                            placeholder="Write your feedback subject"
-  
+                          id="outline-controlled"
+                          style={{ marginBottom: "8px" }}
+                          label="License/Permit/NOC/Registration"
+                          size="small"
+                          InputLabelProps={{
+                            shrink: true, // This ensures that the label shrinks when the input has a value
+                          }}
+                          disabled={true}
+                          className="textHeight"
+                          type="text"
+                          value={props?.licenceData?.rlcoID}
                         />
                       </div>
 
-                      <div className='row'>
-                        <TextField 
-                        label ="Time to get in Days"
-                        style={{ marginBottom: "8px" }}
-                          
-                            value={props?.licenceData?.timeLine}
-                            className="modalTextField"
-                            disabled={true}
-                            type="text"
-                            placeholder="Write your feedback subject"
-                          />
-                        
+                      <div className="row">
+                        <TextField
+                          id="outline-controlled"
+                          label="Issuing Department"
+                          style={{ marginBottom: "8px" }}
+                          className="modalTextField"
+                          disabled={true}
+                          InputLabelProps={{
+                            shrink: true, // This ensures that the label shrinks when the input has a value
+                          }}
+                          value={props?.licenceData?.issuingDepartment}
+                          type="text"
+                          placeholder="Write your feedback subject"
+                        />
                       </div>
 
-                     
-
+                      <div className="row">
+                        <TextField
+                          label="Time to get in Days"
+                          style={{ marginBottom: "8px" }}
+                          value={props?.licenceData?.timeLine}
+                          className="modalTextField"
+                          disabled={true}
+                          InputLabelProps={{
+                            shrink: true, // This ensures that the label shrinks when the input has a value
+                          }}
+                          type="text"
+                          placeholder="Write your feedback subject"
+                        />
+                      </div>
                     </div>
 
-
-
                     <div className="col-lg-6" style={{ marginBottom: "148px" }}>
-
-                    <div className='row'>
-                        <TextField 
-                        label ="Fee Amount"
-                         style={{ marginBottom: "8px" }}
-                          
-                            className="modalTextField"
-                            type="text"
-                            disabled={true}
-                            value={props?.licenceData?.fee}
-                            placeholder="Write your feedback subject"
-                          
+                      <div className="row">
+                        <TextField
+                          label="Fee Amount"
+                          style={{ marginBottom: "8px" }}
+                          className="modalTextField"
+                          type="text"
+                          InputLabelProps={{
+                            shrink: true, // This ensures that the label shrinks when the input has a value
+                          }}
+                          disabled={true}
+                          value={props?.licenceData?.fee}
+                          placeholder="Write your feedback subject"
                         />
                       </div>
-                      <div className='row'>
-                        <TextField 
-                        label =" Renewal Period (Months)"
-                        style={{ marginBottom: "8px" }}
-                        disabled={true}
-                            className="modalTextField"
-                            type="text"
-                            value="Renewal Period (Months)"
-                            placeholder="Write your feedback subject"
-                          />
-                      
+                      <div className="row">
+                        <TextField
+                          label=" Renewal Period (Months)"
+                          style={{ marginBottom: "8px" }}
+                          disabled={true}
+                          className="modalTextField"
+                          type="text"
+                          InputLabelProps={{
+                            shrink: true, // This ensures that the label shrinks when the input has a value
+                          }}
+                          value="Renewal Period (Months)"
+                          placeholder="Write your feedback subject"
+                        />
                       </div>
 
-                    
-
-                      <div className='row'>
+                      <div className="row">
                         <div class="">
                           {/* <div><label>Is inspection required?</label> </div> */}
 
@@ -167,77 +165,75 @@ const DetailModal = (props) => {
                               className="modalTextField"
                               placeholder="Example input"
                             /> */}
-                           
                           </div>
                         </div>
                       </div>
-
                     </div>
-
                   </div>
-                </div>),
+                </div>
+              ),
             },
             {
-              label: ' List of Requirements to Apply',
-              key: '2',
+              label: " List of Requirements to Apply",
+              key: "2",
               children: (
                 <div style={{ height: "295px" }}>
-                  <div className='row'>
-                    <div className='col-lg-6'>
-                      <div className='row'>
+                  <div className="row">
+                    <div className="col-lg-6">
+                      <div className="row">
                         <label>Documents Required</label>
                         <div style={{ marginBottom: "8px" }}>
                           <TextArea rows={4} />
                         </div>
                       </div>
-                      <div className='row'>
-                        <div><a href="comingsoon.html">
-                          <button type="button" className="amin">
-                            <span style={{ width: '179px', height: '33px' }}>
-                              View Documents Requirement Detail
-                            </span>
-                          </button>
-                        </a>
+                      <div className="row">
+                        <div>
+                          <a href="comingsoon.html">
+                            <button type="button" className="amin">
+                              <span style={{ width: "179px", height: "33px" }}>
+                                View Documents Requirement Detail
+                              </span>
+                            </button>
+                          </a>
                         </div>
                       </div>
                     </div>
 
-                    <div className='col-lg-6'>
-                      <div className='row'>
+                    <div className="col-lg-6">
+                      <div className="row">
                         <label>Procedure</label>
                         <div style={{ marginBottom: "8px" }}>
                           <TextArea rows={4} />
                         </div>
                       </div>
-                      <div className='row'>
-                        <div><a href="comingsoon.html">
-                          <button type="button" className="amin">
-                            <span style={{ width: '179px', height: '33px' }}>
-                              View Procedure Detail
-                            </span>
-                          </button>
-                        </a>
+                      <div className="row">
+                        <div>
+                          <a href="comingsoon.html">
+                            <button type="button" className="amin">
+                              <span style={{ width: "179px", height: "33px" }}>
+                                View Procedure Detail
+                              </span>
+                            </button>
+                          </a>
                         </div>
                       </div>
                     </div>
                   </div>
-
-                </div>),
+                </div>
+              ),
             },
             {
-              label: ' Laws / Rules / Regulations / Documents',
-              key: '3',
-              children: (<div style={{ height: "295px" }}>
-                <DocumentGrid />
-
-              </div>),
+              label: " Laws / Rules / Regulations / Documents",
+              key: "3",
+              children: (
+                <div style={{ height: "295px" }}>
+                  <DocumentGrid />
+                </div>
+              ),
             },
           ]}
         />
-
       </Modal>
-
-
     </>
   );
 };
