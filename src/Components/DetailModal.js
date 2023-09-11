@@ -5,8 +5,23 @@ import { Input, Space } from "antd";
 import DocumentGrid from "./Grid/DocumentGrid";
 import { TextField } from "@mui/material";
 import { color } from "d3";
+import { createTheme } from '@mui/material/styles';
+import { ThemeProvider } from '@mui/material/styles';
 
 const DetailModal = (props) => {
+  console.log("amin",props.dataForGrid)
+  const theme = createTheme({
+    overrides: {
+      MuiInput: {
+        // Style for disabled TextField
+        disabled: {
+          '& input': {
+            color: 'red',
+          },
+        },
+      },
+    },
+  });
   const [open, setOpen] = useState(false);
   const [disabled, setDisabled] = useState(true);
   const [bounds, setBounds] = useState({
@@ -77,6 +92,7 @@ const DetailModal = (props) => {
                   <div className="row align-items-baseline">
                     <div className="col-lg-6" style={{ marginBottom: "30px" }}>
                       <div className="row">
+                        <ThemeProvider theme={theme}>
                         <TextField
                           id="outline-controlled"
                           style={{ marginBottom: "8px" }}
@@ -85,11 +101,21 @@ const DetailModal = (props) => {
                           InputLabelProps={{
                             shrink: true, // This ensures that the label shrinks when the input has a value
                           }}
+                          sx={{
+                            '& input:disabled': {
+                              color: 'error.main' ,
+                              backgroundColor:'yellow',bgcolor: 'primary.main'  // Change this to the color you want
+                            },
+                          }}
                           disabled={true}
                           className="textHeight"
                           type="text"
                           value={props?.licenceData?.rlcoID}
                         />
+                        </ThemeProvider>
+                        {/* <div style={{border:"2px solid red"}} className="disable">
+                          <p className="ab" style={{color:"black",backgroundColor:"red"}}>{props?.licenceData?.rlcoID}</p>
+                        </div> */}
                       </div>
 
                       <div className="row">
@@ -173,61 +199,61 @@ const DetailModal = (props) => {
                 </div>
               ),
             },
-            {
-              label: " List of Requirements to Apply",
-              key: "2",
-              children: (
-                <div style={{ height: "295px" }}>
-                  <div className="row">
-                    <div className="col-lg-6">
-                      <div className="row">
-                        <label>Documents Required</label>
-                        <div style={{ marginBottom: "8px" }}>
-                          <TextArea rows={4} />
-                        </div>
-                      </div>
-                      <div className="row">
-                        <div>
-                          <a href="comingsoon.html">
-                            <button type="button" className="amin">
-                              <span style={{ width: "179px", height: "33px" }}>
-                                View Documents Requirement Detail
-                              </span>
-                            </button>
-                          </a>
-                        </div>
-                      </div>
-                    </div>
+            // {
+            //   label: " List of Requirements to Apply",
+            //   key: "2",
+            //   children: (
+            //     <div style={{ height: "295px" }}>
+            //       <div className="row">
+            //         <div className="col-lg-6">
+            //           <div className="row">
+            //             <label>Documents Required</label>
+            //             <div style={{ marginBottom: "8px" }}>
+            //               <TextArea rows={4} />
+            //             </div>
+            //           </div>
+            //           <div className="row">
+            //             <div>
+            //               <a href="comingsoon.html">
+            //                 <button type="button" className="amin">
+            //                   <span style={{ width: "179px", height: "33px" }}>
+            //                     View Documents Requirement Detail
+            //                   </span>
+            //                 </button>
+            //               </a>
+            //             </div>
+            //           </div>
+            //         </div>
 
-                    <div className="col-lg-6">
-                      <div className="row">
-                        <label>Procedure</label>
-                        <div style={{ marginBottom: "8px" }}>
-                          <TextArea rows={4} />
-                        </div>
-                      </div>
-                      <div className="row">
-                        <div>
-                          <a href="comingsoon.html">
-                            <button type="button" className="amin">
-                              <span style={{ width: "179px", height: "33px" }}>
-                                View Procedure Detail
-                              </span>
-                            </button>
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              ),
-            },
+            //         <div className="col-lg-6">
+            //           <div className="row">
+            //             <label>Procedure</label>
+            //             <div style={{ marginBottom: "8px" }}>
+            //               <TextArea rows={4} />
+            //             </div>
+            //           </div>
+            //           <div className="row">
+            //             <div>
+            //               <a href="comingsoon.html">
+            //                 <button type="button" className="amin">
+            //                   <span style={{ width: "179px", height: "33px" }}>
+            //                     View Procedure Detail
+            //                   </span>
+            //                 </button>
+            //               </a>
+            //             </div>
+            //           </div>
+            //         </div>
+            //       </div>
+            //     </div>
+            //   ),
+            // },
             {
               label: " Laws / Rules / Regulations / Documents",
               key: "3",
               children: (
                 <div style={{ height: "295px" }}>
-                  <DocumentGrid />
+                  <DocumentGrid dataForGrid={props.licenceData}/>
                 </div>
               ),
             },

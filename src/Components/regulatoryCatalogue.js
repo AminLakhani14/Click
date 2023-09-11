@@ -20,6 +20,9 @@ const arr = [
       // jurisdiction: "Sindh",
       timeLine: "10-12 Days",
       fee: "As per Schedule",
+      documentname: "Companies Act 2017",
+          documenttype: "Law / Rules / Regulations	",
+      downloaddocument: `${process.env.PUBLIC_URL}../assets/sindhkatciabadiact1987.pdf`,
       // officials:
         // "1. Director, Directorate of Inspection /Registration of Private Colleges Sindh Karachi (Ex-Officio) Chairman \n02 Deputy Director (M&amp;E) Directorate of M&amp;E of Colleges Sindh Karachi Member \n03 Deputy Director (Inspection) Directorate General of Colleges Sindh, Karachi Member \n04 Retired Additional Director Karachi Membe\n05. Retired Additional Director Karachi (Member)",
       // validity: "3 Years"                   ,
@@ -36,6 +39,9 @@ const arr = [
       // jurisdiction: "Sindh",
       fee: "As per Schedule",
       timeLine: "Same Day",
+      documentname: "Amendment",
+      documenttype: "Law / Rules / Regulations	",
+  downloaddocument: `${process.env.PUBLIC_URL}../assets/sindhkatciabadiact1987.pdf`,
       // officials: "Regional Director Labour/Deputy Chief Inspector",
       // validity: "2 year",                   
       // renewalFee:"",
@@ -51,7 +57,10 @@ const arr = [
       // jurisdiction: "Sindh",
       timeLine: "10 days",
       // officials: "1. Joint Director Labour \n2.Labour Inspector",
-      // validity: "2 year",                   
+      // validity: "2 year", 
+      documentname: "Amendment 2",
+          documenttype: "Law / Rules / Regulations	",
+      downloaddocument: `${process.env.PUBLIC_URL}../assets/sindhkatciabadiact1987.pdf`,                
     },
     {
       sNo: 5,
@@ -63,6 +72,7 @@ const arr = [
       // jurisdiction: "Sindh",
       timeLine: "7 days",
       fee: "As per Schedule",
+     
       // officials:
         // "1 .Licensing In-charge (Licensing &amp; Registration Wing) \n2. Director Licensing &amp; Registration \n3. Deputy Director Operations \n4. Food Safety Officer \n5. Director General (SFA)",
         // validity: "",                   
