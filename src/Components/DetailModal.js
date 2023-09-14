@@ -9,7 +9,7 @@ import { createTheme } from '@mui/material/styles';
 import { ThemeProvider } from '@mui/material/styles';
 
 const DetailModal = (props) => {
-  console.log("amin",props.dataForGrid)
+  console.log("amin",props)
   const theme = createTheme({
     overrides: {
       MuiInput: {
@@ -199,61 +199,61 @@ const DetailModal = (props) => {
                 </div>
               ),
             },
-            // {
-            //   label: " List of Requirements to Apply",
-            //   key: "2",
-            //   children: (
-            //     <div style={{ height: "295px" }}>
-            //       <div className="row">
-            //         <div className="col-lg-6">
-            //           <div className="row">
-            //             <label>Documents Required</label>
-            //             <div style={{ marginBottom: "8px" }}>
-            //               <TextArea rows={4} />
-            //             </div>
-            //           </div>
-            //           <div className="row">
-            //             <div>
-            //               <a href="comingsoon.html">
-            //                 <button type="button" className="amin">
-            //                   <span style={{ width: "179px", height: "33px" }}>
-            //                     View Documents Requirement Detail
-            //                   </span>
-            //                 </button>
-            //               </a>
-            //             </div>
-            //           </div>
-            //         </div>
+            {
+              label: " List of Requirements to Apply",
+              key: "2",
+              children: (
+                <div style={{ height: "295px" }}>
+                  <div className="row">
+                    <div className="col-lg-6">
+                      <div className="row">
+                        <label>Documents Required</label>
+                        <div style={{ marginBottom: "8px" }}>
+                          <TextArea rows={4} />
+                        </div>
+                      </div>
+                      <div className="row">
+                        <div>
+                          <a href="comingsoon.html">
+                            <button type="button" className="amin">
+                              <span style={{ width: "179px", height: "33px" }}>
+                                View Documents Requirement Detail
+                              </span>
+                            </button>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
 
-            //         <div className="col-lg-6">
-            //           <div className="row">
-            //             <label>Procedure</label>
-            //             <div style={{ marginBottom: "8px" }}>
-            //               <TextArea rows={4} />
-            //             </div>
-            //           </div>
-            //           <div className="row">
-            //             <div>
-            //               <a href="comingsoon.html">
-            //                 <button type="button" className="amin">
-            //                   <span style={{ width: "179px", height: "33px" }}>
-            //                     View Procedure Detail
-            //                   </span>
-            //                 </button>
-            //               </a>
-            //             </div>
-            //           </div>
-            //         </div>
-            //       </div>
-            //     </div>
-            //   ),
-            // },
+                    <div className="col-lg-6">
+                      <div className="row">
+                        <label>Procedure</label>
+                        <div style={{ marginBottom: "8px" }}>
+                          <TextArea rows={4} />
+                        </div>
+                      </div>
+                      <div className="row">
+                        <div>
+                          <a href="comingsoon.html">
+                            <button type="button" className="amin">
+                              <span style={{ width: "179px", height: "33px" }}>
+                                View Procedure Detail
+                              </span>
+                            </button>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              ),
+            },
             {
               label: " Laws / Rules / Regulations / Documents",
               key: "3",
               children: (
                 <div style={{ height: "295px" }}>
-                  <DocumentGrid dataForGrid={props.licenceData}/>
+                  <DocumentGrid dataForGrid={props.licenceData}  isuseDepart={props?.licenceData?.fee} id="LD-002"/>
                 </div>
               ),
             },

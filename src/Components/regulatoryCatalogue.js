@@ -6,7 +6,10 @@ import Footer from "./footer";
 import { jqx } from "jqwidgets-scripts/jqwidgets-react-tsx/jqxgrid";
 import DetailModal from "./DetailModal";
 import { Modal } from "bootstrap";
-
+import SindhFoodAuthorityAct2016 from"../assets/PDF/SindhFoodAuthority/SindhFoodAuthorityAct2016.pdf"
+import sindh from "../assets/sindhkatciabadiact1987.pdf"
+import BuildingBylaws from "../assets/PDF/Site/BuildingBylaws.pdf"
+import TheHazardousSubstancesRule2014 from "../assets/PDF/SEPA/TheHazardousSubstancesRule2014.pdf"
 const arr = [
 
     {
@@ -21,8 +24,9 @@ const arr = [
       timeLine: "10-12 Days",
       fee: "As per Schedule",
       documentname: "Companies Act 2017",
-          documenttype: "Law / Rules / Regulations	",
+      documenttype: "Law / Rules / Regulations	",
       downloaddocument: `${process.env.PUBLIC_URL}../assets/sindhkatciabadiact1987.pdf`,
+      pdf:sindh
       // officials:
         // "1. Director, Directorate of Inspection /Registration of Private Colleges Sindh Karachi (Ex-Officio) Chairman \n02 Deputy Director (M&amp;E) Directorate of M&amp;E of Colleges Sindh Karachi Member \n03 Deputy Director (Inspection) Directorate General of Colleges Sindh, Karachi Member \n04 Retired Additional Director Karachi Membe\n05. Retired Additional Director Karachi (Member)",
       // validity: "3 Years"                   ,
@@ -41,7 +45,12 @@ const arr = [
       timeLine: "Same Day",
       documentname: "Amendment",
       documenttype: "Law / Rules / Regulations	",
-  downloaddocument: `${process.env.PUBLIC_URL}../assets/sindhkatciabadiact1987.pdf`,
+      downloaddocument: `${process.env.PUBLIC_URL}../assets/sindhkatciabadiact1987.pdf`,
+
+      pdf: {
+        BuildingBylaws: BuildingBylaws
+      }
+  // downloaddocument: `${process.env.PUBLIC_URL}../assets/sindhkatciabadiact1987.pdf`,
       // officials: "Regional Director Labour/Deputy Chief Inspector",
       // validity: "2 year",                   
       // renewalFee:"",
@@ -72,7 +81,11 @@ const arr = [
       // jurisdiction: "Sindh",
       timeLine: "7 days",
       fee: "As per Schedule",
-     
+      documentname: "Sindh Food Authority Act 2016",
+      documenttype: "Law / Rules / Regulations	",
+      downloaddocument: `${process.env.PUBLIC_URL}../assets/sindhkatciabadiact1987.pdf`,                
+      pdf:SindhFoodAuthorityAct2016
+    
       // officials:
         // "1 .Licensing In-charge (Licensing &amp; Registration Wing) \n2. Director Licensing &amp; Registration \n3. Deputy Director Operations \n4. Food Safety Officer \n5. Director General (SFA)",
         // validity: "",                   
@@ -89,6 +102,8 @@ const arr = [
       // jurisdiction: "Sindh",
       timeLine: "3 Month",
       fee: "Rs.5000",
+      documenttype: "Law / Rules / Regulations	",
+
       // officials:
         // "1 .Licensing Authority (Secretary Health has delegated authority to District Health Officer) \n2. Provincial Inspector Drugs",
         // validity: "",                   
@@ -100,6 +115,8 @@ const arr = [
       rlcoID: "HD-002",
       details: "License to sell Drugs by Way of Wholesale 7A",
       type: "License",
+      documenttype: "Law / Rules / Regulations	",
+
       // prevailing:
         // "1. The Drugs Act,1976. \n2. Sindh Drugs Rules, 1979 amended 2010.",
       // jurisdiction: "Sindh",
@@ -116,6 +133,8 @@ const arr = [
       rlcoID: "HD-003",
       details: "License to sell Drugs in Pharmacy (Form-8)",
       type: "License",
+      documenttype: "Law / Rules / Regulations	",
+
       // prevailing:
         // "1. The Drugs Act,1976. \n2. Sindh Drugs Rules, 1979 amended 2010.",
       // jurisdiction: "Sindh",
@@ -133,6 +152,8 @@ const arr = [
       details:
         "License to sell Narcotics and Other Controlled Drugs/ Substances (Form-9)",
       type: "License",
+      documenttype: "Law / Rules / Regulations	",
+
       // prevailing:
         // "1. The Drugs Act,1976. \n2. Sindh Drugs Rules, 1979 amended 2010.",
       // jurisdiction: "Sindh",
@@ -158,6 +179,8 @@ const arr = [
         "1 .Licensing Authority (Secretary Health has delegated authority to District Health Officer) \n2. Provincial Inspector Drugs",
         // validity: "",                   
       //  renewalFee:""
+      documenttype: "Law / Rules / Regulations	",
+
     },
     {
       sNo: 11,
@@ -170,6 +193,8 @@ const arr = [
       // jurisdiction: "Sindh",
       timeLine: "30 Days",
       fee: "As per Schedule",
+      documenttype: "Law / Rules / Regulations	",
+
       // officials:
       //   "1. Reception desk \n2. Assistant Director \n3 Deputy Direction (M&amp;E and Inspections) \n4. Additional Director/ Chairman Inspection Committee \n5. Section Officer (Secretariate) \n6. Secretary, Education &amp; Literacy",
         // validity: "",                   
@@ -312,6 +337,10 @@ const arr = [
       // jurisdiction: "Sindh",
       timeLine: "7 Days",
       fee: "Rs.50000",
+      documentname: "The Hazardous Substances Rule 2014",
+      documenttype: "Law / Rules / Regulations	",
+      downloaddocument: `${process.env.PUBLIC_URL}../assets/sindhkatciabadiact1987.pdf`,
+      pdf:TheHazardousSubstancesRule2014
       // officials:
       //   "Director/ Deputy Director \nAssistant Director \nEnvironmental Inspector ▪ DG (SEPA)  \nExpert Committee",
         // validity: "",                   
@@ -329,6 +358,10 @@ const arr = [
       // jurisdiction: "Sindh",
       timeLine: "7 days",
       fee: "Rs.50000",
+      documentname: "The Hazardous Substances Rule 2014",
+      documenttype: "Law / Rules / Regulations	",
+      downloaddocument: `${process.env.PUBLIC_URL}../assets/sindhkatciabadiact1987.pdf`,
+      pdf:TheHazardousSubstancesRule2014
       // officials:
       //   "Director/ Deputy Director \nAssistant Director \nEnvironmental Inspector ▪ DG (SEPA)  \nExpert Committee",
         // validity: "",                   
@@ -731,13 +764,13 @@ const arr = [
       rlcoID: "ICD-008 (A)",
       details: "Allotment of Land/ Plot",
       type: "Other",
-      // prevailing: "By Laws",
-      // jurisdiction: "Sindh",
       timeLine: "60 days",
       fee:"",
-      // officials: "Committee \nMD \nEstate Engineer",
-      // validity: "",                   
-      // renewalFee:""
+      documentname: "Building By laws",
+      documenttype: "Law / Rules / Regulations	",
+      downloaddocument: `${process.env.PUBLIC_URL}../assets/sindhkatciabadiact1987.pdf`,
+      pdf:BuildingBylaws
+    
     },
     {
       sNo: 49,
@@ -750,6 +783,10 @@ const arr = [
       // jurisdiction: "Sindh",
       timeLine: "14 days",
       fee:"",
+      documentname: "Building By laws",
+      documenttype: "Law / Rules / Regulations	",
+      downloaddocument: `${process.env.PUBLIC_URL}../assets/sindhkatciabadiact1987.pdf`,
+      pdf:BuildingBylaws
       // officials:
       //   "Draft man\nEstate Engineer\nAssistant Engineer \nDeputy Chief Engineer\nChief Enginee",
         // validity: "",                   
@@ -765,6 +802,10 @@ const arr = [
       // jurisdiction: "Sindh",
       timeLine: "7 days",
       fee:"",
+      documentname: "Building By laws",
+      documenttype: "Law / Rules / Regulations	",
+      downloaddocument: `${process.env.PUBLIC_URL}../assets/sindhkatciabadiact1987.pdf`,
+      pdf:BuildingBylaws
       // officials:
       //   "Draft man\nEstate Engineer\nAssistant Engineer \nDeputy Chief Engineer\nChief Enginee",
         // validity: "",                   
@@ -780,6 +821,10 @@ const arr = [
       // jurisdiction: "Sindh",
       timeLine: "14 days",
       fee:"",
+      documentname: "Building By laws",
+      documenttype: "Law / Rules / Regulations	",
+      downloaddocument: `${process.env.PUBLIC_URL}../assets/sindhkatciabadiact1987.pdf`,
+      pdf:BuildingBylaws
       // officials:
       //   "Office Superintendent \nAD/ DD/ (Admin)\nDirector (Admin) \nSecretary \nMD",
         // validity: "",                   
@@ -815,6 +860,10 @@ const arr = [
         "Office Superintendent\nDirector (Admin)/ Law Officer \nRegistrar Office \nSecretary \nMD",
         // validity: "",                   
         // renewalFee:""
+        documentname: "Building By laws",
+        documenttype: "Law / Rules / Regulations	",
+        downloaddocument: `${process.env.PUBLIC_URL}../assets/sindhkatciabadiact1987.pdf`,
+        pdf:BuildingBylaws
     },
     {
       sNo: 54,
@@ -830,6 +879,10 @@ const arr = [
         "Office Superintendent \nAD/DD (Admin) \nDirector (Admin)\nEstate Engineer/ Assistant Engineer \nDeputy Chief Engineer \nSecretary \nMD/ Chief Engineer",
         // validity: "",                   
         // renewalFee:""
+        documentname: "Building By laws",
+        documenttype: "Law / Rules / Regulations	",
+        downloaddocument: `${process.env.PUBLIC_URL}../assets/sindhkatciabadiact1987.pdf`,
+        pdf:BuildingBylaws
     },
     {
       sNo: 55,
@@ -845,6 +898,10 @@ const arr = [
         "Office Superintendent\nAD/ DD (Admin) \nDirector (Admin) \nSecretary MD",
         // validity: "",                   
         // renewalFee:""
+        documentname: "Building By laws",
+        documenttype: "Law / Rules / Regulations	",
+        downloaddocument: `${process.env.PUBLIC_URL}../assets/sindhkatciabadiact1987.pdf`,
+        pdf:BuildingBylaws
     },
     {
       sNo: 56,
@@ -860,6 +917,10 @@ const arr = [
         "Office Superintendent \nAD/DD (Admin) \nDirector (Admin) \nEstate Engineer/ Assistant Engineer \nDeputy Chief Engineer \nSecretary \nMD/ Chief Enginee",
         // validity: "",                   
         // renewalFee:""
+        documentname: "Building By laws",
+        documenttype: "Law / Rules / Regulations	",
+        downloaddocument: `${process.env.PUBLIC_URL}../assets/sindhkatciabadiact1987.pdf`,
+        pdf:BuildingBylaws
     },
     {
       sNo: 57,
@@ -875,6 +936,10 @@ const arr = [
         "Office Superintendent \nAD/DD (Admin) \nDirector (Admin) \nEstate Engineer/ Assistant Engineer \nDeputy Chief Engineer \nSecretary \nMD/ Chief Enginee",
         // validity: "",                   
         // renewalFee:""
+        documentname: "Building By laws",
+        documenttype: "Law / Rules / Regulations	",
+        downloaddocument: `${process.env.PUBLIC_URL}../assets/sindhkatciabadiact1987.pdf`,
+        pdf:BuildingBylaws
     },
     {
       sNo: 58,
@@ -1674,6 +1739,8 @@ const arr = [
       officials: "▪ Motor Registration Authority\n▪ Counter In-Charge (AETO)",
       // validity: "",                   
       // renewalFee:""
+      documenttype: "Law / Rules / Regulations	",
+
     },
     {
       sNo: 110,
@@ -1690,6 +1757,8 @@ const arr = [
         "▪ Chief Minister, Sindh\n▪ Chief Secretary/ Secretary \n▪ Section Officer \n▪ Director General Excise \n▪ Regional Director \n▪ Concerned District Officer\n▪ Concerned Assistant ETO/Concerned Inspector",
         // validity: "",                   
         // renewalFee:""
+        documenttype: "Law / Rules / Regulations	",
+
     },
     {
       sNo: 111,
@@ -1706,6 +1775,8 @@ const arr = [
         "▪ Chief Minister, Sindh\n▪ Chief Secretary/ Secretary \n▪ Section Officer \n▪ Director General Excise \n▪ Regional Director \n▪ Concerned District Officer\n▪ Concerned Assistant ETO/Concerned Inspector",
         // validity: "",                   
         // renewalFee:""
+        documenttype: "Law / Rules / Regulations	",
+
     },
     {
       sNo: 112,
@@ -1720,6 +1791,8 @@ const arr = [
       officials:"",
       // validity: "",                   
       // renewalFee:""
+      documenttype: "Law / Rules / Regulations	",
+
     },
     {
       sNo: 113,
@@ -1733,6 +1806,8 @@ const arr = [
       fee: "As per schedule",
       officials:"",
       // validity: "",                   
+      documenttype: "Law / Rules / Regulations	",
+
       // renewalFee:""
     },
     {
@@ -1749,6 +1824,8 @@ const arr = [
       officials:"",
       // validity: "",                   
       // renewalFee:""
+      documenttype: "Law / Rules / Regulations	",
+
     },
     {
       sNo: 115,
@@ -1764,6 +1841,8 @@ const arr = [
       officials:"",
       // validity: "",                   
       // renewalFee:""
+      documenttype: "Law / Rules / Regulations	",
+
     },
     {
       sNo: 116,
@@ -1780,6 +1859,8 @@ const arr = [
         "▪ Regional Director \n▪ District Officer (DO)/ETO\n▪ Assistant ETO/ Inspector \n▪ Director General (DG) Excise",
         // validity: "",                   
         // renewalFee:""
+        documenttype: "Law / Rules / Regulations	",
+
     },
     {
       sNo: 117,
@@ -1794,6 +1875,8 @@ const arr = [
       officials:"",
       // validity: "",                   
       // renewalFee:""
+      documenttype: "Law / Rules / Regulations	",
+
     },
     {
       sNo: 118,
@@ -1808,6 +1891,8 @@ const arr = [
       officials:"",
       // validity: "",                   
       // renewalFee:""
+      documenttype: "Law / Rules / Regulations	",
+
     },
     {
       sNo: 119,
@@ -1822,6 +1907,8 @@ const arr = [
       officials:"",
       // validity: "",                   
       // renewalFee:""
+      documenttype: "Law / Rules / Regulations	",
+
     },
     {
       sNo: 120,
@@ -1836,6 +1923,8 @@ const arr = [
       officials:"",
       // validity: "",                   
       // renewalFee:""
+      documenttype: "Law / Rules / Regulations	",
+
     },
     {
       sNo: 121,
@@ -1851,6 +1940,8 @@ const arr = [
       officials:"",
       // validity: "",                   
       // renewalFee:""
+      documenttype: "Law / Rules / Regulations	",
+
     },
     {
       sNo: 122,
@@ -1865,6 +1956,8 @@ const arr = [
       officials:"",
       // validity: "",                   
       // renewalFee:""
+      documenttype: "Law / Rules / Regulations	",
+
     },
     {
       sNo: 123,
@@ -1879,6 +1972,8 @@ const arr = [
       officials:
         '▪ Chief Minister, Sindh\n▪ Chief Secretary/ Secretary \n▪ Section Officer \n▪ Director General Excise \n▪ Regional Director \n▪ Concerned District Officer\n▪ Concerned Assistant ETO/Concerned Inspector"\n\n\n\n',
         // validity: "",                   
+        documenttype: "Law / Rules / Regulations	",
+
         // renewalFee:""
     },
     {
@@ -1895,6 +1990,8 @@ const arr = [
         '▪ Chief Minister, Sindh\n▪ Chief Secretary/ Secretary \n▪ Section Officer \n▪ Director General Excise \n▪ Regional Director \n▪ Concerned District Officer\n▪ Concerned Assistant ETO/Concerned Inspector"\n\n\n\n',
         // validity: "",                   
         // renewalFee:""
+        documenttype: "Law / Rules / Regulations	",
+
     },
     {
       sNo: 125,
@@ -1910,6 +2007,8 @@ const arr = [
         "▪ Regional Director \n▪ District Officer (DO)/ETO\n▪ Assistant ETO/ Inspector\n▪ Director General (DG) Excise\n",
         // validity: "",                   
         // renewalFee:""
+        documenttype: "Law / Rules / Regulations	",
+
     },
     {
       sNo: 126,
@@ -1927,6 +2026,8 @@ const arr = [
         "▪ Regional Director \n▪ District Officer (DO)/ETO\n▪ Assistant ETO/ Inspector \n▪ Director General (DG) Excise",
         // validity: "",                   
         // renewalFee:""
+        documenttype: "Law / Rules / Regulations	",
+
     },
     {
       sNo: 127,
@@ -1943,6 +2044,8 @@ const arr = [
         "▪ Regional Director \n▪ District Officer (DO)/ETO\n▪ Assistant ETO/ Inspector \n▪ Director General (DG) Excise",
         // validity: "",                   
         // renewalFee:""
+        documenttype: "Law / Rules / Regulations	",
+
     },
     {
       sNo: 128,
@@ -1959,6 +2062,8 @@ const arr = [
         "▪ District Officer \n▪ Deputy Director \n▪ Director \n▪ Director General",
         // validity: "",                   
         // renewalFee:""
+        documenttype: "Law / Rules / Regulations	",
+
     },
     {
       sNo: 129,
@@ -1976,6 +2081,8 @@ const arr = [
         "▪ District Officer \n▪ Deputy Director \n▪ Director \n▪ Director General",
         // validity: "",                   
         // renewalFee:""
+        documenttype: "Law / Rules / Regulations	",
+
     },
     {
       sNo: 130,
@@ -1991,6 +2098,8 @@ const arr = [
       officials: "▪ Deputy Commissioner (IT)",
       // validity: "",                   
       // renewalFee:""
+      documenttype: "Law / Rules / Regulations	",
+
     },
     {
       sNo: 131,
@@ -2005,6 +2114,8 @@ const arr = [
       officials:"",
       // validity: "",                   
       // renewalFee:""
+      documenttype: "Law / Rules / Regulations	",
+
     },
     {
       sNo: 132,
@@ -2021,6 +2132,8 @@ const arr = [
         "▪ DMD Technical Services\n▪ SUB- Engineer \n▪ RRG Department\n▪ MD KWSB",
         // validity: "",                   
         // renewalFee:""
+        documenttype: "Law / Rules / Regulations	",
+
     },
     {
       sNo: 133,
@@ -2036,6 +2149,8 @@ const arr = [
         "▪ Superintending Engineer\n▪ Committee\n▪ Sub- Engineer \n▪ RRG Department\n▪ MD KWSB\n",
         // validity: "",                   
         // renewalFee:""
+        documenttype: "Law / Rules / Regulations	",
+
     },
   ];
 
@@ -2100,7 +2215,7 @@ const GetGridData = (data) =>{
 // Print the filtered data
   return (
     <>
-   {openModal && <DetailModal licenceData={licenceData} openDetailModal={openDetailModal} closeDetailModal={closeDetailModal} dataForGrid={dataForGrid}/>}
+   {openModal && <DetailModal licenceData={licenceData} openDetailModal={openDetailModal} closeDetailModal={closeDetailModal} dataForGrid={dataForGrid} />}
       <GenericHeader />
       <div
         className="row"

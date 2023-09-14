@@ -18,7 +18,6 @@ export default class DemoGrid extends React.Component {
         { name: "fee", type: "string" },
         { name: "officials", type: "string" },
         { name: "Details", type: "button" },
-        { name: "downloaddocument" , type:"string"}
       ],
     }
 
@@ -56,11 +55,10 @@ export default class DemoGrid extends React.Component {
 
 
   onRowclick(event) {
-    debugger
     try {
       debugger;
       if (event !== null && event !== undefined) {
-        const row = event.args.row.bounddata
+        const row = event.args.row.bounddata !== undefined ? event.args.row.bounddata : event.args.row
         const body = {
           index: event.args.rowindex,
           row: row
