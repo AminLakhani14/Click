@@ -3,22 +3,33 @@ import "jqwidgets-scripts/jqwidgets/styles/jqx.base.css";
 import "jqwidgets-scripts/jqwidgets/styles/jqx.material-purple.css";
 import JqxGrid, { jqx } from "jqwidgets-scripts/jqwidgets-react-tsx/jqxgrid";
 import sindh from "../../assets/sindhkatciabadiact1987.pdf"
+
 ///////////// Labour Department ////////////////
+
 import Amendment from "../../assets/PDF/Amendment.pdf"
 import Amendment2 from "../../assets/PDF/Amendment2.pdf"
 import SindhFactoriesRules2021publishedingazetteon22August2022 from "../../assets/PDF/SindhFactoriesRules2021publishedingazetteon22August,2022.pdf"
 import SindhShopsEstablishmentAct from "../../assets/PDF/SindhShops&EstablishmentAct,2015.pdf";
 import TheSindhFactoriesAct2015 from "../../assets/PDF/TheSindhFactoriesAct,2015.pdf"
+
 /////////////sindh revenue board//////////
+
 import SindhSalesTaxonServicesAct2011amended from '../../assets/PDF/SindhSalesTaxonServicesAct2011amended2021.pdf'
 import SindhSalesTaxonServicesRules2011 from "../../assets/PDF/SindhSalesTaxonServicesRules2011.pdf"
+
 //////////SITE//////////
+
 import SINDHEMPLOYEESSOCIALSECURITYAMENDMENTACT2018 from  "../../assets/PDF/SINDHEMPLOYEESSOCIALSECURITYAMENDMENTACT2018.pdf"
 import SindhEmployeesSocialSecurityAct2016 from "../../assets/PDF/SindhEmployeesSocialSecurityAct2016.pdf"
+
 //////////////Sindh Environmental Protection Agency (SEPA)/////
+
 import THESINDHENVIRONMENTALPROTECTIONACT2014 from "../../assets/PDF/THESINDHENVIRONMENTALPROTECTIONACT2014.pdf"
 import TheHazardousSubstancesRule2014 from "../../assets/PDF/TheHazardousSubstancesRule2014.pdf"
 import HOSPITALWASTEMANAGEMENTRULES2014 from "../../assets/PDF/HOSPITALWASTEMANAGEMENTRULES2014.docx"
+
+///////////////Energy Department//////////////////
+import ElectricityAct1910 from "../../assets/PDF/ElectricityAct1910.pdf"
 function DocumentGrid({dataForGrid}) {
   const {issuingDepartment,rlcoID}=dataForGrid
   debugger;
@@ -40,22 +51,17 @@ function DocumentGrid({dataForGrid}) {
         {
           documentname: "Amendment",
           documenttype: "Law / Rules / Regulations	",
-          // downloaddocument: `${process.env.PUBLIC_URL}../../../../assets/PDF/LabourDepartment/SindhShops&EstablishmentAct,2015.pdf`,
           downloaddocument:[Amendment,"Amendment"]
         },
     
         {
-            documentname: "Amendment 2",
-            documenttype: "Law / Rules / Regulations	",
-            // downloaddocument: `${process.env.PUBLIC_URL}../assets/sindhkatciabadiact1987.pdf`,
+          documentname: "Amendment 2",
+          documenttype: "Law / Rules / Regulations	",
           downloaddocument:[Amendment2,"Amendment 2"]
-
-
         },
         {
             documentname: "Sindh Factories Rules 2021 published in gazette on 22 August, 2022",
             documenttype: "Law / Rules / Regulations",
-            // downloaddocument: sindh,
             downloaddocument:[SindhFactoriesRules2021publishedingazetteon22August2022,"Sindh Factories Rules 2021 published in gazette on 22 August, 2022"]
 
         },
@@ -63,7 +69,6 @@ function DocumentGrid({dataForGrid}) {
             documentname: "Sindh Shops & EstablishmentAct 2015",
             documenttype: "Law / Rules / Regulations",
             downloaddocument:[SindhShopsEstablishmentAct,"Sindh Shops & EstablishmentAct 2015"]
-
         },
         {
             documentname: "The Sindh Factories Act 2015",
@@ -82,8 +87,6 @@ function DocumentGrid({dataForGrid}) {
             documentname: "Sindh Sales Tax on Services Rules 2011",
             documenttype: "Law / Rules / Regulations	",
             downloaddocument:[SindhSalesTaxonServicesRules2011,"Sindh Sales Tax on Services Rules 2011"]
-
-
         },
        
       ]:issuingDepartment =="Sindh Employees Social Security Institution (SESSI) "?
@@ -97,9 +100,7 @@ function DocumentGrid({dataForGrid}) {
         {
             documentname: "Sindh Employees Social Security Act,2016",
             documenttype: "Law / Rules / Regulations	",
-          downloaddocument:[SindhEmployeesSocialSecurityAct2016,"Sindh Employees Social Security Act,2016"]
-
-
+            downloaddocument:[SindhEmployeesSocialSecurityAct2016,"Sindh Employees Social Security Act,2016"]
         },
        
       ]: rlcoID =="SEPA-001" || rlcoID =="SEPA-002"?
@@ -114,8 +115,6 @@ function DocumentGrid({dataForGrid}) {
             documentname: "Hazardous Substances Rules, 2014",
             documenttype: "Law / Rules / Regulations	",
            downloaddocument:[TheHazardousSubstancesRule2014,"Hazardous Substances Rules, 2014"]
-
-
         },
        
       ]
@@ -168,7 +167,21 @@ function DocumentGrid({dataForGrid}) {
           documenttype: "Law / Rules / Regulations	",
           downloaddocument:[HOSPITALWASTEMANAGEMENTRULES2014,"Hospital Waste Management Rules 2014"]
         }
-      ]:dataForGrid
+      ]:
+      rlcoID =="ED-001\n"?
+      CaseData = [
+        {
+          documentname: "Electricity Act 1910",
+          documenttype: "Law / Rules / Regulations	",
+          downloaddocument:[THESINDHENVIRONMENTALPROTECTIONACT2014,"Electricity Act 1910"]
+        },
+        {
+          documentname: "Hospital Waste Management Rules 2014",
+          documenttype: "Law / Rules / Regulations	",
+          downloaddocument:[HOSPITALWASTEMANAGEMENTRULES2014,"Hospital Waste Management Rules 2014"]
+        }
+      ]
+      :dataForGrid
       ,
     datatype: "json",
   };
@@ -206,8 +219,8 @@ function DocumentGrid({dataForGrid}) {
       
         // return value ? `<a style="justify-content: center; display: flex;margin-top: 10px;"  href="${props.dataForGrid.downloaddocument}" target="_blank">${props.dataForGrid.documentname}</a>` : "";
         return value ? `<a style=" display: flex;margin-top: 5px;" 
-         href="${issuingDepartment=="Labour and Human Resources Department" || issuingDepartment=="Sindh Revenue Board" ||issuingDepartment =="Sindh Employees Social Security Institution (SESSI) " || rlcoID =="SEPA-001" || rlcoID =="SEPA-003" || rlcoID =="SEPA-004" || rlcoID =="SEPA-005" ||rlcoID =="SEPA-006"? value[0]:  dataForGrid.pdf}" target="_blank">
-         ${issuingDepartment=="Labour and Human Resources Department" ||issuingDepartment=="Sindh Revenue Board" ||issuingDepartment =="Sindh Employees Social Security Institution (SESSI) " || rlcoID =="SEPA-001" || rlcoID =="SEPA-003" || rlcoID =="SEPA-004" || rlcoID =="SEPA-005" || rlcoID =="SEPA-006"? value[1]:dataForGrid.documentname}</a>` : "";
+         href="${issuingDepartment=="Labour and Human Resources Department" || issuingDepartment=="Sindh Revenue Board" ||issuingDepartment =="Sindh Employees Social Security Institution (SESSI) " || rlcoID =="SEPA-001" || rlcoID =="SEPA-003" || rlcoID =="SEPA-004" || rlcoID =="SEPA-005" ||rlcoID =="SEPA-006" || rlcoID =="ED-001\n"? value[0]:  dataForGrid.pdf}" target="_blank">
+         ${issuingDepartment=="Labour and Human Resources Department" ||issuingDepartment=="Sindh Revenue Board" ||issuingDepartment =="Sindh Employees Social Security Institution (SESSI) " || rlcoID =="SEPA-001" || rlcoID =="SEPA-003" || rlcoID =="SEPA-004" || rlcoID =="SEPA-005" || rlcoID =="SEPA-006"|| rlcoID =="ED-001\n"? value[1]:dataForGrid.documentname}</a>` : "";
       },
      
       filtertype: "textField",
