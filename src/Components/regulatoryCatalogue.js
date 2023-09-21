@@ -206,14 +206,9 @@ const arr = [
       rlcoID: "SHCC-001",
       details: "Registration &amp; Licensing of Healthcare Establishments",
       type: "Registration",
-      // prevailing: "Registration &amp; Licensing of Healthcare Establishments",
-      // jurisdiction: "Sindh",
       timeLine: "30 Days",
       fee: "As per Schedule",
-      // officials:
-        // "1. Assistant (L&amp;A) \n2. Assistant/ Deputy Director L&amp;A \n3. Director L&amp;A \n4. Inspection Team \n5. CE0",
-        // validity: "",                   
-      //  renewalFee:""
+ 
     },
     {
       sNo: 13,
