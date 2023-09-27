@@ -10,6 +10,16 @@ import SindhFoodAuthorityAct2016 from"../assets/PDF/SindhFoodAuthority/SindhFood
 import sindh from "../assets/sindhkatciabadiact1987.pdf"
 import BuildingBylaws from "../assets/PDF/Site/BuildingBylaws.pdf"
 import TheHazardousSubstancesRule2014 from "../assets/PDF/SEPA/TheHazardousSubstancesRule2014.pdf"
+import collegeDepartment from "../assets/Documents/collegeDepartment.PNG"
+import labourAndHumanResource from "../assets/Documents/labourAndHumanResource.PNG"
+import sindhFood from "../assets/Documents/SindhFood.PNG"
+import HealthDepartment from "../assets/Documents/HealthDepartment.PNG"
+import SchoolEducationAndLiteracy from "../assets/Documents/SchoolEducationAndLiteracy.PNG"
+import SindhHeathCare from "../assets/Documents/SindhHealthCare.PNG"
+import IndustrieAndCommerce from "../assets/Documents/IndustrieAndCommerce.PNG"
+import SindhEnviromentalProtection from "../assets/Documents/SindhEnviromentalProtection.PNG"
+import HealthCareTable from "../assets/Documents/HealthCareTable.PNG"
+
 const arr = [
 
     {
@@ -18,20 +28,26 @@ const arr = [
       rlcoID: "CED-001",
       details: "Registration of Privately Managed Colleges ",
       type: "Registration",
-      // prevailing:
-        // "The Sindh Private Education Institutions (Regulations &amp; Control) Ordinance 2001- Amended Act 2003.",
-      // jurisdiction: "Sindh",
       timeLine: "10-12 Days",
       fee: "As per Schedule",
       documentname: "Companies Act 2017",
       documenttype: "Law / Rules / Regulations	",
       downloaddocument: `${process.env.PUBLIC_URL}../assets/sindhkatciabadiact1987.pdf`,
-      pdf:sindh
-      // officials:
-        // "1. Director, Directorate of Inspection /Registration of Private Colleges Sindh Karachi (Ex-Officio) Chairman \n02 Deputy Director (M&amp;E) Directorate of M&amp;E of Colleges Sindh Karachi Member \n03 Deputy Director (Inspection) Directorate General of Colleges Sindh, Karachi Member \n04 Retired Additional Director Karachi Membe\n05. Retired Additional Director Karachi (Member)",
-      // validity: "3 Years"                   ,
-      // renewalFee:
-        // "Urban Intermediate Rs.12500\nRural Intermedate Rs.6250\n\nUrban Degree Awarding Rs.15000\nRural Degree awarding Rs.7500",
+      pdf:sindh,
+      logo:collegeDepartment,
+      l1:"▪ Form-A (with all proforma's. etc. security, census, authority) and covering letter;",
+      l2:"▪ Paid fee challan as per the following fee schedule;",
+      l3:"▪ Inspection report;",
+      l4:"▪ Admission policy;",
+      l5:"▪ Admission committee;",
+      l6:"▪ Curricular and Co-Curricular activities; ",
+      l7:"▪ List of teaching staff with the appointment order, degree, salary, designation, and qualification;",
+      l8:"▪ List of Non-teaching staff with the appointment order, degree, salary, designation, and qualification",
+      l9:"▪ Detail of Management Committee (MC) with name & designation;",
+      l10:"▪ Record of 10 % free ship student list, with name, father Name, contact no. & address of students as Affidavit on stamp paper of PKR 50 or 100 (with  03 copies);",
+      l11:"▪ Board of Governors",
+      l12:"▪ Income and Expenditure;",
+      table:""
     },
     {
       sNo: 3,
@@ -49,11 +65,15 @@ const arr = [
 
       pdf: {
         BuildingBylaws: BuildingBylaws
-      }
-  // downloaddocument: `${process.env.PUBLIC_URL}../assets/sindhkatciabadiact1987.pdf`,
-      // officials: "Regional Director Labour/Deputy Chief Inspector",
-      // validity: "2 year",                   
-      // renewalFee:"",
+      },
+      logo:labourAndHumanResource,
+      l1:"▪ Name of the establishment, if any;",
+      l2:"▪ Postal address of the establishment; ",
+      l3:"▪ Full name of the employer (including father's name); ",
+      l4:"▪ Full name of the manager, if any (including father's name); ",
+      l5:"▪ Category of the establishment, i.e., whether a shop, industrial establishment, commercial establishment, residential hotel, restaurant, eating house,theatre or other place of public amusement or entertainment;",
+      l6:"▪ Total number of employees (state separately the number of men, women and/or young persons, if any); and ",
+      l7:"▪ Date on which the establishment commenced its work. "
     },
     {
       sNo: 4,
@@ -70,6 +90,15 @@ const arr = [
       documentname: "Amendment 2",
           documenttype: "Law / Rules / Regulations	",
       downloaddocument: `${process.env.PUBLIC_URL}../assets/sindhkatciabadiact1987.pdf`,                
+      logo:labourAndHumanResource,
+      l1:"▪ Name of the establishment, if any;",
+      l2:"▪ Postal address of the establishment; ",
+      l3:"▪ Full name of the employer (including father's name); ",
+      l4:"▪ Full name of the manager, if any (including father's name); ",
+      l5:"▪ Category of the establishment, i.e., whether a shop, industrial establishment, commercial establishment, residential hotel, restaurant, eating house,theatre or other place of public amusement or entertainment;",
+      l6:"▪ Total number of employees (state separately the number of men, women and/or young persons, if any); and ",
+      l7:"▪ Date on which the establishment commenced its work. "
+
     },
     {
       sNo: 5,
@@ -84,8 +113,14 @@ const arr = [
       documentname: "Sindh Food Authority Act 2016",
       documenttype: "Law / Rules / Regulations	",
       downloaddocument: `${process.env.PUBLIC_URL}../assets/sindhkatciabadiact1987.pdf`,                
-      pdf:SindhFoodAuthorityAct2016
-    
+      pdf:SindhFoodAuthorityAct2016,
+      logo:sindhFood,
+      l1:"▪ Copy of CNIC;",
+      l2:"▪ Documents of the property/tenancy agreement or affidavit showing ownership;",
+      l3:"▪ Previous registration certificate (if any) with any authority;",
+      l4:"▪ Copy of Challan form;",
+      l5:"▪ Lab testing reports (where required as per SOPs); and",
+      l6:"▪ Medical reports of the staff/food handlers (where required as per SOPs)."
       // officials:
         // "1 .Licensing In-charge (Licensing &amp; Registration Wing) \n2. Director Licensing &amp; Registration \n3. Deputy Director Operations \n4. Food Safety Officer \n5. Director General (SFA)",
         // validity: "",                   
@@ -103,6 +138,15 @@ const arr = [
       timeLine: "3 Month",
       fee: "Rs.5000",
       documenttype: "Law / Rules / Regulations	",
+      logo:HealthDepartment,
+      l1:"▪ Attested copy of the qualified person (Dispenser / Compounder / B. Pharmacy/ Pharm-D);",
+      l2:"▪ Photocopy (attested) of C.N.I.C of the proprietor and qualified person;",
+      l3:"▪ Four attested photographs of the qualified person (Dispenser/ Compounder/ B. Pharmacy/ Pharm-D);",
+      l4:"▪ Affidavit by the proprietor and qualified person to inform the Inspector of Drugs as soon as either of the party ceases to have interest in the license issued under the rules;",
+      l5:"▪ Attested photocopy of the registration issued by the CCI and in case of Indenter/ Importer;",
+      l6:"▪ Rent /receipt/agreement (attested);",
+      l7:"▪ Treasury challan for Rs. 5,000; and",
+      l8:"▪ Copy of NTN No."
 
       // officials:
         // "1 .Licensing Authority (Secretary Health has delegated authority to District Health Officer) \n2. Provincial Inspector Drugs",
@@ -116,16 +160,17 @@ const arr = [
       details: "License to sell Drugs by Way of Wholesale 7A",
       type: "License",
       documenttype: "Law / Rules / Regulations	",
-
-      // prevailing:
-        // "1. The Drugs Act,1976. \n2. Sindh Drugs Rules, 1979 amended 2010.",
-      // jurisdiction: "Sindh",
       timeLine: "3 Month",
       fee: "Rs.5000",
-      // officials:
-        // "1 .Licensing Authority (Secretary Health has delegated authority to District Health Officer) \n2. Provincial Inspector Drugs",
-        // validity: "",                   
-      //  renewalFee:""
+      logo:HealthDepartment,
+      l1:"▪ Attested copy of the qualified person (Dispenser / Compounder / B. Pharmacy/ Pharm-D);",
+      l2:"▪ Photocopy (attested) of C.N.I.C of the proprietor and qualified person;",
+      l3:"▪ Four attested photographs of the qualified person (Dispenser/ Compounder/ B. Pharmacy/ Pharm-D);",
+      l4:"▪ Affidavit by the proprietor and qualified person to inform the Inspector of Drugs as soon as either of the party ceases to have interest in the license issued under the rules;",
+      l5:"▪ Attested photocopy of the registration issued by the CCI and in case of Indenter/ Importer;",
+      l6:"▪ Rent /receipt/agreement (attested);",
+      l7:"▪ Treasury challan for Rs. 5,000; and",
+      l8:"▪ Copy of NTN No."
     },
     {
       sNo: 8,
@@ -140,6 +185,16 @@ const arr = [
       // jurisdiction: "Sindh",
       timeLine: "3 Month",
       fee: "Rs.5000",
+      logo:HealthDepartment,
+      l1:"▪ Attested copy of the qualified person (Dispenser / Compounder / B. Pharmacy/ Pharm-D);",
+      l2:"▪ Photocopy (attested) of C.N.I.C of the proprietor and qualified person;",
+      l3:"▪ Four attested photographs of the qualified person (Dispenser/ Compounder/ B. Pharmacy/ Pharm-D);",
+      l4:"▪ Affidavit by the proprietor and qualified person to inform the Inspector of Drugs as soon as either of the party ceases to have interest in the license issued under the rules;",
+      l5:"▪ Attested photocopy of the registration issued by the CCI and in case of Indenter/ Importer;",
+      l6:"▪ Rent /receipt/agreement (attested);",
+      l7:"▪ Treasury challan for Rs. 5,000; and",
+      l8:"▪ Copy of NTN No."
+
       // officials:
         // "1 .Licensing Authority (Secretary Health has delegated authority to District Health Officer) \n2. Provincial Inspector Drugs",
         // validity: "",                   
@@ -153,14 +208,23 @@ const arr = [
         "License to sell Narcotics and Other Controlled Drugs/ Substances (Form-9)",
       type: "License",
       documenttype: "Law / Rules / Regulations	",
+      logo:HealthDepartment,
+
 
       // prevailing:
         // "1. The Drugs Act,1976. \n2. Sindh Drugs Rules, 1979 amended 2010.",
       // jurisdiction: "Sindh",
       timeLine: "3 Month",
       fee: "Rs.5000",
-      officials:
-        "1 .Licensing Authority (Secretary Health has delegated authority to District Health Officer) \n2. Provincial Inspector Drugs",
+      officials: "1 .Licensing Authority (Secretary Health has delegated authority to District Health Officer) \n2. Provincial Inspector Drugs",
+        l1:"▪ Attested copy of the qualified person (Dispenser / Compounder / B. Pharmacy/ Pharm-D);",
+        l2:"▪ Photocopy (attested) of C.N.I.C of the proprietor and qualified person;",
+        l3:"▪ Four attested photographs of the qualified person (Dispenser/ Compounder/ B. Pharmacy/ Pharm-D);",
+        l4:"▪ Affidavit by the proprietor and qualified person to inform the Inspector of Drugs as soon as either of the party ceases to have interest in the license issued under the rules;",
+        l5:"▪ Attested photocopy of the registration issued by the CCI and in case of Indenter/ Importer;",
+        l6:"▪ Rent /receipt/agreement (attested);",
+        l7:"▪ Treasury challan for Rs. 5,000; and",
+        l8:"▪ Copy of NTN No."
         // validity: "",                   
       //  renewalFee:""
     },
@@ -180,6 +244,16 @@ const arr = [
         // validity: "",                   
       //  renewalFee:""
       documenttype: "Law / Rules / Regulations	",
+      logo:HealthDepartment,
+      l1:"▪ Attested copy of the qualified person (Dispenser / Compounder / B. Pharmacy/ Pharm-D);",
+      l2:"▪ Photocopy (attested) of C.N.I.C of the proprietor and qualified person;",
+      l3:"▪ Four attested photographs of the qualified person (Dispenser/ Compounder/ B. Pharmacy/ Pharm-D);",
+      l4:"▪ Affidavit by the proprietor and qualified person to inform the Inspector of Drugs as soon as either of the party ceases to have interest in the license issued under the rules;",
+      l5:"▪ Attested photocopy of the registration issued by the CCI and in case of Indenter/ Importer;",
+      l6:"▪ Rent /receipt/agreement (attested);",
+      l7:"▪ Treasury challan for Rs. 5,000; and",
+      l8:"▪ Copy of NTN No."
+
 
     },
     {
@@ -194,6 +268,19 @@ const arr = [
       timeLine: "30 Days",
       fee: "As per Schedule",
       documenttype: "Law / Rules / Regulations	",
+      logo:SchoolEducationAndLiteracy,
+      l1:"▪ Form-A and covering letter;",
+      l2:"▪ Treasury challan original and (03) copies (Head of account: C-02818) in the favor of Secretary, Education & Literacy Department in accordance with following fee schedule;",
+      l3:"▪ Society registration certificate with bylaws/ trust paper/ private limited or individual CNIC;",
+      l4:"▪ If the owned building, then the property documents and other details of ownership. If rented building, then copy of rent agreement (attested by first class Magistrate);",
+      l5:"▪ Floor-wise building map;",
+      l6:"▪ Teacher-wise/ class-wise Timetable; ",
+      l7:"▪ Present class-wise enrolment",
+      l8:"▪ List of teaching and non- teaching staff with name, father name, qualification, designation, date of appointment and salary;",
+      l9:"▪ Class-wise list of textbooks; ",
+      l10:"▪ List of library books;",
+      l11:"▪ List of furniture;",
+      l12:"▪ List of practical Lab equipment (physics, chemistry, biology & computer);",
 
       // officials:
       //   "1. Reception desk \n2. Assistant Director \n3 Deputy Direction (M&amp;E and Inspections) \n4. Additional Director/ Chairman Inspection Committee \n5. Section Officer (Secretariate) \n6. Secretary, Education &amp; Literacy",
@@ -208,6 +295,15 @@ const arr = [
       type: "Registration",
       timeLine: "30 Days",
       fee: "As per Schedule",
+      logo:SindhHeathCare,
+      l1:"▪ Copy of CNIC; ",
+      l2:"▪ Copy of Degree/Diploma; ",
+      l3:"▪ Copy of updated registration with relevant council (PMDC/PNC/NCH/NCT);",
+      l4:"▪ HCE staff list;",
+      l5:"▪ HCE Equipment and Machinery list; ",
+      l6:"▪ Affidavit on stamp paper (sample available in the application form);",
+      l7:"▪ Pay order / demand draft in the name of the Sindh Health Care Commission for the registration fee as specified in below table;",
+      table:HealthCareTable
  
     },
     {
@@ -220,6 +316,19 @@ const arr = [
       // jurisdiction: "Sindh",
       timeLine: "3 Days",
       fee: "Rs.110",
+      logo:IndustrieAndCommerce,
+      l1:"▪ Partnership deed; ",
+      l2:"▪ CNIC copies of all the local partners; ",
+      l3:"▪ Form 1 along with partnership witness form; and ",
+      l4:"▪ Prescribed fee challan of Rs. 110. ",
+      l5:"In case a company is a partner",
+      l6:"▪ Certified copy of incorporation certificate; ",
+      l7:"▪ Form 29 (in case a local company is a partner);",
+      l8:"▪ Copy of Board Resolution; and",
+      l9:"▪ Certified copy of Memorandum of association (MOA) & Article of Association clearly stating that partnership is allowed for the company. ",
+      l10:"Additional requirements in case of a foreign company ",
+      l11:"▪ CEO's passport/ visa copy; and ",
+      l12:"▪ SECP equivalence letter.",
       // officials: "1. Junior Clerk/ Assistant \n2.Registrar",
       // validity: "",                   
       //  renewalFee:""
@@ -235,6 +344,19 @@ const arr = [
       // jurisdiction: "Sindh",
       timeLine: "5 days",
       fee: "Rs.55",
+      logo:IndustrieAndCommerce,
+      l1:"▪ Partnership deed; ",
+      l2:"▪ CNIC copies of all the local partners; ",
+      l3:"▪ Form 1 along with partnership witness form; and ",
+      l4:"▪ Prescribed fee challan of Rs. 110. ",
+      l5:"In case a company is a partner",
+      l6:"▪ Certified copy of incorporation certificate; ",
+      l7:"▪ Form 29 (in case a local company is a partner);",
+      l8:"▪ Copy of Board Resolution; and",
+      l9:"▪ Certified copy of Memorandum of association (MOA) & Article of Association clearly stating that partnership is allowed for the company. ",
+      l10:"Additional requirements in case of a foreign company ",
+      l11:"▪ CEO's passport/ visa copy; and ",
+      l12:"▪ SECP equivalence letter.",
       // officials:
         // "Dispatcher \n▪ Public Dealing Officer \n▪ Superintendent \n▪ Registrar",
         // validity: "",                   
@@ -251,6 +373,19 @@ const arr = [
       // jurisdiction: "Sindh",
       timeLine: "10-15 Days",
       fee: "S.R.O.88(I)/2008)",
+      logo:IndustrieAndCommerce,
+      l1:"▪ Partnership deed; ",
+      l2:"▪ CNIC copies of all the local partners; ",
+      l3:"▪ Form 1 along with partnership witness form; and ",
+      l4:"▪ Prescribed fee challan of Rs. 110. ",
+      l5:"In case a company is a partner",
+      l6:"▪ Certified copy of incorporation certificate; ",
+      l7:"▪ Form 29 (in case a local company is a partner);",
+      l8:"▪ Copy of Board Resolution; and",
+      l9:"▪ Certified copy of Memorandum of association (MOA) & Article of Association clearly stating that partnership is allowed for the company. ",
+      l10:"Additional requirements in case of a foreign company ",
+      l11:"▪ CEO's passport/ visa copy; and ",
+      l12:"▪ SECP equivalence letter.",
       // officials:
         // "Office Superintendent \n▪ Boiler Inspector \n▪ Chief Inspector Boile",
         // validity: "",                   
@@ -267,6 +402,19 @@ const arr = [
       // jurisdiction: "Sindh",
       timeLine: "10-15 Days",
       fee: "S.R.O.88(I)/2008)",
+      logo:IndustrieAndCommerce,
+      l1:"▪ Partnership deed; ",
+      l2:"▪ CNIC copies of all the local partners; ",
+      l3:"▪ Form 1 along with partnership witness form; and ",
+      l4:"▪ Prescribed fee challan of Rs. 110. ",
+      l5:"In case a company is a partner",
+      l6:"▪ Certified copy of incorporation certificate; ",
+      l7:"▪ Form 29 (in case a local company is a partner);",
+      l8:"▪ Copy of Board Resolution; and",
+      l9:"▪ Certified copy of Memorandum of association (MOA) & Article of Association clearly stating that partnership is allowed for the company. ",
+      l10:"Additional requirements in case of a foreign company ",
+      l11:"▪ CEO's passport/ visa copy; and ",
+      l12:"▪ SECP equivalence letter.",
       // officials:
       //   "Office Superintendent \n▪ Boiler Inspector \n▪ Chief Inspector Boile",
         // validity: "",                   
@@ -284,6 +432,19 @@ const arr = [
       // jurisdiction: "Sindh",
       timeLine: "10-15 Days",
       fee: "S.R.O.88(I)/2008)",
+      logo:IndustrieAndCommerce,
+      l1:"▪ Partnership deed; ",
+      l2:"▪ CNIC copies of all the local partners; ",
+      l3:"▪ Form 1 along with partnership witness form; and ",
+      l4:"▪ Prescribed fee challan of Rs. 110. ",
+      l5:"In case a company is a partner",
+      l6:"▪ Certified copy of incorporation certificate; ",
+      l7:"▪ Form 29 (in case a local company is a partner);",
+      l8:"▪ Copy of Board Resolution; and",
+      l9:"▪ Certified copy of Memorandum of association (MOA) & Article of Association clearly stating that partnership is allowed for the company. ",
+      l10:"Additional requirements in case of a foreign company ",
+      l11:"▪ CEO's passport/ visa copy; and ",
+      l12:"▪ SECP equivalence letter.",
       // officials:
       //   "Office Superintendent \n▪ Boiler Inspector \n▪ Chief Inspector Boile",
         // validity: "",                   
@@ -301,6 +462,19 @@ const arr = [
       // jurisdiction: "Sindh",
       timeLine: "10-15 Days",
       fee: "S.R.O.88(I)/2008)",
+      logo:IndustrieAndCommerce,
+      l1:"▪ Partnership deed; ",
+      l2:"▪ CNIC copies of all the local partners; ",
+      l3:"▪ Form 1 along with partnership witness form; and ",
+      l4:"▪ Prescribed fee challan of Rs. 110. ",
+      l5:"In case a company is a partner",
+      l6:"▪ Certified copy of incorporation certificate; ",
+      l7:"▪ Form 29 (in case a local company is a partner);",
+      l8:"▪ Copy of Board Resolution; and",
+      l9:"▪ Certified copy of Memorandum of association (MOA) & Article of Association clearly stating that partnership is allowed for the company. ",
+      l10:"Additional requirements in case of a foreign company ",
+      l11:"▪ CEO's passport/ visa copy; and ",
+      l12:"▪ SECP equivalence letter.",
       // officials:
       //   "Office Superintendent \n▪ Boiler Inspector \n▪ Chief Inspector Boile",
         // validity: "",                   
@@ -316,6 +490,19 @@ const arr = [
       // jurisdiction: "Sindh",
       timeLine: "10-15 Days",
       fee: "S.R.O.88(I)/2008)",
+      logo:IndustrieAndCommerce,
+      l1:"▪ Partnership deed; ",
+      l2:"▪ CNIC copies of all the local partners; ",
+      l3:"▪ Form 1 along with partnership witness form; and ",
+      l4:"▪ Prescribed fee challan of Rs. 110. ",
+      l5:"In case a company is a partner",
+      l6:"▪ Certified copy of incorporation certificate; ",
+      l7:"▪ Form 29 (in case a local company is a partner);",
+      l8:"▪ Copy of Board Resolution; and",
+      l9:"▪ Certified copy of Memorandum of association (MOA) & Article of Association clearly stating that partnership is allowed for the company. ",
+      l10:"Additional requirements in case of a foreign company ",
+      l11:"▪ CEO's passport/ visa copy; and ",
+      l12:"▪ SECP equivalence letter.",
       // officials:
       //   "Office Superintendent \n▪ Boiler Inspector \n▪ Chief Inspector Boile",
         // validity: "",                   
@@ -335,7 +522,12 @@ const arr = [
       documentname: "The Hazardous Substances Rule 2014",
       documenttype: "Law / Rules / Regulations	",
       downloaddocument: `${process.env.PUBLIC_URL}../assets/sindhkatciabadiact1987.pdf`,
-      pdf:TheHazardousSubstancesRule2014
+      pdf:TheHazardousSubstancesRule2014,
+      logo:SindhEnviromentalProtection,
+      l1:"▪ Covering letter;",
+      l2:"▪ Hazardous substances management plan; and",
+      l3:"▪ Pay order of PKR 50,000/- as prescribed in the Schedule-III of Hazardous Substances Rules, 2014.",
+
       // officials:
       //   "Director/ Deputy Director \nAssistant Director \nEnvironmental Inspector ▪ DG (SEPA)  \nExpert Committee",
         // validity: "",                   
@@ -356,7 +548,12 @@ const arr = [
       documentname: "The Hazardous Substances Rule 2014",
       documenttype: "Law / Rules / Regulations	",
       downloaddocument: `${process.env.PUBLIC_URL}../assets/sindhkatciabadiact1987.pdf`,
-      pdf:TheHazardousSubstancesRule2014
+      pdf:TheHazardousSubstancesRule2014,
+      logo:SindhEnviromentalProtection,
+      l1:"▪ Covering letter;",
+      l2:"▪ Hazardous substances management plan; and",
+      l3:"▪ Pay order of PKR 50,000/- as prescribed in the Schedule-III of Hazardous Substances Rules, 2014.",
+
       // officials:
       //   "Director/ Deputy Director \nAssistant Director \nEnvironmental Inspector ▪ DG (SEPA)  \nExpert Committee",
         // validity: "",                   
@@ -373,6 +570,11 @@ const arr = [
       // jurisdiction: "Sindh",
       timeLine: "EC (15 days) \n▪ IEE (30 days) \n▪ EIA (60 days)",
       fee: "As per schedule",
+      logo:SindhEnviromentalProtection,
+      l1:"▪ Covering letter;",
+      l2:"▪ Hazardous substances management plan; and",
+      l3:"▪ Pay order of PKR 50,000/- as prescribed in the Schedule-III of Hazardous Substances Rules, 2014.",
+
       // officials:
       //   "Director/ Deputy Director \nAssistant Director \nEnvironmental Inspector ▪ DG (SEPA)  \nExpert Committee",
         // validity: "",                   
@@ -388,6 +590,11 @@ const arr = [
       // jurisdiction: "Sindh",
       timeLine: "7-10 Days",
       fee: "PKR 40,000",
+      logo:SindhEnviromentalProtection,
+      l1:"▪ Covering letter;",
+      l2:"▪ Hazardous substances management plan; and",
+      l3:"▪ Pay order of PKR 50,000/- as prescribed in the Schedule-III of Hazardous Substances Rules, 2014.",
+
       // officials:
       //   "Director/ Deputy Director \nDeputy Director (Chemist) \nDeputy Director (Microbiologist) \nDG (SEPA)",
         // validity: "",                   
@@ -404,6 +611,11 @@ const arr = [
       // jurisdiction: "Sindh",
       timeLine: "7 Days",
       fee: "As pe schedule",
+      logo:SindhEnviromentalProtection,
+      l1:"▪ Covering letter;",
+      l2:"▪ Hazardous substances management plan; and",
+      l3:"▪ Pay order of PKR 50,000/- as prescribed in the Schedule-III of Hazardous Substances Rules, 2014.",
+
       // officials:
       //   "Director/ Deputy Director \nAssistant Director \nEnvironmental Inspector ▪ DG (SEPA)  \nExpert Committee",
         // validity: "",                   
@@ -415,15 +627,12 @@ const arr = [
       rlcoID: "SEPA-006",
       details: "Approval of Hospital Waste Management Plan",
       type: "Other",
-      // prevailing:
-      //   "The Sindh Environmental Protection Act, 2014.\nHospital Waste Management Rule,2014.",
-      // jurisdiction: "Sindh",
       timeLine: "7 days",
       fee: "Rs.50000",
-      // officials:
-      //   "Director/ Deputy Director \nAssistant Director \nEnvironmental Inspector ▪ DG (SEPA)  \nExpert Committee",
-        // validity: "",                   
-      //  renewalFee:""
+      logo:SindhEnviromentalProtection,
+      l1:"▪ Covering letter;",
+      l2:"▪ Hazardous substances management plan; and",
+      l3:"▪ Pay order of PKR 50,000/- as prescribed in the Schedule-III of Hazardous Substances Rules, 2014.",
     },
     {
       sNo: 26,
@@ -431,14 +640,9 @@ const arr = [
       rlcoID: "SBCA-001 (A)",
       details: "Approval of proposed building plan for Category-I",
       type: "Other",
-      // prevailing: "Karachi Building &amp;Town Planning Regulations, 2002",
-      // jurisdiction: "Karachi",
       timeLine: "5 days for Cat-I \n&amp; 60 Days for Cat-II, III &amp; IV",
       fee: "As per  schudule",
-      // officials:
-      //   "Assistant Director (Technical) \nData Entry Operator (One Window Facility) \nDeputy Director \nDirector",
-        // validity: "",                   
-      //  renewalFee:""
+
     },
     {
       sNo: 27,
@@ -2210,7 +2414,7 @@ const GetGridData = (data) =>{
 // Print the filtered data
   return (
     <>
-   {openModal && <DetailModal licenceData={licenceData} openDetailModal={openDetailModal} closeDetailModal={closeDetailModal} dataForGrid={dataForGrid} />}
+   {openModal && <DetailModal licenceData={licenceData} openDetailModal={openDetailModal} closeDetailModal={closeDetailModal} dataForGrid={dataForGrid} GetGridData={GetGridData}/>}
       <GenericHeader />
       <div
         className="row"

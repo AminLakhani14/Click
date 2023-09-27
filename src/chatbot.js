@@ -64,6 +64,20 @@ const Chatbot = () => {
           setConversationEnded(false)
           break
         }
+        else if(question.toLowerCase() == "hi" || question.toLowerCase() == "hello" || question.toLowerCase() == "hey"  ){
+          response="Hello there, Welcome to (CLICK). How can I help you?"
+          setAskingAnythingElse(false);
+          setConversationEnded(true)
+          break
+        }
+        else if(question.toLowerCase()=="aoa" || question.toLowerCase()=="assalam o alaikum"){
+          response="walaikum Assalam"
+          setAskingAnythingElse(false);
+          setConversationEnded(true)
+        }
+        else if(question.toLowerCase()=="how are you" || question.toLowerCase()=="kese ho"){
+          response="I'm just a computer program, so I don't have feelings, but I'm here to assist you or you can call directly to +92 21 99218874! How can I help you today?"
+        }
         else if(question=="I have a question"){
           response=arr[3]
           setAskingAnythingElse(false);
