@@ -184,7 +184,7 @@ function Testimonial(props) {
         <div className="body-box">
             <div className="row">
                 <div className="col-12 highlit-heading">
-                    <h1 className="mainHeading" >
+                    <h1 className="mainHeading highlightable" >
                     {translations["Testimonials"][language]}
                     </h1>
                 </div>
@@ -310,9 +310,9 @@ function Testimonial(props) {
                     <img src={quote} width="60" height="60"></img>
                   </a>
                   <div className="media-body">
-                    <h3 className="title">{imgFormData?.name[language]}</h3>
+                    <h3 className="title highlightable">{imgFormData?.name[language]}</h3>
                     <p
-                      className="card-subtitle"
+                      className="card-subtitle highlightable"
                       style={
                         language === "ur" || language === "sd"
                           ? { display: "contents", fontWeight: "400", color: "rgb(163, 163, 163)" }
@@ -324,7 +324,7 @@ function Testimonial(props) {
                   </div>
                 </div>
                 <div className="mt-3">
-                  <p className="sub-title" 
+                  <p className="sub-title highlightable" 
                    style={
                     language === "ur" || language === "sd"
                       ? {textAlign:"end"}

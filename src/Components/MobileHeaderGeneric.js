@@ -121,7 +121,7 @@ const handleLabelTextClick = (index) => {
                     <nav style={{ marginTop: "30px" }}>
                       <label
                         for="drop"
-                        className="toggle"
+                        className="toggle highlightable"
                         style={{ background: "white" }}
                       >
                         <i
@@ -163,7 +163,7 @@ const handleLabelTextClick = (index) => {
                         <li>
                         <label
                         htmlFor="drop-5"
-                        className={`d-flex toggle toggle2`}
+                        className={`d-flex toggle toggle2 highlightable`}
                       >
                       <Link to={"/manufacturing"} style={{width:"212px",padding:"0px",fontSize:"20px"}}>
                         Sectors and Opportunities
@@ -192,7 +192,7 @@ const handleLabelTextClick = (index) => {
                             <li className="borderline">
                             <label
                             htmlFor="drop-6"
-                            className="d-flex mobiledropdowntoggle toggle toggle2"
+                            className="d-flex mobiledropdowntoggle toggle toggle2 highlightable"
                           >
                           <Link to={"/manufacturing"} style={{width:"195px",padding:"0px"}}>
                             Manufacturing
@@ -231,7 +231,7 @@ const handleLabelTextClick = (index) => {
                             <li className="">
                               <label
                                 for="drop-7"
-                                className="d-flex mobiledropdowntoggle toggle toggle2"
+                                className="d-flex mobiledropdowntoggle toggle toggle2 highlightable"
                               >
                                 <Link to={"/textile"} style={{width:"195px",padding:"0px"}}>
                                 Textile
@@ -269,7 +269,7 @@ const handleLabelTextClick = (index) => {
                             <li className="">
                               <label
                                 for="drop-8"
-                                className="d-flex mobiledropdowntoggle toggle toggle2"
+                                className="d-flex mobiledropdowntoggle toggle toggle2 highlightable"
                               >
                                  <Link to={"/tourism"} style={{width:"195px",padding:"0px"}}>
                                 Tourism 
@@ -307,7 +307,7 @@ const handleLabelTextClick = (index) => {
                             <li className="">
                               <label
                                 for="drop-9"
-                                className="d-flex mobiledropdowntoggle toggle toggle2"
+                                className="d-flex mobiledropdowntoggle toggle toggle2 highlightable"
                               >
                                <Link to={"/agriculture"} style={{width:"195px",padding:"0px"}}>
                                 Agriculture  
@@ -345,7 +345,7 @@ const handleLabelTextClick = (index) => {
                             <li className="">
                               <label
                                 for="drop-10"
-                                className="d-flex mobiledropdowntoggle toggle toggle2"
+                                className="d-flex mobiledropdowntoggle toggle toggle2 highlightable"
                               >
                               <Link to={"/education"} style={{width:"195px",padding:"0px"}}>
                                 Eduction  
@@ -383,7 +383,7 @@ const handleLabelTextClick = (index) => {
                             <li className="">
                               <label
                                 for="drop-11"
-                                className="d-flex mobiledropdowntoggle toggle toggle2"
+                                className="d-flex mobiledropdowntoggle toggle toggle2 highlightable"
                               >
                               <Link to={"/energy"} style={{width:"195px",padding:"0px"}}>
                                 Energy 
@@ -421,7 +421,7 @@ const handleLabelTextClick = (index) => {
                             <li className="">
                               <label
                                 for="drop-12"
-                                className="d-flex mobiledropdowntoggle toggle toggle2"
+                                className="d-flex mobiledropdowntoggle toggle toggle2 highlightable"
                                 onClick={() => handleLabelTextClick(7)}
                               >
                               <Link to={"/health"} style={{width:"195px",padding:"0px"}}>
@@ -459,7 +459,7 @@ const handleLabelTextClick = (index) => {
                             <li className="b-none ">
                               <label
                                 for="drop-13"
-                                className="d-flex mobiledropdowntoggle toggle toggle2"
+                                className="d-flex mobiledropdowntoggle toggle toggle2 highlightable"
                               >
                                 <Link to={"/informationtech"} style={{width:"195px",padding:"0px"}}>
                                 Information Technology  
@@ -507,7 +507,7 @@ const handleLabelTextClick = (index) => {
                           </Link>
                         </li>
                         <li className="">
-                          <label for="drop-2" className="d-flex toggle toggle2">
+                          <label for="drop-2" className="d-flex toggle toggle2 highlightable">
                           <Link to={"/resource"} style={{width:"212px",padding:"0px",fontSize:"20px"}}>
                             Resources 
                             </Link>
@@ -549,7 +549,7 @@ const handleLabelTextClick = (index) => {
                         <li>
                           <label 
                           for="drop-3"
-                           className="d-flex toggle toggle2">
+                           className="d-flex toggle toggle2 highlightable">
                             <Link to={"/aboutus"} style={{width:"212px",padding:"0px",fontSize:"20px"}}>
                             About Us 
                              </Link>
@@ -579,7 +579,7 @@ const handleLabelTextClick = (index) => {
                               </Link>
                             </li>
                             <li className="">
-                              <label for="drop-4" className="d-flex toggle toggle2 mobiledropdowntoggle">
+                              <label for="drop-4" className="d-flex toggle toggle2 mobiledropdowntoggle highlightable">
                             <Link to={"/Component"} style={{width:"195px",padding:"0px",marginLeft:"8px"}}>
                               Component 
                             </Link>
@@ -622,7 +622,7 @@ const handleLabelTextClick = (index) => {
                               </ul>
                             </li>
                             <li className="b-none">
-                         <label for="drop-4" className="d-flex toggle toggle2 mobiledropdowntoggle">
+                         <label for="drop-4" className="d-flex toggle toggle2 mobiledropdowntoggle highlightable">
                            <Link style={{width:"195px",padding:"0px",marginLeft:"8px"}} to={"/aboutus"}>
                              NEW Component
                            </Link>

@@ -1790,7 +1790,7 @@ export default function RegulatoryCatalogCalculator(props) {
 
       <div className="siteHeader" style={{ background: `url(${AboutUsImg})` }}>
         <h1
-          className={`slide-in-left Investnow-h1 ${
+          className={`slide-in-left Investnow-h1 highlightable ${
             isVisible ? "" : "slide-out-left"
           }`}
         >
@@ -1800,7 +1800,7 @@ export default function RegulatoryCatalogCalculator(props) {
       <div className="row regulatoryCalculatorHead">
         <Link to={"/home"} className="linkFont">
           <div>
-            <h5 className="linkFont2">Home {value}</h5>
+            <h5 className="linkFont2 highlightable">Home {value}</h5>
             Regulatory Calculator
           </div>
         </Link>
@@ -1819,7 +1819,7 @@ export default function RegulatoryCatalogCalculator(props) {
             textAlign: "center",
           }}
         >
-          <h1 className="mainHeading">Regulatory Cost Calculator</h1>
+          <h1 className="mainHeading highlightable">Regulatory Cost Calculator</h1>
         </div>
         <div className="row justify-content-center mt-3 align-items-lg-start">
           <div

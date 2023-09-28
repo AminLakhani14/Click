@@ -89,14 +89,14 @@ function Wheeler(props) {
         <div className="body-box">
           <div className="row ">
             <div className="col-12 highlit-heading">
-              <h1 className="mainHeading">
+              <h1 className="mainHeading highlightable">
                 {translations["Awaiting"][language]}</h1>
             </div>
           </div>
           <div className="row" style={{ marginTop: "-20px" }}>
             <div className="col-lg-2"></div>
             <div className="col-lg-8 ph-reason">
-              <p className="paragraphGeneric" style={{ color: "#5f5f5f" }}>
+              <p className="paragraphGeneric highlightable" style={{ color: "#5f5f5f" }}>
               {translations["Attractives"][language]}
               </p>
             </div>
@@ -175,7 +175,7 @@ function Wheeler(props) {
                         <div className="col-sm-6">
                           <label
                             id="segmentTitle"
-                            className="heading-1"
+                            className="heading-1 highlightable"
                             style={windowWidth  <=1440?{
                               marginTop: "-11px",
                               color: `${data.boxColor}`
@@ -189,7 +189,7 @@ function Wheeler(props) {
                         </div>
 
                         <div className="col-sm-6">
-                          <h4 className="heading-1" style={{color:`${data.boxColor}`}}>{translations["SectorStatistics"][language]}</h4>
+                          <h4 className="heading-1 highlightable" style={{color:`${data.boxColor}`}}>{translations["SectorStatistics"][language]}</h4>
                         </div>
                         <div>
                           <div className="hr"></div>
@@ -198,10 +198,10 @@ function Wheeler(props) {
 
                       <div className="row">
                         <div className="col-sm-10 ">
-                          <h1 className="heading-1" style={{color:`${data.boxColor}`}} id="">
+                          <h1 className="heading-1 highlightable" style={{color:`${data.boxColor}`}} id="">
                           {translations["Crops"][language]}
                           </h1>
-                          <p id="segmentText" style={{color:`${data.boxColor}`}} className="phra-2">
+                          <p id="segmentText" style={{color:`${data.boxColor}`}} className="phra-2 highlightable">
                             {/* Approx US$1.6 Billion (2019-2020) */}
                             {translations["Dollor"][language]}
                           </p>
@@ -213,23 +213,23 @@ function Wheeler(props) {
                       <div className="text-center">
                         <div className="row">
                           <div className="col-sm-6">
-                            <h1 id="box-title1" style={{color:`${data.boxColor}`}} className="heading-1">
+                            <h1 id="box-title1" style={{color:`${data.boxColor}`}} className="heading-1 highlightable">
                               {/* 4 Million */}
                               {/* {wheelerFormData.wheat} */}
                               4{translations["Million"][language]}
                             </h1>
-                            <p id="box-subtitle1" style={{color:`${data.boxColor}`}} className="phra-2">
+                            <p id="box-subtitle1" style={{color:`${data.boxColor}`}} className="phra-2 highlightable">
                               {/* tons of wheat */}
                               {translations["Wheat"][language]}
                             </p>
                           </div>
                           <div className="col-sm-6">
-                            <h1 id="box-title2" style={{color:`${data.boxColor}`}}  className="heading-1">
+                            <h1 id="box-title2" style={{color:`${data.boxColor}`}}  className="heading-1 highlightable">
                               {/* 1.9 Million */}
                               {/* {wheelerFormData.Rice} */}
                               1.9{translations["Million"][language]}
                             </h1>
-                            <p id="box-subtitle2" style={{color:`${data.boxColor}`}} className="phra-2">
+                            <p id="box-subtitle2" style={{color:`${data.boxColor}`}} className="phra-2 highlightable">
                               {/* tons of rice */}
                               {translations["Rice"][language]}
                             </p>
@@ -237,32 +237,32 @@ function Wheeler(props) {
                         </div>
                         <div className="row">
                           <div className="col-sm-6">
-                            <h1 id="box-title3" style={{color:`${data.boxColor}`}} className="heading-1">
+                            <h1 id="box-title3" style={{color:`${data.boxColor}`}} className="heading-1 highlightable">
                               {/* 4.2 Million */}
                               {/* {wheelerFormData.sugarcane} */}
                               4.2{translations["Million"][language]}
 
                             </h1>
-                            <p id="box-subtitle3" style={{color:`${data.boxColor}`}} className="phra-2">
+                            <p id="box-subtitle3" style={{color:`${data.boxColor}`}} className="phra-2 highlightable">
                               {/* tons of sugarcane */}
                               {translations["Sugarcane"][language]}
                             </p>
                           </div>
                           <div className="col-sm-6">
-                            <h1 id="box-title4" style={{color:`${data.boxColor}`}} className="heading-1">
+                            <h1 id="box-title4" style={{color:`${data.boxColor}`}} className="heading-1 highlightable">
                               {/* 2.3 Million */}
                               {/* {wheelerFormData.cotton} */}
                               2.3{translations["Million"][language]}
 
                             </h1>
-                            <p id="box-subtitle4" style={{color:`${data.boxColor}`}} className="phra-2">
+                            <p id="box-subtitle4" style={{color:`${data.boxColor}`}} className="phra-2 highlightable">
                               {/* bales of cotton */}
                               {translations["Cotton"][language]}
                             </p>
                           </div>
                         </div>
 
-                        <p id="segmentText"></p>
+                        <p className="highlightable" id="segmentText"></p>
                         <div className="row">
                           <div className="col-12 mb-3">
                             <a href="comingsoon.html">

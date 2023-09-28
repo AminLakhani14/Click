@@ -50,7 +50,7 @@ export default function AboutUs() {
 
       <div className="siteHeader"style={{background: `url(${AboutUsImg})`}} >
         <h1 data-aos="fade-up"
-        className="Investnow-h1">About Us</h1>
+        className="Investnow-h1 highlightable">About Us</h1>
       </div>
       <div
         className="row"
@@ -108,7 +108,7 @@ export default function AboutUs() {
               textAlign: "center",
             }}
           >
-            <h1 data-aos="fade-up" className="mainHeading">Vision</h1>
+            <h1 data-aos="fade-up" className="mainHeading highlightable">Vision</h1>
             <div
               className="col-lg-10"
               style={{
@@ -117,7 +117,7 @@ export default function AboutUs() {
                 textAlign: "center",
               }}
             >
-              <p className="aboutUsParagraphh" data-aos="fade-up">
+              <p className="aboutUsParagraphh highlightable" data-aos="fade-up">
                 The project aims to ensure the fulfillment of SDG (Sustainable
                 Development Goal) 11,<br/>
                  <b>“Sustainable Cities & Communities”,</b>
@@ -146,7 +146,7 @@ export default function AboutUs() {
               textAlign: "center",
             }}
           >
-            <h1 className="mainHeading" data-aos="fade-up">Mission</h1>
+            <h1 className="mainHeading highlightable" data-aos="fade-up">Mission</h1>
             <div
               className="col-lg-10"
               style={{
@@ -155,7 +155,7 @@ export default function AboutUs() {
                 textAlign: "center",
               }}
             >
-              <p className="aboutUsParagraphh" data-aos="fade-up">
+              <p className="aboutUsParagraphh highlightable" data-aos="fade-up">
                 To improve urban management, service delivery and the business
                 environment in Karachi.
               </p>

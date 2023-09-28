@@ -180,7 +180,7 @@ function MobileHome(props) {
                     <nav style={{ marginTop: "30px" }}>
                       <label
                         for="drop"
-                        className="toggle"
+                        className="toggle highlightable"
                         style={{ background: "white" }}
                       >
                         <i
@@ -251,7 +251,7 @@ function MobileHome(props) {
                           }>
                           <label
                             htmlFor="drop-5"
-                            className={`d-flex toggle toggle2`}
+                            className={`d-flex toggle toggle2 highlightable`}
                             style={
                               language === "ur" || language === "sd"
                                 ? {
@@ -305,6 +305,7 @@ function MobileHome(props) {
                             <li
                               className="borderline">
                               <label
+                              className="highlightable"
                                 style={
                                   language === "ur" || language === "sd"
                                     ? {
@@ -395,7 +396,7 @@ function MobileHome(props) {
                              >
                               <label
                                 for="drop-7"
-                                className="d-flex mobiledropdowntoggle toggle toggle2"
+                                className="d-flex mobiledropdowntoggle toggle toggle2 highlightable"
                                 style={
                                   language === "ur" || language === "sd"
                                     ? {
@@ -480,7 +481,7 @@ function MobileHome(props) {
                             }>
                               <label
                                 for="drop-8"
-                                className="d-flex mobiledropdowntoggle toggle toggle2"
+                                className="d-flex mobiledropdowntoggle toggle toggle2 highlightable"
                                 style={
                                   language === "ur" || language === "sd"
                                     ? {
@@ -565,7 +566,7 @@ function MobileHome(props) {
                             }>
                               <label
                                 for="drop-9"
-                                className="d-flex mobiledropdowntoggle toggle toggle2"
+                                className="d-flex mobiledropdowntoggle toggle toggle2 highlightable"
                                 style={
                                   language === "ur" || language === "sd"
                                     ? {
@@ -650,7 +651,7 @@ function MobileHome(props) {
                             }>
                               <label
                                 for="drop-10"
-                                className="d-flex mobiledropdowntoggle toggle toggle2"
+                                className="d-flex mobiledropdowntoggle toggle toggle2 highlightable" 
                                 style={
                                   language === "ur" || language === "sd"
                                     ? {
@@ -735,7 +736,7 @@ function MobileHome(props) {
                             }>
                               <label
                                 for="drop-11"
-                                className="d-flex mobiledropdowntoggle toggle toggle2"
+                                className="d-flex mobiledropdowntoggle toggle toggle2 highlightable"
                                 style={
                                   language === "ur" || language === "sd"
                                     ? {
@@ -827,7 +828,7 @@ function MobileHome(props) {
                             }>
                               <label
                                 for="drop-12"
-                                className="d-flex mobiledropdowntoggle toggle toggle2"
+                                className="d-flex mobiledropdowntoggle toggle toggle2 highlightable"
                                 style={
                                   language === "ur" || language === "sd"
                                     ? {
@@ -911,7 +912,7 @@ function MobileHome(props) {
                             >
                               <label
                                 for="drop-13"
-                                className="d-flex mobiledropdowntoggle toggle toggle2"
+                                className="d-flex mobiledropdowntoggle toggle toggle2 highlightable"
                                 style={
                                   language === "ur" || language === "sd"
                                     ? {
@@ -1031,7 +1032,7 @@ function MobileHome(props) {
                               }
                               : { }
                           } className="">
-                          <label for="drop-2" className="d-flex toggle toggle2"
+                          <label for="drop-2" className="d-flex toggle toggle2 highlightable"
                           style={
                             language === "ur" || language === "sd"
                               ? {
@@ -1140,6 +1141,7 @@ function MobileHome(props) {
                               : { }
                           } >
                           <label
+                          
                             for="drop-3"
                             style={
                               language === "ur" || language === "sd"
@@ -1149,7 +1151,7 @@ function MobileHome(props) {
                                 }
                                 : { }
                             }
-                            className="d-flex toggle toggle2">
+                            className="d-flex toggle toggle2 highlightable">
                             <Link to={"/aboutus"} style={{ width: "212px", padding: "0px", fontSize: "20px" }}>
                             {translations["Aboutus"][language]}
                             </Link>
@@ -1208,7 +1210,7 @@ function MobileHome(props) {
                                     marginLeft: "0px",
                                   }
                                   : {}
-                              } for="drop-4" className="d-flex toggle toggle2 mobiledropdowntoggle">
+                              } for="drop-4" className="d-flex toggle toggle2 mobiledropdowntoggle highlightable">
                                 <Link to={"/Component"} style={{ width: "195px", padding: "0px", marginLeft: "8px" }}>
                                 {
                                     translations["Components"][
@@ -1315,7 +1317,7 @@ function MobileHome(props) {
                                 marginLeft:"0px"
                               }
                               : { }
-                                }   for="drop-4" className="d-flex toggle toggle2 mobiledropdowntoggle">
+                                }   for="drop-4" className="d-flex toggle toggle2 mobiledropdowntoggle highlightable">
                                 <Link 
                                  style={
                                   language === "ur" || language === "sd"
@@ -1394,6 +1396,7 @@ function MobileHome(props) {
             >
               <div>
                 <p
+                className="highlightable"
                   style={{
                     fontSize: "16px",
                     color: "white",

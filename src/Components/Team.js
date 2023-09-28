@@ -27,7 +27,7 @@ function Team() {
     {windowWidth <=500 ? <MobileHeaderGeneric/> : <GenericHeader />}
 
     <div className="siteHeader" style={{background: `url(${AboutUsImg})`}} >
-      <h1 style={{color:"white"}}>
+      <h1 className="highlightable" style={{color:"white"}}>
         Meet our Team</h1>
     </div>
 
@@ -38,11 +38,11 @@ function Team() {
         </div>
         </div>
         <div className="media-body col-lg-4">
-        <h3 className="TeamCardHeader">Name</h3>
-        <p className="TeamCardDesignation" style={{ fontWeight: "400", color: "rgb(163, 163, 163)" }}>
+        <h3 className="TeamCardHeader highlightable">Name</h3>
+        <p className="TeamCardDesignation highlightable" style={{ fontWeight: "400", color: "rgb(163, 163, 163)" }}>
         Designation
         </p>
-        <p className="TeamCardAbout">
+        <p className="TeamCardAbout highlightable">
         About the team member
         </p>
         </div>
@@ -54,11 +54,11 @@ function Team() {
         </div>
         </div>
         <div className="media-body col-lg-4">
-        <h3 className="TeamCardHeader">Name</h3>
-        <p className="TeamCardDesignation" style={{ fontWeight: "400", color: "rgb(163, 163, 163)" }}>
+        <h3 className="TeamCardHeader highlightable">Name</h3>
+        <p className="TeamCardDesignation highlightable" style={{ fontWeight: "400", color: "rgb(163, 163, 163)" }}>
         Designation
         </p>
-        <p className="TeamCardAbout">
+        <p className="TeamCardAbout highlightable">
         About the team member
         </p>
         </div>
@@ -70,11 +70,11 @@ function Team() {
         </div>
         </div>
         <div className="media-body col-lg-4">
-        <h3 className="TeamCardHeader">Name</h3>
-        <p className="TeamCardDesignation" style={{ fontWeight: "400", color: "rgb(163, 163, 163)" }}>
+        <h3 className="TeamCardHeader highlightable">Name</h3>
+        <p className="TeamCardDesignation highlightable" style={{ fontWeight: "400", color: "rgb(163, 163, 163)" }}>
         Designation
         </p>
-        <p className="TeamCardAbout">
+        <p className="TeamCardAbout highlightable">
         About the team member
         </p>
         </div>

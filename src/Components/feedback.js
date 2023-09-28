@@ -463,7 +463,7 @@ export default function FeedBack() {
           }}
         >
           <p
-            className={window.innerWidth <= 540 ? "mobileparaforfeedback" : "feedbackpara"} style={{fontSize:window.innerWidth === 280 || window.innerWidth ===320 ? "17.5px": " "}}
+            className={window.innerWidth <= 540 ? "mobileparaforfeedback" : "feedbackpara highlightable"} style={{fontSize:window.innerWidth === 280 || window.innerWidth ===320 ? "17.5px": " "}}
           >
             We are always looking for ways to deliver an exceptional experience
             to our customers and investors. Your feedback is vital for us to
