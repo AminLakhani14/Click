@@ -32,6 +32,8 @@ const arr = [
       fee: "As per Schedule",
       documentname: "Companies Act 2017",
       documenttype: "Law / Rules / Regulations	",
+      address: "3rd Floor, Building No. 6, Sindh Secretariat, Karachi City, Sindh",
+      contactno: "(021) 99222230",
       downloaddocument: `${process.env.PUBLIC_URL}../assets/sindhkatciabadiact1987.pdf`,
       pdf:sindh,
       logo:collegeDepartment,
@@ -57,6 +59,8 @@ const arr = [
       type: "Registration",
       // prevailing: "The Sindh Shops &amp; Establishment Act,2015",
       // jurisdiction: "Sindh",
+      address: "Block No 86, Sindh Secretariat IV-B, Court Road, Karachi.",
+      contactno: "0324-2554748",
       fee: "As per Schedule",
       timeLine: "Same Day",
       documentname: "Amendment",
@@ -85,6 +89,8 @@ const arr = [
       // prevailing: "Sindh Factories Act, 2015",
       // jurisdiction: "Sindh",
       timeLine: "10 days",
+      address: "Block No 86, Sindh Secretariat IV-B, Court Road, Karachi.",
+      contactno: "0324-2554748",
       // officials: "1. Joint Director Labour \n2.Labour Inspector",
       // validity: "2 year", 
       documentname: "Amendment 2",
@@ -112,6 +118,8 @@ const arr = [
       fee: "As per Schedule",
       documentname: "Sindh Food Authority Act 2016",
       documenttype: "Law / Rules / Regulations	",
+      address: "Plot B, 12, Sindhi Muslim Cooperative Housing Society Block A Sindhi Muslim CHS (SMCHS), Karachi, Karachi City, Sindh",
+      contactno: "(021) 99330164",
       downloaddocument: `${process.env.PUBLIC_URL}../assets/sindhkatciabadiact1987.pdf`,                
       pdf:SindhFoodAuthorityAct2016,
       logo:sindhFood,
@@ -139,6 +147,8 @@ const arr = [
       fee: "Rs.5000",
       documenttype: "Law / Rules / Regulations	",
       logo:HealthDepartment,
+      address: "6th Floor, Sindh Secretariat No 1 Kamal Atta Turk Road, Karachi",
+      contactno: "(021) 99222012",
       l1:"▪ Attested copy of the qualified person (Dispenser / Compounder / B. Pharmacy/ Pharm-D);",
       l2:"▪ Photocopy (attested) of C.N.I.C of the proprietor and qualified person;",
       l3:"▪ Four attested photographs of the qualified person (Dispenser/ Compounder/ B. Pharmacy/ Pharm-D);",
@@ -162,6 +172,8 @@ const arr = [
       documenttype: "Law / Rules / Regulations	",
       timeLine: "3 Month",
       fee: "Rs.5000",
+      address: "6th Floor, Sindh Secretariat No 1 Kamal Atta Turk Road, Karachi",
+      contactno: "(021) 99222012",
       logo:HealthDepartment,
       l1:"▪ Attested copy of the qualified person (Dispenser / Compounder / B. Pharmacy/ Pharm-D);",
       l2:"▪ Photocopy (attested) of C.N.I.C of the proprietor and qualified person;",
@@ -185,6 +197,8 @@ const arr = [
       // jurisdiction: "Sindh",
       timeLine: "3 Month",
       fee: "Rs.5000",
+      address: "6th Floor, Sindh Secretariat No 1 Kamal Atta Turk Road, Karachi",
+      contactno: "(021) 99222012",
       logo:HealthDepartment,
       l1:"▪ Attested copy of the qualified person (Dispenser / Compounder / B. Pharmacy/ Pharm-D);",
       l2:"▪ Photocopy (attested) of C.N.I.C of the proprietor and qualified person;",
@@ -209,7 +223,8 @@ const arr = [
       type: "License",
       documenttype: "Law / Rules / Regulations	",
       logo:HealthDepartment,
-
+      address: "6th Floor, Sindh Secretariat No 1 Kamal Atta Turk Road, Karachi",
+      contactno: "(021) 99222012",
 
       // prevailing:
         // "1. The Drugs Act,1976. \n2. Sindh Drugs Rules, 1979 amended 2010.",
@@ -239,6 +254,8 @@ const arr = [
       // jurisdiction: "Sindh",
       timeLine: "3 Month",
       fee: "Rs.5000",
+      address: "6th Floor, Sindh Secretariat No 1 Kamal Atta Turk Road, Karachi",
+      contactno: "(021) 99222012",
       officials:
         "1 .Licensing Authority (Secretary Health has delegated authority to District Health Officer) \n2. Provincial Inspector Drugs",
         // validity: "",                   
@@ -268,6 +285,8 @@ const arr = [
       timeLine: "30 Days",
       fee: "As per Schedule",
       documenttype: "Law / Rules / Regulations	",
+      address: "School Education & Literacy Department Government of Sindh 1st. Floor, Tughlaq House Sindh Secretariat, Saddar Karachi",
+      contactno: "(021) 99211227",
       logo:SchoolEducationAndLiteracy,
       l1:"▪ Form-A and covering letter;",
       l2:"▪ Treasury challan original and (03) copies (Head of account: C-02818) in the favor of Secretary, Education & Literacy Department in accordance with following fee schedule;",
@@ -295,6 +314,8 @@ const arr = [
       type: "Registration",
       timeLine: "30 Days",
       fee: "As per Schedule",
+      address: "2nd Floor, Block C, FTC Building, Shahrah-e-Faisal, Karachi",
+      contactno: "(021) 38656000",
       logo:SindhHeathCare,
       l1:"▪ Copy of CNIC; ",
       l2:"▪ Copy of Degree/Diploma; ",
@@ -316,6 +337,8 @@ const arr = [
       // jurisdiction: "Sindh",
       timeLine: "3 Days",
       fee: "Rs.110",
+      address:"statelife building no 11, 2nd floor Directorate of industries",
+      contactno:"(021) 99202190",
       logo:IndustrieAndCommerce,
       l1:"▪ Partnership deed; ",
       l2:"▪ CNIC copies of all the local partners; ",
@@ -335,7 +358,7 @@ const arr = [
     },
     {
       sNo: 14,
-      issuingDepartment: "",
+      issuingDepartment: "Industries and Commerce Department",
       rlcoID: "ICD-002",
       details:
         "Registration Certificate of Amendment/Dissolution /Rectification in Partnership Firm",
@@ -343,6 +366,8 @@ const arr = [
       // prevailing: "Partnership Act, 1932",
       // jurisdiction: "Sindh",
       timeLine: "5 days",
+      address:"statelife building no 11, 2nd floor Directorate of industries",
+      contactno:"(021) 99202190",
       fee: "Rs.55",
       logo:IndustrieAndCommerce,
       l1:"▪ Partnership deed; ",
@@ -364,10 +389,12 @@ const arr = [
     },
     {
       sNo: 15,
-      issuingDepartment: "",
+      issuingDepartment: "Industries and Commerce Department",
       rlcoID: "ICD-003",
       details: "Registration of New Boiler",
       type: "Registration",
+      address:"statelife building no 11, 2nd floor Directorate of industries",
+      contactno:"(021) 99202190",
       // prevailing:
         // "Boiler Act, 1923. Sindh Boiler Rules, 1941.\nThe Boiler and Pressure Vessel Ordinance, 2002. \nThe Pakistan Boiler Rules, 2009.",
       // jurisdiction: "Sindh",
@@ -393,10 +420,12 @@ const arr = [
     },
     {
       sNo: 16,
-      issuingDepartment: "",
+      issuingDepartment: "Industries and Commerce Department",
       rlcoID: "ICD-004",
       details: "Registration of Old Boiler",
       type: "Registration",
+      address:"statelife building no 11, 2nd floor Directorate of industries",
+      contactno:"(021) 99202190",
       // prevailing:
         // "Boiler Act, 1923. Sindh Boiler Rules, 1941.\nThe Boiler and Pressure Vessel Ordinance, 2002. \nThe Pakistan Boiler Rules, 2009.",
       // jurisdiction: "Sindh",
@@ -422,7 +451,7 @@ const arr = [
     },
     {
       sNo: 17,
-      issuingDepartment: "",
+      issuingDepartment: "Industries and Commerce Department",
       rlcoID: "ICD-005",
       details:
         "Approval of Plan and Particulars of Boilers Acceptable for Registration (New Boiler)",
@@ -430,6 +459,8 @@ const arr = [
       // prevailing:
         // "The Boiler and Pressure Vessel Ordinance, 2002.\nThe Pakistan Boiler Rules, 2009. \nImport Policy, 2016",
       // jurisdiction: "Sindh",
+      address:"statelife building no 11, 2nd floor Directorate of industries",
+      contactno:"(021) 99202190",
       timeLine: "10-15 Days",
       fee: "S.R.O.88(I)/2008)",
       logo:IndustrieAndCommerce,
@@ -452,11 +483,13 @@ const arr = [
     },
     {
       sNo: 18,
-      issuingDepartment: "",
+      issuingDepartment: "Industries and Commerce Department",
       rlcoID: "ICD-006",
       details:
         "Approval of Plan and Particulars of Boilers Acceptable for Registration (Used Boiler)",
       type: "Other",
+      address:"statelife building no 11, 2nd floor Directorate of industries",
+      contactno:"(021) 99202190",
       // prevailing:
         // "The Boiler and Pressure Vessel Ordinance, 2002.\nThe Pakistan Boiler Rules, 2009. \nImport Policy, 2016",
       // jurisdiction: "Sindh",
@@ -482,13 +515,15 @@ const arr = [
     },
     {
       sNo: 19,
-      issuingDepartment: "",
+      issuingDepartment: "Industries and Commerce Department",
       rlcoID: "ICD-007",
       details: "Transfer of Ownership",
       type: "Other",
       // prevailing: "The Pakistan Boiler Rules, 2009.",
       // jurisdiction: "Sindh",
       timeLine: "10-15 Days",
+      address:"statelife building no 11, 2nd floor Directorate of industries",
+      contactno:"(021) 99202190",
       fee: "S.R.O.88(I)/2008)",
       logo:IndustrieAndCommerce,
       l1:"▪ Partnership deed; ",
@@ -511,6 +546,8 @@ const arr = [
     {
       sNo: 20,
       issuingDepartment: "Sindh Environmental Protection Agency (SEPA)",
+      address:"ST-21،, Sector 23 Korangi Industrial Area, Karachi, Karachi City, Sindh",
+      contactno:"(021) 35065950",
       rlcoID: "SEPA-001",
       details: "License for Handling of Hazardous Substances",
       type: "License",
@@ -535,7 +572,9 @@ const arr = [
     },
     {
       sNo: 21,
-      issuingDepartment: "",
+      issuingDepartment: "Sindh Environmental Protection Agency (SEPA)",
+      address:"ST-21،, Sector 23 Korangi Industrial Area, Karachi, Karachi City, Sindh",
+      contactno:"(021) 35065950",
       rlcoID: "SEPA-002",
       details:
         "License to Waste Contractor for Handling of Hazardous Substances and Non-Hazardous substances",
@@ -561,7 +600,9 @@ const arr = [
     },
     {
       sNo: 22,
-      issuingDepartment: "",
+      issuingDepartment: "Sindh Environmental Protection Agency (SEPA)",
+      address:"ST-21،, Sector 23 Korangi Industrial Area, Karachi, Karachi City, Sindh",
+      contactno:"(021) 35065950",
       rlcoID: "SEPA-003",
       details: "Approval Under Section 17 (IEE/EIA/EC)",
       type: "Other",
@@ -582,7 +623,9 @@ const arr = [
     },
     {
       sNo: 23,
-      issuingDepartment: "",
+      issuingDepartment: "Sindh Environmental Protection Agency (SEPA)",
+      address:"ST-21،, Sector 23 Korangi Industrial Area, Karachi, Karachi City, Sindh",
+      contactno:"(021) 35065950",
       rlcoID: "SEPA-004",
       details: "Approval of an Environmental Management Plan",
       type: "Other",
@@ -602,7 +645,9 @@ const arr = [
     },
     {
       sNo: 24,
-      issuingDepartment: "",
+      issuingDepartment: "Sindh Environmental Protection Agency (SEPA)",
+      address:"ST-21،, Sector 23 Korangi Industrial Area, Karachi, Karachi City, Sindh",
+      contactno:"(021) 35065950",
       rlcoID: "SEPA-005",
       details: "Certification of Environmental Lab",
       type: "Certifcate",
@@ -623,7 +668,9 @@ const arr = [
     },
     {
       sNo: 25,
-      issuingDepartment: "",
+      issuingDepartment: "Sindh Environmental Protection Agency (SEPA)",
+      address:"ST-21،, Sector 23 Korangi Industrial Area, Karachi, Karachi City, Sindh",
+      contactno:"(021) 35065950",
       rlcoID: "SEPA-006",
       details: "Approval of Hospital Waste Management Plan",
       type: "Other",
@@ -637,6 +684,8 @@ const arr = [
     {
       sNo: 26,
       issuingDepartment: "Sindh Building Control Authority (SBCA)",
+      address:" V3XF+X36، Civic Center, University Road, Pakistan, Block 14 Gulshan-e-Iqbal, Karachi, Karachi City, Sindh",
+      contactno:"(021) 99230329",
       rlcoID: "SBCA-001 (A)",
       details: "Approval of proposed building plan for Category-I",
       type: "Other",
@@ -646,7 +695,9 @@ const arr = [
     },
     {
       sNo: 27,
-      issuingDepartment: "",
+      issuingDepartment: "Sindh Building Control Authority (SBCA)",
+      address:" V3XF+X36، Civic Center, University Road, Pakistan, Block 14 Gulshan-e-Iqbal, Karachi, Karachi City, Sindh",
+      contactno:"(021) 99230329",
       rlcoID: "SBCA-001 (B)",
       details: "Approval of proposed building plan for Category-II, III, IV",
       type: "Other",
@@ -662,7 +713,9 @@ const arr = [
     },
     {
       sNo: 28,
-      issuingDepartment: "",
+      issuingDepartment: "Sindh Building Control Authority (SBCA)",
+      address:" V3XF+X36، Civic Center, University Road, Pakistan, Block 14 Gulshan-e-Iqbal, Karachi, Karachi City, Sindh",
+      contactno:"(021) 99230329",
       rlcoID: "SBCA-002",
       details: "Notice of Completion (Category I to IV",
       type: "Other",
@@ -677,7 +730,9 @@ const arr = [
     },
     {
       sNo: 29,
-      issuingDepartment: "",
+      issuingDepartment: "Sindh Building Control Authority (SBCA)",
+      address:" V3XF+X36، Civic Center, University Road, Pakistan, Block 14 Gulshan-e-Iqbal, Karachi, Karachi City, Sindh",
+      contactno:"(021) 99230329",
       rlcoID: "SBCA-003",
       details:
         "Additional floor Charges for Category (I) / Betterment Charges for Category (II, III &amp; IV",
@@ -693,7 +748,9 @@ const arr = [
     },
     {
       sNo: 30,
-      issuingDepartment: "",
+      issuingDepartment: "Sindh Building Control Authority (SBCA)",
+      address:" V3XF+X36، Civic Center, University Road, Pakistan, Block 14 Gulshan-e-Iqbal, Karachi, Karachi City, Sindh",
+      contactno:"(021) 99230329",
       rlcoID: "SBCA-004",
       details: "Renewal of Building Plan for Category (I To IV",
       type: "Other",
@@ -708,7 +765,9 @@ const arr = [
     },
     {
       sNo: 31,
-      issuingDepartment: "",
+      issuingDepartment: "Sindh Building Control Authority (SBCA)",
+      address:" V3XF+X36، Civic Center, University Road, Pakistan, Block 14 Gulshan-e-Iqbal, Karachi, Karachi City, Sindh",
+      contactno:"(021) 99230329",
       rlcoID: "SBCA-005",
       details:
         "Addition / Alteration / Revision of Building Plan for Category (I To IV)",
@@ -723,7 +782,9 @@ const arr = [
     },
     {
       sNo: 32,
-      issuingDepartment: "",
+      issuingDepartment: "Sindh Building Control Authority (SBCA)",
+      address:" V3XF+X36، Civic Center, University Road, Pakistan, Block 14 Gulshan-e-Iqbal, Karachi, Karachi City, Sindh",
+      contactno:"(021) 99230329",
       rlcoID: "SBCA-006",
       details: "Permit to Demolish Buildings for Category (I To IV)",
       type: "Other",
@@ -737,7 +798,9 @@ const arr = [
     },
     {
       sNo: 33,
-      issuingDepartment: "",
+      issuingDepartment: "Sindh Building Control Authority (SBCA)",
+      address:" V3XF+X36، Civic Center, University Road, Pakistan, Block 14 Gulshan-e-Iqbal, Karachi, Karachi City, Sindh",
+      contactno:"(021) 99230329",
       rlcoID: "SBCA-007",
       details: "Attestation Fee",
       type: "Other",
@@ -750,7 +813,9 @@ const arr = [
     },
     {
       sNo: 34,
-      issuingDepartment: "",
+      issuingDepartment: "Sindh Building Control Authority (SBCA)",
+      address:" V3XF+X36، Civic Center, University Road, Pakistan, Block 14 Gulshan-e-Iqbal, Karachi, Karachi City, Sindh",
+      contactno:"(021) 99230329",
       rlcoID: "SBCA-008",
       details: "COPY OF APPROVED BUILDING PLAN",
       type: "Other",
@@ -763,7 +828,9 @@ const arr = [
     },
     {
       sNo: 35,
-      issuingDepartment: "",
+      issuingDepartment: "Sindh Building Control Authority (SBCA)",
+      address:" V3XF+X36، Civic Center, University Road, Pakistan, Block 14 Gulshan-e-Iqbal, Karachi, Karachi City, Sindh",
+      contactno:"(021) 99230329",
       rlcoID: "SBCA-009",
       details: "NOC for Structure (Vetting &amp; Departmental)",
       type: "Other",
@@ -777,7 +844,9 @@ const arr = [
     },
     {
       sNo: 36,
-      issuingDepartment: "",
+      issuingDepartment: "Sindh Building Control Authority (SBCA)",
+      address:" V3XF+X36، Civic Center, University Road, Pakistan, Block 14 Gulshan-e-Iqbal, Karachi, Karachi City, Sindh",
+      contactno:"(021) 99230329",
       rlcoID: "SBCA-010",
       details: "Builder License",
       type: "License",
@@ -791,7 +860,9 @@ const arr = [
     },
     {
       sNo: 37,
-      issuingDepartment: "",
+      issuingDepartment: "Sindh Building Control Authority (SBCA)",
+      address:" V3XF+X36، Civic Center, University Road, Pakistan, Block 14 Gulshan-e-Iqbal, Karachi, Karachi City, Sindh",
+      contactno:"(021) 99230329",
       rlcoID: "SBCA-011",
       details: "Developer License",
       type: "License",
@@ -806,7 +877,9 @@ const arr = [
     },
     {
       sNo: 38,
-      issuingDepartment: "",
+      issuingDepartment: "Sindh Building Control Authority (SBCA)",
+      address:" V3XF+X36، Civic Center, University Road, Pakistan, Block 14 Gulshan-e-Iqbal, Karachi, Karachi City, Sindh",
+      contactno:"(021) 99230329",
       rlcoID: "SBCA-012",
       details: "Soil/ Material Testing \nLaboratories License\r",
       type: "License",
@@ -821,7 +894,9 @@ const arr = [
     },
     {
       sNo: 39,
-      issuingDepartment: "",
+      issuingDepartment: "Sindh Building Control Authority (SBCA)",
+      address:" V3XF+X36، Civic Center, University Road, Pakistan, Block 14 Gulshan-e-Iqbal, Karachi, Karachi City, Sindh",
+      contactno:"(021) 99230329",
       rlcoID: "SBCA-013",
       details: "Architecture License",
       type: "License",
@@ -836,7 +911,9 @@ const arr = [
     },
     {
       sNo: 40,
-      issuingDepartment: "",
+      issuingDepartment: "Sindh Building Control Authority (SBCA)",
+      address:" V3XF+X36، Civic Center, University Road, Pakistan, Block 14 Gulshan-e-Iqbal, Karachi, Karachi City, Sindh",
+      contactno:"(021) 99230329",
       rlcoID: "SBCA-014",
       details: "Building Supervisor License",
       type: "License",
@@ -851,7 +928,9 @@ const arr = [
     },
     {
       sNo: 41,
-      issuingDepartment: "",
+      issuingDepartment: "Sindh Building Control Authority (SBCA)",
+      address:" V3XF+X36، Civic Center, University Road, Pakistan, Block 14 Gulshan-e-Iqbal, Karachi, Karachi City, Sindh",
+      contactno:"(021) 99230329",
       rlcoID: "SBCA-015",
       details: "Professional Engineering License",
       type: "License",
@@ -866,7 +945,9 @@ const arr = [
     },
     {
       sNo: 42,
-      issuingDepartment: "",
+      issuingDepartment: "Sindh Building Control Authority (SBCA)",
+      address:" V3XF+X36، Civic Center, University Road, Pakistan, Block 14 Gulshan-e-Iqbal, Karachi, Karachi City, Sindh",
+      contactno:"(021) 99230329",
       rlcoID: "SBCA-016",
       details: "Structural Engineer License",
       type: "License",
@@ -881,7 +962,9 @@ const arr = [
     },
     {
       sNo: 43,
-      issuingDepartment: "",
+      issuingDepartment: "Sindh Building Control Authority (SBCA)",
+      address:" V3XF+X36، Civic Center, University Road, Pakistan, Block 14 Gulshan-e-Iqbal, Karachi, Karachi City, Sindh",
+      contactno:"(021) 99230329",
       rlcoID: "SBCA-017",
       details: "Town Planner License",
       type: "License",
@@ -896,7 +979,9 @@ const arr = [
     },
     {
       sNo: 44,
-      issuingDepartment: "",
+      issuingDepartment: "Sindh Building Control Authority (SBCA)",
+      address:" V3XF+X36، Civic Center, University Road, Pakistan, Block 14 Gulshan-e-Iqbal, Karachi, Karachi City, Sindh",
+      contactno:"(021) 99230329",
       rlcoID: "SBCA-018",
       details: "Issuance of the NOC for Sale &amp; Advertisement",
       type: "Other",
@@ -912,6 +997,8 @@ const arr = [
     {
       sNo: 45,
       issuingDepartment: "Agriculture Department",
+      address:"Sindh Secretariat Building # 2 (Tughluq House), Ground Floor, Karachi, Pakistan",
+      contactno: "00922199211468",
       rlcoID: "AD-001",
       details:
         "Distributor Registration / License (for both Pesticides and fertilizers)",
@@ -928,7 +1015,9 @@ const arr = [
     },
     {
       sNo: 46,
-      issuingDepartment: "",
+      issuingDepartment: "Agriculture Department",
+      address:"Sindh Secretariat Building # 2 (Tughluq House), Ground Floor, Karachi, Pakistan",
+      contactno: "00922199211468",
       rlcoID: "AD-002",
       details: "Product License for Fertilizer Micronutrients",
       type: "License",
@@ -943,7 +1032,9 @@ const arr = [
     },
     {
       sNo: 47,
-      issuingDepartment: "",
+      issuingDepartment: "Agriculture Department",
+      address:"Sindh Secretariat Building # 2 (Tughluq House), Ground Floor, Karachi, Pakistan",
+      contactno: "00922199211468",
       rlcoID: "AD-003",
       details: "Market Committee License (Retailer, Wholesaler, Factories)",
       type: "License",
@@ -960,6 +1051,8 @@ const arr = [
     {
       sNo: 48,
       issuingDepartment: "Sindh Industrial Trading Estate (S.I.T.E) Limited",
+      address: "W267+673, Estate Ave, SITE Industrial Area, Karachi, Sindh, Sindh Industrial Trading Estate",
+      contactno:"(021) 99333152",
       rlcoID: "ICD-008 (A)",
       details: "Allotment of Land/ Plot",
       type: "Other",
@@ -973,7 +1066,9 @@ const arr = [
     },
     {
       sNo: 49,
-      issuingDepartment: "",
+      issuingDepartment: "Sindh Industrial Trading Estate (S.I.T.E) Limited",
+      address: "W267+673, Estate Ave, SITE Industrial Area, Karachi, Sindh, Sindh Industrial Trading Estate",
+      contactno:"(021) 99333152",
       rlcoID: "ICD-008 (B)",
       details: "Approval of Building Drawing",
       type: "Other",
@@ -993,7 +1088,9 @@ const arr = [
     },
     {
       sNo: 50,
-      issuingDepartment: "",
+      issuingDepartment: "Sindh Industrial Trading Estate (S.I.T.E) Limited",
+      address: "W267+673, Estate Ave, SITE Industrial Area, Karachi, Sindh, Sindh Industrial Trading Estate",
+      contactno:"(021) 99333152",
       rlcoID: "ICD-008 (C)",
       details: "Approval of Completion (Block) Plan",
       type: "Other",
@@ -1012,7 +1109,9 @@ const arr = [
     },
     {
       sNo: 51,
-      issuingDepartment: "",
+      issuingDepartment: "Sindh Industrial Trading Estate (S.I.T.E) Limited",
+      address: "W267+673, Estate Ave, SITE Industrial Area, Karachi, Sindh, Sindh Industrial Trading Estate",
+      contactno:"(021) 99333152",
       rlcoID: "ICD-009",
       details: "Collection of Additional Trade Fee",
       type: "Other",
@@ -1031,7 +1130,9 @@ const arr = [
     },
     {
       sNo: 52,
-      issuingDepartment: "",
+      issuingDepartment: "Sindh Industrial Trading Estate (S.I.T.E) Limited",
+      address: "W267+673, Estate Ave, SITE Industrial Area, Karachi, Sindh, Sindh Industrial Trading Estate",
+      contactno:"(021) 99333152",
       rlcoID: "ICD-010",
       details:
         "Subdivision/ Amalgamation/ Transfer/ Subletting/ Extension of Land or Plot/ Change in Constitution/ change in Constitution",
@@ -1047,7 +1148,9 @@ const arr = [
     },
     {
       sNo: 53,
-      issuingDepartment: "",
+      issuingDepartment: "Sindh Industrial Trading Estate (S.I.T.E) Limited",
+      address: "W267+673, Estate Ave, SITE Industrial Area, Karachi, Sindh, Sindh Industrial Trading Estate",
+      contactno:"(021) 99333152",
       rlcoID: "ICD-011",
       details: "Issuance of Lease Deed",
       type: "Other",
@@ -1066,7 +1169,9 @@ const arr = [
     },
     {
       sNo: 54,
-      issuingDepartment: "",
+      issuingDepartment: "Sindh Industrial Trading Estate (S.I.T.E) Limited",
+      address: "W267+673, Estate Ave, SITE Industrial Area, Karachi, Sindh, Sindh Industrial Trading Estate",
+      contactno:"(021) 99333152",
       rlcoID: "ICD-012",
       details: "NOC for Utilities (Electricity, Gas, Cable, PTCL)",
       type: "Other",
@@ -1085,7 +1190,9 @@ const arr = [
     },
     {
       sNo: 55,
-      issuingDepartment: "",
+      issuingDepartment: "Sindh Industrial Trading Estate (S.I.T.E) Limited",
+      address: "W267+673, Estate Ave, SITE Industrial Area, Karachi, Sindh, Sindh Industrial Trading Estate",
+      contactno:"(021) 99333152",
       rlcoID: "ICD-013",
       details: "NOC for Mortgage",
       type: "Other",
@@ -1104,7 +1211,9 @@ const arr = [
     },
     {
       sNo: 56,
-      issuingDepartment: "",
+      issuingDepartment: "Sindh Industrial Trading Estate (S.I.T.E) Limited",
+      address: "W267+673, Estate Ave, SITE Industrial Area, Karachi, Sindh, Sindh Industrial Trading Estate",
+      contactno:"(021) 99333152",
       rlcoID: "ICD-014",
       details: "NOC for Road Cutting",
       type: "Other",
@@ -1123,7 +1232,9 @@ const arr = [
     },
     {
       sNo: 57,
-      issuingDepartment: "",
+      issuingDepartment: "Sindh Industrial Trading Estate (S.I.T.E) Limited",
+      address: "W267+673, Estate Ave, SITE Industrial Area, Karachi, Sindh, Sindh Industrial Trading Estate",
+      contactno:"(021) 99333152",
       rlcoID: "ICD-015",
       details: "NOC for car parking/ beautification",
       type: "Other",
@@ -1143,6 +1254,8 @@ const arr = [
     {
       sNo: 58,
       issuingDepartment: "Sindh Small Industries Corporation (SSIC)",
+      address:"AM-310, Preedy Street, Saddar, Karachi",
+      contactno: "(021) 99332167-68",
       rlcoID: "ICD-016",
       details: "Allotment Order of Land/ Plot",
       type: "Other",
@@ -1158,7 +1271,9 @@ const arr = [
     },
     {
       sNo: 59,
-      issuingDepartment: "",
+      issuingDepartment: "Sindh Small Industries Corporation (SSIC)",
+      address:"AM-310, Preedy Street, Saddar, Karachi",
+      contactno: "(021) 99332167-68",
       rlcoID: "ICD-017",
       details: "Approval of Drawing",
       type: "Other",
@@ -1174,7 +1289,9 @@ const arr = [
     },
     {
       sNo: 60,
-      issuingDepartment: "",
+      issuingDepartment: "Sindh Small Industries Corporation (SSIC)",
+      address:"AM-310, Preedy Street, Saddar, Karachi",
+      contactno: "(021) 99332167-68",
       rlcoID: "ICD-018",
       details:
         "Subdivision/Transfer/ Amalgamation/ Change in constitution (Corporate Setup)/ Change in Trade/ Subletting trade/ Conversion of plot from Industrial to Commercial/ CNG petroleum station/ Godowns &amp; Distribution",
@@ -1191,7 +1308,9 @@ const arr = [
     },
     {
       sNo: 61,
-      issuingDepartment: "",
+      issuingDepartment: "Sindh Small Industries Corporation (SSIC)",
+      address:"AM-310, Preedy Street, Saddar, Karachi",
+      contactno: "(021) 99332167-68",
       rlcoID: "ICD-019",
       details: "NOC for Utilities (Electricity, Telephone, Gas, Water)",
       type: "Other",
@@ -1207,7 +1326,9 @@ const arr = [
     },
     {
       sNo: 62,
-      issuingDepartment: "",
+      issuingDepartment: "Sindh Small Industries Corporation (SSIC)",
+      address:"AM-310, Preedy Street, Saddar, Karachi",
+      contactno: "(021) 99332167-68",
       rlcoID: "ICD-020",
       details: "NOC for Road Cutting",
       type: "Other",
@@ -1223,7 +1344,9 @@ const arr = [
     },
     {
       sNo: 63,
-      issuingDepartment: "",
+      issuingDepartment: "Sindh Small Industries Corporation (SSIC)",
+      address:"AM-310, Preedy Street, Saddar, Karachi",
+      contactno: "(021) 99332167-68",
       rlcoID: "ICD-021",
       details: "Issuance of Lease Draft",
       type: "Other",
@@ -1239,7 +1362,9 @@ const arr = [
     },
     {
       sNo: 64,
-      issuingDepartment: "",
+      issuingDepartment: "Sindh Small Industries Corporation (SSIC)",
+      address:"AM-310, Preedy Street, Saddar, Karachi",
+      contactno: "(021) 99332167-68",
       rlcoID: "ICD-022",
       details: "NOC for Mortgage",
       type: "Other",
@@ -1255,7 +1380,9 @@ const arr = [
     },
     {
       sNo: 65,
-      issuingDepartment: "",
+      issuingDepartment: "Sindh Small Industries Corporation (SSIC)",
+      address:"AM-310, Preedy Street, Saddar, Karachi",
+      contactno: "(021) 99332167-68",
       rlcoID: "ICD-023",
       details: "Un- authorized Construction",
       type: "Other",
@@ -1272,6 +1399,8 @@ const arr = [
     {
       sNo: 66,
       issuingDepartment: "Board of Revenue",
+      address: "ST-4, Revenue House, Adjacent Dr. Ziauddin Hospital Clifton Block-6, Karachi.",
+      contactno: "(021) 111 267 467",
       rlcoID: "BOR-001",
       details: "Issuance of the True Copy of Land Record",
       type: "Other",
@@ -1285,7 +1414,9 @@ const arr = [
     },
     {
       sNo: 67,
-      issuingDepartment: "",
+      issuingDepartment: "Board of Revenue",
+      address: "ST-4, Revenue House, Adjacent Dr. Ziauddin Hospital Clifton Block-6, Karachi.",
+      contactno: "(021) 111 267 467",
       rlcoID: "BOR-004",
       details: "Registration of Document",
       type: "Other",
@@ -1301,6 +1432,8 @@ const arr = [
     {
       sNo: 68,
       issuingDepartment: "District Municipal Corporation (DMC)",
+      address: "Rashid Minhas Rd, Karachi 75950 Rashid Minhas Rd, Federal B Area Block 16 Gulberg Town, Karachi, Karachi City, Sindh",
+      contactno: "(021) 99260342",
       rlcoID: "DMC– 001",
       details: "Trade License",
       type: "Other",
@@ -1315,7 +1448,9 @@ const arr = [
     },
     {
       sNo: 69,
-      issuingDepartment: "",
+      issuingDepartment: "District Municipal Corporation (DMC)",
+      address: "Rashid Minhas Rd, Karachi 75950 Rashid Minhas Rd, Federal B Area Block 16 Gulberg Town, Karachi, Karachi City, Sindh",
+      contactno: "(021) 99260342",
       rlcoID: "DMC-002",
       details: "Road Cutting Permission",
       type: "Other",
@@ -1331,7 +1466,9 @@ const arr = [
     },
     {
       sNo: 70,
-      issuingDepartment: "",
+      issuingDepartment: "District Municipal Corporation (DMC)",
+      address: "Rashid Minhas Rd, Karachi 75950 Rashid Minhas Rd, Federal B Area Block 16 Gulberg Town, Karachi, Karachi City, Sindh",
+      contactno: "(021) 99260342",
       rlcoID: "DMC-003",
       details:
         "NOC/Permission for Holding Fairs, Events, Tournaments, and other Public Gatherings at DMC Central's Jurisdiction",
@@ -1348,7 +1485,9 @@ const arr = [
     },
     {
       sNo: 71,
-      issuingDepartment: "",
+      issuingDepartment: "District Municipal Corporation (DMC)",
+      address: "Rashid Minhas Rd, Karachi 75950 Rashid Minhas Rd, Federal B Area Block 16 Gulberg Town, Karachi, Karachi City, Sindh",
+      contactno: "(021) 99260342",
       rlcoID: "DMC-004",
       details:
         "NOC/Permission for Holding Fairs, Events, Tournaments, and other Public Gatherings at DMC Central's Jurisdiction",
@@ -1364,8 +1503,10 @@ const arr = [
         // renewalFee:""
     },
     {
-      sNo: 72,
-      issuingDepartment: "",
+      sNo: 72,     
+       issuingDepartment: "District Municipal Corporation (DMC)",
+      address: "Rashid Minhas Rd, Karachi 75950 Rashid Minhas Rd, Federal B Area Block 16 Gulberg Town, Karachi, Karachi City, Sindh",
+      contactno: "(021) 99260342",
       rlcoID: "DMC-005",
       details:
         "Permission for Keeping Building Material on Roads during Construction",
@@ -1382,7 +1523,9 @@ const arr = [
     },
     {
       sNo: 73,
-      issuingDepartment: "",
+      issuingDepartment: "District Municipal Corporation (DMC)",
+      address: "Rashid Minhas Rd, Karachi 75950 Rashid Minhas Rd, Federal B Area Block 16 Gulberg Town, Karachi, Karachi City, Sindh",
+      contactno: "(021) 99260342",
       rlcoID: "DMC-006",
       details:
         "NOC/Permission for Holding Different Kind of Sports Activities in Playgrounds, Gymnasium, Sports Complex &amp; Facilities of DMC-Central",
@@ -1399,7 +1542,9 @@ const arr = [
     },
     {
       sNo: 74,
-      issuingDepartment: "",
+      issuingDepartment: "District Municipal Corporation (DMC)",
+      address: "Rashid Minhas Rd, Karachi 75950 Rashid Minhas Rd, Federal B Area Block 16 Gulberg Town, Karachi, Karachi City, Sindh",
+      contactno: "(021) 99260342",
       rlcoID: "DMC-007",
       details:
         "NOC/Permission for Establishment of Nurseries in parks, Playgrounds &amp; Open spaces of DMC-Centra",
@@ -1417,6 +1562,8 @@ const arr = [
     {
       sNo: 75,
       issuingDepartment: "Karachi Metropolitan Corporation (KMC)",
+      address: "Adhumal Oodharam Quarter, Karachi, Karachi City, Sindh",
+      contactno: "(021) 99215125",
       rlcoID: "KMC-001",
       details: "Transfer/ Mutation of Land",
       type: "Other",
@@ -1432,7 +1579,9 @@ const arr = [
     },
     {
       sNo: 76,
-      issuingDepartment: "",
+      issuingDepartment: "Karachi Metropolitan Corporation (KMC)",
+      address: "Adhumal Oodharam Quarter, Karachi, Karachi City, Sindh",
+      contactno: "(021) 99215125",
       rlcoID: "KMC-002",
       details: "NOC for Sale",
       type: "Other",
@@ -1447,7 +1596,9 @@ const arr = [
     },
     {
       sNo: 77,
-      issuingDepartment: "",
+      issuingDepartment: "Karachi Metropolitan Corporation (KMC)",
+      address: "Adhumal Oodharam Quarter, Karachi, Karachi City, Sindh",
+      contactno: "(021) 99215125",
       rlcoID: "KMC-003",
       details: "NOC for Mortgage",
       type: "Other",
@@ -1462,7 +1613,9 @@ const arr = [
     },
     {
       sNo: 78,
-      issuingDepartment: "",
+      issuingDepartment: "Karachi Metropolitan Corporation (KMC)",
+      address: "Adhumal Oodharam Quarter, Karachi, Karachi City, Sindh",
+      contactno: "(021) 99215125",
       rlcoID: "KMC-004",
       details: "Lease",
       type: "Other",
@@ -1477,7 +1630,9 @@ const arr = [
     },
     {
       sNo: 79,
-      issuingDepartment: "",
+      issuingDepartment: "Karachi Metropolitan Corporation (KMC)",
+      address: "Adhumal Oodharam Quarter, Karachi, Karachi City, Sindh",
+      contactno: "(021) 99215125",
       rlcoID: "KMC-005",
       details: "Transfer/ Mutation of Land in Orangi Town",
       type: "Other",
@@ -1492,7 +1647,9 @@ const arr = [
     },
     {
       sNo: 80,
-      issuingDepartment: "",
+      issuingDepartment: "Karachi Metropolitan Corporation (KMC)",
+      address: "Adhumal Oodharam Quarter, Karachi, Karachi City, Sindh",
+      contactno: "(021) 99215125",
       rlcoID: "KMC-006",
       details: "NOC for Sale",
       type: "Other",
@@ -1507,7 +1664,9 @@ const arr = [
     },
     {
       sNo: 81,
-      issuingDepartment: "",
+      issuingDepartment: "Karachi Metropolitan Corporation (KMC)",
+      address: "Adhumal Oodharam Quarter, Karachi, Karachi City, Sindh",
+      contactno: "(021) 99215125",
       rlcoID: "KMC-007",
       details: "NOC for Mortgage",
       type: "Other",
@@ -1522,7 +1681,9 @@ const arr = [
     },
     {
       sNo: 82,
-      issuingDepartment: "",
+      issuingDepartment: "Karachi Metropolitan Corporation (KMC)",
+      address: "Adhumal Oodharam Quarter, Karachi, Karachi City, Sindh",
+      contactno: "(021) 99215125",
       rlcoID: "KMC-008",
       details: "Pre-Lease",
       type: "Other",
@@ -1537,7 +1698,9 @@ const arr = [
     },
     {
       sNo: 83,
-      issuingDepartment: "",
+      issuingDepartment: "Karachi Metropolitan Corporation (KMC)",
+      address: "Adhumal Oodharam Quarter, Karachi, Karachi City, Sindh",
+      contactno: "(021) 99215125",
       rlcoID: "KMC-009",
       details: "Lease",
       type: "Other",
@@ -1552,7 +1715,9 @@ const arr = [
     },
     {
       sNo: 84,
-      issuingDepartment: "",
+      issuingDepartment: "Karachi Metropolitan Corporation (KMC)",
+      address: "Adhumal Oodharam Quarter, Karachi, Karachi City, Sindh",
+      contactno: "(021) 99215125",
       rlcoID: "KMC-010",
       details: "Amalgamation and Subdivision of Land",
       type: "Other",
@@ -1567,7 +1732,9 @@ const arr = [
     },
     {
       sNo: 85,
-      issuingDepartment: "",
+      issuingDepartment: "Karachi Metropolitan Corporation (KMC)",
+      address: "Adhumal Oodharam Quarter, Karachi, Karachi City, Sindh",
+      contactno: "(021) 99215125",
       rlcoID: "KMC–011",
       details: "Transfer / Mutation of Land in Katchi Abadi",
       type: "Other",
@@ -1583,7 +1750,9 @@ const arr = [
     },
     {
       sNo: 86,
-      issuingDepartment: "",
+      issuingDepartment: "Karachi Metropolitan Corporation (KMC)",
+      address: "Adhumal Oodharam Quarter, Karachi, Karachi City, Sindh",
+      contactno: "(021) 99215125",
       rlcoID: "KMC-012",
       details: "NOC for Sale",
       type: "Other",
@@ -1598,7 +1767,9 @@ const arr = [
     },
     {
       sNo: 87,
-      issuingDepartment: "",
+      issuingDepartment: "Karachi Metropolitan Corporation (KMC)",
+      address: "Adhumal Oodharam Quarter, Karachi, Karachi City, Sindh",
+      contactno: "(021) 99215125",
       rlcoID: "KMC-013",
       details: "NOC for Mortgage",
       type: "Other",
@@ -1613,7 +1784,9 @@ const arr = [
     },
     {
       sNo: 88,
-      issuingDepartment: "",
+      issuingDepartment: "Karachi Metropolitan Corporation (KMC)",
+      address: "Adhumal Oodharam Quarter, Karachi, Karachi City, Sindh",
+      contactno: "(021) 99215125",
       rlcoID: "KMC-014",
       details: "Lease",
       type: "Other",
@@ -1628,7 +1801,9 @@ const arr = [
     },
     {
       sNo: 89,
-      issuingDepartment: "",
+      issuingDepartment: "Karachi Metropolitan Corporation (KMC)",
+      address: "Adhumal Oodharam Quarter, Karachi, Karachi City, Sindh",
+      contactno: "(021) 99215125",
       rlcoID: "KMC-015",
       details: "Amalgamation and Subdivision of Land",
       type: "Other",
@@ -1643,7 +1818,9 @@ const arr = [
     },
     {
       sNo: 90,
-      issuingDepartment: "",
+      issuingDepartment: "Karachi Metropolitan Corporation (KMC)",
+      address: "Adhumal Oodharam Quarter, Karachi, Karachi City, Sindh",
+      contactno: "(021) 99215125",
       rlcoID: "KMC-016",
       details:
         "Temporary NOC for Land use for beautification\noutside the premises of private property ",
@@ -1659,7 +1836,9 @@ const arr = [
     },
     {
       sNo: 91,
-      issuingDepartment: "",
+      issuingDepartment: "Karachi Metropolitan Corporation (KMC)",
+      address: "Adhumal Oodharam Quarter, Karachi, Karachi City, Sindh",
+      contactno: "(021) 99215125",
       rlcoID: "KMC-017",
       details:
         "Temporary NOC for temporary installation of\nGenerators outside the premises",
@@ -1675,7 +1854,9 @@ const arr = [
     },
     {
       sNo: 92,
-      issuingDepartment: "",
+      issuingDepartment: "Karachi Metropolitan Corporation (KMC)",
+      address: "Adhumal Oodharam Quarter, Karachi, Karachi City, Sindh",
+      contactno: "(021) 99215125",
       rlcoID: "KMC-018",
       details:
         "Temporary NOC for keeping building\nmaterials on roads during construction",
@@ -1691,7 +1872,9 @@ const arr = [
     },
     {
       sNo: 93,
-      issuingDepartment: "",
+      issuingDepartment: "Karachi Metropolitan Corporation (KMC)",
+      address: "Adhumal Oodharam Quarter, Karachi, Karachi City, Sindh",
+      contactno: "(021) 99215125",
       rlcoID: "KCM-019",
       details: "NOC for film and Ad shooting in Safari Park\nand Karachi Zoo",
       type: "Other",
@@ -1706,7 +1889,9 @@ const arr = [
     },
     {
       sNo: 94,
-      issuingDepartment: "",
+      issuingDepartment: "Karachi Metropolitan Corporation (KMC)",
+      address: "Adhumal Oodharam Quarter, Karachi, Karachi City, Sindh",
+      contactno: "(021) 99215125",
       rlcoID: "KMC-020",
       details: "Outdoor Advertisement on major Bridges and underpass",
       type: "Other",
@@ -1721,7 +1906,9 @@ const arr = [
     },
     {
       sNo: 95,
-      issuingDepartment: "",
+      issuingDepartment: "Karachi Metropolitan Corporation (KMC)",
+      address: "Adhumal Oodharam Quarter, Karachi, Karachi City, Sindh",
+      contactno: "(021) 99215125",
       rlcoID: "KMC-021",
       details: "Road Cutting Permission",
       type: "Other",
@@ -1736,7 +1923,9 @@ const arr = [
     },
     {
       sNo: 96,
-      issuingDepartment: "",
+      issuingDepartment: "Karachi Metropolitan Corporation (KMC)",
+      address: "Adhumal Oodharam Quarter, Karachi, Karachi City, Sindh",
+      contactno: "(021) 99215125",
       rlcoID: "KMC-022",
       details: "NOC for organizing temporary Bachat Bazars",
       type: "Other",
@@ -1751,7 +1940,9 @@ const arr = [
     },
     {
       sNo: 97,
-      issuingDepartment: "",
+      issuingDepartment: "Karachi Metropolitan Corporation (KMC)",
+      address: "Adhumal Oodharam Quarter, Karachi, Karachi City, Sindh",
+      contactno: "(021) 99215125",
       rlcoID: "KMC-023",
       details:
         "Reservation of KMC Sports Complexes and playgrounds in\nKarachi for Sports events",
@@ -1768,6 +1959,8 @@ const arr = [
     {
       sNo: 98,
       issuingDepartment: "Energy Department",
+      address: "3rd Floor, Statelife Building No.3، Dr. Opposite CM House، Doctor Ziauddin Ahmed Road, Kashmir Mujahid Colony, Karachi, Karachi City, Sindh",
+      contactno: "(021) 99206272",
       rlcoID: "ED-001\n",
       details: "Electrical Contractor License",
       type: "License",
@@ -1782,7 +1975,9 @@ const arr = [
     },
     {
       sNo: 99,
-      issuingDepartment: "",
+      issuingDepartment: "Energy Department",
+      address: "3rd Floor, Statelife Building No.3، Dr. Opposite CM House، Doctor Ziauddin Ahmed Road, Kashmir Mujahid Colony, Karachi, Karachi City, Sindh",
+      contactno: "(021) 99206272",
       rlcoID: "ED-002\n",
       details: "Competency Certificate for Wireman",
       type: "Certificate",
@@ -1796,7 +1991,9 @@ const arr = [
     },
     {
       sNo: 100,
-      issuingDepartment: "",
+      issuingDepartment: "Energy Department",
+      address: "3rd Floor, Statelife Building No.3، Dr. Opposite CM House، Doctor Ziauddin Ahmed Road, Kashmir Mujahid Colony, Karachi, Karachi City, Sindh",
+      contactno: "(021) 99206272",
       rlcoID: "ED-003\n",
       details: "Competency Certificate for Electric Supervisor",
       type: "Certificate",
@@ -1810,7 +2007,9 @@ const arr = [
     },
     {
       sNo: 101,
-      issuingDepartment: "",
+      issuingDepartment: "Energy Department",
+      address: "3rd Floor, Statelife Building No.3، Dr. Opposite CM House، Doctor Ziauddin Ahmed Road, Kashmir Mujahid Colony, Karachi, Karachi City, Sindh",
+      contactno: "(021) 99206272",
       rlcoID: "ED-004",
       details: "Exploration License for Coal (Large Scale) ",
       type: "License",
@@ -1825,7 +2024,9 @@ const arr = [
     },
     {
       sNo: 102,
-      issuingDepartment: "",
+      issuingDepartment: "Energy Department",
+      address: "3rd Floor, Statelife Building No.3، Dr. Opposite CM House، Doctor Ziauddin Ahmed Road, Kashmir Mujahid Colony, Karachi, Karachi City, Sindh",
+      contactno: "(021) 99206272",
       rlcoID: "ED-005",
       details: "Mining Lease (Large Scale)",
       type: "Other",
@@ -1839,7 +2040,9 @@ const arr = [
     },
     {
       sNo: 103,
-      issuingDepartment: "",
+      issuingDepartment: "Energy Department",
+      address: "3rd Floor, Statelife Building No.3، Dr. Opposite CM House، Doctor Ziauddin Ahmed Road, Kashmir Mujahid Colony, Karachi, Karachi City, Sindh",
+      contactno: "(021) 99206272",
       rlcoID: "ED-006",
       details: "Exploration Permit (Small Scale)",
       type: "Other",
@@ -1853,7 +2056,9 @@ const arr = [
     },
     {
       sNo: 104,
-      issuingDepartment: "",
+      issuingDepartment: "Energy Department",
+      address: "3rd Floor, Statelife Building No.3، Dr. Opposite CM House، Doctor Ziauddin Ahmed Road, Kashmir Mujahid Colony, Karachi, Karachi City, Sindh",
+      contactno: "(021) 99206272",
       rlcoID: "ED-007",
       details: "Mining Permit (Small  Scale) ",
       type: "Other",
@@ -1868,6 +2073,8 @@ const arr = [
     {
       sNo: 105,
       issuingDepartment: "Sindh Employees Social Security Institution (SESSI) ",
+      address:" Plot no. G, 270, Jamal Goth Landhi Karachi Mansehra Colony Mansehra Colony Sector 32 Landhi Town, Karachi, Karachi City, Sindh",
+      contactno:"(021) 99243813",
       rlcoID: "SESSI-001",
       details: "Registration of an Establishments (R-1)\n",
       type: "Registration",
@@ -1883,6 +2090,8 @@ const arr = [
       sNo: 106,
       issuingDepartment:
         "Excise, Taxation &amp; Narcotics Control Department\n",
+        address:"Tughlaq House Sindh Secretariat Karachi Pakistan",
+        contactno:"(021) 99231410",
       rlcoID: "ET&amp;NC-001",
       details: "Motor vehicle Registration",
       type: "Registration",
@@ -1897,7 +2106,10 @@ const arr = [
     },
     {
       sNo: 107,
-      issuingDepartment: "",
+      issuingDepartment:
+      "Excise, Taxation &amp; Narcotics Control Department\n",
+      address:"Tughlaq House Sindh Secretariat Karachi Pakistan",
+      contactno:"(021) 99231410",
       rlcoID: "ET&amp;NC-002",
       details: "Transfer on Motor vehicle",
       type: "Other",
@@ -1912,7 +2124,10 @@ const arr = [
     },
     {
       sNo: 108,
-      issuingDepartment: "",
+      issuingDepartment:
+      "Excise, Taxation &amp; Narcotics Control Department\n",
+      address:"Tughlaq House Sindh Secretariat Karachi Pakistan",
+      contactno:"(021) 99231410",
       rlcoID: "ET&amp;NC-003",
       details: "Alteration of Vehicle",
       type: "Other",
@@ -1927,7 +2142,10 @@ const arr = [
     },
     {
       sNo: 109,
-      issuingDepartment: "",
+      issuingDepartment:
+      "Excise, Taxation &amp; Narcotics Control Department\n",
+      address:"Tughlaq House Sindh Secretariat Karachi Pakistan",
+      contactno:"(021) 99231410",
       rlcoID: "ET&amp;NC-004",
       details: "Motor Vehicle Dealer  License",
       type: "License",
@@ -1943,7 +2161,10 @@ const arr = [
     },
     {
       sNo: 110,
-      issuingDepartment: "",
+      issuingDepartment:
+      "Excise, Taxation &amp; Narcotics Control Department\n",
+      address:"Tughlaq House Sindh Secretariat Karachi Pakistan",
+      contactno:"(021) 99231410",
       rlcoID: "ET&amp;NC-005",
       details: "Professional Tax Registration\n",
       type: "Registration",
@@ -1961,7 +2182,10 @@ const arr = [
     },
     {
       sNo: 111,
-      issuingDepartment: "",
+      issuingDepartment:
+      "Excise, Taxation &amp; Narcotics Control Department\n",
+      address:"Tughlaq House Sindh Secretariat Karachi Pakistan",
+      contactno:"(021) 99231410",
       rlcoID: "ET&amp;NC-006",
       details: "Distillery License for Intoxicating Liquor",
       type: "License",
@@ -1979,7 +2203,10 @@ const arr = [
     },
     {
       sNo: 112,
-      issuingDepartment: "",
+      issuingDepartment:
+      "Excise, Taxation &amp; Narcotics Control Department\n",
+      address:"Tughlaq House Sindh Secretariat Karachi Pakistan",
+      contactno:"(021) 99231410",
       rlcoID: "ET&amp;NC-007",
       details: "Manufacturing of PMFL License\n",
       type: "License",
@@ -1995,7 +2222,10 @@ const arr = [
     },
     {
       sNo: 113,
-      issuingDepartment: "",
+      issuingDepartment:
+      "Excise, Taxation &amp; Narcotics Control Department\n",
+      address:"Tughlaq House Sindh Secretariat Karachi Pakistan",
+      contactno:"(021) 99231410",
       rlcoID: "ET&amp;NC-008",
       details: "Brewery License for Beer",
       type: "License",
@@ -2011,7 +2241,10 @@ const arr = [
     },
     {
       sNo: 114,
-      issuingDepartment: "",
+      issuingDepartment:
+      "Excise, Taxation &amp; Narcotics Control Department\n",
+      address:"Tughlaq House Sindh Secretariat Karachi Pakistan",
+      contactno:"(021) 99231410",
       rlcoID: "ET&amp;NC-009",
       details:
         "Trade and Import License for Portable Liquor (Wholesale) \nNote: At present, there is a complete ban on the grant \n/ issuance of new liquor \nlicenses in the Province of \nSindh.",
@@ -2028,7 +2261,10 @@ const arr = [
     },
     {
       sNo: 115,
-      issuingDepartment: "",
+      issuingDepartment:
+      "Excise, Taxation &amp; Narcotics Control Department\n",
+      address:"Tughlaq House Sindh Secretariat Karachi Pakistan",
+      contactno:"(021) 99231410",
       rlcoID: "ET&amp;NC-010",
       details:
         "Retail Off Liquor License \nNote: At present, there is a complete ban on the grant \n/ issuance of new liquor license in the Province of Sindh.",
@@ -2045,7 +2281,10 @@ const arr = [
     },
     {
       sNo: 116,
-      issuingDepartment: "",
+      issuingDepartment:
+      "Excise, Taxation &amp; Narcotics Control Department\n",
+      address:"Tughlaq House Sindh Secretariat Karachi Pakistan",
+      contactno:"(021) 99231410",
       rlcoID: "ET&amp;NC-011",
       details: "Distillery License for Manufacturing of Ethanol\n",
       type: "License",
@@ -2063,7 +2302,10 @@ const arr = [
     },
     {
       sNo: 117,
-      issuingDepartment: "",
+      issuingDepartment:
+      "Excise, Taxation &amp; Narcotics Control Department\n",
+      address:"Tughlaq House Sindh Secretariat Karachi Pakistan",
+      contactno:"(021) 99231410",
       rlcoID: "ET&amp;NC-012",
       details: "Sale of Rectified Spirit License\n",
       type: "License",
@@ -2079,7 +2321,10 @@ const arr = [
     },
     {
       sNo: 118,
-      issuingDepartment: "",
+      issuingDepartment:
+      "Excise, Taxation &amp; Narcotics Control Department\n",
+      address:"Tughlaq House Sindh Secretariat Karachi Pakistan",
+      contactno:"(021) 99231410",
       rlcoID: "ET&amp;NC-013",
       details: "Denaturation of Rectified Spirit License ",
       type: "License",
@@ -2095,7 +2340,10 @@ const arr = [
     },
     {
       sNo: 119,
-      issuingDepartment: "",
+      issuingDepartment:
+      "Excise, Taxation &amp; Narcotics Control Department\n",
+      address:"Tughlaq House Sindh Secretariat Karachi Pakistan",
+      contactno:"(021) 99231410",
       rlcoID: "ET&amp;NC-014",
       details: "Denatured Spirit License for Wholesale",
       type: "License",
@@ -2111,7 +2359,10 @@ const arr = [
     },
     {
       sNo: 120,
-      issuingDepartment: "",
+      issuingDepartment:
+      "Excise, Taxation &amp; Narcotics Control Department\n",
+      address:"Tughlaq House Sindh Secretariat Karachi Pakistan",
+      contactno:"(021) 99231410",
       rlcoID: "ET&amp;NC-015",
       details: "Denatured Spirit License for Retail",
       type: "License",
@@ -2127,7 +2378,10 @@ const arr = [
     },
     {
       sNo: 121,
-      issuingDepartment: "",
+      issuingDepartment:
+      "Excise, Taxation &amp; Narcotics Control Department\n",
+      address:"Tughlaq House Sindh Secretariat Karachi Pakistan",
+      contactno:"(021) 99231410",
       rlcoID: "ET&amp;NC-016",
       details: "Intoxicants (Drugs) Manufacturing License",
       type: "License",
@@ -2144,7 +2398,10 @@ const arr = [
     },
     {
       sNo: 122,
-      issuingDepartment: "",
+      issuingDepartment:
+      "Excise, Taxation &amp; Narcotics Control Department\n",
+      address:"Tughlaq House Sindh Secretariat Karachi Pakistan",
+      contactno:"(021) 99231410",
       rlcoID: "ET&amp;NC-017",
       details: "Intoxicants (Drugs) Commercial Sale License",
       type: "License",
@@ -2160,7 +2417,10 @@ const arr = [
     },
     {
       sNo: 123,
-      issuingDepartment: "",
+      issuingDepartment:
+      "Excise, Taxation &amp; Narcotics Control Department\n",
+      address:"Tughlaq House Sindh Secretariat Karachi Pakistan",
+      contactno:"(021) 99231410",
       rlcoID: "ET&amp;NC-018",
       details: "Permit for Hotels for RetailSale of Intoxicating Liquor\n",
       type: "Other",
@@ -2177,7 +2437,10 @@ const arr = [
     },
     {
       sNo: 124,
-      issuingDepartment: "",
+      issuingDepartment:
+      "Excise, Taxation &amp; Narcotics Control Department\n",
+      address:"Tughlaq House Sindh Secretariat Karachi Pakistan",
+      contactno:"(021) 99231410",
       rlcoID: "ET&amp;NC-019",
       details: "Club license",
       type: "License",
@@ -2194,7 +2457,10 @@ const arr = [
     },
     {
       sNo: 125,
-      issuingDepartment: "",
+      issuingDepartment:
+      "Excise, Taxation &amp; Narcotics Control Department\n",
+      address:"Tughlaq House Sindh Secretariat Karachi Pakistan",
+      contactno:"(021) 99231410",
       rlcoID: "ET&amp;NC-020",
       details: "Methanol Wholesale License for Commercial Use",
       type: "License",
@@ -2211,7 +2477,10 @@ const arr = [
     },
     {
       sNo: 126,
-      issuingDepartment: "",
+      issuingDepartment:
+      "Excise, Taxation &amp; Narcotics Control Department\n",
+      address:"Tughlaq House Sindh Secretariat Karachi Pakistan",
+      contactno:"(021) 99231410",
       rlcoID: "ET&amp;NC-021",
       details:
         "Permission to Purchase and Use of Methanol Spirit \nin Arts or Industries\n",
@@ -2230,7 +2499,10 @@ const arr = [
     },
     {
       sNo: 127,
-      issuingDepartment: "",
+      issuingDepartment:
+      "Excise, Taxation &amp; Narcotics Control Department\n",
+      address:"Tughlaq House Sindh Secretariat Karachi Pakistan",
+      contactno:"(021) 99231410",
       rlcoID: "ET&amp;NC-022",
       details:
         "Permission to use Rectified Spirit in the Manufacturing \nof Spirituous / Medicinal / Homeopathic / Toilet Preparation",
@@ -2248,7 +2520,10 @@ const arr = [
     },
     {
       sNo: 128,
-      issuingDepartment: "",
+      issuingDepartment:
+      "Excise, Taxation &amp; Narcotics Control Department\n",
+      address:"Tughlaq House Sindh Secretariat Karachi Pakistan",
+      contactno:"(021) 99231410",
       rlcoID: "ET&amp;NC-023",
       details:
         "Transport Permit (Buyer of the PMFL, Beer, Denatured \nSpirit, Methanol)",
@@ -2266,7 +2541,10 @@ const arr = [
     },
     {
       sNo: 129,
-      issuingDepartment: "",
+      issuingDepartment:
+      "Excise, Taxation &amp; Narcotics Control Department\n",
+      address:"Tughlaq House Sindh Secretariat Karachi Pakistan",
+      contactno:"(021) 99231410",
       rlcoID: "ET&amp;NC-023 B",
       details:
         "Retail of Transport Permit (buyer of the PMFL, \nBeer, Denatured Spirit, Methanol)",
@@ -2289,6 +2567,8 @@ const arr = [
       rlcoID: "SRB-001",
       details: "Sindh Sales Tax on Services (SST)\n\n",
       type: "Registration",
+      address:"Shaheen Complex, 3rd, 6th, 9th and 12th floor, Civil Lines, Karachi, Karachi City, Sindh",
+      contactno:"(021) 99217800",
       prevailing:
         "▪ . Sindh Sales Tax on Services Act, 2011\n▪ Sales Tax on Services Rules, 2011",
       // jurisdiction: "Sindh",
@@ -2307,6 +2587,8 @@ const arr = [
       details: "",
       type: "",
       prevailing:"",
+      address:"Kamal Atta turk Road Karachi،, Local Government, Rural Development,PHE & HTP Departmen, Sindh Secretariat, Government of Sindh, Shahrah-e-Kemal Ataturk, Burns Road, Karachi, Karachi City, Sindh",
+      contactno:"(021) 99211536",
       // jurisdiction: "",
       timeLine: "",
       fee:"",
@@ -2319,6 +2601,8 @@ const arr = [
     {
       sNo: 132,
       issuingDepartment: "Karachi Water &amp; Sewerage Board ",
+      address:"Head office behind civic center old KBCA Building , Gulshan Iqbal",
+      contactno:"(021) 99230317",
       rlcoID: "KWSB-001",
       details: "Sanction Letter for Water Connection (Consumer and Bulk)",
       type: "Other",
@@ -2336,6 +2620,9 @@ const arr = [
     },
     {
       sNo: 133,
+      issuingDepartment: "Karachi Water &amp; Sewerage Board ",
+      address:"Head office behind civic center old KBCA Building , Gulshan Iqbal",
+      contactno:"(021) 99230317",
       rlcoID: "KWSB-002",
       details: "License for Sub-soil Water Supply",
       type: "License",

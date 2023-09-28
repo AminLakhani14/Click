@@ -63,8 +63,8 @@ const DetailModal = (props) => {
             style={{
               width: "1000px",
               cursor: "move",
-              marginTop:-6,
-              color:"white",
+              marginTop: -6,
+              color: "white",
             }}
             onMouseOver={() => {
               if (disabled) {
@@ -74,8 +74,8 @@ const DetailModal = (props) => {
             onMouseOut={() => {
               setDisabled(true);
             }}
-            onFocus={() => {}}
-            onBlur={() => {}}
+            onFocus={() => { }}
+            onBlur={() => { }}
           >
             UPDATE OF LICENSES
           </div>
@@ -86,14 +86,14 @@ const DetailModal = (props) => {
         onCancel={props.closeDetailModal}
         footer={null}
         aria-selected="true"
-         className="modal_container"
-       
+        className="modal_container"
+
       >
         <Tabs
           className="regulatoryTab"
           type="card"
           defaultActiveKey="1"
-          style={{ paddingBottom:"16px",paddingTop:24,paddingLeft:16,paddingRight:16}}
+          style={{ paddingBottom: "16px", paddingTop: 24, paddingLeft: 16, paddingRight: 16 }}
           items={[
             {
               label: <span className="tabsLabel">Department Info</span>,
@@ -155,6 +155,21 @@ const DetailModal = (props) => {
                           placeholder="Write your feedback subject"
                         />
                       </div>
+                      <div className="row">
+                        <TextField
+                          label="Contact"
+                          style={{ marginBottom: "20px" }}
+                          disabled={true}
+                          size="small"
+                          className="modalTextField"
+                          type="text"
+                          InputLabelProps={{
+                            shrink: true, // This ensures that the label shrinks when the input has a value
+                          }}
+                          value={props?.licenceData?.contactno}
+                          placeholder="Write your feedback subject"
+                        />
+                      </div>
                     </div>
 
                     <div className="col-lg-6" style={{ marginBottom: "148px" }}>
@@ -188,20 +203,36 @@ const DetailModal = (props) => {
                           placeholder="Write your feedback subject"
                         />
                       </div>
-
                       <div className="row">
-                        <div class="">                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
-                          {/* <div><label>Is inspection required?</label> </div> */}
+                        <a
+                          href={`https://www.google.com/maps/place/${encodeURIComponent(props?.licenceData?.address)}`}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <TextField
+                            label="Address"
+                            disabled={true}
+                            size="small"
+                            style={{ marginBottom: "20px", 
+                            cursor: "pointer", 
+                            marginTop:"-6px",
+                            marginLeft:"-12px",
+                            width:"104%",
+                            pointerEvents: "none" }}
+                            className="modalTextField"
+                            type="text"
+                            InputLabelProps={{
+                              shrink: true, // This ensures that the label shrinks when the input has a value
+                            }}
+                            value={props?.licenceData?.address}
+                            placeholder="Write your feedback subject"
+                          />
+                           </a>
+                      </div>
 
-                          <div class="input-group d-flex justify-content-end">
-                            {/* <input
-                              size={"Large"}
-                              type="text"
-                              className="modalTextField"
-                              placeholder="Example input"
-                            /> */}
-                          </div>
-                        </div>
+
+                      <div class="input-group d-flex justify-content-end">
+
                       </div>
                     </div>
                   </div>
@@ -212,10 +243,10 @@ const DetailModal = (props) => {
               label: <span className="tabsLabel">List of Requirements to Apply</span>,
               key: "2",
               children: (
-                <div style={{ height: "295px",}}>
-               {props?.licenceData?.logo ?   <div className="row g-0">
-                    <div className="col-lg-6 document" style={{height:325}}>
-                      <div className="row g-0" style={{textAlign:"left",paddingRight:16}}>
+                <div style={{ height: "295px", }}>
+                  {props?.licenceData?.logo ? <div className="row g-0">
+                    <div className="col-lg-6 document" style={{ height: 325 }}>
+                      <div className="row g-0" style={{ textAlign: "left", paddingRight: 16 }}>
                         <h6>Documents Required</h6>
                         <div style={{ marginBottom: "8px" }}>
                           {/* <TextArea rows={4} /> */}
@@ -248,17 +279,17 @@ const DetailModal = (props) => {
                         </div>
                       </div> */}
                     </div>
-                    <div className="col-lg-6 Procedure_container" style={{borderLeft:'2px solid #c4c4c4',paddingLeft:16}}>
-                     {/* <div style={{height:"300px",borderLeft:"2px solid red"}}></div> */}
+                    <div className="col-lg-6 Procedure_container" style={{ borderLeft: '2px solid #c4c4c4', paddingLeft: 16 }}>
+                      {/* <div style={{height:"300px",borderLeft:"2px solid red"}}></div> */}
                       <h6>Procedure</h6>
                       <div className="row g-0">
-                        <div style={{width:"100%"}}>
+                        <div style={{ width: "100%" }}>
                           <a href={props?.licenceData?.logo} target="_blank">
-                          <img 
-                          className="procedure"
-                           style={{ height:300,width:"100%",border:"1px solid grey",marginLeft:-5 ,borderRadius:5}}
-                           src={props?.licenceData?.logo}/>
-                           </a>
+                            <img
+                              className="procedure"
+                              style={{ height: 300, width: "100%", border: "1px solid grey", marginLeft: -5, borderRadius: 5 }}
+                              src={props?.licenceData?.logo} />
+                          </a>
                         </div>
                       </div>
                       {/* <div className="row">
@@ -274,7 +305,7 @@ const DetailModal = (props) => {
                         </div>
                       </div> */}
                     </div>
-                  </div>:<h1>No Records</h1>}
+                  </div> : <h1>No Records</h1>}
                 </div>
               ),
             },
@@ -283,7 +314,7 @@ const DetailModal = (props) => {
               key: "3",
               children: (
                 <div style={{ height: "295px" }}>
-                  <DocumentGrid dataForGrid={props.licenceData}  isuseDepart={props?.licenceData?.fee} id="LD-002"/>
+                  <DocumentGrid dataForGrid={props.licenceData} isuseDepart={props?.licenceData?.fee} id="LD-002" />
                 </div>
               ),
             },
