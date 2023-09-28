@@ -157,7 +157,8 @@ function MobileHome(props) {
                   src={language === "ur" ? English : urdu}
                   alt=""
                   onClick={props.toggleLanguage}
-                  style={{ marginLeft: "20px", marginRight: "20px" }}
+                  // style={{ marginLeft: "20px", marginRight: "20px" }}
+                  style={language == "ur" ?{height:"10px",width:"50px",marginLeft: "20px", marginRight: "20px"}:{marginLeft: "20px", marginRight: "20px"}}
                 />
                 <img
                   className="headerLogoImages"
@@ -165,7 +166,8 @@ function MobileHome(props) {
                   // src={Sindhi}
                   alt=""
                   onClick={props.SindhitoggleLanguage}
-                  style={{ marginLeft: "20px", marginRight: "20px" }}
+                  // style={{ marginLeft: "20px", marginRight: "20px" }}
+                  style={language == "sd" ?{height:"10px",width:"50px",marginLeft: "20px", marginRight: "20px"}:{marginLeft: "20px", marginRight: "20px"}}
                 />
               <a href="comingsoon.html" title="" width="10">
                 <i className="fa-sharp fa-solid fa-magnifying-glass"></i>

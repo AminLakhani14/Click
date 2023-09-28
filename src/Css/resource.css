@@ -1,7 +1,56 @@
+*{
+  /* box-sizing: border-box; */
+}
 .css-1nrlq1o-MuiFormControl-root {
   width: 100%;
 }
+.document_required li{
+  float: none;
+  font-size: 12px;
+  padding: 0px 0px;
+}
+.document_required {
+  padding-left: 10px;
+  /* padding-bottom: 100px !important; */
+}
+.ant-modal-header {
+  border-bottom: 1px solid #ebedf3 !important;
+  padding-top: 6px !important;
+  padding-bottom: 0px !important;
+  padding-left: 15px !important;
+  padding-right: 10px !important;
+  background-color: #1f6f92 !important;
+  height: 44px !important;
+  display: flex;
+  align-items: center;
+  color: #ffffff !important;
+  background:linear-gradient(180deg, #720d1d 0%, #1f0308 100%) !important
+}.ant-modal-content{
+  padding: 0px !important;
+  /* padding: 24px 16px 16px 16px !important; */
+  padding-bottom: 16px !important;
+  height: 475px !important;
+  
 
+}
+.ant-modal-close-x{
+  color: #ffffff !important;
+  margin-left: 15px !important;
+  margin-top: -7px !important;
+}
+ .ant-tabs-tab-active{
+   background:linear-gradient(180deg, #720d1d 0%, #1f0308 100%) !important;
+}
+.ant-tabs-tab{
+  /* color: red !important; */
+}
+
+ /* .regulatoryTab .ant-tabs .ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn{
+  color: white !important;
+} */
+ .ant-tabs-tab:hover {
+    color: #720d1d !important;
+}
 .TooltipText {
   color: black;
   font-size: 20px;
@@ -181,6 +230,9 @@ color:#720D1D
   user-select: none;
 }
 
+.disable_input .MuiInputBase-input.MuiOutlinedInput-input.Mui-disabled {
+ -webkit-text-fill-color: black !important;
+}
 
 .sectorMUI .MuiFormLabel-root.MuiInputLabel-root.MuiInputLabel-shrink {
   color: rgba(0, 0, 0, 0.6);
@@ -493,21 +545,30 @@ input.regulatoryTextField[type="text"]:focus {
 :where(.css-dev-only-do-not-override-k7429z).ant-tabs-card.ant-tabs-top>div>.ant-tabs-nav .ant-tabs-tab+.ant-tabs-tab,
 :where(.css-dev-only-do-not-override-k7429z).ant-tabs-card.ant-tabs-bottom>div>.ant-tabs-nav .ant-tabs-tab+.ant-tabs-tab {
   background-color: #7a0202;
-  color: white;
+  color: white !important;
   margin-left: 2px;
 }
 
 :where(.css-dev-only-do-not-override-k7429z).ant-tabs-card.ant-tabs-top>.ant-tabs-nav .ant-tabs-tab-active,
 :where(.css-dev-only-do-not-override-k7429z).ant-tabs-card.ant-tabs-top>div>.ant-tabs-nav .ant-tabs-tab-active {
   background-color: #7a0202;
-  color: white;
+  color: white !important;
   border-bottom-color: #ffffff;
 }
+.ant-tabs-tab-active .tabsLabel{
+  color: white !important;
 
-:where(.css-dev-only-do-not-override-k7429z).ant-tabs .ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
-  color: white;
+}
+.ant-tabs-tab-btn:active .ant-tabs-tab-active  {
+  color: white !important;
   text-shadow: 0 0 0.25px currentcolor;
 }
+
+.ant-tabs-tab-btn{
+  color: black !important;
+  text-shadow: 0 0 0.25px currentcolor;
+}
+
 
 .cursorTooltip:hover {
   cursor: pointer;
@@ -596,12 +657,12 @@ input.regulatoryTextField[type="text"]:focus {
     margin-left: 16px;
   }
 }
-.css-1n4twyu-MuiInputBase-input-MuiOutlinedInput-input{
+/* .css-1n4twyu-MuiInputBase-input-MuiOutlinedInput-input{
   border-radius: 27px;
   background-color:white !important;
   height: 2.4000em !important;
  
-}
+} */
 .feedBackTextField {
   background-color: rgb(255 255 255);
   color: black;
@@ -937,8 +998,98 @@ label#\:rd\:-label {
   top: 8px !important;
 }
 
-#expert-section{
-  display: block;
+
+
+  .css-1jy569b-MuiFormLabel-root-MuiInputLabel-root.Mui-disabled {
+    color: rgb(0 0 0 / 97%) !important;
+    font: inherit;
+    font-size: large;
 }
 
+@media only screen and (min-width: 1367px) and (max-width: 1900px) {
+ 
+  .ant-modal-content{
+    padding: 0px !important;
+    padding-bottom: 16px !important;
+    height: 700px !important;
+  }
+  .modal_container{
+    
+    width: 85% !important;
+    height:800px !important ;
+  }
+  .procedure {
+   height: 500px !important;
+  }
+  .modal_container h6{
+    font-size: 27px;
+  }
+  .modal_container li{
+    font-size: 18px;
+    padding: 0px !important;
+  }
+  .document,.Procedure_container{
+    height: 546px !important;
+  }
+}
+@media only screen and (min-width: 1500px) and (max-width: 1700px) {
+ 
+  .ant-modal-content{
+    padding: 0px !important;
+    padding-bottom: 16px !important;
+    height: 700px !important;
+  }
+  .modal_container{
+    
+    width: 85% !important;
+    height:1000px !important ;
+  }
 
+  .procedure {
+   height: 500px !important;
+  }
+  .modal_container h6{
+    font-size: 27px;
+  }
+  .modal_container li{
+    font-size: 20px;
+    padding: 0px !important;
+  }
+  .document,.Procedure_container{
+    height: 546px !important;
+  }
+  .ant-tabs-tab{
+    /* color: red !important; */
+    font-size: 20px !important;
+  }
+}
+@media only screen and (min-width: 1440px) and (max-width: 1900px) {
+ 
+  .ant-modal-content{
+    padding: 0px !important;
+    padding-bottom: 16px !important;
+    height: 700px !important;
+  }
+  .modal_container{
+    
+    width: 85% !important;
+    height:800px !important ;
+  }
+  .procedure {
+   height: 500px !important;
+  }
+  .modal_container h6{
+    font-size: 32px;
+  }
+  .modal_container li{
+    font-size: 20px;
+    padding: 0px !important;
+  }
+  .document,.Procedure_container{
+    height: 546px !important;
+  }
+  .ant-tabs-tab{
+    /* color: red !important; */
+    font-size: 20px !important;
+  }
+}

@@ -58,7 +58,7 @@ export default class DemoGrid extends React.Component {
     try {
       debugger;
       if (event !== null && event !== undefined) {
-        const row = event.args.row.bounddata
+        const row = event.args.row.bounddata !== undefined ? event.args.row.bounddata : event.args.row
         const body = {
           index: event.args.rowindex,
           row: row

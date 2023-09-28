@@ -10,9 +10,23 @@ import TextField from "@mui/material/TextField";
 import sindhAssembly from "../assets/sindhAssemblywomen.png";
 import buildingBridge from "../assets/buildingBridge.png";
 import energybg from "../assets/energybg.png";
+import energyinnerpic1 from "../assets/energyinnerpic1.jpg";
+import energyinnerpic2 from "../assets/energyinnerpic2.jpg";
 
 function Energy(props) {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const loc = useLocation();
+  useEffect(() => {
+    let lm  = document.getElementById(loc.hash.slice(1));
+    
+    if (lm) {
+      lm.scrollIntoView({ behavior: 'smooth' });
+    }
+    else
+    {
+      window.scrollTo({top:0, left:0, behavior:'smooth'})
+      }
+  }, [loc])
   useEffect(() => {
 
     // Function to update the windowWidth state when the resize event occurs
@@ -188,13 +202,14 @@ function Energy(props) {
       </div>
       <div className="row my-5" style={{ justifyContent: "center" }}>
         <div
-          className="col-lg-9 descriptionImage"
+          className="col-lg-9 descriptionImageforsectorsandopport"
           style={{
-            background: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(${sindhAssembly})`,
+            background: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),url(${energyinnerpic2})`,
+            backgroundSize:"100% 100%"
           }}
         >
           <label className="agriAndFoodHeading">
-            Opportunities in the Agriculture & Food Processing Sector
+            Opportunities in the Energy Sector
           </label>
         </div>
       </div>
@@ -249,7 +264,7 @@ function Energy(props) {
         <div
           className="col-lg-9 descriptionImage"
           style={{
-            background: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(${sindhAssembly})`,
+            background: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),url(${energyinnerpic1})`,
           }}
         >
           <label className="agriAndFoodHeading">
@@ -309,7 +324,7 @@ function Energy(props) {
             className="InvestInSindhButton"
             onClick={handleLearnMoreClick2}
           >
-            <span style={{ width: "179px", height: "33px" }}>
+            <span id="expertform"   style={{ width: "179px", height: "33px" }}>
               {showFullText2 ? "Read Less" : "Read More"}
             </span>
           </button>

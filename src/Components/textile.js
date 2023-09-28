@@ -10,10 +10,33 @@ import MobileHeaderGeneric from "./MobileHeaderGeneric";
 import TextField from "@mui/material/TextField";
 import sindhAssembly from "../assets/sindhAssemblywomen.png";
 import buildingBridge from "../assets/buildingBridge.png";
-import  textilebg    from "../assets/textilebg.jpg"
+import  textilebg    from "../assets/textilebg.jpg";
+import  textileinnerpic1   from "../assets/textileinnerpic1.jpg";
+import  textileinnerpic2   from "../assets/textileinnerpic2.jpg"
+
+
+
 
 
 function Textile(props) {
+  
+  const loc = useLocation();
+  useEffect(() => {
+    let lm  = document.getElementById(loc.hash.slice(1));
+    
+    if (lm) {
+      lm.scrollIntoView({ behavior: 'smooth' });
+    }
+    else
+    {
+      window.scrollTo({top:0, left:0, behavior:'smooth'})
+      }
+  }, [loc]);
+   
+
+
+
+
 
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   useEffect(() => {
@@ -72,8 +95,10 @@ function Textile(props) {
  "Government Support and Incentives: The Sindh government has introduced various initiatives, schemes, and incentives to support and promote the agriculture and food processing sector. These include subsidies for modern machinery, financial assistance for infrastructure development, access to credit facilities, and specialized training programs, creating a conducive environment for business growth.",
  "Export Potential: Sindh's agriculture and food processing sector has significant export potential. With the ability to meet international quality standards, businesses can tap into global markets and benefit from increasing demand for high-quality agricultural products and processed food items.",
  "Sustainable Practices and Organic Farming: There is a growing trend towards sustainable agriculture and organic farming practices. Sindh provides ample opportunities for businesses to capitalize on the increasing consumer preference for organic and sustainable food products, positioning themselves as leaders in the industry.",
- "Collaboration and Research Opportunities: Sindh offers collaborative opportunities between the government, industry stakeholders, and research institutions. By fostering partnerships and supporting research and development initiatives, the sector benefits from innovation, knowledge exchange, and the development of new technologies."]
-  return (
+ "Collaboration and Research Opportunities: Sindh offers collaborative opportunities between the government, industry stakeholders, and research institutions. By fostering partnerships and supporting research and development initiatives, the sector benefits from innovation, knowledge exchange, and the development of new technologies."
+];
+ 
+ return (
     <>
       {window.innerWidth <= 500 ? <MobileHeaderGeneric /> : <GenericHeader />}
       {window.innerWidth <= 500 ? (
@@ -188,11 +213,11 @@ function Textile(props) {
         <div
           className="col-lg-9 descriptionImage"
           style={{
-            background: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(${sindhAssembly})`,
+            background: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(${textileinnerpic1})`,
           }}
         >
           <label className="agriAndFoodHeading">
-            Opportunities in the Agriculture & Food Processing Sector
+            Opportunities in the Textile Sector
           </label>
         </div>
       </div>
@@ -300,14 +325,15 @@ function Textile(props) {
             type="button"
             className="InvestInSindhButton"
             onClick={handleLearnMoreClick2}
-          >
-            <span style={{ width: "179px", height: "33px" }}>
+          > 
+            <span id="expertform" style={{ width: "179px", height: "33px" }}>
               {showFullText2 ? "Read Less" : "Read More"}
             </span>
           </button>
         </div>
       </div>
-      <div
+     
+      <div 
         className="row justify-content-center  divheight "
         style={{
           background: "#F7F7F7",
@@ -473,10 +499,12 @@ function Textile(props) {
           </div>
         </div>
       </div>
-      <div className="footerTop">
-      <Footer  />
-      </div>
+
+    
+    <div className="footerTop">
+    <Footer  />
+    </div>
     </>
   );
-}
+                } 
 export default Textile;

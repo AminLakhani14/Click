@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Header from "./Header";
 import Marque from './marque';
 import StatisticsBar from "./statisticsBar";
@@ -65,11 +65,12 @@ function Home(props) {
     }
       
   };
-  
+
+
   return (
     <>
      {windowWidth <=500 ?<MobileHome SindhitoggleLanguage={SindhitoggleLanguage} toggleLanguage={toggleLanguage} />:
-     <Header SindhitoggleLanguage={SindhitoggleLanguage} toggleLanguage={toggleLanguage}/>
+     <Header  SindhitoggleLanguage={SindhitoggleLanguage} toggleLanguage={toggleLanguage}/>
     }
     {windowWidth <=500 ?<MobileMarque  toggleLanguage={toggleLanguage}/>:""
     // <Marque />

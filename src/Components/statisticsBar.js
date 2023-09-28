@@ -77,7 +77,7 @@ function StatisticsBar(props) {
         <div className="body-box mt-3" style={{ height: "150px" }}>
           <div className="row ">
             <div className="col-12 mb-3">
-              <h1 className="mainHeading"
+              <h1 className="mainHeading highlightable"
                 style={
                   windowWidth < 500
                     ? {
@@ -101,8 +101,8 @@ function StatisticsBar(props) {
               }
               style={windowWidth < 500 ? { width: "34%" } : {}}
             >
-              <h2 className="heading2">{count}{translations["Million"][language]} +</h2>
-              <p className="paragraphGeneric">{translations["sindhpeople"][language]}</p>
+              <h2 className="heading2 highlightable">{count}{translations["Million"][language]} +</h2>
+              <p className="paragraphGeneric highlightable">{translations["sindhpeople"][language]}</p>
             </div>
             <div className={
               windowWidth < 500
@@ -112,8 +112,8 @@ function StatisticsBar(props) {
                 "col-lg-3"
             }
               style={windowWidth < 500 ? { width: "34%" } : {}}>
-              <h2 className="heading2">${count1} {translations["Billion"][language]} </h2>
-              <p className="paragraphGeneric">{translations["GDP"][language]}</p>
+              <h2 className="heading2 highlightable">${count1} {translations["Billion"][language]} </h2>
+              <p className="paragraphGeneric highlightable">{translations["GDP"][language]}</p>
             </div>
             <div className={
               windowWidth < 500
@@ -124,8 +124,8 @@ function StatisticsBar(props) {
             }
               style={windowWidth < 500 ? { width: "32%" } : {}}
             >
-              <h2 className="heading2">{count2} {translations["Million"][language]}</h2>
-              <p className="paragraphGeneric">{translations["Services"][language]}</p>
+              <h2 className="heading2 highlightable">{count2} {translations["Million"][language]}</h2>
+              <p className="paragraphGeneric highlightable">{translations["Services"][language]}</p>
             </div>
           </div>
         </div>

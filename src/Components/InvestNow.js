@@ -97,7 +97,7 @@ function InvestNow() {
           window.innerWidth < 500
             ? "mobilemainHeading"
             : 
-            "mainHeading"
+            "mainHeading highlightable"
         }>
           {translations["Growth"][language]}
         </h1>
@@ -112,7 +112,7 @@ function InvestNow() {
           <p data-aos="fade-up" className={
               window.innerWidth < 500
                 ? "mobilePara"
-                : "InvestnowParagraphh"
+                : "InvestnowParagraphh highlightable"
             }>
             {translations["Version"][language]}
           </p>

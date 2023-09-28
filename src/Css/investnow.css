@@ -548,6 +548,22 @@
   background-repeat: no-repeat !important;
   background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)),
     url("../assets/GROWTH.png");
+    
+}
+
+
+.descriptionImageforsectorsandopport{
+  width: 80%;
+  display: flex;
+  height: 445px !important;
+
+  background-repeat: no-repeat !important;
+  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)),
+    url("../assets/GROWTH.png");
+ 
+  background-position: center !important;
+
+    
 }
 
 .Frozen {

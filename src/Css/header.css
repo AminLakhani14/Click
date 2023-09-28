@@ -33,6 +33,9 @@
   font-size: var(--font-size);
   color: #5f5f5f;
 }
+.mob_favorite{
+  font-size: 18px;
+}
 
 .heading2 {
   font-size: var(--heading-2)
@@ -388,7 +391,14 @@ li {
   color: rgb(255, 255, 255);
   background: linear-gradient(180deg, #720d1d 0%, #1f0308 100%);
   padding: 5px 10px 5px 10px;
+  /* margin: 0px !important; */
+  /* display: flex; */
+  background-color: red;
+  /* justify-content: center; */
 }
+/* .comingsoon{
+  text-decoration: none;
+} */
 
 .update {
   border: none;
@@ -592,6 +602,16 @@ box-shadow: #000000;
     url(../assets/pexels-henry.png);
   background-repeat: no-repeat;
 }
+/* .home_resource{
+  background: linear-gradient(rgb(149 144 144 / 22%), rgb(149 144 144 / 22%));
+}
+.home_resource_1{
+  background: linear-gradient(rgb(149 144 144 / 22%), rgb(149 144 144 / 22%));
+  margin-top: 100px !important;
+  
+  
+
+} */
 
 .aboutCard {
   background: url("../assets/aboutus.png") !important;
@@ -613,7 +633,11 @@ box-shadow: #000000;
   text-align: left;
   width: 280px !important;
 }
+.mob_ch_title{
+  font-size: 20px;
+  line-height: 20px;
 
+}
 .title {
   color: #000000;
   font-size: var(--main-heading);
@@ -1519,6 +1543,16 @@ path {
     justify-content: center;
     padding-top: 25px;
   }
+  .email{
+    /* background-color: black !important; */
+    /* display: flex !important;
+    justify-content: center !important; */
+    width: 100% !important;
+    margin-left: 20px !important;
+    padding: 0px !important;
+    width: 500px !important;
+    padding: 500px;
+  }
 
 }
 
@@ -1550,9 +1584,15 @@ path {
     width: 315px !important;
   }
 
-  .vl {
+  /* .vl {
     margin-left: 9px !important;
     margin-right: 0px !important;
+    margin-top: 39px !important;
+  } */
+  /* /// logo gray verticle line center align with both logos // */
+.vl {
+    margin-left: 8px !important;
+    margin-right: 1px !important;
     margin-top: 39px !important;
   }
 
@@ -1568,7 +1608,8 @@ path {
     display: none;
   }
   .footerTop{
-    margin-top: 280px !important;
+    /* margin-top: 280px !important; */
+    width: 100%;
   }
   .sticky-icon {
     display: none;
@@ -1749,8 +1790,29 @@ path {
   text-decoration: underline;
 }
 
+.footer_content{
+/* background-color: red; */
+padding-left: 4px !important;
+
+/* margin-top: -100px !important; */
+/* margin-left: auto !important; */
+/* text-align: center; */
+}
 
 
 .paragraphAlign{
 text-align: right;
+}
+.bold{
+  font-weight: bolder;
+  background-color: pink;
+}
+.header_logo_container {
+  width: "21%";
+  height: "130px"
+}
+@media only screen and (min-width: 1200px) and (max-width: 1920px){
+  .vl{
+   margin-left: 15px;
+  }
 }

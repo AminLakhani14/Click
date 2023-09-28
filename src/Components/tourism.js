@@ -10,9 +10,25 @@ import TextField from "@mui/material/TextField";
 import sindhAssembly from "../assets/sindhAssemblywomen.png";
 import buildingBridge from "../assets/buildingBridge.png";
 import tourismBG2 from "../assets/tourismBG2.jpg";
+import tourisminnerpic1 from "../assets/tourisminnerpic1jpg.jpg";
+import tourisminnerpic2 from "../assets/tourisminnerpic2.png"
+
 
 function Tourism(props) {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+  const loc = useLocation();
+  useEffect(() => {
+    let lm  = document.getElementById(loc.hash.slice(1));
+    
+    if (lm) {
+      lm.scrollIntoView({ behavior: 'smooth' });
+    }
+    else
+    {
+      window.scrollTo({top:0, left:0, behavior:'smooth'})
+      }
+  }, [loc])
   useEffect(() => {
 
     // Function to update the windowWidth state when the resize event occurs
@@ -192,11 +208,12 @@ function Tourism(props) {
         <div
           className="col-lg-9 descriptionImage"
           style={{
-            background: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(${sindhAssembly})`,
+            background: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(${tourisminnerpic1 })`,
+            
           }}
         >
           <label className="agriAndFoodHeading">
-            Opportunities in the Agriculture & Food Processing Sector
+            Opportunities in the Tourism Sector
           </label>
         </div>
       </div>
@@ -249,9 +266,12 @@ function Tourism(props) {
       </div>
       <div className="row my-5" style={{ justifyContent: "center" }}>
         <div
-          className="col-lg-9 descriptionImage"
+          className="col-lg-9  descriptionImageforsectorsandopport"
           style={{
-            background: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(${sindhAssembly})`,
+            background: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(${tourisminnerpic2})`,
+            backgroundSize: "100% 150%"
+           
+            
           }}
         >
           <label className="agriAndFoodHeading">
@@ -311,7 +331,7 @@ function Tourism(props) {
             className="InvestInSindhButton"
             onClick={handleLearnMoreClick2}
           >
-            <span style={{ width: "179px", height: "33px" }}>
+            <span id="expertform" style={{ width: "179px", height: "33px" }}>
               {showFullText2 ? "Read Less" : "Read More"}
             </span>
           </button>

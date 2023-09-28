@@ -10,8 +10,23 @@ import sindhAssembly from "../assets/sindhAssemblywomen.png";
 import buildingBridge from "../assets/buildingBridge.png";
 import manufacturebg from "../assets/manufacturebg.jpg";
  import "../Css/resource.css";
+ import manufactinnerpic1 from "../assets/manufactinnerpic1.jpg";
+ import manufactinnerpic2 from "../assets/manufactinnerpic2.jpg";
+
 
 function Manufacturing(props) {
+  const loc = useLocation();
+  useEffect(() => {
+    let lm  = document.getElementById(loc.hash.slice(1));
+    
+    if (lm) {
+      lm.scrollIntoView({ behavior: 'smooth' });
+    }
+    else
+    {
+      window.scrollTo({top:0, left:0, behavior:'smooth'})
+      }
+  }, [loc])
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   useEffect(() => {
 
@@ -224,11 +239,12 @@ function Manufacturing(props) {
         <div
           className="col-lg-9 descriptionImage"
           style={{
-            background: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(${sindhAssembly})`,
+            background: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),url(${manufactinnerpic2})`,
+            
           }}
         >
           <label className="agriAndFoodHeading">
-            Opportunities in the Agriculture & Food Processing Sector
+            Opportunities in the Manufacturing Sector
           </label>
         </div>
       </div>
@@ -281,10 +297,10 @@ function Manufacturing(props) {
       </div>
       <div className="row my-5" style={{ justifyContent: "center" }}>
         <div
-          className="col-lg-9 descriptionImage"
+          className="col-lg-9 descriptionImageforsectorsandopport"
           style={{
-            background: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(${sindhAssembly})`,
-            
+            background: `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),url(${manufactinnerpic1})`,
+            backgroundSize:"100% 124%"
           }}
         >
           <label className="agriAndFoodHeading">
@@ -344,7 +360,7 @@ function Manufacturing(props) {
             className="InvestInSindhButton"
             onClick={handleLearnMoreClick2}
           >
-            <span style={{ width: "179px", height: "33px" }}>
+            <span id="expertform"  style={{ width: "179px", height: "33px" }}>
               {showFullText2 ? "Read Less" : "Read More"}
             </span>
           </button>

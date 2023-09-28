@@ -112,7 +112,7 @@ export default class RegulatoryCatalogCalculatorGrid extends React.PureComponent
           columns={this.state.columns}
           onRowclick={this.onRowclick}
           height={300}
-          width={"100%"}
+          width={"110%"}
           editable={false}
           columnsresize={true}
           columnsreorder={true}
@@ -135,10 +135,11 @@ export default class RegulatoryCatalogCalculatorGrid extends React.PureComponent
             right: 0,
             background: "#f2f2f2", // Gray background color
             zIndex: 10, // Ensure it stays on top of the grid
+            width:"110%"
           }}
         >
           <div style={{ fontWeight: "bold" ,width:"501px",borderRight:"1px solid #E0E0E0",paddingTop:"11px",paddingLeft:"10px",width:"66%"}}>Total:</div>{" "}
-          <div style={{paddingTop:"11px",paddingLeft:"3px",width:"34%",marginLeft:"-2px",textAlign:"right"}}>{totalValue.toFixed(2)}</div>
+          <div style={{paddingTop:"11px",paddingLeft:"3px",width:"35%",marginLeft:"-2px",textAlign:"right"}}>{totalValue.toFixed(2)}</div>
         </div>
       </div>
     );
