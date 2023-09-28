@@ -7,26 +7,35 @@ export default class RegulatoryCatalogCalculatorGrid extends React.PureComponent
 
     this.state = {
       columns: [
+        // {
+        //   text: "Validity",
+        //   datafield: "validityYear",
+        //   width: "30%",
+        //   cellsalign: "left",
+        //   align: "left",
+        //   editable: false,
+        // },
         {
-          text: "Time Line",
-          datafield: "timeLineText",
-          width: "35%",
+          text: "Department",
+          datafield: "departments",
+          width: "75%",
           cellsalign: "left",
           align: "left",
           editable: false,
         },
-        {
-          text: "Validity",
-          datafield: "validityYear",
-          width: "30%",
-          cellsalign: "left",
-          align: "left",
-          editable: false,
-        },
+        // {
+        //   text: "Time Line",
+        //   datafield: "timeLineText",
+        //   width: "25%",
+        //   cellsalign: "left",
+        //   align: "left",
+        //   editable: false,
+        // },
+
         {
           text: "Fee",
           datafield: "feeValue",
-          width: "35%",
+          width: "25%",
           cellsalign: "right",
           align: "right",
           editable: false,
@@ -58,7 +67,7 @@ export default class RegulatoryCatalogCalculatorGrid extends React.PureComponent
       datafields: [
         { name: "timeLineText", type: "string" },
         { name: "feeValue", type: "string" },
-        { name: "validityYear", type: "string" },
+        { name: "departments", type: "string" },
         { name: "id", type: "string" },
       ],
     };
