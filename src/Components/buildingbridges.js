@@ -93,7 +93,7 @@ function BuildingBridges(props) {
 
       <div style={{ background: `url(${buildingBridge})` }} className="SiteMain2">
         <h1
-          className={`slide-in-left Investnow-h1 ${
+          className={`slide-in-left Investnow-h1 highlightable ${
             isVisible ? "" : "slide-out-left"
           }`}
         >
@@ -172,7 +172,7 @@ function BuildingBridges(props) {
           paddingTop: "35px",
         }}
       >
-        <h1 className="mainHeading">Agriculture And Food Processing</h1>
+        <h1 className="mainHeading highlightable">Agriculture And Food Processing</h1>
         <div
           className="col-lg-10"
           style={{
@@ -181,7 +181,7 @@ function BuildingBridges(props) {
             textAlign: "left",
           }}
         >
-          <p className="InvestnowParagraphh">
+          <p className="InvestnowParagraphh highlightable">
             As a province blessed with fertile lands, a favorable climate, and a
             deep-rooted agricultural heritage, Sindh stands as a thriving hub
             for agricultural production and food processing. From bountiful
@@ -203,7 +203,7 @@ function BuildingBridges(props) {
             background: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(${sindhAssembly})`,
           }}
         >
-          <label className="agriAndFoodHeading">
+          <label className="agriAndFoodHeading highlightable">
             Opportunities in the Agriculture & Food Processing Sector
           </label>
         </div>
@@ -262,7 +262,7 @@ function BuildingBridges(props) {
             background: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(${sindhAssembly})`,
           }}
         >
-          <label className="agriAndFoodHeading">
+          <label className="agriAndFoodHeading highlightable">
             Government Initiatives and Support
           </label>
         </div>
@@ -276,7 +276,7 @@ function BuildingBridges(props) {
       >
         <div className="col-lg-1"></div>
         <div className="col-lg-10">
-          <label className="f-size" style={{ marginBottom: "25px" }}>
+          <label className="f-size highlightable" style={{ marginBottom: "25px" }}>
           The Sindh government is committed to fostering a thriving agriculture and food processing sector by implementing proactive measures and offering comprehensive support to businesses. Recognizing the pivotal role of this sector in the province's economic growth, the government has introduced various initiatives to facilitate investment, promote innovation, and ensure sustainability.
           </label>
           <ul
@@ -328,7 +328,7 @@ function BuildingBridges(props) {
         }}
       >
         <label
-          className="mainHeading"
+          className="mainHeading highlightable"
           style={{
             display: "flex",
             justifyContent: "center",

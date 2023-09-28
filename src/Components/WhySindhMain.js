@@ -50,7 +50,7 @@ function WhySindhMain() {
       {windowWidth <= 500 ? <MobileHeaderGeneric /> : <GenericHeader />}
 
       <div style={{ background: `url(${whySindh})` }} className="siteHeader">
-        <h1 data-aos="fade-up" className="Investnow-h1">
+        <h1 data-aos="fade-up" className="Investnow-h1 highlightable">
          
           {translations["WhySindh"][language]}
         </h1>
@@ -86,7 +86,7 @@ function WhySindhMain() {
           className={
             windowWidth < 500
               ? "mobilemainHeading"
-              : "mainHeading"
+              : "mainHeading highlightable"
           }
         >
          {translations["DAOS"][language]}
@@ -103,7 +103,7 @@ function WhySindhMain() {
             className={
               windowWidth < 500
                 ? "mobilePara"
-                :  "InvestnowParagraphh" 
+                :  "InvestnowParagraphh highlightable" 
             }
           >
            
@@ -119,7 +119,7 @@ function WhySindhMain() {
                 : "col-lg-9 descriptionImage"}
           style={{ background: `url(${GateWayImage})` }}
         >
-          <label className={"agriAndFoodHeading"}
+          <label className={"agriAndFoodHeading highlightable"}
             data-aos="fade-up"
           >
           {translations["GatewayToGrowth"][language]}            
@@ -133,7 +133,7 @@ function WhySindhMain() {
       >
         <div className="col-lg-5">
           <label
-            className={"f-size"}
+            className={"f-size highlightable"}
             data-aos="fade-up"
           >
            {translations["WhySindh2ndpara"][language]}
@@ -174,7 +174,7 @@ function WhySindhMain() {
           style={{ background: `url(${EconomicPowerHouse})` }}
         >
           <label
-            className={"agriAndFoodHeading"}
+            className={"agriAndFoodHeading highlightable"}
             data-aos="fade-up"
           >
              {translations["EconomicPowerhouse"][language]}
@@ -190,7 +190,7 @@ function WhySindhMain() {
       >
         <div className="col-lg-5">
           <label
-          className={"f-size"}
+          className={"f-size highlightable"}
           data-aos="fade-up"
           >
             {translations['WhySindh3rdpara'][language]}
@@ -235,7 +235,7 @@ function WhySindhMain() {
           style={{ background: `url(${buildingBridge})` }}
         >
           <label 
-          className={"agriAndFoodHeading"}
+          className={"agriAndFoodHeading highlightable"}
           data-aos="fade-up"
           >
             {translations["BuildingBridgestoS"][language]}
@@ -249,7 +249,7 @@ function WhySindhMain() {
       >
         <div className="col-lg-5">
           <label
-           className={"f-size "}
+           className={"f-size highlightable"}
            data-aos="fade-up">
              {translations["WhySindh4thpara"][language]}
           </label>
@@ -290,7 +290,7 @@ function WhySindhMain() {
           style={{ background: `url(${diverseHorizon})` }}
         >
           <label
-          className="agriAndFoodHeading" data-aos="fade-up"
+          className="agriAndFoodHeading highlightable" data-aos="fade-up"
           >
            {translations["DiverseHorizons"][language]}
           </label>
@@ -305,7 +305,7 @@ function WhySindhMain() {
       >
         <div className="col-lg-5">
           <label
-          className="f-size" data-aos="fade-up"
+          className="f-size highlightable" data-aos="fade-up"
           >
             {translations["WhySindh5thpara"][language]}
           </label>
@@ -340,7 +340,7 @@ function WhySindhMain() {
           className={
             windowWidth < 500
               ? "mobilemainHeading"
-              : "mainHeading"
+              : "mainHeading highlightable"
           }
         >
           {translations['SeizeTheOpportunity'][language]}

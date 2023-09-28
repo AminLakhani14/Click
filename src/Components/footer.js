@@ -280,7 +280,7 @@ function Footer(props) {
                 className={
                   window.innerWidth <= 1366
                     ? "sub-footertitle"
-                    : "sub-title"
+                    : "sub-title highlightable"
                 }
                 style={
                   windowWidth < 500
@@ -473,7 +473,7 @@ function Footer(props) {
             }
           >
             <div>
-              <p style={windowWidth < 500 ? { fontWeight: "bold", fontSize: "10px" } : { fontWeight: "bold", marginTop: "11px" }}>
+              <p className="highlightable" style={windowWidth < 500 ? { fontWeight: "bold", fontSize: "10px" } : { fontWeight: "bold", marginTop: "11px" }}>
               {translations["Version"][language]} 0.05.09.0023
               </p>
             </div>
@@ -485,7 +485,7 @@ function Footer(props) {
               }
             >
               <p
-                className="sub-title "
+                className="sub-title highlightable"
                 style={windowWidth < 500 ? { marginTop: "0px" } : { fontWeight: "bold", marginTop: "11px" }}
               >
                 {translations["Copyright"][language]}
@@ -509,7 +509,7 @@ function Footer(props) {
               }
             >
               <p
-                className="sub-title "
+                className="sub-title highlightable"
                 style={windowWidth < 500 ? { marginTop: "0px" } : { fontWeight: "bold", marginTop: "10px" }}
               >
                 {translations["Powered"][language]}

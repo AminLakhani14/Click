@@ -26,17 +26,18 @@ import { ReactComponent as UpColor } from "../assets/upColor.svg";
 import design from "../assets/design.mp4";
 import { Link } from "react-router-dom";
 import GenericHeader from "./genericHeader";
-import { Tooltip } from "antd";
+import { Dropdown, Tooltip } from "antd";
 import { useMemo } from "react";
 import { translations } from "../Transalation/Transalation";
 import { useSelector } from "react-redux";
-import { Button, TextField } from "@mui/material";
+import { Button, TextField, ToggleButton } from "@mui/material";
 import Search from "antd/es/input/Search";
-import { handleSearch, searchText } from "../Route";
+import { currentIndex, handleSearch, navigateNext, navigatePrevious, searchText } from "../Route";
+import DropdownButton from "antd/es/dropdown/dropdown-button";
 
 
 function Header(props) {
-const {language} = useSelector((state)=>state.language)
+  const { language } = useSelector((state) => state.language)
 
   const [isHovered, setIsHovered] = useState(false);
 
@@ -81,6 +82,13 @@ const {language} = useSelector((state)=>state.language)
   const handleClose = () => {
     setShowAllDivs(false);
   };
+
+  const [isPopupOpen, setIsPopupOpen] = useState(false);
+
+  const handleTogglePopup = () => {
+    setIsPopupOpen(!isPopupOpen);
+  };
+
 
   useEffect(() => {
     // Function to add event listeners when the component mounts
@@ -473,7 +481,6 @@ const {language} = useSelector((state)=>state.language)
 
   //       // Scroll to the element
   //       element.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-  //       console.log(matchText)
 
   //       return; // Stop searching after finding the first match
   //     } else {
@@ -482,23 +489,40 @@ const {language} = useSelector((state)=>state.language)
   //     }
   //   }
   // };
-  console.log("naem",props.HeaderSearch)
-  console.log("text",props.Text)
-
   const [searchInput, setSearchInput] = useState('');
-  const SearchBox = ( 
+
+  const SearchBox = (
     <div
       className="d-flex justify-content-between"
       style={{ width: "325px", height: "60px" }}
     >
       <input
-          type="text"
-          id="searchText"
-          style={{ width: "240px", maxWidth: "240px", height: "60px" }}
-          value={searchInput}
-          onChange={(e) => setSearchInput(e.target.value)}
-        />
-        <button className="update" onClick={handleSearch}>Search</button>
+        type="text"
+        id="searchText"
+        style={{ width: "240px", maxWidth: "240px", height: "60px" }}
+        value={searchInput}
+        onChange={(e) => setSearchInput(e.target.value)}
+      />
+      <label style={{ color: "black", paddingTop: "20px", paddingLeft: "5px", fontSize: "20px" }}>{`${currentIndex}/${currentIndex}`}</label>
+      <div style={{ display: "flex", flexDirection: "row", justifyContent: "space-between", paddingLeft: "25px", paddingRight: "25px", paddingTop: "20px" }}>
+        <div style={{ paddingRight: "20px" }}>
+          <i
+          onClick={navigatePrevious}
+            className={`fa fa-chevron-up`}
+        style={{ color: "black" }}
+        
+          ></i>
+        </div>
+        <div>
+          <i
+          onClick={navigateNext}
+            className={`fa fa-chevron-down`}
+        style={{ color: "black" }}
+       
+          ></i>
+        </div>
+      </div>
+      <button className="update" onClick={handleSearch}>Search</button>
     </div>
   );
 
@@ -529,27 +553,27 @@ const {language} = useSelector((state)=>state.language)
                     //   ? { width: "21%", height: "130px" }
                     //   : { width: "16%", height: "150px" }
                     windowWidth <= 1366
-                    ? {
-                      marginLeft: "15px",
-                      marginRight: "-4px",
-                      // marginTop: "39px",
-                    }
-                    : {
-                      marginLeft: "22px",
-                      marginRight: "7px",
-                      // marginTop: "39px",
-                    }
+                      ? {
+                        marginLeft: "15px",
+                        marginRight: "-4px",
+                        // marginTop: "39px",
+                      }
+                      : {
+                        marginLeft: "22px",
+                        marginRight: "7px",
+                        // marginTop: "39px",
+                      }
                   }
                 >
                   <a href="https://www.sindh.gov.pk/" target="_blank">
-                  <img
-                    src={sindh}
-                    alt=""
-                    className="marginDPI"
-                    width={windowWidth <= 1440 ? "95" : "115"}
-                    height={windowWidth <= 1440 ? "115" : "135"}
-                  />
-                </a>
+                    <img
+                      src={sindh}
+                      alt=""
+                      className="marginDPI"
+                      width={windowWidth <= 1440 ? "95" : "115"}
+                      height={windowWidth <= 1440 ? "115" : "135"}
+                    />
+                  </a>
                 </div>
                 <div className="vl"></div>
                 <img
@@ -587,7 +611,7 @@ const {language} = useSelector((state)=>state.language)
                   alt=""
                   onClick={props.toggleLanguage}
                   // style={{ marginLeft: "20px", marginRight: "20px" }}
-                  style={language == "ur" ?{height:"10px",width:"50px",marginLeft: "20px", marginRight: "20px"}:{marginLeft: "20px", marginRight: "20px"}}
+                  style={language == "ur" ? { height: "10px", width: "50px", marginLeft: "20px", marginRight: "20px" } : { marginLeft: "20px", marginRight: "20px" }}
                 />
                 <img
                   className="headerLogoImages"
@@ -596,7 +620,7 @@ const {language} = useSelector((state)=>state.language)
                   alt=""
                   onClick={props.SindhitoggleLanguage}
                   // style={{ marginLeft: "20px", marginRight: "20px" }}
-                  style={language == "sd" ?{height:"10px",width:"50px",marginLeft: "20px", marginRight: "20px"}:{marginLeft: "20px", marginRight: "20px"}}
+                  style={language == "sd" ? { height: "10px", width: "50px", marginLeft: "20px", marginRight: "20px" } : { marginLeft: "20px", marginRight: "20px" }}
                 />
                 <a href="comingsoon.html">
                   <button type="button" className="login">
@@ -615,7 +639,7 @@ const {language} = useSelector((state)=>state.language)
             </div>
             {isSticky === true ? (
               <div style={{ position: "relative", zIndex: "99999999999" }}>
-                <GenericHeader toggleLanguage={props.toggleLanguage} SindhitoggleLanguage={props.SindhitoggleLanguage} handleSearch={props.handleSearch}  searchTextRef={props.searchTextRef}/>
+                <GenericHeader toggleLanguage={props.toggleLanguage} SindhitoggleLanguage={props.SindhitoggleLanguage} handleSearch={props.handleSearch} searchTextRef={props.searchTextRef} />
               </div>
             ) : (
               <div className={`header `}>
@@ -890,7 +914,7 @@ const {language} = useSelector((state)=>state.language)
                                 style={{ width: "200px", marginTop: "40px" }}
                               >
                                 <Link className={""} to={"/textile#expertform"}>
-                                  <a  href="#">
+                                  <a href="#">
                                     {
                                       translations["Talktoexpert"][
                                       language
@@ -979,7 +1003,7 @@ const {language} = useSelector((state)=>state.language)
                                 style={{ width: "200px", marginTop: "80px" }}
                               >
                                 <Link className={""} to={"/tourism#expertform"} >
-                                  <a  href="#">
+                                  <a href="#">
                                     {
                                       translations["Talktoexpert"][
                                       language
@@ -1068,7 +1092,7 @@ const {language} = useSelector((state)=>state.language)
                                 style={{ width: "200px", marginTop: "120px" }}
                               >
                                 <Link className={""} to={"/agriculture#expertform"}>
-                                  <a  href="#"  >
+                                  <a href="#"  >
                                     {
                                       translations["Talktoexpert"][
                                       language
@@ -1160,7 +1184,7 @@ const {language} = useSelector((state)=>state.language)
                                 style={{ width: "200px", marginTop: "160px" }}
                               >
                                 <Link className={""} to={"/education#expertform"}>
-                                  <a  href="#">
+                                  <a href="#">
                                     {
                                       translations["Talktoexpert"][
                                       language
@@ -1248,7 +1272,7 @@ const {language} = useSelector((state)=>state.language)
                                 class="dropdown-content nested-content nested-right"
                                 style={{ width: "200px", marginTop: "200px" }}
                               >
-                                <Link  className={""} to={"/energy#expertform"}>
+                                <Link className={""} to={"/energy#expertform"}>
                                   <a href="#">
                                     {
                                       translations["Talktoexpert"][
@@ -1335,8 +1359,8 @@ const {language} = useSelector((state)=>state.language)
                                 class="dropdown-content nested-content nested-right"
                                 style={{ width: "200px", marginTop: "240px" }}
                               >
-                                <Link  className={""} to={"/health#expertform"}>
-                                  <a  href="#">
+                                <Link className={""} to={"/health#expertform"}>
+                                  <a href="#">
                                     {
                                       translations["Talktoexpert"][
                                       language
@@ -1427,8 +1451,8 @@ const {language} = useSelector((state)=>state.language)
                                 class="dropdown-content nested-content nested-right"
                                 style={{ width: "200px", marginTop: "280px" }}
                               >
-                                <Link  className={""}  to={"/informationtech#expertform"}>
-                                  <a  href="#">
+                                <Link className={""} to={"/informationtech#expertform"}>
+                                  <a href="#">
                                     {
                                       translations["Talktoexpert"][
                                       language
@@ -1701,29 +1725,39 @@ const {language} = useSelector((state)=>state.language)
                         </a>
                       </li>
                       <li>
-                        <a  title="" width="10">
-                          <Tooltip
-                            overlayInnerStyle=
-                            {{ borderRadius: "0px",
-                            width: "350px",
-                            minWidth: "350px",
-                             position: "relative",
-                             right: "100px"}}
-                            color={"#Ffffff"}
-                            placement="bottomLeft"
-                            title={SearchBox}
-                            arrow={mergedArrow}
-                          >
+                        <div>
+                          <a title="" width="10" onClick={handleTogglePopup}>
                             <i
                               className="fa-sharp fa-solid fa-magnifying-glass"
-                              style={
-                                isSticky
-                                  ? { color: "#000000" }
-                                  : { color: "#ffffff" }
-                              }
+                              style={isSticky ? { color: "#000000" } : { color: "#ffffff" }}
                             ></i>
-                          </Tooltip>
-                        </a>
+                          </a>
+                          {isPopupOpen && (
+                            <div
+                              className="custom-popup"
+                              style={{
+                                borderRadius: "0px",
+                                width: "410px",
+                                minWidth: "410px",
+                                height: "70px",
+                                position: "absolute",
+                                paddingTop: "5px",
+                                paddingLeft: "10px",
+                                marginTop: "10px",
+                                right: "20px",
+                                backgroundColor: "#ffffff",
+                                boxShadow: "0px 2px 4px rgba(0, 0, 0, 0.2)",
+                                // Add other styles as needed
+                              }}
+                            >
+                              {/* Popup content */}
+
+                              {SearchBox}
+                              {mergedArrow}
+
+                            </div>
+                          )}
+                        </div>
                       </li>
                     </ul>
                   </div>

@@ -54,6 +54,7 @@ function MobileGallery(props) {
           <div className="row mt-4 mb-3">
             <div className="col-12 -">
               <h1
+              className="highlightable"
                 style={{
                   color: "#054a91",
                   fontWeight: "700",
@@ -116,7 +117,7 @@ function MobileGallery(props) {
                         draggable="false"
                       ></img>
                     </div>
-                    <p className="card__name">{translations["BREADY"][language]}</p>
+                    <p className="card__name highlightable">{translations["BREADY"][language]}</p>
                   </li>
                 </div>
                 </div>
@@ -131,7 +132,7 @@ function MobileGallery(props) {
                           draggable="false"
                         ></img>
                       </div>
-                      <p className="mobilecard__name">{translations["RequestInformation"][language]}</p>
+                      <p className="mobilecard__name highlightable">{translations["RequestInformation"][language]}</p>
                     </li>
                   </div>
                 </div>
@@ -142,7 +143,7 @@ function MobileGallery(props) {
                       <div className="img">
                         <img src={rate} alt="img" draggable="false"></img>
                       </div>
-                      <p className="mobilecard__name">{translations["Feedback"][language]}</p>
+                      <p className="mobilecard__name highlightable">{translations["Feedback"][language]}</p>
                     </li>
                     ‍
                   </div>
@@ -154,7 +155,7 @@ function MobileGallery(props) {
                       <div className="img">
                         <img src={calculator} alt="img" draggable="false"></img>
                       </div>
-                      <p className="card__name" style={{marginBottom: "-28px"}}>
+                      <p className="card__name highlightable" style={{marginBottom: "-28px"}}>
                     {translations["RegulatoryCost"][language]} <br /> {translations["Calculator"][language]}
                     </p>
                     </li>
@@ -172,7 +173,7 @@ function MobileGallery(props) {
                           draggable="false"
                         ></img>
                       </div>
-                      <p className="mobilecard__name">{translations["KarachiFund"][language]}</p>
+                      <p className="mobilecard__name highlightable">{translations["KarachiFund"][language]}</p>
                     </li>
                   </div>
                 </div>

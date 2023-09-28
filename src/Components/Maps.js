@@ -551,7 +551,7 @@ console.log(newValue)
           paddingTop:  window.innerWidth < 500? "22px": "175px"
         }}
       >
-        <h1 className="mainHeading">Discover Sindh</h1>
+        <h1 className="mainHeading highlightable">Discover Sindh</h1>
         <div
           className="col-lg-10"
           style={{
@@ -559,7 +559,7 @@ console.log(newValue)
             textAlign: "justify",
           }}
         >
-          <p className="aboutUsParagraphh">
+          <p className="aboutUsParagraphh highlightable">
             Your visual guide to the abundant opportunities that await in Sindh.
             Explore our interactive map, where each pinned marker represents a
             distinct sector brimming with potential. Whether you're interested
@@ -616,7 +616,7 @@ console.log(newValue)
             </div>
           </Tooltip>
           <div>
-            <p className="mt-1">{counter}%</p>
+            <p className="mt-1 highlightable">{counter}%</p>
           </div>
           <Tooltip
             overlayInnerStyle={{ borderRadius: "0px" }}

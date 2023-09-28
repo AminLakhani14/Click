@@ -143,7 +143,7 @@ function  MobileMessage(props) {
         <div className="body-box">
           <div className="row">
             <div className="col-12 ">
-            <h1 style={{color: "#054a91", fontWeight: "700",
+            <h1  className="highlightable" style={{color: "#054a91", fontWeight: "700",
                     fontFamily: "Crimson Pro !important",
                     fontSize: "30px",
                     marginLeft: "-30px"
@@ -245,9 +245,9 @@ function  MobileMessage(props) {
                   </a>
                   <div className="media-body" style={{width:"304px"}}>
                     {/* <h3 className="title">Syed Qasim Naveed Qamar </h3> */}
-                    <h3 className="title">{imgFormData.name[language]}</h3>
+                    <h3 className="title highlightable">{imgFormData.name[language]}</h3>
                     <p
-                      className="card-subtitle"
+                      className="card-subtitle highlightable"
                       style={
                         language === "ur" || language === "sd"
                           ? { display: "contents", fontWeight: "400", color: "rgb(163, 163, 163)",textAlign:"left" }
@@ -268,7 +268,7 @@ function  MobileMessage(props) {
                   className={
                     language === "ur" || language === "sd"
                       ? "sub-title paragraphAlign"
-                      : "sub-title "
+                      : "sub-title highlightable"
                   }>
                     {imgFormData.desc[language]}
                   </p>

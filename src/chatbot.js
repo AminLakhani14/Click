@@ -162,7 +162,7 @@ const Chatbot = () => {
         <div className="chatbot-container">
           <div className="chatbot-header">
             <h2 className="chatbotHeaderText">CLICK virtual assistant</h2>
-            <p style={{ textAlign: "left", marginBottom: "11px" }}>
+            <p className="highlightable" style={{ textAlign: "left", marginBottom: "11px" }}>
               Ask me anything
             </p>
           </div>
@@ -185,7 +185,7 @@ const Chatbot = () => {
           </div>
           {askingAnythingElse && !conversationEnded && (
             <div className="any-thing-else">
-              <p>Anything else?</p>
+              <p className="highlightable">Anything else?</p>
               <div className="d-flex">
                 <button onClick={handleYesButtonClick}>Yes</button>
                 <button onClick={handleNoButtonClick}>No</button>

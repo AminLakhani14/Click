@@ -44,7 +44,7 @@ export default function Resource() {
       >
         <div className="col-lg-2"></div>
         <div className="col-lg-8">
-          <h1 className="mainHeading" style={{display:'flex', justifyContent:'center'}}>Download</h1>
+          <h1 className="mainHeading highlightable" style={{display:'flex', justifyContent:'center'}}>Download</h1>
         </div>
         <div className="col-lg-2"></div>
       </div>
@@ -72,7 +72,7 @@ export default function Resource() {
                 <img style={{boxShadow: '5px 8px 5px rgba(0, 0, 0, 0.2)'}} src={businesscard1} width="100%" height="250px"></img>
               </div>
               <div className="cardInnerRight" style={{boxShadow: '5px 8px 5px rgba(0, 0, 0, 0.2)'}}>
-                <h2 className="cardHeading" >
+                <h2 className="cardHeading highlightable" >
                 List of Legal Documents
                 </h2>
                 <button type="button" className="resourceButton">
@@ -85,7 +85,7 @@ export default function Resource() {
                 <img style={{boxShadow: '5px 8px 5px rgba(0, 0, 0, 0.2)'}} src={cardImage} width="100%" height="250px"></img>
               </div>
               <div className="cardInnerRight" style={{boxShadow: '5px 8px 5px rgba(0, 0, 0, 0.2)'}}>
-                <h2 className="cardHeading">Pakistan Regulatory Guidebook</h2>
+                <h2 className="cardHeading highlightable">Pakistan Regulatory Guidebook</h2>
                 <button type="button" className="resourceButton">
                   <span>View Documents</span>
                 </button>
@@ -96,7 +96,7 @@ export default function Resource() {
                 <img style={{boxShadow: '5px 8px 5px rgba(0, 0, 0, 0.2)'}}  src={cardImage} width="100%" height="250px"></img>
               </div>
               <div className="cardInnerRight" style={{boxShadow: '5px 8px 5px rgba(0, 0, 0, 0.2)'}}>
-                <h2 className="cardHeading">
+                <h2 className="cardHeading highlightable">
                   From Swimming in Sand to High and Sustainable Growth – WBG
                 </h2>
                 <button type="button" className="resourceButton">
@@ -130,7 +130,7 @@ export default function Resource() {
                 <img src={businesscard1} width="100%" height="250px"></img>
               </div>
               <div className="cardInnerRight">
-                <h2 className="cardHeading">
+                <h2 className="cardHeading highlightable">
                  List of Legal Documents
                 </h2>
                 <button type="button" className="resourceButton">
@@ -147,7 +147,7 @@ export default function Resource() {
                 <img src={cardImage} width="100%" height="250px"></img>
               </div>
               <div className="cardInnerRight">
-                <h2 className="cardHeading">Pakistan Regulatory Guidebook</h2>
+                <h2 className="cardHeading highlightable">Pakistan Regulatory Guidebook</h2>
                 <button type="button" className="resourceButton">
                   <span>View Documents</span>
                 </button>
@@ -158,7 +158,7 @@ export default function Resource() {
                 <img src={cardImage} width="100%" height="250px"></img>
               </div>
               <div className="cardInnerRight">
-                <h2 className="cardHeading">
+                <h2 className="cardHeading highlightable">
                   From Swimming in Sand to High and Sustainable Growth – WBG
                 </h2>
                 <button type="button" className="resourceButton">

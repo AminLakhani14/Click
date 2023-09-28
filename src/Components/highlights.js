@@ -38,7 +38,7 @@ function Highlights(props) {
           >
             <div className="col-12 ">
               <h1
-                className="mainHeading"
+                className="mainHeading highlightable"
                 style={
                   windowWidth < 500
                     ? {
@@ -62,8 +62,8 @@ function Highlights(props) {
               <img src={card1} alt="" />
               <div class="overlay"></div>
               <div className="cardMain">
-                <p className="cardHeaderHeading">{translations["EasYdata"][language]}</p>
-                <p className="HigParagraphh cardinner">
+                <p className="cardHeaderHeading highlightable">{translations["EasYdata"][language]}</p>
+                <p className="HigParagraphh cardinner highlightable">
                 {translations["facilitatedTEXT"][language]}
                 </p>
               </div>
@@ -80,8 +80,8 @@ function Highlights(props) {
               <img src={card2} alt="" />
               <div class="overlay"></div>
               <div className="cardMain">
-                <p className="cardHeaderHeading">{translations["Economies"][language]}</p>
-                <p className="HigParagraphh cardinner">
+                <p className="cardHeaderHeading highlightable">{translations["Economies"][language]}</p>
+                <p className="HigParagraphh cardinner highlightable">
                 {translations["EconTEXT"][language]}
                 </p>
               </div>
@@ -100,10 +100,10 @@ function Highlights(props) {
               <img src={card3} alt="" />
               <div class="overlay"></div>
               <div className="cardMain">
-                <p className="cardHeaderHeading">
+                <p className="cardHeaderHeading highlightable">
                 {translations["iNVEstText"][language]}
                 </p>
-                <p className="HigParagraphh cardinner">
+                <p className="HigParagraphh cardinner highlightable">
                   {" "}
                   {translations["LibiNVEstText"][language]}
                 </p>
@@ -122,8 +122,8 @@ function Highlights(props) {
               <img src={card4} alt="" />
               <div class="overlay"></div>
               <div className="cardMain">
-                <p className="cardHeaderHeading"> {translations["EconomicZonesText"][language]}</p>
-                <p className="HigParagraphh cardinner">
+                <p className="cardHeaderHeading highlightable"> {translations["EconomicZonesText"][language]}</p>
+                <p className="HigParagraphh cardinner highlightable">
                 {translations["blanketText"][language]}
                 </p>
               </div>

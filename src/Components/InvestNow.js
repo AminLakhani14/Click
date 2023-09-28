@@ -60,7 +60,7 @@ function InvestNow() {
         <div style={{ height: "150px" }}></div>
       )}
       <div style={{ background: `url(${investNowImg})` }} className="SiteMain2">
-        <h1 data-aos="fade-up" className="Investnow-h1">
+        <h1 data-aos="fade-up" className="Investnow-h1 highlightable">
         {/* {translations["InvestNow"][data.language]} */}
         {translations["InvestNow"][language]}
         </h1>
@@ -142,10 +142,10 @@ function InvestNow() {
         <div className="col-lg-4">
           <div className="investNowCard">
             <img data-aos="fade-up" src={Bank} width="100" height="100"></img>
-            <label data-aos="fade-up" className="stageTextColor">
+            <label data-aos="fade-up" className="stageTextColor highlightable">
             {translations["RegisteryourCOMP"][language]}
             </label>
-            <label data-aos="fade-up" className="secondaryLabelColor">
+            <label data-aos="fade-up" className="secondaryLabelColor highlightable">
              {translations["launching"][language]}
             </label>
             <Link
@@ -168,10 +168,10 @@ function InvestNow() {
               width="100"
               height="100"
             ></img>
-            <label data-aos="fade-up" className="stageTextColor">
+            <label data-aos="fade-up" className="stageTextColor highlightable">
             {translations["BankAccount"][language]}
             </label>
-            <label data-aos="fade-up" className="secondaryLabelColor">
+            <label data-aos="fade-up" className="secondaryLabelColor highlightable">
             {translations["establishing"][language]}
             </label>
             <Link
@@ -189,10 +189,10 @@ function InvestNow() {
         <div className="col-lg-4">
           <div className="investNowCard">
             <img data-aos="fade-up" src={letter} width="100" height="100"></img>
-            <label data-aos="fade-up" className="stageTextColor">
+            <label data-aos="fade-up" className="stageTextColor highlightable">
             {translations["STRN"][language]}
             </label>
-            <label data-aos="fade-up" className="secondaryLabelColor">
+            <label data-aos="fade-up" className="secondaryLabelColor highlightable">
             {translations["SalesTax"][language]}
             </label>
             <Link
@@ -235,7 +235,7 @@ function InvestNow() {
         </div>
       </div>
       <div className="Investorbackground row" style={{ marginTop: "80px" }}>
-        <h1 data-aos="fade-up" className="mainHeading"
+        <h1 data-aos="fade-up" className="mainHeading highlightable"
           style={{
             display: "flex",
             justifyContent: "center",
@@ -270,8 +270,8 @@ function InvestNow() {
               <img width="100%" height="150px"></img>
             </div>
             <div className="cardInvestRight">
-              <h2 className="cardInvestHeading">{translations["PublicationTitle"][language]}</h2>
-              <p className="cardInvestPara">{translations["Shortdescription"][language]}</p>
+              <h2 className="cardInvestHeading highlightable">{translations["PublicationTitle"][language]}</h2>
+              <p className="cardInvestPara highlightable">{translations["Shortdescription"][language]}</p>
             </div>
           </div>
         </div>
@@ -285,8 +285,8 @@ function InvestNow() {
               <img width="100%" height="150px"></img>
             </div>
             <div className="cardInvestRight">
-            <h2 className="cardInvestHeading">{translations["PublicationTitle"][language]}</h2>
-              <p className="cardInvestPara">{translations["Shortdescription"][language]}</p>
+            <h2 className="cardInvestHeading highlightable">{translations["PublicationTitle"][language]}</h2>
+              <p className="cardInvestPara highlightable">{translations["Shortdescription"][language]}</p>
             </div>
           </div>
         </div>
@@ -309,8 +309,8 @@ function InvestNow() {
               <img width="100%" height="150px"></img>
             </div>
             <div className="cardInvestRight">
-            <h2 className="cardInvestHeading">{translations["PublicationTitle"][language]}</h2>
-              <p className="cardInvestPara">{translations["Shortdescription"][language]}</p>
+            <h2 className="cardInvestHeading highlightable">{translations["PublicationTitle"][language]}</h2>
+              <p className="cardInvestPara highlightable">{translations["Shortdescription"][language]}</p>
             </div>
           </div>
         </div>
@@ -324,8 +324,8 @@ function InvestNow() {
               <img width="100%" height="150px"></img>
             </div>
             <div className="cardInvestRight">
-            <h2 className="cardInvestHeading">{translations["PublicationTitle"][language]}</h2>
-              <p className="cardInvestPara">{translations["Shortdescription"][language]}</p>
+            <h2 className="cardInvestHeading highlightable">{translations["PublicationTitle"][language]}</h2>
+              <p className="cardInvestPara highlightable">{translations["Shortdescription"][language]}</p>
             </div>
           </div>
         </div>
@@ -361,7 +361,7 @@ function InvestNow() {
                 height={"80px"}
               ></img>
             </div>
-            <p data-aos="fade-up" className="muju__name">
+            <p data-aos="fade-up" className="muju__name highlightable">
             {translations["RequestInformation"][language]}
             </p>
           </li>
@@ -380,7 +380,7 @@ function InvestNow() {
                 height={"80px"}
               ></img>
             </div>
-            <p data-aos="fade-up" className="muju__name">
+            <p data-aos="fade-up" className="muju__name highlightable">
             {translations["ShareYourFeedback"][language]}
             </p>
           </li>
