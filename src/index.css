@@ -11,7 +11,13 @@ body {
 
 }
 
-
+.chatbot_selected_question{
+  background-color: white !important;
+}
+.chatbot_selected_question:hover{
+  background-color:#007bff !important;
+  color: white !important;
+}
 .container {
   width: 100%;
   padding-left: 8px;

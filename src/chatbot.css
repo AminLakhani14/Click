@@ -77,9 +77,12 @@
 
 .user-message {
     float: right;
-    background-color: #fff;
+    background-color:  #007bff;
     /* User message background color (white) */
     color: #333;
+    color: white;
+
+
 }
 
 .bot-message {
@@ -89,6 +92,9 @@
   font-size: 15px;
   padding-left: 15px;
   padding-right: 15px;
+  background-color: white;
+  /* border: 1px solid #0f5789 !important; */
+
 }
 
 /* Chat input */
@@ -233,7 +239,7 @@ input {
   background-color: #e5e6e7;
   color: #292929;
   border-radius: 10px;
-  border: 1.5px solid #0f5789;
+  border: 2px solid #0f5789;
   cursor: pointer;
   font-size: 15px;
   transition: background-color 0.3s ease;

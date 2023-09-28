@@ -233,6 +233,14 @@ function Footer(props) {
                     : "sub-title ft-links"
                 }>{translations["HD"][language]}</span>
               </a>
+              <br />
+              <a href="https://www.kwsb.gos.pk/" target="_blank" className="resource-link">
+                <span className={
+                  window.innerWidth <= 1366
+                    ? "sub-footertitle ft-links"
+                    : "sub-title ft-links"
+                }>{translations["seravgeBoard"][language]}</span>
+              </a>
 
             </div>
             <div
@@ -372,7 +380,6 @@ function Footer(props) {
                 >
                   <TextField
                     id="outlined-controlled"
-                    // style={{  backgroundColor:"blue"}}
                     size="small"
                     style={{padding:"0px",width:"100%"}}
                     placeholder="Enter email address"

@@ -2,21 +2,33 @@
 
 import React, { useEffect, useMemo, useRef, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCommentAlt, faPaperPlane } from "@fortawesome/free-solid-svg-icons";
+import { faCommentAlt, faL, faPaperPlane } from "@fortawesome/free-solid-svg-icons";
 import SVG from "react-inlinesvg";
 
 import "./chatbot.css";
 import chatbotIcon from "./assets/chatbotIcon.svg";
 import { Tooltip } from "antd";
 
+const arr=[  "By investing in Sindh, you will be part of a global hub with strong connections to major markets and a knowledge-based economy that is opening to the world.","Sindh is constantly expanding opportunities for international companies.","Our Contact Number is: +92 21 99218874","How can I help you?","I am sorry, but I could not understand your question."]
+const arr1=[
+  "Why should I invest in Sindh?",
+  "How can I setup a business in Sindh?",
+  "How can I contact support?",
+  "I have a question"
+  // Add more predefined questions as needed
+]
+
 const Chatbot = () => {
   const [showChatbot, setShowChatbot] = useState(false);
   const [messages, setMessages] = useState([]);
   const [userInput, setUserInput] = useState("");
+  const [hideInput, setHideInput] = useState(true)
+ 
   const [predefinedQuestions, setPredefinedQuestions] = useState([
     "Why should I invest in Sindh?",
     "How can I setup a business in Sindh?",
     "How can I contact support?",
+    "I have a question",
     // Add more predefined questions as needed
   ]);
   const [askingAnythingElse, setAskingAnythingElse] = useState(false);
@@ -28,39 +40,115 @@ const Chatbot = () => {
 
   const handleOptionClick = (question) => {
     addMessage(question, true); // Add the user's selected question to the chat
-
+  setHideInput(false)
     // Remove the selected question from the predefinedQuestions list
     setPredefinedQuestions((prevQuestions) =>
       prevQuestions.filter((q) => q !== question)
     );
 
+
     // Simulate processing time for the chatbot response
     setTimeout(() => {
+      debugger
       let response;
-      switch (question) {
-        case "Why should I invest in Sindh?":
-          response =
-            "By investing in Sindh, you will be part of a global hub with strong connections to major markets and a knowledge-based economy that is opening to the world.";
-          break;
-        case "How can I setup a business in Sindh?":
-          response =
-            "Sindh is constantly expanding opportunities for international companies.";
-          break;
-
-        case "How can I contact support?":
-          response = "Our Contact Number is: +92 21 99218874";
-          break;
-
-        // Add more cases and responses for other predefined questions here
-
-        default:
-          response = "I am sorry, but I could not understand your question.";
-          break;
+      for(let a=0; a<arr1.length; a++){
+        if(arr1[a]==question){
+          response=arr[a]
+          setAskingAnythingElse(true);
+          setConversationEnded(false)
+          break
+        }
+        else if(arr1[a]==question){
+          response=arr[a]
+          setAskingAnythingElse(true);
+          setConversationEnded(false)
+          break
+        }
+        else if(question.toLowerCase() == "hi" || question.toLowerCase() == "hello" || question.toLowerCase() == "hey"  ){
+          response="Hello there, Welcome to (CLICK). How can I help you?"
+          setAskingAnythingElse(false);
+          setConversationEnded(true)
+          break
+        }
+        else if(question.toLowerCase()=="aoa" || question.toLowerCase()=="assalam o alaikum"){
+          response="walaikum Assalam"
+          setAskingAnythingElse(false);
+          setConversationEnded(true)
+        }
+        else if(question.toLowerCase()=="how are you" || question.toLowerCase()=="kese ho"){
+          response="I'm just a computer program, so I don't have feelings, but I'm here to assist you or you can call directly to +92 21 99218874! How can I help you today?"
+        }
+        else if(question=="I have a question"){
+          response=arr[3]
+          setAskingAnythingElse(false);
+          setConversationEnded(true)
+          break
+        }
+        else if(arr1[a].toLowerCase().includes(question.toLowerCase())){
+          response=arr[a]
+          setAskingAnythingElse(true);
+          setConversationEnded(false)
+          break
+        }
+        else{
+          response="I am sorry, but I could not understand your question.";
+          setAskingAnythingElse(true);
+          setConversationEnded(false)
+          setHideInput(true)
+        }
       }
-      addMessage(response); // Add the chatbot's response to the chat
+      addMessage(response)
+      // switch (question) {
+      //   case  "Why should I invest in Sindh?" :
+      //     response =
+      //       "By investing in Sindh, you will be part of a global hub with strong connections to major markets and a knowledge-based economy that is opening to the world.";
+      //       setAskingAnythingElse(true);
+      //       setConversationEnded(false)
+
+      //     break;
+      //   case "How can I setup a business in Sindh?":
+      //     response =
+      //       "Sindh is constantly expanding opportunities for international companies.";
+      //       setAskingAnythingElse(true);
+      //       setConversationEnded(false)
+      //     break;
+
+      //   case "How can I contact support?":
+      //     response = "Our Contact Number is: +92 21 99218874";
+      //     setAskingAnythingElse(true);
+      //     setConversationEnded(false)
+
+      //     break;
+      //   // Add more cases and responses for other predefined questions here
+      //   case "I have a question":
+      //     response="How can I help you?"
+      //     setAskingAnythingElse(false);
+      //     setConversationEnded(true)
+         
+      
+      //     ;
+      //     break;
+
+      //     // case Reply[0].includes(userInput):
+      //     // response=arr[0];
+      //     // break
+      //   default:
+      //     for(let a=0; a<arr.length; a++){
+      //       if(arr[a].includes(question)){
+      //         response=Reply[a]
+      //       }
+      //     }
+      //     // response = "I am sorry, but I could not understand your question.";
+      // setAskingAnythingElse(true);
+      // setConversationEnded(false)
+
+
+      //     break;
+      // }
+      // addMessage(response); // Add the chatbot's response to the chat
 
       // After answering, set the state to ask "Anything else"
-      setAskingAnythingElse(true);
+      // setAskingAnythingElse(true);
     }, 2000); // Delay of 1 second for the chatbot response (adjust as needed)
   };
 
@@ -68,9 +156,16 @@ const Chatbot = () => {
     setUserInput(event.target.value);
   };
 
-  const handleEnterButton = (event) => {
+  function handleKeyDown(event) {
+    debugger
+    console.log(event)
     if (event.key === "Enter") {
-      handleSendButton();
+      if(userInput !==""){
+        handleOptionClick(userInput)
+        setUserInput("")
+       }
+      console.log("Enter key pressed!");
+      // Add your desired functionality here
     }
   };
   const [initialResponsesShown, setInitialResponsesShown] = useState(false);
@@ -114,8 +209,10 @@ const Chatbot = () => {
       "Why should I invest in Sindh?",
       "How can I setup a business in Sindh?",
       "How can I contact support?",
+      "I have a question"
       // Add more predefined questions as needed
     ]);
+    setHideInput(true)
   };
 
   const handleNoButtonClick = () => {
@@ -143,7 +240,7 @@ const Chatbot = () => {
   const [arrow, setArrow] = useState("Show");
 
   const mergedArrow = useMemo(() => {
-    if (arrow === "Hide") {
+    if (arrow === "HideInput") {
       return false;
     }
 
@@ -166,7 +263,7 @@ const Chatbot = () => {
               Ask me anything
             </p>
           </div>
-          <div className="chat-messages" ref={chatContainerRef}>
+          <div className="chat-messages"   ref={chatContainerRef}>
             {messages.map((message, index) => (
               <div
                 key={index}
@@ -183,7 +280,7 @@ const Chatbot = () => {
               </div>
             ))}
           </div>
-          {askingAnythingElse && !conversationEnded && (
+          {askingAnythingElse  && !conversationEnded && (
             <div className="any-thing-else">
               <p className="highlightable">Anything else?</p>
               <div className="d-flex">
@@ -192,10 +289,12 @@ const Chatbot = () => {
               </div>
             </div>
           )}
-          {!askingAnythingElse && !conversationEnded && (
+          {!askingAnythingElse  && !conversationEnded && (
             <div className="predefined-questions">
               {predefinedQuestions.map((question) => (
                 <button
+                // style={{backgroundColor:"red"}}
+                  className="chatbot_selected_question"
                   key={question}
                   onClick={() => handleOptionClick(question)}
                 >
@@ -204,18 +303,33 @@ const Chatbot = () => {
               ))}
             </div>
           )}
-          <div className="chat-input">
-            <input
-              type="text"
-              placeholder="Type your message..."
-              value={userInput}
-              onKeyPress={handleEnterButton}
-              onChange={handleUserInput}
-            />
-            <button className="send-button" onClick={handleSendButton}>
-              <FontAwesomeIcon icon={faPaperPlane} />
-            </button>
-          </div>
+         {
+          !hideInput && <div className="chat-input">
+          <input
+            type="text"
+            placeholder="Type your message..."
+            value={userInput}
+            onKeyDown={handleKeyDown}
+            // onKeyPress={handleEnterButton}
+            onChange={handleUserInput}
+          />
+          <button className="send-button" onClick={(event)=>{
+            // handleSendButton()
+            debugger
+             if(userInput !==""){
+              handleOptionClick(userInput)
+              setUserInput("")
+              // if(arr[0].includes(userInput)){
+              //   handleOptionClick(userInput)
+              //   setUserInput("")
+              // }
+               
+             }
+          }}>
+            <FontAwesomeIcon icon={faPaperPlane} />
+          </button>
+        </div>
+         }
           <div className="close-icon" onClick={toggleChatbot}>
             <span>&times;</span>
           </div>

@@ -457,6 +457,16 @@ export const translations = {
     ur: "محکمہ صحت",
     sd: "صحت کاتي",
   },
+  seravgeBoard:{
+    en:"Karachi Water & Sewerage Board",
+    ur:"کراچی واٹر اینڈ سیوریج بورڈ",
+    sd:"ڪراچي واٽر اينڊ سيوريج بورڊ"
+  },
+  Kmc:{
+    en:"Karachi Metropolitan Corporation (KMC)",
+    ur:"کراچی میٹروپولیٹن کارپوریشن",
+    sd:"ڪراچي ميٽروپوليٽن ڪارپوريشن"
+  },
   'Floor': {
     en: '1st Floor, FTC Building',
     ur: "پہلی منزل، ایف ٹی سی بلڈنگ",
