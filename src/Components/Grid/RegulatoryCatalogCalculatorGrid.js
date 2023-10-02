@@ -97,10 +97,13 @@ export default class RegulatoryCatalogCalculatorGrid extends React.PureComponent
 
     const changeValue = this.props.changeValue || []; // Add a check here
     const totalValue = changeValue.reduce((total, item) => {
-    //  const feeValue = feeValue.replace(/[^\d]/g, '');
       const feeValue = parseFloat(item.feeValue);
       return isNaN(feeValue) ? total : total + feeValue;
     }, 0);
+    
+    // Format totalValue with commas
+    const formattedTotalValue = parseFloat(totalValue).toLocaleString();
+    
 
     return (
       <div style={{ position: "relative" }}>
@@ -139,7 +142,7 @@ export default class RegulatoryCatalogCalculatorGrid extends React.PureComponent
           }}
         >
           <div style={{ fontWeight: "bold" ,width:"501px",borderRight:"1px solid #E0E0E0",paddingTop:"11px",paddingLeft:"10px",width:"66%"}}>Total:</div>{" "}
-          <div style={{paddingTop:"11px",paddingLeft:"3px",width:"35%",marginLeft:"-2px",textAlign:"right"}}>{totalValue.toFixed(2)}</div>
+          <div style={{paddingTop:"11px",paddingLeft:"3px",width:"35%",marginLeft:"-2px",textAlign:"right"}}>{formattedTotalValue}</div>
         </div>
       </div>
     );
