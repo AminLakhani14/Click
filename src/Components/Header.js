@@ -1,3 +1,4 @@
+
 import React, { useEffect, useRef, useState } from "react";
 // import click from "../assets/click-logo1.png";
 import Group8364 from "../assets/Group8364.png";
@@ -142,7 +143,7 @@ const {language} = useSelector((state)=>state.language)
   }, []);
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 480) {
+      if (window.scrollY > 195) {
         setIsSticky(true);
       } else {
         setIsSticky(false);
@@ -617,1119 +618,1689 @@ const {language} = useSelector((state)=>state.language)
               <div style={{ position: "relative", zIndex: "99999999999" }}>
                 <GenericHeader toggleLanguage={props.toggleLanguage} SindhitoggleLanguage={props.SindhitoggleLanguage} handleSearch={props.handleSearch}  searchTextRef={props.searchTextRef}/>
               </div>
-            ) : (
+            ) : 
+            (
+              // <div className={`header `}>
+              //   <div className={"row "}>
+              //     <div
+              //       className={" navbar boxshadowNavBar justify-content-end"}
+              //       style={{ width: "100%", paddingRight: "8px" }}
+              //     >
+              //       <ul
+              //         style={
+              //           language === "ur" || language === "sd"
+              //             ? {
+              //               display: "flex",
+              //               marginBottom: "0px",
+              //               flexDirection: "row-reverse",
+              //             }
+              //             : { marginBottom: "0px" }
+              //         }
+              //       >
+              //         <li>
+              //           <a
+              //             href="comingsoon.html"
+              //             title="Home Page"
+              //             className={"link"}
+              //           >
+              //             <Link className={"link"} to={"/home"}>
+              //               {translations["home"][language]}
+              //             </Link>
+              //           </a>
+              //         </li>
+              //         <li>
+              //           <a
+              //             href="comingsoon.html"
+              //             title="Home Page"
+              //             className={"link"}
+              //           >
+              //             <Link className={"link"} to={"/WhySindh"}>
+              //               {
+              //                 translations["sindhATglance"][
+              //                 language
+              //                 ]
+              //               }
+              //             </Link>
+              //           </a>
+              //         </li>
+              //         <li>
+              //           <a title="" className={"link"}>
+              //             <Link className="link" to={"/InvestNow"}>
+              //               {translations["InvestNow"][language]}
+              //             </Link>
+              //           </a>
+              //         </li>
+              //         <li>
+              //           <div
+              //             class="dropdown"
+              //             style={
+              //               language === "ur" || language === "sd"
+              //                 ? {
+              //                   display: "flex",
+              //                   flexDirection: "row-reverse",
+              //                 }
+              //                 : {}
+              //             }
+              //           >
+              //             <span
+              //               style={{
+              //                 marginRight: "5px",
+              //                 textDecoration: "none",
+              //               }}
+              //               className={"link"}
+              //             >
+              //               <Link className={"link"} to={"/Opportunity"}>
+              //                 {
+              //                   translations["Opportunities"][
+              //                   language
+              //                   ]
+              //                 }
+              //               </Link>
+              //             </span>
+              //             <i
+              //               // style={{ marginTop: "0px", marginLeft: "0px" }}
+              //               class="dropbtn iconDown hover-rotate fa fa-chevron-right"
+              //               style={
+              //                 language === "ur" ||
+              //                   language === "sd"
+              //                   ? {
+              //                     marginTop: "5px", marginRight: "3px"
+              //                   }
+              //                   : {
+              //                     marginTop: "0px", marginLeft: "0px"
+              //                   }
+              //               }
+              //             ></i>
+              //             <div
+              //               class="dropdown-content"
+              //               style={
+              //                 language === "ur" || language === "sd"
+              //                   ? { marginTop: "30px" }
+              //                   : {}
+              //               }
+              //             >
+              //               <div
+              //                 class="nested-dropdown"
+              //                 style={{ width: "100%" }}
+              //               >
+              //                 <span
+              //                   style={
+              //                     language === "ur" ||
+              //                       language === "sd"
+              //                       ? {
+              //                         display: "flex",
+              //                         width: "100%",
+              //                         flexDirection: "row-reverse",
+              //                       }
+              //                       : {
+              //                         display: "flex",
+              //                         position: "relative",
+              //                         width: "100%",
+              //                       }
+              //                   }
+              //                 >
+              //                   <a
+              //                     // style={{
+              //                     //   width: "300px",
+              //                     //   paddingLeft: "15px",
+              //                     //   height: "40px",
+              //                     //   paddingTop: "8px",
+              //                     // }}
+              //                     style={
+              //                       language === "ur" ||
+              //                         language === "sd"
+              //                         ? {
+              //                           width: "210px",
+              //                           paddingLeft: "15px",
+              //                           height: "40px",
+              //                           paddingTop: "8px",
+              //                           display: "flex",
+              //                           flexDirection: "row-reverse",
+              //                         }
+              //                         : {
+              //                           width: "300px",
+              //                           paddingLeft: "15px",
+              //                           height: "40px",
+              //                           paddingTop: "8px",
+              //                         }
+              //                     }
+              //                     href="#"
+              //                   >
+              //                     <Link
+              //                       className={"link"}
+              //                       to={"/manufacturing"}
+              //                       onClick={() => { window.scrollTo({ top: 0, left: 0, behavior: "smooth" }); }}
+              //                     >
+              //                       {
+              //                         translations["Manufacturing"][
+              //                         language
+              //                         ]
+              //                       }
+              //                     </Link>
+              //                   </a>
+              //                   <i
+              //                     style={
+              //                       language === "ur" ||
+              //                         language === "sd"
+              //                         ? {
+              //                           marginTop: "10px",
+              //                           marginLeft: "0px",
+              //                           position: "absolute",
+              //                           left: "10px",
+              //                           display: "flex",
+              //                           flexDirection: "row-reverse",
+              //                         }
+              //                         : {
+              //                           marginTop: "10px",
+              //                           marginLeft: "0px",
+              //                           position: "absolute",
+              //                           right: "15px",
+              //                         }
+              //                     }
+              //                     class="dropbtn unique-iconDown unique-hover-rotate component fa fa-chevron-right"
+              //                   ></i>
+              //                 </span>
+              //                 <div
+              //                   class="dropdown-content nested-content nested-right"
+              //                   style={{ width: "200px" }}
+              //                 >
+              //                   <Link className={""} to={"/manufacturing#expertform"}>
+              //                     <a href="#" >
+              //                       {
+              //                         translations["Talktoexpert"][
+              //                         language
+              //                         ]
+              //                       }
+              //                     </a>
+              //                   </Link>
+              //                 </div>
+              //               </div>
+
+              //               <div
+              //                 class="nested-dropdown"
+              //                 style={{ width: "100%" }}
+              //               >
+              //                 <span
+              //                   style={
+              //                     language === "ur" ||
+              //                       language === "sd"
+              //                       ? {
+              //                         display: "flex",
+              //                         width: "100%",
+              //                         flexDirection: "row-reverse",
+              //                       }
+              //                       : {
+              //                         display: "flex",
+              //                         position: "relative",
+              //                         width: "100%",
+              //                       }
+              //                   }
+              //                 >
+              //                   <a
+              //                     style={
+              //                       language === "ur" ||
+              //                         language === "sd"
+              //                         ? {
+              //                           width: "210px",
+              //                           paddingLeft: "15px",
+              //                           height: "40px",
+              //                           paddingTop: "8px",
+              //                           display: "flex",
+              //                           flexDirection: "row-reverse",
+              //                         }
+              //                         : {
+              //                           width: "300px",
+              //                           paddingLeft: "15px",
+              //                           height: "40px",
+              //                           paddingTop: "8px",
+              //                         }
+              //                     }
+              //                     href="#"
+              //                   >
+              //                     <Link onClick={() => { window.scrollTo({ top: 0, left: 0, behavior: "smooth" }); }} className={"link"} to={"/textile"}>
+              //                       {
+              //                         translations["Textile"][
+              //                         language
+              //                         ]
+              //                       }
+              //                     </Link>
+              //                   </a>
+              //                   <i
+              //                     style={
+              //                       language === "ur" ||
+              //                         language === "sd"
+              //                         ? {
+              //                           marginTop: "10px",
+              //                           marginLeft: "0px",
+              //                           position: "absolute",
+              //                           left: "10px",
+              //                           display: "flex",
+              //                           flexDirection: "row-reverse",
+              //                         }
+              //                         : {
+              //                           marginTop: "10px",
+              //                           marginLeft: "0px",
+              //                           position: "absolute",
+              //                           right: "15px",
+              //                         }
+              //                     }
+              //                     class="dropbtn unique-iconDown unique-hover-rotate component fa fa-chevron-right"
+              //                   ></i>
+              //                 </span>
+              //                 <div
+              //                   class="dropdown-content nested-content nested-right"
+              //                   style={{ width: "200px", marginTop: "40px" }}
+              //                 >
+              //                   <Link className={""} to={"/textile#expertform"}>
+              //                     <a  href="#">
+              //                       {
+              //                         translations["Talktoexpert"][
+              //                         language
+              //                         ]
+              //                       }
+              //                     </a>
+              //                   </Link>
+              //                 </div>
+              //               </div>
+
+              //               <div
+              //                 class="nested-dropdown"
+              //                 style={{ width: "100%" }}
+              //               >
+              //                 <span
+              //                   style={
+              //                     language === "ur" ||
+              //                       language === "sd"
+              //                       ? {
+              //                         display: "flex",
+              //                         width: "100%",
+              //                         flexDirection: "row-reverse",
+              //                       }
+              //                       : {
+              //                         display: "flex",
+              //                         position: "relative",
+              //                         width: "100%",
+              //                       }
+              //                   }
+              //                 >
+              //                   <a
+              //                     style={
+              //                       language === "ur" ||
+              //                         language === "sd"
+              //                         ? {
+              //                           width: "210px",
+              //                           paddingLeft: "15px",
+              //                           height: "40px",
+              //                           paddingTop: "8px",
+              //                           display: "flex",
+              //                           flexDirection: "row-reverse",
+              //                         }
+              //                         : {
+              //                           width: "300px",
+              //                           paddingLeft: "15px",
+              //                           height: "40px",
+              //                           paddingTop: "8px",
+              //                         }
+              //                     }
+              //                     href="#"
+              //                   >
+              //                     <Link
+              //                       onClick={() => { window.scrollTo({ top: 0, left: 0, behavior: "smooth" }); }}
+              //                       className={"link"} to={"/tourism"}>
+              //                       {
+              //                         translations["Tourism"][
+              //                         language
+              //                         ]
+              //                       }
+              //                     </Link>
+              //                   </a>
+              //                   <i
+              //                     style={
+              //                       language === "ur" ||
+              //                         language === "sd"
+              //                         ? {
+              //                           marginTop: "10px",
+              //                           marginLeft: "0px",
+              //                           position: "absolute",
+              //                           left: "10px",
+              //                           display: "flex",
+              //                           flexDirection: "row-reverse",
+              //                         }
+              //                         : {
+              //                           marginTop: "10px",
+              //                           marginLeft: "0px",
+              //                           position: "absolute",
+              //                           right: "15px",
+              //                         }
+              //                     }
+              //                     class="dropbtn unique-iconDown unique-hover-rotate component fa fa-chevron-right"
+              //                   ></i>
+              //                 </span>
+              //                 <div
+              //                   class="dropdown-content nested-content nested-right"
+              //                   style={{ width: "200px", marginTop: "80px" }}
+              //                 >
+              //                   <Link className={""} to={"/tourism#expertform"} >
+              //                     <a  href="#">
+              //                       {
+              //                         translations["Talktoexpert"][
+              //                         language
+              //                         ]
+              //                       }
+              //                     </a>
+              //                   </Link>
+              //                 </div>
+              //               </div>
+
+              //               <div
+              //                 class="nested-dropdown"
+              //                 style={{ width: "100%" }}
+              //               >
+              //                 <span
+              //                   style={
+              //                     language === "ur" ||
+              //                       language === "sd"
+              //                       ? {
+              //                         display: "flex",
+              //                         width: "100%",
+              //                         flexDirection: "row-reverse",
+              //                       }
+              //                       : {
+              //                         display: "flex",
+              //                         position: "relative",
+              //                         width: "100%",
+              //                       }
+              //                   }
+              //                 >
+              //                   <a
+              //                     style={
+              //                       language === "ur" ||
+              //                         language === "sd"
+              //                         ? {
+              //                           width: "210px",
+              //                           paddingLeft: "15px",
+              //                           height: "40px",
+              //                           paddingTop: "8px",
+              //                           display: "flex",
+              //                           flexDirection: "row-reverse",
+              //                         }
+              //                         : {
+              //                           width: "300px",
+              //                           paddingLeft: "15px",
+              //                           height: "40px",
+              //                           paddingTop: "8px",
+              //                         }
+              //                     }
+              //                     href="#"
+              //                   >
+              //                     <Link
+              //                       onClick={() => { window.scrollTo({ top: 0, left: 0, behavior: "smooth" }); }}
+              //                       className={"link"} to={"/agriculture"}>
+              //                       {
+              //                         translations["Agriculture"][
+              //                         language
+              //                         ]
+              //                       }
+              //                     </Link>
+              //                   </a>
+              //                   <i
+              //                     style={
+              //                       language === "ur" ||
+              //                         language === "sd"
+              //                         ? {
+              //                           marginTop: "10px",
+              //                           marginLeft: "0px",
+              //                           display: "flex",
+              //                           flexDirection: "row-reverse",
+              //                           position: "absolute",
+              //                           left: "10px",
+              //                         }
+              //                         : {
+              //                           marginTop: "10px",
+              //                           marginLeft: "0px",
+              //                           position: "absolute",
+              //                           right: "15px",
+              //                         }
+              //                     }
+              //                     class="dropbtn unique-iconDown unique-hover-rotate component fa fa-chevron-right"
+              //                   ></i>
+              //                 </span>
+              //                 <div
+              //                   class="dropdown-content nested-content nested-right"
+              //                   style={{ width: "200px", marginTop: "120px" }}
+              //                 >
+              //                   <Link className={""} to={"/agriculture#expertform"}>
+              //                     <a  href="#"  >
+              //                       {
+              //                         translations["Talktoexpert"][
+              //                         language
+              //                         ]
+              //                       }
+              //                     </a>
+              //                   </Link>
+              //                 </div>
+              //               </div>
+
+              //               <div
+              //                 class="nested-dropdown"
+              //                 style={{ width: "100%" }}
+              //               >
+              //                 <span
+              //                   style={
+              //                     language === "ur" ||
+              //                       language === "sd"
+              //                       ? {
+              //                         display: "flex",
+              //                         width: "100%",
+              //                         flexDirection: "row-reverse",
+              //                       }
+              //                       : {
+              //                         display: "flex",
+              //                         position: "relative",
+              //                         width: "100%",
+              //                       }
+              //                   }
+              //                 >
+              //                   <a
+              //                     style={
+              //                       language === "ur" ||
+              //                         language === "sd"
+              //                         ? {
+              //                           width: "210px",
+              //                           paddingLeft: "15px",
+              //                           height: "40px",
+              //                           paddingTop: "8px",
+              //                           display: "flex",
+              //                           flexDirection: "row-reverse",
+              //                         }
+              //                         : {
+              //                           width: "300px",
+              //                           paddingLeft: "15px",
+              //                           height: "40px",
+              //                           paddingTop: "8px",
+              //                         }
+              //                     }
+              //                     href="#"
+              //                   >
+              //                     <Link
+              //                       onClick={() => {
+              //                         window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+              //                       }} className={"link"} to={"/education"}>
+              //                       {
+              //                         translations["Education"][
+              //                         language
+              //                         ]
+              //                       }
+              //                     </Link>
+              //                   </a>
+              //                   <i
+              //                     style={
+              //                       language === "ur" ||
+              //                         language === "sd"
+              //                         ? {
+              //                           marginTop: "10px",
+              //                           marginLeft: "0px",
+              //                           position: "absolute",
+              //                           left: "10px",
+              //                           display: "flex",
+              //                           flexDirection: "row-reverse",
+              //                           position: "absolute",
+              //                           left: "10px",
+              //                         }
+              //                         : {
+              //                           marginTop: "10px",
+              //                           marginLeft: "0px",
+              //                           position: "absolute",
+              //                           right: "15px",
+              //                         }
+              //                     }
+              //                     class="dropbtn unique-iconDown unique-hover-rotate component fa fa-chevron-right"
+              //                   ></i>
+              //                 </span>
+              //                 <div
+              //                   class="dropdown-content nested-content nested-right"
+              //                   style={{ width: "200px", marginTop: "160px" }}
+              //                 >
+              //                   <Link className={""} to={"/education#expertform"}>
+              //                     <a  href="#">
+              //                       {
+              //                         translations["Talktoexpert"][
+              //                         language
+              //                         ]
+              //                       }
+              //                     </a>
+              //                   </Link>
+              //                 </div>
+              //               </div>
+
+              //               <div
+              //                 class="nested-dropdown"
+              //                 style={{ width: "100%" }}
+              //               >
+              //                 <span
+              //                   style={
+              //                     language === "ur" ||
+              //                       language === "sd"
+              //                       ? {
+              //                         display: "flex",
+              //                         width: "100%",
+              //                         flexDirection: "row-reverse",
+              //                       }
+              //                       : {
+              //                         display: "flex",
+              //                         position: "relative",
+              //                         width: "100%",
+              //                       }
+              //                   }
+              //                 >
+              //                   <a
+              //                     style={
+              //                       language === "ur" ||
+              //                         language === "sd"
+              //                         ? {
+              //                           width: "210px",
+              //                           paddingLeft: "15px",
+              //                           height: "40px",
+              //                           paddingTop: "8px",
+              //                           display: "flex",
+              //                           flexDirection: "row-reverse",
+              //                         }
+              //                         : {
+              //                           width: "300px",
+              //                           paddingLeft: "15px",
+              //                           height: "40px",
+              //                           paddingTop: "8px",
+              //                         }
+              //                     }
+              //                     href="#"
+              //                   >
+              //                     <Link
+              //                       onClick={() => { window.scrollTo({ top: 0, left: 0, behavior: "smooth" }); }}
+              //                       className={"link"} to={"/energy"}>
+              //                       {
+              //                         translations["Energy"][
+              //                         language
+              //                         ]
+              //                       }
+              //                     </Link>
+              //                   </a>
+              //                   <i
+              //                     style={
+              //                       language === "ur" ||
+              //                         language === "sd"
+              //                         ? {
+              //                           marginTop: "10px",
+              //                           marginLeft: "0px",
+              //                           position: "absolute",
+              //                           left: "10px",
+              //                           display: "flex",
+              //                           flexDirection: "row-reverse",
+              //                         }
+              //                         : {
+              //                           marginTop: "10px",
+              //                           marginLeft: "0px",
+              //                           position: "absolute",
+              //                           right: "15px",
+              //                         }
+              //                     }
+              //                     class="dropbtn unique-iconDown unique-hover-rotate component fa fa-chevron-right"
+              //                   ></i>
+              //                 </span>
+              //                 <div
+              //                   class="dropdown-content nested-content nested-right"
+              //                   style={{ width: "200px", marginTop: "200px" }}
+              //                 >
+              //                   <Link  className={""} to={"/energy#expertform"}>
+              //                     <a href="#">
+              //                       {
+              //                         translations["Talktoexpert"][
+              //                         language
+              //                         ]
+              //                       }
+              //                     </a>
+              //                   </Link>
+              //                 </div>
+              //               </div>
+
+              //               <div
+              //                 class="nested-dropdown"
+              //                 style={{ width: "100%" }}
+              //               >
+              //                 <span
+              //                   style={
+              //                     language === "ur" ||
+              //                       language === "sd"
+              //                       ? {
+              //                         display: "flex",
+              //                         width: "100%",
+              //                         flexDirection: "row-reverse",
+              //                       }
+              //                       : {
+              //                         display: "flex",
+              //                         position: "relative",
+              //                         width: "100%",
+              //                       }
+              //                   }
+              //                 >
+              //                   <a
+              //                     style={
+              //                       language === "ur" ||
+              //                         language === "sd"
+              //                         ? {
+              //                           width: "210px",
+              //                           paddingLeft: "15px",
+              //                           height: "40px",
+              //                           paddingTop: "8px",
+              //                           display: "flex",
+              //                           flexDirection: "row-reverse",
+              //                         }
+              //                         : {
+              //                           width: "300px",
+              //                           paddingLeft: "15px",
+              //                           height: "40px",
+              //                           paddingTop: "8px",
+              //                         }
+              //                     }
+              //                     href="#"
+              //                   >
+              //                     <Link onClick={() => { window.scrollTo({ top: 0, left: 0, behavior: "smooth" }); }} className={"link"} to={"/health"}>
+              //                       {
+              //                         translations["Health"][
+              //                         language
+              //                         ]
+              //                       }
+              //                     </Link>
+              //                   </a>
+              //                   <i
+              //                     style={
+              //                       language === "ur" ||
+              //                         language === "sd"
+              //                         ? {
+              //                           marginTop: "10px",
+              //                           marginLeft: "0px",
+              //                           display: "flex",
+              //                           position: "absolute",
+              //                           left: "10px",
+              //                           flexDirection: "row-reverse",
+              //                         }
+              //                         : {
+              //                           marginTop: "10px",
+              //                           marginLeft: "0px",
+              //                           position: "absolute",
+              //                           right: "15px",
+              //                         }
+              //                     }
+              //                     class="dropbtn unique-iconDown unique-hover-rotate component fa fa-chevron-right"
+              //                   ></i>
+              //                 </span>
+              //                 <div
+              //                   class="dropdown-content nested-content nested-right"
+              //                   style={{ width: "200px", marginTop: "240px" }}
+              //                 >
+              //                   <Link  className={""} to={"/health#expertform"}>
+              //                     <a  href="#">
+              //                       {
+              //                         translations["Talktoexpert"][
+              //                         language
+              //                         ]
+              //                       }
+              //                     </a>
+              //                   </Link>
+              //                 </div>
+              //               </div>
+
+              //               <div
+              //                 class="nested-dropdown"
+              //                 style={{ width: "100%" }}
+              //               >
+              //                 <span
+              //                   style={
+              //                     language === "ur" ||
+              //                       language === "sd"
+              //                       ? {
+              //                         display: "flex",
+              //                         width: "100%",
+              //                         flexDirection: "row-reverse",
+              //                       }
+              //                       : {
+              //                         display: "flex",
+              //                         position: "relative",
+              //                         width: "100%",
+              //                       }
+              //                   }
+              //                 >
+              //                   <a
+              //                     style={
+              //                       language === "ur" ||
+              //                         language === "sd"
+              //                         ? {
+              //                           width: "210px",
+              //                           paddingLeft: "15px",
+              //                           height: "40px",
+              //                           paddingTop: "8px",
+              //                           display: "flex",
+              //                           flexDirection: "row-reverse",
+              //                         }
+              //                         : {
+              //                           width: "300px",
+              //                           paddingLeft: "15px",
+              //                           height: "40px",
+              //                           paddingTop: "8px",
+              //                         }
+              //                     }
+              //                     href="#"
+              //                   >
+              //                     <Link
+              //                       onClick={() => { window.scrollTo({ top: 0, left: 0, behavior: "smooth" }); }}
+              //                       className={"link"}
+              //                       to={"/informationtech"}
+
+              //                     >
+              //                       {
+              //                         translations[
+              //                         "InformationTechnology"
+              //                         ][language]
+              //                       }
+              //                     </Link>
+              //                   </a>
+              //                   <i
+              //                     style={
+              //                       language === "ur" ||
+              //                         language === "sd"
+              //                         ? {
+              //                           marginTop: "10px",
+              //                           marginLeft: "0px",
+              //                           display: "flex",
+              //                           position: "absolute",
+              //                           left: "10px",
+              //                           flexDirection: "row-reverse",
+              //                         }
+              //                         : {
+              //                           marginTop: "10px",
+              //                           marginLeft: "0px",
+              //                           position: "absolute",
+              //                           right: "15px",
+              //                         }
+              //                     }
+              //                     class="dropbtn unique-iconDown unique-hover-rotate component fa fa-chevron-right"
+              //                   ></i>
+              //                 </span>
+              //                 <div
+              //                   class="dropdown-content nested-content nested-right"
+              //                   style={{ width: "200px", marginTop: "280px" }}
+              //                 >
+              //                   <Link  className={""}  to={"/informationtech#expertform"}>
+              //                     <a  href="#">
+              //                       {
+              //                         translations["Talktoexpert"][
+              //                         language
+              //                         ]
+              //                       }
+              //                     </a>
+              //                   </Link>
+              //                 </div>
+              //               </div>
+              //             </div>
+              //           </div>
+              //         </li>
+              //         <li>
+              //           <a title="" className={"link"}>
+              //             <Link className="link" to={"/NewsAndInformation"}>
+              //               {
+              //                 translations["NewsInformation"][
+              //                 language
+              //                 ]
+              //               }
+              //             </Link>
+              //           </a>
+              //         </li>
+              //         <li>
+              //           <div
+              //             class="dropdown"
+              //             style={
+              //               language === "ur" || language === "sd"
+              //                 ? {
+              //                   display: "flex",
+              //                   flexDirection: "row-reverse",
+              //                 }
+              //                 : {}
+              //             }
+              //           >
+              //             <span
+              //               style={{
+              //                 marginRight: "5px",
+              //                 textDecoration: "none",
+              //               }}
+              //               className={"link"}
+              //             >
+              //               {translations["Resources"][language]}
+              //             </span>
+              //             <i
+              //               // style={{ marginTop: "0px", marginLeft: "0px" }}
+              //               style={
+              //                 language === "ur" ||
+              //                   language === "sd"
+              //                   ? {
+              //                     marginTop: "5px", marginRight: "5px"
+              //                   }
+              //                   : {
+              //                     marginTop: "0px", marginLeft: "0px"
+              //                   }
+              //               }
+              //               class=" dropbtn iconDown hover-rotate fa fa-chevron-right"
+              //             ></i>
+              //             <div
+              //               class="dropdown-content"
+              //               style={
+              //                 language === "ur" || language === "sd"
+              //                   ? { marginTop: "30px" }
+              //                   : {}
+              //               }
+              //             >
+              //               <Link className={""} to={"/resource"}>
+              //                 <a target="_blank" href="">
+              //                   {/* <Link className="link" to={"/ComingSoon"}> */}
+              //                   {translations["Download"][language]}
+              //                 </a>
+              //               </Link>
+              //               <Link className={""} to={"/regulatorycatalog"}>
+              //                 <a href="#">
+              //                   {
+              //                     translations["RegulatoryCatalog"][
+              //                     language
+              //                     ]
+              //                   }
+              //                 </a>
+              //               </Link>
+              //             </div>
+              //           </div>
+              //         </li>
+              //         <li>
+              //           <div
+              //             class="dropdown"
+              //             style={
+              //               language === "ur" || language === "sd"
+              //                 ? {
+              //                   display: "flex",
+              //                   flexDirection: "row-reverse",
+              //                 }
+              //                 : {}
+              //             }
+              //           >
+              //             <span
+              //               style={{
+              //                 marginRight: "5px",
+              //                 textDecoration: "none",
+              //               }}
+              //               className={"link"}
+              //             >
+              //               {" "}
+              //               {translations["Aboutus"][language]}
+              //             </span>
+              //             <i
+              //               // style={{ marginTop: "5px", marginRight: "5px",}}
+              //               style={
+              //                 language === "ur" ||
+              //                   language === "sd"
+              //                   ? {
+              //                     marginTop: "5px", marginRight: "5px"
+              //                   }
+              //                   : {
+              //                     marginTop: "0px", marginLeft: "0px"
+              //                   }
+              //               }
+              //               class="dropbtn iconDown hover-rotate fa fa-chevron-right"
+              //             ></i>
+              //             <div
+              //               class="dropdown-content"
+              //               style={
+              //                 language === "ur" || language === "sd"
+              //                   ? { marginTop: "30px" }
+              //                   : {}
+              //               }
+              //             >
+              //               <Link className="" to={"/aboutus"}>
+              //                 <a
+              //                   target="_blank"
+              //                   href=""
+              //                   style={
+              //                     language === "ur" ||
+              //                       language === "sd"
+              //                       ? {
+              //                         display: "flex",
+              //                         flexDirection: "row-reverse",
+              //                         marginRight: "-16px",
+              //                       }
+              //                       : {}
+              //                   }
+              //                 >
+              //                   {translations["Vision"][language]}
+              //                 </a>
+              //               </Link>
+              //               <div
+              //                 class="nested-dropdown"
+              //                 style={{ width: "100%" }}
+              //               >
+              //                 <span
+              //                   style={
+              //                     language === "ur" ||
+              //                       language === "sd"
+              //                       ? {
+              //                         display: "flex",
+              //                         flexDirection: "row-reverse",
+              //                         width: "100%",
+              //                       }
+              //                       : {
+              //                         display: "flex",
+              //                         position: "relative",
+              //                         width: "100%",
+              //                       }
+              //                   }
+              //                 >
+              //                   <a
+              //                     style={
+              //                       language === "ur" ||
+              //                         language === "sd"
+              //                         ? {
+              //                           width: "88%",
+              //                           paddingLeft: "30px",
+              //                           height: "40px",
+              //                           paddingTop: "8px",
+              //                           display: "flex",
+              //                           flexDirection: "row-reverse",
+              //                         }
+              //                         : {
+              //                           width: "100%",
+              //                           paddingLeft: "30px",
+              //                           height: "40px",
+              //                           paddingTop: "8px",
+              //                         }
+              //                     }
+              //                     href="#"
+              //                   >
+              //                     {
+              //                       translations["Components"][
+              //                       language
+              //                       ]
+              //                     }
+              //                   </a>
+              //                   <i
+              //                     // style={{
+              //                     //   marginTop: "10px",
+              //                     //   marginLeft: "0px",
+              //                     //   position: "absolute",
+              //                     //   right: "15px",
+              //                     // }}
+              //                     style={
+              //                       language === "ur" ||
+              //                         language === "sd"
+              //                         ? {
+              //                           marginTop: "10px",
+              //                           marginLeft: "0px",
+              //                           display: "flex",
+              //                           flexDirection: "row-reverse",
+              //                         }
+              //                         : {
+              //                           marginTop: "10px",
+              //                           marginLeft: "0px",
+              //                           position: "absolute",
+              //                           right: "15px",
+              //                         }
+              //                     }
+              //                     class="dropbtn unique-iconDown unique-hover-rotate component fa fa-chevron-right"
+              //                   ></i>
+              //                 </span>
+              //                 <div
+              //                   class="dropdown-content nested-content nested-right"
+              //                   style={{ left: "auto" }}
+              //                 >
+              //                   <Link className={""} to={"/Component"}>
+              //                     <a href="#">
+              //                       {
+              //                         translations["CLICKSID"][
+              //                         language
+              //                         ]
+              //                       }
+              //                     </a>
+              //                   </Link>
+              //                   <Link className={""} to={"/Team"}>
+              //                     <a href="#">
+              //                       {
+              //                         translations["OurTeam"][
+              //                         language
+              //                         ]
+              //                       }
+              //                     </a>
+              //                   </Link>
+              //                 </div>
+              //               </div>
+              //               <Link className={""} to={"/Team"}>
+              //                 <a
+              //                   href="#"
+              //                   style={
+              //                     language === "ur" ||
+              //                       language === "sd"
+              //                       ? {
+              //                         display: "flex",
+              //                         flexDirection: "row-reverse",
+              //                         marginRight: "-16px",
+              //                       }
+              //                       : {}
+              //                   }
+              //                 >
+              //                   {translations["CLICKSID"][language]}
+              //                 </a>
+              //               </Link>
+              //             </div>
+              //           </div>
+              //         </li>
+
+              //         <li>
+              //           <a href="comingsoon.html" title="" className={"link"}>
+              //             <Link className="link" to={"/Maps"}>
+              //               {translations["Maps"][language]}
+              //             </Link>
+              //           </a>
+              //         </li>
+              //         <li>
+              //           <a  title="" width="10">
+              //             <Tooltip
+              //               overlayInnerStyle=
+              //               {{ borderRadius: "0px",
+              //               width: "350px",
+              //               minWidth: "350px",
+              //                position: "relative",
+              //                right: "100px"}}
+              //               color={"#Ffffff"}
+              //               placement="bottomLeft"
+              //               title={SearchBox}
+              //               arrow={mergedArrow}
+              //             >
+              //               <i
+              //                 className="fa-sharp fa-solid fa-magnifying-glass"
+              //                 style={
+              //                   isSticky
+              //                     ? { color: "#000000" }
+              //                     : { color: "#ffffff" }
+              //                 }
+              //               ></i>
+              //             </Tooltip>
+              //           </a>
+              //         </li>
+              //       </ul>
+              //     </div>
+              //   </div>
+              // </div>
+              
               <div className={`header `}>
-                <div className={"row "}>
-                  <div
-                    className={" navbar boxshadowNavBar justify-content-end"}
-                    style={{ width: "100%", paddingRight: "8px" }}
+              <div className={"row "}>
+                <div
+                  className={" navbar boxshadowNavBar justify-content-end"}
+                  style={{ width: "90%", paddingRight: "0px", }}
+                >
+                  <ul
+                    style={
+                      language === "ur" || language === "sd"
+                        ? {
+                          display: "flex",
+                          marginBottom: "0px",
+                          flexDirection: "row-reverse",
+                          backgroundColor:"red"
+                        }
+                        : { marginBottom: "0px" }
+                    }
                   >
-                    <ul
-                      style={
-                        language === "ur" || language === "sd"
-                          ? {
-                            display: "flex",
-                            marginBottom: "0px",
-                            flexDirection: "row-reverse",
+                    <li>
+                      <a
+                        href="comingsoon.html"
+                        title="Home Page"
+                        className={"link"}
+                      >
+                        <Link className={"link"} to={"/home"}>
+                          {translations["home"][language]}
+                        </Link>
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="comingsoon.html"
+                        title="Home Page"
+                        className={"link"}
+                      >
+                        <Link className={"link"} to={"/feedback"}>
+                          {
+                            translations["Feedback"][
+                            language
+                            ]
                           }
-                          : { marginBottom: "0px" }
-                      }
-                    >
-                      <li>
-                        <a
-                          href="comingsoon.html"
-                          title="Home Page"
-                          className={"link"}
-                        >
-                          <Link className={"link"} to={"/home"}>
-                            {translations["home"][language]}
-                          </Link>
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          href="comingsoon.html"
-                          title="Home Page"
-                          className={"link"}
-                        >
-                          <Link className={"link"} to={"/WhySindh"}>
-                            {
-                              translations["sindhATglance"][
-                              language
-                              ]
+                        </Link>
+                      </a>
+                    </li>
+                    <li>
+                      <a title="" className={"link"}>
+                        <Link className="link" to={"/InvestNow"}>
+                          {translations["InteractiveRegularity"][language]}
+                        </Link>
+                      </a>
+                    </li>
+                    <li>
+                    <div
+                        class="dropdown"
+                        style={
+                          language === "ur" || language === "sd"
+                            ? {
+                              display: "flex",
+                              flexDirection: "row-reverse",
                             }
-                          </Link>
-                        </a>
-                      </li>
-                      <li>
-                        <a title="" className={"link"}>
-                          <Link className="link" to={"/InvestNow"}>
-                            {translations["InvestNow"][language]}
-                          </Link>
-                        </a>
-                      </li>
-                      <li>
+                            : {}
+                        }
+                      >
+                        <span
+                          style={{
+                            marginRight: "5px",
+                            textDecoration: "none",
+                          }}
+                          className={"link"}
+                        >
+                          {" "}
+                          {translations["Aboutus"][language]}
+                        </span>
+                        <i
+                          // style={{ marginTop: "5px", marginRight: "5px",}}
+                          style={
+                            language === "ur" ||
+                              language === "sd"
+                              ? {
+                                marginTop: "5px", marginRight: "5px"
+                              }
+                              : {
+                                marginTop: "0px", marginLeft: "0px"
+                              }
+                          }
+                          class="dropbtn iconDown hover-rotate fa fa-chevron-right"
+                        ></i>
                         <div
-                          class="dropdown"
+                          class="dropdown-content"
                           style={
                             language === "ur" || language === "sd"
-                              ? {
-                                display: "flex",
-                                flexDirection: "row-reverse",
-                              }
+                              ? { marginTop: "30px" }
                               : {}
                           }
                         >
-                          <span
-                            style={{
-                              marginRight: "5px",
-                              textDecoration: "none",
-                            }}
-                            className={"link"}
-                          >
-                            <Link className={"link"} to={"/Opportunity"}>
-                              {
-                                translations["Opportunities"][
-                                language
-                                ]
+                          <Link className="" to={"/aboutus"}>
+                            <a
+                              target="_blank"
+                              href=""
+                              style={
+                                language === "ur" ||
+                                  language === "sd"
+                                  ? {
+                                    display: "flex",
+                                    flexDirection: "row-reverse",
+                                    marginRight: "-16px",
+                                  }
+                                  : {}
                               }
-                            </Link>
-                          </span>
-                          <i
-                            // style={{ marginTop: "0px", marginLeft: "0px" }}
-                            class="dropbtn iconDown hover-rotate fa fa-chevron-right"
-                            style={
-                              language === "ur" ||
-                                language === "sd"
-                                ? {
-                                  marginTop: "5px", marginRight: "3px"
-                                }
-                                : {
-                                  marginTop: "0px", marginLeft: "0px"
-                                }
-                            }
-                          ></i>
-                          <div
-                            class="dropdown-content"
-                            style={
-                              language === "ur" || language === "sd"
-                                ? { marginTop: "30px" }
-                                : {}
-                            }
-                          >
-                            <div
-                              class="nested-dropdown"
-                              style={{ width: "100%" }}
                             >
-                              <span
-                                style={
-                                  language === "ur" ||
-                                    language === "sd"
-                                    ? {
-                                      display: "flex",
-                                      width: "100%",
-                                      flexDirection: "row-reverse",
-                                    }
-                                    : {
-                                      display: "flex",
-                                      position: "relative",
-                                      width: "100%",
-                                    }
-                                }
-                              >
-                                <a
-                                  // style={{
-                                  //   width: "300px",
-                                  //   paddingLeft: "15px",
-                                  //   height: "40px",
-                                  //   paddingTop: "8px",
-                                  // }}
-                                  style={
-                                    language === "ur" ||
-                                      language === "sd"
-                                      ? {
-                                        width: "210px",
-                                        paddingLeft: "15px",
-                                        height: "40px",
-                                        paddingTop: "8px",
-                                        display: "flex",
-                                        flexDirection: "row-reverse",
-                                      }
-                                      : {
-                                        width: "300px",
-                                        paddingLeft: "15px",
-                                        height: "40px",
-                                        paddingTop: "8px",
-                                      }
-                                  }
-                                  href="#"
-                                >
-                                  <Link
-                                    className={"link"}
-                                    to={"/manufacturing"}
-                                    onClick={() => { window.scrollTo({ top: 0, left: 0, behavior: "smooth" }); }}
-                                  >
-                                    {
-                                      translations["Manufacturing"][
-                                      language
-                                      ]
-                                    }
-                                  </Link>
-                                </a>
-                                <i
-                                  style={
-                                    language === "ur" ||
-                                      language === "sd"
-                                      ? {
-                                        marginTop: "10px",
-                                        marginLeft: "0px",
-                                        position: "absolute",
-                                        left: "10px",
-                                        display: "flex",
-                                        flexDirection: "row-reverse",
-                                      }
-                                      : {
-                                        marginTop: "10px",
-                                        marginLeft: "0px",
-                                        position: "absolute",
-                                        right: "15px",
-                                      }
-                                  }
-                                  class="dropbtn unique-iconDown unique-hover-rotate component fa fa-chevron-right"
-                                ></i>
-                              </span>
-                              <div
-                                class="dropdown-content nested-content nested-right"
-                                style={{ width: "200px" }}
-                              >
-                                <Link className={""} to={"/manufacturing#expertform"}>
-                                  <a href="#" >
-                                    {
-                                      translations["Talktoexpert"][
-                                      language
-                                      ]
-                                    }
-                                  </a>
-                                </Link>
-                              </div>
-                            </div>
-
-                            <div
-                              class="nested-dropdown"
-                              style={{ width: "100%" }}
-                            >
-                              <span
-                                style={
-                                  language === "ur" ||
-                                    language === "sd"
-                                    ? {
-                                      display: "flex",
-                                      width: "100%",
-                                      flexDirection: "row-reverse",
-                                    }
-                                    : {
-                                      display: "flex",
-                                      position: "relative",
-                                      width: "100%",
-                                    }
-                                }
-                              >
-                                <a
-                                  style={
-                                    language === "ur" ||
-                                      language === "sd"
-                                      ? {
-                                        width: "210px",
-                                        paddingLeft: "15px",
-                                        height: "40px",
-                                        paddingTop: "8px",
-                                        display: "flex",
-                                        flexDirection: "row-reverse",
-                                      }
-                                      : {
-                                        width: "300px",
-                                        paddingLeft: "15px",
-                                        height: "40px",
-                                        paddingTop: "8px",
-                                      }
-                                  }
-                                  href="#"
-                                >
-                                  <Link onClick={() => { window.scrollTo({ top: 0, left: 0, behavior: "smooth" }); }} className={"link"} to={"/textile"}>
-                                    {
-                                      translations["Textile"][
-                                      language
-                                      ]
-                                    }
-                                  </Link>
-                                </a>
-                                <i
-                                  style={
-                                    language === "ur" ||
-                                      language === "sd"
-                                      ? {
-                                        marginTop: "10px",
-                                        marginLeft: "0px",
-                                        position: "absolute",
-                                        left: "10px",
-                                        display: "flex",
-                                        flexDirection: "row-reverse",
-                                      }
-                                      : {
-                                        marginTop: "10px",
-                                        marginLeft: "0px",
-                                        position: "absolute",
-                                        right: "15px",
-                                      }
-                                  }
-                                  class="dropbtn unique-iconDown unique-hover-rotate component fa fa-chevron-right"
-                                ></i>
-                              </span>
-                              <div
-                                class="dropdown-content nested-content nested-right"
-                                style={{ width: "200px", marginTop: "40px" }}
-                              >
-                                <Link className={""} to={"/textile#expertform"}>
-                                  <a  href="#">
-                                    {
-                                      translations["Talktoexpert"][
-                                      language
-                                      ]
-                                    }
-                                  </a>
-                                </Link>
-                              </div>
-                            </div>
-
-                            <div
-                              class="nested-dropdown"
-                              style={{ width: "100%" }}
-                            >
-                              <span
-                                style={
-                                  language === "ur" ||
-                                    language === "sd"
-                                    ? {
-                                      display: "flex",
-                                      width: "100%",
-                                      flexDirection: "row-reverse",
-                                    }
-                                    : {
-                                      display: "flex",
-                                      position: "relative",
-                                      width: "100%",
-                                    }
-                                }
-                              >
-                                <a
-                                  style={
-                                    language === "ur" ||
-                                      language === "sd"
-                                      ? {
-                                        width: "210px",
-                                        paddingLeft: "15px",
-                                        height: "40px",
-                                        paddingTop: "8px",
-                                        display: "flex",
-                                        flexDirection: "row-reverse",
-                                      }
-                                      : {
-                                        width: "300px",
-                                        paddingLeft: "15px",
-                                        height: "40px",
-                                        paddingTop: "8px",
-                                      }
-                                  }
-                                  href="#"
-                                >
-                                  <Link
-                                    onClick={() => { window.scrollTo({ top: 0, left: 0, behavior: "smooth" }); }}
-                                    className={"link"} to={"/tourism"}>
-                                    {
-                                      translations["Tourism"][
-                                      language
-                                      ]
-                                    }
-                                  </Link>
-                                </a>
-                                <i
-                                  style={
-                                    language === "ur" ||
-                                      language === "sd"
-                                      ? {
-                                        marginTop: "10px",
-                                        marginLeft: "0px",
-                                        position: "absolute",
-                                        left: "10px",
-                                        display: "flex",
-                                        flexDirection: "row-reverse",
-                                      }
-                                      : {
-                                        marginTop: "10px",
-                                        marginLeft: "0px",
-                                        position: "absolute",
-                                        right: "15px",
-                                      }
-                                  }
-                                  class="dropbtn unique-iconDown unique-hover-rotate component fa fa-chevron-right"
-                                ></i>
-                              </span>
-                              <div
-                                class="dropdown-content nested-content nested-right"
-                                style={{ width: "200px", marginTop: "80px" }}
-                              >
-                                <Link className={""} to={"/tourism#expertform"} >
-                                  <a  href="#">
-                                    {
-                                      translations["Talktoexpert"][
-                                      language
-                                      ]
-                                    }
-                                  </a>
-                                </Link>
-                              </div>
-                            </div>
-
-                            <div
-                              class="nested-dropdown"
-                              style={{ width: "100%" }}
-                            >
-                              <span
-                                style={
-                                  language === "ur" ||
-                                    language === "sd"
-                                    ? {
-                                      display: "flex",
-                                      width: "100%",
-                                      flexDirection: "row-reverse",
-                                    }
-                                    : {
-                                      display: "flex",
-                                      position: "relative",
-                                      width: "100%",
-                                    }
-                                }
-                              >
-                                <a
-                                  style={
-                                    language === "ur" ||
-                                      language === "sd"
-                                      ? {
-                                        width: "210px",
-                                        paddingLeft: "15px",
-                                        height: "40px",
-                                        paddingTop: "8px",
-                                        display: "flex",
-                                        flexDirection: "row-reverse",
-                                      }
-                                      : {
-                                        width: "300px",
-                                        paddingLeft: "15px",
-                                        height: "40px",
-                                        paddingTop: "8px",
-                                      }
-                                  }
-                                  href="#"
-                                >
-                                  <Link
-                                    onClick={() => { window.scrollTo({ top: 0, left: 0, behavior: "smooth" }); }}
-                                    className={"link"} to={"/agriculture"}>
-                                    {
-                                      translations["Agriculture"][
-                                      language
-                                      ]
-                                    }
-                                  </Link>
-                                </a>
-                                <i
-                                  style={
-                                    language === "ur" ||
-                                      language === "sd"
-                                      ? {
-                                        marginTop: "10px",
-                                        marginLeft: "0px",
-                                        display: "flex",
-                                        flexDirection: "row-reverse",
-                                        position: "absolute",
-                                        left: "10px",
-                                      }
-                                      : {
-                                        marginTop: "10px",
-                                        marginLeft: "0px",
-                                        position: "absolute",
-                                        right: "15px",
-                                      }
-                                  }
-                                  class="dropbtn unique-iconDown unique-hover-rotate component fa fa-chevron-right"
-                                ></i>
-                              </span>
-                              <div
-                                class="dropdown-content nested-content nested-right"
-                                style={{ width: "200px", marginTop: "120px" }}
-                              >
-                                <Link className={""} to={"/agriculture#expertform"}>
-                                  <a  href="#"  >
-                                    {
-                                      translations["Talktoexpert"][
-                                      language
-                                      ]
-                                    }
-                                  </a>
-                                </Link>
-                              </div>
-                            </div>
-
-                            <div
-                              class="nested-dropdown"
-                              style={{ width: "100%" }}
-                            >
-                              <span
-                                style={
-                                  language === "ur" ||
-                                    language === "sd"
-                                    ? {
-                                      display: "flex",
-                                      width: "100%",
-                                      flexDirection: "row-reverse",
-                                    }
-                                    : {
-                                      display: "flex",
-                                      position: "relative",
-                                      width: "100%",
-                                    }
-                                }
-                              >
-                                <a
-                                  style={
-                                    language === "ur" ||
-                                      language === "sd"
-                                      ? {
-                                        width: "210px",
-                                        paddingLeft: "15px",
-                                        height: "40px",
-                                        paddingTop: "8px",
-                                        display: "flex",
-                                        flexDirection: "row-reverse",
-                                      }
-                                      : {
-                                        width: "300px",
-                                        paddingLeft: "15px",
-                                        height: "40px",
-                                        paddingTop: "8px",
-                                      }
-                                  }
-                                  href="#"
-                                >
-                                  <Link
-                                    onClick={() => {
-                                      window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
-                                    }} className={"link"} to={"/education"}>
-                                    {
-                                      translations["Education"][
-                                      language
-                                      ]
-                                    }
-                                  </Link>
-                                </a>
-                                <i
-                                  style={
-                                    language === "ur" ||
-                                      language === "sd"
-                                      ? {
-                                        marginTop: "10px",
-                                        marginLeft: "0px",
-                                        position: "absolute",
-                                        left: "10px",
-                                        display: "flex",
-                                        flexDirection: "row-reverse",
-                                        position: "absolute",
-                                        left: "10px",
-                                      }
-                                      : {
-                                        marginTop: "10px",
-                                        marginLeft: "0px",
-                                        position: "absolute",
-                                        right: "15px",
-                                      }
-                                  }
-                                  class="dropbtn unique-iconDown unique-hover-rotate component fa fa-chevron-right"
-                                ></i>
-                              </span>
-                              <div
-                                class="dropdown-content nested-content nested-right"
-                                style={{ width: "200px", marginTop: "160px" }}
-                              >
-                                <Link className={""} to={"/education#expertform"}>
-                                  <a  href="#">
-                                    {
-                                      translations["Talktoexpert"][
-                                      language
-                                      ]
-                                    }
-                                  </a>
-                                </Link>
-                              </div>
-                            </div>
-
-                            <div
-                              class="nested-dropdown"
-                              style={{ width: "100%" }}
-                            >
-                              <span
-                                style={
-                                  language === "ur" ||
-                                    language === "sd"
-                                    ? {
-                                      display: "flex",
-                                      width: "100%",
-                                      flexDirection: "row-reverse",
-                                    }
-                                    : {
-                                      display: "flex",
-                                      position: "relative",
-                                      width: "100%",
-                                    }
-                                }
-                              >
-                                <a
-                                  style={
-                                    language === "ur" ||
-                                      language === "sd"
-                                      ? {
-                                        width: "210px",
-                                        paddingLeft: "15px",
-                                        height: "40px",
-                                        paddingTop: "8px",
-                                        display: "flex",
-                                        flexDirection: "row-reverse",
-                                      }
-                                      : {
-                                        width: "300px",
-                                        paddingLeft: "15px",
-                                        height: "40px",
-                                        paddingTop: "8px",
-                                      }
-                                  }
-                                  href="#"
-                                >
-                                  <Link
-                                    onClick={() => { window.scrollTo({ top: 0, left: 0, behavior: "smooth" }); }}
-                                    className={"link"} to={"/energy"}>
-                                    {
-                                      translations["Energy"][
-                                      language
-                                      ]
-                                    }
-                                  </Link>
-                                </a>
-                                <i
-                                  style={
-                                    language === "ur" ||
-                                      language === "sd"
-                                      ? {
-                                        marginTop: "10px",
-                                        marginLeft: "0px",
-                                        position: "absolute",
-                                        left: "10px",
-                                        display: "flex",
-                                        flexDirection: "row-reverse",
-                                      }
-                                      : {
-                                        marginTop: "10px",
-                                        marginLeft: "0px",
-                                        position: "absolute",
-                                        right: "15px",
-                                      }
-                                  }
-                                  class="dropbtn unique-iconDown unique-hover-rotate component fa fa-chevron-right"
-                                ></i>
-                              </span>
-                              <div
-                                class="dropdown-content nested-content nested-right"
-                                style={{ width: "200px", marginTop: "200px" }}
-                              >
-                                <Link  className={""} to={"/energy#expertform"}>
-                                  <a href="#">
-                                    {
-                                      translations["Talktoexpert"][
-                                      language
-                                      ]
-                                    }
-                                  </a>
-                                </Link>
-                              </div>
-                            </div>
-
-                            <div
-                              class="nested-dropdown"
-                              style={{ width: "100%" }}
-                            >
-                              <span
-                                style={
-                                  language === "ur" ||
-                                    language === "sd"
-                                    ? {
-                                      display: "flex",
-                                      width: "100%",
-                                      flexDirection: "row-reverse",
-                                    }
-                                    : {
-                                      display: "flex",
-                                      position: "relative",
-                                      width: "100%",
-                                    }
-                                }
-                              >
-                                <a
-                                  style={
-                                    language === "ur" ||
-                                      language === "sd"
-                                      ? {
-                                        width: "210px",
-                                        paddingLeft: "15px",
-                                        height: "40px",
-                                        paddingTop: "8px",
-                                        display: "flex",
-                                        flexDirection: "row-reverse",
-                                      }
-                                      : {
-                                        width: "300px",
-                                        paddingLeft: "15px",
-                                        height: "40px",
-                                        paddingTop: "8px",
-                                      }
-                                  }
-                                  href="#"
-                                >
-                                  <Link onClick={() => { window.scrollTo({ top: 0, left: 0, behavior: "smooth" }); }} className={"link"} to={"/health"}>
-                                    {
-                                      translations["Health"][
-                                      language
-                                      ]
-                                    }
-                                  </Link>
-                                </a>
-                                <i
-                                  style={
-                                    language === "ur" ||
-                                      language === "sd"
-                                      ? {
-                                        marginTop: "10px",
-                                        marginLeft: "0px",
-                                        display: "flex",
-                                        position: "absolute",
-                                        left: "10px",
-                                        flexDirection: "row-reverse",
-                                      }
-                                      : {
-                                        marginTop: "10px",
-                                        marginLeft: "0px",
-                                        position: "absolute",
-                                        right: "15px",
-                                      }
-                                  }
-                                  class="dropbtn unique-iconDown unique-hover-rotate component fa fa-chevron-right"
-                                ></i>
-                              </span>
-                              <div
-                                class="dropdown-content nested-content nested-right"
-                                style={{ width: "200px", marginTop: "240px" }}
-                              >
-                                <Link  className={""} to={"/health#expertform"}>
-                                  <a  href="#">
-                                    {
-                                      translations["Talktoexpert"][
-                                      language
-                                      ]
-                                    }
-                                  </a>
-                                </Link>
-                              </div>
-                            </div>
-
-                            <div
-                              class="nested-dropdown"
-                              style={{ width: "100%" }}
-                            >
-                              <span
-                                style={
-                                  language === "ur" ||
-                                    language === "sd"
-                                    ? {
-                                      display: "flex",
-                                      width: "100%",
-                                      flexDirection: "row-reverse",
-                                    }
-                                    : {
-                                      display: "flex",
-                                      position: "relative",
-                                      width: "100%",
-                                    }
-                                }
-                              >
-                                <a
-                                  style={
-                                    language === "ur" ||
-                                      language === "sd"
-                                      ? {
-                                        width: "210px",
-                                        paddingLeft: "15px",
-                                        height: "40px",
-                                        paddingTop: "8px",
-                                        display: "flex",
-                                        flexDirection: "row-reverse",
-                                      }
-                                      : {
-                                        width: "300px",
-                                        paddingLeft: "15px",
-                                        height: "40px",
-                                        paddingTop: "8px",
-                                      }
-                                  }
-                                  href="#"
-                                >
-                                  <Link
-                                    onClick={() => { window.scrollTo({ top: 0, left: 0, behavior: "smooth" }); }}
-                                    className={"link"}
-                                    to={"/informationtech"}
-
-                                  >
-                                    {
-                                      translations[
-                                      "InformationTechnology"
-                                      ][language]
-                                    }
-                                  </Link>
-                                </a>
-                                <i
-                                  style={
-                                    language === "ur" ||
-                                      language === "sd"
-                                      ? {
-                                        marginTop: "10px",
-                                        marginLeft: "0px",
-                                        display: "flex",
-                                        position: "absolute",
-                                        left: "10px",
-                                        flexDirection: "row-reverse",
-                                      }
-                                      : {
-                                        marginTop: "10px",
-                                        marginLeft: "0px",
-                                        position: "absolute",
-                                        right: "15px",
-                                      }
-                                  }
-                                  class="dropbtn unique-iconDown unique-hover-rotate component fa fa-chevron-right"
-                                ></i>
-                              </span>
-                              <div
-                                class="dropdown-content nested-content nested-right"
-                                style={{ width: "200px", marginTop: "280px" }}
-                              >
-                                <Link  className={""}  to={"/informationtech#expertform"}>
-                                  <a  href="#">
-                                    {
-                                      translations["Talktoexpert"][
-                                      language
-                                      ]
-                                    }
-                                  </a>
-                                </Link>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </li>
-                      <li>
-                        <a title="" className={"link"}>
-                          <Link className="link" to={"/NewsAndInformation"}>
-                            {
-                              translations["NewsInformation"][
-                              language
-                              ]
-                            }
+                              {translations["Introduction"][language]}
+                            </a>
                           </Link>
-                        </a>
-                      </li>
-                      <li>
-                        <div
-                          class="dropdown"
-                          style={
-                            language === "ur" || language === "sd"
-                              ? {
-                                display: "flex",
-                                flexDirection: "row-reverse",
+                          {/* <div
+                            class="nested-dropdown"
+                            style={{ width: "100%" }}
+                          >
+                            <span
+                              style={
+                                language === "ur" ||
+                                  language === "sd"
+                                  ? {
+                                    display: "flex",
+                                    flexDirection: "row-reverse",
+                                    width: "100%",
+                                  }
+                                  : {
+                                    display: "flex",
+                                    position: "relative",
+                                    width: "100%",
+                                  }
                               }
-                              : {}
-                          }
-                        >
-                          <span
-                            style={{
-                              marginRight: "5px",
-                              textDecoration: "none",
-                            }}
-                            className={"link"}
-                          >
-                            {translations["Resources"][language]}
-                          </span>
-                          <i
-                            // style={{ marginTop: "0px", marginLeft: "0px" }}
-                            style={
-                              language === "ur" ||
-                                language === "sd"
-                                ? {
-                                  marginTop: "5px", marginRight: "5px"
+                            >
+                              <a
+                                style={
+                                  language === "ur" ||
+                                    language === "sd"
+                                    ? {
+                                      width: "88%",
+                                      paddingLeft: "30px",
+                                      height: "40px",
+                                      paddingTop: "8px",
+                                      display: "flex",
+                                      flexDirection: "row-reverse",
+                                    }
+                                    : {
+                                      width: "100%",
+                                      paddingLeft: "30px",
+                                      height: "40px",
+                                      paddingTop: "8px",
+                                    }
                                 }
-                                : {
-                                  marginTop: "0px", marginLeft: "0px"
-                                }
-                            }
-                            class=" dropbtn iconDown hover-rotate fa fa-chevron-right"
-                          ></i>
-                          <div
-                            class="dropdown-content"
-                            style={
-                              language === "ur" || language === "sd"
-                                ? { marginTop: "30px" }
-                                : {}
-                            }
-                          >
-                            <Link className={""} to={"/resource"}>
-                              <a target="_blank" href="">
-                                {/* <Link className="link" to={"/ComingSoon"}> */}
-                                {translations["Download"][language]}
-                              </a>
-                            </Link>
-                            <Link className={""} to={"/regulatorycatalog"}>
-                              <a href="#">
+                                href="#"
+                              >
                                 {
-                                  translations["RegulatoryCatalog"][
+                                  translations["Components"][
                                   language
                                   ]
                                 }
                               </a>
-                            </Link>
-                          </div>
-                        </div>
-                      </li>
-                      <li>
-                        <div
-                          class="dropdown"
-                          style={
-                            language === "ur" || language === "sd"
-                              ? {
-                                display: "flex",
-                                flexDirection: "row-reverse",
-                              }
-                              : {}
-                          }
-                        >
-                          <span
-                            style={{
-                              marginRight: "5px",
-                              textDecoration: "none",
-                            }}
-                            className={"link"}
-                          >
-                            {" "}
-                            {translations["Aboutus"][language]}
-                          </span>
-                          <i
-                            // style={{ marginTop: "5px", marginRight: "5px",}}
-                            style={
-                              language === "ur" ||
-                                language === "sd"
-                                ? {
-                                  marginTop: "5px", marginRight: "5px"
-                                }
-                                : {
-                                  marginTop: "0px", marginLeft: "0px"
-                                }
-                            }
-                            class="dropbtn iconDown hover-rotate fa fa-chevron-right"
-                          ></i>
-                          <div
-                            class="dropdown-content"
-                            style={
-                              language === "ur" || language === "sd"
-                                ? { marginTop: "30px" }
-                                : {}
-                            }
-                          >
-                            <Link className="" to={"/aboutus"}>
-                              <a
-                                target="_blank"
-                                href=""
+                              <i
+                                // style={{
+                                //   marginTop: "10px",
+                                //   marginLeft: "0px",
+                                //   position: "absolute",
+                                //   right: "15px",
+                                // }}
                                 style={
                                   language === "ur" ||
                                     language === "sd"
                                     ? {
+                                      marginTop: "10px",
+                                      marginLeft: "0px",
                                       display: "flex",
                                       flexDirection: "row-reverse",
-                                      marginRight: "-16px",
-                                    }
-                                    : {}
-                                }
-                              >
-                                {translations["Vision"][language]}
-                              </a>
-                            </Link>
-                            <div
-                              class="nested-dropdown"
-                              style={{ width: "100%" }}
-                            >
-                              <span
-                                style={
-                                  language === "ur" ||
-                                    language === "sd"
-                                    ? {
-                                      display: "flex",
-                                      flexDirection: "row-reverse",
-                                      width: "100%",
                                     }
                                     : {
-                                      display: "flex",
-                                      position: "relative",
-                                      width: "100%",
+                                      marginTop: "10px",
+                                      marginLeft: "0px",
+                                      position: "absolute",
+                                      right: "15px",
                                     }
                                 }
-                              >
-                                <a
-                                  style={
-                                    language === "ur" ||
-                                      language === "sd"
-                                      ? {
-                                        width: "88%",
-                                        paddingLeft: "30px",
-                                        height: "40px",
-                                        paddingTop: "8px",
-                                        display: "flex",
-                                        flexDirection: "row-reverse",
-                                      }
-                                      : {
-                                        width: "100%",
-                                        paddingLeft: "30px",
-                                        height: "40px",
-                                        paddingTop: "8px",
-                                      }
-                                  }
-                                  href="#"
-                                >
+                                class="dropbtn unique-iconDown unique-hover-rotate component fa fa-chevron-right"
+                              ></i>
+                            </span>
+                            <div
+                              class="dropdown-content nested-content nested-right"
+                              style={{ left: "auto" }}
+                            >
+                              <Link className={""} to={"/Component"}>
+                                <a href="#">
                                   {
-                                    translations["Components"][
+                                    translations["CLICKSID"][
                                     language
                                     ]
                                   }
                                 </a>
-                                <i
-                                  // style={{
-                                  //   marginTop: "10px",
-                                  //   marginLeft: "0px",
-                                  //   position: "absolute",
-                                  //   right: "15px",
-                                  // }}
-                                  style={
-                                    language === "ur" ||
-                                      language === "sd"
-                                      ? {
-                                        marginTop: "10px",
-                                        marginLeft: "0px",
-                                        display: "flex",
-                                        flexDirection: "row-reverse",
-                                      }
-                                      : {
-                                        marginTop: "10px",
-                                        marginLeft: "0px",
-                                        position: "absolute",
-                                        right: "15px",
-                                      }
+                              </Link>
+                              <Link className={""} to={"/Team"}>
+                                <a href="#">
+                                  {
+                                    translations["OurTeam"][
+                                    language
+                                    ]
                                   }
-                                  class="dropbtn unique-iconDown unique-hover-rotate component fa fa-chevron-right"
-                                ></i>
-                              </span>
-                              <div
-                                class="dropdown-content nested-content nested-right"
-                                style={{ left: "auto" }}
-                              >
-                                <Link className={""} to={"/Component"}>
-                                  <a href="#">
-                                    {
-                                      translations["CLICKSID"][
-                                      language
-                                      ]
-                                    }
-                                  </a>
-                                </Link>
-                                <Link className={""} to={"/Team"}>
-                                  <a href="#">
-                                    {
-                                      translations["OurTeam"][
-                                      language
-                                      ]
-                                    }
-                                  </a>
-                                </Link>
-                              </div>
+                                </a>
+                              </Link>
                             </div>
-                            <Link className={""} to={"/Team"}>
+                          </div> */}
+                          <Link className={""} to={"/Team"}>
+                            <a
+                              href="#"
+                              style={
+                                language === "ur" ||
+                                  language === "sd"
+                                  ? {
+                                    display: "flex",
+                                    flexDirection: "row-reverse",
+                                    marginRight: "-16px",
+                                  }
+                                  : {}
+                              }
+                            >
+                              {translations["projectobjectives"][language]}
+                            </a>
+                          </Link>
+                          <Link className={""} to={"/Team"}>
+                            <a
+                              href="#"
+                              style={
+                                language === "ur" ||
+                                  language === "sd"
+                                  ? {
+                                    display: "flex",
+                                    flexDirection: "row-reverse",
+                                    marginRight: "-16px",
+                                  }
+                                  : {}
+                              }
+                            >
+                              {translations["Achievements"][language]}
+                            </a>
+                          </Link>
+                          <Link className={""} to={"/Team"}>
+                            <a
+                              href="#"
+                              style={
+                                language === "ur" ||
+                                  language === "sd"
+                                  ? {
+                                    display: "flex",
+                                    flexDirection: "row-reverse",
+                                    marginRight: "-16px",
+                                  }
+                                  : {}
+                              }
+                            >
+                              {translations["Team"][language]}
+                            </a>
+                          </Link>
+                          <Link className={""} to={"/Team"}>
+                            <a
+                              href="#"
+                              style={
+                                language === "ur" ||
+                                  language === "sd"
+                                  ? {
+                                    display: "flex",
+                                    flexDirection: "row-reverse",
+                                    marginRight: "-16px",
+                                  }
+                                  : {}
+                              }
+                            >
+                              {translations["Contactus"][language]}
+                            </a>
+                          </Link>
+                        </div>
+                      </div>
+                    </li>
+                    {/* <li>
+                      <a title="" className={"link"}>
+                        <Link className="link" to={"/NewsAndInformation"}>
+                          {
+                            translations["NewsInformation"][
+                            language
+                            ]
+                          }
+                        </Link>
+                      </a>
+                    </li> */}
+                    {/* <li>
+                      <div
+                        class="dropdown"
+                        style={
+                          language === "ur" || language === "sd"
+                            ? {
+                              display: "flex",
+                              flexDirection: "row-reverse",
+                            }
+                            : {}
+                        }
+                      >
+                        <span
+                          style={{
+                            marginRight: "5px",
+                            textDecoration: "none",
+                          }}
+                          className={"link"}
+                        >
+                          {translations["Resources"][language]}
+                        </span>
+                        <i
+                          style={
+                            language === "ur" ||
+                              language === "sd"
+                              ? {
+                                marginTop: "5px", marginRight: "5px"
+                              }
+                              : {
+                                marginTop: "0px", marginLeft: "0px"
+                              }
+                          }
+                          class=" dropbtn iconDown hover-rotate fa fa-chevron-right"
+                        ></i>
+                        <div
+                          class="dropdown-content"
+                          style={
+                            language === "ur" || language === "sd"
+                              ? { marginTop: "30px" }
+                              : {}
+                          }
+                        >
+                          <Link className={""} to={"/resource"}>
+                            <a target="_blank" href="">
+                              {translations["Download"][language]}
+                            </a>
+                          </Link>
+                          <Link className={""} to={"/regulatorycatalog"}>
+                            <a href="#">
+                              {
+                                translations["RegulatoryCatalog"][
+                                language
+                                ]
+                              }
+                            </a>
+                          </Link>
+                        </div>
+                      </div>
+                    </li> */}
+                    {/* <li>
+                      <div
+                        class="dropdown"
+                        style={
+                          language === "ur" || language === "sd"
+                            ? {
+                              display: "flex",
+                              flexDirection: "row-reverse",
+                            }
+                            : {}
+                        }
+                      >
+                        <span
+                          style={{
+                            marginRight: "5px",
+                            textDecoration: "none",
+                          }}
+                          className={"link"}
+                        >
+                          {" "}
+                          {translations["Aboutus"][language]}
+                        </span>
+                        <i
+                          // style={{ marginTop: "5px", marginRight: "5px",}}
+                          style={
+                            language === "ur" ||
+                              language === "sd"
+                              ? {
+                                marginTop: "5px", marginRight: "5px"
+                              }
+                              : {
+                                marginTop: "0px", marginLeft: "0px"
+                              }
+                          }
+                          class="dropbtn iconDown hover-rotate fa fa-chevron-right"
+                        ></i>
+                        <div
+                          class="dropdown-content"
+                          style={
+                            language === "ur" || language === "sd"
+                              ? { marginTop: "30px" }
+                              : {}
+                          }
+                        >
+                          <Link className="" to={"/aboutus"}>
+                            <a
+                              target="_blank"
+                              href=""
+                              style={
+                                language === "ur" ||
+                                  language === "sd"
+                                  ? {
+                                    display: "flex",
+                                    flexDirection: "row-reverse",
+                                    marginRight: "-16px",
+                                  }
+                                  : {}
+                              }
+                            >
+                              {translations["Vision"][language]}
+                            </a>
+                          </Link>
+                          <div
+                            class="nested-dropdown"
+                            style={{ width: "100%" }}
+                          >
+                            <span
+                              style={
+                                language === "ur" ||
+                                  language === "sd"
+                                  ? {
+                                    display: "flex",
+                                    flexDirection: "row-reverse",
+                                    width: "100%",
+                                  }
+                                  : {
+                                    display: "flex",
+                                    position: "relative",
+                                    width: "100%",
+                                  }
+                              }
+                            >
                               <a
-                                href="#"
                                 style={
                                   language === "ur" ||
                                     language === "sd"
                                     ? {
+                                      width: "88%",
+                                      paddingLeft: "30px",
+                                      height: "40px",
+                                      paddingTop: "8px",
                                       display: "flex",
                                       flexDirection: "row-reverse",
-                                      marginRight: "-16px",
                                     }
-                                    : {}
+                                    : {
+                                      width: "100%",
+                                      paddingLeft: "30px",
+                                      height: "40px",
+                                      paddingTop: "8px",
+                                    }
                                 }
+                                href="#"
                               >
-                                {translations["CLICKSID"][language]}
+                                {
+                                  translations["Components"][
+                                  language
+                                  ]
+                                }
                               </a>
-                            </Link>
+                              <i
+                                // style={{
+                                //   marginTop: "10px",
+                                //   marginLeft: "0px",
+                                //   position: "absolute",
+                                //   right: "15px",
+                                // }}
+                                style={
+                                  language === "ur" ||
+                                    language === "sd"
+                                    ? {
+                                      marginTop: "10px",
+                                      marginLeft: "0px",
+                                      display: "flex",
+                                      flexDirection: "row-reverse",
+                                    }
+                                    : {
+                                      marginTop: "10px",
+                                      marginLeft: "0px",
+                                      position: "absolute",
+                                      right: "15px",
+                                    }
+                                }
+                                class="dropbtn unique-iconDown unique-hover-rotate component fa fa-chevron-right"
+                              ></i>
+                            </span>
+                            <div
+                              class="dropdown-content nested-content nested-right"
+                              style={{ left: "auto" }}
+                            >
+                              <Link className={""} to={"/Component"}>
+                                <a href="#">
+                                  {
+                                    translations["CLICKSID"][
+                                    language
+                                    ]
+                                  }
+                                </a>
+                              </Link>
+                              <Link className={""} to={"/Team"}>
+                                <a href="#">
+                                  {
+                                    translations["OurTeam"][
+                                    language
+                                    ]
+                                  }
+                                </a>
+                              </Link>
+                            </div>
                           </div>
-                        </div>
-                      </li>
-
-                      <li>
-                        <a href="comingsoon.html" title="" className={"link"}>
-                          <Link className="link" to={"/Maps"}>
-                            {translations["Maps"][language]}
-                          </Link>
-                        </a>
-                      </li>
-                      <li>
-                        <a  title="" width="10">
-                          <Tooltip
-                            overlayInnerStyle=
-                            {{ borderRadius: "0px",
-                            width: "350px",
-                            minWidth: "350px",
-                             position: "relative",
-                             right: "100px"}}
-                            color={"#Ffffff"}
-                            placement="bottomLeft"
-                            title={SearchBox}
-                            arrow={mergedArrow}
-                          >
-                            <i
-                              className="fa-sharp fa-solid fa-magnifying-glass"
+                          <Link className={""} to={"/Team"}>
+                            <a
+                              href="#"
                               style={
-                                isSticky
-                                  ? { color: "#000000" }
-                                  : { color: "#ffffff" }
+                                language === "ur" ||
+                                  language === "sd"
+                                  ? {
+                                    display: "flex",
+                                    flexDirection: "row-reverse",
+                                    marginRight: "-16px",
+                                  }
+                                  : {}
                               }
-                            ></i>
-                          </Tooltip>
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
+                            >
+                              {translations["CLICKSID"][language]}
+                            </a>
+                          </Link>
+                        </div>
+                      </div>
+                    </li> */}
+
+                    {/* <li>
+                      <a href="comingsoon.html" title="" className={"link"}>
+                        <Link className="link" to={"/Maps"}>
+                          {translations["Maps"][language]}
+                        </Link>
+                      </a>
+                    </li> */}
+                    <li>
+                      <a  title="" width="10">
+                        <Tooltip
+                          overlayInnerStyle=
+                          {{ borderRadius: "0px",
+                          width: "350px",
+                          minWidth: "350px",
+                           position: "relative",
+                           right: "100px"}}
+                          color={"#Ffffff"}
+                          placement="bottomLeft"
+                          title={SearchBox}
+                          arrow={mergedArrow}
+                        >
+                          <i
+                            className="fa-sharp fa-solid fa-magnifying-glass"
+                            style={
+                              isSticky
+                                ? { color: "#000000" }
+                                : { color: "#ffffff" }
+                            }
+                          ></i>
+                        </Tooltip>
+                      </a>
+                    </li>
+                  </ul>
                 </div>
               </div>
-            )}
+            </div>
+            )
+            }
           </div>
           <div
             className=" px-5"
@@ -1776,7 +2347,7 @@ const {language} = useSelector((state)=>state.language)
                       : {}
                   }
                 >
-                  <Link className={""} to={"/investnow"}>
+                  <Link className={""} to={"/regulatorycatalog"}>
                     <button type="button" className="feedback highlightable">
                       <span>
                         {translations["investButton"][language]}
@@ -1944,6 +2515,7 @@ const {language} = useSelector((state)=>state.language)
 
           {/* <div className="row sticky-icon"></div> */}
         </div>
+        
         <div className=" pt-2 pb-4 ">
           <div className="">
             <div

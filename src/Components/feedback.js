@@ -1,3 +1,5 @@
+
+
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "../Css/header.css";
@@ -10,6 +12,7 @@ import { useEffect } from "react";
 
 import { Box, TextField, TextareaAutosize } from "@mui/material";
 import MobileHeaderGeneric from "./MobileHeaderGeneric";
+import TextArea from "antd/es/input/TextArea";
 
 export default function FeedBack() {
 
@@ -460,22 +463,23 @@ export default function FeedBack() {
             display: "flex",
             justifyContent: "center",
             marginTop: "50px",
+            // textAlign:"justify",
+            margin:"auto"
           }}
         >
+       <div className="">
+       <h1>Report Regulatory Difficulties</h1>
           <p
             className={window.innerWidth <= 540 ? "mobileparaforfeedback" : "feedbackpara"} style={{fontSize:window.innerWidth === 280 || window.innerWidth ===320 ? "17.5px": " "}}
           >
-            We are always looking for ways to deliver an exceptional experience
-            to our customers and investors. Your feedback is vital for us to
-            achieve this goal. Please use the form below to share your insights
-            and suggestions on how we can improve our services. We value your7.5
-            time and contribution in helping us grow and succeed. Thank you for
-            your support and trust.
+           Please contact us to share the regulatory constraints which you or your business has faced with Government of Sindh institutions.
+           Your response shall be kept confidential and will only be used to review the legislation for its improvement.
           </p>
+       </div>
         </div>
       </div>
 
-      <div
+      {/* <div
         className="row justify-content-center feedbackMUI"
         style={{
           height: window.innerWidth <= 912 ? "930px":"700px",
@@ -494,7 +498,7 @@ export default function FeedBack() {
                 placeholder="Enter your Name"
                 label="Name"
                 InputProps={{
-                  style: { borderRadius: "30px", border: "none" }, // Remove the border
+                  style: { borderRadius: "30px", border: "none" }, 
                 }}
               />
             </div>
@@ -505,7 +509,7 @@ export default function FeedBack() {
                 placeholder="Enter your Company Name"
                 label="Company Name"
                 InputProps={{
-                  style: { borderRadius: "30px", border: "none" }, // Remove the border
+                  style: { borderRadius: "30px", border: "none" }, 
                 }}
               />
             </div>
@@ -516,7 +520,7 @@ export default function FeedBack() {
                 placeholder="Enter your Address"
                 label="Address"
                 InputProps={{
-                  style: { borderRadius: "30px", border: "none" }, // Remove the border
+                  style: { borderRadius: "30px", border: "none" }, 
                 }}
               />
             </div>
@@ -529,7 +533,7 @@ export default function FeedBack() {
                 placeholder="Enter your Country/City"
                 label="Country-City"
                 InputProps={{
-                  style: { borderRadius: "30px", border: "none" }, // Remove the border
+                  style: { borderRadius: "30px", border: "none" }, 
                 }}
               />
             </div>
@@ -540,7 +544,7 @@ export default function FeedBack() {
                 placeholder="Enter your Mobile Number"
                 label="Mobile Number"
                 InputProps={{
-                  style: { borderRadius: "30px", border: "none" }, // Remove the border
+                  style: { borderRadius: "30px", border: "none" }, 
                 }}
               />
             </div>
@@ -550,9 +554,8 @@ export default function FeedBack() {
                 type="text"
                 placeholder="Enter your Email"
                 label=" Email Address"
-                // defaultValue={"Hello World"}
                 InputProps={{
-                  style: { borderRadius: "30px", border: "none" }, // Remove the border
+                  style: { borderRadius: "30px", border: "none" }, 
                 }}
               />
             </div>
@@ -565,7 +568,7 @@ export default function FeedBack() {
                 placeholder="Enter your Website link"
                 label="Company Website"
                 InputProps={{
-                  style: { borderRadius: "30px", border: "none" }, // Remove the border
+                  style: { borderRadius: "30px", border: "none" }, 
                 }}
               />
             </div>
@@ -577,14 +580,14 @@ export default function FeedBack() {
                 label="Department"
                 style={{
                   height: "53.5px",
-                  width: "100%", // Remove the extra "width:" here
+                  width: "100%", 
                   color: "#757775",
                   paddingTop: "10px",
-                  paddingRight: "30px", /* Add padding to the right side for the icon */
+                  paddingRight: "30px", 
                   borderRadius: "25px",
                   fontFamily: "sans-serif",
                   padding: "10px",
-                  position: "relative" /* Add relative positioning to the select element */
+                  position: "relative" 
                 }}
               >
                 {department.map((Val, index) => {
@@ -606,13 +609,13 @@ export default function FeedBack() {
                   renderValue={areas[0]}
                   style={{
                     height: "53.5px",
-                    width: "100%", // Remove the extra "width:" here
+                    width: "100%", 
                     color: "#757775",
                     paddingTop: "10px",
                    borderRadius: "25px",
                     fontFamily: "sans-serif",
                     padding: "10px 36px 10px 10px",
-                    position: "relative" /* Add relative positioning to the select element */
+                    position: "relative" 
                   }}
                 >
                   {areaDropdown.map((Val, index) => {
@@ -667,9 +670,183 @@ export default function FeedBack() {
           </div>
           </div>
     
+      </div> */}
+<div className="row px-5 pt-4 justify-content-center">
+  <div className="col-9 ps-4" style={{backgroundColor:"rd",}}>
+       <div className="row g-0"    style={{width:"100%"}}>
+         <div className="col-6" >
+           <h4> Name</h4>
+           <TextField
+            placeholder="Enter Your First Name"
+            size="small"
+            style={{width:"96%"}}
+          />
+        </div>
+        <div className="col-6 " >
+          <h4> Company Name</h4>
+         <TextField
+          placeholder="Enter Your Company Name"
+          size="small"
+          style={{width:"96%",}}
+         />
+     </div>
+  </div>
+<div className="row g-0"    style={{width:"100%"}}>
+     <div className="col-6" >
+       <h4>Address</h4>
+       <TextField
+         placeholder="Enter Your Address"
+         size="small"
+         style={{width:"96%"}}
+       />
       </div>
+      <div className="col-6 " >
+       <h4>Country / City</h4>
+       <TextField
+         placeholder="Enter Your Country / City"
+         size="small"
+         style={{width:"96%",}}
+       />
+      </div>
+</div>
+  <div className="row g-0"    style={{width:"100%"}}>
+    <div className="col-6" >
+    <h4>
+    Mobile Number
+    </h4>
+    <TextField
+      placeholder="Enter Your  Moble Number"
+      size="small"
+      style={{width:"96%"}}
+    />
+    </div>
+    <div className="col-6 " >
+    <h4>
+    Email
+    </h4>
+    <TextField
+      placeholder="Enter Your Email Address"
+      size="small"
+      style={{width:"96%",}}
+  />
+    </div>
+  </div>
+  <div className="row g-0"    style={{width:"100%"}}>
+    <div className="col-6" >
+    <h4>
+    Company Website
+    </h4>
+    <TextField
+      placeholder="Enter Your Company Website"
+      size="small"
+      style={{width:"96%"}}
+    />
+    </div>
+    <div className="col-6 ">
+    <h4>
+    ‎
+    </h4>
+            <select
+              type="select"
+              onChange={handleDepartments}
+              // size="small"
+              className="textField"
+              label="Department"
+              style={{
+                height: "40.1px",
+                width: "96%", 
+                paddingTop: "10px",
+                borderRadius: "5px",
+                fontFamily: "sans-serif",
+                padding: "10px",
+                // position: "relative" 
+                  padding: "7px 36px 10px 10px",
 
-      <Footer />
+              }}
+            >
+              {department.map((Val, index) => {
+                return (
+                  <option key={index} value={Val.value}>
+                    {Val.text}
+                  </option>
+                );
+              })}
+            </select>
+          </div>
+  </div>
+  <div className="row g-0 "    style={{width:"100%",marginTop:20,marginBottom:20}}>
+    <div className="col" >
+            {enableAreas === true ? (<>
+              <select
+                type="select"
+                onChange={handleArea}
+                className="textField"
+                size="small"
+                label={label}
+                renderValue={areas[0]}
+                style={{
+                  height: "40.1px",
+                  width: "98%", 
+                  paddingTop: "10px",
+                  borderRadius: "5px",
+                  fontFamily: "sans-serif",
+                  padding: "10px",
+                  // position: "relative" 
+                    padding: "7px 36px 10px 10px",
+                }}
+              >
+                {areaDropdown.map((Val, index) => {
+                  return (
+                    <option key={index} value={Val.value}>
+                      {Val.text}
+                    </option>
+                  );
+                })}
+              </select>
+            </>) : (
+              <div className="col-lg-3"></div>
+            )}
+    </div>
+    {/* <div className="col-6 " >
+    <h4>
+    Moble Number
+    </h4>
+    <TextArea
+    rows={4}
+      placeholder="Enter Your Mobile Number"
+      style={{width:"96%",}}
+  />
+    </div> */}
+  </div>
+  <div className="row g-0" style={{width:"98%"}}>
+    <div className="col">
+    <TextArea
+    rows={4}
+      placeholder="Enter Your Mobile Number"
+      style={{width:"100%",fontSize:18}}
+  />
+    </div>
+  </div>
+        <div className="row g-0">
+          <div className="col-lg-12 mt-4 tocentersubmitbutton"  >
+            <button type="button" className="submit_button">
+              <span>Submit</span>
+            </button>
+          </div>
+        </div>
+  </div>
+</div>
+  <Footer />
     </>
   );
 }
+
+
+
+
+
+
+
+
+
+

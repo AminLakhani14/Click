@@ -1,3 +1,4 @@
+
 import React, { useEffect, useMemo, useState } from "react";
 import mapbackground from "../assets/mapbackground.png";
 import "../Css/resource.css";
@@ -605,7 +606,7 @@ console.log(newValue)
         // }}
         >
           <Tooltip
-            overlayInnerStyle={{ borderRadius: "0px" }}
+            overlayInnerStyle={{ borderRadius: "0px", }}
             color={"#0F5789"}
             placement="top"
             title={"Zoom In"}
@@ -714,7 +715,7 @@ console.log(newValue)
               height={width}
             ></img>
             <Tooltip
-              overlayInnerStyle={{ borderRadius: "0px" }}
+              overlayInnerStyle={{ borderRadius: "0px",textDecoration:"underline"  }}
               color={"#0F5789"}
               placement="top"
               title={schoolEnergyDepartment}
@@ -736,7 +737,7 @@ console.log(newValue)
               ></img>
             </Tooltip>
             <Tooltip
-              overlayInnerStyle={{ borderRadius: "0px" }}
+              overlayInnerStyle={{ borderRadius: "0px" ,textDecoration:"underline" }}
               color={"#0F5789"}
               placement="top"
               title={CMSindh}
@@ -757,7 +758,7 @@ console.log(newValue)
               ></img>
             </Tooltip>
             <Tooltip
-              overlayInnerStyle={{ borderRadius: "0px" }}
+              overlayInnerStyle={{ borderRadius: "0px" ,textDecoration:"underline" }}
               color={"#0F5789"}
               placement="top"
               title={SindhRevenueBoard}
@@ -779,7 +780,7 @@ console.log(newValue)
               ></img>
             </Tooltip>
             <Tooltip
-              overlayInnerStyle={{ borderRadius: "0px" }}
+              overlayInnerStyle={{ borderRadius: "0px",textDecoration:"underline"  }}
               color={"#0F5789"}
               placement="top"
               title={energyDepartment}
@@ -800,7 +801,7 @@ console.log(newValue)
               ></img>
             </Tooltip>
             <Tooltip
-              overlayInnerStyle={{ borderRadius: "0px" }}
+              overlayInnerStyle={{ borderRadius: "0px",textDecoration:"underline"  }}
               color={"#0F5789"}
               placement="top"
               title={collegeEducationalDept}
@@ -821,7 +822,7 @@ console.log(newValue)
               ></img>
             </Tooltip>
             <Tooltip
-              overlayInnerStyle={{ borderRadius: "0px" }}
+              overlayInnerStyle={{ borderRadius: "0px" ,textDecoration:"underline" }}
               color={"#0F5789"}
               placement="top"
               title={CSSindh}
@@ -842,7 +843,7 @@ console.log(newValue)
               ></img>
             </Tooltip>
             <Tooltip
-              overlayInnerStyle={{ borderRadius: "0px", minWidth: "max-content" }}
+              overlayInnerStyle={{ borderRadius: "0px", minWidth: "max-content" ,textDecoration:"underline" }}
               color={"#0F5789"}
               placement="top"
               title={SindhEnvironmentalProtection}
@@ -863,7 +864,7 @@ console.log(newValue)
               ></img>
             </Tooltip>
             <Tooltip
-              overlayInnerStyle={{ borderRadius: "0px", minWidth: "max-content" }}
+              overlayInnerStyle={{ borderRadius: "0px", minWidth: "max-content",textDecoration:"underline"  }}
               color={"#0F5789"}
               placement="top"
               title={SindhBuildingControl}
@@ -885,7 +886,7 @@ console.log(newValue)
               ></img>
             </Tooltip>
             <Tooltip
-              overlayInnerStyle={{ borderRadius: "0px" }}
+              overlayInnerStyle={{ borderRadius: "0px",textDecoration:"underline"  }}
               color={"#0F5789"}
               placement="top"
               title={SindhIndustrialTrading}
@@ -905,7 +906,7 @@ console.log(newValue)
               ></img>
             </Tooltip>
             <Tooltip
-              overlayInnerStyle={{ borderRadius: "0px" }}
+              overlayInnerStyle={{ borderRadius: "0px",textDecoration:"underline"  }}
               color={"#0F5789"}
               placement="top"
               title={SindhFoodAut}
@@ -925,7 +926,7 @@ console.log(newValue)
               ></img>
             </Tooltip>
             <Tooltip
-              overlayInnerStyle={{ borderRadius: "0px" }}
+              overlayInnerStyle={{ borderRadius: "0px",textDecoration:"underline"  }}
               color={"#0F5789"}
               placement="top"
               title={BoardOfRevenue}
@@ -945,7 +946,7 @@ console.log(newValue)
               ></img>
             </Tooltip>
             <Tooltip
-              overlayInnerStyle={{ borderRadius: "0px" }}
+              overlayInnerStyle={{ borderRadius: "0px",textDecoration:"underline"  }}
               color={"#0F5789"}
               placement="top"
               title={PnD}
@@ -965,7 +966,7 @@ console.log(newValue)
               ></img>
             </Tooltip>
             <Tooltip
-              overlayInnerStyle={{ borderRadius: "0px" }}
+              overlayInnerStyle={{ borderRadius: "0px",textDecoration:"underline"  }}
               color={"#0F5789"}
               placement="top"
               title={healthCareComm}
@@ -985,7 +986,7 @@ console.log(newValue)
               ></img>
             </Tooltip>
             <Tooltip
-              overlayInnerStyle={{ borderRadius: "0px" }}
+              overlayInnerStyle={{ borderRadius: "0px" ,textDecoration:"underline" }}
               color={"#0F5789"}
               placement="top"
               title={healthDepartment}
@@ -1006,7 +1007,7 @@ console.log(newValue)
               ></img>
             </Tooltip>
             <Tooltip
-              overlayInnerStyle={{ borderRadius: "0px", minWidth: "max-content" }}
+              overlayInnerStyle={{ borderRadius: "0px", minWidth: "max-content" ,textDecoration:"underline" }}
               color={"#0F5789"}
               placement="top"
               title={SindhEmployeesSecurity}
@@ -1026,7 +1027,7 @@ console.log(newValue)
               ></img>
             </Tooltip>
             <Tooltip
-              overlayInnerStyle={{ borderRadius: "0px" }}
+              overlayInnerStyle={{ borderRadius: "0px" ,textDecoration:"underline" }}
               color={"#0F5789"}
               placement="top"
               title={ExciseTaxation}
@@ -1046,7 +1047,7 @@ console.log(newValue)
               ></img>
             </Tooltip>
             <Tooltip
-              overlayInnerStyle={{ borderRadius: "0px" }}
+              overlayInnerStyle={{ borderRadius: "0px",textDecoration:"underline"  }}
               color={"#0F5789"}
               placement="top"
               title={LocalGovernment}
@@ -1067,7 +1068,7 @@ console.log(newValue)
               ></img>
             </Tooltip>
             <Tooltip
-              overlayInnerStyle={{ borderRadius: "0px" }}
+              overlayInnerStyle={{ borderRadius: "0px",textDecoration:"underline"  }}
               color={"#0F5789"}
               placement="top"
               title={LabourDept}
@@ -1089,7 +1090,7 @@ console.log(newValue)
               ></img>
             </Tooltip>
             <Tooltip
-              overlayInnerStyle={{ borderRadius: "0px" }}
+              overlayInnerStyle={{ borderRadius: "0px",textDecoration:"underline"  }}
               color={"#0F5789"}
               placement="top"
               title={AgriculturalDept}
@@ -1109,7 +1110,7 @@ console.log(newValue)
               ></img>
             </Tooltip>
             <Tooltip
-              overlayInnerStyle={{ borderRadius: "0px"}}
+              overlayInnerStyle={{ borderRadius: "0px",textDecoration:"underline" }}
               className="circle"
               color={"#0F5789"}
               placement="top"
@@ -1130,7 +1131,7 @@ console.log(newValue)
               ></img>
             </Tooltip>
             <Tooltip
-              overlayInnerStyle={{ borderRadius: "0px" }}
+              overlayInnerStyle={{ borderRadius: "0px" ,textDecoration:"underline" }}
               color={"#0F5789"}
               placement="top"
               title={EODB}
@@ -1152,7 +1153,7 @@ console.log(newValue)
               ></img>
             </Tooltip>
             <Tooltip
-              overlayInnerStyle={{ borderRadius: "0px" }}
+              overlayInnerStyle={{ borderRadius: "0px",textDecoration:"underline"  }}
               color={"#0F5789"}
               placement="top"
               title={SEZMC}
@@ -1172,7 +1173,7 @@ console.log(newValue)
               ></img>
             </Tooltip>
             <Tooltip
-              overlayInnerStyle={{ borderRadius: "0px" }}
+              overlayInnerStyle={{ borderRadius: "0px",textDecoration:"underline"  }}
               color={"#0F5789"}
               placement="top"
               title={SEDF}
@@ -1193,7 +1194,7 @@ console.log(newValue)
               ></img>
             </Tooltip>
             <Tooltip
-              overlayInnerStyle={{ borderRadius: "0px" }}
+              overlayInnerStyle={{ borderRadius: "0px",textDecoration:"underline"  }}
               color={"#0F5789"}
               placement="top"
               title={eduCity}

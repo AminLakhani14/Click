@@ -1,3 +1,4 @@
+
 import React from "react";
 import sindh from "../assets/logo-sindh.png";
 import click from "../assets/click-logo.png";
@@ -70,13 +71,13 @@ const handleLabelTextClick = (index) => {
   return (
     <>
       <div
-        className={"mobileheader  sticky  "}
-        style={{ flexDirection: "column" }}
+        className={"mobileheader   "}
+        style={{ backgroundColor:"red",position:"fixed",top:"0px",}}
       >
         <div className={"navbar"}>
           <div
             className="col-lg-6 navbarLeft"
-            style={{ position: "absolute", top: "0" }}
+            style={{ position: "absolute", top: "0",backgroundColor:"green" }}
           >
             <Link to={"/home"} style={{ display: "flex" }}>
               <img className=" navlogo1" src={sindh} alt="" width="35%"></img>
@@ -88,7 +89,7 @@ const handleLabelTextClick = (index) => {
                 alt=""
                 width="60%"
                 className="navlogo2"
-                style={{ marginLeft: "-14px" }}
+                // style={{ marginLeft: "-14px" }}
               ></img>
             </Link>
           </div>
@@ -101,6 +102,7 @@ const handleLabelTextClick = (index) => {
                 width: "90%",
                 display: "flex",
                 justifyContent: "flex-end",
+                backgroundColor:'blue'
               }}
             >
               <img

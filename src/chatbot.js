@@ -1,4 +1,4 @@
-// src/Chatbot.js
+
 
 import React, { useEffect, useMemo, useRef, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -259,7 +259,7 @@ const Chatbot = () => {
         <div className="chatbot-container">
           <div className="chatbot-header">
             <h2 className="chatbotHeaderText">CLICK virtual assistant</h2>
-            <p className="highlightable" style={{ textAlign: "left", marginBottom: "11px" }}>
+            <p style={{ textAlign: "left", marginBottom: "11px" }}>
               Ask me anything
             </p>
           </div>
@@ -282,7 +282,7 @@ const Chatbot = () => {
           </div>
           {askingAnythingElse  && !conversationEnded && (
             <div className="any-thing-else">
-              <p className="highlightable">Anything else?</p>
+              <p>Anything else?</p>
               <div className="d-flex">
                 <button onClick={handleYesButtonClick}>Yes</button>
                 <button onClick={handleNoButtonClick}>No</button>
@@ -337,7 +337,7 @@ const Chatbot = () => {
       )}
       <Tooltip
         overlayInnerStyle={{ borderRadius: "0px" }}
-        color={"#007bff"}
+        color={"linear-gradient(180deg, #720d1d 0%, #1f0308 100%"}
         placement="left"
         title={"I'm Here to assist you"}
         arrow={mergedArrow}
