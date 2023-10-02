@@ -454,7 +454,7 @@ export default function FeedBack() {
         className="row "
         style={{
           height: "330px",
-          background: "#F5F5F5",
+          background: "",
         }}
       >
         <div
@@ -464,13 +464,14 @@ export default function FeedBack() {
             justifyContent: "center",
             marginTop: "50px",
             // textAlign:"justify",
-            margin:"auto"
+            margin:"auto",
+            position:"relative"
           }}
         >
        <div className="">
-       <h1>Report Regulatory Difficulties</h1>
+       <h1 >Report Regulatory Difficulties</h1>
           <p
-            className={window.innerWidth <= 540 ? "mobileparaforfeedback" : "feedbackpara"} style={{fontSize:window.innerWidth === 280 || window.innerWidth ===320 ? "17.5px": " "}}
+            className={window.innerWidth <= 540 ? "mobileparaforfeedback" : "feedbackpara"} style={{fontSize:window.innerWidth === 280 || window.innerWidth ===320 ? "17.5px": " ",textAlign:"center"}}
           >
            Please contact us to share the regulatory constraints which you or your business has faced with Government of Sindh institutions.
            Your response shall be kept confidential and will only be used to review the legislation for its improvement.
@@ -692,24 +693,34 @@ export default function FeedBack() {
      </div>
   </div>
 <div className="row g-0"    style={{width:"100%"}}>
-     <div className="col-6" >
+     <div className="col" >
        <h4>Address</h4>
        <TextField
          placeholder="Enter Your Address"
          size="small"
-         style={{width:"96%"}}
+         style={{width:"98%"}}
        />
       </div>
-      <div className="col-6 " >
+      {/* <div className="col-6 " >
        <h4>Country / City</h4>
        <TextField
          placeholder="Enter Your Country / City"
          size="small"
          style={{width:"96%",}}
        />
-      </div>
+      </div> */}
 </div>
   <div className="row g-0"    style={{width:"100%"}}>
+      <div className="col-6 " >
+       <h4>Country / City</h4>
+       <TextField
+         placeholder="Enter Your Country / City"
+         size="small"
+         style={{width:"96%", ':hover': {
+          backgroundColor: 'red', // Change the background color on hover
+        },}}
+       />
+      </div>
     <div className="col-6" >
     <h4>
     Mobile Number
@@ -720,7 +731,19 @@ export default function FeedBack() {
       style={{width:"96%"}}
     />
     </div>
-    <div className="col-6 " >
+    {/* <div className="col-6 " >
+    <h4>
+    Email
+    </h4>
+    <TextField
+      placeholder="Enter Your Email Address"
+      size="small"
+      style={{width:"96%",}}
+  />
+    </div> */}
+  </div>
+  <div className="row g-0"    style={{width:"100%"}}>
+  <div className="col-6 " >
     <h4>
     Email
     </h4>
@@ -730,8 +753,6 @@ export default function FeedBack() {
       style={{width:"96%",}}
   />
     </div>
-  </div>
-  <div className="row g-0"    style={{width:"100%"}}>
     <div className="col-6" >
     <h4>
     Company Website
@@ -742,7 +763,41 @@ export default function FeedBack() {
       style={{width:"96%"}}
     />
     </div>
-    <div className="col-6 ">
+ 
+    {/* <div className="col-6 ">
+    <h4>
+    ‎
+    </h4>
+            <select
+              type="select"
+              onChange={handleDepartments}
+              // size="small"
+              className="textField"
+              label="Department"
+              style={{
+                height: "40.1px",
+                width: "96%", 
+                paddingTop: "10px",
+                borderRadius: "5px",
+                fontFamily: "sans-serif",
+                padding: "10px",
+                // position: "relative" 
+                  padding: "7px 36px 10px 10px",
+
+              }}
+            >
+              {department.map((Val, index) => {
+                return (
+                  <option key={index} value={Val.value}>
+                    {Val.text}
+                  </option>
+                );
+              })}
+            </select>
+          </div> */}
+  </div>
+  <div className="row g-0 "    style={{width:"100%",marginBottom:20}}>
+  <div className="col-6 ">
     <h4>
     ‎
     </h4>
@@ -773,9 +828,10 @@ export default function FeedBack() {
               })}
             </select>
           </div>
-  </div>
-  <div className="row g-0 "    style={{width:"100%",marginTop:20,marginBottom:20}}>
-    <div className="col" >
+    <div className="col-6" >
+    <h4>
+    ‎
+    </h4>
             {enableAreas === true ? (<>
               <select
                 type="select"
@@ -786,7 +842,7 @@ export default function FeedBack() {
                 renderValue={areas[0]}
                 style={{
                   height: "40.1px",
-                  width: "98%", 
+                  width: "96%", 
                   paddingTop: "10px",
                   borderRadius: "5px",
                   fontFamily: "sans-serif",
@@ -807,6 +863,7 @@ export default function FeedBack() {
               <div className="col-lg-3"></div>
             )}
     </div>
+      
     {/* <div className="col-6 " >
     <h4>
     Moble Number

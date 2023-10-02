@@ -1736,7 +1736,7 @@ const {language} = useSelector((state)=>state.language)
               <div className={"row "}>
                 <div
                   className={" navbar boxshadowNavBar justify-content-end"}
-                  style={{ width: "90%", paddingRight: "0px", }}
+                  style={{ width: "100%", paddingRight: "0px", }}
                 >
                   <ul
                     style={
@@ -1747,7 +1747,7 @@ const {language} = useSelector((state)=>state.language)
                           flexDirection: "row-reverse",
                           backgroundColor:"red"
                         }
-                        : { marginBottom: "0px" }
+                        : { marginBottom: "0px" ,paddingRight:50}
                     }
                   >
                     <li>
@@ -2270,7 +2270,7 @@ const {language} = useSelector((state)=>state.language)
                         </Link>
                       </a>
                     </li> */}
-                    <li>
+                    <li style={{marginLeft:50}}>
                       <a  title="" width="10">
                         <Tooltip
                           overlayInnerStyle=
@@ -2278,7 +2278,7 @@ const {language} = useSelector((state)=>state.language)
                           width: "350px",
                           minWidth: "350px",
                            position: "relative",
-                           right: "100px"}}
+                           right: "100px",}}
                           color={"#Ffffff"}
                           placement="bottomLeft"
                           title={SearchBox}

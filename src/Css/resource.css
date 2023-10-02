@@ -13,6 +13,13 @@
   padding-left: 10px;
   /* padding-bottom: 100px !important; */
 }
+input{
+  margin-left: -100px !important;
+  margin-right: 100px !important;
+}
+MuiInputBase-input {
+  background-color: red !important;
+}
 .ant-modal-header {
   border-bottom: 1px solid #ebedf3 !important;
   padding-top: 6px !important;
