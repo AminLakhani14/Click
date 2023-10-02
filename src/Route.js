@@ -36,51 +36,78 @@ import DiverseHorizon from "./Components/diversehorizon";
 import Agriculture from "./Components/agriculture";
 import Energy from "./Components/energy";
 
+
 export let searchText = '';
+export let currentIndex = 0; // Track the current highlighted match index
+export let matchIndices = []; // Store all match indices
+
+// Function to update the current index and highlight the corresponding match
+const updateCurrentIndex = (newIndex) => {
+  if (newIndex < 0 || newIndex >= matchIndices.length) return;
+  currentIndex = newIndex;
+  highlightMatch(matchIndices[currentIndex]);
+};
 
 export const handleSearch = () => {
-  let matchText = '';
   searchText = document.getElementById('searchText').value;
+  currentIndex = 0;
+  matchIndices = []; // Reset matchIndices when searching again
+  if (!searchText) {
+    // Clear highlights and exit if the search text is empty
+    clearHighlights();
+    return;
+  }
   const elements = document.getElementsByClassName('highlightable');
 
   for (const element of elements) {
     const text = element.textContent || element.innerText;
-    const matchIndices = [];
-
     let matchIndex = text.indexOf(searchText);
 
     while (matchIndex !== -1) {
-      matchIndices.push(matchIndex);
+      matchIndices.push({ element, index: matchIndex });
       matchIndex = text.indexOf(searchText, matchIndex + searchText.length);
     }
+  }
 
-    if (matchIndices.length > 0) {
-      const matchesHTML = matchIndices.map((index, i) => {
-        const beforeText = text.substring(
-          i === 0 ? 0 : matchIndices[i - 1] + searchText.length,
-          index
-        );
-        matchText = text.substring(index, index + searchText.length);
-        return `${beforeText}<span class="bold">${matchText}</span>`;
-      });
-
-      const afterText = text.substring(
-        matchIndices[matchIndices.length - 1] + searchText.length
-      );
-
-      // Apply the styled HTML with all matches highlighted
-      const styledHTML = `${matchesHTML.join('')}${afterText}`;
-      element.innerHTML = styledHTML;
-
-      // Scroll to the element
-      element.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-    } else {
-      // Reset the element's innerHTML if no match is found
-      element.innerHTML = text;
-      console.log(matchText);
-    }
+  if (matchIndices.length > 0) {
+    // Highlight the first occurrence
+    updateCurrentIndex(0);
   }
 };
+
+export const clearHighlights = () => {
+  const elements = document.getElementsByClassName('highlightable');
+  for (const element of elements) {
+    element.innerHTML = element.textContent || element.innerText;
+  }
+};
+
+export const highlightMatch = (match) => {
+  const { element, index } = match;
+  const text = element.textContent || element.innerText;
+
+  const beforeText = text.substring(0, index);
+  const matchText = text.substring(index, index + searchText.length);
+  const afterText = text.substring(index + searchText.length);
+
+  const styledHTML = `${beforeText}<span class="bold">${matchText}</span>${afterText}`;
+  element.innerHTML = styledHTML;
+
+  // Scroll to the element
+  element.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+};
+
+export const navigateNext = () => {
+  if (currentIndex < 0) return;
+  updateCurrentIndex(currentIndex + 1);
+};
+
+export const navigatePrevious = () => {
+  if (currentIndex < 0) return;
+  updateCurrentIndex(currentIndex - 1);
+};
+
+
 
 export const router = createHashRouter([
   {

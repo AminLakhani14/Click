@@ -10,9 +10,9 @@ export const translations = {
     sd: 'سنڌ جي صوبائي ڪھيتريءَ ڏسو ۽ اهو جي بہت سان ھُڪرپئِوءَ ۽ مواد قوت پڇائيو آهي۔',
   },
   'investButton': {
-    en: 'Invest Now',
-    ur: 'ابھی سرمایہ کاری کریں',
-    sd: 'هاڻي سرمايو ڪريو',
+    en: 'Interactive Regularity Directory',
+    ur: 'انٹرایکٹو ریگولرٹی ڈائرکٹری',
+    sd: 'انٽرنيٽ ايڪٽو ريگولرٽي ڊائريٽري',
   },
   'calculatorButton': {
     en: 'Regulatory Cost Calculator',
@@ -29,7 +29,11 @@ export const translations = {
     ur: 'تاثرات ',
     sd: 'رائے ',
   },
-
+  'InteractiveRegularity':{
+    en: 'Interactive Regularity Directory',
+    ur: 'انٹرایکٹو ریگولرٹی ڈائرکٹری',
+    sd: '"انٽرایڪٽو ریگولرٽي ڊائريڪٽري"',
+  },
   'home': {
     en: 'Home',
     ur: 'گھر',
@@ -120,6 +124,32 @@ export const translations = {
     ur: 'ہمارے بارے میں',
     sd: 'اسان جي باريءَ',
   },
+
+'Introduction':{
+  en: 'Introduction',
+  ur: 'تعارف',
+  sd: 'تعارف',
+},
+'projectobjectives':{
+  en: 'project objectives',
+  ur:"منصوبے کے مقاصد",
+  sd: 'پروجيڪٽ جا مقصد'
+},
+'Achievements':{
+  en:"Achievements",
+  ur:"کامیابیاں",
+  sd:"حاصلات"
+},
+'Team':{
+en:"Team",
+ur:"ٹیم",
+sd:"ٽيم"
+},
+'Contactus':{
+  en:"Contact us",
+  ur:"ہم سے رابطہ کریں۔",
+  sd:"اسان سان رابطو ڪريو"
+},
   'Vision': {
     en: 'Vision',
     ur: 'وژن',

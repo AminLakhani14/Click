@@ -122,7 +122,7 @@ function Opportunity() {
           windowWidth < 500 ? "MobileOppurSiteMain3" : "SiteMain3"
         }
       >
-        <h1 data-aos="fade-up" className="Investnow-h1">
+        <h1 data-aos="fade-up" className="Investnow-h1 highlightable">
         {translations["Opportunities"][language]}
         </h1>
       </div>
@@ -181,7 +181,7 @@ function Opportunity() {
           //       isVisibleUnleash ? "" : "slide-out-left"
           //     }`
           // }
-          className="mainHeading"
+          className="mainHeading highlightable"
           data-aos="fade-up"
         >
          {translations["opportunityhead1"][language]}
@@ -195,7 +195,7 @@ function Opportunity() {
           }}
         >
           <p
-            className="InvestnowParagraphh"
+            className="InvestnowParagraphh highlightable"
             data-aos="fade-up"
 
             // className={`slide-in-left InvestnowParagraphh  ${
@@ -214,7 +214,7 @@ function Opportunity() {
             background: `linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)),url(${agriAndFood})`,
           }}
         >
-          <label className="agriAndFoodHeading" data-aos="fade-up">
+          <label className="agriAndFoodHeading highlightable" data-aos="fade-up">
             {translations['AgricultureandFoodP'][language]}
           </label>
         </div>
@@ -225,7 +225,7 @@ function Opportunity() {
         style={{ justifyContent: "center", marginTop: "-230px" }}
       >
         <div className="col-lg-5">
-          <label data-aos="fade-up" className={" f-size"}>
+          <label data-aos="fade-up" className={" f-size highlightable"}>
             {translations['opportunitypara2'][language]}
           </label>
         </div>
@@ -263,7 +263,7 @@ function Opportunity() {
             background: `linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)),url(${Poultry})`,
           }}
         >
-          <label data-aos="fade-up" className={"agriAndFoodHeading"}>
+          <label data-aos="fade-up" className={"agriAndFoodHeading highlightable"}>
            {translations['Poultry'][language]}
           </label>
         </div>
@@ -276,7 +276,7 @@ function Opportunity() {
         style={{ justifyContent: "center", marginTop: "-230px" }}
       >
         <div className="col-lg-5">
-          <label data-aos="fade-up" className={"f-size"}>
+          <label data-aos="fade-up" className={"f-size highlightable"}>
             {translations["opportunitypara3"][language]}
           </label>
         </div>
@@ -325,7 +325,7 @@ function Opportunity() {
             background: `linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)),url(${frozenFood})`,
           }}
         >
-          <label data-aos="fade-up" className={"agriAndFoodHeading"}>
+          <label data-aos="fade-up" className={"agriAndFoodHeading highlightable"}>
             {translations['frozenfoodandp'][language]}
           </label>
         </div>
@@ -336,7 +336,7 @@ function Opportunity() {
         style={{ justifyContent: "center", marginTop: "-230px" }}
       >
         <div className="col-lg-5">
-          <label data-aos="fade-up" className={"f-size"}>
+          <label data-aos="fade-up" className={"f-size highlightable"}>
            {translations['opportunitypara4'][language]}
           </label>
         </div>
@@ -379,7 +379,7 @@ function Opportunity() {
             background: `linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)),url(${loan})`,
           }}
         >
-          <label data-aos="fade-up" className={"agriAndFoodHeading"}>
+          <label data-aos="fade-up" className={"agriAndFoodHeading highlightable"}>
             {translations['LoanandGrant'][language]}
           </label>
         </div>
@@ -392,7 +392,7 @@ function Opportunity() {
         style={{ justifyContent: "center", marginTop: "-230px" }}
       >
         <div className="col-lg-5">
-          <label data-aos="fade-up" className={"f-size"}>
+          <label data-aos="fade-up" className={"f-size highlightable"}>
           {translations['opportunitypara5'][language]}
           </label>
         </div>
@@ -428,7 +428,7 @@ function Opportunity() {
         </div>
       </div>
       <div className="seizeOpportunity">
-        <h1 data-aos="fade-up" className={"mainHeading"}>
+        <h1 data-aos="fade-up" className={"mainHeading highlightable"}>
         {translations['SeizeTheOpportunity'][language]}
         </h1>
         <div

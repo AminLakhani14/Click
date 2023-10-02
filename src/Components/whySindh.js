@@ -38,7 +38,7 @@ function WhySindh(props) {
           <div className="row ">
             <div className="col-12 ">
               <h1
-                className="mainHeading"
+                className="mainHeading highlightable"
                 style={
                   windowWidth < 500
                     ? {
@@ -63,7 +63,7 @@ function WhySindh(props) {
               }
             >
               <p
-                className={["favorite",windowWidth<500 ?"mob_favorite":{}].join(" ")}
+                className={["favorite highlightable",windowWidth<500 ?"mob_favorite":{}].join(" ")}
               >
                 {translations["FavourEnvironment"][language]}
               </p>
@@ -94,7 +94,7 @@ function WhySindh(props) {
                   </a>
                   <div className="media-body" style={{ width: "150px" }}>
                     <h3 className={["ch-title",windowWidth<500&&"mob_ch_title"].join(" ")} >1.3 {translations["Trillion"][language]} </h3>
-                    <p className="card-subtitle" style={windowWidth <500 ?{textAlign:"start",fontSize:"10px"}:{}}>
+                    <p className="card-subtitle highlightable" style={windowWidth <500 ?{textAlign:"start",fontSize:"10px"}:{}}>
                     {translations["NaturalGas"][language]}
                     </p>
                   </div>
@@ -122,7 +122,7 @@ function WhySindh(props) {
                   </a>
                   <div className="media-body" style={{ width: "150px" }}>
                     <h3 className={["ch-title",windowWidth<500?"mob_ch_title":''].join(" ")}>184 {translations["Billion"][language]}</h3>
-                    <p className="card-subtitle" style={windowWidth <500 ?{textAlign:"start",fontSize:"10px"}:{}}>
+                    <p className="card-subtitle highlightable" style={windowWidth <500 ?{textAlign:"start",fontSize:"10px"}:{}}>
                       {translations["TonOfCoal"][language]}</p>
                   </div>
                 </div>
@@ -149,7 +149,7 @@ function WhySindh(props) {
                   </a>
                   <div className="media-body" style={{ width: "150px" }}>
                     <h3 className={["ch-title",windowWidth<500?"mob_ch_title":''].join(" ")}>10,000+ {translations["Megawatts"][language]}</h3>
-                    <p className="card-subtitle" style={windowWidth <500 ?{textAlign:"start",fontSize:"10px"}:{}}>
+                    <p className="card-subtitle highlightable" style={windowWidth <500 ?{textAlign:"start",fontSize:"10px"}:{}}>
                     {translations["ElectricityGeneration"][language]}
                     </p>
                   </div>
@@ -179,7 +179,7 @@ function WhySindh(props) {
                   </a>
                   <div className="media-body" style={{ width: "150px" }}>
                     <h3 className={["ch-title",windowWidth<500?"mob_ch_title":''].join(" ")}>70% </h3>
-                    <p className="card-subtitle" style={windowWidth <500 ?{textAlign:"start",fontSize:"10px"}:{}}>
+                    <p className="card-subtitle highlightable" style={windowWidth <500 ?{textAlign:"start",fontSize:"10px"}:{}}>
                     {translations["TotalFish"][language]}
                     </p>
                   </div>
@@ -207,7 +207,7 @@ function WhySindh(props) {
                   </a>
                   <div className="media-body" style={{ width: "150px" }}>
                     <h3 className={["ch-title",windowWidth<500?"mob_ch_title":""].join(" ")}>600+</h3>
-                    <p className="card-subtitle" style={windowWidth <500 ?{textAlign:"start",fontSize:"10px"}:{}}>
+                    <p className="card-subtitle highlightable" style={windowWidth <500 ?{textAlign:"start",fontSize:"10px"}:{}}>
                     {translations["TextileMills"][language]}
                     </p>
                   </div>
@@ -234,7 +234,7 @@ function WhySindh(props) {
                   </a>
                   <div className="media-body" style={{ width: "150px" }}>
                     <h3 className={["ch-title",windowWidth<500?"mob_ch_title":""].join(" ")}>123 {translations["Million"][language]}</h3>
-                    <p className="card-subtitle" style={windowWidth <500 ?{textAlign:"start",fontSize:"10px"}:{}}>
+                    <p className="card-subtitle highlightable" style={windowWidth <500 ?{textAlign:"start",fontSize:"10px"}:{}}>
                        {translations["TonOfCement"][language]}</p>
                   </div>
                 </div>

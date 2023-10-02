@@ -76,7 +76,7 @@ function MobileWheeler(props) {
           <div className="row ">
             <div className="col-12 ">
               <h1
-                className="mainHeading"
+                className="mainHeading highlightable"
      
               >
                 {translations["Awaiting"][language]}
@@ -86,6 +86,7 @@ function MobileWheeler(props) {
           <div className="row">
             <div className="col-lg-12 " style={{ display: "contents" }}>
               <p
+              className="highlightable"
                 style={{
                   color: "#5f5f5f",
                   fontSize: "20px",
@@ -148,6 +149,7 @@ function MobileWheeler(props) {
                   <div className="row ">
                     <div className="col-6">
                       <label
+                      className="highlightable"
                         id="segmentTitle"
                         style={{
                           fontSize: "16px",
@@ -162,7 +164,7 @@ function MobileWheeler(props) {
 
                     <div className="col-6">
                       <label
-                        className=""
+                        className=" highlightable"
                         style={{
                           fontSize: "16px",
                           fontWeight: 600,
@@ -182,7 +184,7 @@ function MobileWheeler(props) {
                   <div className="row">
                     <div className="col-sm-10 ">
                       <h1
-                        className=""
+                        className="highlightable"
                         id=""
                         style={{
                           fontSize: "16px",
@@ -195,7 +197,7 @@ function MobileWheeler(props) {
                       </h1>
                       <p
                         id="segmentText"
-                        className=""
+                        className="highlightable"
                         style={{
                           fontSize: "13px",
                           fontWeight: 400,
@@ -222,7 +224,7 @@ function MobileWheeler(props) {
                             fontFamily: "Crimson Pro",
                             color:`${data.boxColor}`
                           }}
-                          className="heading-1"
+                          className="heading-1 highlightable"
                         >
                           {/* 4 Million */}
                           4{translations["Million"][language]}
@@ -235,7 +237,7 @@ function MobileWheeler(props) {
                             fontFamily: "Crimson Pro",
                             color:`${data.boxColor}`
                           }}
-                          className="phra-2"
+                          className="phra-2 highlightable"
                         >
                           {/* tons of wheat */}
                           1.9{translations["Million"][language]}
@@ -250,7 +252,7 @@ function MobileWheeler(props) {
                             fontFamily: "Crimson Pro",
                             color:`${data.boxColor}`
                           }}
-                          className="heading-1"
+                          className="heading-1 highlightable"
                         >
                           {/* 1.9 Million */}
                           1.9{translations["Million"][language]}
@@ -263,7 +265,7 @@ function MobileWheeler(props) {
                             fontFamily: "Crimson Pro",
                             color:`${data.boxColor}`
                           }}
-                          className="phra-2"
+                          className="phra-2 highlightable"
                         >
                           {/* tons of rice */}
                           {translations["Rice"][language]}
@@ -280,7 +282,7 @@ function MobileWheeler(props) {
                             fontFamily: "Crimson Pro",
                             color:`${data.boxColor}`
                           }}
-                          className=""
+                          className="highlightable"
                         >
                           {/* 4.2 Million */}
                           4.2{translations["Million"][language]}
@@ -293,7 +295,7 @@ function MobileWheeler(props) {
                             color:`${data.boxColor}`
                           }}
                           id="box-subtitle3"
-                          className=""
+                          className="highlightable"
                         >
                           {/* tons of sugarcane */}
                           {translations["Sugarcane"][language]}
@@ -308,7 +310,7 @@ function MobileWheeler(props) {
                             fontFamily: "Crimson Pro",
                             color:`${data.boxColor}`
                           }}
-                          className=""
+                          className="highlightable"
                         >
                           {/* 2.3 Million */}
                           2.3{translations["Million"][language]}
@@ -321,7 +323,7 @@ function MobileWheeler(props) {
                             fontFamily: "Crimson Pro",
                             color:`${data.boxColor}`
                           }}
-                          className=""
+                          className="highlightable"
                         >
                           {/* bales of cotton */}
                           {translations["Cotton"][language]}

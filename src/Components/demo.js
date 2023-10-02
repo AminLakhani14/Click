@@ -1310,7 +1310,7 @@ export default function RegulatoryCatalogCalculator() {
 
       <div className="siteHeader" style={{ background: `url(${AboutUsImg})` }}>
         <h1
-          className={`slide-in-left Investnow-h1 ${
+          className={`slide-in-left Investnow-h1 highlightable ${
             isVisible ? "" : "slide-out-left"
           }`}
         >
@@ -1339,7 +1339,7 @@ export default function RegulatoryCatalogCalculator() {
             textAlign: "center",
           }}
         >
-          <h1 className="mainHeading">Regulatory Tax Calculator</h1>
+          <h1 className="mainHeading highlightable">Regulatory Tax Calculator</h1>
         </div>
         <div className="row justify-content-center mt-3 align-items-lg-start">
           <div className="col-lg-4" style={{ marginBottom: "20px" }}>

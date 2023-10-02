@@ -47,7 +47,7 @@ function Gallery(props) {
         <div className="body-box">
           <div className="row">
             <div className="col-12 highlit-heading pb-5">
-              <h1 className="mainHeading"  data-aos="fade-up" >{translations["Help"][language]}</h1>
+              <h1 className="mainHeading highlightable"  data-aos="fade-up" >{translations["Help"][language]}</h1>
             </div>
           </div>
           <div className="row justify-content-center">
@@ -96,7 +96,7 @@ function Gallery(props) {
                         draggable="false"
                       ></img>
                     </div>
-                    <p className="card__name">{translations["BREADY"][language]}</p>
+                    <p className="card__name highlightable">{translations["BREADY"][language]}</p>
                   </li>
                 </div>
                 </div>
@@ -114,7 +114,7 @@ function Gallery(props) {
                         draggable="false"
                       ></img>
                     </div>
-                    <p className="card__name" style={{marginBottom: "18px"}}>{translations["RequestInformation"][language]}</p>
+                    <p className="card__name highlightable" style={{marginBottom: "18px"}}>{translations["RequestInformation"][language]}</p>
                   </li>
                 </div>
                 </div>
@@ -125,7 +125,7 @@ function Gallery(props) {
                     <div className="img">
                       <img src={feedback} alt="img" draggable="false" style={{width:"67px"}}></img>
                     </div>
-                    <p className="card__name">{translations["Feedback"][language]}</p>
+                    <p className="card__name highlightable">{translations["Feedback"][language]}</p>
                   </li>
                   ‍
                 </div>
@@ -137,7 +137,7 @@ function Gallery(props) {
                     <div className="img">
                       <img src={calculators} alt="img" draggable="false" style={{width:"67px"}}></img>
                     </div>
-                    <p className="card__name" style={{marginBottom: "-28px"}}>
+                    <p className="card__name highlightable" style={{marginBottom: "-28px"}}>
                     {translations["RegulatoryCost"][language]} <br /> {translations["Calculator"][language]}
                     </p>
                   </li>
@@ -155,7 +155,7 @@ function Gallery(props) {
                         draggable="false"
                       ></img>
                     </div>
-                    <p className="card__name">{translations["KarachiFund"][language]}</p>
+                    <p className="card__name highlightable">{translations["KarachiFund"][language]}</p>
                   </li>
                 </div>
                 </div>

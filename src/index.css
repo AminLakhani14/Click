@@ -15,7 +15,7 @@ body {
   background-color: white !important;
 }
 .chatbot_selected_question:hover{
-  background-color:#007bff !important;
+  background:linear-gradient(180deg, #720d1d 0%, #1f0308 100%) !important;
   color: white !important;
 }
 .container {

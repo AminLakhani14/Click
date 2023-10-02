@@ -29,6 +29,7 @@ import pdf5 from "../assets/DownloadDocument/pa-03-availing-of-the-net-metering-
 import pdf6 from "../assets/DownloadDocument/DRAP-Reforms-Evaluation-Final.pdf"
 import pdf7 from "../assets/DownloadDocument/Minimum-Consensus-on-Key-Economic-Reforms.pdf"
 import pdf8 from "../assets/DownloadDocument/Recommendations-on-National-Program-for-Digital-Transformation.pdf"
+import MobileHeaderGeneric from "./MobileHeaderGeneric";
 export default function Resource() {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
@@ -59,7 +60,7 @@ export default function Resource() {
     },
     {
       screenShot:ss3,
-      titlte:"From Swimming in Sand to High and Sustainable Growth – WBG",
+      titlte:"From Swimming in Sand to High end Sustainable Growth – WBG",
       pdf:pdf3
     },
     {
@@ -232,26 +233,31 @@ export default function Resource() {
     //   </div>
     // </>
     <>
-      <Link to={"/team"}></Link>
-      <GenericHeader />
+      {/* <Link to={"/team"}></Link> */}
+      
+      {
+        windowWidth <= 500 ? <MobileHeaderGeneric/>:<GenericHeader />
+      }
       <div
         className="row"
         style={{
-          height: "240px",
+          height:windowWidth <= 500 ?"100px":"240px",
           width: "100%",
           background: "#F5F5F5",
-          paddingTop: "130px",
+          paddingTop:windowWidth <= 500 ?"0px":"130px",
+          position:"relative"
         }}
       >
+       
         <div className="col-lg-2"></div>
         <div className="col-lg-8">
-          <h1 className="mainHeading" style={{display:'flex', justifyContent:'center'}}>Download</h1>
+          <h1 className="mainHeading" style={{display:'flex', justifyContent:'center'}}>Downloads</h1>
         </div>
         <div className="col-lg-2"></div>
       </div>
 
       
-      <div className="row">
+      {/* <div className="row">
         {windowWidth <= 1024 ? (
           <></>
         ) : (
@@ -272,7 +278,7 @@ export default function Resource() {
         
         </div>
         
-      </div>
+      </div> */}
       {/* <div className="row">
         {windowWidth <= 1024 ? (
           <></>
@@ -335,7 +341,8 @@ export default function Resource() {
           </div>
         </div>
       </div> */}
-       <div className="d-flex" style={{display:'flex',flexWrap:"wrap",width:"100%",backgroundColor:"y",justifyContent:"center",paddingTop:50}}>
+       <div className="card_wrapper"
+      >
        {
           arr.map((item)=>{
             return  <div  className="cardMain1 ">

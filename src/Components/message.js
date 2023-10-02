@@ -159,7 +159,7 @@ function Message(props) {
         <div className="body-box mb-5">
           <div className="row">
             <div className="col-12 highlit-heading">
-              <h1 className="mainHeading"> {translations["Messages"][language]}</h1>
+              <h1 className="mainHeading highlightable"> {translations["Messages"][language]}</h1>
             </div>
           </div>
           <div className="row justify-content-center">
@@ -277,9 +277,9 @@ function Message(props) {
                   </a>
                   <div className="media-body">
                     {/* <h3 className="title">Syed Qasim Naveed Qamar </h3> */}
-                    <h3 className="title">{imgFormData.name[language]}</h3>
+                    <h3 className="title highlightable">{imgFormData.name[language]}</h3>
                     <p
-                      className="card-subtitle"
+                      className="card-subtitle highlightable"
                       style={
                         language === "ur" || language === "sd"
                           ? { display: "contents", fontWeight: "400", color: "rgb(163, 163, 163)" }
@@ -295,7 +295,7 @@ function Message(props) {
                    className={
                     language === "ur" || language === "sd"
                       ? "sub-title paragraphAlign"
-                      : "sub-title text-md-start"
+                      : "sub-title text-md-start highlightable"
                   }
                   >
                   {imgFormData.desc[language]}

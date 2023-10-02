@@ -44,9 +44,9 @@ function NewsAndInformation() {
         style={{background: `linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)),url(${whySindh})`}}
         className="siteHeader"
       >
-        <h1 data-aos="fade-up" className={"Investnow-h1"}>
+        <h1 data-aos="fade-up" className={"Investnow-h1 highlightable"}>
           Abandoned Liaquatabad Super Market to be converted into shopping mall.
-          <label className="NewsAndInformationDate">19/01/2022</label>
+          <label className="NewsAndInformationDate highlightable">19/01/2022</label>
         </h1>
       </div>
       <div style={{ backgroundColor: "#f7f7f7" }}>
@@ -57,15 +57,15 @@ function NewsAndInformation() {
           <div className="col-lg-5">
             <div className="newsAndInformationCard" data-aos="fade-up">
               <div className="NewsTitleImage"></div>
-              <label className="NewsTitleHeading">News Title</label>
-              <label className="NewsTitleDate">1/06/2023</label>
+              <label className="NewsTitleHeading highlightable">News Title</label>
+              <label className="NewsTitleDate highlightable">1/06/2023</label>
             </div>
           </div>
           <div className="col-lg-5">
             <div className="newsAndInformationCard" data-aos="fade-up">
               <div className="NewsTitleImage"></div>
-              <label className="NewsTitleHeading">News Title</label>
-              <label className="NewsTitleDate">1/06/2023</label>
+              <label className="NewsTitleHeading highlightable">News Title</label>
+              <label className="NewsTitleDate highlightable">1/06/2023</label>
             </div>
           </div>
         </div>
@@ -76,15 +76,15 @@ function NewsAndInformation() {
           <div className="col-lg-5">
             <div className="newsAndInformationCard" data-aos="fade-up">
               <div className="NewsTitleImage"></div>
-              <label className="NewsTitleHeading">News Title</label>
-              <label className="NewsTitleDate">1/06/2023</label>
+              <label className="NewsTitleHeading highlightable">News Title</label>
+              <label className="NewsTitleDate highlightable">1/06/2023</label>
             </div>
           </div>
           <div className="col-lg-5">
             <div className="newsAndInformationCard" data-aos="fade-up">
               <div className="NewsTitleImage"></div>
-              <label className="NewsTitleHeading">News Title</label>
-              <label className="NewsTitleDate">1/06/2023</label>
+              <label className="NewsTitleHeading highlightable">News Title</label>
+              <label className="NewsTitleDate highlightable">1/06/2023</label>
             </div>
           </div>
         </div>
@@ -95,15 +95,15 @@ function NewsAndInformation() {
           <div className="col-lg-5">
             <div className="newsAndInformationCard" data-aos="fade-up">
               <div className="NewsTitleImage"></div>
-              <label className="NewsTitleHeading">News Title</label>
-              <label className="NewsTitleDate">1/06/2023</label>
+              <label className="NewsTitleHeading highlightable">News Title</label>
+              <label className="NewsTitleDate highlightable">1/06/2023</label>
             </div>
           </div>
           <div className="col-lg-5">
             <div className="newsAndInformationCard" data-aos="fade-up">
               <div className="NewsTitleImage"></div>
-              <label className="NewsTitleHeading">News Title</label>
-              <label className="NewsTitleDate">1/06/2023</label>
+              <label className="NewsTitleHeading highlightable">News Title</label>
+              <label className="NewsTitleDate highlightable">1/06/2023</label>
             </div>
           </div>
         </div>
