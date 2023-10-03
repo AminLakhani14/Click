@@ -42,6 +42,22 @@
 .steps__item--active ~ .steps__item {
   background-color: #0f5789;
 }
+.ReportRegulatoryDifficulties{
+  color: #054a91;
+  position: relative;
+  margin-bottom: 50px;
+}
+.ReportRegulatoryDifficulties::before{
+  content: ' ';
+  height: 3px;
+  width: 300px;
+  position: absolute;
+  background-color: #720d1d;
+  top: 53px;
+  /* left: 300px; */
+  right: 39%;
+  margin-bottom: 10px;
+}
 .steps__item--active:before {
   right: 100%;
   position: absolute;
@@ -61,6 +77,12 @@
   padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
+}
+.ant-input:hover{
+  border-color: black !important;
+}
+.ant-input:active{
+  border-color: black !important;
 }
 .text-center {
   text-align: center;
@@ -150,10 +172,14 @@
 }
 
 .feedbackpara{
-  font-size: 30px;
+  font-size: 20px;
   text-align: left;
-  font-size: 25px;
+  font-size: 20px;
   width: 105vh;
+  /* background-color: red !important; */
+  /* box-shadow: 1px 1px 2px grey; */
+  margin: auto;
+  letter-spacing: 1px;
 }
 
 

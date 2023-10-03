@@ -16,6 +16,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { useMemo } from "react";
 import { Tooltip } from "antd";
 import { handleSearch } from "../Route";
+import { translations } from "../Transalation/Transalation";
 
 export default function GenericHeader(props) {
   const [isSticky, setIsSticky] = useState(false);
@@ -151,7 +152,8 @@ export default function GenericHeader(props) {
   console.log("hello", props.toggleLanguage);
   return (
     <div
-      className={"genericheader  sticky  "}
+    data-aos="fade-down"
+      className={"genericheader  sticky fade-up "}
       style={{ flexDirection: "column" }}
     >
       <div className={""} style={{ width: "100%" }}>
@@ -181,9 +183,9 @@ export default function GenericHeader(props) {
               <img src={click} alt="" className="navlogo2"></img>
               </Link>
           </div>
-          <div className="navbarRight" >
+          <div className="navbarRight d-flex justify-content-end" >
             <ul>
-              <div className="r-side d-inline">
+              <div className="r-side d-inline" >
                 <img
                   className="headerLogoImages"
                   src={language === "ur" ? English : urdu}
@@ -201,7 +203,7 @@ export default function GenericHeader(props) {
                   style={language == "sd" ?{height:"10px",width:"50px",marginLeft: "20px", marginRight: "20px"}:{marginLeft: "20px", marginRight: "20px"}}
                 />
               </div>
-              <li className="HeaderPaddingRight">
+              {/* <li className="HeaderPaddingRight">
                 <a href="comingsoon.html" title="Home Page" className={"link2"}>
                   <Link className={"link2"} to={"/home"}>
                     {" "}
@@ -211,16 +213,15 @@ export default function GenericHeader(props) {
               </li>
               <li className="HeaderPaddingRight">
                 <a href="comingsoon.html" title="Home Page" className={"link2"}>
-                  <Link className={"link2"} to={"/WhySindh"}>
-                    {" "}
-                    Why Sindh
+                  <Link className={"link2"} to={"/feedback"}>
+                    Feedback
                   </Link>
                 </a>
               </li>
               <li className="HeaderPaddingRight">
                 <a target="blank" title="" className={"link2"}>
                   <Link className="link2" to={"/InvestNow"}>
-                    Invest now
+                  Interactive Regularity Directory
                   </Link>
                 </a>
               </li>
@@ -675,6 +676,85 @@ export default function GenericHeader(props) {
                 </a>
               </li>
               <li className="HeaderPaddingRight">
+                <a title="" width="10">
+                  <Tooltip
+                    overlayInnerStyle=
+                    {{
+                      borderRadius: "0px",
+                      width: "350px",
+                      minWidth: "350px",
+                      position: "relative",
+                      right: "100px"
+                    }}
+                    color={"#Ffffff"}
+                    placement="bottomLeft"
+                    title={SearchBox}
+                    arrow={mergedArrow}
+                  >
+                    <i
+                     className="fa-sharp fa-solid fa-magnifying-glass"
+                     style={{ color: "#000000" }}
+                    ></i>
+                  </Tooltip>
+                </a>
+              </li> */}
+              <li className="HeaderPaddingRight">
+                <a href="comingsoon.html" title="Home Page" className={"link2"}>
+                  <Link className={"link2"} to={"/home"}>
+                    {" "}
+                    Home
+                  </Link>
+                </a>
+              </li>
+              <li className="HeaderPaddingRight">
+                <a href="comingsoon.html" title="Home Page" className={"link2"}>
+                  <Link className={"link2"} to={"/feedback"}>
+                    Feedback
+                  </Link>
+                </a>
+              </li>
+              <li className="HeaderPaddingRight">
+                <a target="blank" title="" className={"link2"}>
+                  <Link className="link2" to={"/InvestNow"}>
+                  Interactive Regularity Directory
+                  </Link>
+                </a>
+              </li>
+              <li className="HeaderPaddingRight">
+                <div class="dropdown">
+                  <span
+                    style={{ marginRight: "5px" }}
+                    title=""
+                    className={"link2"}
+                  >
+                    About Us
+                  </span>
+                  <i
+                    style={{ marginTop: "0px", marginLeft: "0px" }}
+                    class=" dropbtn hover-rotate fa fa-chevron-right"
+                  ></i>
+                  <div class="dropdown-content">
+                    <Link className={""} to={"/resource"}>
+                      <a target="_blank" href="">
+                       Intrduction
+                      </a>
+                    </Link>
+                    <Link className={""} to={"/regulatorycatalog"}>
+                      <a href="#"> project objectives </a>
+                    </Link>
+                    <Link className={""} to={"/regulatorycatalog"}>
+                      <a href="#"> Achievements  </a>
+                    </Link>
+                    <Link className={""} to={"/regulatorycatalog"}>
+                      <a href="#"> Team </a>
+                    </Link>
+                    <Link className={""} to={"/regulatorycatalog"}>
+                      <a href="#"> Contact us</a>
+                    </Link>
+                  </div>
+                </div>
+              </li>
+              <li className="HeaderPaddingRight ms-4">
                 <a title="" width="10">
                   <Tooltip
                     overlayInnerStyle=

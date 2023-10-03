@@ -1745,9 +1745,9 @@ const {language} = useSelector((state)=>state.language)
                           display: "flex",
                           marginBottom: "0px",
                           flexDirection: "row-reverse",
-                          backgroundColor:"red"
+                         
                         }
-                        : { marginBottom: "0px" ,paddingRight:50}
+                        : { marginBottom: "0px" ,paddingRight:10}
                     }
                   >
                     <li>
@@ -1814,7 +1814,7 @@ const {language} = useSelector((state)=>state.language)
                                 marginTop: "5px", marginRight: "5px"
                               }
                               : {
-                                marginTop: "0px", marginLeft: "0px"
+                                marginTop: "0px", marginLeft: "3px"
                               }
                           }
                           class="dropbtn iconDown hover-rotate fa fa-chevron-right"
@@ -1824,7 +1824,9 @@ const {language} = useSelector((state)=>state.language)
                           style={
                             language === "ur" || language === "sd"
                               ? { marginTop: "30px" }
-                              : {}
+                              : {
+                                marginLeft:-100
+                              }
                           }
                         >
                           <Link className="" to={"/aboutus"}>
@@ -2270,7 +2272,7 @@ const {language} = useSelector((state)=>state.language)
                         </Link>
                       </a>
                     </li> */}
-                    <li style={{marginLeft:50}}>
+                    <li style={{marginLeft:10}}>
                       <a  title="" width="10">
                         <Tooltip
                           overlayInnerStyle=
@@ -2278,7 +2280,8 @@ const {language} = useSelector((state)=>state.language)
                           width: "350px",
                           minWidth: "350px",
                            position: "relative",
-                           right: "100px",}}
+                           right: "100px"
+                           }}
                           color={"#Ffffff"}
                           placement="bottomLeft"
                           title={SearchBox}
@@ -2516,16 +2519,15 @@ const {language} = useSelector((state)=>state.language)
           {/* <div className="row sticky-icon"></div> */}
         </div>
         
-        <div className=" pt-2 pb-4 ">
-          <div className="">
-            <div
+        <div className=" pt-2 pb-4 " style={{position:"relative"}}>
+        <div
               className="col-lg-12 updates mx-5"
               style={
                 language === "ur" || language === "sd"
                   ? {
                     paddingRight: "60px",
                     position: "relative",
-                    height: "96vh",
+                    // height: "96vh",
                     display: "flex",
                     alignItems: "end",
                     display: "flex",
@@ -2533,16 +2535,20 @@ const {language} = useSelector((state)=>state.language)
                   }
                   : windowWidth <= 1440
                     ? {
-                      position: "relative",
-                      height: "96vh",
+                      position: "fixed",
+                      bottom:-5.5,
+                      // height: "96vh",
                       display: "flex",
                       alignItems: "end",
+                      zIndex:99999,
+                      paddingBottom:0
                     }
                     : {
                       position: "relative",
                       height: "97vh",
                       display: "flex",
                       alignItems: "end",
+                      
                     }
               }
             >
@@ -2573,7 +2579,6 @@ const {language} = useSelector((state)=>state.language)
                 ""
               )}
             </div>
-          </div>
         </div>
       </div >
     </>

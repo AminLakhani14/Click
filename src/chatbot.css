@@ -77,9 +77,8 @@
 
 .user-message {
     float: right;
-    background-color:  #007bff;
+    background:linear-gradient(180deg, #720d1d 0%, #1f0308 100%) !important;
     /* User message background color (white) */
-    color: #333;
     color: white;
 
 
@@ -108,7 +107,7 @@
 }
 
 input {
-  flex: 1 1;
+  flex: 1 ;
   margin-left: 9px !important;
   padding: 8px;
   border: 1px solid #ccc;
@@ -117,7 +116,7 @@ input {
 
 /* Send button */
 .send-button {
-    background-color: #007bff;
+  background:linear-gradient(180deg, #720d1d 0%, #1f0308 100%) !important;
     color: #fff;
     border: none;
     border-radius: 50%;
@@ -140,9 +139,8 @@ input {
     position: absolute;
     top: -15px;
     right: -15px;
-    background-color: #007bff;
+    background-color: #ffffff;
     box-shadow: 0 7px 5px rgb(2 2 2 / 20%);
-    color: #fff;
     border-radius: 50%;
     width: 30px;
     height: 30px;
@@ -178,7 +176,7 @@ input {
 /* ChatbotHeader.css */
 
 .chatbot-header {
-  background-color: #007bff;
+  background:linear-gradient(180deg, #720d1d 0%, #1f0308 100%) !important;
     color: #fff;
     padding-top: 15px;
     padding-left: 20px;
@@ -216,8 +214,7 @@ input {
         position: absolute;
         top: -15px;
         right: -7px;
-        background-color: #007bff;
-        color: #fff;
+       background-color: #ffffff;
         border-radius: 50%;
         width: 30px;
         height: 30px;
@@ -239,7 +236,7 @@ input {
   background-color: #e5e6e7;
   color: #292929;
   border-radius: 10px;
-  border: 2px solid #0f5789;
+  border: 2px solid #720d1d;
   cursor: pointer;
   font-size: 15px;
   transition: background-color 0.3s ease;
@@ -264,7 +261,7 @@ input {
 .any-thing-else button {
   margin: 5px;
   padding: 10px 20px;
-  background-color: #007bff;
+  background:linear-gradient(180deg, #720d1d 0%, #1f0308 100%) !important;
   color: #fff;
   border: none;
   border-radius: 50px;

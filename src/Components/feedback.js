@@ -9,6 +9,7 @@ import GenericHeader from "./genericHeader";
 import "../Css/investnow.css";
 import BG1 from "../assets/BG1.jpg";
 import { useEffect } from "react";
+import { Fade } from "react-reveal";
 
 import { Box, TextField, TextareaAutosize } from "@mui/material";
 import MobileHeaderGeneric from "./MobileHeaderGeneric";
@@ -453,8 +454,9 @@ export default function FeedBack() {
       <div
         className="row "
         style={{
-          height: "330px",
+          height: "250px",
           background: "",
+          // backgroundColor:"red"
         }}
       >
         <div
@@ -468,10 +470,11 @@ export default function FeedBack() {
             position:"relative"
           }}
         >
-       <div className="">
-       <h1 >Report Regulatory Difficulties</h1>
-          <p
-            className={window.innerWidth <= 540 ? "mobileparaforfeedback" : "feedbackpara"} style={{fontSize:window.innerWidth === 280 || window.innerWidth ===320 ? "17.5px": " ",textAlign:"center"}}
+       <div className="" >
+       <h1 className="ReportRegulatoryDifficulties">Report Regulatory Difficulties</h1>
+         <div className="row"></div>
+         <p
+            className={window.innerWidth <= 540 ? "mobileparaforfeedback" : "feedbackpara col-8"} style={{fontSize:window.innerWidth === 280 || window.innerWidth ===320 ? "17.5px": " ",textAlign:"center"}}
           >
            Please contact us to share the regulatory constraints which you or your business has faced with Government of Sindh institutions.
            Your response shall be kept confidential and will only be used to review the legislation for its improvement.
@@ -672,10 +675,11 @@ export default function FeedBack() {
           </div>
     
       </div> */}
-<div className="row px-5 pt-4 justify-content-center">
+<div className="row px-5 pt-2 justify-content-center">
   <div className="col-9 ps-4" style={{backgroundColor:"rd",}}>
        <div className="row g-0"    style={{width:"100%"}}>
-         <div className="col-6" >
+       <Fade left>
+       <div className="col-6" >
            <h4> Name</h4>
            <TextField
             placeholder="Enter Your First Name"
@@ -683,6 +687,8 @@ export default function FeedBack() {
             style={{width:"96%"}}
           />
         </div>
+       </Fade>
+        <Fade right>
         <div className="col-6 " >
           <h4> Company Name</h4>
          <TextField
@@ -690,9 +696,11 @@ export default function FeedBack() {
           size="small"
           style={{width:"96%",}}
          />
-     </div>
+         </div>
+        </Fade>
   </div>
 <div className="row g-0"    style={{width:"100%"}}>
+     <Fade>
      <div className="col" >
        <h4>Address</h4>
        <TextField
@@ -701,6 +709,7 @@ export default function FeedBack() {
          style={{width:"98%"}}
        />
       </div>
+     </Fade>
       {/* <div className="col-6 " >
        <h4>Country / City</h4>
        <TextField
@@ -711,7 +720,8 @@ export default function FeedBack() {
       </div> */}
 </div>
   <div className="row g-0"    style={{width:"100%"}}>
-      <div className="col-6 " >
+  <Fade left>
+  <div className="col-6 " >
        <h4>Country / City</h4>
        <TextField
          placeholder="Enter Your Country / City"
@@ -721,7 +731,9 @@ export default function FeedBack() {
         },}}
        />
       </div>
-    <div className="col-6" >
+  </Fade>
+    <Fade right> 
+    <div className="col-6"  >
     <h4>
     Mobile Number
     </h4>
@@ -731,6 +743,7 @@ export default function FeedBack() {
       style={{width:"96%"}}
     />
     </div>
+    </Fade>
     {/* <div className="col-6 " >
     <h4>
     Email
@@ -743,7 +756,8 @@ export default function FeedBack() {
     </div> */}
   </div>
   <div className="row g-0"    style={{width:"100%"}}>
-  <div className="col-6 " >
+ <Fade left>
+ <div className="col-6 " >
     <h4>
     Email
     </h4>
@@ -753,7 +767,9 @@ export default function FeedBack() {
       style={{width:"96%",}}
   />
     </div>
-    <div className="col-6" >
+ </Fade>
+  <Fade right>
+  <div className="col-6"  >
     <h4>
     Company Website
     </h4>
@@ -763,6 +779,7 @@ export default function FeedBack() {
       style={{width:"96%"}}
     />
     </div>
+  </Fade>
  
     {/* <div className="col-6 ">
     <h4>
@@ -797,7 +814,8 @@ export default function FeedBack() {
           </div> */}
   </div>
   <div className="row g-0 "    style={{width:"100%",marginBottom:20}}>
-  <div className="col-6 ">
+<Fade left>
+<div className="col-6 "data-aos="fade-right">
     <h4>
     ‎
     </h4>
@@ -828,7 +846,9 @@ export default function FeedBack() {
               })}
             </select>
           </div>
-    <div className="col-6" >
+</Fade>
+  <Fade right>
+  <div className="col-6" >
     <h4>
     ‎
     </h4>
@@ -863,6 +883,7 @@ export default function FeedBack() {
               <div className="col-lg-3"></div>
             )}
     </div>
+  </Fade>
       
     {/* <div className="col-6 " >
     <h4>
@@ -876,13 +897,15 @@ export default function FeedBack() {
     </div> */}
   </div>
   <div className="row g-0" style={{width:"98%"}}>
-    <div className="col">
+   <Fade left>
+   <div className="col" >
     <TextArea
     rows={4}
       placeholder="Enter Your Mobile Number"
       style={{width:"100%",fontSize:18}}
   />
     </div>
+   </Fade>
   </div>
         <div className="row g-0">
           <div className="col-lg-12 mt-4 tocentersubmitbutton"  >

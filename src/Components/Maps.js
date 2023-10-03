@@ -199,7 +199,7 @@ console.log(newValue)
     <div>
       <a
         style={{ textDecoration: "none", color: "white" }}
-        href="https://www.google.com/maps/dir/Energy+Department+Government+of+Sindh%D8%8C+3rd+Floor,+Statelife+Building+No.3%D8%8C+Dr.+Opposite+CM+House%D8%8C+Doctor+Ziauddin+Ahmed+Road,+Kashmir+Mujahid+Colony,+Karachi,+Karachi+City,+Sindh,+Pakistan%E2%80%AD//@24.8445621,66.9858298,13z/data=!4m8!4m7!1m5!1m1!1s0x3eb33ddfe14570af:0x328ab8ab9d6fcde9!2m2!1d67.0271153!2d24.8445678!1m0?entry=ttu"
+        href="https://www.google.com/maps/dir//Energy+Department+Government+of+Sindh%D8%8C+3rd+Floor,+Statelife+Building+No.3%D8%8C+Dr.+Opposite+CM+House%D8%8C+Doctor+Ziauddin+Ahmed+Road,+Kashmir+Mujahid+Colony,+Karachi,+Karachi+City,+Sindh,+Pakistan%E2%80%AD%E2%80%AD/@24.84464,66.9859153,13z/data=!3m1!4b1!4m8!4m7!1m0!1m5!1m1!1s0x3eb33ddfe14570af:0x328ab8ab9d6fcde9!2m2!1d67.0271153!2d24.8445678?entry=ttu"
         target="_blank"
       >
         School Education Department
@@ -212,7 +212,7 @@ console.log(newValue)
       {" "}
       <a
         style={{ textDecoration: "none", color: "white" }}
-        href="https://www.google.com/maps/dir/Chief+Minister+Inspection+Team,+Tughluq+House,+Burns+Road,+Karachi,+Karachi+City,+Sindh,+Pakistan//@24.8555098,66.9776925,13z/data=!3m1!4b1!4m8!4m7!1m5!1m1!1s0x3eb33f8c6914cebb:0x5b5917c5aa40143d!2m2!1d67.018978!2d24.8555155!1m0?entry=ttu"
+        href="https://www.google.com/maps/dir//Chief+Minister+Inspection+Team,+Tughluq+House,+Burns+Road,+Karachi,+Karachi+City,+Sindh,+Pakistan/@24.8555877,66.977778,13z/data=!4m8!4m7!1m0!1m5!1m1!1s0x3eb33f8c6914cebb:0x5b5917c5aa40143d!2m2!1d67.018978!2d24.8555155?entry=ttu"
         target="_blank"
       >
         CM Sindh
@@ -223,7 +223,7 @@ console.log(newValue)
     <div >
       <a
         style={{ textDecoration: "none", color: "white" }}
-        href="https://www.google.com/maps/dir/Sindh+Revenue+Board+Karachi,+Shaheen+Complex,+3rd,+6th,+9th+and+12th+floor,+Civil+Lines,+Karachi,+Karachi+City,+Sindh,+Pakistan//@24.8508844,66.9781481,13z/data=!3m1!4b1!4m8!4m7!1m5!1m1!1s0x3eb33e0a54d24ab3:0xa79dcdbd2b4625a!2m2!1d67.0194336!2d24.8508901!1m0?entry=ttu"
+        href="https://www.google.com/maps/dir//Sindh+Revenue+Board+Karachi,+Shaheen+Complex,+3rd,+6th,+9th+and+12th+floor,+Civil+Lines,+Karachi,+Karachi+City,+Sindh,+Pakistan/@24.8509623,66.9782336,13z/data=!3m1!5s0x3eb33e0bb3bf44e7:0xde47060d5f31a781!4m8!4m7!1m0!1m5!1m1!1s0x3eb33e0a54d24ab3:0xa79dcdbd2b4625a!2m2!1d67.0194336!2d24.8508901?entry=ttu"
         target="_blank"
       >
         Sindh Revenue Board
@@ -235,7 +235,7 @@ console.log(newValue)
     <div>
       <a
         style={{ textDecoration: "none", color: "white" }}
-        href="https://www.google.com/maps/dir/2nd+Floor+building+%23+6+,Sharah+e+Kamal+Ata+turk,+Sindh+Secretariat+,+Karachi//@24.8445621,66.9858298,13z?entry=ttu"
+        href="https://www.google.com/maps/dir//2nd+Floor+building+%23+6+,Sharah+e+Kamal+Ata+turk,+Sindh+Secretariat+,+Karachi/@24.8445621,66.9858298,13z?entry=ttu"
         target="_blank"
       >
         College Department
@@ -247,7 +247,7 @@ console.log(newValue)
     <div>
       <a
         style={{ textDecoration: "none", color: "white" }}
-        href="https://www.google.com/maps/dir/Building+no+6+,Sindh+Secretariat,+Sharah+e+Kamal+Ataturk+road,+Karachi//@24.8545207,66.9763322,13z/data=!3m1!4b1?entry=ttu"
+        href="https://www.google.com/maps/dir//Building+no+6+,Sindh+Secretariat,+Sharah+e+Kamal+Ataturk+road,+Karachi/@24.8546464,66.9764177,13z?entry=ttu"
         target="_blank"
       >
         CS Sindh
@@ -259,7 +259,7 @@ console.log(newValue)
     <div>
       <a
         style={{ textDecoration: "none", color: "white" }}
-        href="https://www.google.com/maps/dir/Sindh+Environmental+Protection+Agency%D8%8C+ST-21%D8%8C,+Sector+23+Korangi+Industrial+Area,+Karachi,+Karachi+City,+Sindh,+Pakistan%E2%80%AD/Directorate+of+School+Education+Karachi+(Primary%2FES+%26+HS),+Sharah-e-Humayun,+Federal+B+Area+Musa+Colony+Gulberg+Town,+Karachi,+Karachi+City,+Sindh,+Pakistan/@24.8748569,67.0441545,13z/data=!3m1!4b1!4m13!4m12!1m5!1m1!1s0x3eb33b946a825e95:0xe0803268ac5da982!2m2!1d67.1204909!2d24.837589!1m5!1m1!1s0x3eb33f192a7ad757:0x102de27609be893e!2m2!1d67.0525489!2d24.9190196?entry=ttu"
+        href="https://www.google.com/maps/dir//Sindh+Environmental+Protection+Agency%D8%8C+ST-21%D8%8C,+Sector+23+Korangi+Industrial+Area,+Karachi,+Karachi+City,+Sindh%E2%80%AD/@24.8376612,67.0792909,13z/data=!4m8!4m7!1m0!1m5!1m1!1s0x3eb33b946a825e95:0xe0803268ac5da982!2m2!1d67.1204909!2d24.837589?entry=ttu"
         target="_blank"
       >
         Sindh Environment Protection Agency
@@ -271,7 +271,7 @@ console.log(newValue)
     <div>
       <a
         style={{ textDecoration: "none", color: "white" }}
-        href="https://www.google.com/maps/dir/Sindh+Environmental+Protection+Agency%D8%8C+ST-21%D8%8C,+Sector+23+Korangi+Industrial+Area,+Karachi,+Karachi+City,+Sindh,+Pakistan%E2%80%AD//@24.8375833,67.0792054,13z/data=!4m8!4m7!1m5!1m1!1s0x3eb33b946a825e95:0xe0803268ac5da982!2m2!1d67.1204909!2d24.837589!1m0?entry=ttu"
+        href="https://www.google.com/maps/dir//Sindh+Building+Control+Authority,+Karachi,+V3XF%2BX36%D8%8C+Civic+Center,+University+Road,+Pakistan,+Block+14+Gulshan-e-Iqbal,+Karachi,+Karachi+City,+Sindh,+Pakistan%E2%80%AD/@24.9162603,66.9835743,13z/data=!4m8!4m7!1m0!1m5!1m1!1s0x3eb33edfa3ffffff:0xc9fe23f99230f894!2m2!1d67.0726369!2d24.8999093?entry=ttu"
         target="_blank"
       >
         Sindh Building Control Authority
@@ -283,7 +283,7 @@ console.log(newValue)
     <div>
       <a
         style={{ textDecoration: "none", color: "white" }}
-        href="https://www.google.com/maps/dir/Directorate+of+Industries,+Trust+Wing,+Sindh+Govt.,+2nd+Floor,+State+Life+Building+No.+11,+Abdullah+Haroon+Rd,+Civil+Lines,+Karachi,+Karachi+City,+Sindh+74400,+Pakistan//@24.8543558,66.9870823,13z/data=!3m1!4b1!4m8!4m7!1m5!1m1!1s0x3eb33f45b8e53693:0x1368d0053cc6b4b6!2m2!1d67.0283678!2d24.8543615!1m0?entry=ttu"
+        href="https://www.google.com/maps/dir//Directorate+of+Industries,+Trust+Wing,+Sindh+Govt.,+2nd+Floor,+State+Life+Building+No.+11,+Abdullah+Haroon+Rd,+Civil+Lines,+Karachi,+Karachi+City,+Sindh+74400,+Pakistan/@24.8544337,66.9871678,13z/data=!3m1!5s0x3eb33e741d2fccf1:0xc3b35a0e92558ed!4m8!4m7!1m0!1m5!1m1!1s0x3eb33f45b8e53693:0x1368d0053cc6b4b6!2m2!1d67.0283678!2d24.8543615?entry=ttu"
         target="_blank"
       >
         Industrial Department
@@ -295,7 +295,7 @@ console.log(newValue)
     <div>
       <a
         style={{ textDecoration: "none", color: "white" }}
-        href="https://www.google.com/maps/dir/Sindh+Food+Authority,+Bunglow+No.+B,+12+Shahrah-e-Faisal+Rd,+Darwaish+Colony,+Karachi,+Karachi+City,+Sindh,+Pakistan//@24.8682426,67.0446676,13z/data=!3m1!4b1!4m8!4m7!1m5!1m1!1s0x3eb3178521c0229d:0xb63bac5f451003f4!2m2!1d67.0859531!2d24.8682483!1m0?entry=ttu"
+        href="https://www.google.com/maps/dir//Sindh+Food+Authority,+Bunglow+No.+B,+12+Shahrah-e-Faisal+Rd,+Darwaish+Colony,+Karachi,+Karachi+City,+Sindh,+Pakistan/@24.8683205,67.0447531,13z/data=!4m8!4m7!1m0!1m5!1m1!1s0x3eb3178521c0229d:0xb63bac5f451003f4!2m2!1d67.0859531!2d24.8682483?entry=ttu"
         target="_blank"
       >
         Sindh Food Authority
@@ -307,7 +307,7 @@ console.log(newValue)
     <div>
       <a
         style={{ textDecoration: "none", color: "white" }}
-        href="https://www.google.com/maps/dir/ST-4,+Revenue+House,+Adjacent+Dr.+Ziauddin+Hospital+Clifton+Block-6,+Karachi//@24.8586379,67.0116361,13z?entry=ttu"
+        href="https://www.google.com/maps/dir//ST-4,+Revenue+House,+Adjacent+Dr.+Ziauddin+Hospital+Clifton+Block-6,+Karachi/@24.8586379,67.0116361,13z?entry=ttu"
         target="_blank"
       >
         Board of Revenue Sindh
@@ -319,7 +319,7 @@ console.log(newValue)
     <div>
       <a
         style={{ textDecoration: "none", color: "white" }}
-        href="https://www.google.com/maps/dir/Sindh+Health+Care+Commision,+2nd+Floor,+Block+C,+Finance+and+Trade+Centre+(FTC,+Shahrah-e-Faisal+Rd,+Karachi+City,+Sindh,+Pakistan//@24.8583534,67.0108653,13z/data=!4m8!4m7!1m5!1m1!1s0x3eb33eec63544583:0xd50963284260903f!2m2!1d67.0521508!2d24.8583591!1m0?entry=ttu"
+        href="https://www.google.com/maps/dir//Sindh+Health+Care+Commision,+2nd+Floor,+Block+C,+Finance+and+Trade+Centre+(FTC,+Shahrah-e-Faisal+Rd,+Karachi+City,+Sindh,+Pakistan/@24.8584313,67.0109508,13z/data=!3m2!4b1!5s0x3eb33e81570b5473:0x5dc46c3300de7ce2!4m8!4m7!1m0!1m5!1m1!1s0x3eb33eec63544583:0xd50963284260903f!2m2!1d67.0521508!2d24.8583591?entry=ttu"
         target="_blank"
       >
         Sindh Healthcare Commission
@@ -331,7 +331,7 @@ console.log(newValue)
     <div>
       <a
         style={{ textDecoration: "none", color: "white" }}
-        href="https://www.google.com/maps/dir/6th+Floor,+Sindh+Secretariat+No+1+Kamal+Atta+Turk+Road,+Karachi//@24.8445621,66.9858298,13z?entry=ttu"
+        href="https://www.google.com/maps/dir//6th+Floor,+Sindh+Secretariat+No+1+Kamal+Atta+Turk+Road,+Karachi/@24.8445621,66.9858298,13z?entry=ttu"
         target="_blank"
       >
         Health Department
@@ -343,7 +343,7 @@ console.log(newValue)
     <div>
       <a
         style={{ textDecoration: "none", color: "white" }}
-        href="https://www.google.com/maps/dir/Sindh+Secretariat+No.+2,+Tughluq+House,+Burns+Road,+Karachi,+Karachi+City,+Sindh,+Pakistan//@24.8555874,66.977907,13z/data=!3m1!4b1!4m8!4m7!1m5!1m1!1s0x3eb33e0c5a400001:0x8531525f31e41b11!2m2!1d67.0191925!2d24.8555931!1m0?entry=ttu"
+        href="https://www.google.com/maps/dir//Sindh+Secretariat+No.+2,+Tughluq+House,+Burns+Road,+Karachi,+Karachi+City,+Sindh,+Pakistan/@24.8556653,66.9779925,13z/data=!4m8!4m7!1m0!1m5!1m1!1s0x3eb33e0c5a400001:0x8531525f31e41b11!2m2!1d67.0191925!2d24.8555931?entry=ttu"
         target="_blank"
       >
         P&D
@@ -355,7 +355,7 @@ console.log(newValue)
     <div>
       <a
         style={{ textDecoration: "none", color: "white" }}
-        href="https://www.google.com/maps/dir/Sindh+Employees+Social+Security+Institution,+W39W%2BQMW,+Block+6+Gulshan-e-Iqbal,+Karachi,+Karachi+City,+Sindh,+Pakistan/Directorate+of+School+Education+Karachi+(Primary%2FES+%26+HS),+Sharah-e-Humayun,+Federal+B+Area+Musa+Colony+Gulberg+Town,+Karachi,+Karachi+City,+Sindh,+Pakistan/@24.9241476,67.0644271,15z/data=!3m1!4b1!4m13!4m12!1m5!1m1!1s0x3eb338ccfc2b6aeb:0xa6ff509e9dcfbb8e!2m2!1d67.0967767!2d24.9194184!1m5!1m1!1s0x3eb33f192a7ad757:0x102de27609be893e!2m2!1d67.0525489!2d24.9190196?entry=ttu"
+        href="https://www.google.com/maps/dir//Sindh+Employees+Social+Security+Institution,+W39W%2BQMW,+Block+6+Gulshan-e-Iqbal,+Karachi,+Karachi+City,+Sindh/@24.9195659,67.0555084,13z/data=!4m8!4m7!1m0!1m5!1m1!1s0x3eb338ccfc2b6aeb:0xa6ff509e9dcfbb8e!2m2!1d67.0967767!2d24.9194184?entry=ttu"
         target="_blank"
       >
         Sindh Employees Social Security Institution
@@ -367,7 +367,7 @@ console.log(newValue)
     <div>
       <a
         style={{ textDecoration: "none", color: "white" }}
-        href="https://www.google.com/maps/dir/1st+Floor+Annexe+Tughluque+House+Sindh+Secretariat+No.2+Karachi//@24.8555874,66.977907,13z?entry=ttu"
+        href="https://www.google.com/maps/dir//1st+Floor+Annexe+Tughluque+House+Sindh+Secretariat+No.2+Karachi/@24.8555874,66.977907,13z?entry=ttu"
         target="_blank"
       >
         Excise, Taxation & Narcotics
@@ -379,7 +379,7 @@ console.log(newValue)
     <div>
       <a
         style={{ textDecoration: "none", color: "white" }}
-        href="https://www.google.com/maps/dir/Sindh+Tourism+Development+Corporation+(STDC),+Suit+%23+114-115,+1st+Floor,+Sea+Breeze+Plaza,+Shahrah-e-Faisal+Rd,+Karachi+Cantonment+Fowler+Lines,+Karachi,+Karachi+City,+Sindh+74000,+Pakistan/Directorate+of+School+Education+Karachi+(Primary%2FES+%26+HS),+Sharah-e-Humayun,+Federal+B+Area+Musa+Colony+Gulberg+Town,+Karachi,+Karachi+City,+Sindh,+Pakistan/@24.8881839,67.0434285,14z/data=!3m1!4b1!4m13!4m12!1m5!1m1!1s0x3eb33e7e785aaaab:0xf0ba85c8f8d49cc8!2m2!1d67.0440854!2d24.8574848!1m5!1m1!1s0x3eb33f192a7ad757:0x102de27609be893e!2m2!1d67.0525489!2d24.9190196?entry=ttu"
+        href="https://www.google.com/maps/dir//Sindh+Tourism+Development+Corporation+(STDC),+Suit+%23+114-115,+1st+Floor,+Sea+Breeze+Plaza,+Shahrah-e-Faisal+Rd,+Karachi+Cantonment+Fowler+Lines,+Karachi,+Karachi+City,+Sindh+74000/@24.857557,67.0028854,13z/data=!3m1!5s0x3eb33e7e791abe2f:0xf705b8ede00e5368!4m8!4m7!1m0!1m5!1m1!1s0x3eb33e7e785aaaab:0xf0ba85c8f8d49cc8!2m2!1d67.0440854!2d24.8574848?entry=ttu"
         target="_blank"
       >
         Local Government Department
@@ -391,7 +391,7 @@ console.log(newValue)
     <div>
       <a
         style={{ textDecoration: "none", color: "white" }}
-        href="https://www.google.com/maps/dir/Directorate+General+of+Labour,+Govt.+of+Sindh,+V24C%2B2RR,+Unnamed+Road,+Saddar+Karachi,+Karachi+City,+Sindh,+Pakistan//@24.8551085,66.9807434,13z/data=!3m1!4b1!4m8!4m7!1m5!1m1!1s0x3eb33faa29cf804f:0xc27b35b3f183ec5f!2m2!1d67.0219736!2d24.8552022!1m0?entry=ttu"
+        href="https://www.google.com/maps/dir//Directorate+General+of+Labour,+Govt.+of+Sindh,+V24C%2B2RR,+Unnamed+Road,+Saddar+Karachi,+Karachi+City,+Sindh,+Pakistan/@24.8551864,66.9808289,13z/data=!4m8!4m7!1m0!1m5!1m1!1s0x3eb33faa29cf804f:0xc27b35b3f183ec5f!2m2!1d67.0219736!2d24.8552022?entry=ttu"
         target="_blank"
       >
         Labour Department
@@ -403,7 +403,7 @@ console.log(newValue)
     <div>
       <a
         style={{ textDecoration: "none", color: "white" }}
-        href="https://www.google.com/maps/dir/agri.sindh.gov.pk//@25.1330309,67.1204275,9z?entry=ttu"
+        href="https://www.google.com/maps/dir//Agriculture+Department,+Tughluq+House,+Burns+Road,+Karachi,+Karachi+City,+Sindh+35432,+Pakistan/@24.8553503,67.0086422,15z/data=!4m8!4m7!1m0!1m5!1m1!1s0x3eb33f075a55d52f:0x5da4d91c1011667e!2m2!1d67.0190461!2d24.8557118?entry=ttu"
         target="_blank"
       >
         Agriculture Department
@@ -415,7 +415,7 @@ console.log(newValue)
     <div>
       <a
         style={{ textDecoration: "none", color: "white" }}
-        href="https://www.google.com/maps/dir/1st+Floor+Block+B,+FTC+Building+Shahra-e-Faisal,+Karachi//@24.8586379,67.0116361,13z/data=!3m1!4b1?entry=ttu"
+        href="https://www.google.com/maps/dir//1st+Floor+Block+B,+FTC+Building+Shahra-e-Faisal,+Karachi/@24.8587158,67.0117216,13z?entry=ttu"
         target="_blank"
       >
         Sindh Investment Department
@@ -427,7 +427,7 @@ console.log(newValue)
     <div>
       <a
         style={{ textDecoration: "none", color: "white" }}
-        href="https://www.google.com/maps/dir/06th+Floor,+Kohsar+Block,+Pak+Secretariat,+Islamabad+44000,+Pakistan//@33.6472095,72.9492675,11z?entry=ttu"
+        href="https://www.google.com/maps/dir//06th+Floor,+Kohsar+Block,+Pak+Secretariat,+Islamabad+44000,+Pakistan/@33.6385974,72.9281374,11z/data=!3m1!4b1?entry=ttu"
         target="_blank"
       >
         EODB
@@ -439,7 +439,7 @@ console.log(newValue)
     <div>
       <a
         style={{ textDecoration: "none", color: "white" }}
-        href="https://www.google.com/maps/dir/Bahria+Complex+4,+R2FV%2BQG5,+Bahria+Complex+IV+Ext+Block,+Chaudry+Khaliquzzaman+Road%D8%8C,+Gizri+Rd,+Navy+Housing+Society,+Karachi,+Karachi+City,+Sindh+75600,+Pakistan%E2%80%AD//@24.8243842,67.002579,13z/data=!4m8!4m7!1m5!1m1!1s0x3eb33db483dd077d:0xff031019ff1b80ce!2m2!1d67.0438645!2d24.8243899!1m0?entry=ttu"
+        href="https://www.google.com/maps/dir//Bahria+Complex+4,+R2FV%2BQG5,+Bahria+Complex+IV+Ext+Block,+Chaudry+Khaliquzzaman+Road%D8%8C,+Gizri+Rd,+Navy+Housing+Society,+Karachi,+Karachi+City,+Sindh+75600,+Pakistan%E2%80%AD%E2%80%AD/@24.8244622,67.0026645,13z/data=!3m1!4b1!4m8!4m7!1m0!1m5!1m1!1s0x3eb33db483dd077d:0xff031019ff1b80ce!2m2!1d67.0438645!2d24.8243899?entry=ttu"
         target="_blank"
       >
         SEZMC
@@ -451,7 +451,7 @@ console.log(newValue)
     <div>
       <a
         style={{ textDecoration: "none", color: "white" }}
-        href="https://www.google.com/maps/dir/1st+Floor,+Block+B,+FTC+Building,+Sharah-e-Faisal+Karachi+Cantonment,+Karachi,+Sindh//@24.8586379,67.0116361,13z?entry=ttu"
+        href="https://www.google.com/maps/dir//1st+Floor,+Block+B,+FTC+Building,+Sharah-e-Faisal+Karachi+Cantonment,+Karachi,+Sindh/@24.8591698,67.0161417,13z/data=!3m1!4b1?entry=ttu"
         target="_blank"
       >
         SEDF
@@ -463,7 +463,7 @@ console.log(newValue)
     <div>
       <a
         style={{ textDecoration: "none", color: "white" }}
-        href="https://www.google.com/maps/dir/1st+Floor+Block+B,+FTC+Building+Shahra-e-Faisal,+Karachi//@24.8586379,67.0116361,13z?entry=ttu"
+        href="https://www.google.com/maps/dir//1st+Floor+Block+B,+FTC+Building+Shahra-e-Faisal,+Karachi/@24.8587158,67.0117216,13z/data=!3m1!4b1?entry=ttu"
         target="_blank"
       >
         EDUCATION CITY
@@ -653,7 +653,6 @@ console.log(newValue)
     value={DepName}
     onChange={HandleChange}
     input={<OutlinedInput label="View All Departments" />}
-    // MenuProps={MenuProps}
     renderValue={(selected) => {
       if (selected.includes('All')) {
         return 'All';
@@ -661,10 +660,7 @@ console.log(newValue)
       return selected.join(', ');
     }}
   >
-    {/* <MenuItem value="All">
-      <Checkbox checked={DepName.includes('All')} />
-      <ListItemText primary="All" />
-    </MenuItem> */}
+    
     {Deps.map((Dep) => (
       <MenuItem 
       key={Dep} value={Dep}>

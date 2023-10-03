@@ -57,7 +57,7 @@ function InvestNow() {
       {windowWidth <= 500 ? (
         <div></div>
       ) : (
-        <div style={{ height: "150px" }}></div>
+        <div style={{ height: "136px" }}></div>
       )}
       <div style={{ background: `url(${investNowImg})` }} className="SiteMain2">
         <h1 data-aos="fade-up" className="Investnow-h1 highlightable">
