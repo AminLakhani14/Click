@@ -219,12 +219,12 @@ function MobileHome(props) {
                               : { borderBottom: "1px solid transparent !important" }
                           }
                         >
-                          <Link className="link toggle2" to={"/WhySindh"}>
-                            {
-                              translations["sindhATglance"][
-                              language
-                              ]
-                            }
+                          <Link className="link toggle2" to={"/feedback"}>
+                          {
+                            translations["Feedback"][
+                            language
+                            ]
+                          }
                           </Link>
                         </li>
                         <li
@@ -238,11 +238,11 @@ function MobileHome(props) {
                               : { borderBottom: "1px solid transparent !important" }
                           }
                         >
-                          <Link className="link toggle2" to={"/InvestNow"}>
-                            {translations["InvestNow"][language]}
+                          <Link className="link toggle2" to={"/regulatorycatalog"}>
+                          {translations["InteractiveRegularity"][language]}
                           </Link>
                         </li>
-                        <li style={
+                        {/* <li style={
                             language === "ur" || language === "sd"
                               ? {
                                 textAlign:"right",
@@ -1002,8 +1002,8 @@ function MobileHome(props) {
                               </ul>
                             </li>
                           </ul>
-                        </li>
-                        <li
+                        </li> */}
+                        {/* <li
                       style={
                         language === "ur" || language === "sd"
                           ? {
@@ -1024,7 +1024,7 @@ function MobileHome(props) {
                               ]
                             }
                           </Link>
-                        </li>
+                        </li> */}
                         <li style={
                             language === "ur" || language === "sd"
                               ? {
@@ -1042,9 +1042,9 @@ function MobileHome(props) {
                               : { }
                           }
                           >
-                            <Link to={"/resource"} 
+                            <Link to={""} 
                             style={{ width: "212px", padding: "0px", fontSize: "20px" }}>
-                               {translations["Resources"][language]}
+                               {translations["Aboutus"][language]}
                             </Link>
                             {dropdownStates[11] ? (
                               <span
@@ -1099,8 +1099,79 @@ function MobileHome(props) {
                                   }
                                   : {}
                               }
-                              className="link toggle2 mobilenesteddropdowntoggle2" to={"/resource"}>
-                                {translations["Download"][language]}
+                              className="link toggle2 mobilenesteddropdowntoggle2" to={""}>
+                                {translations["Introduction"][language]}
+                              </Link>
+                            </li>
+
+                            <li className="borderline"
+                            style={
+                              language === "ur" || language === "sd"
+                                ? {
+                                  textAlign: "right"
+                                }
+                                : {}
+                            }
+                            >
+                              <Link 
+                              style={
+                                language === "ur" || language === "sd"
+                                  ? {
+                                    display: "flex",
+                                    flexDirection: "row-reverse",
+                                    textAlign: "right"
+                                  }
+                                  : {}
+                              }
+                              className="link toggle2 mobilenesteddropdowntoggle2" to={""}>
+                                 {translations["projectobjectives"][language]}
+                              </Link>
+                            </li> 
+                            <li className="borderline"
+                            style={
+                              language === "ur" || language === "sd"
+                                ? {
+                                  textAlign: "right"
+                                }
+                                : {}
+                            }
+                            >
+                              <Link 
+                              style={
+                                language === "ur" || language === "sd"
+                                  ? {
+                                    display: "flex",
+                                    flexDirection: "row-reverse",
+                                    textAlign: "right"
+                                  }
+                                  : {}
+                              }
+                              className="link toggle2 mobilenesteddropdowntoggle2" to={""}>
+                                {translations["Achievements"][language]}
+                              </Link>
+                            </li>
+                            
+                             <li className="borderline"
+                            style={
+                              language === "ur" || language === "sd"
+                                ? {
+                                  textAlign: "right"
+                                }
+                                : {}
+                            }
+                            >
+                              <Link 
+                              style={
+                                language === "ur" || language === "sd"
+                                  ? {
+                                    display: "flex",
+                                    flexDirection: "row-reverse",
+                                    textAlign: "right"
+                                  }
+                                  : {}
+                              }
+                              className="link toggle2 mobilenesteddropdowntoggle2" to={"/Team"}>
+                                      {translations["Team"][language]}
                               </Link>
                             </li>
                             <li className="b-none"
@@ -1122,18 +1193,14 @@ function MobileHome(props) {
                                   : {}
                               }
                                 className="link toggle2 mobilenesteddropdowntoggle2"
-                                to={"/regulatorycatalog"}
+                                to={""}
                               >
-                                {
-                                  translations["RegulatoryCatalog"][
-                                    language
-                                  ]
-                                }
+                               {translations["Contactus"][language]}
                               </Link>
                             </li>
                           </ul>
                         </li>
-                        <li style={
+                        {/* <li style={
                             language === "ur" || language === "sd"
                               ? {
                                 textAlign:"right",
@@ -1334,8 +1401,8 @@ function MobileHome(props) {
                               </label>
                             </li>
                           </ul>
-                        </li>
-                        <li
+                        </li> */}
+                        {/* <li
                           style={
                             language === "ur" || language === "sd"
                               ? {
@@ -1352,7 +1419,7 @@ function MobileHome(props) {
                               ]
                             }
                           </Link>
-                        </li>
+                        </li> */}
                       </ul>
                     </nav>
                   )}

@@ -408,7 +408,11 @@
    width: 150px;
    height: 50px;
   }}
-
+  .ReportRegulatorybefore{
+    color: #054a91;
+    position: relative;
+    margin-bottom: 50px;
+  }
 .feedbacksubmitButton {
   width: 200px;
   height: 60px;

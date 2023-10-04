@@ -471,7 +471,7 @@ export default function FeedBack() {
           }}
         >
        <div className="" >
-       <h1 className="ReportRegulatoryDifficulties">Report Regulatory Difficulties</h1>
+       <h1 className={window.innerWidth <= 540 ?"ReportRegulatorybefore":"ReportRegulatoryDifficulties"}>Report Regulatory Difficulties</h1>
          <div className="row"></div>
          <p
             className={window.innerWidth <= 540 ? "mobileparaforfeedback" : "feedbackpara col-8"} style={{fontSize:window.innerWidth === 280 || window.innerWidth ===320 ? "17.5px": " ",textAlign:"center"}}
@@ -675,21 +675,22 @@ export default function FeedBack() {
           </div>
     
       </div> */}
-<div className="row px-5 pt-2 justify-content-center">
-  <div className="col-9 ps-4" style={{backgroundColor:"rd",}}>
-       <div className="row g-0"    style={{width:"100%"}}>
+<div className="row g-0 pt-2 justify-content-center w-100">
+  <div className="col-md-8 ps-md-3 px-3 justify-content-center  "  style={{backgroundColor:"re",}}>
+       <div className="row g-0 justify-content-between"    style={{width:"100%",backgroundColor:"yel"}}>
        <Fade left>
-       <div className="col-6" >
+       <div className="col-sm-6" >
            <h4> Name</h4>
            <TextField
             placeholder="Enter Your First Name"
             size="small"
             style={{width:"96%"}}
+         
           />
         </div>
        </Fade>
         <Fade right>
-        <div className="col-6 " >
+        <div className="col-md-6" >
           <h4> Company Name</h4>
          <TextField
           placeholder="Enter Your Company Name"
@@ -700,7 +701,7 @@ export default function FeedBack() {
         </Fade>
   </div>
 <div className="row g-0"    style={{width:"100%"}}>
-     <Fade>
+     <Fade top>
      <div className="col" >
        <h4>Address</h4>
        <TextField
@@ -710,7 +711,7 @@ export default function FeedBack() {
        />
       </div>
      </Fade>
-      {/* <div className="col-6 " >
+      {/* <div className="col-md-6" >
        <h4>Country / City</h4>
        <TextField
          placeholder="Enter Your Country / City"
@@ -721,19 +722,17 @@ export default function FeedBack() {
 </div>
   <div className="row g-0"    style={{width:"100%"}}>
   <Fade left>
-  <div className="col-6 " >
+  <div className="col-md-6" >
        <h4>Country / City</h4>
        <TextField
          placeholder="Enter Your Country / City"
          size="small"
-         style={{width:"96%", ':hover': {
-          backgroundColor: 'red', // Change the background color on hover
-        },}}
+         style={{width:"96%"}}
        />
       </div>
   </Fade>
     <Fade right> 
-    <div className="col-6"  >
+    <div className="col-md-6"  >
     <h4>
     Mobile Number
     </h4>
@@ -744,7 +743,7 @@ export default function FeedBack() {
     />
     </div>
     </Fade>
-    {/* <div className="col-6 " >
+    {/* <div className="col-md-6" >
     <h4>
     Email
     </h4>
@@ -755,9 +754,9 @@ export default function FeedBack() {
   />
     </div> */}
   </div>
-  <div className="row g-0"    style={{width:"100%"}}>
+  <div className="row g-0" style={{width:"100%"}}>
  <Fade left>
- <div className="col-6 " >
+ <div className="col-md-6" >
     <h4>
     Email
     </h4>
@@ -769,19 +768,19 @@ export default function FeedBack() {
     </div>
  </Fade>
   <Fade right>
-  <div className="col-6"  >
+  <div className="col-md-6"  >
     <h4>
     Company Website
     </h4>
     <TextField
       placeholder="Enter Your Company Website"
       size="small"
-      style={{width:"96%"}}
+      style={{ width: windowWidth <=500? "100%":"96%",}}
     />
     </div>
   </Fade>
  
-    {/* <div className="col-6 ">
+    {/* <div className="col-md-6">
     <h4>
     ‎
     </h4>
@@ -815,7 +814,7 @@ export default function FeedBack() {
   </div>
   <div className="row g-0 "    style={{width:"100%",marginBottom:20}}>
 <Fade left>
-<div className="col-6 "data-aos="fade-right">
+<div className="col-md-6 " data-aos="fade-right">
     <h4>
     ‎
     </h4>
@@ -827,7 +826,7 @@ export default function FeedBack() {
               label="Department"
               style={{
                 height: "40.1px",
-                width: "96%", 
+                width: windowWidth <=500? "100%":"96%",
                 paddingTop: "10px",
                 borderRadius: "5px",
                 fontFamily: "sans-serif",
@@ -848,7 +847,7 @@ export default function FeedBack() {
           </div>
 </Fade>
   <Fade right>
-  <div className="col-6" >
+  <div className="col-md-6" >
     <h4>
     ‎
     </h4>
@@ -862,7 +861,7 @@ export default function FeedBack() {
                 renderValue={areas[0]}
                 style={{
                   height: "40.1px",
-                  width: "96%", 
+                  width: windowWidth <=500? "100%":"96%", 
                   paddingTop: "10px",
                   borderRadius: "5px",
                   fontFamily: "sans-serif",
@@ -885,7 +884,7 @@ export default function FeedBack() {
     </div>
   </Fade>
       
-    {/* <div className="col-6 " >
+    {/* <div className="col-md-6" >
     <h4>
     Moble Number
     </h4>
@@ -896,20 +895,23 @@ export default function FeedBack() {
   />
     </div> */}
   </div>
-  <div className="row g-0" style={{width:"98%"}}>
+  <div className="row g-0" style={{width:"100%"}}>
    <Fade left>
    <div className="col" >
     <TextArea
     rows={4}
       placeholder="Enter Your Mobile Number"
-      style={{width:"100%",fontSize:18}}
+      style={{
+        width: windowWidth <=500? "100%":"98%",
+        fontSize:18
+      }}
   />
     </div>
    </Fade>
   </div>
         <div className="row g-0">
-          <div className="col-lg-12 mt-4 tocentersubmitbutton"  >
-            <button type="button" className="submit_button">
+          <div className="col-sm-12 mt-4 tocentersubmitbutton"  >
+            <button type="button" className="submit_button ">
               <span>Submit</span>
             </button>
           </div>

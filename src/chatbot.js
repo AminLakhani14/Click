@@ -7,6 +7,8 @@ import SVG from "react-inlinesvg";
 
 import "./chatbot.css";
 import chatbotIcon from "./assets/chatbotIcon.svg";
+import chatgpt from "./assets/chatgpt.svg"
+import VirtualAssistant from "./assets/VirtualAssistant.png"
 import { Tooltip } from "antd";
 
 const arr=[  "By investing in Sindh, you will be part of a global hub with strong connections to major markets and a knowledge-based economy that is opening to the world.","Sindh is constantly expanding opportunities for international companies.","Our Contact Number is: +92 21 99218874","How can I help you?","I am sorry, but I could not understand your question."]
@@ -258,7 +260,7 @@ const Chatbot = () => {
       {showChatbot && (
         <div className="chatbot-container">
           <div className="chatbot-header">
-            <h2 className="chatbotHeaderText">CLICK virtual assistant</h2>
+            <h2 className="chatbotHeaderText">CLICK VirtualAssistant assistant</h2>
             <p style={{ textAlign: "left", marginBottom: "11px" }}>
               Ask me anything
             </p>
@@ -354,6 +356,7 @@ const Chatbot = () => {
             fill={"#0f5789"}
             title="React"
           />
+         {/* <img className="heart" src={VirtualAssistant} alt="" /> */}
         </div>
       </Tooltip>
     </div>

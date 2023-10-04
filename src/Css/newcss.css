@@ -24,6 +24,7 @@ width: 20%;
 border-radius: 5px;
 margin-left: 0px;
 }
+
 h1 {
 	font-size: 60px;
 	text-align: center;
@@ -353,4 +354,9 @@ li>a:only-child:after {
 		width: 94%;
 	}
 
+}
+@media screen and (max-width : 500px)  {
+	.submit_button{
+		width: 100%;
+	}
 }

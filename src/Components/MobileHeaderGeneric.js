@@ -72,12 +72,12 @@ const handleLabelTextClick = (index) => {
     <>
       <div
         className={"mobileheader   "}
-        style={{ backgroundColor:"red",position:"fixed",top:"0px",}}
+        // style={{ backgroundColor:"white",position:"fixed",top:"0px", zIndex:999,}}
       >
-        <div className={"navbar"}>
+        <div className={"navbar mt-6"}>
           <div
             className="col-lg-6 navbarLeft"
-            style={{ position: "absolute", top: "0",backgroundColor:"green" }}
+            style={{ position: "absolute", top: "0"}}
           >
             <Link to={"/home"} style={{ display: "flex" }}>
               <img className=" navlogo1" src={sindh} alt="" width="35%"></img>
@@ -102,7 +102,6 @@ const handleLabelTextClick = (index) => {
                 width: "90%",
                 display: "flex",
                 justifyContent: "flex-end",
-                backgroundColor:'blue'
               }}
             >
               <img
@@ -149,8 +148,8 @@ const handleLabelTextClick = (index) => {
                             borderBottom: "1px solid transparent !important",
                           }}
                         >
-                          <Link className="link toggle2" to={"/WhySindh"}>
-                          Sindh at a Glance
+                          <Link className="link toggle2" to={"/feedback"}>
+                          Feedback
                           </Link>
                         </li>
                         <li
@@ -159,10 +158,10 @@ const handleLabelTextClick = (index) => {
                           }}
                         >
                           <Link className="link toggle2" to={"/InvestNow"}>
-                            Invest now
+                          Interactive Regularity Directory
                           </Link>
                         </li>
-                        <li>
+                        {/* <li>
                         <label
                         htmlFor="drop-5"
                         className={`d-flex toggle toggle2`}
@@ -495,8 +494,8 @@ const handleLabelTextClick = (index) => {
                               </ul>
                             </li>
                           </ul>
-                        </li>
-                        <li
+                        </li> */}
+                        {/* <li
                           style={{
                             borderBottom: "1px solid transparent !important",
                           }}
@@ -507,11 +506,11 @@ const handleLabelTextClick = (index) => {
                           >
                             News & Information
                           </Link>
-                        </li>
+                        </li> */}
                         <li className="">
                           <label for="drop-2" className="d-flex toggle toggle2">
                           <Link to={"/resource"} style={{width:"212px",padding:"0px",fontSize:"20px"}}>
-                            Resources 
+                           About Us
                             </Link>
                             {dropdownStates[11] ? (
                                 <span
@@ -535,20 +534,36 @@ const handleLabelTextClick = (index) => {
                           <ul>
                             <li className="borderline">
                               <Link className="link toggle2 mobilenesteddropdowntoggle2" to={"/resource"}>
-                                Download
+                              Introduction 
                               </Link>
                             </li>
+                            <li className="borderline">
+                              <Link className="link toggle2 mobilenesteddropdowntoggle2" to={"/resource"}>
+                              project objectives 
+                              </Link>
+                            </li>
+                            <li className="borderline">
+                              <Link className="link toggle2 mobilenesteddropdowntoggle2" to={"/resource"}>
+                              Achievements  
+                              </Link>
+                            </li>
+                            <li className="borderline">
+                              <Link className="link toggle2 mobilenesteddropdowntoggle2" to={"/resource"}>
+                              Team 
+                              </Link>
+                            </li>
+
                             <li className="b-none">
                               <Link
                                 className="link toggle2 mobilenesteddropdowntoggle2"
-                                to={"/regulatorycatalog"}
+                                to={""}
                               >
-                                Regulatory Catalog
+                               Contact us
                               </Link>
                             </li>
                           </ul>
                         </li>
-                        <li>
+                        {/* <li>
                           <label 
                           for="drop-3"
                            className="d-flex toggle toggle2">
@@ -631,7 +646,7 @@ const handleLabelTextClick = (index) => {
                            </label>
                          </li>
                           </ul>
-                        </li>
+                        </li> */}
                       </ul>
                     </nav>
                   )}

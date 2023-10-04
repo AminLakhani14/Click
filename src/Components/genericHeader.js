@@ -715,7 +715,7 @@ export default function GenericHeader(props) {
               </li>
               <li className="HeaderPaddingRight">
                 <a target="blank" title="" className={"link2"}>
-                  <Link className="link2" to={"/InvestNow"}>
+                  <Link className="link2" to={"/regulatorycatalog"}>
                   Interactive Regularity Directory
                   </Link>
                 </a>
@@ -730,25 +730,28 @@ export default function GenericHeader(props) {
                     About Us
                   </span>
                   <i
-                    style={{ marginTop: "0px", marginLeft: "0px" }}
+                    style={{ marginTop: "0px", marginLeft: "3px" }}
                     class=" dropbtn hover-rotate fa fa-chevron-right"
                   ></i>
                   <div class="dropdown-content">
-                    <Link className={""} to={"/resource"}>
+                    <Link className={""} to={""}>
                       <a target="_blank" href="">
                        Intrduction
                       </a>
                     </Link>
-                    <Link className={""} to={"/regulatorycatalog"}>
+                    <Link className={""} to={""}>
                       <a href="#"> project objectives </a>
                     </Link>
-                    <Link className={""} to={"/regulatorycatalog"}>
+                    <Link className={""} to={""}>
                       <a href="#"> Achievements  </a>
                     </Link>
-                    <Link className={""} to={"/regulatorycatalog"}>
+                    <Link className={""} to={"/resource"}>
+                      <a href="#"> Downloads</a>
+                    </Link>
+                    <Link className={""} to={"/Team"}>
                       <a href="#"> Team </a>
                     </Link>
-                    <Link className={""} to={"/regulatorycatalog"}>
+                    <Link className={""} to={""}>
                       <a href="#"> Contact us</a>
                     </Link>
                   </div>
