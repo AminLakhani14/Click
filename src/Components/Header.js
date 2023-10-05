@@ -1776,12 +1776,265 @@ const {language} = useSelector((state)=>state.language)
                         </Link>
                       </a>
                     </li>
-                    <li>
+                    {/* <li>
                       <a title="" className={"link"}>
                         <Link className="link" to={"/regulatorycatalog"}>
                           {translations["InteractiveRegularity"][language]}
                         </Link>
                       </a>
+                    </li> */}
+                    <li>
+                    <div
+                        class="dropdown"
+                        style={
+                          language === "ur" || language === "sd"
+                            ? {
+                              display: "flex",
+                              flexDirection: "row-reverse",
+                            }
+                            : {
+                              marginRight:10
+                            }
+                        }
+                      >
+                        <span
+                          style={{
+                            marginRight: "5px",
+                            textDecoration: "none",
+                          }}
+                          className={"link"}
+                        >
+                          {" "}
+                          {translations["InteractiveRegularity"][language]}
+                        </span>
+                        <i
+                          // style={{ marginTop: "5px", marginRight: "5px",}}
+                          style={
+                            language === "ur" ||
+                              language === "sd"
+                              ? {
+                                marginTop: "5px", marginRight: "5px"
+                              }
+                              : {
+                                marginTop: "0px", marginLeft: "3px"
+                              }
+                          }
+                          class="dropbtn iconDown hover-rotate fa fa-chevron-right"
+                        ></i>
+                        <div
+                          class="dropdown-content"
+                          style={
+                            language === "ur" || language === "sd"
+                              ? { marginTop: "30px" }
+                              : {
+                                marginLeft:0
+                              }
+                          }
+                        >
+                         
+                          {/* <div
+                            class="nested-dropdown"
+                            style={{ width: "100%" }}
+                          >
+                            <span
+                              style={
+                                language === "ur" ||
+                                  language === "sd"
+                                  ? {
+                                    display: "flex",
+                                    flexDirection: "row-reverse",
+                                    width: "100%",
+                                  }
+                                  : {
+                                    display: "flex",
+                                    position: "relative",
+                                    width: "100%",
+                                  }
+                              }
+                            >
+                              <a
+                                style={
+                                  language === "ur" ||
+                                    language === "sd"
+                                    ? {
+                                      width: "88%",
+                                      paddingLeft: "30px",
+                                      height: "40px",
+                                      paddingTop: "8px",
+                                      display: "flex",
+                                      flexDirection: "row-reverse",
+                                    }
+                                    : {
+                                      width: "100%",
+                                      paddingLeft: "30px",
+                                      height: "40px",
+                                      paddingTop: "8px",
+                                    }
+                                }
+                                href="#"
+                              >
+                                {
+                                  translations["Components"][
+                                  language
+                                  ]
+                                }
+                              </a>
+                              <i
+                                // style={{
+                                //   marginTop: "10px",
+                                //   marginLeft: "0px",
+                                //   position: "absolute",
+                                //   right: "15px",
+                                // }}
+                                style={
+                                  language === "ur" ||
+                                    language === "sd"
+                                    ? {
+                                      marginTop: "10px",
+                                      marginLeft: "0px",
+                                      display: "flex",
+                                      flexDirection: "row-reverse",
+                                    }
+                                    : {
+                                      marginTop: "10px",
+                                      marginLeft: "0px",
+                                      position: "absolute",
+                                      right: "15px",
+                                    }
+                                }
+                                class="dropbtn unique-iconDown unique-hover-rotate component fa fa-chevron-right"
+                              ></i>
+                            </span>
+                            <div
+                              class="dropdown-content nested-content nested-right"
+                              style={{ left: "auto" }}
+                            >
+                              <Link className={""} to={"/Component"}>
+                                <a href="#">
+                                  {
+                                    translations["CLICKSID"][
+                                    language
+                                    ]
+                                  }
+                                </a>
+                              </Link>
+                              <Link className={""} to={"/Team"}>
+                                <a href="#">
+                                  {
+                                    translations["OurTeam"][
+                                    language
+                                    ]
+                                  }
+                                </a>
+                              </Link>
+                            </div>
+                          </div> */}
+                     
+                          <Link className={""} to={"/RegulatoryCatalogCalculator"}>
+                            <a
+                              href="#"
+                              style={
+                                language === "ur" ||
+                                  language === "sd"
+                                  ? {
+                                    display: "flex",
+                                    flexDirection: "row-reverse",
+                                    marginRight: "-16px",
+                                  }
+                                  : {}
+                              }
+                            >
+                              {translations["calculatorButton"][language]}
+                            </a>
+                          </Link>
+                          <Link className={""} to={"/regulatorycatalog"}>
+                            <a
+                              href="#"
+                              style={
+                                language === "ur" ||
+                                  language === "sd"
+                                  ? {
+                                    display: "flex",
+                                    flexDirection: "row-reverse",
+                                    marginRight: "-16px",
+                                  }
+                                  : {}
+                              }
+                            >
+                              {translations["RegulatoryCatalog"][language]}
+                            </a>
+                          </Link>
+                          <Link className="" to={"/Maps"}>
+                            <a
+                              target="_blank"
+                              href=""
+                              style={
+                                language === "ur" ||
+                                  language === "sd"
+                                  ? {
+                                    display: "flex",
+                                    flexDirection: "row-reverse",
+                                    marginRight: "-16px",
+                                  }
+                                  : {}
+                              }
+                            >
+                              {translations["Maps"][language]}
+                            </a>
+                          </Link>
+                          {/* <Link className={""} to={"/resource"}>
+                            <a
+                              href="#"
+                              style={
+                                language === "ur" ||
+                                  language === "sd"
+                                  ? {
+                                    display: "flex",
+                                    flexDirection: "row-reverse",
+                                    marginRight: "-16px",
+                                  }
+                                  : {}
+                              }
+                            >
+                              {translations["Downloads"][language]}
+                            </a>
+                          </Link>
+                          <Link className={""} to={"/Team"}>
+                            <a
+                              href="#"
+                              style={
+                                language === "ur" ||
+                                  language === "sd"
+                                  ? {
+                                    display: "flex",
+                                    flexDirection: "row-reverse",
+                                    marginRight: "-16px",
+                                  }
+                                  : {}
+                              }
+                            >
+                              {translations["Team"][language]}
+                            </a>
+                          </Link>
+                          <Link className={""} to={""}>
+                            <a
+                              href="#"
+                              style={
+                                language === "ur" ||
+                                  language === "sd"
+                                  ? {
+                                    display: "flex",
+                                    flexDirection: "row-reverse",
+                                    marginRight: "-16px",
+                                  }
+                                  : {}
+                              }
+                            >
+                              {translations["Contactus"][language]}
+                            </a>
+                          </Link> */}
+                        </div>
+                      </div>
                     </li>
                     <li>
                     <div
@@ -2537,19 +2790,31 @@ const {language} = useSelector((state)=>state.language)
           {/* <div className="row sticky-icon"></div> */}
         </div>
         
-        <div className=" pt-2 pb-4 " style={{position:"relative"}}>
+        <div className=" pt-2 pb-4 g-0" style={{position:"relative"}}>
         <div
-              className="col-lg-12 updates mx-5"
+              className="col-lg-12 updates"
               style={
                 language === "ur" || language === "sd"
                   ? {
-                    paddingRight: "60px",
-                    position: "relative",
+                    // paddingRight: "60px",
+                    // position: "relative",
+                    // // height: "96vh",
+                    // display: "flex",
+                    // alignItems: "end",
+                    // display: "flex",
+                    // flexDirection: "row-reverse",
+                    position: "fixed",
+                    bottom:-5.5,
                     // height: "96vh",
-                    display: "flex",
-                    alignItems: "end",
+                    // paddingRight: "60px",
+                    // right:200,
                     display: "flex",
                     flexDirection: "row-reverse",
+                    // justifyContent:'start',
+                    marginLeft: language === "ur" || language === "sd" ?-42:0,
+                    alignItems: "end",
+                    zIndex:99999,
+                    paddingBottom:0
                   }
                   : windowWidth <= 1440
                     ? {
@@ -2559,7 +2824,9 @@ const {language} = useSelector((state)=>state.language)
                       display: "flex",
                       alignItems: "end",
                       zIndex:99999,
-                      paddingBottom:0
+                      paddingBottom:0,
+                      marginLeft: language === "ur" || language === "sd" ?0:50,
+                      
                     }
                     : {
                       position: "relative",

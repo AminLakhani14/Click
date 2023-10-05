@@ -1150,6 +1150,29 @@ function MobileHome(props) {
                                 {translations["Achievements"][language]}
                               </Link>
                             </li>
+                            <li className="borderline"
+                            style={
+                              language === "ur" || language === "sd"
+                                ? {
+                                  textAlign: "right"
+                                }
+                                : {}
+                            }
+                            >
+                              <Link 
+                              style={
+                                language === "ur" || language === "sd"
+                                  ? {
+                                    display: "flex",
+                                    flexDirection: "row-reverse",
+                                    textAlign: "right"
+                                  }
+                                  : {}
+                              }
+                              className="link toggle2 mobilenesteddropdowntoggle2" to={"/resource"}>
+                                {translations["Downloads"][language]}
+                              </Link>
+                            </li>
                             
                              <li className="borderline"
                             style={

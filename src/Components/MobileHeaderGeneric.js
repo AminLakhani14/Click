@@ -157,7 +157,7 @@ const handleLabelTextClick = (index) => {
                             borderBottom: "1px solid transparent !important",
                           }}
                         >
-                          <Link className="link toggle2" to={"/InvestNow"}>
+                          <Link className="link toggle2" to={"/regulatorycatalog"}>
                           Interactive Regularity Directory
                           </Link>
                         </li>
@@ -533,22 +533,27 @@ const handleLabelTextClick = (index) => {
                           <input type="checkbox" id="drop-2" />
                           <ul>
                             <li className="borderline">
-                              <Link className="link toggle2 mobilenesteddropdowntoggle2" to={"/resource"}>
+                              <Link className="link toggle2 mobilenesteddropdowntoggle2" to={""}>
                               Introduction 
                               </Link>
                             </li>
                             <li className="borderline">
-                              <Link className="link toggle2 mobilenesteddropdowntoggle2" to={"/resource"}>
+                              <Link className="link toggle2 mobilenesteddropdowntoggle2" to={""}>
                               project objectives 
                               </Link>
                             </li>
                             <li className="borderline">
-                              <Link className="link toggle2 mobilenesteddropdowntoggle2" to={"/resource"}>
+                              <Link className="link toggle2 mobilenesteddropdowntoggle2" to={""}>
                               Achievements  
                               </Link>
                             </li>
                             <li className="borderline">
                               <Link className="link toggle2 mobilenesteddropdowntoggle2" to={"/resource"}>
+                              Downloads 
+                              </Link>
+                            </li>
+                            <li className="borderline">
+                              <Link className="link toggle2 mobilenesteddropdowntoggle2" to={"/Team"}>
                               Team 
                               </Link>
                             </li>

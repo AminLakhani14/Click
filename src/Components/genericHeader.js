@@ -713,12 +713,33 @@ export default function GenericHeader(props) {
                   </Link>
                 </a>
               </li>
-              <li className="HeaderPaddingRight">
-                <a target="blank" title="" className={"link2"}>
-                  <Link className="link2" to={"/regulatorycatalog"}>
-                  Interactive Regularity Directory
-                  </Link>
-                </a>
+              <li className="HeaderPaddingRight ">
+                <div class="dropdown"   style={{ marginRight: "10px" }}>
+                  <span
+                    style={{ marginRight: "5px" }}
+                    title=""
+                    className={"link2"}
+                  >
+                   Interactive Regularity Directory
+                  </span>
+                  <i
+                    style={{ marginTop: "0px", marginLeft: "3px" }}
+                    class=" dropbtn hover-rotate fa fa-chevron-right"
+                  ></i>
+                  <div class="dropdown-content">
+                    <Link className={""} to={"/RegulatoryCatalogCalculator"}>
+                      <a target="_blank" href="">
+                      Regulatory Cost Calculator
+                      </a>
+                    </Link>
+                    <Link className={""} to={"/regulatorycatalog"}>
+                      <a href="#">Regulatory Catalog </a>
+                    </Link>
+                    <Link className={""} to={"/Maps"}>
+                      <a href="#"> Maps  </a>
+                    </Link>
+                  </div>
+                </div>
               </li>
               <li className="HeaderPaddingRight">
                 <div class="dropdown">

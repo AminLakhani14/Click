@@ -9,6 +9,7 @@ import { createTheme } from '@mui/material/styles';
 import { ThemeProvider } from '@mui/material/styles';
 import "../Css/resource.css";
 import { useEffect } from "react";
+import Map from "./Map";
 // import logo from "../assets/collegeDepartment.PNG"
 
 
@@ -228,6 +229,9 @@ const DetailModal = (props) => {
                             placeholder="Write your feedback subject"
                           />
                            </a>
+                      </div>
+                      <div className="row g-0">
+                      <Map/>
                       </div>
 
 

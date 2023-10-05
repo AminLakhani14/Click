@@ -367,7 +367,7 @@ console.log(newValue)
     <div>
       <a
         style={{ textDecoration: "none", color: "white" }}
-        href="https://www.google.com/maps/dir//1st+Floor+Annexe+Tughluque+House+Sindh+Secretariat+No.2+Karachi/@24.8555874,66.977907,13z?entry=ttu"
+        href="https://www.google.com/maps/place/Excise,+Taxation+and+Narcotics+Office/@24.9019807,66.9897299,13z/data=!4m19!1m12!4m11!1m3!2m2!1d67.0298987!2d24.9051725!1m6!1m2!1s0x3eb33fb10d12ad61:0x6fd8d95c9b0e645d!2sExcise,+Taxation+and+Narcotics+Office,+W22J%2BQ97,+Block+2+Nazimabad,+Karachi,+Karachi+City,+Sindh+74600,+Pakistan!2m2!1d67.0309275!2d24.9018854!3m5!1s0x3eb33fb10d12ad61:0x6fd8d95c9b0e645d!8m2!3d24.9019085!4d67.0309299!16s%2Fg%2F11btxjn654?entry=ttu"
         target="_blank"
       >
         Excise, Taxation & Narcotics
@@ -415,7 +415,7 @@ console.log(newValue)
     <div>
       <a
         style={{ textDecoration: "none", color: "white" }}
-        href="https://www.google.com/maps/dir//1st+Floor+Block+B,+FTC+Building+Shahra-e-Faisal,+Karachi/@24.8587158,67.0117216,13z?entry=ttu"
+        href="https://www.google.com/maps/place/Investment+Department,+Government+of+Sindh/@24.8580077,67.0521935,15z/data=!4m6!3m5!1s0x3eb33946cdddc7f7:0xf0cbdf3f38f7d9ea!8m2!3d24.8580077!4d67.0521935!16s%2Fg%2F11fq8_nzw_?entry=ttu"
         target="_blank"
       >
         Sindh Investment Department

@@ -1,4 +1,4 @@
-import React, { useState ,useRef } from "react";
+import React, { useState ,useRef,useEffect } from "react";
 import GenericHeader from "./genericHeader";
 import "../Css/resource.css";
 import DemoGrid from "./Grid/demoGrid";
@@ -19,6 +19,7 @@ import SindhHeathCare from "../assets/Documents/SindhHealthCare.PNG"
 import IndustrieAndCommerce from "../assets/Documents/IndustrieAndCommerce.PNG"
 import SindhEnviromentalProtection from "../assets/Documents/SindhEnviromentalProtection.PNG"
 import HealthCareTable from "../assets/Documents/HealthCareTable.PNG"
+import MobileHeaderGeneric from "./MobileHeaderGeneric";
 
 const arr = [
 
@@ -2646,6 +2647,22 @@ export default function RegulatoryCatalogue() {
   const [dataForGridClone,] = useState(arr)
   const [licenceData, setLicenceData] = useState({});
   const [openModal,setOpenModal] = useState(false)
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    // Function to update the windowWidth state when the resize event occurs
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+
+    // Attach the event listener
+    window.addEventListener('resize', handleResize);
+
+    // Clean up the event listener on component unmount
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
 
   const openDetailModal = () => {
     setOpenModal(true)
@@ -2702,7 +2719,9 @@ const GetGridData = (data) =>{
   return (
     <>
    {openModal && <DetailModal licenceData={licenceData} openDetailModal={openDetailModal} closeDetailModal={closeDetailModal} dataForGrid={dataForGrid} GetGridData={GetGridData}/>}
-      <GenericHeader />
+           {/* <GenericHeader /> */}
+           {windowWidth <=500 ? <MobileHeaderGeneric/>: <GenericHeader />}
+      
       <div
         className="row"
         style={{
