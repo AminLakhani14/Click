@@ -35,6 +35,7 @@ import Health from "./Components/health";
 import DiverseHorizon from "./Components/diversehorizon";
 import Agriculture from "./Components/agriculture";
 import Energy from "./Components/energy";
+import Dashboard from "./Components/Dashboard";
 
 
 export let searchText = '';
@@ -162,6 +163,10 @@ export const router = createHashRouter([
   {
     path: "/Maps",
     element: <Maps />,
+  },
+  {
+    path: "/Dashboard",
+    element: <Dashboard/>,
   },
   {
     path: "/Component",

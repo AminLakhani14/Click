@@ -152,14 +152,52 @@ const handleLabelTextClick = (index) => {
                           Feedback
                           </Link>
                         </li>
-                        <li
-                          style={{
-                            borderBottom: "1px solid transparent !important",
-                          }}
-                        >
-                          <Link className="link toggle2" to={"/regulatorycatalog"}>
+                        <li className="">
+                          <label for="drop-2" className="d-flex toggle toggle2">
+                          <Link to={"/regulatorycatalog"} style={{width:"212px",padding:"0px",fontSize:"20px"}}>
                           Interactive Regularity Directory
-                          </Link>
+                            </Link>
+                            {dropdownStates[11] ? (
+                                <span
+                                style={{display:"contents"}}
+                                  className="minus"
+                                  onClick={() => handleIconClick(11)} // Click on icon to open/close the dropdown
+                                  onMouseEnter={() => handleIconClick(11)} // Hover on icon to open/close the dropdown
+                                  onMouseLeave={() => closeDropdown(11)} // Leave ico icon to close the dropdown
+                                ></span>
+                              ) : (
+                                <span
+                                  className="plus"
+                                style={{display:"contents"}}
+                                  onClick={() => handleIconClick(11)} // Click on icon to open/close the dropdown
+                                  onMouseEnter={() => handleIconClick(11)} // Hover on icon to open/close the dropdown
+                                  onMouseLeave={() => closeDropdown(11)} // Leave ico icon eave icon to close the dropdown
+                                ></span>
+                              )}
+                          </label>
+                          <input type="checkbox" id="drop-2" />
+                          <ul>
+                            <li className="borderline">
+                              <Link className="link toggle2 mobilenesteddropdowntoggle2" to={"/RegulatoryCatalogCalculator"}>
+                              Regulatory Cost Calculator
+                              </Link>
+                            </li>
+                            <li className="borderline">
+                              <Link className="link toggle2 mobilenesteddropdowntoggle2" to={"/regulatorycatalog"}>
+                              Regulatory Catalog
+                              </Link>
+                            </li>
+                            <li className="borderline">
+                              <Link className="link toggle2 mobilenesteddropdowntoggle2" to={"/Maps"}>
+                              Maps 
+                              </Link>
+                            </li>
+                            <li className="borderline">
+                              <Link className="link toggle2 mobilenesteddropdowntoggle2" to={"/Dashboard"}>
+                              Sindh Statistics
+                              </Link>
+                            </li>
+                          </ul>
                         </li>
                         {/* <li>
                         <label

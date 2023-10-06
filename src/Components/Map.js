@@ -1,32 +1,47 @@
-import React from 'react'
-import GoogleMapReact from 'google-map-react';
-import map from '../assets/map.png'
+import React, { useCallback, useState } from 'react'
+import { GoogleMap, Marker, useJsApiLoader } from '@react-google-maps/api';
 
-const AnyReactComponent = ({ text }) => <div>{text}</div>;
-const defaultProps = {
-    center: {
-      lat: 10.99835602,
-      lng: 77.01502627
-    },
-    zoom: 11
-  };
+const containerStyle = {
+  width: '100%',
+  height: '140px'
+};
+
+const center = {
+  lat: 24.8454431,
+  lng: 67.0282079
+};
 const Map = () => {
+  const [map, setMap] =useState()
+  const { isLoaded } = useJsApiLoader({
+    id: 'google-map-script',
+    googleMapsApiKey: "AIzaSyCqTizImtoY21thD5oH47ycL0umWWHvUu0"
+  })
+  const onLoad =useCallback(function callback(map) {
+    // This is just an example of getting and using the map instance!!! don't just blindly copy!
+    const bounds = new window.google.maps.LatLngBounds(center);
+    map.fitBounds(bounds);
+
+    setMap(map)
+  }, [])
+
+  const onUnmount = React.useCallback(function callback(map) {
+    setMap(null)
+  }, [])
   return (
     <div className='mt-n1' >
-    {/* <GoogleMapReact
-      bootstrapURLKeys={{ key: "" }}
-      defaultCenter={defaultProps.center}
-      defaultZoom={defaultProps.zoom}
-    >
-      <AnyReactComponent
-        lat={59.955413}
-        lng={30.337844}
-        text="My Marker"
-      />
-    </GoogleMapReact> */}
-    <a style={{padding:0}} target='_blank' href="https://www.google.com/maps/dir//Sindh+Employees+Social+Security+Institution,+W39W%2BQMW,+Block+6+Gulshan-e-Iqbal,+Karachi,+Karachi+City,+Sindh/@24.9195659,67.0555084,13z/data=!4m8!4m7!1m0!1m5!1m1!1s0x3eb338ccfc2b6aeb:0xa6ff509e9dcfbb8e!2m2!1d67.0967767!2d24.9194184?entry=ttu">
-    <img style={{height:140,width:"100%",objectFit:"cover",borderRadius:5,marginTop:-4}} src={map} alt="" srcset="" />
-    </a>
+   {
+     isLoaded ? (
+      <GoogleMap
+        mapContainerStyle={containerStyle}
+        center={center}
+        zoom={10}
+        onLoad={onLoad}
+        onUnmount={onUnmount}
+      >
+       <Marker position={center} />
+      </GoogleMap>
+  ) : <></>
+   }
   </div>)
 }
 

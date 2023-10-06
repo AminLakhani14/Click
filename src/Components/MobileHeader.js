@@ -158,7 +158,7 @@ function MobileHome(props) {
                   alt=""
                   onClick={props.toggleLanguage}
                   // style={{ marginLeft: "20px", marginRight: "20px" }}
-                  style={language == "ur" ?{height:"10px",width:"50px",marginLeft: "20px", marginRight: "20px"}:{marginLeft: "20px", marginRight: "20px"}}
+                  style={language == "ur" ?{height:"20px",width:"50px",marginLeft: "20px", marginRight: "20px",marginTop:5}:{marginLeft: "20px", marginRight: "20px"}}
                 />
                 <img
                   className="headerLogoImages"
@@ -167,7 +167,7 @@ function MobileHome(props) {
                   alt=""
                   onClick={props.SindhitoggleLanguage}
                   // style={{ marginLeft: "20px", marginRight: "20px" }}
-                  style={language == "sd" ?{height:"10px",width:"50px",marginLeft: "20px", marginRight: "20px"}:{marginLeft: "20px", marginRight: "20px"}}
+                  style={language == "sd" ?{height:"20px",width:"50px",marginLeft: "20px", marginRight: "20px",marginTop:5}:{marginLeft: "20px", marginRight: "20px"}}
                 />
               <a href="comingsoon.html" title="" width="10">
                 <i className="fa-sharp fa-solid fa-magnifying-glass"></i>
@@ -238,9 +238,159 @@ function MobileHome(props) {
                               : { borderBottom: "1px solid transparent !important" }
                           }
                         >
-                          <Link className="link toggle2" to={"/regulatorycatalog"}>
+                          {/* <Link className="link toggle2" to={"/regulatorycatalog"}>
                           {translations["InteractiveRegularity"][language]}
-                          </Link>
+                          </Link> */}
+                          <li style={
+                            language === "ur" || language === "sd"
+                              ? {
+                                textAlign:"right",
+                              }
+                              : { }
+                          } className="">
+                          <label for="drop-2" className="d-flex toggle toggle2 highlightable"
+                          style={
+                            language === "ur" || language === "sd"
+                              ? {
+                                display: "flex",
+                                flexDirection: "row-reverse",
+                              }
+                              : { }
+                          }
+                          >
+                            <Link to={""} 
+                            style={{ width: "212px", padding: "0px", fontSize: "20px" }}>
+                               {translations["InteractiveRegularity"][language]}
+                            </Link>
+                            {dropdownStates[11] ? (
+                              <span
+                              className="minus"
+                                style={
+                                  language === "ur" || language === "sd"
+                                    ? {
+                                      display: "flex",
+                                      marginLeft: "-70px",
+                                    }
+                                    : { display: "contents" }
+                                }
+                                onClick={() => handleIconClick(11)} // Click on icon to open/close the dropdown
+                                onMouseEnter={() => handleIconClick(11)} // Hover on icon to open/close the dropdown
+                                onMouseLeave={() => closeDropdown(11)} // Leave ico icon to close the dropdown
+                              ></span>
+                            ) : (
+                              <span
+                                className="plus"
+                                style={
+                                  language === "ur" || language === "sd"
+                                    ? {
+                                      display: "flex",
+                                      marginLeft: "-70px",
+                                    }
+                                    : { display: "contents" }
+                                }
+                                onClick={() => handleIconClick(11)} // Click on icon to open/close the dropdown
+                                onMouseEnter={() => handleIconClick(11)} // Hover on icon to open/close the dropdown
+                                onMouseLeave={() => closeDropdown(11)} // Leave ico icon eave icon to close the dropdown
+                              ></span>
+                            )}
+                          </label>
+                          <input type="checkbox" id="drop-2" />
+                          <ul>
+                            <li className="borderline"
+                            style={
+                              language === "ur" || language === "sd"
+                                ? {
+                                  textAlign: "right"
+                                }
+                                : {}
+                            }
+                            >
+                              <Link 
+                              style={
+                                language === "ur" || language === "sd"
+                                  ? {
+                                    display: "flex",
+                                    flexDirection: "row-reverse",
+                                    textAlign: "right"
+                                  }
+                                  : {}
+                              }
+                              className="link toggle2 mobilenesteddropdowntoggle2" to={"/RegulatoryCatalogCalculator"}>
+                               {translations["calculatorButton"][language]}
+                              </Link>
+                            </li>
+
+                            <li className="borderline"
+                            style={
+                              language === "ur" || language === "sd"
+                                ? {
+                                  textAlign: "right"
+                                }
+                                : {}
+                            }
+                            >
+                              <Link 
+                              style={
+                                language === "ur" || language === "sd"
+                                  ? {
+                                    display: "flex",
+                                    flexDirection: "row-reverse",
+                                    textAlign: "right"
+                                  }
+                                  : {}
+                              }
+                              className="link toggle2 mobilenesteddropdowntoggle2" to={"/regulatorycatalog"}>
+                                   {translations["RegulatoryCatalog"][language]}
+                              </Link>
+                            </li> 
+                            <li className="borderline"
+                            style={
+                              language === "ur" || language === "sd"
+                                ? {
+                                  textAlign: "right"
+                                }
+                                : {}
+                            }
+                            >
+                              <Link 
+                              style={
+                                language === "ur" || language === "sd"
+                                  ? {
+                                    display: "flex",
+                                    flexDirection: "row-reverse",
+                                    textAlign: "right"
+                                  }
+                                  : {}
+                              }
+                              className="link toggle2 mobilenesteddropdowntoggle2" to={"/Maps"}>
+                               {translations["Maps"][language]}
+                              </Link>
+                            </li>
+                            <li className="borderline"
+                            style={
+                              language === "ur" || language === "sd"
+                                ? {
+                                  textAlign: "right"
+                                }
+                                : {}
+                            }
+                            >
+                              <Link 
+                              style={
+                                language === "ur" || language === "sd"
+                                  ? {
+                                    display: "flex",
+                                    flexDirection: "row-reverse",
+                                    textAlign: "right"
+                                  }
+                                  : {}
+                              }
+                              className="link toggle2 mobilenesteddropdowntoggle2" to={"/Dashboard"}>
+                                {translations["statistics"][language]}
+                              </Link>
+                            </li>
+                          </ul>
+                        </li>
                         </li>
                         {/* <li style={
                             language === "ur" || language === "sd"
@@ -248,7 +398,7 @@ function MobileHome(props) {
                                 textAlign:"right",
                               }
                               : { }
-                          }>
+                                }>
                           <label
                             htmlFor="drop-5"
                             className={`d-flex toggle toggle2 highlightable`}

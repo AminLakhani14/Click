@@ -199,7 +199,7 @@ console.log(newValue)
     <div>
       <a
         style={{ textDecoration: "none", color: "white" }}
-        href="https://www.google.com/maps/dir//Energy+Department+Government+of+Sindh%D8%8C+3rd+Floor,+Statelife+Building+No.3%D8%8C+Dr.+Opposite+CM+House%D8%8C+Doctor+Ziauddin+Ahmed+Road,+Kashmir+Mujahid+Colony,+Karachi,+Karachi+City,+Sindh,+Pakistan%E2%80%AD%E2%80%AD/@24.84464,66.9859153,13z/data=!3m1!4b1!4m8!4m7!1m0!1m5!1m1!1s0x3eb33ddfe14570af:0x328ab8ab9d6fcde9!2m2!1d67.0271153!2d24.8445678?entry=ttu"
+        href="https://www.google.com/maps/dir//School+Education+Department,+Secretary+School+Education,+Building+No.2,+Sindh+Secretariat,+Seecretary+School+Education+and+Literacy+Deprartment,+Pakistan/@24.9103116,66.9706695,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x3eb33fcd040fedb3:0x385765b971e1e193!2m2!1d67.0188214!2d24.8553695?entry=ttu"
         target="_blank"
       >
         School Education Department
@@ -235,7 +235,7 @@ console.log(newValue)
     <div>
       <a
         style={{ textDecoration: "none", color: "white" }}
-        href="https://www.google.com/maps/dir//2nd+Floor+building+%23+6+,Sharah+e+Kamal+Ata+turk,+Sindh+Secretariat+,+Karachi/@24.8445621,66.9858298,13z?entry=ttu"
+        href="https://www.google.com/maps/dir//College+Education+Department+Sindh,+3rd+Floor,+Building+No.+6,+Sindh+Secretariat,+Karachi+City,+Sindh/@24.8607343,67.0011364,15z/data=!4m17!1m7!3m6!1s0x3eb33fdd10bb1ea9:0x158a6fe8ced1af8c!2sCollege+Education+Department+Sindh!8m2!3d24.8607343!4d67.0011364!16s%2Fg%2F11h7fthx64!4m8!1m0!1m5!1m1!1s0x3eb33fdd10bb1ea9:0x158a6fe8ced1af8c!2m2!1d67.0011364!2d24.8607343!3e2?entry=ttu"
         target="_blank"
       >
         College Department
@@ -391,7 +391,7 @@ console.log(newValue)
     <div>
       <a
         style={{ textDecoration: "none", color: "white" }}
-        href="https://www.google.com/maps/dir//Directorate+General+of+Labour,+Govt.+of+Sindh,+V24C%2B2RR,+Unnamed+Road,+Saddar+Karachi,+Karachi+City,+Sindh,+Pakistan/@24.8551864,66.9808289,13z/data=!4m8!4m7!1m0!1m5!1m1!1s0x3eb33faa29cf804f:0xc27b35b3f183ec5f!2m2!1d67.0219736!2d24.8552022?entry=ttu"
+        href="https://www.google.com/maps/dir//G-2,+Labour+Department+Govternment+of+Sindh,+Dr+Ziauddin+Ahmed+Rd,+Civil+Lines+Kashmir+Mujahid+Colony,+Karachi,+Karachi+City,+Sindh,+Pakistan/@24.8445189,67.0244326,17z/data=!4m17!1m7!3m6!1s0x3eb33d0c71359303:0xe09b193e2f7f7f81!2sLabour+Department+Govternment+of+Sindh!8m2!3d24.8445141!4d67.0270075!16s%2Fg%2F11pfbn284r!4m8!1m0!1m5!1m1!1s0x3eb33d0c71359303:0xe09b193e2f7f7f81!2m2!1d67.0270075!2d24.8445141!3e2?entry=ttu"
         target="_blank"
       >
         Labour Department
@@ -439,7 +439,7 @@ console.log(newValue)
     <div>
       <a
         style={{ textDecoration: "none", color: "white" }}
-        href="https://www.google.com/maps/dir//Bahria+Complex+4,+R2FV%2BQG5,+Bahria+Complex+IV+Ext+Block,+Chaudry+Khaliquzzaman+Road%D8%8C,+Gizri+Rd,+Navy+Housing+Society,+Karachi,+Karachi+City,+Sindh+75600,+Pakistan%E2%80%AD%E2%80%AD/@24.8244622,67.0026645,13z/data=!3m1!4b1!4m8!4m7!1m0!1m5!1m1!1s0x3eb33db483dd077d:0xff031019ff1b80ce!2m2!1d67.0438645!2d24.8243899?entry=ttu"
+        href="https://www.google.com/maps/dir//Sindh+Economic+Zones+Management+Company,+2nd+Floor,+Bahria+Complex,+4+Khaliq-uz-Zaman+Rd,+Navy+Housing+Society,+Karachi,+Karachi+City,+Sindh+75600/@24.8242935,67.0438188,15z/data=!3m1!5s0x3eb33db483eff6c1:0x89c6a043a65c2549!4m17!1m7!3m6!1s0x3eb33d416f09ebc5:0x7b8637176395f22d!2sSindh+Economic+Zones+Management+Company!8m2!3d24.8242935!4d67.0438188!16s%2Fg%2F11ph6k221w!4m8!1m0!1m5!1m1!1s0x3eb33d416f09ebc5:0x7b8637176395f22d!2m2!1d67.0438188!2d24.8242935!3e2?entry=ttu"
         target="_blank"
       >
         SEZMC
@@ -451,7 +451,7 @@ console.log(newValue)
     <div>
       <a
         style={{ textDecoration: "none", color: "white" }}
-        href="https://www.google.com/maps/dir//1st+Floor,+Block+B,+FTC+Building,+Sharah-e-Faisal+Karachi+Cantonment,+Karachi,+Sindh/@24.8591698,67.0161417,13z/data=!3m1!4b1?entry=ttu"
+        href="https://www.google.com/maps/dir//Sindh+Enterprise+Development+Fund%DB%94+%D8%B3%D9%86%D8%AF%DA%BE+%D8%A7%D9%86%D9%B9%D8%B1%D9%BE%D8%B1%D8%A7%D8%A6%D8%B2+%DA%88%DB%8C%D9%88%DB%8C%D9%84%D9%BE%D9%85%D9%86%D9%B9+%D9%81%D9%86%DA%88%D8%8C+1st+Floor%D8%8C+Block+B%D8%8C+FTC+Building,+Sharah-e%D8%8C+Faisal,+Karachi+Cantonment,+Karachi,+Karachi+City,+Sindh%E2%80%AD/@24.8579708,67.0521455,15z/data=!3m1!5s0x3eb33e81570b5473:0xf6a34181a51c826a!4m17!1m7!3m6!1s0x3eb33e815914edc7:0x31f9936c3ca37baa!2zU2luZGggRW50ZXJwcmlzZSBEZXZlbG9wbWVudCBGdW5k25Qg2LPZhtiv2r4g2KfZhtm52LHZvtix2KfYptiyINqI24zZiNuM2YTZvtmF2YbZuSDZgdmG2og!8m2!3d24.8579708!4d67.0521455!16s%2Fg%2F11gdsnrmp3!4m8!1m0!1m5!1m1!1s0x3eb33e815914edc7:0x31f9936c3ca37baa!2m2!1d67.0521455!2d24.8579708!3e2?entry=ttu"
         target="_blank"
       >
         SEDF

@@ -119,6 +119,11 @@ export const translations = {
     ur: ' رولز اور قانون کا تلاشی ریکارڈ',
     sd: 'ريگوليٽري ڪيٽيلاگ',
   },
+  'statistics':{
+    en: 'statistics',
+    ur: 'اعداد و شمار',
+    sd: 'شماريات', 
+  },
   'Aboutus': {
     en: 'About us',
     ur: 'ہمارے بارے میں',
