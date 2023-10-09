@@ -20,7 +20,9 @@ import IndustrieAndCommerce from "../assets/Documents/IndustrieAndCommerce.PNG"
 import SindhEnviromentalProtection from "../assets/Documents/SindhEnviromentalProtection.PNG"
 import HealthCareTable from "../assets/Documents/HealthCareTable.PNG"
 import MobileHeaderGeneric from "./MobileHeaderGeneric";
+//////////////////////////
 
+import collegeDepartmentMaps from "../assets/mapS.S/collegeDepartment.png"
 const arr = [
 
     {
@@ -50,7 +52,9 @@ const arr = [
       l10:"▪ Record of 10 % free ship student list, with name, father Name, contact no. & address of students as Affidavit on stamp paper of PKR 50 or 100 (with  03 copies);",
       l11:"▪ Board of Governors",
       l12:"▪ Income and Expenditure;",
-      table:""
+      table:"",
+      map:{collegeDepartmentMaps},
+      location:"https://www.google.com/maps/dir//College+Education+Department+Sindh,+3rd+Floor,+Building+No.+6,+Sindh+Secretariat,+Karachi+City,+Sindh/@24.8607343,67.0011364,15z/data=!4m17!1m7!3m6!1s0x3eb33fdd10bb1ea9:0x158a6fe8ced1af8c!2sCollege+Education+Department+Sindh!8m2!3d24.8607343!4d67.0011364!16s%2Fg%2F11h7fthx64!4m8!1m0!1m5!1m1!1s0x3eb33fdd10bb1ea9:0x158a6fe8ced1af8c!2m2!1d67.0011364!2d24.8607343!3e2?entry=ttu"
     },
     {
       sNo: 3,

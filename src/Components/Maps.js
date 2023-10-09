@@ -199,7 +199,7 @@ console.log(newValue)
     <div>
       <a
         style={{ textDecoration: "none", color: "white" }}
-        href="https://www.google.com/maps/dir//School+Education+Department,+Secretary+School+Education,+Building+No.2,+Sindh+Secretariat,+Seecretary+School+Education+and+Literacy+Deprartment,+Pakistan/@24.9103116,66.9706695,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x3eb33fcd040fedb3:0x385765b971e1e193!2m2!1d67.0188214!2d24.8553695?entry=ttu"
+        href="https://www.google.com/maps/dir//Building+No.2,+Sindh+Secretariat,+Seecretary+School+Education+and+Literacy+Deprartment/@24.8553469,66.9364199,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x3eb33fcd040fedb3:0x385765b971e1e193!2m2!1d67.0188214!2d24.8553695?entry=ttu"
         target="_blank"
       >
         School Education Department
@@ -307,7 +307,7 @@ console.log(newValue)
     <div>
       <a
         style={{ textDecoration: "none", color: "white" }}
-        href="https://www.google.com/maps/dir//ST-4,+Revenue+House,+Adjacent+Dr.+Ziauddin+Hospital+Clifton+Block-6,+Karachi/@24.8586379,67.0116361,13z?entry=ttu"
+        href="https://www.google.com/maps/dir//Board+of+Revenue+Government+of+Sindh,+Revenue+House%D8%8C+Street+4,+Block+6+Clifton,+Karachi,+Karachi+City,+Sindh+75400,+Pakistan%E2%80%AD/@24.8237707,66.9603356,13z/data=!4m8!4m7!1m0!1m5!1m1!1s0x3eb33d8e61b350bf:0xffe390e263a1ef4!2m2!1d67.0079814!2d24.8171377?entry=ttu"
         target="_blank"
       >
         Board of Revenue Sindh
@@ -343,7 +343,7 @@ console.log(newValue)
     <div>
       <a
         style={{ textDecoration: "none", color: "white" }}
-        href="https://www.google.com/maps/dir//Sindh+Secretariat+No.+2,+Tughluq+House,+Burns+Road,+Karachi,+Karachi+City,+Sindh,+Pakistan/@24.8556653,66.9779925,13z/data=!4m8!4m7!1m0!1m5!1m1!1s0x3eb33e0c5a400001:0x8531525f31e41b11!2m2!1d67.0191925!2d24.8555931?entry=ttu"
+        href="https://www.google.com/maps/place/Planning+%26+Development+Board+P%26D/@24.8551845,67.0187683,15z/data=!4m6!3m5!1s0x3eb33e0c45093a7f:0x246f39c9901615e0!8m2!3d24.8551845!4d67.0187683!16s%2Fg%2F11fxxzx34h?entry=ttu"
         target="_blank"
       >
         P&D
@@ -379,7 +379,7 @@ console.log(newValue)
     <div>
       <a
         style={{ textDecoration: "none", color: "white" }}
-        href="https://www.google.com/maps/dir//Sindh+Tourism+Development+Corporation+(STDC),+Suit+%23+114-115,+1st+Floor,+Sea+Breeze+Plaza,+Shahrah-e-Faisal+Rd,+Karachi+Cantonment+Fowler+Lines,+Karachi,+Karachi+City,+Sindh+74000/@24.857557,67.0028854,13z/data=!3m1!5s0x3eb33e7e791abe2f:0xf705b8ede00e5368!4m8!4m7!1m0!1m5!1m1!1s0x3eb33e7e785aaaab:0xf0ba85c8f8d49cc8!2m2!1d67.0440854!2d24.8574848?entry=ttu"
+        href="https://www.google.com/maps/place/Sindh+Local+Government+Board/@24.8552247,67.0188027,15z/data=!4m6!3m5!1s0x3eb33f6ed1e753ed:0x76878ff665c09417!8m2!3d24.8552247!4d67.0188027!16s%2Fg%2F11t7ckmdjn?entry=ttu"
         target="_blank"
       >
         Local Government Department
@@ -463,7 +463,7 @@ console.log(newValue)
     <div>
       <a
         style={{ textDecoration: "none", color: "white" }}
-        href="https://www.google.com/maps/dir//1st+Floor+Block+B,+FTC+Building+Shahra-e-Faisal,+Karachi/@24.8587158,67.0117216,13z/data=!3m1!4b1?entry=ttu"
+        href="https://www.google.com/maps/place/EDUCATION+CITY/@24.970613,67.362756,18z/data=!4m14!1m7!3m6!1s0x3eb3359169a8701d:0x23e87d599d29ae75!2sEDUCATION+CITY!8m2!3d24.9704911!4d67.3627396!16s%2Fg%2F11mx8d21cy!3m5!1s0x3eb3359169a8701d:0x23e87d599d29ae75!8m2!3d24.9704911!4d67.3627396!16s%2Fg%2F11mx8d21cy?hl=en&entry=ttu"
         target="_blank"
       >
         EDUCATION CITY

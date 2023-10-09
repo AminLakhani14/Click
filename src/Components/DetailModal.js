@@ -10,11 +10,12 @@ import { ThemeProvider } from '@mui/material/styles';
 import "../Css/resource.css";
 import { useEffect } from "react";
 import Map from "./Map";
-// import logo from "../assets/collegeDepartment.PNG"
+import logo from "../assets/Agriculture.png"
 
 
 
 const DetailModal = (props) => {
+  debugger
   const theme = createTheme({
     overrides: {
       MuiInput: {
@@ -209,6 +210,7 @@ const DetailModal = (props) => {
                           href={`https://www.google.com/maps/place/${encodeURIComponent(props?.licenceData?.address)}`}
                           target="_blank"
                           rel="noopener noreferrer"
+                          className="px-2 ms-1"
                         >
                           <TextField
                             label="Address"
@@ -230,14 +232,19 @@ const DetailModal = (props) => {
                           />
                            </a>
                       </div>
-                      <div className="row g-0">
-                      <Map/>
-                      </div>
+                      {props?.licenceData?.map?.collegeDepartmentMaps &&
+                        <div className="row g-0 ">
+                        <a href={props?.licenceData?.location} target="_blank" className="p-0">
+                        <img src={props?.licenceData?.map?.collegeDepartmentMaps} alt="" style={{height:140,width:"100%",borderRadius:5,marginTop:-3,objectFit:"cover"}}/>
+                        </a>
+                         </div>
+                      }
+                    
 
 
-                      <div class="input-group d-flex justify-content-end">
+                      {/* <div class="input-group d-flex justify-content-end">
 
-                      </div>
+                      </div> */}
                     </div>
                   </div>
                 </div>

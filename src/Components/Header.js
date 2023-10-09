@@ -507,7 +507,7 @@ const {language} = useSelector((state)=>state.language)
 
   return (
     <>
-      <div className="container-fluid" style={{ overflowX: "hidden" }}>
+      <div className="container-fluid" style={{ overflowX: "hidden", }}>
         <video autoPlay loop muted>
           <source src={design} type="video/mp4" />
           Your Browser Does Not Support The Video Tag.
@@ -1929,10 +1929,10 @@ const {language} = useSelector((state)=>state.language)
                               </Link>
                             </div>
                           </div> */}
-                     
-                          <Link className={""} to={"/RegulatoryCatalogCalculator"}>
+                       <Link className="" to={"/Maps"}>
                             <a
-                              href="#"
+                              target="_blank"
+                              href=""
                               style={
                                 language === "ur" ||
                                   language === "sd"
@@ -1944,9 +1944,10 @@ const {language} = useSelector((state)=>state.language)
                                   : {}
                               }
                             >
-                              {translations["calculatorButton"][language]}
+                              {translations["Maps"][language]}
                             </a>
                           </Link>
+                         
                           <Link className={""} to={"/regulatorycatalog"}>
                             <a
                               href="#"
@@ -1964,10 +1965,9 @@ const {language} = useSelector((state)=>state.language)
                               {translations["RegulatoryCatalog"][language]}
                             </a>
                           </Link>
-                          <Link className="" to={"/Maps"}>
+                          <Link className={""} to={"/RegulatoryCatalogCalculator"}>
                             <a
-                              target="_blank"
-                              href=""
+                              href="#"
                               style={
                                 language === "ur" ||
                                   language === "sd"
@@ -1979,7 +1979,7 @@ const {language} = useSelector((state)=>state.language)
                                   : {}
                               }
                             >
-                              {translations["Maps"][language]}
+                              {translations["calculatorButton"][language]}
                             </a>
                           </Link>
                           <Link className="" to={"/Dashboard"}>
@@ -2100,24 +2100,7 @@ const {language} = useSelector((state)=>state.language)
                               }
                           }
                         >
-                          <Link className="" to={""}>
-                            <a
-                              target="_blank"
-                              href=""
-                              style={
-                                language === "ur" ||
-                                  language === "sd"
-                                  ? {
-                                    display: "flex",
-                                    flexDirection: "row-reverse",
-                                    marginRight: "-16px",
-                                  }
-                                  : {}
-                              }
-                            >
-                              {translations["Introduction"][language]}
-                            </a>
-                          </Link>
+                     
                           {/* <div
                             class="nested-dropdown"
                             style={{ width: "100%" }}
@@ -2216,6 +2199,7 @@ const {language} = useSelector((state)=>state.language)
                             </div>
                           </div> */}
                      
+                         
                           <Link className={""} to={""}>
                             <a
                               href="#"
@@ -2226,11 +2210,12 @@ const {language} = useSelector((state)=>state.language)
                                     display: "flex",
                                     flexDirection: "row-reverse",
                                     marginRight: "-16px",
+
                                   }
                                   : {}
                               }
                             >
-                              {translations["projectobjectives"][language]}
+                              {translations["Achievements"][language]}
                             </a>
                           </Link>
                           <Link className={""} to={""}>
@@ -2247,7 +2232,7 @@ const {language} = useSelector((state)=>state.language)
                                   : {}
                               }
                             >
-                              {translations["Achievements"][language]}
+                              {translations["Contactus"][language]}
                             </a>
                           </Link>
                           <Link className={""} to={"/resource"}>
@@ -2267,9 +2252,12 @@ const {language} = useSelector((state)=>state.language)
                               {translations["Downloads"][language]}
                             </a>
                           </Link>
-                          <Link className={""} to={"/Team"}>
+                      
+                      
+                          <Link className="" to={""}>
                             <a
-                              href="#"
+                              target="_blank"
+                              href=""
                               style={
                                 language === "ur" ||
                                   language === "sd"
@@ -2281,7 +2269,7 @@ const {language} = useSelector((state)=>state.language)
                                   : {}
                               }
                             >
-                              {translations["Team"][language]}
+                              {translations["Introduction"][language]}
                             </a>
                           </Link>
                           <Link className={""} to={""}>
@@ -2298,7 +2286,24 @@ const {language} = useSelector((state)=>state.language)
                                   : {}
                               }
                             >
-                              {translations["Contactus"][language]}
+                              {translations["projectobjectives"][language]}
+                            </a>
+                          </Link>
+                          <Link className={""} to={"/Team"}>
+                            <a
+                              href="#"
+                              style={
+                                language === "ur" ||
+                                  language === "sd"
+                                  ? {
+                                    display: "flex",
+                                    flexDirection: "row-reverse",
+                                    marginRight: "-16px",
+                                  }
+                                  : {}
+                              }
+                            >
+                              {translations["Team"][language]}
                             </a>
                           </Link>
                         </div>

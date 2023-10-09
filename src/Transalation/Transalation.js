@@ -136,7 +136,7 @@ export const translations = {
   sd: 'تعارف',
 },
 'projectobjectives':{
-  en: 'project objectives',
+  en: 'Project Objectives',
   ur:"منصوبے کے مقاصد",
   sd: 'پروجيڪٽ جا مقصد'
 },

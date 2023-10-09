@@ -20,6 +20,9 @@ import ss5 from "../assets/ScreenShot/s.s5.png"
 import ss6 from "../assets/ScreenShot/s.s6.png"
 import ss7 from "../assets/ScreenShot/s.s7.png"
 import ss8 from "../assets/ScreenShot/s.s8.png"
+import ss9 from "../assets/ScreenShot/s.s9.png"
+import ss10 from "../assets/ScreenShot/s.s10.png"
+import ss11 from "../assets/ScreenShot/s.s11.png"
 
 import pdf1 from "../assets/DownloadDocument/Final_PRMI_Book_2_New.pdf"
 import pdf2 from "../assets/DownloadDocument/Final_PRMI_Book_1.pdf"
@@ -29,6 +32,9 @@ import pdf5 from "../assets/DownloadDocument/pa-03-availing-of-the-net-metering-
 import pdf6 from "../assets/DownloadDocument/DRAP-Reforms-Evaluation-Final.pdf"
 import pdf7 from "../assets/DownloadDocument/Minimum-Consensus-on-Key-Economic-Reforms.pdf"
 import pdf8 from "../assets/DownloadDocument/Recommendations-on-National-Program-for-Digital-Transformation.pdf"
+import pdf9 from "../assets/DownloadDocument/WEF_TheGlobalCompetitivenessReport2020.pdf"
+import pdf10 from "../assets/DownloadDocument/FACT-SHEET---NHDR.pdf"
+import pdf11 from "../assets/DownloadDocument/PAK.pdf"
 import MobileHeaderGeneric from "./MobileHeaderGeneric";
 export default function Resource() {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
@@ -87,6 +93,23 @@ export default function Resource() {
       screenShot:ss8,
       titlte:"Recommendations on National Program for Digital Transformations",
       pdf:pdf8
+    }
+    ,
+    {
+      screenShot:ss9,
+      titlte:"The Global Competitiveness Report",
+      pdf:pdf9
+    }
+    ,
+    {
+      screenShot:ss10,
+      titlte:"Pakistan National Human Development Report",
+      pdf:pdf10
+    }   ,
+    {
+      screenShot:ss11,
+      titlte:"Ease of Doing Business",
+      pdf:pdf11
     }
   ]
   return (

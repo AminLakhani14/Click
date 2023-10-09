@@ -10,7 +10,7 @@ import AboutUsImg from "../assets/city.png";
 import MobileHeaderGeneric from "./MobileHeaderGeneric";
 import RegulatoryCatalogCalculatorGrid from "./Grid/RegulatoryCatalogCalculatorGrid";
 // import { Button } from "bootstrap";
-const Drop2Data = (value) => {
+export const Drop2Data = (value) => {
   let array = [];
   let label = "";
   switch (value) {
@@ -718,7 +718,7 @@ const getDropdown2Object = (arr, id) => {
   const selectedOption = Drop2Data(arr)?.array.find((val) => val.value === id);
   return selectedOption;
 };
-const Dropdown = (props) => {
+export const Dropdown = (props) => {
   const [selectedValue, setSelectedValue] = React.useState("");
   const [changeValue, setChangeValue] = useState([
     {
@@ -775,7 +775,7 @@ const Dropdown = (props) => {
     </FormControl>
   );
 };
-const Dropdown1 = (props) => {
+export const Dropdown1 = (props) => {
   const [selectedValue, setSelectedValue] = React.useState("");
   const handleChange = (event) => {
     debugger;
@@ -816,6 +816,7 @@ const Dropdown1 = (props) => {
   );
 };
 export default function RegulatoryCatalogCalculator(props) {
+  debugger
   const [isSticky, setIsSticky] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);

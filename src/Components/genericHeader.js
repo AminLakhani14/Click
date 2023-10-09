@@ -727,17 +727,19 @@ export default function GenericHeader(props) {
                     class=" dropbtn hover-rotate fa fa-chevron-right"
                   ></i>
                   <div class="dropdown-content">
+                  <Link className={""} to={"/Maps"}>
+                      <a href="#"> Maps  </a>
+                    </Link>
+                    <Link className={""} to={"/regulatorycatalog"}>
+                      <a href="#">Regulatory Catalog </a>
+                    </Link>
                     <Link className={""} to={"/RegulatoryCatalogCalculator"}>
                       <a target="_blank" href="">
                       Regulatory Cost Calculator
                       </a>
                     </Link>
-                    <Link className={""} to={"/regulatorycatalog"}>
-                      <a href="#">Regulatory Catalog </a>
-                    </Link>
-                    <Link className={""} to={"/Maps"}>
-                      <a href="#"> Maps  </a>
-                    </Link>
+                
+               
                     <Link className={""} to={"/Dashboard"}>
                       <a href="#">Sindh Statistics</a>
                     </Link>
@@ -758,26 +760,29 @@ export default function GenericHeader(props) {
                     class=" dropbtn hover-rotate fa fa-chevron-right"
                   ></i>
                   <div class="dropdown-content">
-                    <Link className={""} to={""}>
-                      <a target="_blank" href="">
-                       Intrduction
-                      </a>
-                    </Link>
-                    <Link className={""} to={""}>
-                      <a href="#"> project objectives </a>
-                    </Link>
-                    <Link className={""} to={""}>
+                  <Link className={""} to={""}>
                       <a href="#"> Achievements  </a>
-                    </Link>
-                    <Link className={""} to={"/resource"}>
-                      <a href="#"> Downloads</a>
-                    </Link>
-                    <Link className={""} to={"/Team"}>
-                      <a href="#"> Team </a>
                     </Link>
                     <Link className={""} to={""}>
                       <a href="#"> Contact us</a>
                     </Link>
+                    
+                    <Link className={""} to={"/resource"}>
+                      <a href="#"> Downloads</a>
+                    </Link>
+                    <Link className={""} to={""}>
+                      <a target="_blank" href="">
+                       Introduction
+                      </a>
+                    </Link>
+                    <Link className={""} to={""}>
+                      <a href="#"> Project Objectives </a>
+                    </Link>
+                  
+                    <Link className={""} to={"/Team"}>
+                      <a href="#"> Team </a>
+                    </Link>
+                    
                   </div>
                 </div>
               </li>

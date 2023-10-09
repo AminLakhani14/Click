@@ -10,6 +10,7 @@ import chatbotIcon from "./assets/chatbotIcon.svg";
 import chatgpt from "./assets/chatgpt.svg"
 import VirtualAssistant from "./assets/VirtualAssistant.png"
 import { Tooltip } from "antd";
+import rishta from "./assets/rishta.svg"
 
 const arr=[  "By investing in Sindh, you will be part of a global hub with strong connections to major markets and a knowledge-based economy that is opening to the world.","Sindh is constantly expanding opportunities for international companies.","Our Contact Number is: +92 21 99218874","How can I help you?","I am sorry, but I could not understand your question."]
 const arr1=[
@@ -346,17 +347,17 @@ const Chatbot = () => {
       >
         <div className="chatbot-toggle-button" onClick={toggleChatbot}>
           <SVG
-            src={chatbotIcon}
+            src={rishta}
             className="heart"
-            height={65}
-            width={65}
+            height={55}
+            width={55}
             style={{
               position: "absolute",
             }}
             fill={"#0f5789"}
             title="React"
           />
-         {/* <img className="heart" src={VirtualAssistant} alt="" /> */}
+         {/* <img className="heart" src={rishta} alt="" /> */}
         </div>
       </Tooltip>
     </div>
