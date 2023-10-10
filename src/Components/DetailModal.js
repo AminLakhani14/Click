@@ -232,10 +232,10 @@ const DetailModal = (props) => {
                           />
                            </a>
                       </div>
-                      {props?.licenceData?.map?.collegeDepartmentMaps &&
+                      {props?.licenceData?.map &&
                         <div className="row g-0 ">
                         <a href={props?.licenceData?.location} target="_blank" className="p-0">
-                        <img src={props?.licenceData?.map?.collegeDepartmentMaps} alt="" style={{height:140,width:"100%",borderRadius:5,marginTop:-3,objectFit:"cover"}}/>
+                        <img src={props?.licenceData?.map} alt="" style={{height:140,width:"100%",borderRadius:5,marginTop:-3,objectFit:"cover"}}/>
                         </a>
                          </div>
                       }

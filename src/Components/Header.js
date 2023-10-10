@@ -2198,62 +2198,6 @@ const {language} = useSelector((state)=>state.language)
                               </Link>
                             </div>
                           </div> */}
-                     
-                         
-                          <Link className={""} to={""}>
-                            <a
-                              href="#"
-                              style={
-                                language === "ur" ||
-                                  language === "sd"
-                                  ? {
-                                    display: "flex",
-                                    flexDirection: "row-reverse",
-                                    marginRight: "-16px",
-
-                                  }
-                                  : {}
-                              }
-                            >
-                              {translations["Achievements"][language]}
-                            </a>
-                          </Link>
-                          <Link className={""} to={""}>
-                            <a
-                              href="#"
-                              style={
-                                language === "ur" ||
-                                  language === "sd"
-                                  ? {
-                                    display: "flex",
-                                    flexDirection: "row-reverse",
-                                    marginRight: "-16px",
-                                  }
-                                  : {}
-                              }
-                            >
-                              {translations["Contactus"][language]}
-                            </a>
-                          </Link>
-                          <Link className={""} to={"/resource"}>
-                            <a
-                              href="#"
-                              style={
-                                language === "ur" ||
-                                  language === "sd"
-                                  ? {
-                                    display: "flex",
-                                    flexDirection: "row-reverse",
-                                    marginRight: "-16px",
-                                  }
-                                  : {}
-                              }
-                            >
-                              {translations["Downloads"][language]}
-                            </a>
-                          </Link>
-                      
-                      
                           <Link className="" to={""}>
                             <a
                               target="_blank"
@@ -2289,6 +2233,24 @@ const {language} = useSelector((state)=>state.language)
                               {translations["projectobjectives"][language]}
                             </a>
                           </Link>
+                          <Link className={""} to={""}>
+                            <a
+                              href="#"
+                              style={
+                                language === "ur" ||
+                                  language === "sd"
+                                  ? {
+                                    display: "flex",
+                                    flexDirection: "row-reverse",
+                                    marginRight: "-16px",
+
+                                  }
+                                  : {}
+                              }
+                            >
+                              {translations["Achievements"][language]}
+                            </a>
+                          </Link>
                           <Link className={""} to={"/Team"}>
                             <a
                               href="#"
@@ -2304,6 +2266,40 @@ const {language} = useSelector((state)=>state.language)
                               }
                             >
                               {translations["Team"][language]}
+                            </a>
+                          </Link>
+                          <Link className={""} to={"/resource"}>
+                            <a
+                              href="#"
+                              style={
+                                language === "ur" ||
+                                  language === "sd"
+                                  ? {
+                                    display: "flex",
+                                    flexDirection: "row-reverse",
+                                    marginRight: "-16px",
+                                  }
+                                  : {}
+                              }
+                            >
+                              {translations["Downloads"][language]}
+                            </a>
+                          </Link>
+                          <Link className={""} to={""}>
+                            <a
+                              href="#"
+                              style={
+                                language === "ur" ||
+                                  language === "sd"
+                                  ? {
+                                    display: "flex",
+                                    flexDirection: "row-reverse",
+                                    marginRight: "-16px",
+                                  }
+                                  : {}
+                              }
+                            >
+                              {translations["Contactus"][language]}
                             </a>
                           </Link>
                         </div>

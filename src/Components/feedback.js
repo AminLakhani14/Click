@@ -752,7 +752,7 @@ export const Dropdown = (props) => {
 
   return (
     <Fade left>
-      <FormControl variant="outlined" size="small" className="dropdown-width ">
+      <FormControl variant="outlined" size="small" className="dropdown-width col-12" >
       {/* <InputLabel
         shrink={true}
         style={{
@@ -765,9 +765,10 @@ export const Dropdown = (props) => {
       >
         Departments
       </InputLabel> */}
-      <Select
+       <h4>Department</h4>
+       <Select
         onChange={handleChange}
-        style={{ }}
+        style={{ width: "96%",}}
         native
         id="my-select"
         value={props.val}
@@ -806,6 +807,7 @@ export const Dropdown1 = (props) => {
       onChange={handleChange}
       className="dropdown-width col-12 "
     >
+      <h4>License</h4>
       <Select
         native
         style={{ width: "96%",}}
@@ -1710,7 +1712,7 @@ export default function FeedBack() {
             </select>
           </div> */}
   </div>
-  <div className="row g-0 "    style={{width:"100%",marginBottom:20}}>
+  {/* <div className="row g-0 "    style={{width:"100%",marginBottom:20}}>
 <Fade left>
 <div className="col-md-6 " data-aos="fade-right">
     <h4>
@@ -1782,7 +1784,7 @@ export default function FeedBack() {
     </div>
   </Fade>
       
-    {/* <div className="col-md-6" >
+    <div className="col-md-6" >
     <h4>
     Moble Number
     </h4>
@@ -1791,8 +1793,8 @@ export default function FeedBack() {
       placeholder="Enter Your Mobile Number"
       style={{width:"96%",}}
   />
-    </div> */}
-  </div>
+    </div>
+  </div> */}
   <div className="row g-0 "    style={{width:"100%",marginBottom:20,display:"flex",justifyContent:"space-between"}}>
          {arr1.map((val, ind) => {
                 return (
@@ -1800,7 +1802,7 @@ export default function FeedBack() {
                   <div
                     className="col-md-6"
                       style={{
-                       width:"48%"
+                      //  width:"48%"
                       }}
                     >
                       <Dropdown
@@ -1825,6 +1827,7 @@ export default function FeedBack() {
                     {arr1[ind] !== "SFA" && (
                       <>
                         {" "}
+                        
                      <Dropdown1
                           ind={ind}
                           arr={arr2}
@@ -1872,7 +1875,7 @@ export default function FeedBack() {
    <div className="col" >
     <TextArea
     rows={4}
-      placeholder="Enter Your Mobile Number"
+      placeholder="Enter Your Feedback"
       style={{
         width: windowWidth <=500? "100%":"98%",
         fontSize:18

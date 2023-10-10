@@ -760,16 +760,10 @@ export default function GenericHeader(props) {
                     class=" dropbtn hover-rotate fa fa-chevron-right"
                   ></i>
                   <div class="dropdown-content">
-                  <Link className={""} to={""}>
-                      <a href="#"> Achievements  </a>
-                    </Link>
-                    <Link className={""} to={""}>
-                      <a href="#"> Contact us</a>
-                    </Link>
+                
+                   
                     
-                    <Link className={""} to={"/resource"}>
-                      <a href="#"> Downloads</a>
-                    </Link>
+                    
                     <Link className={""} to={""}>
                       <a target="_blank" href="">
                        Introduction
@@ -778,9 +772,17 @@ export default function GenericHeader(props) {
                     <Link className={""} to={""}>
                       <a href="#"> Project Objectives </a>
                     </Link>
-                  
+                    <Link className={""} to={""}>
+                      <a href="#"> Achievements  </a>
+                    </Link>
                     <Link className={""} to={"/Team"}>
                       <a href="#"> Team </a>
+                    </Link>
+                    <Link className={""} to={"/resource"}>
+                      <a href="#"> Downloads</a>
+                    </Link>
+                    <Link className={""} to={""}>
+                      <a href="#"> Contact us</a>
                     </Link>
                     
                   </div>

@@ -23,6 +23,11 @@ import MobileHeaderGeneric from "./MobileHeaderGeneric";
 //////////////////////////
 
 import collegeDepartmentMaps from "../assets/mapS.S/collegeDepartment.png"
+import LabourDepartmentMaps from "../assets/mapS.S/LabourDepartment.png"
+import  SindhFoodAuthorityMaps from "../assets/mapS.S/SindhFoodAuthority.png"
+import SchoolEducationMaps from "../assets/mapS.S/SchoolEducation.png"
+import IndustrialDepartmentMaps from "../assets/mapS.S/IndustrialDepartment.png"
+import SindhEnvironmentProtectionMaps from "../assets/mapS.S/SindhEnviromentalprotection.png"
 const arr = [
 
     {
@@ -53,7 +58,7 @@ const arr = [
       l11:"▪ Board of Governors",
       l12:"▪ Income and Expenditure;",
       table:"",
-      map:{collegeDepartmentMaps},
+      map:collegeDepartmentMaps,
       location:"https://www.google.com/maps/dir//College+Education+Department+Sindh,+3rd+Floor,+Building+No.+6,+Sindh+Secretariat,+Karachi+City,+Sindh/@24.8607343,67.0011364,15z/data=!4m17!1m7!3m6!1s0x3eb33fdd10bb1ea9:0x158a6fe8ced1af8c!2sCollege+Education+Department+Sindh!8m2!3d24.8607343!4d67.0011364!16s%2Fg%2F11h7fthx64!4m8!1m0!1m5!1m1!1s0x3eb33fdd10bb1ea9:0x158a6fe8ced1af8c!2m2!1d67.0011364!2d24.8607343!3e2?entry=ttu"
     },
     {
@@ -82,7 +87,9 @@ const arr = [
       l4:"▪ Full name of the manager, if any (including father's name); ",
       l5:"▪ Category of the establishment, i.e., whether a shop, industrial establishment, commercial establishment, residential hotel, restaurant, eating house,theatre or other place of public amusement or entertainment;",
       l6:"▪ Total number of employees (state separately the number of men, women and/or young persons, if any); and ",
-      l7:"▪ Date on which the establishment commenced its work. "
+      l7:"▪ Date on which the establishment commenced its work. ",
+      map:LabourDepartmentMaps,
+      location:"https://www.google.com/maps/dir//G-2,+Labour+Department+Govternment+of+Sindh,+Dr+Ziauddin+Ahmed+Rd,+Civil+Lines+Kashmir+Mujahid+Colony,+Karachi,+Karachi+City,+Sindh,+Pakistan/@24.8445189,67.0244326,17z/data=!4m17!1m7!3m6!1s0x3eb33d0c71359303:0xe09b193e2f7f7f81!2sLabour+Department+Govternment+of+Sindh!8m2!3d24.8445141!4d67.0270075!16s%2Fg%2F11pfbn284r!4m8!1m0!1m5!1m1!1s0x3eb33d0c71359303:0xe09b193e2f7f7f81!2m2!1d67.0270075!2d24.8445141!3e2?entry=ttu"
     },
     {
       sNo: 4,
@@ -108,7 +115,9 @@ const arr = [
       l4:"▪ Full name of the manager, if any (including father's name); ",
       l5:"▪ Category of the establishment, i.e., whether a shop, industrial establishment, commercial establishment, residential hotel, restaurant, eating house,theatre or other place of public amusement or entertainment;",
       l6:"▪ Total number of employees (state separately the number of men, women and/or young persons, if any); and ",
-      l7:"▪ Date on which the establishment commenced its work. "
+      l7:"▪ Date on which the establishment commenced its work. ",
+      map:LabourDepartmentMaps,
+      location:"https://www.google.com/maps/dir//G-2,+Labour+Department+Govternment+of+Sindh,+Dr+Ziauddin+Ahmed+Rd,+Civil+Lines+Kashmir+Mujahid+Colony,+Karachi,+Karachi+City,+Sindh,+Pakistan/@24.8445189,67.0244326,17z/data=!4m17!1m7!3m6!1s0x3eb33d0c71359303:0xe09b193e2f7f7f81!2sLabour+Department+Govternment+of+Sindh!8m2!3d24.8445141!4d67.0270075!16s%2Fg%2F11pfbn284r!4m8!1m0!1m5!1m1!1s0x3eb33d0c71359303:0xe09b193e2f7f7f81!2m2!1d67.0270075!2d24.8445141!3e2?entry=ttu"
 
     },
     {
@@ -133,7 +142,9 @@ const arr = [
       l3:"▪ Previous registration certificate (if any) with any authority;",
       l4:"▪ Copy of Challan form;",
       l5:"▪ Lab testing reports (where required as per SOPs); and",
-      l6:"▪ Medical reports of the staff/food handlers (where required as per SOPs)."
+      l6:"▪ Medical reports of the staff/food handlers (where required as per SOPs).",
+      map:SindhFoodAuthorityMaps,
+      location:"https://www.google.com/maps/dir//Sindh+Food+Authority,+Bunglow+No.+B,+12+Shahrah-e-Faisal+Rd,+Darwaish+Colony,+Karachi,+Karachi+City,+Sindh,+Pakistan/@24.8683205,67.0447531,13z/data=!4m8!4m7!1m0!1m5!1m1!1s0x3eb3178521c0229d:0xb63bac5f451003f4!2m2!1d67.0859531!2d24.8682483?entry=ttu"
       // officials:
         // "1 .Licensing In-charge (Licensing &amp; Registration Wing) \n2. Director Licensing &amp; Registration \n3. Deputy Director Operations \n4. Food Safety Officer \n5. Director General (SFA)",
         // validity: "",                   
@@ -305,7 +316,8 @@ const arr = [
       l10:"▪ List of library books;",
       l11:"▪ List of furniture;",
       l12:"▪ List of practical Lab equipment (physics, chemistry, biology & computer);",
-
+      map:SchoolEducationMaps,
+      location:"https://www.google.com/maps/dir//Building+No.2,+Sindh+Secretariat,+Seecretary+School+Education+and+Literacy+Deprartment/@24.8553469,66.9364199,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x3eb33fcd040fedb3:0x385765b971e1e193!2m2!1d67.0188214!2d24.8553695?entry=ttu"
       // officials:
       //   "1. Reception desk \n2. Assistant Director \n3 Deputy Direction (M&amp;E and Inspections) \n4. Additional Director/ Chairman Inspection Committee \n5. Section Officer (Secretariate) \n6. Secretary, Education &amp; Literacy",
         // validity: "",                   
@@ -357,6 +369,8 @@ const arr = [
       l10:"Additional requirements in case of a foreign company ",
       l11:"▪ CEO's passport/ visa copy; and ",
       l12:"▪ SECP equivalence letter.",
+      map:IndustrialDepartmentMaps,
+      location:"https://www.google.com/maps/dir//Directorate+of+Industries,+Trust+Wing,+Sindh+Govt.,+2nd+Floor,+State+Life+Building+No.+11,+Abdullah+Haroon+Rd,+Civil+Lines,+Karachi,+Karachi+City,+Sindh+74400,+Pakistan/@24.8544337,66.9871678,13z/data=!3m1!5s0x3eb33e741d2fccf1:0xc3b35a0e92558ed!4m8!4m7!1m0!1m5!1m1!1s0x3eb33f45b8e53693:0x1368d0053cc6b4b6!2m2!1d67.0283678!2d24.8543615?entry=ttu"
       // officials: "1. Junior Clerk/ Assistant \n2.Registrar",
       // validity: "",                   
       //  renewalFee:""
@@ -387,6 +401,8 @@ const arr = [
       l10:"Additional requirements in case of a foreign company ",
       l11:"▪ CEO's passport/ visa copy; and ",
       l12:"▪ SECP equivalence letter.",
+      map:IndustrialDepartmentMaps,
+      location:"https://www.google.com/maps/dir//Directorate+of+Industries,+Trust+Wing,+Sindh+Govt.,+2nd+Floor,+State+Life+Building+No.+11,+Abdullah+Haroon+Rd,+Civil+Lines,+Karachi,+Karachi+City,+Sindh+74400,+Pakistan/@24.8544337,66.9871678,13z/data=!3m1!5s0x3eb33e741d2fccf1:0xc3b35a0e92558ed!4m8!4m7!1m0!1m5!1m1!1s0x3eb33f45b8e53693:0x1368d0053cc6b4b6!2m2!1d67.0283678!2d24.8543615?entry=ttu"
       // officials:
         // "Dispatcher \n▪ Public Dealing Officer \n▪ Superintendent \n▪ Registrar",
         // validity: "",                   
@@ -418,6 +434,8 @@ const arr = [
       l10:"Additional requirements in case of a foreign company ",
       l11:"▪ CEO's passport/ visa copy; and ",
       l12:"▪ SECP equivalence letter.",
+      map:IndustrialDepartmentMaps,
+      location:"https://www.google.com/maps/dir//Directorate+of+Industries,+Trust+Wing,+Sindh+Govt.,+2nd+Floor,+State+Life+Building+No.+11,+Abdullah+Haroon+Rd,+Civil+Lines,+Karachi,+Karachi+City,+Sindh+74400,+Pakistan/@24.8544337,66.9871678,13z/data=!3m1!5s0x3eb33e741d2fccf1:0xc3b35a0e92558ed!4m8!4m7!1m0!1m5!1m1!1s0x3eb33f45b8e53693:0x1368d0053cc6b4b6!2m2!1d67.0283678!2d24.8543615?entry=ttu"
       // officials:
         // "Office Superintendent \n▪ Boiler Inspector \n▪ Chief Inspector Boile",
         // validity: "",                   
@@ -449,6 +467,8 @@ const arr = [
       l10:"Additional requirements in case of a foreign company ",
       l11:"▪ CEO's passport/ visa copy; and ",
       l12:"▪ SECP equivalence letter.",
+      map:IndustrialDepartmentMaps,
+      location:"https://www.google.com/maps/dir//Directorate+of+Industries,+Trust+Wing,+Sindh+Govt.,+2nd+Floor,+State+Life+Building+No.+11,+Abdullah+Haroon+Rd,+Civil+Lines,+Karachi,+Karachi+City,+Sindh+74400,+Pakistan/@24.8544337,66.9871678,13z/data=!3m1!5s0x3eb33e741d2fccf1:0xc3b35a0e92558ed!4m8!4m7!1m0!1m5!1m1!1s0x3eb33f45b8e53693:0x1368d0053cc6b4b6!2m2!1d67.0283678!2d24.8543615?entry=ttu"
       // officials:
       //   "Office Superintendent \n▪ Boiler Inspector \n▪ Chief Inspector Boile",
         // validity: "",                   
@@ -481,6 +501,8 @@ const arr = [
       l10:"Additional requirements in case of a foreign company ",
       l11:"▪ CEO's passport/ visa copy; and ",
       l12:"▪ SECP equivalence letter.",
+      map:IndustrialDepartmentMaps,
+      location:"https://www.google.com/maps/dir//Directorate+of+Industries,+Trust+Wing,+Sindh+Govt.,+2nd+Floor,+State+Life+Building+No.+11,+Abdullah+Haroon+Rd,+Civil+Lines,+Karachi,+Karachi+City,+Sindh+74400,+Pakistan/@24.8544337,66.9871678,13z/data=!3m1!5s0x3eb33e741d2fccf1:0xc3b35a0e92558ed!4m8!4m7!1m0!1m5!1m1!1s0x3eb33f45b8e53693:0x1368d0053cc6b4b6!2m2!1d67.0283678!2d24.8543615?entry=ttu"
       // officials:
       //   "Office Superintendent \n▪ Boiler Inspector \n▪ Chief Inspector Boile",
         // validity: "",                   
@@ -513,6 +535,8 @@ const arr = [
       l10:"Additional requirements in case of a foreign company ",
       l11:"▪ CEO's passport/ visa copy; and ",
       l12:"▪ SECP equivalence letter.",
+      map:IndustrialDepartmentMaps,
+      location:"https://www.google.com/maps/dir//Directorate+of+Industries,+Trust+Wing,+Sindh+Govt.,+2nd+Floor,+State+Life+Building+No.+11,+Abdullah+Haroon+Rd,+Civil+Lines,+Karachi,+Karachi+City,+Sindh+74400,+Pakistan/@24.8544337,66.9871678,13z/data=!3m1!5s0x3eb33e741d2fccf1:0xc3b35a0e92558ed!4m8!4m7!1m0!1m5!1m1!1s0x3eb33f45b8e53693:0x1368d0053cc6b4b6!2m2!1d67.0283678!2d24.8543615?entry=ttu"
       // officials:
       //   "Office Superintendent \n▪ Boiler Inspector \n▪ Chief Inspector Boile",
         // validity: "",                   
@@ -543,6 +567,8 @@ const arr = [
       l10:"Additional requirements in case of a foreign company ",
       l11:"▪ CEO's passport/ visa copy; and ",
       l12:"▪ SECP equivalence letter.",
+      map:IndustrialDepartmentMaps,
+      location:"https://www.google.com/maps/dir//Directorate+of+Industries,+Trust+Wing,+Sindh+Govt.,+2nd+Floor,+State+Life+Building+No.+11,+Abdullah+Haroon+Rd,+Civil+Lines,+Karachi,+Karachi+City,+Sindh+74400,+Pakistan/@24.8544337,66.9871678,13z/data=!3m1!5s0x3eb33e741d2fccf1:0xc3b35a0e92558ed!4m8!4m7!1m0!1m5!1m1!1s0x3eb33f45b8e53693:0x1368d0053cc6b4b6!2m2!1d67.0283678!2d24.8543615?entry=ttu"
       // officials:
       //   "Office Superintendent \n▪ Boiler Inspector \n▪ Chief Inspector Boile",
         // validity: "",                   
@@ -556,9 +582,6 @@ const arr = [
       rlcoID: "SEPA-001",
       details: "License for Handling of Hazardous Substances",
       type: "License",
-      // prevailing:
-        // "The Sindh Environmental Protection Act, 2014. \nHazardous Substances Rules, 2014",
-      // jurisdiction: "Sindh",
       timeLine: "7 Days",
       fee: "Rs.50000",
       documentname: "The Hazardous Substances Rule 2014",
@@ -569,7 +592,8 @@ const arr = [
       l1:"▪ Covering letter;",
       l2:"▪ Hazardous substances management plan; and",
       l3:"▪ Pay order of PKR 50,000/- as prescribed in the Schedule-III of Hazardous Substances Rules, 2014.",
-
+      map:SindhEnvironmentProtectionMaps,
+      location:"https://www.google.com/maps/dir//Sindh+Environmental+Protection+Agency%D8%8C+ST-21%D8%8C,+Sector+23+Korangi+Industrial+Area,+Karachi,+Karachi+City,+Sindh%E2%80%AD/@24.8376612,67.0792909,13z/data=!4m8!4m7!1m0!1m5!1m1!1s0x3eb33b946a825e95:0xe0803268ac5da982!2m2!1d67.1204909!2d24.837589?entry=ttu"
       // officials:
       //   "Director/ Deputy Director \nAssistant Director \nEnvironmental Inspector ▪ DG (SEPA)  \nExpert Committee",
         // validity: "",                   
@@ -597,7 +621,8 @@ const arr = [
       l1:"▪ Covering letter;",
       l2:"▪ Hazardous substances management plan; and",
       l3:"▪ Pay order of PKR 50,000/- as prescribed in the Schedule-III of Hazardous Substances Rules, 2014.",
-
+      map:SindhEnvironmentProtectionMaps,
+      location:"https://www.google.com/maps/dir//Sindh+Environmental+Protection+Agency%D8%8C+ST-21%D8%8C,+Sector+23+Korangi+Industrial+Area,+Karachi,+Karachi+City,+Sindh%E2%80%AD/@24.8376612,67.0792909,13z/data=!4m8!4m7!1m0!1m5!1m1!1s0x3eb33b946a825e95:0xe0803268ac5da982!2m2!1d67.1204909!2d24.837589?entry=ttu"
       // officials:
       //   "Director/ Deputy Director \nAssistant Director \nEnvironmental Inspector ▪ DG (SEPA)  \nExpert Committee",
         // validity: "",                   
@@ -620,7 +645,8 @@ const arr = [
       l1:"▪ Covering letter;",
       l2:"▪ Hazardous substances management plan; and",
       l3:"▪ Pay order of PKR 50,000/- as prescribed in the Schedule-III of Hazardous Substances Rules, 2014.",
-
+      map:SindhEnvironmentProtectionMaps,
+      location:"https://www.google.com/maps/dir//Sindh+Environmental+Protection+Agency%D8%8C+ST-21%D8%8C,+Sector+23+Korangi+Industrial+Area,+Karachi,+Karachi+City,+Sindh%E2%80%AD/@24.8376612,67.0792909,13z/data=!4m8!4m7!1m0!1m5!1m1!1s0x3eb33b946a825e95:0xe0803268ac5da982!2m2!1d67.1204909!2d24.837589?entry=ttu"
       // officials:
       //   "Director/ Deputy Director \nAssistant Director \nEnvironmental Inspector ▪ DG (SEPA)  \nExpert Committee",
         // validity: "",                   
@@ -642,7 +668,8 @@ const arr = [
       l1:"▪ Covering letter;",
       l2:"▪ Hazardous substances management plan; and",
       l3:"▪ Pay order of PKR 50,000/- as prescribed in the Schedule-III of Hazardous Substances Rules, 2014.",
-
+      map:SindhEnvironmentProtectionMaps,
+      location:"https://www.google.com/maps/dir//Sindh+Environmental+Protection+Agency%D8%8C+ST-21%D8%8C,+Sector+23+Korangi+Industrial+Area,+Karachi,+Karachi+City,+Sindh%E2%80%AD/@24.8376612,67.0792909,13z/data=!4m8!4m7!1m0!1m5!1m1!1s0x3eb33b946a825e95:0xe0803268ac5da982!2m2!1d67.1204909!2d24.837589?entry=ttu"
       // officials:
       //   "Director/ Deputy Director \nDeputy Director (Chemist) \nDeputy Director (Microbiologist) \nDG (SEPA)",
         // validity: "",                   
@@ -665,7 +692,8 @@ const arr = [
       l1:"▪ Covering letter;",
       l2:"▪ Hazardous substances management plan; and",
       l3:"▪ Pay order of PKR 50,000/- as prescribed in the Schedule-III of Hazardous Substances Rules, 2014.",
-
+      map:SindhEnvironmentProtectionMaps,
+      location:"https://www.google.com/maps/dir//Sindh+Environmental+Protection+Agency%D8%8C+ST-21%D8%8C,+Sector+23+Korangi+Industrial+Area,+Karachi,+Karachi+City,+Sindh%E2%80%AD/@24.8376612,67.0792909,13z/data=!4m8!4m7!1m0!1m5!1m1!1s0x3eb33b946a825e95:0xe0803268ac5da982!2m2!1d67.1204909!2d24.837589?entry=ttu"
       // officials:
       //   "Director/ Deputy Director \nAssistant Director \nEnvironmental Inspector ▪ DG (SEPA)  \nExpert Committee",
         // validity: "",                   
@@ -685,6 +713,8 @@ const arr = [
       l1:"▪ Covering letter;",
       l2:"▪ Hazardous substances management plan; and",
       l3:"▪ Pay order of PKR 50,000/- as prescribed in the Schedule-III of Hazardous Substances Rules, 2014.",
+      map:SindhEnvironmentProtectionMaps,
+      location:"https://www.google.com/maps/dir//Sindh+Environmental+Protection+Agency%D8%8C+ST-21%D8%8C,+Sector+23+Korangi+Industrial+Area,+Karachi,+Karachi+City,+Sindh%E2%80%AD/@24.8376612,67.0792909,13z/data=!4m8!4m7!1m0!1m5!1m1!1s0x3eb33b946a825e95:0xe0803268ac5da982!2m2!1d67.1204909!2d24.837589?entry=ttu"
     },
     {
       sNo: 26,
@@ -696,6 +726,7 @@ const arr = [
       type: "Other",
       timeLine: "5 days for Cat-I \n&amp; 60 Days for Cat-II, III &amp; IV",
       fee: "As per  schudule",
+      
 
     },
     {
