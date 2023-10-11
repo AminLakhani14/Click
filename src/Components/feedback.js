@@ -17,6 +17,7 @@ import InputLabel from "@mui/material/InputLabel";
 import { Box, TextField, TextareaAutosize } from "@mui/material";
 import MobileHeaderGeneric from "./MobileHeaderGeneric";
 import TextArea from "antd/es/input/TextArea";
+import { Formik } from "formik";
 
 // import Drop2Data, { Dropdown } from "../Components/RegulatoryCostCalculator"
 export const Drop2Data = (value) => {
@@ -864,35 +865,7 @@ export default function FeedBack() {
       value: "Registration of Privately Managed Colleges (Urban)",
     },
   ]);
-  const clickAdd = () => {
-    if (arr1.length > 5) return;
-    let arr = [...arr1];
-    arr.push("college");
-    setArr1(arr);
-    let ar = [...arr2];
-    ar.push({
-      id: "Registration of Privately Managed Colleges (Urban)",
-      timeLineText: "10-12 Days",
-      feeValue: "15000",
-      validityYear: "3Years",
-      departments:"Registration of Privately Managed Colleges (Urban)",
-      text: "Registration of Privately Managed Colleges (Urban)",
-      value: "Registration of Privately Managed Colleges (Urban)",
-    });
-    setArr2(ar);
-  };
-  const DeleteItems = (id) => {
-    console.log(id);
 
-    arr1.splice(id, 1);
-    // const getindex = arr1.findIndex((x) => x.id === id )
-
-    const UpdatedArray2 = arr2.filter((val, ind) => {
-      return ind !== id;
-    });
-
-    setArr2(UpdatedArray2);
-  };
   const [label, setLabel] = useState("Areas");
 
   const areas = [
@@ -1574,7 +1547,8 @@ export default function FeedBack() {
     
       </div> */}
 <div className="row g-0 pt-2 justify-content-center w-100">
-  <div className="col-md-8 ps-md-3 px-3 justify-content-center  "  style={{backgroundColor:"re",}}>
+<Formik>
+<div className="col-md-8 ps-md-3 px-3 justify-content-center  "  style={{backgroundColor:"re",}}>
        <div className="row g-0 justify-content-between"    style={{width:"100%",backgroundColor:"yel"}}>
        <Fade left>
        <div className="col-sm-6" >
@@ -1583,6 +1557,7 @@ export default function FeedBack() {
             placeholder="Enter Your First Name"
             size="small"
             style={{width:"96%"}}
+            inputProps={{ maxLength: 50 }}
          
           />
         </div>
@@ -1594,6 +1569,8 @@ export default function FeedBack() {
           placeholder="Enter Your Company Name"
           size="small"
           style={{width:"96%",}}
+          inputProps={{ maxLength: 50 }}
+
          />
          </div>
         </Fade>
@@ -1606,6 +1583,8 @@ export default function FeedBack() {
          placeholder="Enter Your Address"
          size="small"
          style={{width:"98%"}}
+         inputProps={{ maxLength: 200 }}
+
        />
       </div>
      </Fade>
@@ -1626,6 +1605,8 @@ export default function FeedBack() {
          placeholder="Enter Your Country / City"
          size="small"
          style={{width:"96%"}}
+         inputProps={{ maxLength: 100}}
+
        />
       </div>
   </Fade>
@@ -1638,6 +1619,13 @@ export default function FeedBack() {
       placeholder="Enter Your  Moble Number"
       size="small"
       style={{width:"96%"}}
+      type="number"
+       InputProps={{
+        inputProps: {
+          min: 0, // Set the minimum value
+          max: 100, // Set the maximum value
+        },
+      }}
     />
     </div>
     </Fade>
@@ -1664,6 +1652,8 @@ export default function FeedBack() {
       placeholder="Enter Your Email Address"
       size="small"
       style={{width:"96%",}}
+      type="email"
+      required
   />
     </div>
  </Fade>
@@ -1892,6 +1882,7 @@ export default function FeedBack() {
           </div>
         </div>
   </div>
+</Formik>
 </div>
   <Footer />
     </>

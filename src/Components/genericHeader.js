@@ -720,7 +720,7 @@ export default function GenericHeader(props) {
                     title=""
                     className={"link2"}
                   >
-                   Interactive Regularity Directory
+                  Regularity Directory
                   </span>
                   <i
                     style={{ marginTop: "0px", marginLeft: "3px" }}

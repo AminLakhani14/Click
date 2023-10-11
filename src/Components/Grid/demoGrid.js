@@ -149,7 +149,7 @@ export default class DemoGrid extends React.Component {
         ref={this.myGrid}
         columnsheight={50}
         rowsheight={50}
-        autorowheight={true}
+        // autorowheight={true}
         onRowclick={this.onRowclick}
         source={this.state.source}
         columns={this.state.columns}
@@ -157,7 +157,7 @@ export default class DemoGrid extends React.Component {
         height={610}
         width={"100%"}
         columnsresize={true}
-        pageable={true}
+        pageable={false}
         columnsreorder={true}
         autoloadstate={true}
         autosavestate={true}

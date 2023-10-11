@@ -141,8 +141,8 @@ export default class RegulatoryCatalogCalculatorGrid extends React.PureComponent
             width:"110%"
           }}
         >
-          <div style={{ fontWeight: "bold" ,width:"501px",borderRight:"1px solid #E0E0E0",paddingTop:"11px",paddingLeft:"10px",width:"66%"}}>Total:</div>{" "}
-          <div style={{paddingTop:"11px",paddingLeft:"3px",width:"35%",marginLeft:"-2px",textAlign:"right"}}>{formattedTotalValue}</div>
+          <div style={{ fontWeight: "bold" ,width:"501px",borderRight:"1px solid #E0E0E0",paddingTop:"11px",paddingLeft:"10px",width:"75%"}}>Total:</div>{" "}
+          <div style={{paddingTop:"11px",paddingLeft:"3px",width:"25%",marginLeft:"-2px",textAlign:"right",fontSize:20}}><b>{formattedTotalValue}</b></div>
         </div>
       </div>
     );

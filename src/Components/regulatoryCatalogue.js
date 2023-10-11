@@ -37,7 +37,7 @@ const arr = [
       details: "Registration of Privately Managed Colleges ",
       type: "Registration",
       timeLine: "10-12 Days",
-      fee: "As per Schedule",
+      fee: "Urban - Rural Rs.15000 \n Degree Awarding Urban - Rural Rs.20000",
       documentname: "Companies Act 2017",
       documenttype: "Law / Rules / Regulations	",
       address: "3rd Floor, Building No. 6, Sindh Secretariat, Karachi City, Sindh",
@@ -2758,21 +2758,26 @@ const GetGridData = (data) =>{
            {windowWidth <=500 ? <MobileHeaderGeneric/>: <GenericHeader />}
       
       <div
-        className="row"
+        className="row mt-2"
         style={{
-          height: "240px",
+          height: "300px",
           width: "100%",
-          background: "#F5F5F5",
+          // background: "#F5F5F5",
           paddingTop: "155px",
         }}
       >
         <div className="col-lg-2"></div>
         <div className="col-lg-8">
-          <h1 className="mainHeading">RLCOs</h1>
+          <h1 className="mainHeading">Regulatory Directory of Government of Sindh</h1>
+        </div>
+        <div className="row">
+          <div className="col-8 m-auto">
+            <p className="h5 text-center">This portal provides you access to regulatory details such as Name of License, Registration, Permit, and Certificate, its applicable fee, timelines, laws. For any further information contact us. </p>
+          </div>
         </div>
         <div className="col-lg-2"></div>
       </div>
-      <div
+      {/* <div
         className="row"
         style={{
           height: "209px",
@@ -2819,7 +2824,7 @@ const GetGridData = (data) =>{
           </p>
         </div>
         <div className="col-lg-2"></div>
-      </div>
+      </div> */}
       <div className="row">
         <div
           className="col-lg-10"
