@@ -2772,7 +2772,7 @@ const GetGridData = (data) =>{
         </div>
         <div className="row">
           <div className="col-8 m-auto">
-            <p className="h5 text-center">This portal provides you access to regulatory details such as Name of License, Registration, Permit, and Certificate, its applicable fee, timelines, laws. For any further information contact us. </p>
+            <p className="h5 text-center">This Portal provides you access to Regulatory Details such as Name of License, Registration, Permit, and Certificate, It's Applicable Fee, Timelines, Laws. For any further information contact us.</p>
           </div>
         </div>
         <div className="col-lg-2"></div>

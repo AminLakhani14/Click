@@ -1,25 +1,19 @@
 
 
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
 import "../Css/header.css";
 import "../Css/resource.css";
-import Footer from "./footer";
-import GenericHeader from "./genericHeader";
 import "../Css/investnow.css";
-import BG1 from "../assets/BG1.jpg";
 import { useEffect } from "react";
 import { Fade } from "react-reveal";
-import { Button, FormControl, MenuItem, Select } from "@mui/material";
-import InputLabel from "@mui/material/InputLabel";
+import {  FormControl,  Select } from "@mui/material";
 
 
-import { Box, TextField, TextareaAutosize } from "@mui/material";
-import MobileHeaderGeneric from "./MobileHeaderGeneric";
+import { TextField} from "@mui/material";
 import TextArea from "antd/es/input/TextArea";
-import { Formik, Form, Field, ErrorMessage } from 'formik';
+import { Formik, Form, ErrorMessage } from 'formik';
+import { areas ,Drop1Data} from "./constant";
 import * as Yup from 'yup';
-import FeedBackForm from "./FeedBackForm";
 // import Drop2Data, { Dropdown } from "../Components/RegulatoryCostCalculator"
 export const Drop2Data = (value) => {
   let array = [];
@@ -700,30 +694,6 @@ export const Drop2Data = (value) => {
   return { array, label };
 };
 
-const Drop1Data = [
-  { value: "college", text: "College Education Department" },
-  { value: "labour", text: "Labour and Human Resources Department" },
-  { value: "SFA", text: "Sindh Food Authority (SFA)" },
-  { value: "Agriculture", text: "Agriculture Department" },
-  { value: "HealthDepartment", text: "Health Department" },
-  { value: "MontToMatric", text: "School Education and Literacy Department" },
-  { value: "SindhHealthCareCommission", text: "Sindh Healthcare Commission" },
-  { value: "IndustriesAndCommerce", text: "Industries And Commerce" },
-  {
-    value: "SindhEnvironmentalProtection",
-    text: "Sindh Environmental Protection",
-  },
-  {
-    value: "SindhIndustrialTrading",
-    text: "Sindh Industrial Trading Estate (S.I.T.E) Limited",
-  },
-  {
-    value: "SindhSamllIndustries",
-    text: "Sindh Small Industries Corporation (SSIC)",
-  },
-  { value: "BoardOfRevenue", text: "Board of Revenue" },
-  { value: "DistrictMuncipal", text: "District Muncipal" },
-];
 
 const getDropdown2Object = (arr, id) => {
   const selectedOption = Drop2Data(arr)?.array.find((val) => val.value === id);
@@ -755,18 +725,6 @@ export const Dropdown = (props) => {
   return (
     <Fade left>
       <FormControl variant="outlined" size="small" className="dropdown-width col-12" >
-      {/* <InputLabel
-        shrink={true}
-        style={{
-          background: "white",
-          width: "107px",
-          paddingLeft: "9px",
-          marginLeft: "-5px",
-        }}
-        htmlFor="my-select"
-      >
-        Departments
-      </InputLabel> */}
        <h4>Department</h4>
        <Select
         onChange={handleChange}
@@ -829,7 +787,67 @@ export const Dropdown1 = (props) => {
     </Fade>
   );
 };
-export default function FeedBack() {
+const Basic = () => (
+    <div>
+      <h1>Anywhere in your app!</h1>
+      <Formik
+        initialValues={{ email: '', password: '' }}
+        validate={values => {
+          const errors = {};
+          if (!values.email) {
+            errors.email = 'Required';
+          } else if (
+            !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)
+          ) {
+            errors.email = 'Invalid email address';
+          }
+          return errors;
+        }}
+        onSubmit={(values, { setSubmitting }) => {
+          setTimeout(() => {
+            alert(JSON.stringify(values, null, 2));
+            setSubmitting(false);
+          }, 400);
+        }}
+      >
+        {({
+          values,
+          errors,
+          touched,
+          handleChange,
+          handleBlur,
+          handleSubmit,
+          isSubmitting,
+          /* and other goodies */
+        }) => (
+          <form onSubmit={handleSubmit}>
+            <input
+              type="email"
+              name="email"
+              onChange={handleChange}
+              onBlur={handleBlur}
+              value={values.email}
+            />
+            {errors.email && touched.email && errors.email}
+            <input
+              type="password"
+              name="password"
+              onChange={handleChange}
+              onBlur={handleBlur}
+              value={values.password}
+            />
+            {errors.password && touched.password && errors.password}
+            <button type="submit" disabled={isSubmitting}>
+              Submit
+            </button>
+          </form>
+        )}
+
+      
+      </Formik>
+    </div>
+  );
+ const FeedBackForm=()=> {
 
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   useEffect(() => {
@@ -869,308 +887,7 @@ export default function FeedBack() {
 
   const [label, setLabel] = useState("Areas");
 
-  const areas = [
-    //College Education Department Dropdown
-    { id: "Urban", value: "Urban", text: "Urban" },
-    { id: "Urban", value: "Rural", text: "Rural" },
-    //Labour
-    {
-      id: "labour",
-      value: "labour",
-      text: "Same",
-    },
-    {
-      id: "labour",
-      value: "labour",
-      text: "10 Days",
-    },
-    //School Education and Literacy Department Dropdown
-    {
-      id: "MontToMatric",
-      value: "MontToMatric",
-      text: "Institutions from Montessori up to Class-X",
-    },
-    {
-      id: "MontToMatric",
-      value: "HigherAndSecondary",
-      text: "Higher Secondary School",
-    },
-    {
-      id: "MontToMatric",
-      value: "OALevel",
-      text: 'Institutions of "O" & "A" Level',
-    },
-    {
-      id: "MontToMatric",
-      value: "HigherLearning",
-      text: "Degree awarding institutes and universities including Institutions having academic linkage / foreign collaboration/affiliation with any other institutions of higher learning",
-    },
-    //Agriculture Dropdown
-    {
-      id: "Agriculture",
-      value: "BeddedMedical",
-      text: "2 1-24 bedded Medical Centre/ Hospital",
-    },
-    {
-      id: "Agriculture",
-      value: "AboveBeddedMedical",
-      text: " 25 and above bedded Hospital",
-    },
-    {
-      id: "Agriculture",
-      value: "AlreadyRegistered",
-      text: "Any change in the already registered HCE",
-    },
-    //HealthDepartment Dropdown
-    {
-      id: "HealthDepartment",
-      value: "HealthDepartment",
-      text: "License to sell Drugs by Way of Retail Sale (Form-6)",
-    },
-    {
-      id: "HealthDepartment",
-      value: "Wholesale",
-      text: "License to sell Drugs by Way of Wholesale 7A",
-    },
-    {
-      id: "HealthDepartment",
-      value: "Pharmacy",
-      text: "License to sell Drugs in Pharmacy (Form-8)",
-    },
-    {
-      id: "HealthDepartment",
-      value: "NarcoticsandOtherControlledDrugs",
-      text: "License to sell Narcotics and Other Controlled Drugs/ Substances (Form-9)",
-    },
-    {
-      id: "HealthDepartment",
-      value: "IndenterofDrugs",
-      text: "License to Manufacturer /Importer /Indenter of Drugs (Form-7)",
-    },
-    //SindhHealthCareCommission Dropdown
-    {
-      id: "SindhHealthCareCommission",
-      value: "SindhHealthCareCommission",
-      text: " Single specialty (i.e general practitioner, homeo, tibb, detist, nursing/ maternity home, laboratories, radiology centre etc.",
-    },
-    {
-      id: "SindhHealthCareCommission",
-      value: "BeddedMedical",
-      text: "2 1-24 bedded Medical Centre/ Hospital",
-    },
-    {
-      id: "SindhHealthCareCommission",
-      value: "AboveBeddedMedical",
-      text: " 25 and above bedded Hospital",
-    },
-    {
-      id: "SindhHealthCareCommission",
-      value: "AlreadyRegistered",
-      text: "Any change in the already registered HCE",
-    },
 
-    //IndustriesAndCommerce Dropdown
-    {
-      id: "IndustriesAndCommerce",
-      value: "IndustriesAndCommerce",
-      text: "Registration Certificate of Partnership Firm",
-    },
-    {
-      id: "IndustriesAndCommerce",
-      value: "RegistrationCertificateofAmendment",
-      text: "Registration Certificate of Amendment/Dissolution /Rectification in Partnership Firm",
-    },
-    {
-      id: "IndustriesAndCommerce",
-      value: "RegistrationofNewBoiler",
-      text: "Registration of New Boiler",
-    },
-    {
-      id: "IndustriesAndCommerce",
-      value: "RegistrationofOldBoiler",
-      text: "Registration of Old Boiler",
-    },
-    {
-      id: "IndustriesAndCommerce",
-      value: "ApprovalofPlanandParticularsofNewBoiler",
-      text: "Approval of Plan and Particulars of Boilers Acceptable for Registration (New Boiler)",
-    },
-    {
-      id: "IndustriesAndCommerce",
-      value: "ApprovalofPlanandParticularsofUsedBoiler",
-      text: "Approval of Plan and Particulars of Boilers Acceptable for Registration (Used Boiler)",
-    },
-    {
-      id: "IndustriesAndCommerce",
-      value: "TransferofOwnership",
-      text: "Transfer of Ownership",
-    },
-    //Sindh Environment Protection Department
-    {
-      id: "SindhEnvironmentalProtection",
-      value: "SindhEnvironmentalProtection",
-      text: "License for Handling of Hazardous Substances",
-    },
-    {
-      id: "SindhEnvironmentalProtection",
-      value: "NonHazardousSubstances",
-      text: "License to Waste Contractor for Handling of Hazardous Substances and Non-Hazardous substances",
-    },
-    {
-      id: "SindhEnvironmentalProtection",
-      value: "ApprovalUnderSection17",
-      text: "Approval Under Section 17 (IEE/EIA/EC)",
-    },
-    {
-      id: "SindhEnvironmentalProtection",
-      value: "ApprovalofanEnvironmentalManagementPlan",
-      text: "Approval of an Environmental Management Plan",
-    },
-    {
-      id: "SindhEnvironmentalProtection",
-      value: "CertificationofEnvironmentalLab",
-      text: "Certification of Environmental Lab",
-    },
-    {
-      id: "SindhEnvironmentalProtection",
-      value: "ApprovalofHospitalWasteManagementPlan",
-      text: "Approval of Hospital Waste Management Plan",
-    },
-    //Sindh Industrial Trading Estate
-    {
-      id: "SindhIndustrialTrading",
-      value: "SindhIndustrialTrading",
-      text: "Allotment of Land/ Plot",
-    },
-    {
-      id: "SindhIndustrialTrading",
-      value: "ApprovalofBuildingDrawing",
-      text: "Approval of Building Drawing",
-    },
-    {
-      id: "SindhIndustrialTrading",
-      value: "ApprovalofCompletion(Block)Plan",
-      text: "Approval of Completion (Block) Plan",
-    },
-    {
-      id: "SindhIndustrialTrading",
-      value: "CollectionOfAdditionalTradeFee",
-      text: "Collection of Additional Trade Fee",
-    },
-    {
-      id: "SindhIndustrialTrading",
-      value: "Subdivision",
-      text: "Subdivision/ Amalgamation/ Transfer/ Subletting/ Extension of Land or Plot/ Change in Constitution/ change in Constitution",
-    },
-    {
-      id: "SindhIndustrialTrading",
-      value: "IssuanceofLeaseDeed",
-      text: "Issuance of Lease Deed",
-    },
-    {
-      id: "SindhIndustrialTrading",
-      value: "NOCforUtilities",
-      text: "NOC for Utilities (Electricity, Gas, Cable, PTCL)",
-    },
-    {
-      id: "SindhIndustrialTrading",
-      value: "NOCforMortgage",
-      text: "NOC for Mortgage",
-    },
-    {
-      id: "SindhIndustrialTrading",
-      value: "NOCforRoadCutting",
-      text: "NOC for Road Cutting",
-    },
-    {
-      id: "SindhIndustrialTrading",
-      value: "NOCforcarparking",
-      text: "NOC for car parking/ beautification",
-    },
-    // Sindh Small Industries Corporation (SSIC)
-    {
-      id: "SindhSamllIndustries",
-      value: "SindhSamllIndustries",
-      text: "Allotment Order of Land/ Plot",
-    },
-    {
-      id: "SindhSamllIndustries",
-      value: "ApprovalofDrawing",
-      text: "Approval of Drawing",
-    },
-    {
-      id: "SindhSamllIndustries",
-      value: "SubdivisionTransfer",
-      text: "Subdivision/Transfer/ Amalgamation/ Change in constitution (Corporate Setup)/ Change in Trade/ Subletting trade/ Conversion of plot from Industrial to Commercial/ CNG petroleum station/ Godowns & Distribution",
-    },
-    {
-      id: "SindhSamllIndustries",
-      value: "NOCforUtilitiesSI",
-      text: "NOC for Utilities (Electricity, Telephone, Gas, Water)",
-    },
-    {
-      id: "SindhSamllIndustries",
-      value: "NOCforRoadCuttingSI",
-      text: "NOC for Road Cutting",
-    },
-    {
-      id: "SindhSamllIndustries",
-      value: "IssuanceofLeaseDraftSI",
-      text: "Issuance of Lease Draft",
-    },
-    {
-      id: "SindhSamllIndustries",
-      value: "NOCforMortgageSI",
-      text: "NOC for Mortgage",
-    },
-    {
-      id: "SindhSamllIndustries",
-      value: "UnauthorizedConstructionSI",
-      text: "Un- authorized Construction",
-    },
-    //Board Of Revenue
-    {
-      id: "BoardOfRevenue",
-      value: "BoardOfRevenue",
-      text: "Issuance of the True Copy of Land Record",
-    },
-    {
-      id: "BoardOfRevenue",
-      value: "RegistrationofDocument",
-      text: "Registration of Document",
-    },
-    //District Muncipal Corporation
-    {
-      id: "DistrictMuncipal",
-      value: "DistrictMuncipal",
-      text: "Trade License",
-    },
-    {
-      id: "DistrictMuncipal",
-      value: "RoadCuttingPermission",
-      text: "Road Cutting Permission",
-    },
-    {
-      id: "DistrictMuncipal",
-      value: "PermissionforHoldingFairs",
-      text: "NOC/Permission for Holding Fairs, Events, Tournaments, and other Public Gatherings at DMC Central's Jurisdiction",
-    },
-    {
-      id: "DistrictMuncipal",
-      value: "PermissionforKeepingBuildingMaterial",
-      text: "Permission for Keeping Building Material on Roads during Construction",
-    },
-    {
-      id: "DistrictMuncipal",
-      value: "PermissionforSportsActivities",
-      text: "NOC/Permission for Holding Different Kind of Sports Activities in Playgrounds, Gymnasium, Sports Complex & Facilities of DMC-Central",
-    },
-    {
-      id: "DistrictMuncipal",
-      value: "PermissionforNurseriesandParks",
-      text: "NOC/Permission for Establishment of Nurseries in parks, Playgrounds & Open spaces of DMC-Centra",
-    },
-  ];
   const department = [
     { value: "Urban", text: "College Education Department" },
     { value: "labour", text: "Labour and Human Resources Department" },
@@ -1245,7 +962,6 @@ export default function FeedBack() {
     let filterData = [];
     let filterAreaData = [];
     let subData = [...areas];
-    // let data = [...gridData];
 
     if (departmentLabels[selectedValue]) {
       setLabel(departmentLabels[selectedValue]);
@@ -1271,294 +987,238 @@ export default function FeedBack() {
   };
   return (
     <>
-      {windowWidth <= 500 ? <MobileHeaderGeneric /> : <GenericHeader />}
-      {windowWidth <= 500 ? (
-        <div></div>
-      ) : (
-        <div style={{ height: "150px" }}></div>
-      )}
-
-      <div
-        className="row "
-        style={{
-          height: "250px",
-          background: "",
-          // backgroundColor:"red"
-        }}
-      >
-        <div
-          className="col-lg-12"
-          style={{
-            display: "flex",
-            justifyContent: "center",
-            marginTop: "50px",
-            // textAlign:"justify",
-            margin:"auto",
-            position:"relative"
+      <div className="row g-0 pt-2 justify-content-center w-100">
+        {/* <Basic/> */}
+        <Formik
+          initialValues={{
+            name: "",
+            email: "",
+          }}
+          validationSchema={Yup.object({
+            name: Yup.string().required("Name is required"),
+            email: Yup.string()
+              .email("Invalid email address")
+              .required("Email is required"),
+          })}
+          onSubmit={(values, { setSubmitting }) => {
+            setTimeout(() => {
+              alert(JSON.stringify(values, null, 2));
+              setSubmitting(false);
+            }, 400);
           }}
         >
-       <div className="" >
-       <h1 className={window.innerWidth <= 540 ?"ReportRegulatorybefore":"ReportRegulatoryDifficulties"}>Report Regulatory Difficulties</h1>
-         {/* <div className="row g-0 "    style={{width:"100%",marginBottom:20}}>
-         {arr1.map((val, ind) => {
-                return (
-                  <>
-                    <div
-                    className="col-md-6"
-                      // style={{
-                      //   display: "flex",
-                      //   flexDirection: "row",
-                      //   gap: "15px",
-                      // }}
-                    >
-                      <Dropdown
-                        ind={ind}
-                        arr={arr1}
-                        setArr={setArr1}
-                        arr2={arr2}
-                        setArr2={setArr2}
-                        val={val}
-                      />
-                      <div
-                      className="col-md-6"
-                        // style={{
-                        //   display: "flex",
-                        //   flexDirection: "column",
-                        //   gap: "20px",
-                        // }}
-                      >
-                      </div>
-                    </div>
-
-                    {arr1[ind] !== "SFA" && (
-                      <>
-                        {" "}
-                        <Dropdown1
-                          ind={ind}
-                          arr={arr2}
-                          setArr={setArr2}
-                          arr1={val}
-                        />
-                      </>
-                    )}
-                  </>
-                );
-              })}
-         </div> */}
-         <p
-            className={window.innerWidth <= 540 ? "mobileparaforfeedback" : "feedbackpara col-8"} style={{fontSize:window.innerWidth === 280 || window.innerWidth ===320 ? "17.5px": " ",textAlign:"center"}}
+          <div
+            className="col-md-8 ps-md-3 px-3 justify-content-center  "
+            style={{ backgroundColor: "re" }}
           >
-           Please contact us to share the regulatory constraints which you or your business has faced with Government of Sindh institutions.
-           Your response shall be kept confidential and will only be used to review the legislation for its improvement.
-          </p>
-       </div>
-        </div>
-      </div>
+              {({
+          values,
+          errors,
+          touched,
+          handleChange,
+          handleBlur,
+          handleSubmit,
+          isSubmitting,
+          /* and other goodies */
+        })=>{
 
-      {/* <div
-        className="row justify-content-center feedbackMUI"
-        style={{
-          height: window.innerWidth <= 912 ? "930px":"700px",
-          background: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(${BG1})`,
-          backgroundSize: "cover",
-          backgroundRepeat: "no-repeat",
         }}
-      >
-        <div className="col-lg-9" style={{height:window.innerWidth <= 912? "950px" :" ",marginTop: window.innerWidth >= 1024? "-49px": "30px"}} >
-          <div className="row justify-content-center px-5 mt-5 gapbwfields">
-            <div className="col-lg-4">
-              <TextField
-                className="feedBackTextField"
-                type="text"
-                variant="outlined"
-                placeholder="Enter your Name"
-                label="Name"
-                InputProps={{
-                  style: { borderRadius: "30px", border: "none" }, 
-                }}
-              />
-            </div>
-            <div className="col-lg-4">
-              <TextField
-                className="feedBackTextField"
-                type="text"
-                placeholder="Enter your Company Name"
-                label="Company Name"
-                InputProps={{
-                  style: { borderRadius: "30px", border: "none" }, 
-                }}
-              />
-            </div>
-            <div className="col-lg-4">
-              <TextField
-                className="feedBackTextField"
-                type="text"
-                placeholder="Enter your Address"
-                label="Address"
-                InputProps={{
-                  style: { borderRadius: "30px", border: "none" }, 
-                }}
-              />
-            </div>
-          </div>
-          <div className="row justify-content-center px-5  gapbwfields" style={{marginTop:window.innerWidth <= 912? "1.5rem": "3rem"}}>
-            <div className="col-lg-4">
-              <TextField
-                className="feedBackTextField"
-                type="text"
-                placeholder="Enter your Country/City"
-                label="Country-City"
-                InputProps={{
-                  style: { borderRadius: "30px", border: "none" }, 
-                }}
-              />
-            </div>
-            <div className="col-lg-4">
-              <TextField
-                className="feedBackTextField"
-                type="text"
-                placeholder="Enter your Mobile Number"
-                label="Mobile Number"
-                InputProps={{
-                  style: { borderRadius: "30px", border: "none" }, 
-                }}
-              />
-            </div>
-            <div className="col-lg-4">
-              <TextField
-                className="feedBackTextField"
-                type="text"
-                placeholder="Enter your Email"
-                label=" Email Address"
-                InputProps={{
-                  style: { borderRadius: "30px", border: "none" }, 
-                }}
-              />
-            </div>
-          </div>
-          <div className=  "row  px-5  gapbwfields" style={{marginTop:window.innerWidth <= 912? "1.5rem": "3rem"}}>
-            <div className="col-lg-4">
-              <TextField
-                className="feedBackTextField"
-                type="text"
-                placeholder="Enter your Website link"
-                label="Company Website"
-                InputProps={{
-                  style: { borderRadius: "30px", border: "none" }, 
-                }}
-              />
-            </div>
-            <div className="col-lg-4 ">
-              <select
-                type="select"
-                onChange={handleDepartments}
-                className="textField"
-                label="Department"
+            <Form>
+              <div
+                className="row g-0 justify-content-between"
+                style={{ width: "100%", backgroundColor: "yel" }}
+              >
+                <Fade left>
+                  <div className="col-sm-6">
+                    <h4> Name</h4>
+                    <TextField
+                      placeholder="Enter Your First Name"
+                      size="small"
+                      style={{ width: "96%" }}
+                      inputProps={{ maxLength: 50 }}
+                    />
+                  </div>
+                </Fade>
+                <Fade right>
+                  <div className="col-md-6">
+                    <h4> Company Name</h4>
+                    <TextField
+                      placeholder="Enter Your Company Name"
+                      size="small"
+                      style={{ width: "96%" }}
+                      inputProps={{ maxLength: 50 }}
+                    />
+                  </div>
+                </Fade>
+              </div>
+              <div className="row g-0" style={{ width: "100%" }}>
+                <Fade top>
+                  <div className="col">
+                    <h4>Address</h4>
+                    <TextField
+                      placeholder="Enter Your Address"
+                      size="small"
+                      style={{ width: "98%" }}
+                      inputProps={{ maxLength: 200 }}
+                    />
+                  </div>
+                </Fade>
+                {/* <div className="col-md-6" >
+       <h4>Country / City</h4>
+       <TextField
+         placeholder="Enter Your Country / City"
+         size="small"
+         style={{width:"96%",}}
+       />
+      </div> */}
+              </div>
+              <div className="row g-0" style={{ width: "100%" }}>
+                <Fade left>
+                  <div className="col-md-6">
+                    <h4>Country / City</h4>
+                    <TextField
+                      placeholder="Enter Your Country / City"
+                      size="small"
+                      style={{ width: "96%" }}
+                      inputProps={{ maxLength: 100 }}
+                    />
+                  </div>
+                </Fade>
+                <Fade right>
+                  <div className="col-md-6">
+                    <h4>Mobile Number</h4>
+                    <TextField
+                      placeholder="Enter Your  Moble Number"
+                      size="small"
+                      style={{ width: "96%" }}
+                      type="number"
+                      InputProps={{
+                        inputProps: {
+                          min: 0, // Set the minimum value
+                          max: 100, // Set the maximum value
+                        },
+                      }}
+                    />
+                  </div>
+                </Fade>
+                {/* <div className="col-md-6" >
+    <h4>
+    Email
+    </h4>
+    <TextField
+      placeholder="Enter Your Email Address"
+      size="small"
+      style={{width:"96%",}}
+  />
+    </div> */}
+              </div>
+              <div className="row g-0" style={{ width: "100%" }}>
+                {/* <Dropdown
+    /> */}
+                <Fade left>
+                  <div className="col-md-6">
+                    <h4>Email</h4>
+                    <Form>
+                      <TextField
+                        placeholder="Enter Your Email Address"
+                        size="small"
+                        style={{ width: "96%" }}
+                        // type="email"
+                        name="email"
+                        // value={}
+                      />
+                      <ErrorMessage name="email" />
+                    </Form>
+                  </div>
+                </Fade>
+                <Fade right>
+                  <div className="col-md-6">
+                    <h4>Company Website</h4>
+                    <TextField
+                      placeholder="Enter Your Company Website"
+                      size="small"
+                      style={{ width: windowWidth <= 500 ? "100%" : "96%" }}
+                    />
+                  </div>
+                </Fade>
+              </div>
+              <div
+                className="row g-0 "
                 style={{
-                  height: "53.5px",
-                  width: "100%", 
-                  color: "#757775",
-                  paddingTop: "10px",
-                  paddingRight: "30px", 
-                  borderRadius: "25px",
-                  fontFamily: "sans-serif",
-                  padding: "10px",
-                  position: "relative" 
+                  width: "100%",
+                  marginBottom: 20,
+                  display: "flex",
+                  justifyContent: "space-between",
                 }}
               >
-                {department.map((Val, index) => {
+                {arr1.map((val, ind) => {
                   return (
-                    <option key={index} value={Val.value}>
-                      {Val.text}
-                    </option>
+                    <>
+                      <div
+                        className="col-md-6"
+                        style={
+                          {
+                            //  width:"48%"
+                          }
+                        }
+                      >
+                        <Dropdown
+                          ind={ind}
+                          arr={arr1}
+                          setArr={setArr1}
+                          arr2={arr2}
+                          setArr2={setArr2}
+                          val={val}
+                          label={false}
+                        />
+                        <div className="col-md-6"></div>
+                      </div>
+
+                      <div className="col-md-6">
+                        {arr1[ind] !== "SFA" && (
+                          <>
+                            {" "}
+                            <Dropdown1
+                              ind={ind}
+                              arr={arr2}
+                              setArr={setArr2}
+                              arr1={val}
+                              label={false}
+                            />
+                          </>
+                        )}
+                      </div>
+                    </>
                   );
                 })}
-              </select>
-            </div>
-            <div className="col-lg-4 ">
-              {enableAreas === true ? (<>
-                <select
-                  type="select"
-                  onChange={handleArea}
-                  className="textField"
-                  label={label}
-                  renderValue={areas[0]}
-                  style={{
-                    height: "53.5px",
-                    width: "100%", 
-                    color: "#757775",
-                    paddingTop: "10px",
-                   borderRadius: "25px",
-                    fontFamily: "sans-serif",
-                    padding: "10px 36px 10px 10px",
-                    position: "relative" 
-                  }}
-                >
-                  {areaDropdown.map((Val, index) => {
-                    return (
-                      <option key={index} value={Val.value}>
-                        {Val.text}
-                      </option>
-                    );
-                  })}
-                </select>
-              </>) : (
-                <div className="col-lg-3"></div>
-              )}
-            </div>
+              </div>
+              <div className="row g-0" style={{ width: "100%" }}>
+                <Fade left>
+                  <div className="col">
+                    <TextArea
+                      rows={4}
+                      placeholder="Enter Your Feedback"
+                      style={{
+                        width: windowWidth <= 500 ? "100%" : "98%",
+                        fontSize: 18,
+                      }}
+                    />
+                  </div>
+                </Fade>
+              </div>
+              <div className="row g-0">
+                <div className="col-sm-12 mt-4 tocentersubmitbutton">
+                  <button type="submit" className="submit_button ">
+                    <span>Submit</span>
+                  </button>
+                </div>
+              </div>
+            </Form>
           </div>
-          <div
-            className="row justify-content-center px-5 gapfields "
-            style={{marginTop:window.innerWidth <= 912? "1rem": "3rem"}} 
-          >
-            <div className="col-lg-12">
-              <Box>
-                <textarea
-                  className={isTextareaFocused ? "textarea-focused" : ""}
-                  style={{
-                    borderRadius: "55px",
-                    height: "100px",
-                    color: "rgba(0, 0, 0, 0.87)",
-                    padding: "20px",
-                    width: "100%",
-                    fontSize: "1.0rem",
-                    fontWeight: "200",
-                    fontFamily: "sans-serif",
-                    resize: "none",
-                    border: "none", // Remove the default border
-                    outline: "none", // Remove the default outline
-                    transition: "border-color 0.3s",
-                    overflow: "hidden",
-                  }}
-                  placeholder="Give your valuable feedback here…"
-                  onFocus={() => setIsTextareaFocused(true)}
-                  onBlur={() => setIsTextareaFocused(false)}
-                />
-              </Box>
-            </div>
-          </div>
-          <div className="row">
-            <div className="col-lg-12 mt-4 tocentersubmitbutton" style={{marginLeft: window.innerWidth >= 1024? "52px": "0px"}} >
-              <button type="button" className="submitButton">
-                <span>Submit</span>
-              </button>
-            </div>
-          </div>
-          </div>
-    
-      </div> */}
-<FeedBackForm/>
-  <Footer />
+        </Formik>
+      </div>
     </>
   );
-}
+};
 
-
-
-
-
-
-
-
-
-
+export default FeedBackForm;
