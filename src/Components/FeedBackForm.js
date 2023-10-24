@@ -1007,11 +1007,8 @@ const Basic = () => (
             }, 400);
           }}
         >
-          <div
-            className="col-md-8 ps-md-3 px-3 justify-content-center  "
-            style={{ backgroundColor: "re" }}
-          >
-              {({
+         
+              {/* {({
           values,
           errors,
           touched,
@@ -1019,202 +1016,362 @@ const Basic = () => (
           handleBlur,
           handleSubmit,
           isSubmitting,
-          /* and other goodies */
         })=>{
+          <div
+          className="col-md-8 ps-md-3 px-3 justify-content-center  "
+          style={{ backgroundColor: "re" }}
+        >
+          <form onSubmit={handleSubmit}>
+          <div
+            className="row g-0 justify-content-between"
+            style={{ width: "100%", backgroundColor: "yel" }}
+          >
+            <Fade left>
+              <div className="col-sm-6">
+                <h4> Name</h4>
+                <TextField
+                  placeholder="Enter Your First Name"
+                  size="small"
+                  style={{ width: "96%" }}
+                  inputProps={{ maxLength: 50 }}
+                />
+              </div>
+            </Fade>
+            <Fade right>
+              <div className="col-md-6">
+                <h4> Company Name</h4>
+                <TextField
+                  placeholder="Enter Your Company Name"
+                  size="small"
+                  style={{ width: "96%" }}
+                  inputProps={{ maxLength: 50 }}
+                />
+              </div>
+            </Fade>
+          </div>
+          <div className="row g-0" style={{ width: "100%" }}>
+            <Fade top>
+              <div className="col">
+                <h4>Address</h4>
+                <TextField
+                  placeholder="Enter Your Address"
+                  size="small"
+                  style={{ width: "98%" }}
+                  inputProps={{ maxLength: 200 }}
+                />
+              </div>
+            </Fade>
+          </div>
+          <div className="row g-0" style={{ width: "100%" }}>
+            <Fade left>
+              <div className="col-md-6">
+                <h4>Country / City</h4>
+                <TextField
+                  placeholder="Enter Your Country / City"
+                  size="small"
+                  style={{ width: "96%" }}
+                  inputProps={{ maxLength: 100 }}
+                />
+              </div>
+            </Fade>
+            <Fade right>
+              <div className="col-md-6">
+                <h4>Mobile Number</h4>
+                <TextField
+                  placeholder="Enter Your  Moble Number"
+                  size="small"
+                  style={{ width: "96%" }}
+                  type="number"
+                  InputProps={{
+                    inputProps: {
+                      min: 0, // Set the minimum value
+                      max: 100, // Set the maximum value
+                    },
+                  }}
+                />
+              </div>
+            </Fade>
+          </div>
+          <div className="row g-0" style={{ width: "100%" }}>
+            <Fade left>
+              <div className="col-md-6">
+                <h4>Email</h4>
+            
+                  <TextField
+                    placeholder="Enter Your Email Address"
+                    size="small"
+                    style={{ width: "96%" }}
+                    name="email"
+                    value={values.email}
+                    onChange={handleChange}
+                    onBlur={handleBlur}
+                  />
+                  <ErrorMessage name="email" />
+              </div>
+            </Fade>
+            <Fade right>
+              <div className="col-md-6">
+                <h4>Company Website</h4>
+                <TextField
+                  placeholder="Enter Your Company Website"
+                  size="small"
+                  style={{ width: windowWidth <= 500 ? "100%" : "96%" }}
+                />
+              </div>
+            </Fade>
+          </div>
+          <div
+            className="row g-0 "
+            style={{
+              width: "100%",
+              marginBottom: 20,
+              display: "flex",
+              justifyContent: "space-between",
+            }}
+          >
+            {arr1.map((val, ind) => {
+              return (
+                <>
+                  <div
+                    className="col-md-6"
+                  >
+                    <Dropdown
+                      ind={ind}
+                      arr={arr1}
+                      setArr={setArr1}
+                      arr2={arr2}
+                      setArr2={setArr2}
+                      val={val}
+                      label={false}
+                    />
+                    <div className="col-md-6"></div>
+                  </div>
 
-        }}
-            <Form>
-              <div
-                className="row g-0 justify-content-between"
-                style={{ width: "100%", backgroundColor: "yel" }}
-              >
-                <Fade left>
-                  <div className="col-sm-6">
-                    <h4> Name</h4>
-                    <TextField
-                      placeholder="Enter Your First Name"
-                      size="small"
-                      style={{ width: "96%" }}
-                      inputProps={{ maxLength: 50 }}
-                    />
-                  </div>
-                </Fade>
-                <Fade right>
                   <div className="col-md-6">
-                    <h4> Company Name</h4>
-                    <TextField
-                      placeholder="Enter Your Company Name"
-                      size="small"
-                      style={{ width: "96%" }}
-                      inputProps={{ maxLength: 50 }}
-                    />
-                  </div>
-                </Fade>
-              </div>
-              <div className="row g-0" style={{ width: "100%" }}>
-                <Fade top>
-                  <div className="col">
-                    <h4>Address</h4>
-                    <TextField
-                      placeholder="Enter Your Address"
-                      size="small"
-                      style={{ width: "98%" }}
-                      inputProps={{ maxLength: 200 }}
-                    />
-                  </div>
-                </Fade>
-                {/* <div className="col-md-6" >
-       <h4>Country / City</h4>
-       <TextField
-         placeholder="Enter Your Country / City"
-         size="small"
-         style={{width:"96%",}}
-       />
-      </div> */}
-              </div>
-              <div className="row g-0" style={{ width: "100%" }}>
-                <Fade left>
-                  <div className="col-md-6">
-                    <h4>Country / City</h4>
-                    <TextField
-                      placeholder="Enter Your Country / City"
-                      size="small"
-                      style={{ width: "96%" }}
-                      inputProps={{ maxLength: 100 }}
-                    />
-                  </div>
-                </Fade>
-                <Fade right>
-                  <div className="col-md-6">
-                    <h4>Mobile Number</h4>
-                    <TextField
-                      placeholder="Enter Your  Moble Number"
-                      size="small"
-                      style={{ width: "96%" }}
-                      type="number"
-                      InputProps={{
-                        inputProps: {
-                          min: 0, // Set the minimum value
-                          max: 100, // Set the maximum value
-                        },
-                      }}
-                    />
-                  </div>
-                </Fade>
-                {/* <div className="col-md-6" >
-    <h4>
-    Email
-    </h4>
-    <TextField
-      placeholder="Enter Your Email Address"
-      size="small"
-      style={{width:"96%",}}
-  />
-    </div> */}
-              </div>
-              <div className="row g-0" style={{ width: "100%" }}>
-                {/* <Dropdown
-    /> */}
-                <Fade left>
-                  <div className="col-md-6">
-                    <h4>Email</h4>
-                    <Form>
-                      <TextField
-                        placeholder="Enter Your Email Address"
-                        size="small"
-                        style={{ width: "96%" }}
-                        // type="email"
-                        name="email"
-                        // value={}
-                      />
-                      <ErrorMessage name="email" />
-                    </Form>
-                  </div>
-                </Fade>
-                <Fade right>
-                  <div className="col-md-6">
-                    <h4>Company Website</h4>
-                    <TextField
-                      placeholder="Enter Your Company Website"
-                      size="small"
-                      style={{ width: windowWidth <= 500 ? "100%" : "96%" }}
-                    />
-                  </div>
-                </Fade>
-              </div>
-              <div
-                className="row g-0 "
-                style={{
-                  width: "100%",
-                  marginBottom: 20,
-                  display: "flex",
-                  justifyContent: "space-between",
-                }}
-              >
-                {arr1.map((val, ind) => {
-                  return (
-                    <>
-                      <div
-                        className="col-md-6"
-                        style={
-                          {
-                            //  width:"48%"
-                          }
-                        }
-                      >
-                        <Dropdown
+                    {arr1[ind] !== "SFA" && (
+                      <>
+                        {" "}
+                        <Dropdown1
                           ind={ind}
-                          arr={arr1}
-                          setArr={setArr1}
-                          arr2={arr2}
-                          setArr2={setArr2}
-                          val={val}
+                          arr={arr2}
+                          setArr={setArr2}
+                          arr1={val}
                           label={false}
                         />
-                        <div className="col-md-6"></div>
-                      </div>
-
-                      <div className="col-md-6">
-                        {arr1[ind] !== "SFA" && (
-                          <>
-                            {" "}
-                            <Dropdown1
-                              ind={ind}
-                              arr={arr2}
-                              setArr={setArr2}
-                              arr1={val}
-                              label={false}
-                            />
-                          </>
-                        )}
-                      </div>
-                    </>
-                  );
-                })}
-              </div>
-              <div className="row g-0" style={{ width: "100%" }}>
-                <Fade left>
-                  <div className="col">
-                    <TextArea
-                      rows={4}
-                      placeholder="Enter Your Feedback"
-                      style={{
-                        width: windowWidth <= 500 ? "100%" : "98%",
-                        fontSize: 18,
-                      }}
-                    />
+                      </>
+                    )}
                   </div>
-                </Fade>
-              </div>
-              <div className="row g-0">
-                <div className="col-sm-12 mt-4 tocentersubmitbutton">
-                  <button type="submit" className="submit_button ">
-                    <span>Submit</span>
-                  </button>
-                </div>
-              </div>
-            </Form>
+                </>
+              );
+            })}
           </div>
+          <div className="row g-0" style={{ width: "100%" }}>
+            <Fade left>
+              <div className="col">
+                <TextArea
+                  rows={4}
+                  placeholder="Enter Your Feedback"
+                  style={{
+                    width: windowWidth <= 500 ? "100%" : "98%",
+                    fontSize: 18,
+                  }}
+                />
+              </div>
+            </Fade>
+          </div>
+          <div className="row g-0">
+            <div className="col-sm-12 mt-4 tocentersubmitbutton">
+              <button type="submit" className="submit_button ">
+                <span>Submit</span>
+              </button>
+            </div>
+          </div>
+        </form>
+          </div>
+        }} */}
+       
+       {({
+         values,
+         errors,
+         touched,
+         handleChange,
+         handleBlur,
+         handleSubmit,
+         isSubmitting,
+       }) => (
+        <div
+        className="col-md-8 ps-md-3 px-3 justify-content-center  "
+        style={{ backgroundColor: "re" }}
+      >
+         <form onSubmit={handleSubmit}>
+         <div
+            className="row g-0 justify-content-between"
+            style={{ width: "100%", backgroundColor: "yel" }}
+          >
+            <Fade left>
+              <div className="col-sm-6">
+                <h4> Name</h4>
+                <TextField
+                  placeholder="Enter Your First Name"
+                  size="small"
+                  style={{ width: "96%" }}
+                  inputProps={{ maxLength: 50 }}
+                />
+              </div>
+            </Fade>
+            <Fade right>
+              <div className="col-md-6">
+                <h4> Company Name</h4>
+                <TextField
+                  placeholder="Enter Your Company Name"
+                  size="small"
+                  style={{ width: "96%" }}
+                  inputProps={{ maxLength: 50 }}
+                />
+              </div>
+            </Fade>
+          </div>
+          <div className="row g-0" style={{ width: "100%" }}>
+            <Fade top>
+              <div className="col">
+                <h4>Address</h4>
+                <TextField
+                  placeholder="Enter Your Address"
+                  size="small"
+                  style={{ width: "98%" }}
+                  inputProps={{ maxLength: 200 }}
+                />
+              </div>
+            </Fade>
+          </div>
+          <div className="row g-0" style={{ width: "100%" }}>
+            <Fade left>
+              <div className="col-md-6">
+                <h4>Country / City</h4>
+                <TextField
+                  placeholder="Enter Your Country / City"
+                  size="small"
+                  style={{ width: "96%" }}
+                  inputProps={{ maxLength: 100 }}
+                />
+              </div>
+            </Fade>
+            <Fade right>
+              <div className="col-md-6">
+                <h4>Mobile Number</h4>
+                <TextField
+                  placeholder="Enter Your  Moble Number"
+                  size="small"
+                  style={{ width: "96%" }}
+                  type="number"
+                  InputProps={{
+                    inputProps: {
+                      min: 0, // Set the minimum value
+                      max: 100, // Set the maximum value
+                    },
+                  }}
+                />
+              </div>
+            </Fade>
+          </div>
+          <div className="row g-0" style={{ width: "100%" }}>
+            <Fade left>
+              <div className="col-md-6">
+                <h4>Email</h4>
+            
+                  <TextField
+                    placeholder="Enter Your Email Address"
+                    size="small"
+                    style={{ width: "96%" }}
+                    name="email"
+                    value={values.email}
+                    onChange={handleChange}
+                    onBlur={handleBlur}
+                  />
+                  <ErrorMessage name="email" />
+              </div>
+            </Fade>
+            <Fade right>
+              <div className="col-md-6">
+                <h4>Company Website</h4>
+                <TextField
+                  placeholder="Enter Your Company Website"
+                  size="small"
+                  style={{ width: windowWidth <= 500 ? "100%" : "96%" }}
+                />
+              </div>
+            </Fade>
+          </div>
+          <div
+            className="row g-0 "
+            style={{
+              width: "100%",
+              marginBottom: 20,
+              display: "flex",
+              justifyContent: "space-between",
+            }}
+          >
+            {arr1.map((val, ind) => {
+              return (
+                <>
+                  <div
+                    className="col-md-6"
+                  >
+                    <Dropdown
+                      ind={ind}
+                      arr={arr1}
+                      setArr={setArr1}
+                      arr2={arr2}
+                      setArr2={setArr2}
+                      val={val}
+                      label={false}
+                    />
+                    <div className="col-md-6"></div>
+                  </div>
+
+                  <div className="col-md-6">
+                    {arr1[ind] !== "SFA" && (
+                      <>
+                        {" "}
+                        <Dropdown1
+                          ind={ind}
+                          arr={arr2}
+                          setArr={setArr2}
+                          arr1={val}
+                          label={false}
+                        />
+                      </>
+                    )}
+                  </div>
+                </>
+              );
+            })}
+          </div>
+          <div className="row g-0" style={{ width: "100%" }}>
+            <Fade left>
+              <div className="col">
+                <TextArea
+                  rows={4}
+                  placeholder="Enter Your Feedback"
+                  style={{
+                    width: windowWidth <= 500 ? "100%" : "98%",
+                    fontSize: 18,
+                  }}
+                />
+              </div>
+            </Fade>
+          </div>
+          <div className="row g-0">
+            <div className="col-sm-12 mt-4 tocentersubmitbutton">
+              <button type="submit" className="submit_button ">
+                <span>Submit</span>
+              </button>
+            </div>
+          </div>
+ 
+         </form>
+         </div>
+       )}
         </Formik>
       </div>
     </>

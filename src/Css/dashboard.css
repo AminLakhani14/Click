@@ -1,0 +1,186 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+p {
+  color: black !important;
+}
+/* h1,h2,h3,h4,h5,h6{
+    text-align: left;
+    color: black !important;
+
+} */
+  /* background-color: rgb(245, 245, 250); */
+  /* background-color: rgba(243, 241, 241, 0.589);
+  height: 100vh !important; */
+.statistics {
+  display: flex;
+  flex-direction: column;
+  min-height: 200px;
+  justify-content: space-between;
+  /* padding: 15px; */
+  padding: 15px 0 15px 0;
+  border-radius: 5px;
+  background-color: #ffffff;
+  margin-bottom: 13px;
+  /* box-shadow: 0px 0px 5px rgb(179, 175, 175); */
+  /* box-shadow: 0 0.2rem 1rem rgba(0, 0, 0, 0.12); */
+}
+.title {
+  /* color:linear-gradient(180deg, #720d1d 0%, #1f0308 100%) !important */
+  color: #054a91;
+}
+.box1_container {
+  background-color: #ffffff;
+  /* margin: .1px; */
+  /* margin-right: 5; */
+
+  height: 100px;
+  /* width: 20% !important; */
+  border-radius: 5px;
+  /* align-items: flex-start !important; */
+  padding-top: 0 !important;
+  margin-top: 0 !important;
+  color: black;
+  box-shadow: 0 0.2rem 1rem rgba(0, 0, 0, 0.12);
+
+}
+.box1_container h1 {
+  text-align: center;
+  color: #054a91;
+}
+.box1_container h4 {
+  text-align: center;
+  color: #054a91;
+  /* font-weight: 700; */
+  font-size: 18px !important;
+}
+.chart_container {
+  display: flex !important;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.pie_chart {
+  /* background-color: rgb(245, 245, 250); */
+  background-color: #ffffff;
+  box-shadow: 0 0.2rem 1rem rgba(0, 0, 0, 0.12);
+  border-radius: 5px;
+  height: 70vh;
+  padding: 15px 20px 15px 20px;
+  width: 48.76%;
+}
+.bar_chart {
+  padding: 15px 20px 15px 20px;
+  /* background-color: rgb(245, 245, 250); */
+  background-color: #ffffff;
+  box-shadow: 0 0.2rem 1rem rgba(0, 0, 0, 0.12);
+  height: 70vh;
+  border-radius: 5px;
+
+  width: 48.76%;
+}
+.bar_chart h3,
+.bar_chart h4 {
+  color: #054a91 !important;
+  text-align: left;
+}
+.donutchart-innertext-value:hover {
+  /* background-color: red !important; */
+  /* font-size: 20px; */
+  font-weight: bold;
+  margin: 0px;
+}
+.toggled {
+  background-color: red !important;
+}
+.false-arcs-path {
+  height: 200px !important;
+}
+.path {
+  background-color: red !important;
+}
+.selected {
+  color: red !important;
+  background-color: red !important;
+}
+.donutchart {
+  font-size: 18px !important;
+  font-weight: bold !important;
+  margin-top: 100px !important;
+  background-color: red !important;
+}
+.donutchart-arcs-path,
+.donutchart-legend-item {
+  fill-opacity: 0;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+  animation-name: DrawLine, FillIn;
+  animation-delay: 0.5s, 2s;
+  animation-duration: 3s, 1s;
+  stroke-dasharray: 1500;
+  stroke-dashoffset: 1500;
+  background-color: red !important;
+}
+
+@media only screen and (max-width: 500px) {
+  .chart_container {
+    display: block !important;
+    /* justify-content: space-between; */
+    margin-bottom: 10px;
+  }
+  .pie_chart {
+    /* background-color: rgb(245, 245, 250); */
+    background-color: #ffffff;
+    box-shadow: 0px 0px 5px rgb(179, 175, 175);
+    border-radius: 5px;
+    height: 100vh;
+    padding: 15px 20px 15px 20px;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .bar_chart {
+    padding: 15px 20px 15px 20px;
+    /* background-color: rgb(245, 245, 250); */
+    background-color: #ffffff;
+    box-shadow: 0px 0px 5px rgb(179, 175, 175);
+    height: 70vh;
+    border-radius: 5px;
+
+    width: 100%;
+  }
+  .bar{
+    width: 600px !important;
+    height: 350px !important;
+    background-color: red !important;
+    margin-left: 100px !important;
+  }
+  .statistics {
+    display: flex;
+    flex-direction: column;
+    height:100vh;
+    justify-content: start;
+    padding: 15px;
+    border-radius: 5px;
+    background-color: #ffffff;
+    margin-bottom: 0px;
+    box-shadow: 0px 0px 5px rgb(179, 175, 175);
+    /* background-color: rebeccapurple; */
+  }
+  .title{
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+}
+
+@media only screen and (max-width: 500px){
+  .bar{
+    height: 2000px !important;
+    width: 2000px !important;
+  }
+  .pie{
+    width: 50% !important;
+
+  }
+}

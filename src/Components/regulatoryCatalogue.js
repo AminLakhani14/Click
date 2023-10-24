@@ -2768,7 +2768,7 @@ const GetGridData = (data) =>{
       >
         <div className="col-lg-2"></div>
         <div className="col-lg-8">
-          <h1 className="mainHeading">Regulatory Directory of Government of Sindh</h1>
+          <h1 className={window.innerWidth <= 540 ?"ReportRegulatorybefore":"mainHeading"} >Regulatory Directory of Government of Sindh</h1>
         </div>
         <div className="row">
           <div className="col-8 m-auto">
