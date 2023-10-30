@@ -28,6 +28,10 @@ import  SindhFoodAuthorityMaps from "../assets/mapS.S/SindhFoodAuthority.png"
 import SchoolEducationMaps from "../assets/mapS.S/SchoolEducation.png"
 import IndustrialDepartmentMaps from "../assets/mapS.S/IndustrialDepartment.png"
 import SindhEnvironmentProtectionMaps from "../assets/mapS.S/SindhEnviromentalprotection.png"
+import SindhHealthCareCommission from "../assets/mapS.S/Sindh Health Care Commission.png"
+import KarachiWaterSewerageBoard from "../assets/mapS.S/Karachi Water Sewerage Board .png" 
+import SindhRevenueBoard from "../assets/mapS.S/Sindh Revenue Board.png"
+import SindhEmployeesSocialSecurityInstitution from "../assets/mapS.S/Sindh Employees Social Security Institution (SESSI).png" 
 const arr = [
 
     {
@@ -341,7 +345,9 @@ const arr = [
       l5:"▪ HCE Equipment and Machinery list; ",
       l6:"▪ Affidavit on stamp paper (sample available in the application form);",
       l7:"▪ Pay order / demand draft in the name of the Sindh Health Care Commission for the registration fee as specified in below table;",
-      table:HealthCareTable
+      table:HealthCareTable,
+      map:SindhHealthCareCommission,
+      location:"https://www.google.com/maps/place/Sindh+Health+Care+Commision/@24.8583639,67.0495759,17z/data=!3m2!4b1!5s0x3eb33e81570b5473:0x5dc46c3300de7ce2!4m6!3m5!1s0x3eb33eec63544583:0xd50963284260903f!8m2!3d24.8583591!4d67.0521508!16s%2Fg%2F11f3wcyn1p?entry=ttu"
  
     },
     {
@@ -2119,6 +2125,8 @@ const arr = [
       timeLine: "Same Day",
       fee:"",
       officials: "▪ Director C&amp;B\n▪ Director IT\n",
+      map:SindhEmployeesSocialSecurityInstitution,
+      location:"https://www.google.com/maps/search/Sindh+Employees+Social+Security+Institution+(SESSI)+Plot+no.+G,+270,+Jamal+Goth+Landhi+Karachi+Mansehra+Colony+Mansehra+Colony+Sector+32+Landhi+Town,+Karachi,+Karachi+City,+Sindh/@24.8612297,67.1223026,11.5z?entry=ttu"
       // validity: "",                   
       // renewalFee:""
     },
@@ -2614,6 +2622,8 @@ const arr = [
       // validity: "",                   
       // renewalFee:""
       documenttype: "Law / Rules / Regulations	",
+      map:SindhRevenueBoard,
+      location:"https://www.google.com/maps/place/Sindh+Revenue+Board+Karachi/@24.8583667,67.0103355,13z/data=!3m1!5s0x3eb33e0bb3bf44e7:0xde47060d5f31a781!4m10!1m2!2m1!1sSindh+Revenue+Board!3m6!1s0x3eb33e0a54d24ab3:0xa79dcdbd2b4625a!8m2!3d24.8508901!4d67.0194336!15sChNTaW5kaCBSZXZlbnVlIEJvYXJkkgERZ292ZXJubWVudF9vZmZpY2XgAQA!16s%2Fg%2F11bccgny25?entry=ttu"
 
     },
     {
@@ -2672,6 +2682,8 @@ const arr = [
         // validity: "",                   
         // renewalFee:""
         documenttype: "Law / Rules / Regulations	",
+        map:KarachiWaterSewerageBoard,
+        location:"https://www.google.com/maps/place/Karachi+Water+Sewerage+Board/@24.9275284,67.079292,14z/data=!4m10!1m2!2m1!1sKarachi+Water+Sewerage+Board+!3m6!1s0x3eb33f352288be1f:0x2ac113172fa92e92!8m2!3d24.9248042!4d67.0926816!15sChxLYXJhY2hpIFdhdGVyIFNld2VyYWdlIEJvYXJkkgERZ292ZXJubWVudF9vZmZpY2XgAQA!16s%2Fg%2F11xk1wbnb?entry=ttu"
 
     },
   ];

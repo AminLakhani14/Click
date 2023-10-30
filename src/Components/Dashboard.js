@@ -1,24 +1,23 @@
-import React from "react";
+import React, { useCallback } from "react";
 import GenericHeader from "./genericHeader";
 import { useState } from "react";
 import { useEffect } from "react";
 import MobileHeaderGeneric from "./MobileHeaderGeneric";
 import { BarChart } from "@mui/x-charts/BarChart";
-import Roll from "react-reveal/Roll";
+// import Roll from "react-reveal/Roll";
 import Checkbox from "@mui/material/Checkbox";
 import { PieChart, pieArcClasses } from "@mui/x-charts/PieChart";
 import DonutChart from "react-donut-chart";
 // import { Chart as ChartJs, Tooltip, Title, ArcElement, Legend, } from 'chart.js';
 import {
-  Chart as ChartJs,
+  Chart as ChartJS,
   CategoryScale,
   LinearScale,
   BarElement,
   Title,
   Tooltip,
   Legend,
-  ArcElement,
-} from "chart.js";
+} from 'chart.js';
 import { Chart, Doughnut } from "react-chartjs-2";
 
 import "../Css/dashboard.css";
@@ -26,20 +25,22 @@ import { Select } from "@mui/material";
 import { Footer } from "antd/es/layout/layout";
 
 import { Bar } from "react-chartjs-2";
-import { Faker } from "@faker-js/faker";
+import { Faker, faker } from "@faker-js/faker";
+// import {faker} from 'faker';
 import Donut from "./Donut";
 import { Fade, Zoom } from "react-reveal";
 import { red } from "@mui/material/colors";
+import CountUp from "react-countup";
 
-ChartJs.register(
-  Tooltip,
-  Title,
-  ArcElement,
-  Legend,
+ChartJS.register(
   CategoryScale,
   LinearScale,
-  BarElement
+  BarElement,
+  Title,
+  Tooltip,
+  Legend
 );
+
 
 // const data = {
 //     datasets: [{
@@ -60,9 +61,8 @@ ChartJs.register(
 // };
 
 const Dashboard = () => {
-  const [selectedDepartment, setSelectedDepartment] = useState(
-    "Agriculture Department"
-  );
+  const [selectedDepartment, setSelectedDepartment] =
+    useState("College Department");
   const [selectedDepart, setSelectedDepart] = useState(
     "License For Pesticide Dealership"
   );
@@ -71,6 +71,11 @@ const Dashboard = () => {
   const [selectedItem, setSelectedItem] = useState(true);
   const [Color, setColor] = useState(0);
   const [toggleSelect, setToggleSelect] = useState(false);
+  const [showDropdown, setshowDropdown] = useState(false);
+  //  let [LicenseFilter, setLicenseFilter] = useState([])
+
+  ///////////////////////////////
+  const [count, setCount] = useState(0);
 
   const [windowWidth, setwindowWidth] = useState(window.innerWidth);
 
@@ -83,22 +88,6 @@ const Dashboard = () => {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
-  // const [data, setData] = useState({
-  //   datasets: [{
-  //     data: [10, 20, 30],
-  //     backgroundColor: [
-  //       'pink',
-  //       'blue',
-  //       'yellow'
-  //     ]
-  //   },
-  //   ],
-  //   labels: [
-  //     'Red',
-  //     'Yellow',
-  //     'Blue'
-  //   ],
-  // });
   useEffect(() => {
     const fetchData = () => {
       fetch("https://jsonplaceholder.typicode.com/users")
@@ -153,43 +142,16 @@ const Dashboard = () => {
     "June",
     "July",
   ];
-  // const options = {
-  //     responsive: true,
-  //     plugins: {
-  //       legend: {
-  //         position: 'top' ,
-  //       },
-  //       title: {
-  //         display: false,
-  //         text: 'Chart.js Bar Chart',
-  //       },
-  //     },
-  //   };
 
-  const options = {
-    // Customize the appearance of the labels
-    legend: {
-      display: true,
-      position: "right",
-      labels: {
-        fontColor: "red", // Set label text color
-        fontSize: 16,
-        backgroundColor: "red", // Set label text font size
-      },
-    },
-  };
   const data = {
     labels,
     datasets: [
       {
-        // label: 'Dataset 1',
-        // data: labels.map(() => Faker.datatype.number({ min: 0, max: 1000 })),
         data: [1, 2, 3],
         backgroundColor: "rgba(255, 99, 132, 0.5)",
       },
       {
         label: "Dataset 2",
-        // data: labels.map(() => Faker.datatype.number({ min: 0, max: 1000 })),
         backgroundColor: "rgba(53, 162, 235, 0.5)",
       },
     ],
@@ -198,9 +160,7 @@ const Dashboard = () => {
     labels: ["college Department", "Labour Department", "Health Department"],
     datasets: [
       {
-        // label: 'Dataset 1',
         data: [1, 2, 3],
-        // borderColor: '#36A2EB',
         backgroundColor: "#9BD0F5",
         backgroundColor: ["pink", "skyblue", "green"],
         labels: false,
@@ -230,26 +190,11 @@ const Dashboard = () => {
   // };
   const handleDepartment = (event) => {
     setSelectedDepartment(event.target.value);
-    // console.log(LicenseFilter[0]?.yearWiseData)
-    // setShowDepartment(event.target.innerHTML)
+    // setshowDropdown(true)
   };
   const handleDepart = (event) => {
     setSelectedDepart(event.target.value);
   };
-  console.log("lable", selectedDepart);
-  const a = [
-    {
-      id: 0,
-      value: 10,
-      label: "Labour Department",
-      style: { backgroundColor: "red" },
-    },
-    { id: 1, value: 15, label: "Labour Department" },
-    { id: 3, value: 12, label: "Labour Department" },
-    { id: 5, value: 5, label: "Labour Department" },
-    { id: 6, value: 10, label: "Labour Department" },
-    { id: 7, value: 20, label: "Labour Department" },
-  ];
 
   const handleItemClick = (item, toggled) => {
     // When an item is clicked:
@@ -264,60 +209,20 @@ const Dashboard = () => {
     //   setSelectedItem(true)
     //  }
   };
-  const arr = [
-    {
-      id: 1,
-      label: "Health Department",
-      value: 30,
-    },
-    {
-      id: 2,
-      label: "College Department",
-      value: 30,
-      className: "donutchart",
-      // isEmpty: true,
-    },
-    {
-      id: 3,
-      label: "Labour Department",
-      value: 30,
-    },
-    {
-      id: 4,
-      label: "Sindh Food Authority",
-      value: 30,
-    },
-    {
-      id: 5,
-      label: "Board Of Revenue Sindh",
-      value: 30,
-    },
-    {
-      id: 6,
-      label: "Industrial Department",
-      value: 30,
-    },
-    {
-      id: 7,
-      label: "Energy Department",
-      value: 30,
-    },
-  ];
-  const dot = [
-  
+
+  const color = [
     "#8CD3FF",
-    '#003280',
+    "#003280",
     "#F54AA6",
     "#F2D14F",
     "#D99AC9",
     "#9ACCDB",
-    
+
     "#FDC263",
 
     "#CBC4AA",
-   
   ];
-  const year = [
+  const xAxis = [
     "2018-19 Year",
     "2019-20 Year",
     "2020-21 Year",
@@ -325,77 +230,25 @@ const Dashboard = () => {
     "2022-23 Year",
   ];
   const department = [
+    { value: "College Department", text: "College Department" },
     {
-      value: "College Education Department",
-      text: "College Education Department",
-    },
-    {
-      value: "Labour and Human Resources Department",
-      text: "Labour and Human Resources Department",
-    },
-    { value: "Sindh Food Authority (SFA)", text: "Sindh Food Authority (SFA)" },
-    { value: "Health Department", text: "Health Department" },
-    {
-      value: "School Education and Literacy Department",
-      text: "School Education and Literacy Department",
-    },
-    {
-      value: "Sindh Health Care Commission",
-      text: "Sindh Health Care Commission",
-    },
-    {
-      value: "Industries and Commerce Department",
-      text: "Industries and Commerce Department",
-    },
-    {
-      value: "Sindh Environmental Protection Agency (SEPA)",
-      text: "Sindh Environmental Protection Agency (SEPA)",
-    },
-    {
-      value: "Sindh Building Control Authority (SBCA)",
-      text: "Sindh Building Control Authority (SBCA)",
-    },
-    { value: "Agriculture Department", text: "Agriculture Department" },
-    {
-      value: "Sindh Industrial Trading Estate (S.I.T.E) Limited",
-      text: "Sindh Industrial Trading Estate (S.I.T.E) Limited",
-    },
-    {
-      value: "Sindh Small Industries Corporation (SSIC)",
-      text: "Sindh Small Industries Corporation (SSIC)",
-    },
-    { value: "Board Of Revenue", text: "Board of Revenue" },
-    {
-      value: "District Municipal Corporation",
-      text: "District Municipal Corporation (DMC)",
-    },
-    {
-      value: "Karachi Metropolitan Corporation",
-      text: "Karachi Metropolitan Corporation (KMC)",
-    },
-    { value: "Energy Department", text: "Energy Department" },
-    {
-      value: "SindhEmployeesSecurity",
-      text: "Sindh Employees Social Security Institution (SESSI)",
-    },
-    {
-      value: "ExciseTaxation",
+      value: "Excise Taxation Department",
       text: "Excise, Taxation & Narcotics Control Department",
     },
+    { value: "Agriculture Department", text: "Agriculture Department" },
+    { value: "Industrial Department", text: "Industrial Department" },
+    { value: "Health Department", text: "Health Department" },
     { value: "Sindh Revenue Board", text: "Sindh Revenue Board" },
-    { value: "LocalGovernment", text: "Local Government Department" },
-    {
-      value: "Karachi Water And Sewerage",
-      text: "Karachi Water &amp; Sewerage Board",
-    },
   ];
   const dataForDonut = [
+    ///////////// labour Department \\\\\\\\\\\\\\\
     {
       id: 1,
       label: "License For Pesticide Dealership",
       value: 73,
       text: "Agriculture Department",
       yearWiseData: [12, 13, 14, 17, 17],
+      sun: xAxis,
     },
     {
       id: 2,
@@ -403,55 +256,169 @@ const Dashboard = () => {
       value: 30,
       text: "Agriculture Department",
       yearWiseData: [9, 2, 12, 26, 16],
-
-      // isEmpty: true,
+      sun: xAxis,
     },
-
+    ////////////////Excise deparment ///////////////
     {
       id: 3,
       label: "ExciseTaxation",
       value: 30,
-      text: "ExciseTaxation",
+      text: "Excise Taxation Department",
       yearWiseData: [9, 2, 12, 26, 16],
+      sun: xAxis,
       // isEmpty: true,
     },
+    //////////////////////college Department
+    {
+      id: 4,
+      label: "Private College",
+      value: 106,
+      text: "College Department",
+      yearWiseData: [9, 2, 12, 26, 16],
+      sun: xAxis,
+    },
+    ////////////////Industrial Department/////////////
+    {
+      id: 5,
+      label: "Karachi Region",
+      value: 15,
+      text: "Industrial Department",
+      yearWiseData: [100, 4.68, 50],
+      sun: ["1986-87 Year", "2002-03 Year", "2003-04 Year"],
+    },
+    // {
+    //   id:6,
+    //   label:'Hyderabad Region',
+    //   value:7,
+    //   text:'Industrial Department',
+    //   yearWiseData:[5, 5, 10.24, 51.21+50+30.20,50,13.50,4.68,50,50 ],
+    //   sun:['1974-75 Year','1975-76 Year','1982-83 Year','1985-86 Year','1986-87 ','1992-93','2002-03','2007-08','2014-15']
+    // },
+    // {
+    //   id:7,
+    //   label:'Sukkur Region',
+    //   value:8,
+    //   text:'Industrial Department',
+    //   yearWiseData:[110.5, 50, 15, 59.39, 50],
+    //   sun:['1963-64','1985-86','1991-92','1993-94','2008-09']
+
+    // },
+    // {
+    //   id:7,
+    //   label:'Larkana Region',
+    //   value:8,
+    //   text:'Industrial Department',
+    //   yearWiseData:[59.05,36+14.32],
+    //   sun:['1964-65','1984-85']
+    // },
+    ///////////////Health Department////////////////
+    {
+      id: 8,
+      label: "Registration Certificate",
+      value: 5448,
+      text: "Health Department",
+      yearWiseData: [3832, 584, 446, 411, 175],
+      sun: xAxis,
+    },
+    {
+      id: 9,
+      label: "Provsional License",
+      value: 311,
+      text: "Health Department",
+      yearWiseData: [17, 205, 37, 22, 30],
+      sun: xAxis,
+    },
+    {
+      id: 10,
+      label: "Reguler License",
+      value: 311,
+      text: "Health Department",
+      yearWiseData: [0, 0, 0, 10, 12],
+      sun: xAxis,
+    },
+    /////////////////Sindh Revenue Board/////////////
+    {
+      id: 11,
+      label: "Sindh Revenue Board",
+      value: 153136.40036,
+      text: "Sindh Revenue Board",
+      yearWiseData: [35563, 40036, 149580],
+      sun: ["2018-19 Year", "2019-20 Year", "2020-21 Year"],
+    },
   ].filter((item) => {
+    // setSelectedDepart(item?.label)
     return selectedDepartment == item?.text ? item : null;
   });
-
+  useEffect(() => {
+    setSelectedDepart(dataForDonut[0]?.label);
+  }, [selectedDepartment]);
   let LicenseFilter;
   if (dataForDonut[0]) {
     LicenseFilter = dataForDonut?.filter((item) => {
+      // selectedDepart()
       return item?.label == selectedDepart && item;
     });
   }
-  console.log(
-    "🚀 ~ file: Dashboard.js:376 ~ Dashboard ~ LicenseFilter:",
-    dataForDonut
-  );
-
-  // console.log("🚀 ~ file: Dashboard.js:373 ~ LicenseFilter ~ LicenseFilter:", LicenseFilter)
-  const barData = [12, 13, 14, 17, 17];
   const add = () => {
-    
-    if (dataForDonut.length == 1) {
-      console.log(
-        "🚀 ~ file: Dashboard.js:429 ~ add ~ dataForDonut:",
-        dataForDonut
-      );
+    debugger;
+    if (LicenseFilter) {
       return dataForDonut[0]?.yearWiseData;
-    } else if (LicenseFilter) {
-      return LicenseFilter[0]?.yearWiseData;
-    } else {
+    }
+    // else if (LicenseFilter) {
+    //   // setSelectedDepart(LicenseFilter[0]?.label)
+    //     return LicenseFilter[0]?.yearWiseData;
+
+    // }
+    else {
       return [1, 1, 1, 1, 1];
     }
   };
-  const label = {
-    label: "My Checkbox",
-    disabled: false,
-    value: "ads",
-    // Other properties
+ const options = {
+    responsive: true,
+    plugins: {
+      legend: {
+        position: 'top',
+        display:false
+      },
+      title: {
+        display: false,
+        text: 'Chart.js Bar Chart',
+      },
+      Bar:{
+        color:'red',
+        backgroundColor:"red"
+      }
+    },
   };
+  
+  const lable = LicenseFilter[0]?.sun || [
+    "2018-19",
+    "2019-20",
+    "2020-21",
+    "2021-22",
+    "2022-23",
+  ]
+  
+  const ahmer = {
+    labels:lable
+    ,
+    datasets: [
+      {
+        label: LicenseFilter[0]?.label,
+        data: LicenseFilter[0]?.yearWiseData || add(),
+        // data:[{min:0,max:1000}],
+        // data:
+        backgroundColor:color[Math.floor(Math.random() * 6) + 1] ,
+      },
+      // {
+      //   label: 'Dataset 2',
+      //   // data: zain.map(() => faker.datatype.number({ min: 0, max: 1000 })),
+      //   data:zain,
+      //   backgroundColor: 'rgba(53, 162, 235, 0.5)',
+      // },
+    ],
+  };
+  
   return (
     <>
       {windowWidth <= 500 ? <MobileHeaderGeneric /> : <GenericHeader />}
@@ -460,20 +427,42 @@ const Dashboard = () => {
       ) : (
         <div style={{ height: "150px" }}></div>
       )}
-      {/* <div className="App" style={{width:'30%', height:'30%',}}>
-         <Doughnut data={d}
-        //  options={options}
-         />
-         </div> */}
       <div className="parent_con  px-md-5  px-2">
         <div className="statistics ">
-          <div className="row mb-sm-5 mb-md-4  justify-content-between g-0 ">
-            <div className="col ">
-              <Fade left>
-                <h3 className="title">Sindh Statistics Dashboard</h3>
-              </Fade>
+          <div className="row g-0 mb-4 d-flex justify-content-center">
+            <div className="d-flex justify-content-center ">
+              {/* <Fade top> */}
+                <h1 className="title">Business Registrations in Karachi</h1>
+              {/* </Fade> */}
             </div>
-            <Fade right>
+          </div>
+          <div className="row mb-sm-5 mb-md-4  justify-content-between g-0 ">
+            <div className="col-md-4 ">
+              {/* <Fade left>
+                <h3 className="title">Sindh Statistics Dashboard</h3>
+              </Fade> */}
+              {/* <Fade left> */}
+                <div className="">
+                  <Select
+                    size="small"
+                    native
+                    style={{ width: "100%" }}
+                    // defaultValue={selectedDepartment}
+                    // value={selectedDepartment}
+                    onChange={handleDepartment}
+                    inputProps={{
+                      name: "case",
+                      id: "outlined-age-native-simple",
+                    }}
+                  >
+                    {department.map((item) => {
+                      return <option value={item.value}>{item.text}</option>;
+                    })}
+                  </Select>
+                </div>
+              {/* </Fade> */}
+            </div>
+            {/* <Fade right>
               <div className="col-md-4">
                 <Select
                   size="small"
@@ -492,7 +481,27 @@ const Dashboard = () => {
                   })}
                 </Select>
               </div>
-            </Fade>
+            </Fade> */}
+            {dataForDonut.length > 1 && (
+              <div className="col-4">
+                <Select
+                  size="small"
+                  native
+                  style={{ width: "100%" }}
+                  defaultValue={selectedDepart}
+                  value={selectedDepart}
+                  onChange={handleDepart}
+                  inputProps={{
+                    name: "case",
+                    id: "outlined-age-native-simple",
+                  }}
+                >
+                  {dataForDonut?.map((item) => {
+                    return <option value={item.label}>{item.label}</option>;
+                  })}
+                </Select>
+              </div>
+            )}
             {/* <div className="row g-0 ">
               <div className="col-12 d-flex justify-content-end">
                 {dataForDonut[1] && (
@@ -556,12 +565,14 @@ const Dashboard = () => {
               );
             })}
           </div> */}
-            <div className=" row g-0 justify-content-between ">
-            {year.map((item, index) => {
+          <div
+            className={` row g-0 justify-content-between mt-4 mt-sm-0 bg-primary `}
+          >
+            {/* {xAxis.map((item, index) => {
               return (
                 <Zoom>
                   <div
-                    className={`box1_container  col-sm-12 col-md-2   ${
+                    className={`box1_container  col-sm-12 col-md-2 mb-sm-3 mb-md-0 mb-3 ${
                       (index + 1) % 5== 0? 0 : "me-3"
                      }`}
                     // style={{marginRight:windowWidth =>1400 && 400}}
@@ -576,11 +587,97 @@ const Dashboard = () => {
                   
                 </Zoom>
               );
-            })}
+            })} */}
+            {/* {xAxis.map((item, index) => {
+              return (
+                <Zoom>
+                  <div
+                    className={`box1_container  col-sm-12 col-md-2 mb-sm-3 mb-md-0 mb-3 `}
+                    // style={ (index + 1) % 5== 0? {} :{marginRight:"32px",backgroundColor:"red"}}
+                  >
+                    <div className="department">
+                      <h4>{item}</h4>
+                    </div>
+                    <div className="tolat_department">
+                      <h1>{add()[index]}</h1>
+                    </div>
+                  </div>
+                  
+                </Zoom>
+              );
+            })} */}
           </div>
+          {/* <Fade top> */}
+            <div
+              className={` card_container ${
+                dataForDonut[0]?.sun.length == 3 ? "col-7" : ""
+              }`}
+            >
+              {LicenseFilter.length > 1
+                ? LicenseFilter[0]?.sun?.map((item, index) => {
+                    return (
+                      <div
+                        className={`box1_container 
+
+         `}
+                        style={{
+                          width:
+                            dataForDonut[0]?.sun?.length == 3 ? "20%" : "17.9%",
+                          marginRight: (index + 1) % 5 == 0 ? 0 : 0,
+                        }}
+                      >
+                        <div className="department">
+                          <h4>{item}</h4>
+                        </div>
+                        <div className="tolat_department">
+                          {/* LicenseFilter[0]?.yearWiseData[index] */}
+                          <h1>
+                            {(
+                              <CountUp
+                                start={0}
+                                end={LicenseFilter[0]?.yearWiseData[index]}
+                                delay={2}
+                              ></CountUp>
+                            ) ?? add()[index]}
+                          </h1>
+                        </div>
+                      </div>
+                    );
+                  })
+                : dataForDonut[0]?.sun?.map((item, index) => {
+                    return (
+                      <div
+                        className={`box1_container  ${
+                          LicenseFilter[0]?.sun.length > 5 && "mb-5"
+                        } `}
+                        style={{
+                          width:
+                            dataForDonut[0]?.sun?.length == 3 ? "30%" : "17.9%",
+                        }}
+                      >
+                        <div className="department">
+                          <h4>{item}</h4>
+                        </div>
+                        <div className="tolat_department">
+                          <h1>
+                            {(
+                              <CountUp
+                                start={0}
+                                end={LicenseFilter[0]?.yearWiseData[index]}
+                                delay={0}
+                              ></CountUp>
+                            ) ?? add()[index]}
+                          </h1>
+                        </div>
+                      </div>
+                    );
+                  })}
+            </div>
+          {/* </Fade> */}
         </div>
+
         <div className="chart_container">
-          <Fade left>
+          {/* <Fade > */}
             <div className="pie_chart ">
               {/* <div className="row justify-content-between g-0  mb-3">
               <div className="col ">
@@ -606,7 +703,7 @@ const Dashboard = () => {
                 </div> */}
 
               <div className="row g-0 ">
-                <div className="col-md-6  col-xxl-8   mt-5 ">
+                <div className="col-md-12 col-lg-6 xxl-4 pe-xxl-4 mt-md-0 mt-5 mt-lg-5 mt-xxl-0 ">
                   {/* <Donut/> */}
                   {/* <PieChart
       
@@ -614,7 +711,7 @@ const Dashboard = () => {
         {
           
           highlightScope: { faded: 'global', highlighted: 'item' },
-          faded: { innerRadius: 30, additionalRadius: -30 },
+          faded: { innerRadius: 30,  additionalRadius: -30 },
           data:a,
           cornerRadius:5,
 
@@ -629,7 +726,7 @@ const Dashboard = () => {
         marginRight:10,
         display:"flex",
         justifyContent:"space-between",
-        padding:0,
+         padding:0,
       
       }}
       height={350}
@@ -641,7 +738,7 @@ const Dashboard = () => {
                     innerWidth={500}
                     legend={false}
                     clickToggle={false}
-                    colors={dot}
+                    colors={color}
                     data={
                       dataForDonut || [
                         {
@@ -653,21 +750,42 @@ const Dashboard = () => {
                         },
                       ]
                     }
-                    // interactive={false}
-
-                    height={380}
-                    width={380}
-                    // onMouseLeave={(a)=>{
-                    //   console.log(a)
-                    // }}
-                    //  selected={false}
-                    // colorFunction={()=>{}}
-                    position="bottom"
-                    // emptyOffset={false}
-                    className={
-                      " donutchart-innertext-label  donutchart-innertext-value       donutchart-arcs-pathdonutchart-legend-item  pie "
+                    stroke={false}
+                    height={
+                      windowWidth <= 500
+                        ? 410
+                        : windowWidth >= 768 && windowWidth <= 991
+                        ? 300
+                        : windowWidth >= 992 && windowWidth <= 1199
+                        ? 300
+                        : windowWidth >= 1200 && windowWidth <= 1399
+                        ? 360
+                        : windowWidth >= 1400 && windowWidth <= 1600
+                        ? 400
+                        : windowWidth > 1600
+                        ? 530
+                        : 350
                     }
-                    strokeColor="false"
+                    width={
+                      windowWidth <= 500
+                        ? 390
+                        : windowWidth >= 768 && windowWidth <= 991
+                        ? 300
+                        : windowWidth >= 992 && windowWidth <= 1199
+                        ? 300
+                        : windowWidth >= 1200 && windowWidth <= 1399
+                        ? 360
+                        : windowWidth >= 1400 && windowWidth <= 1600
+                        ? 400
+                        : windowWidth > 1600
+                        ? 530
+                        : 350
+                    }
+                    position="bottom"
+                    // className={
+                    //   " donutchart-innertext-label  donutchart-innertext-value       donutchart-arcs-pathdonutchart-legend-item  pie "
+                    // }
+                    // strokeColor="false"
                     // label={false}
                     // interactive={false}
 
@@ -675,6 +793,7 @@ const Dashboard = () => {
                     // selectedOffset={false}
                     // outerRadius={1.1}
                   />
+                  {/* <Donut/> */}
                   {/* ////////////////////////////////////////////////////////////////////// */}
                   {/* <Doughnut data={d}
          options={options}
@@ -690,62 +809,65 @@ const Dashboard = () => {
                 </div>
 
                 <div
-                  className="col-md-6  col-sm-12  col-xxl-4  justify-content-end"
-                  style={{ marginTop: "-335px " }}
+                  className="col-md-12   col-sm-12 bg-primary col-lg-5 col-xxl-4 justify-content-end lable_parent"
+                  // style={{ marginTop: "-335px " }}
                 >
                   {/* <div className="d-flex justify-content-between border-bottom pb-0 mb-0 mt-n5">
                 <p style={{fontSize:18,fontWeight:"bold",margin:1,color:"#054a91"}}>License For :</p>
                 <p style={{fontSize:18,fontWeight:"bold",margin:1,color:"#054a91"}}>Total</p>
               </div> */}
-                  {dataForDonut.map((item, id) => {
-                    return (
-                      <>
-                        <div className="d-flex justify-content-end">
-                          <div
-                                // className="me-1 mt-1"
-                                style={{
-                                  height: 15,
-                                  width: 15,
-                                  borderRadius: 2,
-                                  backgroundColor: dot[id],
-                                  display: "inline-block",
-                                  marginRight:5
-                                }}
-                              ></div>
+                  <div className="wappper ">
+                    {dataForDonut.map((item, id) => {
+                      return (
+                        <>
+                          <div className="lable_container ">
+                            <div
+                              style={{
+                                height: 15,
+                                width: 15,
+                                borderRadius: 2,
+                                backgroundColor: color[id],
+                                display: "inline-block",
+                                marginRight: 5,
+                                marginBottom: -3,
+                              }}
+                              className="lable_box"
+                            ></div>
                             <p
-                              // className="m-1 ms-0"
                               style={{
                                 backgroundColor: Color == item.id && "",
                                 display: "inline-block",
-                                // marginTop: -50,
-                                // backgroundColor: "red",
                                 padding: 0,
-                                marginTop:-5
-
-                                // margin:50
+                                marginTop: "-5px !important",
+                                // textAlign:'right'
                               }}
+                              className="lable mt-n5"
                               id={id + 1}
                             >
-                             
                               {item.label}
                             </p>
                           </div>
-                      </>
-                    );
-                  })}
+                        </>
+                      );
+                    })}
+                  </div>
                 </div>
               </div>
             </div>
-          </Fade>
+          {/* </Fade> */}
 
-          <Fade right>
-            <div className="bar_chart ">
-              <div className="row g-0">
-                <div className="col">
-                  <h3>{selectedDepartment}</h3>
-                </div>
+          {/* <Fade right> */}
+          <div className="bar_chart ">
+            <div className="row g-0 ">
+              <div className="col">
+                <h3>
+                  {dataForDonut.length > 1
+                    ? selectedDepart
+                    : selectedDepartment}
+                </h3>
+              </div>
 
-                {/* {dataForDonut[1] && (
+              {/* {dataForDonut[1] && (
                   <div className="col-4">
                     <Select
                       size="small"
@@ -765,66 +887,133 @@ const Dashboard = () => {
                     </Select>
                   </div>
                 )} */}
-              </div>
-              <div className="mt-3">
-                <BarChart
-                  id="auto-generated-id-0"
-                  xAxis={[
-                    {
-                      data: [
-                        "2018-19",
-                        "2019-20",
-                        "2020-21",
-                        "2021-22",
-                        "2022-23",
-                      ],
-                      scaleType: "band",
-                    },
-                  ]}
-                  // series={[
-                  //   {
-                  //     id: Math.random(),
-                  //     data: add(),
-                  //     // data: LicenseFilter? LicenseFilter[0]?.yearWiseData:dataForDonut.length==1?dataForDonut[0].yearWiseData: [1,1,1,1,1],
-                  //     // data: {
-                  //     //   if(LicenseFilter){
-                  //     //    return  LicenseFilter[0]?.yearWiseData
-                  //     //   }
-                  //     //   else if(sdadsda){
-
-                  //     //   }
-                  //     // },
-                  //   },  {
-                  //     id: Math.random(),
-                  //     data: add(),
-                  //     // data: LicenseFilter? LicenseFilter[0]?.yearWiseData:dataForDonut.length==1?dataForDonut[0].yearWiseData: [1,1,1,1,1],
-                  //     // data: {
-                  //     //   if(LicenseFilter){
-                  //     //    return  LicenseFilter[0]?.yearWiseData
-                  //     //   }
-                  //     //   else if(sdadsda){
-
-                  //     //   }
-                  //     // },
-                  //   },
-                  // ]}
-                  series={dataForDonut.map((item, index) => {
-                    return {
-                      data: item.yearWiseData,
-                      backgroundColor: "green",
-                      color: dot[index],
-                    };
-                  })}
-                  width={ 600}
-                  height={350}
-                  className="bar"
-                />
-              </div>
             </div>
-          </Fade>
+            <div className="mt">
+              {/* <BarChart
+                xAxis={[
+                  {
+                    // data: [
+                    //   "2018-19",
+                    //   "2019-20",
+                    //   "2020-21",
+                    //   "2021-22",
+                    //   "2022-23",
+                    // ],
+                    data: LicenseFilter[0]?.sun || [
+                      "2018-19",
+                      "2019-20",
+                      "2020-21",
+                      "2021-22",
+                      "2022-23",
+                    ],
+                    scaleType: "band",
+                  },
+                ]}
+                series={[
+                  {
+                    id: Math.random(),
+                    // data: LicenseFilter? LicenseFilter[0]?.yearWiseData:dataForDonut.length==1?dataForDonut[0]?.yearWiseData: [1,1,1,1,1],
+                    data: LicenseFilter[0]?.yearWiseData || add(),
+                    color: color[Math.floor(Math.random() * 6) + 1],
+                    layout: "vertical",
+                    fill: "red",
+                    // data:[1,1,1,1,1]
+                  },
+                ]}
+                // series={dataForDonut.map((item, index) => {
+                //   return {
+                //     data: item?.yearWiseData,
+                //     backgroundColor: "green",
+                //     color: color[index],
+                //   };
+                // })}
+                // width={ 600}
+                // height={350}
+
+                height={
+                  windowWidth <= 500
+                    ? 410
+                    : windowWidth >= 768 && windowWidth <= 991
+                    ? 310
+                    : windowWidth >= 992 && windowWidth <= 1199
+                    ? 300
+                    : windowWidth >= 1200 && windowWidth <= 1399
+                    ? 380
+                    : windowWidth >= 1400 && windowWidth < 1600
+                    ? 380
+                    : windowWidth >= 1600 && windowWidth < 1800
+                    ? 400
+                    : windowWidth >= 1800
+                    ? 480
+                    : 350
+                }
+                width={
+                  windowWidth <= 500
+                    ? 390
+                    : windowWidth >= 768 && windowWidth <= 991
+                    ? 350
+                    : windowWidth >= 992 && windowWidth <= 1199
+                    ? 510
+                    : windowWidth >= 1200 && windowWidth <= 1399
+                    ? 600
+                    : windowWidth >= 1400 && windowWidth < 1600
+                    ? 600
+                    : windowWidth >= 1600 && windowWidth < 1800
+                    ? 700
+                    : windowWidth >= 1800
+                    ? 800
+                    : 350
+                }
+                className="bar-chart-container MuiXChart-bar "
+                actualDuration={0.5}
+                baseDuration={0.5}
+                startTime={0.5}
+              /> */}
+              <Bar
+                  height={
+                    windowWidth <= 500
+                      ? 410
+                      : windowWidth >= 768 && windowWidth <= 991
+                      ? 310
+                      : windowWidth >= 992 && windowWidth <= 1199
+                      ? 300
+                      : windowWidth >= 1200 && windowWidth <= 1399
+                      ? 380
+                      : windowWidth >= 1400 && windowWidth < 1600
+                      ? 380
+                      : windowWidth >= 1600 && windowWidth < 1800
+                      ? 400
+                      : windowWidth >= 1800
+                      ? 480
+                      : 350
+                  }
+                  width={
+                    windowWidth <= 500
+                      ? 390
+                      : windowWidth >= 768 && windowWidth <= 991
+                      ? 350
+                      : windowWidth >= 992 && windowWidth <= 1199
+                      ? 510
+                      : windowWidth >= 1200 && windowWidth <= 1399
+                      ? 600
+                      : windowWidth >= 1400 && windowWidth < 1600
+                      ? 600
+                      : windowWidth >= 1600 && windowWidth < 1800
+                      ? 700
+                      : windowWidth >= 1800
+                      ? 800
+                      : 350
+                  }
+                  // color={color[Math.floor(Math.random() * 6) + 1]}
+                  color="red"
+                  backgroundColor="red"
+              options={options} data={ahmer}
+              />
+            </div>
+          </div>
+          {/* </Fade> */}
         </div>
       </div>
-      
     </>
   );
 };

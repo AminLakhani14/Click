@@ -30,18 +30,45 @@ p {
 .title {
   /* color:linear-gradient(180deg, #720d1d 0%, #1f0308 100%) !important */
   color: #054a91;
+  letter-spacing: 1px;
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  margin-top: 20px;
+  position: relative;
+}
+.title::before{
+  content: ' ';
+  height: 3px;
+  width: 300px;
+  position: absolute;
+  background-color: #720d1d;
+  top: 45px;
+  /* left: 300px; */
+  right: 20%;
+  /* margin: auto; */
+  margin-bottom: 100px;
+}
+.card_container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  justify-content: space-between;
+  gap: 32px;
 }
 .box1_container {
   background-color: #ffffff;
   /* margin: .1px; */
-  /* margin-right: 5; */
+  /* margin-right: 5 !important; */
+  display: inline-block;
 
   height: 100px;
-  /* width: 20% !important; */
+  /* width: 225px !important; */
+  /* margin-bottom: 10px; */
+  /* width: 17.95% !important; */
   border-radius: 5px;
   /* align-items: flex-start !important; */
   padding-top: 0 !important;
-  margin-top: 0 !important;
+  /* margin-top: 50 !important; */
   color: black;
   box-shadow: 0 0.2rem 1rem rgba(0, 0, 0, 0.12);
 
@@ -53,7 +80,6 @@ p {
 .box1_container h4 {
   text-align: center;
   color: #054a91;
-  /* font-weight: 700; */
   font-size: 18px !important;
 }
 .chart_container {
@@ -62,20 +88,43 @@ p {
   margin-bottom: 10px;
 }
 .pie_chart {
-  /* background-color: rgb(245, 245, 250); */
   background-color: #ffffff;
   box-shadow: 0 0.2rem 1rem rgba(0, 0, 0, 0.12);
   border-radius: 5px;
-  height: 70vh;
+  /* height: 70vh; */
   padding: 15px 20px 15px 20px;
   width: 48.76%;
+  position: relative;
+}
+.lable_parent{
+  /* margin-top: -335px;
+   */
+   position: absolute;
+   top: 24px;
+   right: 0px;
+   background-color: #720d1d;
+   /* flex-direction: column; */
+  }
+  .lable_container{
+    /* display: inline; */
+    /* gap: 20px; */
+  height: 100%;
+  /* background-color: red; */
+ 
+  
+}
+.wappper{
+  position: absolute;
+  top:px;
+  right: 10px;
+  /* left: 20px; */
 }
 .bar_chart {
   padding: 15px 20px 15px 20px;
   /* background-color: rgb(245, 245, 250); */
   background-color: #ffffff;
   box-shadow: 0 0.2rem 1rem rgba(0, 0, 0, 0.12);
-  height: 70vh;
+  /* height: 70vh; */
   border-radius: 5px;
 
   width: 48.76%;
@@ -85,44 +134,21 @@ p {
   color: #054a91 !important;
   text-align: left;
 }
-.donutchart-innertext-value:hover {
-  /* background-color: red !important; */
-  /* font-size: 20px; */
-  font-weight: bold;
-  margin: 0px;
-}
-.toggled {
-  background-color: red !important;
-}
-.false-arcs-path {
+
+/* .false-arcs-path {
   height: 200px !important;
-}
-.path {
-  background-color: red !important;
-}
-.selected {
-  color: red !important;
-  background-color: red !important;
-}
-.donutchart {
+} */
+
+/* .donutchart {
   font-size: 18px !important;
   font-weight: bold !important;
   margin-top: 100px !important;
   background-color: red !important;
-}
-.donutchart-arcs-path,
-.donutchart-legend-item {
-  fill-opacity: 0;
-  animation-timing-function: ease-in-out;
-  animation-fill-mode: forwards;
-  animation-name: DrawLine, FillIn;
-  animation-delay: 0.5s, 2s;
-  animation-duration: 3s, 1s;
-  stroke-dasharray: 1500;
-  stroke-dashoffset: 1500;
-  background-color: red !important;
-}
+} */
 
+.lable_box{
+
+}
 @media only screen and (max-width: 500px) {
   .chart_container {
     display: block !important;
@@ -139,12 +165,22 @@ p {
     width: 100%;
     margin-bottom: 10px;
   }
+  .lable_parent{
+    /* margin-top: -335px;
+     */
+     position: relative;
+    
+  }
+  .lable_container{
+    display: flex;
+    justify-content: center;
+  }
   .bar_chart {
     padding: 15px 20px 15px 20px;
     /* background-color: rgb(245, 245, 250); */
     background-color: #ffffff;
     box-shadow: 0px 0px 5px rgb(179, 175, 175);
-    height: 70vh;
+    /* height: 70vh; */
     border-radius: 5px;
 
     width: 100%;
@@ -152,7 +188,7 @@ p {
   .bar{
     width: 600px !important;
     height: 350px !important;
-    background-color: red !important;
+    background-color: green !important;
     margin-left: 100px !important;
   }
   .statistics {
@@ -173,8 +209,8 @@ p {
   }
 
 }
-
-@media only screen and (max-width: 500px){
+/* /////////small device //////// */
+@media only screen and (min-width:576px) and (max-width: 767px){
   .bar{
     height: 2000px !important;
     width: 2000px !important;
@@ -183,4 +219,158 @@ p {
     width: 50% !important;
 
   }
+
 }
+/* ///////////medium device ///////////// */
+@media only screen and (min-width:768px) and (max-width: 991px){
+  .bar_chart {
+ 
+  
+  }
+  .pie_chart{
+    height: 50vh !important;
+  }
+  .lable_parent{
+    /* margin-top: -335px;
+     */
+     position: relative;
+    
+  }
+ 
+  .lable_container{
+    display: flex;
+    justify-content: center;
+  }
+}
+/* ///////////large device /////////////// */
+@media only screen and (min-width:992px) and (max-width: 1199px){
+  .pie_chart{
+    /* height: 70vh !important; */
+  }
+}
+/* /////////////extra large device ///////////// */
+@media only screen and (min-width:1200px) and (max-width: 1399px){
+
+}
+@media only screen and (min-width:1400px) and (max-width: 1600px){
+  .lable_parent{
+    /* margin-top: -335px;
+     */
+     position: absolute;
+     top: 22px;
+     right: 20px;
+  }
+  .lable_box{
+    height: 15px !important;
+    width: 15px !important;
+  }
+   
+  .lable{
+    font-size: 18px;
+  }
+}
+/* /////////////xxl device /////////////// */
+@media only screen and (min-width:1601px) and (max-width: 1900px){
+  .bar_chart {
+    /* height: 70vh !important; */
+  
+  }
+  .lable_parent{
+    /* margin-top: -335px;
+     */
+     position: absolute;
+     top: 20px;
+     right: 20px;
+  }
+ 
+  .lable{
+    font-size: 23px;
+  }
+  .lable_box{
+    height: 25px !important;
+    width: 25px !important;
+  }
+}
+
+.donutchart {
+  font-size: 18px !important;
+  font-weight: bold !important;
+  height: 100px;
+  /* margin-top: 100px !important; */
+  /* background-color: red !important; */
+}
+
+.donutchart-arcs-path,
+.donutchart-legend-item,
+.donutchart-legend-item-label {
+  cursor: pointer;
+}
+
+.donutchart-innertext-label {
+  font-size: 18px;
+}
+
+.donutchart-innertext-value {
+  font-size: 36px;
+  /* font-weight: bold; */
+}
+.donutchart-innertext-label:hover {
+  /* background-color: red !important; */
+  /* font-size: 25px; */
+  font-weight: bold;
+  margin: 0px;
+  /* transform: scale(10); */
+}
+
+
+.donutchart-arcs-path,
+.donutchart-legend-item {
+  fill-opacity: 0;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+  animation-name: DrawLine, FillIn;
+  animation-delay: 0.5s, 2s;
+  animation-duration: 3s, 1s;
+  stroke-dasharray: 1500;
+  stroke-dashoffset: 1500;
+  animation: 
+  DrawLine 3s alternate-reverse 0.5s forwards, 
+  FillIn 1s ease-in-out 20000s forwards;
+stroke-dasharray: 1500;
+stroke-dashoffset: 1500;
+animation-iteration-count: infinite;
+animation:
+  DrawLine infinite 3s alternate-reverse 0.5s,
+  FillIn 1s ease-in-out 2s forwards;
+stroke-dasharray: 1500;
+stroke-dashoffset: 1500;
+stroke-linecap: round;
+color: red !important;
+stroke-width: 1;
+/* animation-iteration-count: 1; */
+  /* stroke-dasharray: 1000;
+stroke-dashoffset: 1000;
+animation: dash 10s linear alternate-reverse infinite; */
+}
+
+@keyframes DrawLine {
+  from {
+    stroke-opacity:1 ;
+  }
+  to {
+    stroke-dashoffset: 0;
+    stroke-opacity:0.3 ;
+  }
+}
+
+
+@keyframes FillIn {
+  from {
+    fill-opacity: 0;
+  }
+  to {
+    fill-opacity: 1;
+  }
+}
+
+
