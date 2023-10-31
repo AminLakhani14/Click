@@ -40,29 +40,9 @@ ChartJS.register(
   Tooltip,
   Legend
 );
-
-
-// const data = {
-//     datasets: [{
-//         data: [10, 20, 30],
-//         backgroundColor:[
-//           'red',
-//           'blue',
-//           'yellow'
-//         ]
-//     },
-//   ],
-//   // These labels appear in the legend and in the tooltips when hovering different arcs
-//   labels: [
-//       'Red',
-//       'Yellow',
-//       'Blue'
-//   ],
-// };
-
 const Dashboard = () => {
   const [selectedDepartment, setSelectedDepartment] =
-    useState("College Department");
+    useState("Private Colleges");
   const [selectedDepart, setSelectedDepart] = useState(
     "License For Pesticide Dealership"
   );
@@ -157,7 +137,7 @@ const Dashboard = () => {
     ],
   };
   const d = {
-    labels: ["college Department", "Labour Department", "Health Department"],
+    labels: ["College education department", "Labour Department", "Health Department"],
     datasets: [
       {
         data: [1, 2, 3],
@@ -230,7 +210,9 @@ const Dashboard = () => {
     "2022-23 Year",
   ];
   const department = [
-    { value: "College Department", text: "College Department" },
+
+    { value: "Private Colleges", text: "Private Colleges" },
+    { value: "College education department", text: "College education department" },
     {
       value: "Excise Taxation Department",
       text: "Excise, Taxation & Narcotics Control Department",
@@ -268,13 +250,47 @@ const Dashboard = () => {
       sun: xAxis,
       // isEmpty: true,
     },
-    //////////////////////college Department
+    //////////////////////Private College
     {
       id: 4,
-      label: "Private College",
+      label: "Private Colleges",
       value: 106,
-      text: "College Department",
-      yearWiseData: [9, 2, 12, 26, 16],
+      text: "Private Colleges",
+      yearWiseData: [18,24,20,23,21],
+      sun: xAxis,
+    },
+
+    /////////////College education department/////////////////
+    {
+      id: 4,
+      label: "Fresh Registration Intermediate Colleges",
+      value: 42,
+      text: "College education department",
+      yearWiseData: [17,8,6,4,7],
+      sun: xAxis,
+    },
+    {
+      id: 4,
+      label: "Renewal Registration Intermediate Colleges",
+      value: 126,
+      text: "College education department",
+      yearWiseData: [26,14,20,24,42],
+      sun: xAxis,
+    },
+    {
+      id: 4,
+      label: "Fresh Registration Degree Colleges",
+      value: 8,
+      text: "College education department",
+      yearWiseData: [3,1,1,0,3],
+      sun: xAxis,
+    },
+    {
+      id: 4,
+      label: "Renewal Registration Degree Colleges",
+      value: 17,
+      text: "College education department",
+      yearWiseData: [5,0,5,4,3],
       sun: xAxis,
     },
     ////////////////Industrial Department/////////////
@@ -345,7 +361,7 @@ const Dashboard = () => {
       yearWiseData: [35563, 40036, 149580],
       sun: ["2018-19 Year", "2019-20 Year", "2020-21 Year"],
     },
-  ].filter((item) => {
+  ]?.filter((item) => {
     // setSelectedDepart(item?.label)
     return selectedDepartment == item?.text ? item : null;
   });
@@ -358,7 +374,11 @@ const Dashboard = () => {
       // selectedDepart()
       return item?.label == selectedDepart && item;
     });
+
   }
+  else{
+    LicenseFilter = [1,2,3,4,5]
+  };
   const add = () => {
     debugger;
     if (LicenseFilter) {
@@ -455,8 +475,8 @@ const Dashboard = () => {
                       id: "outlined-age-native-simple",
                     }}
                   >
-                    {department.map((item) => {
-                      return <option value={item.value}>{item.text}</option>;
+                    {department?.map((item) => {
+                      return <option value={item?.value}>{item?.text}</option>;
                     })}
                   </Select>
                 </div>
@@ -482,7 +502,7 @@ const Dashboard = () => {
                 </Select>
               </div>
             </Fade> */}
-            {dataForDonut.length > 1 && (
+            {dataForDonut?.length > 1 && (
               <div className="col-4">
                 <Select
                   size="small"
@@ -497,7 +517,7 @@ const Dashboard = () => {
                   }}
                 >
                   {dataForDonut?.map((item) => {
-                    return <option value={item.label}>{item.label}</option>;
+                    return <option value={item?.label}>{item?.label}</option>;
                   })}
                 </Select>
               </div>
@@ -610,10 +630,10 @@ const Dashboard = () => {
           {/* <Fade top> */}
             <div
               className={` card_container ${
-                dataForDonut[0]?.sun.length == 3 ? "col-7" : ""
+                dataForDonut[0]?.sun?.length == 3 ? "col-7" : ""
               }`}
             >
-              {LicenseFilter.length > 1
+              {LicenseFilter?.length > 1
                 ? LicenseFilter[0]?.sun?.map((item, index) => {
                     return (
                       <div
@@ -648,7 +668,7 @@ const Dashboard = () => {
                     return (
                       <div
                         className={`box1_container  ${
-                          LicenseFilter[0]?.sun.length > 5 && "mb-5"
+                          LicenseFilter[0]?.sun?.length > 5 && "mb-5"
                         } `}
                         style={{
                           width:
@@ -810,13 +830,8 @@ const Dashboard = () => {
 
                 <div
                   className="col-md-12   col-sm-12 bg-primary col-lg-5 col-xxl-4 justify-content-end lable_parent"
-                  // style={{ marginTop: "-335px " }}
                 >
-                  {/* <div className="d-flex justify-content-between border-bottom pb-0 mb-0 mt-n5">
-                <p style={{fontSize:18,fontWeight:"bold",margin:1,color:"#054a91"}}>License For :</p>
-                <p style={{fontSize:18,fontWeight:"bold",margin:1,color:"#054a91"}}>Total</p>
-              </div> */}
-                  <div className="wappper ">
+                  <div className="wappper ms-3 ">
                     {dataForDonut.map((item, id) => {
                       return (
                         <>
@@ -824,27 +839,28 @@ const Dashboard = () => {
                             <div
                               style={{
                                 height: 15,
-                                width: 15,
+                                minWidth: 15,
                                 borderRadius: 2,
                                 backgroundColor: color[id],
-                                display: "inline-block",
+                                // display: "inline-block",
                                 marginRight: 5,
-                                marginBottom: -3,
+                                marginTop:5
+                                // marginBottom: -3,
                               }}
                               className="lable_box"
                             ></div>
                             <p
                               style={{
                                 backgroundColor: Color == item.id && "",
-                                display: "inline-block",
+                                // display: "inline-block",
                                 padding: 0,
-                                marginTop: "-5px !important",
+                                // marginTop: -5,
                                 // textAlign:'right'
                               }}
                               className="lable mt-n5"
                               id={id + 1}
                             >
-                              {item.label}
+                              {item?.label}
                             </p>
                           </div>
                         </>
@@ -861,7 +877,7 @@ const Dashboard = () => {
             <div className="row g-0 ">
               <div className="col">
                 <h3>
-                  {dataForDonut.length > 1
+                  {dataForDonut?.length > 1
                     ? selectedDepart
                     : selectedDepartment}
                 </h3>

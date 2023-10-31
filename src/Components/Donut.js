@@ -70,9 +70,9 @@ const Donut = () => {
     options={chartOptions}
     onMouseEnter={(item)=>{console.log(item)}}
     // height={200}
-    // width={100}
+    // width={200}
     // children={()=>{}}
-    style={{width:'100%',backgroundColor:"re",padding:10,margin:10,zIndex:0}}
+    style={{width:'100%',backgroundColor:"red",padding:10,margin:10,zIndex:0}}
     />
       <div style={{ position: "absolute", top: "50%", left: "50%", transform: "translate(-50%, -50%)" }}>
         <div
@@ -101,15 +101,12 @@ const Donut = () => {
     </div>
     <div className="col d-flex justify-content-end h-auto">
       <div className="">
-      <img 
+      {/* <img 
       src={MaleFemaleIcon}
       // height={150}
       // width={200}
-       alt="" />
-      <div className="d-flex justify-content-between px-5">
-        <h2>20</h2>
-        <h2>20</h2>
-      </div>
+       alt="" /> */}
+    
       </div>
     </div>
     </div>

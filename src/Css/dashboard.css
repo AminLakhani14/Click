@@ -39,7 +39,7 @@ p {
 .title::before{
   content: ' ';
   height: 3px;
-  width: 300px;
+  width: 380px;
   position: absolute;
   background-color: #720d1d;
   top: 45px;
@@ -106,7 +106,9 @@ p {
    /* flex-direction: column; */
   }
   .lable_container{
-    /* display: inline; */
+    display: flex;
+    /* justify-content: space-between; */
+    /* align-items: baseline; */
     /* gap: 20px; */
   height: 100%;
   /* background-color: red; */
@@ -116,7 +118,7 @@ p {
 .wappper{
   position: absolute;
   top:px;
-  right: 10px;
+  /* right: 10px; */
   /* left: 20px; */
 }
 .bar_chart {
@@ -307,7 +309,11 @@ p {
 }
 
 .donutchart-innertext-label {
-  font-size: 18px;
+  font-size: 14px;
+  overflow-wrap: break-word !important;
+  word-wrap: break-word !important;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .donutchart-innertext-value {
