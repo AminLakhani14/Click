@@ -69,7 +69,7 @@ p {
   /* align-items: flex-start !important; */
   padding-top: 0 !important;
   /* margin-top: 50 !important; */
-  color: black;
+    color: black;
   box-shadow: 0 0.2rem 1rem rgba(0, 0, 0, 0.12);
 
 }

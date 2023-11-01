@@ -149,7 +149,7 @@ export default function GenericHeader(props) {
   );
 
 
-  console.log("hello", props.toggleLanguage);
+  
   return (
     <div
     data-aos="fade-down"

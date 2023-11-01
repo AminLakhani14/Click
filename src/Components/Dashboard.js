@@ -56,7 +56,7 @@ const Dashboard = () => {
   const [toggleSelect, setToggleSelect] = useState(false);
   const [showDropdown, setshowDropdown] = useState(false);
   const [lableHover, setlableHover] = useState("Private Colleges");
-  //  let [LicenseFilter, setLicenseFilter] = useState([])
+  //  let [subDropdownFilter, setsubDropdownFilter] = useState([])
 
   ///////////////////////////////
   const [count, setCount] = useState(0);
@@ -319,27 +319,27 @@ const Dashboard = () => {
   useEffect(() => {
     setSelectedDepart(dataForDonut[0]?.label);
   }, [selectedDepartment]);
-  let LicenseFilter;
+  let subDropdownFilter;
   if (dataForDonut[0]) {
-    LicenseFilter = dataForDonut?.filter((item) => {
+    subDropdownFilter = dataForDonut?.filter((item) => {
       return item?.label == selectedDepart && item;
     });
   } else {
-    LicenseFilter = [1, 2, 3, 4, 5];
+    subDropdownFilter = [1, 2, 3, 4, 5];
   }
   const add = () => {
     debugger;
-    if (LicenseFilter) {
-      return dataForDonut[0]?.yearWiseData;
-    }
-    // else if (LicenseFilter) {
-    //   // setSelectedDepart(LicenseFilter[0]?.label)
-    //     return LicenseFilter[0]?.yearWiseData;
+    // if (subDropdownFilter) {
+    //   return dataForDonut[0]?.yearWiseData;
+    // }
+    // else if (subDropdownFilter) {
+    //   // setSelectedDepart(subDropdownFilter[0]?.label)
+    //     return subDropdownFilter[0]?.yearWiseData;
 
     // }
-    else {
-      return [1, 1, 1, 1, 1];
-    }
+    // if(!subDropdownFilter) {
+    //   return [1, 1, 1, 1, 1];
+    // }
   };
   const options = {
     responsive: true,
@@ -359,7 +359,7 @@ const Dashboard = () => {
     },
   };
 
-  const lable = LicenseFilter[0]?.sun || [
+  const lable = subDropdownFilter[0]?.sun || [
     "2018-19",
     "2019-20",
     "2020-21",
@@ -370,14 +370,14 @@ const Dashboard = () => {
     labels: lable,
     // datasets: [
     //   {
-    //     label: LicenseFilter[0]?.label,
-    //     data: LicenseFilter[0]?.yearWiseData || add(),
+    //     label: subDropdownFilter[0]?.label,
+    //     data: subDropdownFilter[0]?.yearWiseData || add(),
     //     backgroundColor:color[Math.floor(Math.random() * 6) + 1] ,
     //   },
     // ],
     datasets: dataForDonut.map((item, index) => {
       return {
-        label: LicenseFilter[0]?.label,
+        label: subDropdownFilter[0]?.label,
         data: item?.yearWiseData,
         backgroundColor: color[index],
       };
@@ -577,8 +577,8 @@ const Dashboard = () => {
                 dataForDonut[0]?.sun?.length == 3 ? "col-7" : ""
               }`}
             >
-              {LicenseFilter?.length > 1
-                ? LicenseFilter[0]?.sun?.map((item, index) => {
+              {subDropdownFilter?.length > 1
+                ? subDropdownFilter[0]?.sun?.map((item, index) => {
                     return (
                       <div
                         className={`box1_container 
@@ -598,7 +598,7 @@ const Dashboard = () => {
                             {(
                               <CountUp
                                 start={0}
-                                end={LicenseFilter[0]?.yearWiseData[index]}
+                                end={subDropdownFilter[0]?.yearWiseData[index]}
                                 delay={2}
                               ></CountUp>
                             ) ?? add()[index]}
@@ -611,7 +611,7 @@ const Dashboard = () => {
                     return (
                       <div
                         className={`box1_container  ${
-                          LicenseFilter[0]?.sun?.length > 5 && "mb-5"
+                          subDropdownFilter[0]?.sun?.length > 5 && "mb-5"
                         } `}
                         style={{
                           width:
@@ -626,7 +626,7 @@ const Dashboard = () => {
                             {(
                               <CountUp
                                 start={0}
-                                end={LicenseFilter[0]?.yearWiseData[index]}
+                                end={subDropdownFilter[0]?.yearWiseData[index]}
                                 delay={0}
                               ></CountUp>
                             ) ?? add()[index]}
@@ -642,8 +642,8 @@ const Dashboard = () => {
               dataForDonut[0]?.sun?.length == 3 ? "col-7" : ""
             }`}
           >
-            {LicenseFilter[0]?.total
-              ? LicenseFilter[0]?.sun?.map((item, index) => {
+            {subDropdownFilter[0]?.total
+              ? subDropdownFilter[0]?.sun?.map((item, index) => {
                   return (
                     <div
                       className={`box1_container 
@@ -663,7 +663,7 @@ const Dashboard = () => {
                           {(
                             <CountUp
                               start={0}
-                              end={LicenseFilter[0]?.total[index]}
+                              end={subDropdownFilter[0]?.total[index]}
                               delay={2}
                             ></CountUp>
                           ) ?? add()[index]}
@@ -676,7 +676,7 @@ const Dashboard = () => {
                   return (
                     <div
                       className={`box1_container  ${
-                        LicenseFilter[0]?.sun?.length > 5 && "mb-5"
+                        subDropdownFilter[0]?.sun?.length > 5 && "mb-5"
                       } `}
                       style={{
                         width:
@@ -691,7 +691,7 @@ const Dashboard = () => {
                           {(
                             <CountUp
                               start={0}
-                              end={LicenseFilter[0]?.yearWiseData[index]}
+                              end={subDropdownFilter[0]?.yearWiseData[index]}
                               delay={0}
                             ></CountUp>
                           ) ?? add()[index]}
@@ -916,7 +916,7 @@ const Dashboard = () => {
                     //   "2021-22",
                     //   "2022-23",
                     // ],
-                    data: LicenseFilter[0]?.sun || [
+                    data: subDropdownFilter[0]?.sun || [
                       "2018-19",
                       "2019-20",
                       "2020-21",
@@ -929,8 +929,8 @@ const Dashboard = () => {
                 series={[
                   {
                     id: Math.random(),
-                    // data: LicenseFilter? LicenseFilter[0]?.yearWiseData:dataForDonut.length==1?dataForDonut[0]?.yearWiseData: [1,1,1,1,1],
-                    data: LicenseFilter[0]?.yearWiseData || add(),
+                    // data: subDropdownFilter? subDropdownFilter[0]?.yearWiseData:dataForDonut.length==1?dataForDonut[0]?.yearWiseData: [1,1,1,1,1],
+                    data: subDropdownFilter[0]?.yearWiseData || add(),
                     color: color[Math.floor(Math.random() * 6) + 1],
                     layout: "vertical",
                     fill: "red",
