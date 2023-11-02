@@ -927,7 +927,6 @@ const FeedBackForm = () => {
     //   filterData = data.filter((x) => x.id === selectedValue);
     // }
   };
-
   const onHandleSubmit = (values) => {
     const RespObj = { ...values };
     postService("/contact-us", RespObj)
@@ -944,26 +943,41 @@ const FeedBackForm = () => {
         {/* <Basic/> */}
         <Formik
           initialValues={{
-            name: "",
-            email: "",
+            name: '',
+            mobileNumber:'',
+            email: '',
+            comments:'',
+            address:'',
+            companyName:'',
+            country:'',
+            // department:'',
+            companyWebsite:'',
+            // license:'',
+
           }}
           validationSchema={Yup.object({
-            name: Yup.string().required("Name is required"),
+            name: Yup.string().required("Name is required*"),
             email: Yup.string()
               .email("Invalid email address")
               .required("Email is required"),
+            mobileNumber:Yup.number().positive().integer().required('Mobile number is required*'),
           })}
           onSubmit={(values, { setSubmitting }) => {
             onHandleSubmit(values);
             setSubmitting(false);
           }}
+          // validateOnBlur={true}
+          // validateOnChange={true}
+          
         >
           {({
-            values,
+            values:{name,email,mobileNumber,address,companyName,companyWebsite,country,comments},
+            errors,
             handleChange,
             handleBlur,
             handleSubmit,
             isSubmitting,
+            touched
           }) => (
             <div
               className="col-md-8 ps-md-3 px-3 justify-content-center  "
@@ -985,9 +999,10 @@ const FeedBackForm = () => {
                         name="name"
                         onChange={handleChange}
                         onBlur={handleBlur}
-                        value={values.name}
+                        value={name}
                       />
-                      <ErrorMessage name="name" />
+                     
+                      {(errors.name && touched.name) && <span className="error">{errors.name}</span>}
                     </div>
                   </Fade>
                   <Fade right>
@@ -998,6 +1013,10 @@ const FeedBackForm = () => {
                         size="small"
                         style={{ width: "96%" }}
                         inputProps={{ maxLength: 50 }}
+                        onChange={handleChange}
+                        onBlur={handleBlur}
+                        value={companyName}
+                        name="companyName"
                       />
                     </div>
                   </Fade>
@@ -1011,6 +1030,10 @@ const FeedBackForm = () => {
                         size="small"
                         style={{ width: "98%" }}
                         inputProps={{ maxLength: 200 }}
+                        onChange={handleChange}
+                        onBlur={handleBlur}
+                        value={address}
+                        name="address"
                       />
                     </div>
                   </Fade>
@@ -1024,6 +1047,10 @@ const FeedBackForm = () => {
                         size="small"
                         style={{ width: "96%" }}
                         inputProps={{ maxLength: 100 }}
+                        onChange={handleChange}
+                        onBlur={handleBlur}
+                        value={country}
+                        name="country"
                       />
                     </div>
                   </Fade>
@@ -1035,13 +1062,12 @@ const FeedBackForm = () => {
                         size="small"
                         style={{ width: "96%" }}
                         type="number"
-                        InputProps={{
-                          inputProps: {
-                            min: 0, // Set the minimum value
-                            max: 100, // Set the maximum value
-                          },
-                        }}
+                        onChange={handleChange}
+                        onBlur={handleBlur}
+                        value={mobileNumber}
+                        name="mobileNumber"
                       />
+                       {(errors.mobileNumber && touched.mobileNumber) &&  <span className="error">{errors.mobileNumber}</span>}
                     </div>
                   </Fade>
                 </div>
@@ -1055,11 +1081,11 @@ const FeedBackForm = () => {
                         size="small"
                         style={{ width: "96%" }}
                         name="email"
-                        value={values.email}
+                        value={email}
                         onChange={handleChange}
                         onBlur={handleBlur}
                       />
-                      <ErrorMessage name="email" />
+                      {(errors.email && touched.email) && <span className="error">{errors.email}</span>}
                     </div>
                   </Fade>
                   <Fade right>
@@ -1069,6 +1095,10 @@ const FeedBackForm = () => {
                         placeholder="Enter Your Company Website"
                         size="small"
                         style={{ width: windowWidth <= 500 ? "100%" : "96%" }}
+                        onChange={handleChange}
+                        onBlur={handleBlur}
+                        value={companyWebsite}
+                        name="companyWebsite"
                       />
                     </div>
                   </Fade>
@@ -1094,6 +1124,8 @@ const FeedBackForm = () => {
                             setArr2={setArr2}
                             val={val}
                             label={false}
+                            onChange={handleChange}
+                            onBlur={handleBlur}
                           />
                           <div className="col-md-6"></div>
                         </div>
@@ -1126,7 +1158,12 @@ const FeedBackForm = () => {
                           width: windowWidth <= 500 ? "100%" : "98%",
                           fontSize: 18,
                         }}
+                        onChange={handleChange}
+                        onBlur={handleBlur}
+                        value={comments}
+                        name="comments"
                       />
+
                     </div>
                   </Fade>
                 </div>

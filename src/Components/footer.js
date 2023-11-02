@@ -110,7 +110,23 @@ function Footer(props) {
                   {translations["LocalDeparment"][language]}
                 </span>
               </a>
+              
               <br />
+              <a href="https://www.sindhzameen.gos.pk/" target="_blank" className="resource-link">
+                <span
+                  className={
+                    window.innerWidth <= 1366
+                      ? "sub-footertitle ft-links"
+                      : "sub-title ft-links"
+                  }>
+                  {translations["BoardOfRevenue"][language]}
+                </span>
+              </a>
+              
+              <br />
+
+
+
               <a href="https://www.srb.gos.pk/home/index.jsp" target="_blank" className="resource-link">
                 <span className={
                   window.innerWidth <= 1366
@@ -188,6 +204,7 @@ function Footer(props) {
                 }>{translations["SID"][language]}</span>
               </a>
               <br />
+              
               <a href="https://industries.sindh.gov.pk/" target="_blank" className="resource-link">
                 <span className={
                   window.innerWidth <= 1366
@@ -241,6 +258,7 @@ function Footer(props) {
                     : "sub-title ft-links"
                 }>{translations["seravgeBoard"][language]}</span>
               </a>
+              
 
             </div>
             <div

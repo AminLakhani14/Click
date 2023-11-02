@@ -435,6 +435,11 @@ sd:"ٽيم"
     ur: "سندھ ریونیو بورڈ",
     sd: "سنڌ روينيو بورڊ",
   },
+  'BoardOfRevenue':{
+    en:'Board of Revenue Sindh',
+    ur:'بورڈ آف ریونیو سندھ',
+    sd:'بورڊ آف روينيو سنڌ'
+  },
   'SBCA': {
     en: 'Sindh Building Control Authority',
     ur: "سندھ بلڈنگ کنٹرول اتھارٹی",

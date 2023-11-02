@@ -195,6 +195,7 @@ const Dashboard = () => {
       sun: xAxis,
       // isEmpty: true,
     },
+   
     //////////////////////Private College
     {
       id: 4,

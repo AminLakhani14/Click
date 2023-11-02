@@ -145,10 +145,124 @@
   width: 100%;
   height: 680px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   background-repeat: no-repeat;
   background-size: cover !important;
+}
+/* .cards{
+  padding: 15px;
+  background-color:white;
+  height: 350px;
+  border-radius: 5px;
+  width: 100%;
+  position: relative;
+  transition: 0.5s;
+} */
+.cards:hover{
+  /* translate: 0px -10px; */
+  /* transform: scale(1.1,1.1); */
+}
+/* .image_container{
+  width: 100%;
+  height: 70%;
+  margin-bottom: 10px;
+
+}
+.image_container img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+}
+.about_container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+} */
+.parent_container{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card_containers{
+  width: 75%;
+  height: 50px;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  height: 400px;
+}
+.cards{
+  background-color: transparent;
+  width: 30%;
+  height: 400px;
+  box-shadow: 0 0.2rem 1rem rgba(0, 0, 0, 0.12);
+ border-radius: 5px;
+ padding: 15px;
+ position: relative;
+ transition: .5s;
+ margin-bottom: 30px;
+}
+.cards::after{
+  content: '';
+  width: 100%;
+  height: 3px;
+  position: absolute;
+  bottom: 0;
+  left: 0px;
+  background-color:#0f5789;
+border-bottom-left-radius: 5px;
+border-bottom-right-radius: 5px;
+
+}
+.cards:hover{
+  translate:0px -5px;
+  cursor: pointer;
+}
+.img_container img{
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 3px;
+  margin-bottom: 10px;
+}
+.members_information_container{
+  display: flex;
+  justify-content: space-between;
+ align-items: flex-start;
+  /* align-items: center; */
+  /* flex-wrap: wrap; */
+/* box-sizing: border-box; */
+
+  /* background-color: red; */
+}
+.members_information_container p ,.members_information_container h3{
+  margin: 0px !important;
+}
+.members_information_container h3{
+  text-align: left;
+  /* text-overflow: ellipsis; */
+}
+.emai_container{
+  padding: 2px 7px 0px 7px !important;
+  border-radius: 2px;
+  box-shadow: 0 0.2rem 1rem rgba(0, 0, 0, 0.12);
+/* box-sizing: border-box; */
+
+}
+.email{
+  color: maroon;
+/* box-sizing: border-box; */
+
+}
+.designation{
+  position: absolute;
+  bottom: 10px;
 }
 .Investnow-h1 {
   font-size: 60px;
