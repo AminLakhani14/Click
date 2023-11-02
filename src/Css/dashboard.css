@@ -48,6 +48,29 @@ p {
   /* margin: auto; */
   margin-bottom: 100px;
 }
+
+.tutorial {
+  /* color:linear-gradient(180deg, #720d1d 0%, #1f0308 100%) !important */
+  color: #054a91;
+  letter-spacing: 1px;
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  margin-top: 20px;
+  position: relative;
+}
+.tutorial::before{
+  content: ' ';
+  height: 3px;
+  width: 165px;
+  position: absolute;
+  background-color: #720d1d;
+  top: 45px;
+  /* left: 300px; */
+  right: 2%;
+  /* margin: auto; */
+  margin-bottom: 100px;
+}
+
 .card_container{
   display: flex;
   flex-wrap: wrap;

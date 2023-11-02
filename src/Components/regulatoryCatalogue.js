@@ -2754,7 +2754,6 @@ export default function RegulatoryCatalogue() {
 const GetGridData = (data) =>{
   try {
     debugger;
-    console.log('RowData', data);
     setLicenceData(data);
   } catch (error) {
     console.log(error);

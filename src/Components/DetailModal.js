@@ -6,6 +6,8 @@ import DocumentGrid from "./Grid/DocumentGrid";
 import { TextField } from "@mui/material";
 import { color } from "d3";
 import { createTheme } from '@mui/material/styles';
+import tutorial from "../assets/tutorial.mp4";
+import videoFinal from "../assets/VideoFinal.mp4"
 import { ThemeProvider } from '@mui/material/styles';
 import "../Css/resource.css";
 import { useEffect } from "react";
@@ -16,6 +18,8 @@ import logo from "../assets/Agriculture.png"
 
 const DetailModal = (props) => {
   debugger
+  console.log('props?.licenceData?', props?.licenceData);
+  console.log('props', props);
   const theme = createTheme({
     overrides: {
       MuiInput: {
@@ -216,12 +220,14 @@ const DetailModal = (props) => {
                             label="Address"
                             disabled={true}
                             size="small"
-                            style={{ marginBottom: "20px", 
-                            cursor: "pointer", 
-                            marginTop:"-6px",
-                            marginLeft:"-12px",
-                            width:"104%",
-                            pointerEvents: "none" }}
+                            style={{
+                              marginBottom: "20px",
+                              cursor: "pointer",
+                              marginTop: "-6px",
+                              marginLeft: "-12px",
+                              width: "104%",
+                              pointerEvents: "none"
+                            }}
                             className="modalTextField"
                             type="text"
                             InputLabelProps={{
@@ -230,16 +236,16 @@ const DetailModal = (props) => {
                             value={props?.licenceData?.address}
                             placeholder="Write your feedback subject"
                           />
-                           </a>
+                        </a>
                       </div>
                       {props?.licenceData?.map &&
                         <div className="row g-0 ">
-                        <a href={props?.licenceData?.location} target="_blank" className="p-0">
-                        <img src={props?.licenceData?.map} alt="" style={{height:140,width:"100%",borderRadius:5,marginTop:-3,objectFit:"cover"}}/>
-                        </a>
-                         </div>
+                          <a href={props?.licenceData?.location} target="_blank" className="p-0">
+                            <img src={props?.licenceData?.map} alt="" style={{ height: 140, width: "100%", borderRadius: 5, marginTop: -3, objectFit: "cover" }} />
+                          </a>
+                        </div>
                       }
-                    
+
 
 
                       {/* <div class="input-group d-flex justify-content-end">
@@ -326,6 +332,25 @@ const DetailModal = (props) => {
               children: (
                 <div style={{ height: "295px" }}>
                   <DocumentGrid dataForGrid={props.licenceData} isuseDepart={props?.licenceData?.fee} id="LD-002" />
+                </div>
+              ),
+            },
+            {
+              label: <span className="tabsLabel">Tutorials</span>,
+              key: "4",
+              children: (
+                <div style={{
+                  height: "560px",
+                  display: 'flex',
+                  flexDirection: 'row',
+                  justifyContent: 'space-evenly',
+                  alignItems: 'center'
+                }}>
+                  {props?.licenceData?.rlcoID === 'SELD-001' ?
+                   ( <video style={{ width: '70%' }} autoPlay loop muted>
+                      <source src={tutorial} type="video/mp4" />
+                    </video>) : ('No Video Found')
+                  }
                 </div>
               ),
             },
