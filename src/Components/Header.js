@@ -2000,6 +2000,24 @@ const {language} = useSelector((state)=>state.language)
                               {translations["statistics"][language]}
                             </a>
                           </Link>
+                          <Link className="" to={"/tutorial/1"}>
+                            <a
+                              target="_blank"
+                              href=""
+                              style={
+                                language === "ur" ||
+                                  language === "sd"
+                                  ? {
+                                    display: "flex",
+                                    flexDirection: "row-reverse",
+                                    marginRight: "-16px",
+                                  }
+                                  : {}
+                              }
+                            >
+                              {translations["Tutorial"][language]}
+                            </a>
+                          </Link>
                           {/* <Link className={""} to={"/resource"}>
                             <a
                               href="#"

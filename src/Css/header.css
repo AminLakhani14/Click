@@ -94,7 +94,8 @@ button {
 }
 
 .boxshadowNavBar2 {
-  box-shadow: inset 0 -185px 61px -61px rgb(195 182 182 / 52%)
+  /* box-shadow: inset 0 -185px 61px -61px rgb(195 182 182 / 52%); */
+  background-color: red;
 }
 
 .header {

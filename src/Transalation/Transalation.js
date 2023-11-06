@@ -180,6 +180,11 @@ sd:"ٽيم"
     ur: 'نقشے ',
     sd: 'نقشون ',
   },
+  'Tutorial':{
+    en:'Tutorials',
+    ur:'سبق',
+    sd:'سبق'
+  },
   'Updates': {
     en: 'Updates',
     ur: 'اپ ڈیٹس',

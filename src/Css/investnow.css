@@ -1,6 +1,27 @@
 :root {
-  --main-heading:30px;
+  --main-heading: 30px;
   --font-size: 20px; /* Initial font size */
+}
+
+.MeetourTeam {
+  color: #054a91;
+  position: relative;
+  margin: 50px 0;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+.MeetourTeam::before {
+  content: " ";
+  height: 3px;
+  width: 180px;
+  position: absolute;
+  background-color: #720d1d;
+  top: 53px;
+
+  margin-bottom: 10px;
+
+  /* margin-left: 100px; */
 }
 .steps {
   display: flex;
@@ -42,13 +63,13 @@
 .steps__item--active ~ .steps__item {
   background-color: #0f5789;
 }
-.ReportRegulatoryDifficulties{
+.ReportRegulatoryDifficulties {
   color: #054a91;
   position: relative;
   margin-bottom: 50px;
 }
-.ReportRegulatoryDifficulties::before{
-  content: ' ';
+.ReportRegulatoryDifficulties::before {
+  content: " ";
   height: 3px;
   width: 300px;
   position: absolute;
@@ -78,10 +99,10 @@
   margin-right: auto;
   margin-left: auto;
 }
-.ant-input:hover{
+.ant-input:hover {
   border-color: black !important;
 }
-.ant-input:active{
+.ant-input:active {
   border-color: black !important;
 }
 .text-center {
@@ -160,7 +181,7 @@
   position: relative;
   transition: 0.5s;
 } */
-.cards:hover{
+.cards:hover {
   /* translate: 0px -10px; */
   /* transform: scale(1.1,1.1); */
 }
@@ -181,14 +202,14 @@
   justify-content: space-between;
   align-items: center;
 } */
-.parent_container{
+.parent_container {
   width: 100%;
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.card_containers{
+.card_containers {
   width: 75%;
   height: 50px;
   background-color: white;
@@ -197,70 +218,68 @@
   flex-wrap: wrap;
   height: 400px;
 }
-.cards{
+.cards {
   background-color: transparent;
   width: 30%;
   height: 400px;
   box-shadow: 0 0.2rem 1rem rgba(0, 0, 0, 0.12);
- border-radius: 5px;
- padding: 15px;
- position: relative;
- transition: .5s;
- margin-bottom: 30px;
+  border-radius: 5px;
+  padding: 15px;
+  position: relative;
+  transition: 0.5s;
+  margin-bottom: 30px;
 }
-.cards::after{
-  content: '';
+.cards::after {
+  content: "";
   width: 100%;
   height: 3px;
   position: absolute;
   bottom: 0;
   left: 0px;
-  background-color:#0f5789;
-border-bottom-left-radius: 5px;
-border-bottom-right-radius: 5px;
-
+  background-color: #0f5789;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
-.cards:hover{
-  translate:0px -5px;
+.cards:hover {
+  translate: 0px -5px;
   cursor: pointer;
 }
-.img_container img{
+.img_container img {
   width: 100%;
   height: 250px;
   object-fit: cover;
   border-radius: 3px;
   margin-bottom: 10px;
 }
-.members_information_container{
+.members_information_container {
   display: flex;
   justify-content: space-between;
- align-items: flex-start;
+  align-items: flex-start;
   /* align-items: center; */
   /* flex-wrap: wrap; */
-/* box-sizing: border-box; */
+  /* box-sizing: border-box; */
 
   /* background-color: red; */
 }
-.members_information_container p ,.members_information_container h3{
+.members_information_container p,
+.members_information_container h3 {
   margin: 0px !important;
 }
-.members_information_container h3{
+.members_information_container h3 {
   text-align: left;
   /* text-overflow: ellipsis; */
 }
-.emai_container{
+.emai_container {
   padding: 2px 7px 0px 7px !important;
   border-radius: 2px;
   box-shadow: 0 0.2rem 1rem rgba(0, 0, 0, 0.12);
-/* box-sizing: border-box; */
-
+  /* box-sizing: border-box; */
 }
-.email{
+.email {
   color: maroon;
-/* box-sizing: border-box; */
-
+  /* box-sizing: border-box; */
 }
-.designation{
+.designation {
   position: absolute;
   bottom: 10px;
 }
@@ -285,7 +304,7 @@ border-bottom-right-radius: 5px;
   color: white;
 }
 
-.feedbackpara{
+.feedbackpara {
   font-size: 20px;
   text-align: left;
   font-size: 20px;
@@ -295,7 +314,6 @@ border-bottom-right-radius: 5px;
   margin: auto;
   letter-spacing: 1px;
 }
-
 
 .NewsAndInformationDate {
   width: 100%;
@@ -405,14 +423,13 @@ border-bottom-right-radius: 5px;
 / for why Sindh main screen / */
 
 .slide-in-Sindhleft {
-  transition: transform 2.0s ease-in;
+  transition: transform 2s ease-in;
   transform: translateX(0);
 }
 
 .slide-in-Sindhleft.slide-out-Sindhleft {
   transform: translateX(-300%) !important;
 }
-
 
 .slide-in-SindhUP {
   transition: transform 2.8s ease-in;
@@ -422,7 +439,6 @@ border-bottom-right-radius: 5px;
   transform: translateY(100%);
 }
 
-
 .slide-in-SindhUPpara {
   transition: transform 1.4s ease-in;
   transform: translateY(0);
@@ -430,7 +446,6 @@ border-bottom-right-radius: 5px;
 .slide-in-SindhUPpara.slide-out-SindhUPpara {
   transform: translateY(100%);
 }
-
 
 /* / for why Sindh main screen / */
 
@@ -489,7 +504,7 @@ border-bottom-right-radius: 5px;
   padding: 5px 10px 5px 10px;
 }
 
-.InvestinSindhbuttonforUrduandSindhi{
+.InvestinSindhbuttonforUrduandSindhi {
   width: 253px;
   height: 97px;
   font-family: "Crimson Pro";
@@ -500,7 +515,6 @@ border-bottom-right-radius: 5px;
   color: rgb(255, 255, 255);
   background: linear-gradient(180deg, #720d1d 0%, #1f0308 100%);
   padding: 5px 10px 5px 10px;
-
 }
 
 .submitButton {
@@ -518,15 +532,16 @@ border-bottom-right-radius: 5px;
 }
 
 @media screen and (max-width: 500px) {
-  .submitButton{
-   width: 150px;
-   height: 50px;
-  }}
-  .ReportRegulatorybefore{
-    color: #054a91;
-    position: relative;
-    margin-bottom: 50px;
+  .submitButton {
+    width: 150px;
+    height: 50px;
   }
+}
+.ReportRegulatorybefore {
+  color: #054a91;
+  position: relative;
+  margin-bottom: 50px;
+}
 .feedbacksubmitButton {
   width: 200px;
   height: 60px;
@@ -693,11 +708,9 @@ border-bottom-right-radius: 5px;
   background-repeat: no-repeat !important;
   background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)),
     url("../assets/GROWTH.png");
-    
 }
 
-
-.descriptionImageforsectorsandopport{
+.descriptionImageforsectorsandopport {
   width: 80%;
   display: flex;
   height: 445px !important;
@@ -705,10 +718,8 @@ border-bottom-right-radius: 5px;
   background-repeat: no-repeat !important;
   background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)),
     url("../assets/GROWTH.png");
- 
-  background-position: center !important;
 
-    
+  background-position: center !important;
 }
 
 .Frozen {
@@ -746,11 +757,9 @@ border-bottom-right-radius: 5px;
   height: 236px;
   background-size: 191px;
   left: 14vh;
-  top:-17.3vh;
+  top: -17.3vh;
   background-repeat: no-repeat;
 }
-
-
 
 .dotsPoultry {
   background: url("../assets/dots.png");
@@ -834,25 +843,19 @@ border-bottom-right-radius: 5px;
   background-color: #1e4f72;
 }
 
-
 .mobilePara {
   font-size: 20px;
   text-align: left;
 }
 
 /* only on feedbackform */
-.mobileparaforfeedback{
+.mobileparaforfeedback {
   font-size: 20px;
-  text-align:center;
+  text-align: center;
   margin-top: -35px !important;
 }
 
-
-
-
-
-
-@media screen and (width: 540px){
+@media screen and (width: 540px) {
   .descriptionImage {
     height: 200px;
     margin-left: 0vh;
@@ -877,7 +880,7 @@ border-bottom-right-radius: 5px;
   }
 }
 
-@media screen and (width: 912px){
+@media screen and (width: 912px) {
   .descriptionImage {
     height: 403px;
     margin-left: 0vh;
@@ -894,7 +897,7 @@ border-bottom-right-radius: 5px;
     width: 100px;
     right: 0vh;
     background-size: 100px;
-    top:-5.300000000000001vh;
+    top: -5.300000000000001vh;
   }
   .agriAndFoodHeading {
     /* height: 205px; */
@@ -907,7 +910,6 @@ border-bottom-right-radius: 5px;
     font-size: 30px;
   }
 }
-
 
 @media screen and (min-width: 768px) and (max-width: 825px) {
   .descriptionImage {

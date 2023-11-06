@@ -1,0 +1,15 @@
+.parent_container{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.video_container{
+  width:80%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.video{
+  width: 30%;
+
+}

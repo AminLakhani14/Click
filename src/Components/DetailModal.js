@@ -13,6 +13,7 @@ import "../Css/resource.css";
 import { useEffect } from "react";
 import Map from "./Map";
 import logo from "../assets/Agriculture.png"
+import labourDepartmentVideo from "../assets/ld002.mp4"
 
 
 
@@ -340,16 +341,22 @@ const DetailModal = (props) => {
               key: "4",
               children: (
                 <div style={{
-                  height: "560px",
+                  // height: "560px",
                   display: 'flex',
                   flexDirection: 'row',
                   justifyContent: 'space-evenly',
                   alignItems: 'center'
                 }}>
-                  {props?.licenceData?.rlcoID === 'SELD-001' ?
-                   ( <video style={{ width: '70%' }} autoPlay loop muted>
-                      <source src={tutorial} type="video/mp4" />
-                    </video>) : ('No Video Found')
+                  {props?.licenceData?.video ?
+                   ( <video 
+                    height={"320px"}
+                    width={"100%"}
+                     autoPlay loop muted
+                     controls={true}
+                    >
+                      <source src={props?.licenceData?.video} type="video/mp4" />
+                    </video>)
+                     : ('No Video Found')
                   }
                 </div>
               ),

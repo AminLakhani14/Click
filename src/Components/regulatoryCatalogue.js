@@ -32,6 +32,14 @@ import SindhHealthCareCommission from "../assets/mapS.S/Sindh Health Care Commis
 import KarachiWaterSewerageBoard from "../assets/mapS.S/Karachi Water Sewerage Board .png" 
 import SindhRevenueBoard from "../assets/mapS.S/Sindh Revenue Board.png"
 import SindhEmployeesSocialSecurityInstitution from "../assets/mapS.S/Sindh Employees Social Security Institution (SESSI).png" 
+
+///////////////tutorial///////////
+ import healthVideo from "../assets/tutorial/healthDepartment.mp4"
+ import healthVideowholesle from "../assets/tutorial/heathDepartmentwholesale.mp4"
+ import LabourVideo from "../assets/ld002.mp4"
+import schooleDepartmentVideo from "../assets/tutorial/schoolEducationAndLiteracyDepartment.mp4";
+
+ 
 const arr = [
 
     {
@@ -49,6 +57,7 @@ const arr = [
       downloaddocument: `${process.env.PUBLIC_URL}../assets/sindhkatciabadiact1987.pdf`,
       pdf:sindh,
       logo:collegeDepartment,
+      video:undefined,
       l1:"▪ Form-A (with all proforma's. etc. security, census, authority) and covering letter;",
       l2:"▪ Paid fee challan as per the following fee schedule;",
       l3:"▪ Inspection report;",
@@ -71,6 +80,7 @@ const arr = [
       rlcoID: "LD-001",
       details: "Registration of Shops &amp; Establishment",
       type: "Registration",
+    
       // prevailing: "The Sindh Shops &amp; Establishment Act,2015",
       // jurisdiction: "Sindh",
       address: "Block No 86, Sindh Secretariat IV-B, Court Road, Karachi.",
@@ -80,11 +90,12 @@ const arr = [
       documentname: "Amendment",
       documenttype: "Law / Rules / Regulations	",
       downloaddocument: `${process.env.PUBLIC_URL}../assets/sindhkatciabadiact1987.pdf`,
-
+video:LabourVideo,
       pdf: {
         BuildingBylaws: BuildingBylaws
       },
       logo:labourAndHumanResource,
+
       l1:"▪ Name of the establishment, if any;",
       l2:"▪ Postal address of the establishment; ",
       l3:"▪ Full name of the employer (including father's name); ",
@@ -113,6 +124,7 @@ const arr = [
           documenttype: "Law / Rules / Regulations	",
       downloaddocument: `${process.env.PUBLIC_URL}../assets/sindhkatciabadiact1987.pdf`,                
       logo:labourAndHumanResource,
+  video:LabourVideo,
       l1:"▪ Name of the establishment, if any;",
       l2:"▪ Postal address of the establishment; ",
       l3:"▪ Full name of the employer (including father's name); ",
@@ -164,9 +176,10 @@ const arr = [
         // "1. The Drugs Act,1976. \n2. Sindh Drugs Rules, 1979 amended 2010.",
       // jurisdiction: "Sindh",
       timeLine: "3 Month",
-      fee: "Rs.5000",
+      fee: "Rs.6000",
       documenttype: "Law / Rules / Regulations	",
       logo:HealthDepartment,
+      video:healthVideo,
       address: "6th Floor, Sindh Secretariat No 1 Kamal Atta Turk Road, Karachi",
       contactno: "(021) 99222012",
       l1:"▪ Attested copy of the qualified person (Dispenser / Compounder / B. Pharmacy/ Pharm-D);",
@@ -176,8 +189,8 @@ const arr = [
       l5:"▪ Attested photocopy of the registration issued by the CCI and in case of Indenter/ Importer;",
       l6:"▪ Rent /receipt/agreement (attested);",
       l7:"▪ Treasury challan for Rs. 5,000; and",
-      l8:"▪ Copy of NTN No."
-
+      l8:"▪ Copy of NTN No.",
+    
       // officials:
         // "1 .Licensing Authority (Secretary Health has delegated authority to District Health Officer) \n2. Provincial Inspector Drugs",
         // validity: "",                   
@@ -195,6 +208,7 @@ const arr = [
       address: "6th Floor, Sindh Secretariat No 1 Kamal Atta Turk Road, Karachi",
       contactno: "(021) 99222012",
       logo:HealthDepartment,
+      video:healthVideowholesle,
       l1:"▪ Attested copy of the qualified person (Dispenser / Compounder / B. Pharmacy/ Pharm-D);",
       l2:"▪ Photocopy (attested) of C.N.I.C of the proprietor and qualified person;",
       l3:"▪ Four attested photographs of the qualified person (Dispenser/ Compounder/ B. Pharmacy/ Pharm-D);",
@@ -243,6 +257,7 @@ const arr = [
       type: "License",
       documenttype: "Law / Rules / Regulations	",
       logo:HealthDepartment,
+      video:healthVideowholesle,
       address: "6th Floor, Sindh Secretariat No 1 Kamal Atta Turk Road, Karachi",
       contactno: "(021) 99222012",
 
@@ -282,6 +297,7 @@ const arr = [
       //  renewalFee:""
       documenttype: "Law / Rules / Regulations	",
       logo:HealthDepartment,
+      video:healthVideowholesle,
       l1:"▪ Attested copy of the qualified person (Dispenser / Compounder / B. Pharmacy/ Pharm-D);",
       l2:"▪ Photocopy (attested) of C.N.I.C of the proprietor and qualified person;",
       l3:"▪ Four attested photographs of the qualified person (Dispenser/ Compounder/ B. Pharmacy/ Pharm-D);",
@@ -308,6 +324,7 @@ const arr = [
       address: "School Education & Literacy Department Government of Sindh 1st. Floor, Tughlaq House Sindh Secretariat, Saddar Karachi",
       contactno: "(021) 99211227",
       logo:SchoolEducationAndLiteracy,
+      video:schooleDepartmentVideo,
       l1:"▪ Form-A and covering letter;",
       l2:"▪ Treasury challan original and (03) copies (Head of account: C-02818) in the favor of Secretary, Education & Literacy Department in accordance with following fee schedule;",
       l3:"▪ Society registration certificate with bylaws/ trust paper/ private limited or individual CNIC;",

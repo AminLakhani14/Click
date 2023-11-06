@@ -37,6 +37,7 @@ import Agriculture from "./Components/agriculture";
 import Energy from "./Components/energy";
 import Dashboard from "./Components/Dashboard";
 import Tutorial from "./Components/Tutorial";
+import Watch from "./Components/Watch";
 
 
 export let searchText = '';
@@ -250,8 +251,12 @@ export const router = createHashRouter([
     element: <Energy/>,
   },
   {
-    path: "/tutorial",
+    path: "/tutorial/:id",
     element: <Tutorial/>,
+  },
+  {
+    path: "/watch/:id",
+    element: <Watch/>,
   },
 
 ]);

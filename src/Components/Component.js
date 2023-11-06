@@ -6,6 +6,7 @@ import DetailModal from "./DetailModal";
 import MobileHeaderGeneric from "./MobileHeaderGeneric";
 
 
+
 export default function Component() {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   useEffect(() => {
