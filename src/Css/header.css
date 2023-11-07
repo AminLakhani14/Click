@@ -94,8 +94,8 @@ button {
 }
 
 .boxshadowNavBar2 {
-  /* box-shadow: inset 0 -185px 61px -61px rgb(195 182 182 / 52%); */
-  background-color: red;
+  box-shadow: inset 0 -185px 61px -61px rgb(195 182 182 / 52%);
+  /* background-color: red; */
 }
 
 .header {
@@ -404,7 +404,7 @@ li {
   color: rgb(255, 255, 255);
   background: linear-gradient(180deg, #720d1d 0%, #1f0308 100%);
   padding: 5px 10px 5px 10px;
-  /* margin: 0px !important; */
+  margin-right: 8px !important;
   /* display: flex; */
   background-color: red;
   /* justify-content: center; */
@@ -1476,7 +1476,7 @@ path {
   color: black;
   height: 33.5px;
   z-index: 0;
-  margin-bottom: 6px;
+  /* margin-bottom: 6px; */
   box-shadow: 1px 1px 3px rgb(122, 122, 122);
   border: 1px solid black;
 }

@@ -2000,7 +2000,7 @@ const {language} = useSelector((state)=>state.language)
                               {translations["statistics"][language]}
                             </a>
                           </Link>
-                          <Link className="" to={"/tutorial/1"}>
+                          <Link className="" to={"/tutorial"}>
                             <a
                               target="_blank"
                               href=""

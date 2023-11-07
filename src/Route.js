@@ -251,11 +251,11 @@ export const router = createHashRouter([
     element: <Energy/>,
   },
   {
-    path: "/tutorial/:id",
+    path: "/tutorial",
     element: <Tutorial/>,
   },
   {
-    path: "/watch/:id",
+    path: "/watch/:department/:id",
     element: <Watch/>,
   },
 

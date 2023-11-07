@@ -11,5 +11,64 @@
 }
 .video{
   width: 30%;
+  position: relative;
 
+}
+.zan{
+  position: absolute;
+  bottom: 80px;
+  right: 10px;
+  background-color: #2d2929c9;
+  color:white ;
+  border-radius: 5px;
+  padding: 2px 10px;
+  /* z-index: 999; */
+}
+/* .zain p{
+  margin-bottom: 0;
+  color: white !important;
+} */
+.title_container{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  /* margin-top: 10px; */
+  margin: 10px 0;
+  /* background-color: #054a91; */
+}
+.video_title > p:nth-child(1){
+ margin: 0 !important;
+ font-size: 16px !important;
+}
+.video_title > p:nth-child(2){
+  margin: 0 !important;
+  font-size: 17px !important;
+  font-weight: 400;
+ }
+a{
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+.player{
+  position: relative;
+  display: flex;
+  justify-content:center ;
+  align-items: center;
+  /* z-index: ; */
+
+}
+.player:hover::after{
+  content: 'Play All';
+  background-color:  #2d2929c9;
+  position: absolute;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  display: flex;
+  justify-content:center ;
+  align-items: center;
+  color: white;
+  font-size: 24px;
 }

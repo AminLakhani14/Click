@@ -17,62 +17,75 @@ import healthVideo from "../assets/tutorial/healthDepartment.mp4";
 import healthWholesale from "../assets/tutorial/heathDepartmentwholesale.mp4";
 import regionalOffice from "../assets/tutorial/regionalDirectorOffice.mp4";
 import schooleDepartmentVideo from "../assets/tutorial/schoolEducationAndLiteracyDepartment.mp4";
-export const members = [
+export const videos = [
   {
     id: 1,
     tutorial: healthVideo,
-    title: "Health Department",
+    department: "Health Department",
+    license:'dummy license'
   },
   {
     id: 2,
     tutorial: regionalOffice,
-    title: "Regional Director Office",
+    department: "Regional Director Office",
+    license:'dummy license'
   },
   {
     id: 3,
     tutorial: schooleDepartmentVideo,
-    title: "School Education and Literacy Department",
+    department: "School Education and Literacy Department",
+    license:'dummy license'
   },
   {
     id: 4,
-    tutorial: healthVideo,
-    title: "Health Department",
+    tutorial: schooleDepartmentVideo,
+    department: "Health Department",
+    license:'dummy license'
   },
   {
     id: 5,
     tutorial: regionalOffice,
-    title: "Regional Director Office",
+    department: "Regional Director Office",
+    license:'dummy license'
   },
   {
     id: 6,
     tutorial: schooleDepartmentVideo,
-    title: "School Education and Literacy Department",
+    department: "School Education and Literacy Department",
+    license:'dummy license'
   },
   {
     id: 7,
     tutorial: healthVideo,
-    title: "Health Department",
+    department: "Health Department",
+    license:'dummy license'
   },
   {
     id: 8,
     tutorial: regionalOffice,
-    title: "Regional Director Office",
+    department: "Regional Director Office",
+    license:'dummy license',
+    
   },
   {
     id: 9,
     tutorial: schooleDepartmentVideo,
-    title: "School Education and Literacy Department",
+    department: "School Education and Literacy Department",
+    license:'dummy license'
   },
 ];
 function Team() {
+  const [ hover ,setHover]=useState(false)
+  const [hoverID,sethoverID]=useState()
+  const [playListLength, setplayListLength] = useState(0)
 //   const {id}=useParams()
-//   // const [filtervideo,setfiltervideo]=useState(members)
+//   // const [filtervideo,setfiltervideo]=useState(videos)
 //   const [play, setplay] = useState(true)
 //   console.log(id)
 
 //   const [filtervideo,setfiltervideo]=useState([])
 //   useEffect(()=>{
-//      let zain= members?.filter((item)=>{
+//      let zain= videos?.filter((item)=>{
 //           return item.id==id?item:null
 //       })
 //       setfiltervideo(zain)
@@ -115,18 +128,28 @@ function Team() {
       <div className="parent_container">
         
           <div className="video_container">
-        {members?.map(({ tutorial,title, id }) => {
+        {videos?.map(({ tutorial,department, id },index) => {
                         return <>
-                        <div className="video">
-                        <Link to={`/watch/${id}`}>
+                        <div className="video" onMouseEnter={()=>{
+                                   setHover(true)
+                                   sethoverID(index+1)
+                                }} onMouseLeave={()=>{
+setHover(false)
+                                }}>
+                        <Link to={`/watch/${department}/${id}`} >
+                          <div className="zain">
+                          {/* <i class="fa-solid fa-list-music"></i> */}
+                            {/* <p> <i class="fa-brands fa-playstation me-1"></i> 3 videos</p> */}
+                          </div>
                                     <ReactPlayer
                                         url={tutorial}
                                         // controls={true}
                                         // playing={true}
                                         width={"100%"}
-                                        height={210}
+                                        height={windowWidth >=1400?250:210}
                                         light={<img src={zain}/>}
-                                        playing={false}
+                                        playing={id==hoverID&& hover}
+                                        className='player'
                                         style={{ border:'1px solid rgba(0, 0, 0, 0.12)',overflow: "hidden",borderRadius:5,margin:5,  boxShadow: "0 0.2rem 1rem rgba(0, 0, 0, 0.12)"}}
                                         // height={"100%"}
                                       
@@ -145,11 +168,14 @@ function Team() {
                                    </video> */}
                          
                             </Link>
-                            <div className="title_container">
-                              <div className="dp">
+                            <div className="title_container ms-2">
+                              {/* <div className="dp">
                                 <img src={user} alt="" />
+                              </div> */}
+                              <div className="video_title"><p>{department}</p>
+                              <p> view full playlist</p>
                               </div>
-                              <div className="video_title">{title}</div>
+                          
                             </div>
                         
                         </div>

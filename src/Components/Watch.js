@@ -18,6 +18,8 @@ import video6 from "../assets/led-001.mp4";
 import video7 from "../assets/design.mp4";
 import zain from "../assets/zain.png";
 import { Link, useNavigate, useParams } from "react-router-dom";
+import { videos } from "./Tutorial"; 
+
 
 export const members = [
   {
@@ -37,12 +39,15 @@ export const members = [
   },
 ];
 const Watch = () => {
-
-
-
-  
- let {id}=  useParams()
- let navigate = useNavigate()
+  debugger
+  let {id,department}=  useParams()
+const [departmentFilter, setdepartmentFilter] = useState(videos)
+useEffect(()=>{
+  let    filterd=departmentFilter?.filter((item)=>{
+    return department==item?.department ? item :undefined 
+  })
+setdepartmentFilter(filterd)
+},[])
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [selectedVideo, setSelectedVideo] = useState(members[0].id)
   console.log("🚀 ~ file: Tutorial.js:41 ~ Tutorial ~ selectedVideo:", selectedVideo)
@@ -60,7 +65,7 @@ const Watch = () => {
     return () => {
       window.removeEventListener("resize", handleResize);
     };
-  }, []);
+  });
 
 
   // const [filtervideo,setfiltervideo]=useState(members)
@@ -69,8 +74,8 @@ const Watch = () => {
 
   const [filtervideo,setfiltervideo]=useState([])
   useEffect(()=>{
-     let zain= members?.filter((item)=>{
-          return item.id==id?item:null
+     let zain= departmentFilter?.filter((item)=>{
+          return item?.id==id?item:undefined
       })
       setfiltervideo(zain)
   },[id])
@@ -93,7 +98,7 @@ useEffect(()=>{
       <div className=""></div>
       <div className="parent_container">
           <div className="main_video">
-         {filtervideo?.map(({ tutorial, title,id }) => {
+         {filtervideo?.map(({ tutorial, department,license,id }) => {
                         return <>
                             {/* <Link to={`/tutorial/${id}`}> */}
                                 {/* <div className={["Video_box"]}> */}
@@ -111,7 +116,10 @@ useEffect(()=>{
                                         // volume={false}
 
                                     />
-                                      <h1 class="text-2xl lg:text-3xl flex font-semibold">{title}</h1>
+                                   <div className="video_discription">
+                                   <h1 class="text-2xl lg:text-3xl flex font-semibold">{department}</h1>
+                                      <p class="text-bold">{license}</p>
+                                   </div>
                                 {/* </div> */}
                             {/* </Link> */}
 
@@ -119,9 +127,9 @@ useEffect(()=>{
                     })}
           </div>
           <div className="side_video">
-        {members?.map(({ tutorial,title, id }) => {
+        {departmentFilter?.map(({ tutorial,department,license, id }) => {
                         return <>
-                            <Link to={`/tutorial/${id}`}>
+                            <Link to={`/watch/${department}/${id}`}>
                                     {/* <ReactPlayer
                                         url={tutorial}
                                         // controls={true}
@@ -149,10 +157,15 @@ useEffect(()=>{
                          
                             </Link>
                             <div className="title_container">
-                              <div className="dp">
+                              {/* <div className="dp">
                                 <img src={user} alt="" />
-                              </div>
-                              <div className="video_title">{title}</div>
+                              </div> */}
+                              <div className="video_title">
+                              <h6>{department}</h6>
+                              <p>{license}</p>
+                             
+                                </div>
+                         
                             </div>
                         
 

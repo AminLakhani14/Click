@@ -7,35 +7,46 @@ import AboutUsImg from "../assets/city.png";
 import Gallery from "./Gallery";
 import TeamCards from "./TeamCards";
 import user from "../assets/Unknown_person.jpg"
+import hiraPirzada from '../assets/teamsPic/hiraPirzada.png';
+import fatimaSaleem from '../assets/teamsPic/fatimaSaleem.png';
+import anwarAli from '../assets/teamsPic/anwarAli.jpg';
+import asifKhan from '../assets/teamsPic/asifKhan.png';
+import tahirAli from '../assets/teamsPic/tahirAli.png';
 
 const members = [
   
   
-   { dp: user,
+   { dp: anwarAli,
     name: "Mr. Anwar Ali Shar, PAS",
-    designation: "Mr. Anwar Ali Shar, PAS",
+    designation: "Project Director CLICK",
+    email:"pd@business.gos.pk"
   },
     
   {
-    dp: user,
+    dp: asifKhan,
     name: "Mr. Asif Karim",
     designation: "Senior Manager",
+    email:'asif.kareem@business.gos.pk'
   },
  
   {
-    dp: user,
+    dp: hiraPirzada,
     name: "Ms. Hira Pirzada",
     designation: "Communication Specialist",
+    email:'hira.pirzada@business.gos.pk'
   },
   {
-    dp: user,
+    dp: fatimaSaleem,
     name: "Ms. Fatima Saleem Butt",
     designation: "Legal Specialist",
+    email:'fatima.saleem@business.gos.pk'
+
   },
   {
-    dp: user,
+    dp: tahirAli,
     name: "Mr. Tahir Ali Khan",
     designation: "Senior Automation Specialist ",
+    email:'tahir@business.gos.pk'
   }, 
   // {
 
@@ -47,6 +58,7 @@ const members = [
     dp: user,
     name: "Mr. Irshad Siddiqui",
     designation: "Procurement Specialist",
+    email:"irshad@business.gos.pk"
   }
     
 ];
@@ -196,10 +208,11 @@ function Team() {
                   </div>
                   <div className="members_information_container">
                     <div className="name">
-                      <h3>{name}</h3>
+                      <h5>{name}</h5>
                     </div>
                     <div className="emai_container">
-                      <i class="fa-solid fa-envelope fa-beat-fade email"></i>
+                    <a href={`https://mail.google.com/mail/?view=cm&fs=1&to=${items?.email}`} target="_blank"><i class="fa-solid fa-envelope fa-beat-fade email"></i></a>
+                      
                     </div>
                   </div>
                   <div className="">{designation}</div>
