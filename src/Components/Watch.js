@@ -13,45 +13,160 @@ import healthVideo from "../assets/tutorial/healthDepartment.mp4";
 import healthWholesale from "../assets/tutorial/heathDepartmentwholesale.mp4";
 import regionalOffice from "../assets/tutorial/regionalDirectorOffice.mp4";
 import schooleDepartmentVideo from "../assets/tutorial/schoolEducationAndLiteracyDepartment.mp4";
-import video5 from "../assets/ld002.mp4";
-import video6 from "../assets/led-001.mp4";
-import video7 from "../assets/design.mp4";
-import zain from "../assets/zain.png";
-import { Link, useNavigate, useParams } from "react-router-dom";
-import { videos } from "./Tutorial"; 
+import schoolEducationDepartment from "../assets/thumbnail/schoolEducationaAndLitercaDepartment.png";
+
+import licenseToManufactureDrug from "../assets/tutorial/LIcensetomanufacturedrug.mp4";
+import licenseToSaleDrugByWholeSale from "../assets/tutorial/LIcensetosaledrugbyholesale.mp4";
+import LIcensetosaledrugbytretail from "../assets/tutorial/LIcensetosaledrugbytretail.mp4";
+import Ld_001 from "../assets/tutorial/led-001.mp4";
+import Ld_002 from "../assets/tutorial/ld002.mp4";
+
+import CED_001 from "../assets/tutorial/CED_001.mp4";
+import ICD_001 from "../assets/tutorial/ICD-001.mp4";
+import ICD_002 from "../assets/tutorial/ICD-002.mp4";
+import ICD_003 from "../assets/tutorial/ICD-003.mp4";
+import ICD_004 from "../assets/tutorial/ICD-004.mp4";
+import ICD_005 from "../assets/tutorial/ICD-005.mp4";
+import ICD_006 from "../assets/tutorial/ICD-006.mp4";
+import ICD_007 from "../assets/tutorial/ICD-007.mp4";
+import sindhHealthcarevideo from "../assets/tutorial/sindhHealthcare.mp4";
+import { Link, useParams } from "react-router-dom";
+import { ahmer } from "./Tutorial";
+
+import sindhHealthcare from "../assets/thumbnail/sindhHealthcare.png";
+import CollegeEducationDepartment from "../assets/thumbnail/CollegeEducationDepartment.png";
+import healthDepartment from "../assets/thumbnail/healthDepartment.png";
+import labourDepartment from "../assets/thumbnail/labourDepartment.png";
+import IndustriesAndCommerceDepartment from "../assets/thumbnail/IndustriesAndCommerceDepartmetn.png"
 
 
-export const members = [
+export const videos = [
   {
-    id:1,
-    tutorial: healthVideo,
-    title: "Health Department",
+    id: 1,
+    tutorial: licenseToManufactureDrug,
+    department: "Health Department",
+    license: "License to manufacture Drugs",
+    thumbnail: healthDepartment,
   },
   {
-    id:2,
-    tutorial: regionalOffice,
-    title: "Regional Director Office",
+    id: 2,
+    tutorial: ICD_001,
+    department: "Industries and Commerce Department",
+    license: "Registration Certificate of Partnership Firm",
+    thumbnail: schoolEducationDepartment,
   },
   {
-    id:3,
+    id: 3,
+    tutorial: Ld_001,
+    department: "Labour Department",
+    license: "Registration of Shops & Establishment",
+    thumbnail: labourDepartment,
+    length: 2,
+  },
+  {
+    id: 4,
+    tutorial: sindhHealthcarevideo,
+    department: "Sindh Healthcare Commission",
+    license: "Registration & Licensing of Healthcare Establishments",
+    thumbnail: sindhHealthcare,
+    length: 2,
+  },
+  {
+    id: 5,
     tutorial: schooleDepartmentVideo,
-    title: "School Education and Literacy Department",
+    department: "School Education and Literacy Department",
+    license: "Registration of Privately Managed Schools",
+    thumbnail: schoolEducationDepartment,
   },
+  {
+    id: 6,
+    tutorial: CED_001,
+    department: "College Education Department",
+    license: "Registration of Privately Managed Colleges ",
+    thumbnail: CollegeEducationDepartment,
+  },
+  {
+    id: 7,
+    tutorial: licenseToSaleDrugByWholeSale,
+    department: "Health Department",
+    license: "License to sell Drugs by Way of Retail Sale (Form-6)",
+    thumbnail: healthDepartment,
+  },
+  {
+    id: 8,
+    tutorial: LIcensetosaledrugbytretail,
+    department: "Health Department",
+    license: "License to sell Drugs by Way of Wholesale 7A",
+    thumbnail: healthDepartment,
+  },
+
+  {
+    id: 9,
+    tutorial: ICD_002,
+    department: "Industries and Commerce Department",
+    license: "Registration Certificate of Amendment/Dissolution /Rectification in Partnership Firm",
+    thumbnail: IndustriesAndCommerceDepartment,
+  },
+
+  {
+    id: 10,
+    tutorial: Ld_002,
+    department: "Labour Department",
+    license: "Registration of Factories",
+    thumbnail: labourDepartment,
+    length: 2,
+  },
+  
+  {
+    id: 11,
+    tutorial: ICD_003,
+    department: "Industries and Commerce Department",
+    license: "Registration of New Boiler",
+    thumbnail: IndustriesAndCommerceDepartment,
+  },
+  {
+    id: 12,
+    tutorial: ICD_004,
+    department: "Industries and Commerce Department",
+    license: "Registration of Old Boiler",
+    thumbnail: IndustriesAndCommerceDepartment,
+  },
+  {
+    id: 13,
+    tutorial: ICD_005,
+    department: "Industries and Commerce Department",
+    license: "Approval of Plan and Particulars of Boilers Acceptable for Registration (New Boiler)",
+    thumbnail: IndustriesAndCommerceDepartment,
+  },
+  {
+    id: 14,
+    tutorial: ICD_006,
+    department: "Industries and Commerce Department",
+    license: "Approval of Plan and Particulars of Boilers Acceptable for Registration (Used Boiler)",
+    thumbnail: IndustriesAndCommerceDepartment,
+  },
+  {
+    id: 15,
+    tutorial: ICD_007,
+    department: "Industries and Commerce Department",
+    license: "Transfer of Ownership",
+    thumbnail: IndustriesAndCommerceDepartment,
+  },
+  
 ];
+
 const Watch = () => {
-  debugger
-  let {id,department}=  useParams()
-const [departmentFilter, setdepartmentFilter] = useState(videos)
-useEffect(()=>{
-  let    filterd=departmentFilter?.filter((item)=>{
-    return department==item?.department ? item :undefined 
-  })
-setdepartmentFilter(filterd)
-},[])
+  
+  let { id, department } = useParams();
+  const [departmentFilter, setdepartmentFilter] = useState(videos);
+  useEffect(() => {
+    let filterd = departmentFilter?.filter((item) => {
+      return department == item?.department ? item : undefined;
+    });
+    setdepartmentFilter(filterd);
+  }, [id]);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-  const [selectedVideo, setSelectedVideo] = useState(members[0].id)
-  console.log("🚀 ~ file: Tutorial.js:41 ~ Tutorial ~ selectedVideo:", selectedVideo)
-  // const [play, setplay] = useState(false)
+
   useEffect(() => {
     // Function to update the windowWidth state when the resize event occurs
     const handleResize = () => {
@@ -67,114 +182,95 @@ setdepartmentFilter(filterd)
     };
   });
 
+  const [play, setplay] = useState(true);
+  console.log(id);
 
-  // const [filtervideo,setfiltervideo]=useState(members)
-  const [play, setplay] = useState(true)
-  console.log(id)
+  const [filtervideo, setfiltervideo] = useState(videos);
+  useEffect(() => {
+    let zain = departmentFilter?.filter((item) => {
+      return item?.id == id ? item : undefined;
+    });
+    setfiltervideo(zain);
+  }, [id]);
 
-  const [filtervideo,setfiltervideo]=useState([])
-  useEffect(()=>{
-     let zain= departmentFilter?.filter((item)=>{
-          return item?.id==id?item:undefined
-      })
-      setfiltervideo(zain)
-  },[id])
-
-useEffect(()=>{
-  setplay(true)
-})
+  useEffect(() => {
+    setplay(true);
+  });
   return (
     <>
       {windowWidth <= 500 ? <MobileHeaderGeneric /> : <GenericHeader />}
-      <div className="" style={{ height: 133 }}></div>
+      {windowWidth >=500 && <div className="" style={{ height: 133 }}></div>}
+
 
       <div className="row g-0 mb-4 d-flex justify-content-center">
         <div className="d-flex justify-content-center ">
-          {/* <Fade top> */}
           <h1 className="tutorial">Tutorials</h1>
-          {/* </Fade> */}
         </div>
       </div>
       <div className=""></div>
       <div className="parent_container">
-          <div className="main_video">
-         {filtervideo?.map(({ tutorial, department,license,id }) => {
-                        return <>
-                            {/* <Link to={`/tutorial/${id}`}> */}
-                                {/* <div className={["Video_box"]}> */}
-                                    <ReactPlayer
-                                        url={tutorial}
-                                        controls={true}
-                                        // playing={true}
-                                        width={"100%"}
-                                        // height={"490px"}
-                                        style={{border:'1px solid rgba(0, 0, 0, 0.12)',overflow: "hidden",borderRadius:10,boxShadow: "0 0.2rem 1rem rgba(0, 0, 0, 0.12)"}}
-                                        height={500}
-                                        // light={<img src={zain}/>}
-                                        playing={play}
-                                        pip={true}
-                                        // volume={false}
+        <div className="main_video">
+          {filtervideo?.map(({ tutorial, department, license, id }) => {
+            return (
+              <>
+                <ReactPlayer
+                  url={tutorial}
+                  controls={true}
+                  width={"100%"}
+                  height={windowWidth <=500?200 :windowWidth  >= 1020 ? 500 : windowWidth >=1400 && 600}
 
-                                    />
-                                   <div className="video_discription">
-                                   <h1 class="text-2xl lg:text-3xl flex font-semibold">{department}</h1>
-                                      <p class="text-bold">{license}</p>
-                                   </div>
-                                {/* </div> */}
-                            {/* </Link> */}
-
-                        </>
-                    })}
-          </div>
+                  style={{
+                    border: "1px solid rgba(0, 0, 0, 0.12)",
+                    overflow: "hidden",
+                    borderRadius: 10,
+                    boxShadow: "0 0.2rem 1rem rgba(0, 0, 0, 0.12)",
+                  }}
+                  // height={500}
+                  // light={<img src={zain}/>}
+                  playing={play}
+                  pip={true}
+                />
+                <div className="video_discription">
+                  <h1 class="text-2xl lg:text-3xl flex font-semibold">
+                    {department}
+                  </h1>
+                  <p class=""style={{color:'red!important'}}>{license}</p>
+                </div>
+              </>
+            );
+          })}
+        </div>
+        {departmentFilter.length > 1 && (
           <div className="side_video">
-        {departmentFilter?.map(({ tutorial,department,license, id }) => {
-                        return <>
-                            <Link to={`/watch/${department}/${id}`}>
-                                    {/* <ReactPlayer
-                                        url={tutorial}
-                                        // controls={true}
-                                        // playing={true}
-                                        width={"100%"}
-                                        // height={210}
-                                        light={<img src={zain}/>}
-                                        playing={false}
-                                        style={{ border:'1px solid rgba(0, 0, 0, 0.12)',overflow: "hidden",borderRadius:5,margin:5,  boxShadow: "0 0.2rem 1rem rgba(0, 0, 0, 0.12)"}}
-                                        height={"100%"}
-                                      
-
-                                    /> */}
-                                    <img src={zain} style={{borderRadius:5}} alt="" />
-                                   
-                                   {/* <video  
-                                   style={{overflow:'hidden'}}
-                    width={"100%"}
-                  loop muted
-                     controls={true}
-                     inlist={Footer}
-                     >
-                                    <source src={tutorial}></source>
-                                   </video> */}
-                         
-                            </Link>
-                            <div className="title_container">
-                              {/* <div className="dp">
-                                <img src={user} alt="" />
-                              </div> */}
-                              <div className="video_title">
-                              <h6>{department}</h6>
-                              <p>{license}</p>
-                             
-                                </div>
-                         
-                            </div>
-                        
-
-                        </>
-                    })}
+            {departmentFilter?.map(
+              ({ tutorial, department, license, thumbnail, id }) => {
+                return (
+                  <>
+                    <Link to={`/watch/${department}/${id}`}>
+                      <img
+                        width={"100%"}
+                        height={windowWidth >= 1400 ? 250 : 210}
+                        src={thumbnail}
+                        style={{ borderRadius: 5, objectFit: "cover" }}
+                        alt=""
+                        onClick={()=>{
+                          window.scrollTo(0,0)
+                        }}
+                      />
+                    </Link>
+                    <div className="title_container">
+                      <div className="video_title">
+                        <h6>{department}</h6>
+                        <p>{license}</p>
+                      </div>
+                    </div>
+                  </>
+                );
+              }
+            )}
           </div>
+        )}
       </div>
-      
-      {/* <div className="" style={{ height: 800 }}></div> */}
       <Footer />
     </>
   );

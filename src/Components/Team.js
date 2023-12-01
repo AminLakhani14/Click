@@ -6,7 +6,7 @@ import MobileHeaderGeneric from "./MobileHeaderGeneric";
 import AboutUsImg from "../assets/city.png";
 import Gallery from "./Gallery";
 import TeamCards from "./TeamCards";
-import user from "../assets/Unknown_person.jpg"
+import user from "../assets/teamsPic/irshad.jpg"
 import hiraPirzada from '../assets/teamsPic/hiraPirzada.png';
 import fatimaSaleem from '../assets/teamsPic/fatimaSaleem.png';
 import anwarAli from '../assets/teamsPic/anwarAli.jpg';
@@ -25,8 +25,8 @@ const members = [
   {
     dp: asifKhan,
     name: "Mr. Asif Karim",
-    designation: "Senior Manager",
-    email:'asif.kareem@business.gos.pk'
+    designation: "Senior Manager (Business Process Regulation)",
+    email:'asif.karim@business.gos.pk'
   },
  
   {
@@ -82,7 +82,8 @@ function Team() {
   return (
     <>
       {windowWidth <= 500 ? <MobileHeaderGeneric /> : <GenericHeader />}
-      <div className="" style={{ height: 133 }}></div>
+      {windowWidth <= 500 ? <div></div> :       <div className="" style={{ height: 133 }}></div>}
+      {/* <div className="" style={{ height: 133 }}></div> */}
       {/* <div className="siteHeader" style={{ background: `url(${AboutUsImg})` }}> */}
         {/* <h1 className="highlightable" style={{ color: "white" }}>
           Meet our Team
@@ -222,7 +223,7 @@ function Team() {
           })}
         </div>
       </div>
- <div className="" style={{height:450}}></div>
+ {/* <div className="" style={{height:300}}></div> */}
       <Footer />
     </>
   );

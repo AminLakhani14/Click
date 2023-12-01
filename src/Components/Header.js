@@ -507,18 +507,17 @@ const {language} = useSelector((state)=>state.language)
 
   return (
     <>
-      <div className="container-fluid" style={{ overflowX: "hidden", }}>
-        <video autoPlay loop muted>
-          <source src={design} type="video/mp4" />
-          Your Browser Does Not Support The Video Tag.
-        </video>
-        <div
+    <div
           style={{
-            position: "absolute",
-            height: "98vh",
-            width: "100vw",
-            zIndex: "1",
+            position: "relative",
+            // height: "400px",
+            // width: "100vw",
+            zIndex: 1,
             paddingRight: "13px",
+            paddingTop: 5,
+
+            // paddingBottom:10
+            backgroundColor:"transparent"
           }}
         >
           <div className="boxshadowNavBar2">
@@ -531,7 +530,7 @@ const {language} = useSelector((state)=>state.language)
                     //   : { width: "16%", height: "150px" }
                     windowWidth <= 1366
                     ? {
-                      marginLeft: "15px",
+                      // marginLeft: "15px",
                       marginRight: "-4px",
                       // marginTop: "39px",
                     }
@@ -561,7 +560,7 @@ const {language} = useSelector((state)=>state.language)
                 ></img>
               </div>
 
-              <div className="col-lg-6 col-md-6 col-sm-12 col-xs-12 r-side ">
+              <div className="col-lg-6 col-md-6 col-sm-12 col-xs-12 r-side  " style={{marginTop:-22}}>
                 <Tooltip
                   overlayInnerStyle={{ borderRadius: "0px" }}
                   color={"#Ffffff"}
@@ -1736,7 +1735,7 @@ const {language} = useSelector((state)=>state.language)
               <div className={"row "}>
                 <div
                   className={" navbar boxshadowNavBar justify-content-end"}
-                  style={{ width: "100%", paddingRight: "0px", }}
+                  style={language === "ur" || language === "sd"?{marginTop:-46}:{ width: "100%", paddingRight: "0px", marginTop:-52,}}
                 >
                   <ul
                     style={
@@ -1747,7 +1746,7 @@ const {language} = useSelector((state)=>state.language)
                           flexDirection: "row-reverse",
                          
                         }
-                        : { marginBottom: "0px" ,paddingRight:10}
+                        : { marginBottom: "0px" ,paddingRight:10,marginTop:10}
                     }
                   >
                     <li>
@@ -1761,6 +1760,7 @@ const {language} = useSelector((state)=>state.language)
                         </Link>
                       </a>
                     </li>
+                    
                     <li>
                       <a
                         href="comingsoon.html"
@@ -1816,7 +1816,8 @@ const {language} = useSelector((state)=>state.language)
                                 marginTop: "5px", marginRight: "5px"
                               }
                               : {
-                                marginTop: "0px", marginLeft: "3px"
+                                marginTop: "0px", marginLeft: "3px",
+                                marginRight:-7
                               }
                           }
                           class="dropbtn iconDown hover-rotate fa fa-chevron-right"
@@ -2073,6 +2074,18 @@ const {language} = useSelector((state)=>state.language)
                       </div>
                     </li>
                     <li>
+                      <a
+                        href="https://business.gov.pk/home_prmi/"
+                        title="Home Page"
+                        className={"link"}
+                        target="_blank"
+                      >
+                        {/* <Link className={"link"} to={"/home"}> */}
+                          {"PRMI"}
+                        {/* </Link> */}
+                      </a>
+                    </li>
+                    <li>
                     <div
                         class="dropdown"
                         style={
@@ -2103,7 +2116,8 @@ const {language} = useSelector((state)=>state.language)
                                 marginTop: "5px", marginRight: "5px"
                               }
                               : {
-                                marginTop: "0px", marginLeft: "3px"
+                                marginTop: "0px", marginLeft: "3px",
+                                marginRight:10
                               }
                           }
                           class="dropbtn iconDown hover-rotate fa fa-chevron-right"
@@ -2216,7 +2230,7 @@ const {language} = useSelector((state)=>state.language)
                               </Link>
                             </div>
                           </div> */}
-                          <Link className="" to={""}>
+                          <Link className="" to={"/introduction"}>
                             <a
                               target="_blank"
                               href=""
@@ -2234,7 +2248,7 @@ const {language} = useSelector((state)=>state.language)
                               {translations["Introduction"][language]}
                             </a>
                           </Link>
-                          <Link className={""} to={""}>
+                          <Link className={""} to={"/projectobjectives"}>
                             <a
                               href="#"
                               style={
@@ -2251,7 +2265,7 @@ const {language} = useSelector((state)=>state.language)
                               {translations["projectobjectives"][language]}
                             </a>
                           </Link>
-                          <Link className={""} to={""}>
+                          <Link className={""} to={"/acheivement"}>
                             <a
                               href="#"
                               style={
@@ -2303,7 +2317,7 @@ const {language} = useSelector((state)=>state.language)
                               {translations["Downloads"][language]}
                             </a>
                           </Link>
-                          <Link className={""} to={""}>
+                          <Link className={""} to={"/contactUs"}>
                             <a
                               href="#"
                               style={
@@ -2599,8 +2613,8 @@ const {language} = useSelector((state)=>state.language)
                             className="fa-sharp fa-solid fa-magnifying-glass"
                             style={
                               isSticky
-                                ? { color: "#000000" }
-                                : { color: "#ffffff" }
+                                ? { color: "" }
+                                : { color: "black" }
                             }
                           ></i>
                         </Tooltip>
@@ -2613,7 +2627,14 @@ const {language} = useSelector((state)=>state.language)
             )
             }
           </div>
-          <div
+       
+
+          {/* <div className="row sticky-icon"></div> */}
+          {/* <h1>zain</h1> */}
+        </div>
+      <div className="container-fluid" style={{ overflowX: "hidden", position:'relative'}}>
+        <div className="" style={{ width:"75%",position:"absolute",zIndex:999}}>
+        <div
             className=" px-5"
             style={
               language === "ur" || language === "sd"
@@ -2823,9 +2844,12 @@ const {language} = useSelector((state)=>state.language)
               </a>
             </div>
           )}
-
-          {/* <div className="row sticky-icon"></div> */}
         </div>
+        <video autoPlay loop muted>
+          <source src={design} type="video/mp4" />
+          Your Browser Does Not Support The Video Tag.
+        </video>
+        
         
         <div className=" pt-2 pb-4 g-0" style={{position:"relative"}}>
         <div

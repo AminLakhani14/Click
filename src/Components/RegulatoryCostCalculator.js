@@ -719,6 +719,22 @@ const getDropdown2Object = (arr, id) => {
   return selectedOption;
 };
 export const Dropdown = (props) => {
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    // Function to update the windowWidth state when the resize event occurs
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+
+    // Attach the event listener
+    window.addEventListener("resize", handleResize);
+
+    // Clean up the event listener on component unmount
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
   const [selectedValue, setSelectedValue] = React.useState("");
   const [changeValue, setChangeValue] = useState([
     {
@@ -730,7 +746,7 @@ export const Dropdown = (props) => {
     },
   ]);
   const handleChange = (event) => {
-    debugger;
+    
     setSelectedValue(event.target.value);
     let arr = [...props.arr];
     arr.splice(props.ind, 1, event.target.value);
@@ -757,7 +773,7 @@ export const Dropdown = (props) => {
       </InputLabel>
       <Select
         onChange={handleChange}
-        style={{ width: "480px" }}
+        style={windowWidth <=500?{ width:"100%"}: { width: "450px" }}
         native
         labelId="my-select"
         id="my-select"
@@ -777,8 +793,10 @@ export const Dropdown = (props) => {
 };
 export const Dropdown1 = (props) => {
   const [selectedValue, setSelectedValue] = React.useState("");
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
   const handleChange = (event) => {
-    debugger;
+    
     setSelectedValue(event.target.value);
     let arr = [...props.arr];
     arr.splice(
@@ -788,7 +806,20 @@ export const Dropdown1 = (props) => {
     );
     props.setArr(arr);
   };
+  useEffect(() => {
+    // Function to update the windowWidth state when the resize event occurs
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
 
+    // Attach the event listener
+    window.addEventListener("resize", handleResize);
+
+    // Clean up the event listener on component unmount
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
   return (
     <FormControl
       variant="outlined"
@@ -799,7 +830,7 @@ export const Dropdown1 = (props) => {
       <InputLabel htmlFor="outlined-age-native-simple"></InputLabel>
       <Select
         native
-        style={{ width: "480px" }}
+        style={windowWidth <=500?{ width:"100%"}: { width: "450px" }}
         defaultValue={selectedValue}
         value={selectedValue}
         onChange={handleChange}
@@ -904,7 +935,7 @@ export default function RegulatoryCatalogCalculator(props) {
     <>
       {windowWidth <= 500 ? <MobileHeaderGeneric /> : <GenericHeader />}
 
-      <div className="siteHeader" style={{ background: `url(${AboutUsImg})` }}>
+      {/* <div className="siteHeader" style={{ background: `url(${AboutUsImg})` }}>
         <h1
           className={`slide-in-left Investnow-h1 highlightable ${
             isVisible ? "" : "slide-out-left"
@@ -912,21 +943,25 @@ export default function RegulatoryCatalogCalculator(props) {
         >
           Regulatory Catalog
         </h1>
-      </div>
-      <div className="row regulatoryCalculatorHead">
+      </div> */}
+      {/* <div className="row regulatoryCalculatorHead">
         <Link to={"/home"} className="linkFont">
           <div>
             <h5 className="linkFont2 highlightable">Home {value}</h5>
             Regulatory Catalog
           </div>
         </Link>
-      </div>
-
+      </div> */}
+   {windowWidth <= 500 ? (
+        <div></div>
+      ) : (
+        <div style={{ height: "150px" }}></div>
+      )}
       <div
         className="shadow-sm bg-white  "
-        style={{ paddingTop: "30px", height: "auto",paddingBottom:"50px" }}
+        // style={{ paddingTop: "30px", height: "auto",paddingBottom:"50px" }}
       >
-        <div
+        {/* <div
           className="row"
           style={{
             width: "100%",
@@ -936,10 +971,46 @@ export default function RegulatoryCatalogCalculator(props) {
           }}
         >
           <h1 className="mainHeading">Regulatory Tax Calculator</h1>
+        </div> */}
+
+
+
+        <div
+        className="row "
+        style={{
+          height: "250px",
+          background: "",
+          // backgroundColor:"red"
+        }}
+      >
+        <div
+          className="col-lg-12"
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            marginTop: "50px",
+            // textAlign:"justify",
+            margin:"auto",
+            position:"relative"
+          }}
+        >
+       <div className="" >
+       <h1 className={window.innerWidth <= 540 ?"ReportRegulatorybefore mt-4 mb-4":"ReportRegulatoryDifficulties"}>Regulatory Cost Calculator</h1>
+         <p
+            className={window.innerWidth <= 540 ? "mobileparaforfeedback" : "feedbackpara col-8"} style={{fontSize:window.innerWidth === 280 || window.innerWidth ===320 ? "17.5px": " ",textAlign:"center",}}
+          >
+          Please select the desired regulatory approval to get to know the applicable fee to obtain the same. 
+
+You can select multiple permits/licenses to view the details consolidated too. 
+
+For further details, queries you can write to us at feedback@business.gos.pk.
+          </p>
+       </div>
         </div>
+      </div>
         <div className="row justify-content-center mt-3 align-items-lg-start">
           <div
-            className="col-lg-4"
+            className="col-lg-5"
             style={{
               marginBottom: "20px",
               gap: "20px",
@@ -1017,7 +1088,7 @@ export default function RegulatoryCatalogCalculator(props) {
             </div>
           </div>
 
-          <div className="col-lg-5 ">
+          <div className="col-lg-6 ">
             <RegulatoryCatalogCalculatorGrid changeValue={arr2} />
           </div>
         </div>

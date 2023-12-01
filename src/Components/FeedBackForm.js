@@ -4,7 +4,7 @@ import "../Css/resource.css";
 import "../Css/investnow.css";
 import { useEffect } from "react";
 import { Fade } from "react-reveal";
-import { FormControl, Select } from "@mui/material";
+import { CircularProgress, FormControl, Select } from "@mui/material";
 
 import { TextField } from "@mui/material";
 import TextArea from "antd/es/input/TextArea";
@@ -12,6 +12,8 @@ import { Formik, Form, ErrorMessage } from "formik";
 import { areas, Drop1Data } from "./constant";
 import * as Yup from "yup";
 import { postService } from "../utils/services";
+import { Toaster, Toastersuccess } from "./Toaster";
+import { toast, ToastContainer } from "react-toastify";
 // import Drop2Data, { Dropdown } from "../Components/RegulatoryCostCalculator"
 export const Drop2Data = (value) => {
   let array = [];
@@ -711,7 +713,7 @@ export const Dropdown = (props) => {
     },
   ]);
   const handleChange = (event) => {
-    debugger;
+    
     setSelectedValue(event.target.value);
     let arr = [...props.arr];
     arr.splice(props.ind, 1, event.target.value);
@@ -752,7 +754,7 @@ export const Dropdown = (props) => {
 export const Dropdown1 = (props) => {
   const [selectedValue, setSelectedValue] = React.useState("");
   const handleChange = (event) => {
-    debugger;
+    
     setSelectedValue(event.target.value);
     let arr = [...props.arr];
     arr.splice(
@@ -792,8 +794,10 @@ export const Dropdown1 = (props) => {
   );
 };
 
-const FeedBackForm = () => {
+const FeedBackForm = () => { 
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const [isloading, setisloading] = useState(false)
+  
   useEffect(() => {
     // Function to update the windowWidth state when the resize event occurs
     const handleResize = () => {
@@ -884,7 +888,7 @@ const FeedBackForm = () => {
     },
   ];
   const handleDepartments = (e, param) => {
-    debugger;
+    
     const selectedValue = e.target.value;
     const departmentLabels = {
       Urban: "Areas",
@@ -920,7 +924,7 @@ const FeedBackForm = () => {
     return filterData;
   };
   const handleArea = (e) => {
-    debugger;
+    
     const selectedValue = e.target.value;
     let filterData = [];
     // if (selectedValue !== "") {
@@ -928,14 +932,23 @@ const FeedBackForm = () => {
     // }
   };
   const onHandleSubmit = (values) => {
+    setisloading(true)
     debugger
     const RespObj = { ...values };
     postService("/contact-us", RespObj)
       .then((response) => {
         console.log(response);
+        Toastersuccess('Your Feedback is submitted');
+    setisloading(false)
+
       })
       .catch((error) => {
         console.log(error);
+        Toaster(error.message,"error");
+
+
+    setisloading(false)
+
       });
   };
   return (
@@ -1173,10 +1186,16 @@ const FeedBackForm = () => {
                     <button
                       type="submit"
                       className="submit_button"
-                      disabled={isSubmitting}
+                      disabled={isloading }
                     >
-                      Submit
+                           {
+        isloading ? 
+          <CircularProgress size={30} color="inherit"/>
+      :"  Submit"
+      }
+                    
                     </button>
+                    {/* ///// */}
                   </div>
                 </div>
               </form>
@@ -1184,6 +1203,8 @@ const FeedBackForm = () => {
           )}
         </Formik>
       </div>
+     
+      <ToastContainer  />
     </>
   );
 };

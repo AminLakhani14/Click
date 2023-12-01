@@ -36,8 +36,24 @@ import SindhEmployeesSocialSecurityInstitution from "../assets/mapS.S/Sindh Empl
 ///////////////tutorial///////////
  import healthVideo from "../assets/tutorial/healthDepartment.mp4"
  import healthVideowholesle from "../assets/tutorial/heathDepartmentwholesale.mp4"
- import LabourVideo from "../assets/ld002.mp4"
+ import ld_002 from "../assets/ld002.mp4"
+ import CED_001 from "../assets/tutorial/CED_001.mp4"
 import schooleDepartmentVideo from "../assets/tutorial/schoolEducationAndLiteracyDepartment.mp4";
+import ld_001 from "../assets/tutorial/led-001.mp4";
+import ICD_001 from "../assets/tutorial/ICD-001.mp4"
+import ICD_002 from "../assets/tutorial/ICD-002.mp4"
+import ICD_003 from "../assets/tutorial/ICD-003.mp4";
+import ICD_004 from "../assets/tutorial/ICD-004.mp4";
+import ICD_005 from "../assets/tutorial/ICD-005.mp4";
+import ICD_006 from "../assets/tutorial/ICD-006.mp4";
+import ICD_007 from "../assets/tutorial/ICD-007.mp4";
+import licenseToManufactureDrug from "../assets/tutorial/LIcensetomanufacturedrug.mp4";
+import licenseToSaleDrugByWholeSale from "../assets/tutorial/LIcensetosaledrugbyholesale.mp4"
+import LIcensetosaledrugbytretail from "../assets/tutorial/LIcensetosaledrugbytretail.mp4"
+import sindhHealthcarevideo from "../assets/tutorial/sindhHealthcare.mp4";
+
+
+
 
  
 const arr = [
@@ -56,8 +72,8 @@ const arr = [
       contactno: "(021) 99222230",
       downloaddocument: `${process.env.PUBLIC_URL}../assets/sindhkatciabadiact1987.pdf`,
       pdf:sindh,
+      video:CED_001,
       logo:collegeDepartment,
-      video:undefined,
       l1:"▪ Form-A (with all proforma's. etc. security, census, authority) and covering letter;",
       l2:"▪ Paid fee challan as per the following fee schedule;",
       l3:"▪ Inspection report;",
@@ -90,7 +106,7 @@ const arr = [
       documentname: "Amendment",
       documenttype: "Law / Rules / Regulations	",
       downloaddocument: `${process.env.PUBLIC_URL}../assets/sindhkatciabadiact1987.pdf`,
-video:LabourVideo,
+      video:ld_002,
       pdf: {
         BuildingBylaws: BuildingBylaws
       },
@@ -124,7 +140,7 @@ video:LabourVideo,
           documenttype: "Law / Rules / Regulations	",
       downloaddocument: `${process.env.PUBLIC_URL}../assets/sindhkatciabadiact1987.pdf`,                
       logo:labourAndHumanResource,
-  video:LabourVideo,
+     video:ld_001,
       l1:"▪ Name of the establishment, if any;",
       l2:"▪ Postal address of the establishment; ",
       l3:"▪ Full name of the employer (including father's name); ",
@@ -179,7 +195,7 @@ video:LabourVideo,
       fee: "Rs.6000",
       documenttype: "Law / Rules / Regulations	",
       logo:HealthDepartment,
-      video:healthVideo,
+      video:LIcensetosaledrugbytretail,
       address: "6th Floor, Sindh Secretariat No 1 Kamal Atta Turk Road, Karachi",
       contactno: "(021) 99222012",
       l1:"▪ Attested copy of the qualified person (Dispenser / Compounder / B. Pharmacy/ Pharm-D);",
@@ -208,7 +224,7 @@ video:LabourVideo,
       address: "6th Floor, Sindh Secretariat No 1 Kamal Atta Turk Road, Karachi",
       contactno: "(021) 99222012",
       logo:HealthDepartment,
-      video:healthVideowholesle,
+      video:licenseToSaleDrugByWholeSale,
       l1:"▪ Attested copy of the qualified person (Dispenser / Compounder / B. Pharmacy/ Pharm-D);",
       l2:"▪ Photocopy (attested) of C.N.I.C of the proprietor and qualified person;",
       l3:"▪ Four attested photographs of the qualified person (Dispenser/ Compounder/ B. Pharmacy/ Pharm-D);",
@@ -257,7 +273,6 @@ video:LabourVideo,
       type: "License",
       documenttype: "Law / Rules / Regulations	",
       logo:HealthDepartment,
-      video:healthVideowholesle,
       address: "6th Floor, Sindh Secretariat No 1 Kamal Atta Turk Road, Karachi",
       contactno: "(021) 99222012",
 
@@ -297,7 +312,7 @@ video:LabourVideo,
       //  renewalFee:""
       documenttype: "Law / Rules / Regulations	",
       logo:HealthDepartment,
-      video:healthVideowholesle,
+      video:licenseToManufactureDrug,
       l1:"▪ Attested copy of the qualified person (Dispenser / Compounder / B. Pharmacy/ Pharm-D);",
       l2:"▪ Photocopy (attested) of C.N.I.C of the proprietor and qualified person;",
       l3:"▪ Four attested photographs of the qualified person (Dispenser/ Compounder/ B. Pharmacy/ Pharm-D);",
@@ -460,6 +475,7 @@ video:LabourVideo,
       address: "2nd Floor, Block C, FTC Building, Shahrah-e-Faisal, Karachi",
       contactno: "(021) 38656000",
       logo:SindhHeathCare,
+      video:sindhHealthcarevideo,
       l1:"▪ Copy of CNIC; ",
       l2:"▪ Copy of Degree/Diploma; ",
       l3:"▪ Copy of updated registration with relevant council (PMDC/PNC/NCH/NCT);",
@@ -483,6 +499,8 @@ video:LabourVideo,
       address: "2nd Floor, Block C, FTC Building, Shahrah-e-Faisal, Karachi",
       contactno: "(021) 38656000",
       logo:SindhHeathCare,
+      video:sindhHealthcarevideo,
+
       l1:"▪ Copy of CNIC; ",
       l2:"▪ Copy of Degree/Diploma; ",
       l3:"▪ Copy of updated registration with relevant council (PMDC/PNC/NCH/NCT);",
@@ -505,6 +523,7 @@ video:LabourVideo,
       fee: "Rs.5,000",
       address: "2nd Floor, Block C, FTC Building, Shahrah-e-Faisal, Karachi",
       contactno: "(021) 38656000",
+      video:sindhHealthcarevideo,
       logo:SindhHeathCare,
       l1:"▪ Copy of CNIC; ",
       l2:"▪ Copy of Degree/Diploma; ",
@@ -528,6 +547,7 @@ video:LabourVideo,
       fee: "As per schedule",
       address: "2nd Floor, Block C, FTC Building, Shahrah-e-Faisal, Karachi",
       contactno: "(021) 38656000",
+      video:sindhHealthcarevideo,
       logo:SindhHeathCare,
       l1:"▪ Copy of CNIC; ",
       l2:"▪ Copy of Degree/Diploma; ",
@@ -552,6 +572,8 @@ video:LabourVideo,
       address: "2nd Floor, Block C, FTC Building, Shahrah-e-Faisal, Karachi",
       contactno: "(021) 38656000",
       logo:SindhHeathCare,
+      video:sindhHealthcarevideo,
+
       l1:"▪ Copy of CNIC; ",
       l2:"▪ Copy of Degree/Diploma; ",
       l3:"▪ Copy of updated registration with relevant council (PMDC/PNC/NCH/NCT);",
@@ -577,6 +599,7 @@ video:LabourVideo,
       address:"statelife building no 11, 2nd floor Directorate of industries",
       contactno:"(021) 99202190",
       logo:IndustrieAndCommerce,
+      video:ICD_001,
       l1:"▪ Partnership deed; ",
       l2:"▪ CNIC copies of all the local partners; ",
       l3:"▪ Form 1 along with partnership witness form; and ",
@@ -609,6 +632,7 @@ video:LabourVideo,
       contactno:"(021) 99202190",
       fee: "Rs.55",
       logo:IndustrieAndCommerce,
+      video:ICD_002,
       l1:"▪ Partnership deed; ",
       l2:"▪ CNIC copies of all the local partners; ",
       l3:"▪ Form 1 along with partnership witness form; and ",
@@ -642,6 +666,7 @@ video:LabourVideo,
       timeLine: "10-15 Days",
       fee: "S.R.O.88(I)/2008)",
       logo:IndustrieAndCommerce,
+      video:ICD_003,
       l1:"▪ Partnership deed; ",
       l2:"▪ CNIC copies of all the local partners; ",
       l3:"▪ Form 1 along with partnership witness form; and ",
@@ -675,6 +700,7 @@ video:LabourVideo,
       timeLine: "10-15 Days",
       fee: "S.R.O.88(I)/2008)",
       logo:IndustrieAndCommerce,
+      video:ICD_004,
       l1:"▪ Partnership deed; ",
       l2:"▪ CNIC copies of all the local partners; ",
       l3:"▪ Form 1 along with partnership witness form; and ",
@@ -709,6 +735,7 @@ video:LabourVideo,
       timeLine: "10-15 Days",
       fee: "S.R.O.88(I)/2008)",
       logo:IndustrieAndCommerce,
+      video:ICD_005,
       l1:"▪ Partnership deed; ",
       l2:"▪ CNIC copies of all the local partners; ",
       l3:"▪ Form 1 along with partnership witness form; and ",
@@ -743,6 +770,7 @@ video:LabourVideo,
       timeLine: "10-15 Days",
       fee: "S.R.O.88(I)/2008)",
       logo:IndustrieAndCommerce,
+      video:ICD_006,
       l1:"▪ Partnership deed; ",
       l2:"▪ CNIC copies of all the local partners; ",
       l3:"▪ Form 1 along with partnership witness form; and ",
@@ -775,6 +803,7 @@ video:LabourVideo,
       contactno:"(021) 99202190",
       fee: "S.R.O.88(I)/2008)",
       logo:IndustrieAndCommerce,
+      video:ICD_007,
       l1:"▪ Partnership deed; ",
       l2:"▪ CNIC copies of all the local partners; ",
       l3:"▪ Form 1 along with partnership witness form; and ",
@@ -3547,7 +3576,10 @@ export default function RegulatoryCatalogue() {
   const closeDetailModal = () => {
     setOpenModal(false)
   }
-
+ 
+  useEffect(()=>{
+    window.scrollTo(0,0)
+  },[])
 
   const filterData = (event) => {
     try {
@@ -3582,7 +3614,7 @@ export default function RegulatoryCatalogue() {
 // Specify the value you want to filter
 const GetGridData = (data) =>{
   try {
-    debugger;
+    
     setLicenceData(data);
   } catch (error) {
     console.log(error);
@@ -3596,10 +3628,15 @@ const GetGridData = (data) =>{
    {openModal && <DetailModal licenceData={licenceData} openDetailModal={openDetailModal} closeDetailModal={closeDetailModal} dataForGrid={dataForGrid} GetGridData={GetGridData}/>}
            {/* <GenericHeader /> */}
            {windowWidth <=500 ? <MobileHeaderGeneric/>: <GenericHeader />}
-      
+           {windowWidth <= 500 ? (
+        <div></div>
+      ) : (
+        <div style={{ height: "150px" }}></div>
+      )}
+{/*       
       <div
         className="row mt-2"
-        style={{
+        style={windowWidth <=500?{paddingTop:10}:{
           height: "300px",
           width: "100%",
           // background: "#F5F5F5",
@@ -3610,12 +3647,41 @@ const GetGridData = (data) =>{
         <div className="col-lg-8">
           <h1 className={window.innerWidth <= 540 ?"ReportRegulatorybefore":"mainHeading"} >Regulatory Directory of Government of Sindh</h1>
         </div>
-        <div className="row">
-          <div className="col-8 m-auto">
+        <div className="row ">
+          <div className="col-md-8 m-md-auto">
             <p className="h5 text-center">This Portal provides you access to Regulatory Details such as Name of License, Registration, Permit, and Certificate, It's Applicable Fee, Timelines, Laws. For any further information contact us.</p>
           </div>
+        </div> */}
+        {/* <div className="col-lg-2"></div> */}
+      {/* </div> */}
+      <div
+        className="row "
+        style={{
+          // height: "250px",
+          background: "",
+          // backgroundColor:"red"
+        }}
+      >
+        <div
+          className="col-lg-12"
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            marginTop: "30px",
+            // textAlign:"justify",
+            // margin:"auto",
+            position:"relative"
+          }}
+        >
+       <div className="" >
+       <h1 className={window.innerWidth <= 540 ?"catalog  mb-4":"catalog "}>Regulatory Directory of Government of Sindh</h1>
+         <p
+            className={window.innerWidth <= 540 ? "mobileparaforfeedback" : "feedbackpara col-8"} style={{fontSize:window.innerWidth === 280 || window.innerWidth ===320 ? "17.5px": " ",textAlign:"center",}}
+          >
+This Portal provides you access to Regulatory Details such as Name of License, Registration, Permit, and Certificate, It's Applicable Fee, Timelines, Laws. For any further information contact us.
+          </p>
+       </div>
         </div>
-        <div className="col-lg-2"></div>
       </div>
       {/* <div
         className="row"
@@ -3665,10 +3731,10 @@ const GetGridData = (data) =>{
         </div>
         <div className="col-lg-2"></div>
       </div> */}
-      <div className="row">
+      <div className="row "  style={windowWidth <=500?{ display: "flex",flexDirection:"row-reverse",marginTop:20} :{ display: "flex", justifyContent: "end" }} >
         <div
-          className="col-lg-10"
-          style={{ display: "flex", justifyContent: "end" }}
+          className=" col col-md-10"
+          style={ windowWidth <=500?{display: "flex",alignItems:"center"} :{ display: "flex", justifyContent: "end" }}
         >
           <p
             style={{
@@ -3681,7 +3747,7 @@ const GetGridData = (data) =>{
             Search
           </p>
         </div>
-        <div className="col-lg-2">
+        <div className="col col-md-2">
           <input
             className="regulatoryTextField"
             type="text"
@@ -3692,7 +3758,7 @@ const GetGridData = (data) =>{
       </div>
       <div className="row mb-5">
         <div className="col-lg-12">
-          <DemoGrid ref={gridRef} data={dataForGrid}  setOpenModal={setOpenModal} openModal={openModal} GetGridData={GetGridData} />
+          <DemoGrid ref={gridRef} data={dataForGrid}  setOpenModal={setOpenModal} openModal={openModal} GetGridData={GetGridData} windowWidth={windowWidth} setWindowWidth={setWindowWidth}/>
         </div>
       </div>
       <Footer />

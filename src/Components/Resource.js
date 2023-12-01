@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import accessibility from "../assets/accessibility.png";
 import "../Css/header.css";
 import sindh from "../assets/logo-sindh.png";
@@ -23,6 +23,8 @@ import ss8 from "../assets/ScreenShot/s.s8.png"
 import ss9 from "../assets/ScreenShot/s.s9.png"
 import ss10 from "../assets/ScreenShot/s.s10.png"
 import ss11 from "../assets/ScreenShot/s.s11.png"
+import ss12 from "../assets/ScreenShot/PRMI.png"
+import ss13 from "../assets/ScreenShot/worldBank.png"
 
 import pdf1 from "../assets/DownloadDocument/Final_PRMI_Book_2_New.pdf"
 import pdf2 from "../assets/DownloadDocument/Final_PRMI_Book_1.pdf"
@@ -35,9 +37,14 @@ import pdf8 from "../assets/DownloadDocument/Recommendations-on-National-Program
 import pdf9 from "../assets/DownloadDocument/WEF_TheGlobalCompetitivenessReport2020.pdf"
 import pdf10 from "../assets/DownloadDocument/FACT-SHEET---NHDR.pdf"
 import pdf11 from "../assets/DownloadDocument/PAK.pdf"
+import pdf12 from "../assets/DownloadDocument/PRMI.pptx"
+import pdf13 from "../assets/DownloadDocument/WorldBank.pptm"
 import MobileHeaderGeneric from "./MobileHeaderGeneric";
+import Footer from "./footer";
 export default function Resource() {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  debugger
+  console.log( window.location.href)
 
   useEffect(() => {
     // Function to update the windowWidth state when the resize event occurs
@@ -105,14 +112,28 @@ export default function Resource() {
       screenShot:ss10,
       titlte:"Pakistan National Human Development Report",
       pdf:pdf10
-    }   ,
+    },
     {
       screenShot:ss11,
       titlte:"Ease of Doing Business",
       pdf:pdf11
+    },
+    {
+      screenShot:ss12,
+      titlte:"Reforms Activities in Sindh (PRMI)",
+      pdf:pdf12
+    },
+    {
+      screenShot:ss13,
+      titlte:"Update on BE-Ready Project World Bank",
+      pdf:pdf13
     }
   ]
+  useEffect(()=>{
+    window.scrollTo(0,0)
+  },[])
   return (
+    
     // <>
     //   <Link to={"/team"}></Link>
     //   <GenericHeader />
@@ -256,28 +277,35 @@ export default function Resource() {
     //   </div>
     // </>
     <>
+  
+
       {/* <Link to={"/team"}></Link> */}
-      
-      {
-        windowWidth <= 500 ? <MobileHeaderGeneric/>:<GenericHeader />
-      }
-      <div
-        className="row"
-        style={{
-          height:windowWidth <= 500 ?"100px":"240px",
-          width: "100%",
-          background: "#F5F5F5",
-          paddingTop:windowWidth <= 500 ?"0px":"130px",
-          position:"relative"
-        }}
-      >
-       
-        <div className="col-lg-2"></div>
-        <div className="col-lg-8">
-          <h1 className="mainHeading" style={{display:'flex', justifyContent:'center'}}>Downloads</h1>
-        </div>
-        <div className="col-lg-2"></div>
-      </div>
+      {windowWidth <= 500 ? <MobileHeaderGeneric /> : <GenericHeader />}
+            {windowWidth <= 500 ? (
+                <div></div>
+            ) : (
+                <div style={{ height: "150px" }}></div>
+            )}
+
+<div className='container_fluid'>
+                <div
+                    className="row "
+                >
+                    <div
+                        className="col-lg-12"
+                        style={{
+                            display: "flex",
+                            justifyContent: "center",
+                            position: "relative"
+                        }}
+                    >
+                        <div className="" >
+                            <h1 className={window.innerWidth <= 540 ? "introductionTitle mt-4 mb-4" : "introductionTitle mt-4"}>Downloads</h1>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
 
       
       {/* <div className="row">
@@ -364,6 +392,7 @@ export default function Resource() {
           </div>
         </div>
       </div> */}
+
        <div className="card_wrapper"
       >
        {
@@ -371,14 +400,19 @@ export default function Resource() {
             return  <div  className="cardMain1 ">
             <div className="cardResource">
               <div className="cardInnerLeft">
-                <img style={{boxShadow: '5px 8px 5px rgba(0, 0, 0, 0.2)'}} src={item.screenShot} width="100%" height="250px"></img>
+                <img 
+                style={{
+                  boxShadow: '5px 8px 5px rgba(0, 0, 0, 0.2)'}} 
+                  src={item?.screenShot}  
+                   width="100%"
+                   height="250px" />
               </div>
               <div className="cardInnerRight" style={{boxShadow: '5px 8px 5px rgba(0, 0, 0, 0.2)'}}>
                 <h2 className="cardHeading" >
-               {item.titlte}
+               {item?.titlte}
                 </h2>
                 <button type="button" className="resourceButton">
-                  <a href={item.pdf} style={{color:"white",textDecoration:"none"}} target="_blank">View Documents</a>
+                  <a href={item?.pdf} style={{color:"white",textDecoration:"none"}} target="_blank">View Documents</a>
                 </button>
               </div>
             </div>
@@ -387,6 +421,7 @@ export default function Resource() {
           })
          }
        </div>
+       <Footer/>
     </>
   );
 }
