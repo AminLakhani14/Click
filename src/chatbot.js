@@ -80,6 +80,7 @@ const Chatbot = () => {
     addMessage(question, true); // Add the user's selected question to the chat
     setHideInput(false);
     // Remove the selected question from the predefinedQuestions list
+    window.scrollTo(-0,-0)
     setPredefinedQuestions((prevQuestions) =>
       prevQuestions.filter((q) => q !== question)
     );
@@ -190,6 +191,7 @@ const Chatbot = () => {
       // setAskingAnythingElse(true);
     }, 2000); // Delay of 1 second for the chatbot response (adjust as needed)
   };
+
 
   const handleUserInput = (event) => {
     setUserInput(event.target.value);
@@ -312,35 +314,7 @@ const Chatbot = () => {
               Ask me anything
             </p>
           </div>
-          <div className="chat-messages" ref={chatContainerRef}>
-            {messages.map((message, index) => (
-              <div
-                key={index}
-                className={message.isUser ? "user-message" : "bot-message"}
-              >
-                {!message.isUser && (
-                  <div className="bot-response">
-                    <span className="bot-name">{message.botName}</span>
-                    <span className="timestamp">{message.timestamp}</span>
-                    {message.content}
-                  </div>
-                )}
-                {message.isUser && message.content}
-              </div>
-            ))}
-          </div>
-          {askingAnythingElse && !conversationEnded && (
-            <div className="any-thing-else">
-              <p>Anything else?</p>
-              <div className="d-flex">
-                <button onClick={handleYesButtonClick}>Yes</button>
-                <button onClick={handleNoButtonClick}>No</button>
-              </div>
-            </div>
-          )}
-          {!askingAnythingElse && !conversationEnded && (
-            <div className="predefined-questions">
-                 {/* <div className="chat-messages" ref={chatContainerRef}>
+          {/* <div className="chat-messages" ref={chatContainerRef}>
             {messages.map((message, index) => (
               <div
                 key={index}
@@ -357,6 +331,47 @@ const Chatbot = () => {
               </div>
             ))}
           </div> */}
+          {/* {askingAnythingElse && !conversationEnded && (
+            <div className="any-thing-else">
+              <p>Anything else?</p>
+              <div className="d-flex">
+                <button onClick={handleYesButtonClick}>Yes</button>
+                <button onClick={handleNoButtonClick}>No</button>
+              </div>
+            </div>
+          )} */}
+            <div className="predefined-questions">
+                <div className="chat-messages" ref={chatContainerRef}>
+            {messages.map((message, index) => (
+              <div
+                key={index}
+                className={message.isUser ? "user-message" : "bot-message"}
+              >
+                {!message.isUser && (
+                  <div className="bot-response">
+                    <span className="bot-name">{message.botName}</span>
+                    <span className="timestamp">{message.timestamp}</span>
+                    {message.content}
+                  </div>
+                )}
+                {message.isUser && message.content}
+              </div>
+            ))}
+          </div>
+              {askingAnythingElse && !conversationEnded && (
+           <div className="d-flex justify-content-center w-100">
+             <div className="any-thing-else">
+              <p>Anything else?</p>
+              <div className="d-flex">
+                <button onClick={handleYesButtonClick}>Yes</button>
+                <button onClick={handleNoButtonClick}>No</button>
+              </div>
+            </div>
+          </div>
+          )}
+          {!askingAnythingElse && !conversationEnded && (
+          <>
+               
               {predefinedQuestions.map((question) => (
                 <button
                   // style={{backgroundColor:"red"}}
@@ -367,8 +382,9 @@ const Chatbot = () => {
                   {question}
                 </button>
               ))}
-            </div>
+          </>
           )}
+            </div>
           {!hideInput && (
             <div className="chat-input">
               <input
@@ -394,7 +410,7 @@ const Chatbot = () => {
                   }
                 }}
               >
-                <FontAwesomeIcon icon={faPaperPlane} />
+                <FontAwesomeIcon icon={faPaperPlane} style={{height:"1.3em"}} />
               </button>
             </div>
           )}

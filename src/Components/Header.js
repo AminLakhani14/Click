@@ -512,7 +512,7 @@ const {language} = useSelector((state)=>state.language)
             position: "relative",
             // height: "400px",
             // width: "100vw",
-            zIndex: 1,
+            zIndex: 9999,
             paddingRight: "13px",
             paddingTop: 5,
 
@@ -2633,7 +2633,7 @@ const {language} = useSelector((state)=>state.language)
           {/* <h1>zain</h1> */}
         </div>
       <div className="container-fluid" style={{ overflowX: "hidden", position:'relative'}}>
-        <div className="" style={{ width:"75%",position:"absolute",zIndex:999}}>
+        <div className="" style={{ position:"absolute",zIndex:999}}>
         <div
             className=" px-5"
             style={
