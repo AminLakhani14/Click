@@ -2002,7 +2002,7 @@ video:LabourVideo,
       prevailing: "By Laws",
       // jurisdiction: "Sindh",
       timeLine: "14 days",
-      fee:"50000",
+      fee:"Rs.50,000/-",
       officials:
         "Office Superintendent\nAD/ DD (Admin) \nDirector (Admin) \nSecretary MD",
         // validity: "",                   
@@ -2630,7 +2630,24 @@ video:LabourVideo,
       prevailing:"",
       // jurisdiction: "Karachi",
       timeLine: "15 Days",
-      fee: "As per schedule",
+      fee: "Resedential Rs.1000",
+      officials:
+        "▪ Director Katchi Abadi\n▪ Concerned Deputy Director\n▪ Assistant Director\n▪ Land Surveyor/Inspector\n▪ Assistant Account Officer",
+        // validity: "",                   
+        // renewalFee:""
+    },
+    {
+      sNo: 86,
+      issuingDepartment: "Karachi Metropolitan Corporation (KMC)",
+      address: "Adhumal Oodharam Quarter, Karachi, Karachi City, Sindh",
+      contactno: "(021) 99215125",
+      rlcoID: "KMC-012",
+      details: "NOC for Sale",
+      type: "Other",
+      prevailing:"",
+      // jurisdiction: "Karachi",
+      timeLine: "15 Days",
+      fee: "Commercial Rs.2000",
       officials:
         "▪ Director Katchi Abadi\n▪ Concerned Deputy Director\n▪ Assistant Director\n▪ Land Surveyor/Inspector\n▪ Assistant Account Officer",
         // validity: "",                   
@@ -2647,7 +2664,41 @@ video:LabourVideo,
       prevailing:"",
       // jurisdiction: "Karachi",
       timeLine: "15 Days",
-      fee: "As per schedule",
+      fee: "Residential Rs.10,000",
+      officials:
+        "▪ Director Katchi Abadi\n▪ Concerned Deputy Director\n▪ Assistant Director\n▪ Land Surveyor/Inspector\n▪ Assistant Account Officer",
+        // validity: "",                   
+        // renewalFee:""
+    },
+    {
+      sNo: 87,
+      issuingDepartment: "Karachi Metropolitan Corporation (KMC)",
+      address: "Adhumal Oodharam Quarter, Karachi, Karachi City, Sindh",
+      contactno: "(021) 99215125",
+      rlcoID: "KMC-013",
+      details: "NOC for Mortgage",
+      type: "Other",
+      prevailing:"",
+      // jurisdiction: "Karachi",
+      timeLine: "15 Days",
+      fee: "Residential Cum Commercial Rs.15,000",
+      officials:
+        "▪ Director Katchi Abadi\n▪ Concerned Deputy Director\n▪ Assistant Director\n▪ Land Surveyor/Inspector\n▪ Assistant Account Officer",
+        // validity: "",                   
+        // renewalFee:""
+    },
+    {
+      sNo: 87,
+      issuingDepartment: "Karachi Metropolitan Corporation (KMC)",
+      address: "Adhumal Oodharam Quarter, Karachi, Karachi City, Sindh",
+      contactno: "(021) 99215125",
+      rlcoID: "KMC-013",
+      details: "NOC for Mortgage",
+      type: "Other",
+      prevailing:"",
+      // jurisdiction: "Karachi",
+      timeLine: "15 Days",
+      fee: "Commercial Rs.20,000",
       officials:
         "▪ Director Katchi Abadi\n▪ Concerned Deputy Director\n▪ Assistant Director\n▪ Land Surveyor/Inspector\n▪ Assistant Account Officer",
         // validity: "",                   
@@ -2681,7 +2732,24 @@ video:LabourVideo,
       prevailing:"",
       // jurisdiction: "Karachi",
       timeLine: "15 Days",
-      fee: "As per schedule",
+      fee: "Residential Per Sq Yard Rs.100",
+      officials:
+        "▪ Director Katchi Abadi\n▪ Concerned Deputy Director\n▪ Assistant Director\n▪ Land Surveyor/Inspector\n▪ Assistant Account Officer",
+        // validity: "",                   
+        // renewalFee:""
+    },
+    {
+      sNo: 89,
+      issuingDepartment: "Karachi Metropolitan Corporation (KMC)",
+      address: "Adhumal Oodharam Quarter, Karachi, Karachi City, Sindh",
+      contactno: "(021) 99215125",
+      rlcoID: "KMC-015",
+      details: "Amalgamation and Subdivision of Land",
+      type: "Other",
+      prevailing:"",
+      // jurisdiction: "Karachi",
+      timeLine: "15 Days",
+      fee: "Commerical per sq yard Rs.200",
       officials:
         "▪ Director Katchi Abadi\n▪ Concerned Deputy Director\n▪ Assistant Director\n▪ Land Surveyor/Inspector\n▪ Assistant Account Officer",
         // validity: "",                   
@@ -2717,7 +2785,61 @@ video:LabourVideo,
       prevailing:"",
       // jurisdiction: "Karachi",
       timeLine: "15 Days",
-      fee: "As per schedule",
+      fee: "District Nort Rs.15000",
+      officials:
+        "▪ Director Anti Encroachment\n▪ Concerned Deputy Director\n▪ Inspector\n▪ Assistant Account Officer",
+        // validity: "",                   
+        // renewalFee:""
+    },
+    {
+      sNo: 91,
+      issuingDepartment: "Karachi Metropolitan Corporation (KMC)",
+      address: "Adhumal Oodharam Quarter, Karachi, Karachi City, Sindh",
+      contactno: "(021) 99215125",
+      rlcoID: "KMC-017",
+      details:
+        "Temporary NOC for temporary installation of\nGenerators outside the premises",
+      type: "Other",
+      prevailing:"",
+      // jurisdiction: "Karachi",
+      timeLine: "15 Days",
+      fee: "District East Rs.10000",
+      officials:
+        "▪ Director Anti Encroachment\n▪ Concerned Deputy Director\n▪ Inspector\n▪ Assistant Account Officer",
+        // validity: "",                   
+        // renewalFee:""
+    },
+    {
+      sNo: 91,
+      issuingDepartment: "Karachi Metropolitan Corporation (KMC)",
+      address: "Adhumal Oodharam Quarter, Karachi, Karachi City, Sindh",
+      contactno: "(021) 99215125",
+      rlcoID: "KMC-017",
+      details:
+        "Temporary NOC for temporary installation of\nGenerators outside the premises",
+      type: "Other",
+      prevailing:"",
+      // jurisdiction: "Karachi",
+      timeLine: "15 Days",
+      fee: "District Centeral Rs.7500",
+      officials:
+        "▪ Director Anti Encroachment\n▪ Concerned Deputy Director\n▪ Inspector\n▪ Assistant Account Officer",
+        // validity: "",                   
+        // renewalFee:""
+    },
+    {
+      sNo: 91,
+      issuingDepartment: "Karachi Metropolitan Corporation (KMC)",
+      address: "Adhumal Oodharam Quarter, Karachi, Karachi City, Sindh",
+      contactno: "(021) 99215125",
+      rlcoID: "KMC-017",
+      details:
+        "Temporary NOC for temporary installation of\nGenerators outside the premises",
+      type: "Other",
+      prevailing:"",
+      // jurisdiction: "Karachi",
+      timeLine: "15 Days",
+      fee: "District West Rs.5000",
       officials:
         "▪ Director Anti Encroachment\n▪ Concerned Deputy Director\n▪ Inspector\n▪ Assistant Account Officer",
         // validity: "",                   
@@ -2725,7 +2847,7 @@ video:LabourVideo,
     },
     {
       sNo: 92,
-      issuingDepartment: "Karachi Metropolitan Corporation (KMC)",
+      issuingDepartment: "Karachi Metropolitan Corporation (KMC) (Commercial Building & Complex)",
       address: "Adhumal Oodharam Quarter, Karachi, Karachi City, Sindh",
       contactno: "(021) 99215125",
       rlcoID: "KMC-018",
@@ -2735,7 +2857,61 @@ video:LabourVideo,
       prevailing:"",
       // jurisdiction: "Karachi",
       timeLine: "15 Days",
-      fee: "As per schedule",
+      fee: "On Streed Rs.10 Per Sq Ft",
+      officials:
+        "▪ Director Anti Encroachment\n▪ Concerned Deputy Director\n▪ Inspector\n▪ Assistant Account Officer",
+        // validity: "",                   
+        // renewalFee:""
+    },
+    {
+      sNo: 92,
+      issuingDepartment: "Karachi Metropolitan Corporation (KMC) (Commercial Building & Complex)",
+      address: "Adhumal Oodharam Quarter, Karachi, Karachi City, Sindh",
+      contactno: "(021) 99215125",
+      rlcoID: "KMC-018",
+      details:
+        "Temporary NOC for keeping building\nmaterials on roads during construction",
+      type: "Other",
+      prevailing:"",
+      // jurisdiction: "Karachi",
+      timeLine: "15 Days",
+      fee: "On Footpath Rs.5 Per Sq Ft",
+      officials:
+        "▪ Director Anti Encroachment\n▪ Concerned Deputy Director\n▪ Inspector\n▪ Assistant Account Officer",
+        // validity: "",                   
+        // renewalFee:""
+    },
+    {
+      sNo: 92,
+      issuingDepartment: "Karachi Metropolitan Corporation (KMC) (Resedential)",
+      address: "Adhumal Oodharam Quarter, Karachi, Karachi City, Sindh",
+      contactno: "(021) 99215125",
+      rlcoID: "KMC-018",
+      details:
+        "Temporary NOC for keeping building\nmaterials on roads during construction",
+      type: "Other",
+      prevailing:"",
+      // jurisdiction: "Karachi",
+      timeLine: "15 Days",
+      fee: "On street Rs.5 Per Sq Ft",
+      officials:
+        "▪ Director Anti Encroachment\n▪ Concerned Deputy Director\n▪ Inspector\n▪ Assistant Account Officer",
+        // validity: "",                   
+        // renewalFee:""
+    },
+    {
+      sNo: 92,
+      issuingDepartment: "Karachi Metropolitan Corporation (KMC) (Resedential)",
+      address: "Adhumal Oodharam Quarter, Karachi, Karachi City, Sindh",
+      contactno: "(021) 99215125",
+      rlcoID: "KMC-018",
+      details:
+        "Temporary NOC for keeping building\nmaterials on roads during construction",
+      type: "Other",
+      prevailing:"",
+      // jurisdiction: "Karachi",
+      timeLine: "15 Days",
+      fee: "On Footpath Rs.3 Per Sq Ft",
       officials:
         "▪ Director Anti Encroachment\n▪ Concerned Deputy Director\n▪ Inspector\n▪ Assistant Account Officer",
         // validity: "",                   
@@ -2752,7 +2928,92 @@ video:LabourVideo,
       prevailing:"",
       // jurisdiction: "Karachi",
       timeLine: "15 Days",
-      fee: "As per schedule",
+      fee: "Karachi Zoo & Park Rs.7000 Per Hour",
+      officials:
+        "▪ Director Safari Park/ Karachi Zoo\n▪ Concerned Additional Director\n▪ Deputy Director\n▪ Assistant Director\n▪ Assistant Account Officer",
+        // validity: "",                   
+        // renewalFee:""
+    },
+    {
+      sNo: 93,
+      issuingDepartment: "Karachi Metropolitan Corporation (KMC)",
+      address: "Adhumal Oodharam Quarter, Karachi, Karachi City, Sindh",
+      contactno: "(021) 99215125",
+      rlcoID: "KCM-019",
+      details: "NOC for film and Ad shooting in Safari Park\nand Karachi Zoo",
+      type: "Other",
+      prevailing:"",
+      // jurisdiction: "Karachi",
+      timeLine: "15 Days",
+      fee: "Security Deposit Rs.25000",
+      officials:
+        "▪ Director Safari Park/ Karachi Zoo\n▪ Concerned Additional Director\n▪ Deputy Director\n▪ Assistant Director\n▪ Assistant Account Officer",
+        // validity: "",                   
+        // renewalFee:""
+    },
+    {
+      sNo: 93,
+      issuingDepartment: "Karachi Metropolitan Corporation (KMC)",
+      address: "Adhumal Oodharam Quarter, Karachi, Karachi City, Sindh",
+      contactno: "(021) 99215125",
+      rlcoID: "KCM-019",
+      details: "NOC for film and Ad shooting in Safari Park\nand Karachi Zoo",
+      type: "Other",
+      prevailing:"",
+      // jurisdiction: "Karachi",
+      timeLine: "15 Days",
+      fee: "In Karachi Zoo Rs.10,000 Per Hour",
+      officials:
+        "▪ Director Safari Park/ Karachi Zoo\n▪ Concerned Additional Director\n▪ Deputy Director\n▪ Assistant Director\n▪ Assistant Account Officer",
+        // validity: "",                   
+        // renewalFee:""
+    },
+    {
+      sNo: 93,
+      issuingDepartment: "Karachi Metropolitan Corporation (KMC)",
+      address: "Adhumal Oodharam Quarter, Karachi, Karachi City, Sindh",
+      contactno: "(021) 99215125",
+      rlcoID: "KCM-019",
+      details: "NOC for film and Ad shooting in Safari Park\nand Karachi Zoo",
+      type: "Other",
+      prevailing:"",
+      // jurisdiction: "Karachi",
+      timeLine: "15 Days",
+      fee: "Security Deposit Rs.50,000",
+      officials:
+        "▪ Director Safari Park/ Karachi Zoo\n▪ Concerned Additional Director\n▪ Deputy Director\n▪ Assistant Director\n▪ Assistant Account Officer",
+        // validity: "",                   
+        // renewalFee:""
+    },
+    {
+      sNo: 93,
+      issuingDepartment: "Karachi Metropolitan Corporation (KMC)",
+      address: "Adhumal Oodharam Quarter, Karachi, Karachi City, Sindh",
+      contactno: "(021) 99215125",
+      rlcoID: "KCM-019",
+      details: "NOC for film and Ad shooting in Safari Park\nand Karachi Zoo",
+      type: "Other",
+      prevailing:"",
+      // jurisdiction: "Karachi",
+      timeLine: "15 Days",
+      fee: "Karachi Safari Park Rs.7,000",
+      officials:
+        "▪ Director Safari Park/ Karachi Zoo\n▪ Concerned Additional Director\n▪ Deputy Director\n▪ Assistant Director\n▪ Assistant Account Officer",
+        // validity: "",                   
+        // renewalFee:""
+    },
+    {
+      sNo: 93,
+      issuingDepartment: "Karachi Metropolitan Corporation (KMC)",
+      address: "Adhumal Oodharam Quarter, Karachi, Karachi City, Sindh",
+      contactno: "(021) 99215125",
+      rlcoID: "KCM-019",
+      details: "NOC for film and Ad shooting in Safari Park\nand Karachi Zoo",
+      type: "Other",
+      prevailing:"",
+      // jurisdiction: "Karachi",
+      timeLine: "15 Days",
+      fee: "Secuirty Deposit Rs.25000",
       officials:
         "▪ Director Safari Park/ Karachi Zoo\n▪ Concerned Additional Director\n▪ Deputy Director\n▪ Assistant Director\n▪ Assistant Account Officer",
         // validity: "",                   
@@ -2855,7 +3116,23 @@ video:LabourVideo,
       prevailing:"",
       // jurisdiction: "Sindh",
       timeLine: "NA",
-      fee: "As per schedule",
+      fee: "Rs.100",
+      officials: "Electric Inspector",
+      // validity: "",                   
+      // renewalFee:""
+    },
+    {
+      sNo: 99,
+      issuingDepartment: "Energy Department",
+      address: "3rd Floor, Statelife Building No.3، Dr. Opposite CM House، Doctor Ziauddin Ahmed Road, Kashmir Mujahid Colony, Karachi, Karachi City, Sindh",
+      contactno: "(021) 99206272",
+      rlcoID: "ED-002\n",
+      details: "Competency Certificate for Wireman",
+      type: "Certificate",
+      prevailing:"",
+      // jurisdiction: "Sindh",
+      timeLine: "NA",
+      fee: "Late Fee: Rs.150",
       officials: "Electric Inspector",
       // validity: "",                   
       // renewalFee:""
@@ -2871,7 +3148,23 @@ video:LabourVideo,
       prevailing:"",
       // jurisdiction: "Sindh",
       timeLine: "NA",
-      fee: "As per schedule",
+      fee: "Rs.500",
+      officials: "Electric Inspector",
+      // validity: "",                   
+      // renewalFee:""
+    },
+    {
+      sNo: 100,
+      issuingDepartment: "Energy Department",
+      address: "3rd Floor, Statelife Building No.3، Dr. Opposite CM House، Doctor Ziauddin Ahmed Road, Kashmir Mujahid Colony, Karachi, Karachi City, Sindh",
+      contactno: "(021) 99206272",
+      rlcoID: "ED-003\n",
+      details: "Competency Certificate for Electric Supervisor",
+      type: "Certificate",
+      prevailing:"",
+      // jurisdiction: "Sindh",
+      timeLine: "NA",
+      fee: "Late Fee Rs.750",
       officials: "Electric Inspector",
       // validity: "",                   
       // renewalFee:""
@@ -2980,7 +3273,7 @@ video:LabourVideo,
     {
       sNo: 107,
       issuingDepartment:
-      "Excise, Taxation &amp; Narcotics Control Department\n",
+      "Excise, Taxation &amp; Narcotics Control Department\n (Motorcycle)",
       address:"Tughlaq House Sindh Secretariat Karachi Pakistan",
       contactno:"(021) 99231410",
       rlcoID: "ET&amp;NC-002",
@@ -2989,7 +3282,79 @@ video:LabourVideo,
       prevailing:"",
       // jurisdiction: "Sindh",
       timeLine: "7 days",
-      fee: "As per schedule",
+      fee: "Rs.200/-",
+      officials:
+        '"▪ Counter In-Charge\n▪ Head Cashier \n▪ Motor Registration Authority\n▪ Staff from Card Section\n▪ Staff from Return File Section\n▪ Staff from Scanning Section"',
+        // validity: "",                   
+        // renewalFee:""
+    },
+    {
+      sNo: 107,
+      issuingDepartment:
+      "Excise, Taxation &amp; Narcotics Control Department\n (M/Cars, Jeeps, etc. up to 800 cc Engine Power)",
+      address:"Tughlaq House Sindh Secretariat Karachi Pakistan",
+      contactno:"(021) 99231410",
+      rlcoID: "ET&amp;NC-002",
+      details: "Transfer on Motor vehicle",
+      type: "Other",
+      prevailing:"",
+      // jurisdiction: "Sindh",
+      timeLine: "7 days",
+      fee: "Rs.800/-",
+      officials:
+        '"▪ Counter In-Charge\n▪ Head Cashier \n▪ Motor Registration Authority\n▪ Staff from Card Section\n▪ Staff from Return File Section\n▪ Staff from Scanning Section"',
+        // validity: "",                   
+        // renewalFee:""
+    },
+    {
+      sNo: 107,
+      issuingDepartment:
+      "Excise, Taxation &amp; Narcotics Control Department\n (M/Cars, Jeeps, etc. from 801 cc to 2,000 cc Engine Power)",
+      address:"Tughlaq House Sindh Secretariat Karachi Pakistan",
+      contactno:"(021) 99231410",
+      rlcoID: "ET&amp;NC-002",
+      details: "Transfer on Motor vehicle",
+      type: "Other",
+      prevailing:"",
+      // jurisdiction: "Sindh",
+      timeLine: "7 days",
+      fee: "Rs.1,000/-",
+      officials:
+        '"▪ Counter In-Charge\n▪ Head Cashier \n▪ Motor Registration Authority\n▪ Staff from Card Section\n▪ Staff from Return File Section\n▪ Staff from Scanning Section"',
+        // validity: "",                   
+        // renewalFee:""
+    },
+    {
+      sNo: 107,
+      issuingDepartment:
+      "Excise, Taxation &amp; Narcotics Control Department\n (Rickshaws)",
+      address:"Tughlaq House Sindh Secretariat Karachi Pakistan",
+      contactno:"(021) 99231410",
+      rlcoID: "ET&amp;NC-002",
+      details: "Transfer on Motor vehicle",
+      type: "Other",
+      prevailing:"",
+      // jurisdiction: "Sindh",
+      timeLine: "7 days",
+      fee: " Rs.400/-",
+      officials:
+        '"▪ Counter In-Charge\n▪ Head Cashier \n▪ Motor Registration Authority\n▪ Staff from Card Section\n▪ Staff from Return File Section\n▪ Staff from Scanning Section"',
+        // validity: "",                   
+        // renewalFee:""
+    },
+    {
+      sNo: 107,
+      issuingDepartment:
+      "Excise, Taxation &amp; Narcotics Control Department\n (Tractors)",
+      address:"Tughlaq House Sindh Secretariat Karachi Pakistan",
+      contactno:"(021) 99231410",
+      rlcoID: "ET&amp;NC-002",
+      details: "Transfer on Motor vehicle",
+      type: "Other",
+      prevailing:"",
+      // jurisdiction: "Sindh",
+      timeLine: "7 days",
+      fee: " Rs.1,000/-",
       officials:
         '"▪ Counter In-Charge\n▪ Head Cashier \n▪ Motor Registration Authority\n▪ Staff from Card Section\n▪ Staff from Return File Section\n▪ Staff from Scanning Section"',
         // validity: "",                   
@@ -2998,7 +3363,7 @@ video:LabourVideo,
     {
       sNo: 108,
       issuingDepartment:
-      "Excise, Taxation &amp; Narcotics Control Department\n",
+      "Excise, Taxation &amp; Narcotics Control Department\n (Big Vehicle)",
       address:"Tughlaq House Sindh Secretariat Karachi Pakistan",
       contactno:"(021) 99231410",
       rlcoID: "ET&amp;NC-003",
@@ -3007,7 +3372,25 @@ video:LabourVideo,
       prevailing:"",
       // jurisdiction: "Sindh",
       timeLine: "7 days",
-      fee: "As per schedule",
+      fee: "Rs.1,500/-",
+      officials:
+        '▪ Counter In-Charge\n▪ Head Cashier \n▪ Motor Registration Authority\n▪ Staff from Card Section\n▪ Staff from Return File Section\n▪ Staff from Scanning Section"""',
+        // validity: "",                   
+        // renewalFee:""
+    },
+    {
+      sNo: 108,
+      issuingDepartment:
+      "Excise, Taxation &amp; Narcotics Control Department\n (Small Vehicle)",
+      address:"Tughlaq House Sindh Secretariat Karachi Pakistan",
+      contactno:"(021) 99231410",
+      rlcoID: "ET&amp;NC-003",
+      details: "Alteration of Vehicle",
+      type: "Other",
+      prevailing:"",
+      // jurisdiction: "Sindh",
+      timeLine: "7 days",
+      fee: "Rs.1,250/-",
       officials:
         '▪ Counter In-Charge\n▪ Head Cashier \n▪ Motor Registration Authority\n▪ Staff from Card Section\n▪ Staff from Return File Section\n▪ Staff from Scanning Section"""',
         // validity: "",                   
@@ -3066,7 +3449,28 @@ video:LabourVideo,
         "▪ Prohibition (Enforcement of Hadd) Order 1979\n▪ Sindh Prohibition Rules 1979",
       // jurisdiction: "Sindh",
       timeLine: "1 Month",
-      fee: "As per schedule",
+      fee: "Distillery License for intoxicating Liquor 30,000/- per annum",
+      officials:
+        "▪ Chief Minister, Sindh\n▪ Chief Secretary/ Secretary \n▪ Section Officer \n▪ Director General Excise \n▪ Regional Director \n▪ Concerned District Officer\n▪ Concerned Assistant ETO/Concerned Inspector",
+        // validity: "",                   
+        // renewalFee:""
+        documenttype: "Law / Rules / Regulations	",
+
+    },
+    {
+      sNo: 111,
+      issuingDepartment:
+      "Excise, Taxation &amp; Narcotics Control Department\n",
+      address:"Tughlaq House Sindh Secretariat Karachi Pakistan",
+      contactno:"(021) 99231410",
+      rlcoID: "ET&amp;NC-006",
+      details: "Distillery License for Intoxicating Liquor",
+      type: "License",
+      prevailing:
+        "▪ Prohibition (Enforcement of Hadd) Order 1979\n▪ Sindh Prohibition Rules 1979",
+      // jurisdiction: "Sindh",
+      timeLine: "1 Month",
+      fee: "Establishment Charges 3,500,000/- per annum",
       officials:
         "▪ Chief Minister, Sindh\n▪ Chief Secretary/ Secretary \n▪ Section Officer \n▪ Director General Excise \n▪ Regional Director \n▪ Concerned District Officer\n▪ Concerned Assistant ETO/Concerned Inspector",
         // validity: "",                   
@@ -3086,7 +3490,26 @@ video:LabourVideo,
       prevailing:"",
       // jurisdiction: "Sindh",
       timeLine: "1 Month",
-      fee: "As per schedule",
+      fee: "Manufacturing of PMFL License 30,000/- per annum",
+      officials:"",
+      // validity: "",                   
+      // renewalFee:""
+      documenttype: "Law / Rules / Regulations	",
+
+    },
+    {
+      sNo: 112,
+      issuingDepartment:
+      "Excise, Taxation &amp; Narcotics Control Department\n",
+      address:"Tughlaq House Sindh Secretariat Karachi Pakistan",
+      contactno:"(021) 99231410",
+      rlcoID: "ET&amp;NC-007",
+      details: "Manufacturing of PMFL License\n",
+      type: "License",
+      prevailing:"",
+      // jurisdiction: "Sindh",
+      timeLine: "1 Month",
+      fee: "Establishment Charges 3,500,000/- per annum",
       officials:"",
       // validity: "",                   
       // renewalFee:""
@@ -3105,7 +3528,26 @@ video:LabourVideo,
       prevailing:"",
       // jurisdiction: "Sindh",
       timeLine: "1 Month",
-      fee: "As per schedule",
+      fee: "Establishing a Brewery for Beer 30,000/- per annum",
+      officials:"",
+      // validity: "",                   
+      documenttype: "Law / Rules / Regulations	",
+
+      // renewalFee:""
+    },
+    {
+      sNo: 113,
+      issuingDepartment:
+      "Excise, Taxation &amp; Narcotics Control Department\n",
+      address:"Tughlaq House Sindh Secretariat Karachi Pakistan",
+      contactno:"(021) 99231410",
+      rlcoID: "ET&amp;NC-008",
+      details: "Brewery License for Beer",
+      type: "License",
+      prevailing:"",
+      // jurisdiction: "Sindh",
+      timeLine: "1 Month",
+      fee: "Establishment Charges 35,00,000/- per annum",
       officials:"",
       // validity: "",                   
       documenttype: "Law / Rules / Regulations	",
@@ -3165,7 +3607,28 @@ video:LabourVideo,
         "▪ The Sindh Abkari act 1878\n▪ Sindh Excise Manual Volume-I\n",
       // jurisdiction: "Sindh",
       timeLine: "1 Month",
-      fee: "As per schedule",
+      fee: "Distillery License for manufacturing of Ethanol 30,000/- per annum",
+      officials:
+        "▪ Regional Director \n▪ District Officer (DO)/ETO\n▪ Assistant ETO/ Inspector \n▪ Director General (DG) Excise",
+        // validity: "",                   
+        // renewalFee:""
+        documenttype: "Law / Rules / Regulations	",
+
+    },
+    {
+      sNo: 116,
+      issuingDepartment:
+      "Excise, Taxation &amp; Narcotics Control Department\n",
+      address:"Tughlaq House Sindh Secretariat Karachi Pakistan",
+      contactno:"(021) 99231410",
+      rlcoID: "ET&amp;NC-011",
+      details: "Distillery License for Manufacturing of Ethanol\n",
+      type: "License",
+      prevailing:
+        "▪ The Sindh Abkari act 1878\n▪ Sindh Excise Manual Volume-I\n",
+      // jurisdiction: "Sindh",
+      timeLine: "1 Month",
+      fee: "Establishment Fee 3,500,000/- per annum",
       officials:
         "▪ Regional Director \n▪ District Officer (DO)/ETO\n▪ Assistant ETO/ Inspector \n▪ Director General (DG) Excise",
         // validity: "",                   
@@ -3242,7 +3705,7 @@ video:LabourVideo,
       prevailing:"",
       // jurisdiction: "Sindh",
       timeLine: "1 Month",
-      fee: "As per schedule",
+      fee: "Denatured Spirit License for Retail-Sale 2400/- per anum (License fee) and 2400/- per anum (Bottling Fee)",
       officials:"",
       // validity: "",                   
       // renewalFee:""
@@ -3262,7 +3725,7 @@ video:LabourVideo,
         '"▪ Prohibition (Enforcement of Hadd) Order 1979\n▪ Sindh Prohibition Rules 1979"\n\n\n\n',
       // jurisdiction: "Sindh",
       timeLine: "1 Month",
-      fee: "As per schedule",
+      fee: "Denatured Spirit License for Retail-Sale 2400/- per anum (License fee) and 2400/- per anum (Bottling Fee)",
       officials:"",
       // validity: "",                   
       // renewalFee:""
@@ -3383,7 +3846,49 @@ video:LabourVideo,
       prevailing:"",
       // jurisdiction: "Sindh",
       timeLine: "1 Month",
-      fee: "As per schedule",
+      fee: "Permission to use Rectified Spirit in the Manufacturing of Spirituous / Medicinal/ Toilet  Preparation 15,000/- per annum",
+      officials:
+        "▪ Regional Director \n▪ District Officer (DO)/ETO\n▪ Assistant ETO/ Inspector \n▪ Director General (DG) Excise",
+        // validity: "",                   
+        // renewalFee:""
+        documenttype: "Law / Rules / Regulations	",
+
+    },
+    {
+      sNo: 127,
+      issuingDepartment:
+      "Excise, Taxation &amp; Narcotics Control Department\n",
+      address:"Tughlaq House Sindh Secretariat Karachi Pakistan",
+      contactno:"(021) 99231410",
+      rlcoID: "ET&amp;NC-022",
+      details:
+        "Permission to use Rectified Spirit in the Manufacturing \nof Spirituous / Medicinal / Homeopathic / Toilet Preparation",
+      type: "Other",
+      prevailing:"",
+      // jurisdiction: "Sindh",
+      timeLine: "1 Month",
+      fee: "Permission to use Rectified Spirit in the Manufacturing Homeopathic Medicine Preparation 600/- per annum ",
+      officials:
+        "▪ Regional Director \n▪ District Officer (DO)/ETO\n▪ Assistant ETO/ Inspector \n▪ Director General (DG) Excise",
+        // validity: "",                   
+        // renewalFee:""
+        documenttype: "Law / Rules / Regulations	",
+
+    },
+    {
+      sNo: 127,
+      issuingDepartment:
+      "Excise, Taxation &amp; Narcotics Control Department\n",
+      address:"Tughlaq House Sindh Secretariat Karachi Pakistan",
+      contactno:"(021) 99231410",
+      rlcoID: "ET&amp;NC-022",
+      details:
+        "Permission to use Rectified Spirit in the Manufacturing \nof Spirituous / Medicinal / Homeopathic / Toilet Preparation",
+      type: "Other",
+      prevailing:"",
+      // jurisdiction: "Sindh",
+      timeLine: "1 Month",
+      fee: "Establishment Charges 3,500,000/- per anum",
       officials:
         "▪ Regional Director \n▪ District Officer (DO)/ETO\n▪ Assistant ETO/ Inspector \n▪ Director General (DG) Excise",
         // validity: "",                   
@@ -3404,7 +3909,70 @@ video:LabourVideo,
       prevailing:"",
       // jurisdiction: "Sindh",
       timeLine: "3 Days",
-      fee: "As per schedule",
+      fee: "Transport Permit for Beer 76/- Per Liter ",
+      officials:
+        "▪ District Officer \n▪ Deputy Director \n▪ Director \n▪ Director General",
+        // validity: "",                   
+        // renewalFee:""
+        documenttype: "Law / Rules / Regulations",
+
+    },
+    {
+      sNo: 128,
+      issuingDepartment:
+      "Excise, Taxation &amp; Narcotics Control Department\n",
+      address:"Tughlaq House Sindh Secretariat Karachi Pakistan",
+      contactno:"(021) 99231410",
+      rlcoID: "ET&amp;NC-023",
+      details:
+        "Transport Permit (Buyer of the PMFL, Beer, Denatured \nSpirit, Methanol)",
+      type: "Other",
+      prevailing:"",
+      // jurisdiction: "Sindh",
+      timeLine: "3 Days",
+      fee: "Transport Permit for PMFL 2,160/- per Proof Gallon",
+      officials:
+        "▪ District Officer \n▪ Deputy Director \n▪ Director \n▪ Director General",
+        // validity: "",                   
+        // renewalFee:""
+        documenttype: "Law / Rules / Regulations	",
+
+    },
+    {
+      sNo: 128,
+      issuingDepartment:
+      "Excise, Taxation &amp; Narcotics Control Department\n",
+      address:"Tughlaq House Sindh Secretariat Karachi Pakistan",
+      contactno:"(021) 99231410",
+      rlcoID: "ET&amp;NC-023",
+      details:
+        "Transport Permit (Buyer of the PMFL, Beer, Denatured \nSpirit, Methanol)",
+      type: "Other",
+      prevailing:"",
+      // jurisdiction: "Sindh",
+      timeLine: "3 Days",
+      fee: "Transport Permit for Denatured Spirit 10/- per Bulk Gallon Vend Fee 6/- per Bulk Gallon",
+      officials:
+        "▪ District Officer \n▪ Deputy Director \n▪ Director \n▪ Director General",
+        // validity: "",                   
+        // renewalFee:""
+        documenttype: "Law / Rules / Regulations	",
+
+    },
+    {
+      sNo: 128,
+      issuingDepartment:
+      "Excise, Taxation &amp; Narcotics Control Department\n",
+      address:"Tughlaq House Sindh Secretariat Karachi Pakistan",
+      contactno:"(021) 99231410",
+      rlcoID: "ET&amp;NC-023",
+      details:
+        "Transport Permit (Buyer of the PMFL, Beer, Denatured \nSpirit, Methanol)",
+      type: "Other",
+      prevailing:"",
+      // jurisdiction: "Sindh",
+      timeLine: "3 Days",
+      fee: "Transport Permit for Methanol 10/- per bulk gallon Vend Fee 6/- per Bulk Gallon",
       officials:
         "▪ District Officer \n▪ Deputy Director \n▪ Director \n▪ Director General",
         // validity: "",                   
@@ -3426,7 +3994,73 @@ video:LabourVideo,
         '"▪ The Sindh Abkari act 1878\n▪ Sindh Excise Manual Volume-I\n\n\n',
       // jurisdiction: "Sindh",
       timeLine: "1 Month",
-      fee: "As per schedule",
+      fee: "fee challan of Rs. 60/-",
+      officials:
+        "▪ District Officer \n▪ Deputy Director \n▪ Director \n▪ Director General",
+        // validity: "",                   
+        // renewalFee:""
+        documenttype: "Law / Rules / Regulations	",
+
+    },
+    {
+      sNo: 129,
+      issuingDepartment:
+      "Excise, Taxation &amp; Narcotics Control Department\n",
+      address:"Tughlaq House Sindh Secretariat Karachi Pakistan",
+      contactno:"(021) 99231410",
+      rlcoID: "ET&amp;NC-023 B",
+      details:
+        "Retail of Transport Permit (buyer of the PMFL, \nBeer, Denatured Spirit, Methanol)",
+      type: "Other",
+      prevailing:
+        '"▪ The Sindh Abkari act 1878\n▪ Sindh Excise Manual Volume-I\n\n\n',
+      // jurisdiction: "Sindh",
+      timeLine: "1 Month",
+      fee: "Transport Permit for Beer Rs.02/- per bottle of Beer",
+      officials:
+        "▪ District Officer \n▪ Deputy Director \n▪ Director \n▪ Director General",
+        // validity: "",                   
+        // renewalFee:""
+        documenttype: "Law / Rules / Regulations	",
+
+    },
+    {
+      sNo: 129,
+      issuingDepartment:
+      "Excise, Taxation &amp; Narcotics Control Department\n",
+      address:"Tughlaq House Sindh Secretariat Karachi Pakistan",
+      contactno:"(021) 99231410",
+      rlcoID: "ET&amp;NC-023 B",
+      details:
+        "Retail of Transport Permit (buyer of the PMFL, \nBeer, Denatured Spirit, Methanol)",
+      type: "Other",
+      prevailing:
+        '"▪ The Sindh Abkari act 1878\n▪ Sindh Excise Manual Volume-I\n\n\n',
+      // jurisdiction: "Sindh",
+      timeLine: "1 Month",
+      fee: "Transport Permit for PMFL Rs.15/- per unit of PMFL",
+      officials:
+        "▪ District Officer \n▪ Deputy Director \n▪ Director \n▪ Director General",
+        // validity: "",                   
+        // renewalFee:""
+        documenttype: "Law / Rules / Regulations	",
+
+    },
+    {
+      sNo: 129,
+      issuingDepartment:
+      "Excise, Taxation &amp; Narcotics Control Department\n",
+      address:"Tughlaq House Sindh Secretariat Karachi Pakistan",
+      contactno:"(021) 99231410",
+      rlcoID: "ET&amp;NC-023 B",
+      details:
+        "Retail of Transport Permit (buyer of the PMFL, \nBeer, Denatured Spirit, Methanol)",
+      type: "Other",
+      prevailing:
+        '"▪ The Sindh Abkari act 1878\n▪ Sindh Excise Manual Volume-I\n\n\n',
+      // jurisdiction: "Sindh",
+      timeLine: "1 Month",
+      fee: "Transport Permit for Methanol Rs.10/- per bulk Gallon and Vend fee of Rs. 6 /- per bulk Gallon (both collected together)",
       officials:
         "▪ District Officer \n▪ Deputy Director \n▪ Director \n▪ Director General",
         // validity: "",                   
@@ -3505,7 +4139,51 @@ video:LabourVideo,
         "Sub-Soil Water (Extraction and Consumption) \nRegulations 2018",
       // jurisdiction: "Karachi",
       timeLine: "Varies",
-      fee: "As per schedule",
+      fee: "Non-refundable license fee per borehole Rs. 100,000/-",
+      officials:
+        "▪ Superintending Engineer\n▪ Committee\n▪ Sub- Engineer \n▪ RRG Department\n▪ MD KWSB\n",
+        // validity: "",                   
+        // renewalFee:""
+        documenttype: "Law / Rules / Regulations	",
+        map:KarachiWaterSewerageBoard,
+        location:"https://www.google.com/maps/place/Karachi+Water+Sewerage+Board/@24.9275284,67.079292,14z/data=!4m10!1m2!2m1!1sKarachi+Water+Sewerage+Board+!3m6!1s0x3eb33f352288be1f:0x2ac113172fa92e92!8m2!3d24.9248042!4d67.0926816!15sChxLYXJhY2hpIFdhdGVyIFNld2VyYWdlIEJvYXJkkgERZ292ZXJubWVudF9vZmZpY2XgAQA!16s%2Fg%2F11xk1wbnb?entry=ttu"
+
+    },
+    {
+      sNo: 133,
+      issuingDepartment: "Karachi Water &amp; Sewerage Board ",
+      address:"Head office behind civic center old KBCA Building , Gulshan Iqbal",
+      contactno:"(021) 99230317",
+      rlcoID: "KWSB-002",
+      details: "License for Sub-soil Water Supply",
+      type: "License",
+      prevailing:
+        "Sub-Soil Water (Extraction and Consumption) \nRegulations 2018",
+      // jurisdiction: "Karachi",
+      timeLine: "Varies",
+      fee: "One-time advance security deposit per borehole Rs. 90,000/-",
+      officials:
+        "▪ Superintending Engineer\n▪ Committee\n▪ Sub- Engineer \n▪ RRG Department\n▪ MD KWSB\n",
+        // validity: "",                   
+        // renewalFee:""
+        documenttype: "Law / Rules / Regulations	",
+        map:KarachiWaterSewerageBoard,
+        location:"https://www.google.com/maps/place/Karachi+Water+Sewerage+Board/@24.9275284,67.079292,14z/data=!4m10!1m2!2m1!1sKarachi+Water+Sewerage+Board+!3m6!1s0x3eb33f352288be1f:0x2ac113172fa92e92!8m2!3d24.9248042!4d67.0926816!15sChxLYXJhY2hpIFdhdGVyIFNld2VyYWdlIEJvYXJkkgERZ292ZXJubWVudF9vZmZpY2XgAQA!16s%2Fg%2F11xk1wbnb?entry=ttu"
+
+    },
+    {
+      sNo: 133,
+      issuingDepartment: "Karachi Water &amp; Sewerage Board ",
+      address:"Head office behind civic center old KBCA Building , Gulshan Iqbal",
+      contactno:"(021) 99230317",
+      rlcoID: "KWSB-002",
+      details: "License for Sub-soil Water Supply",
+      type: "License",
+      prevailing:
+        "Sub-Soil Water (Extraction and Consumption) \nRegulations 2018",
+      // jurisdiction: "Karachi",
+      timeLine: "Varies",
+      fee: "Monthly license fee per bore hole Rs. 30,000/-",
       officials:
         "▪ Superintending Engineer\n▪ Committee\n▪ Sub- Engineer \n▪ RRG Department\n▪ MD KWSB\n",
         // validity: "",                   
