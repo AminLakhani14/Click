@@ -68,16 +68,102 @@
   position: relative;
   margin-bottom: 50px;
 }
+
 .ReportRegulatoryDifficulties::before {
   content: " ";
   height: 3px;
   width: 300px;
   position: absolute;
   background-color: #720d1d;
-  top: 53px;
+  top: 50px;
   /* left: 300px; */
   right: 39%;
   margin-bottom: 10px;
+}
+
+.contactus {
+  color: #054a91;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.contactus::before {
+  content: " ";
+  height: 3px;
+  width: 120px;
+  position: absolute;
+  background-color: #720d1d;
+  top: 50px;
+  /* left: 300px; */
+  margin-bottom: 10px;
+}
+
+.introductionTitle{
+  color: #054a91;
+  position: relative;
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: center;
+}
+.introductionTitle::before {
+  content: " ";
+  height: 3px;
+  width: 150px;
+  position: absolute;
+  background-color: #720d1d;
+  top: 50px;
+  margin-bottom: 10px;
+}
+.vision{
+  color: #054a91;
+  position: relative;
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: center;
+}
+.vision::before {
+  content: " ";
+  height: 3px;
+  width: 65px;
+  position: absolute;
+  background-color: #720d1d;
+  top: 50px;
+  margin-bottom: 10px;
+}
+.Progress{
+  color: #054a91;
+  position: relative;
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: center; 
+}
+.Progress::before {
+  content: " ";
+  height: 3px;
+  width: 100px;
+  position: absolute;
+  background-color: #720d1d;
+  top: 50px;
+  margin-bottom: 10px;
+}
+.catalog{
+  color: #054a91;
+  position: relative;
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: center;
+}
+.catalog::before{
+  content: " ";
+  height: 3px;
+  width: 500px;
+  position: absolute;
+  background-color: #720d1d;
+  top: 50px;
+  /* left: 300px; */
+  /* right: 39%; */
+  margin-bottom: 10px; 
 }
 .steps__item--active:before {
   right: 100%;
@@ -204,20 +290,21 @@
 } */
 .parent_container {
   width: 100%;
-  height: 100vh;
+  /* height: 100vh; */
   display: flex;
   justify-content: center;
-  align-items: center;
+  /* flex-wrap: wrap; */
+  /* align-items: center; */
 }
 .card_containers {
   width: 75%;
-  height: 50px;
+  /* height: 50px; */
   background-color: white;
   display: flex;
-  /* justify-content: space-between; */
+  justify-content:center;
   flex-wrap: wrap;
   gap: 50px;
-  height: 400px;
+  /* height: 400px; */
 }
 .cards {
   background-color: transparent;
@@ -352,7 +439,7 @@ justify-content: center;
   /* background-color: red !important; */
   /* box-shadow: 1px 1px 2px grey; */
   margin: auto;
-  letter-spacing: 1px;
+  /* letter-spacing: 1px; */
 }
 
 .NewsAndInformationDate {
@@ -576,11 +663,25 @@ justify-content: center;
     width: 150px;
     height: 50px;
   }
+  .vision::before{
+    content: " ";
+display: none;
+  }
+  .catalog::before{
+    content: " ";
+display: none;
+  }
+  .introductionTitle::before {
+display: none;
+  }
+  .contactus::before {
+  display: none;
+  }
 }
 .ReportRegulatorybefore {
   color: #054a91;
   position: relative;
-  margin-bottom: 50px;
+  /* margin-bottom: 50px; */
 }
 .feedbacksubmitButton {
   width: 200px;
@@ -890,9 +991,10 @@ justify-content: center;
 
 /* only on feedbackform */
 .mobileparaforfeedback {
-  font-size: 20px;
+  /* font-size: 20px; */
   text-align: center;
-  margin-top: -35px !important;
+  /* margin-top: -35px !important; */
+  /* margin: 15px 0 !important ; */
 }
 
 @media screen and (width: 540px) {
@@ -1077,7 +1179,71 @@ justify-content: center;
     margin-bottom: 60px;
     width: 365px;
   }
+  /* //////////////////////////////// */
+  .parent_container{
+    display: block;
+    padding: 0 20px;
+    /* background-color: blue; */
+    /* min-height: 100vh; */
+    }
+    .MeetourTeam {
+      color: #054a91;
+      position: relative;
+      /* margin: 30px 0; */
+    
+  
+    }
+    .MeetourTeam::before {
+      content: " ";
+      height: 3px;
+      width: 180px;
+      position: absolute;
+      background-color: #720d1d;
+      top: 30px;
+    
+      /* margin-bottom: 50px; */
+    
+      /* margin-left: 100px; */
+    }
+    .card_containers {
+  display: flex;
+  /* flex-direction: column; */
+  /* align-items: center; */
+  justify-content: center;
+  gap: 20px;
+  /* align-items: start; */
+  /* background-color: red; */
+  width: 100%;
+  /* margin-bottom: 1900px; */
+  
+   } 
+   .cards{
+    width: 90%;
+    margin-bottom: 0px !important
+   }
+   .members_information_container{
+    display:flex ;
+    justify-content: space-between;
+    align-items: center;
+  
+   }
+   .emai_container a{
+    margin: 0;
+    /* display: inline; */
+    text-decoration: none;
+  
+   }
+   .email{
+    /* background-color: rebeccapurple; */
+    display: inline;
+    margin: 0 !important;
+    padding: 0 !important;
+   }
 }
+@media only screen and  (max-width:500px) {
+ 
+}
+
 @media only screen and (min-width: 1024px) and (max-width: 1440px) {
   .dotsImage {
     top: -200px;

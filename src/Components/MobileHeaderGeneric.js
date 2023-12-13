@@ -109,10 +109,10 @@ const handleLabelTextClick = (index) => {
                 src={accessibility}
                 alt=""
                 width="25"
-                style={{ marginLeft: "10px" }}
+                style={{ marginLeft: "10px",marginRight:10 }}
               />
               <a href="comingsoon.html" title="" width="10">
-                <i className="fa-sharp fa-solid fa-magnifying-glass"></i>
+                <i className="fa-sharp fa-solid fa-magnifying-glass me-2"></i>
               </a>
             </div>
             <div className={`header `}>
@@ -155,7 +155,7 @@ const handleLabelTextClick = (index) => {
                         <li className="">
                           <label for="drop-2" className="d-flex toggle toggle2">
                           <Link to={"/regulatorycatalog"} style={{width:"212px",padding:"0px",fontSize:"20px"}}>
-                          Interactive Regularity Directory
+                          Interactive Regulatory Directory
                             </Link>
                             {dropdownStates[11] ? (
                                 <span
@@ -195,6 +195,12 @@ const handleLabelTextClick = (index) => {
                             <li className="borderline">
                               <Link className="link toggle2 mobilenesteddropdowntoggle2" to={"/Dashboard"}>
                               Sindh Statistics
+                              </Link>
+                           
+                            </li>
+                            <li className="borderline">
+                              <Link className="link toggle2 mobilenesteddropdowntoggle2" to={"/tutorial"}>
+                              Tutorials
                               </Link>
                             </li>
                           </ul>
@@ -545,26 +551,26 @@ const handleLabelTextClick = (index) => {
                             News & Information
                           </Link>
                         </li> */}
-                        <li className="">
+                        {/* <li className="">
                           <label for="drop-2" className="d-flex toggle toggle2">
                           <Link to={"/resource"} style={{width:"212px",padding:"0px",fontSize:"20px"}}>
                            About Us
                             </Link>
-                            {dropdownStates[11] ? (
+                            {dropdownStates[12] ? (
                                 <span
                                 style={{display:"contents"}}
                                   className="minus"
-                                  onClick={() => handleIconClick(11)} // Click on icon to open/close the dropdown
-                                  onMouseEnter={() => handleIconClick(11)} // Hover on icon to open/close the dropdown
-                                  onMouseLeave={() => closeDropdown(11)} // Leave ico icon to close the dropdown
+                                  onClick={() => handleIconClick(12)} // Click on icon to open/close the dropdown
+                                  onMouseEnter={() => handleIconClick(12)} // Hover on icon to open/close the dropdown
+                                  onMouseLeave={() => closeDropdown(12)} // Leave ico icon to close the dropdown
                                 ></span>
                               ) : (
                                 <span
                                   className="plus"
                                 style={{display:"contents"}}
-                                  onClick={() => handleIconClick(11)} // Click on icon to open/close the dropdown
-                                  onMouseEnter={() => handleIconClick(11)} // Hover on icon to open/close the dropdown
-                                  onMouseLeave={() => closeDropdown(11)} // Leave ico icon eave icon to close the dropdown
+                                  onClick={() => handleIconClick(12)} // Click on icon to open/close the dropdown
+                                  onMouseEnter={() => handleIconClick(12)} // Hover on icon to open/close the dropdown
+                                  onMouseLeave={() => closeDropdown(12)} // Leave ico icon eave icon to close the dropdown
                                 ></span>
                               )}
                           </label>
@@ -605,8 +611,21 @@ const handleLabelTextClick = (index) => {
                               </Link>
                             </li>
                           </ul>
+                        </li> */}
+                          <li
+                          style={{
+                            borderBottom: "1px solid transparent !important",
+                          }}
+                        >
+                          <a
+                              href="https://business.gov.pk/home_prmi/"
+                              className="link toggle2"
+                              target="_blank"
+                            >
+                               {"PRMI"}
+                            </a>
                         </li>
-                        {/* <li>
+                        <li>
                           <label 
                           for="drop-3"
                            className="d-flex toggle toggle2">
@@ -634,62 +653,41 @@ const handleLabelTextClick = (index) => {
                           <input type="checkbox" id="drop-3" />
                           <ul>
                             <li className="borderline">
-                              <Link className="link toggle2 mobilenesteddropdowntoggle" to={"/aboutus"}>
-                                Vision
+                              <Link className="link toggle2 mobilenesteddropdowntoggle2" to={"/introduction"}>
+                              Introduction 
                               </Link>
                             </li>
-                            <li className="">
-                              <label for="drop-4" className="d-flex toggle toggle2 mobiledropdowntoggle">
-                            <Link to={"/Component"} style={{width:"195px",padding:"0px",marginLeft:"8px"}}>
-                              Component 
-                            </Link>
-                            {dropdownStates[10] ? (
-                                <span
-                                style={{display:"contents"}}
-                                  className="minus"
-                                  onClick={() => handleIconClick(10)} // Click on icon to open/close the dropdown
-                                  onMouseEnter={() => handleIconClick(10)} // Hover on icon to open/close the dropdown
-                                  onMouseLeave={() => closeDropdown(10)} // Leave ico icon to close the dropdown
-                                ></span>
-                              ) : (
-                                <span
-                                  className="plus"
-                                style={{display:"contents"}}
-                                  onClick={() => handleIconClick(10)} // Click on icon to open/close the dropdown
-                                  onMouseEnter={() => handleIconClick(10)} // Hover on icon to open/close the dropdown
-                                  onMouseLeave={() => closeDropdown(10)} // Leave ico icon eave icon to close the dropdown
-                                ></span>
-                              )}
-                              </label>
-                              <input type="checkbox" id="drop-4" />
-                              <ul>
-                                <li className="borderline">
-                                  <Link
-                                    className="link toggle2 mobilenesteddropdowntoggle2"
-                                    to={"/aboutus"}
-                                  >
-                                    CLICK SID
-                                  </Link>
-                                </li>
-                                <li className="b-none">
-                                  <Link
-                                    className="link toggle2 mobilenesteddropdowntoggle2"
-                                    to={"/aboutus"}
-                                  >
-                                    Our Team
-                                  </Link>
-                                </li>
-                              </ul>
+                            <li className="borderline">
+                              <Link className="link toggle2 mobilenesteddropdowntoggle2" to={"/projectobjectives"}>
+                              project objectives 
+                              </Link>
                             </li>
+                            <li className="borderline">
+                              <Link className="link toggle2 mobilenesteddropdowntoggle2" to={"/acheivement"}>
+                              Achievements  
+                              </Link>
+                            </li>
+                            <li className="borderline">
+                              <Link className="link toggle2 mobilenesteddropdowntoggle2" to={"/resource"}>
+                              Downloads 
+                              </Link>
+                            </li>
+                            <li className="borderline">
+                              <Link className="link toggle2 mobilenesteddropdowntoggle2" to={"/Team"}>
+                              Team 
+                              </Link>
+                            </li>
+
                             <li className="b-none">
-                         <label for="drop-4" className="d-flex toggle toggle2 mobiledropdowntoggle">
-                           <Link style={{width:"195px",padding:"0px",marginLeft:"8px"}} to={"/aboutus"}>
-                             NEW Component
-                           </Link>
-                           </label>
-                         </li>
+                              <Link
+                                className="link toggle2 mobilenesteddropdowntoggle2"
+                                to={"/contactUs"}
+                              >
+                               Contact us
+                              </Link>
+                            </li>
                           </ul>
-                        </li> */}
+                        </li>
                       </ul>
                     </nav>
                   )}

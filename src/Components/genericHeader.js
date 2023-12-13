@@ -221,7 +221,7 @@ export default function GenericHeader(props) {
               <li className="HeaderPaddingRight">
                 <a target="blank" title="" className={"link2"}>
                   <Link className="link2" to={"/InvestNow"}>
-                  Interactive Regularity Directory
+                  Interactive Regulatory Directory
                   </Link>
                 </a>
               </li>
@@ -720,7 +720,7 @@ export default function GenericHeader(props) {
                     title=""
                     className={"link2"}
                   >
-                  Regularity Directory
+                  Regulatory Directory
                   </span>
                   <i
                     style={{ marginTop: "0px", marginLeft: "3px" }}
@@ -749,24 +749,20 @@ export default function GenericHeader(props) {
                   </div>
                 </div>
               </li>
-              <li className="HeaderPaddingRight">
+              {/* <li className="HeaderPaddingRight">
                 <div class="dropdown">
                   <span
                     style={{ marginRight: "5px" }}
                     title=""
                     className={"link2"}
                   >
-                    About Us
+                    PRMI
                   </span>
                   <i
                     style={{ marginTop: "0px", marginLeft: "3px" }}
                     class=" dropbtn hover-rotate fa fa-chevron-right"
                   ></i>
                   <div class="dropdown-content">
-                
-                   
-                    
-                    
                     <Link className={""} to={""}>
                       <a target="_blank" href="">
                        Introduction
@@ -785,6 +781,49 @@ export default function GenericHeader(props) {
                       <a href="#"> Downloads</a>
                     </Link>
                     <Link className={""} to={""}>
+                      <a href="#"> Contact us</a>
+                    </Link>
+                    
+                  </div>
+                </div>
+              </li> */}
+              <li className="HeaderPaddingRight">
+                <a href="https://business.gov.pk/home_prmi/" title="Home Page" target="_blank" className={"link2"}>
+                   PRMI
+                </a>
+              </li>
+              <li className="HeaderPaddingRight">
+                <div class="dropdown">
+                  <span
+                    style={{ marginRight: "5px" }}
+                    title=""
+                    className={"link2"}
+                  >
+                    About Us
+                  </span>
+                  <i
+                    style={{ marginTop: "0px", marginLeft: "3px" }}
+                    class=" dropbtn hover-rotate fa fa-chevron-right"
+                  ></i>
+                  <div class="dropdown-content">
+                    <Link className={""} to={"/introduction"}>
+                      <a target="_blank" href="">
+                       Introduction
+                      </a>
+                    </Link>
+                    <Link className={""} to={"/projectobjectives"}>
+                      <a href="#"> Project Objectives </a>
+                    </Link>
+                    <Link className={""} to={"/acheivement"}>
+                      <a href="#"> Achievements  </a>
+                    </Link>
+                    <Link className={""} to={"/Team"}>
+                      <a href="#"> Team </a>
+                    </Link>
+                    <Link className={""} to={"/resource"}>
+                      <a href="#"> Downloads</a>
+                    </Link>
+                    <Link className={""} to={"/contactUs"}>
                       <a href="#"> Contact us</a>
                     </Link>
                     

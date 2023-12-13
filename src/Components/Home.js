@@ -17,6 +17,7 @@ import MobileTestimonial from "./MobileTestimonial";
 import MobileGallery from "./MobileGallery";
 import { useDispatch, useSelector } from "react-redux";
 import { setLanguage } from "../Redux/Reducer/languageSlice";
+import NewsLetterModal from "./NewsLetterModal";
 function Home(props) {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
    const dispatch = useDispatch()
@@ -72,6 +73,7 @@ function Home(props) {
      {windowWidth <=500 ?<MobileHome SindhitoggleLanguage={SindhitoggleLanguage} toggleLanguage={toggleLanguage} />:
      <Header  SindhitoggleLanguage={SindhitoggleLanguage} toggleLanguage={toggleLanguage}/>
     }
+    {/* <NewsLetterModal/> */}
     {windowWidth <=500 ?<MobileMarque  toggleLanguage={toggleLanguage}/>:""
     // <Marque />
    }

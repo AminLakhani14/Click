@@ -18,6 +18,22 @@ import labourDepartmentVideo from "../assets/ld002.mp4"
 
 
 const DetailModal = (props) => {
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    // Function to update the windowWidth state when the resize event occurs
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+
+    // Attach the event listener
+    window.addEventListener('resize', handleResize);
+
+    // Clean up the event listener on component unmount
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
   debugger
   console.log('props?.licenceData?', props?.licenceData);
   console.log('props', props);
@@ -84,7 +100,7 @@ const DetailModal = (props) => {
             onFocus={() => { }}
             onBlur={() => { }}
           >
-            UPDATE OF LICENSES
+            Interactive Regulatory Directory
           </div>
         }
         width={1000}
@@ -100,7 +116,8 @@ const DetailModal = (props) => {
           className="regulatoryTab"
           type="card"
           defaultActiveKey="1"
-          style={{ paddingBottom: "16px", paddingTop: 24, paddingLeft: 16, paddingRight: 16 }}
+        style={windowWidth <= 500 ? {overflowY:'scroll',padding:15}:{ paddingBottom: "16px", paddingTop: 24, paddingLeft: 16, paddingRight: 16 }}
+
           items={[
             {
               label: <span className="tabsLabel">Department Info</span>,
@@ -165,7 +182,7 @@ const DetailModal = (props) => {
                       <div className="row">
                         <TextField
                           label="Contact"
-                          style={{ marginBottom: "20px" }}
+                          style={windowWidth > 500? { marginBottom: "20px" } :{}}
                           disabled={true}
                           size="small"
                           className="modalTextField"
@@ -263,10 +280,10 @@ const DetailModal = (props) => {
               children: (
                 <div style={{ height: "295px", }}>
                   {props?.licenceData?.logo ? <div className="row g-0">
-                    <div className="col-lg-6 document" style={{ height: 325 }}>
+                    <div className="col-lg-6 col-xm-12 document" style={{ minHeight: 325 }}>
                       <div className="row g-0" style={{ textAlign: "left", paddingRight: 16 }}>
                         <h6>Documents Required</h6>
-                        <div style={{ marginBottom: "8px" }}>
+                        <div style={windowWidth <=500?{}:{ marginBottom: "8px" }}>
                           {/* <TextArea rows={4} /> */}
                           <ul className="document_required">
                             <li >{props?.licenceData?.l1}</li>
@@ -285,19 +302,9 @@ const DetailModal = (props) => {
                           </ul>
                         </div>
                       </div>
-                      {/* <div className="row">
-                        <div>
-                          <a href="comingsoon.html">
-                            <button type="button" className="amin">
-                              <span style={{ width: "179px", height: "33px" }}>
-                                View Documents Requirement Detail
-                              </span>
-                            </button>
-                          </a>
-                        </div>
-                      </div> */}
+  
                     </div>
-                    <div className="col-lg-6 Procedure_container" style={{ borderLeft: '2px solid #c4c4c4', paddingLeft: 16 }}>
+                    <div className="col-lg-6 col-xm-12  Procedure_container" style={windowWidth >500?{ borderLeft: '2px solid #c4c4c4', paddingLeft: 16 }:{}}>
                       {/* <div style={{height:"300px",borderLeft:"2px solid red"}}></div> */}
                       <h6>Procedure</h6>
                       <div className="row g-0">

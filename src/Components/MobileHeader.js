@@ -389,6 +389,29 @@ function MobileHome(props) {
                                 {translations["statistics"][language]}
                               </Link>
                             </li>
+                            <li className="borderline"
+                            style={
+                              language === "ur" || language === "sd"
+                                ? {
+                                  textAlign: "right"
+                                }
+                                : {}
+                            }
+                            >
+                              <Link 
+                              style={
+                                language === "ur" || language === "sd"
+                                  ? {
+                                    display: "flex",
+                                    flexDirection: "row-reverse",
+                                    textAlign: "right"
+                                  }
+                                  : {}
+                              }
+                              className="link toggle2 mobilenesteddropdowntoggle2" to={"/tutorial"}>
+                                {translations["Tutorial"][language]}
+                              </Link>
+                            </li>
                           </ul>
                         </li>
                         </li>
@@ -1175,7 +1198,7 @@ function MobileHome(props) {
                             }
                           </Link>
                         </li> */}
-                        <li style={
+                        {/* <li style={
                             language === "ur" || language === "sd"
                               ? {
                                 textAlign:"right",
@@ -1372,8 +1395,28 @@ function MobileHome(props) {
                               </Link>
                             </li>
                           </ul>
+                        </li> */}
+                          <li
+                          style={
+                            language === "ur" || language === "sd"
+                              ? {
+                                display: "flex",
+                                flexDirection: "row-reverse",
+                                borderBottom: "1px solid transparent !important",
+                              }
+                              : { borderBottom: "1px solid transparent !important" }
+                          }
+                        >
+                           <a
+                          href="https://business.gov.pk/home_prmi/"
+                          title="Home Page"
+                          className="link toggle2"
+                          target="_blank"
+                      >
+                          {"PRMI"}
+                      </a>
                         </li>
-                        {/* <li style={
+                        <li style={
                             language === "ur" || language === "sd"
                               ? {
                                 textAlign:"right",
@@ -1429,152 +1472,149 @@ function MobileHome(props) {
                           </label>
                           <input type="checkbox" id="drop-3" />
                           <ul>
-                            <li className="borderline" style={
+                            <li className="borderline"
+                            style={
+                              language === "ur" || language === "sd"
+                                ? {
+                                  textAlign: "right"
+                                }
+                                : {}
+                            }
+                            >
+                              <Link 
+                              style={
+                                language === "ur" || language === "sd"
+                                  ? {
+                                    display: "flex",
+                                    flexDirection: "row-reverse",
+                                    textAlign: "right"
+                                  }
+                                  : {}
+                              }
+                              className="link toggle2 mobilenesteddropdowntoggle2" to={"/introduction"}>
+                                {translations["Introduction"][language]}
+                              </Link>
+                            </li>
+
+                            <li className="borderline"
+                            style={
+                              language === "ur" || language === "sd"
+                                ? {
+                                  textAlign: "right"
+                                }
+                                : {}
+                            }
+                            >
+                              <Link 
+                              style={
+                                language === "ur" || language === "sd"
+                                  ? {
+                                    display: "flex",
+                                    flexDirection: "row-reverse",
+                                    textAlign: "right"
+                                  }
+                                  : {}
+                              }
+                              className="link toggle2 mobilenesteddropdowntoggle2" to={"/projectobjectives"}>
+                                 {translations["projectobjectives"][language]}
+                              </Link>
+                            </li> 
+                            <li className="borderline"
+                            style={
+                              language === "ur" || language === "sd"
+                                ? {
+                                  textAlign: "right"
+                                }
+                                : {}
+                            }
+                            >
+                              <Link 
+                              style={
+                                language === "ur" || language === "sd"
+                                  ? {
+                                    display: "flex",
+                                    flexDirection: "row-reverse",
+                                    textAlign: "right"
+                                  }
+                                  : {}
+                              }
+                              className="link toggle2 mobilenesteddropdowntoggle2" to={"/acheivement"}>
+                                {translations["Achievements"][language]}
+                              </Link>
+                            </li>
+                            <li className="borderline"
+                            style={
+                              language === "ur" || language === "sd"
+                                ? {
+                                  textAlign: "right"
+                                }
+                                : {}
+                            }
+                            >
+                              <Link 
+                              style={
+                                language === "ur" || language === "sd"
+                                  ? {
+                                    display: "flex",
+                                    flexDirection: "row-reverse",
+                                    textAlign: "right"
+                                  }
+                                  : {}
+                              }
+                              className="link toggle2 mobilenesteddropdowntoggle2" to={"/resource"}>
+                                {translations["Downloads"][language]}
+                              </Link>
+                            </li>
+                            
+                             <li className="borderline"
+                            style={
+                              language === "ur" || language === "sd"
+                                ? {
+                                  textAlign: "right"
+                                }
+                                : {}
+                            }
+                            >
+                              <Link 
+                              style={
+                                language === "ur" || language === "sd"
+                                  ? {
+                                    display: "flex",
+                                    flexDirection: "row-reverse",
+                                    textAlign: "right"
+                                  }
+                                  : {}
+                              }
+                              className="link toggle2 mobilenesteddropdowntoggle2" to={"/Team"}>
+                                      {translations["Team"][language]}
+                              </Link>
+                            </li>
+                            <li className="b-none"
+                            style={
                               language === "ur" || language === "sd"
                                 ? {
                                   textAlign: "right"
                                 }
                                 : {}
                             }>
-                              <Link className="link toggle2 mobilenesteddropdowntoggle2" to={"/aboutus"}>
-                              {translations["Vision"][language]}
-                              </Link>
-                            </li>
-                            <li >
-                              <label style={
+                              <Link
+                              style={
                                 language === "ur" || language === "sd"
                                   ? {
                                     display: "flex",
                                     flexDirection: "row-reverse",
-                                    textAlign: "right",
-                                    marginLeft: "0px",
+                                    textAlign: "right"
                                   }
                                   : {}
-                              } for="drop-4" className="d-flex toggle toggle2 mobiledropdowntoggle highlightable">
-                                <Link to={"/Component"} style={{ width: "195px", padding: "0px", marginLeft: "8px" }}>
-                                {
-                                    translations["Components"][
-                                      language
-                                    ]
-                                  }
-                                </Link>
-                                {dropdownStates[10] ? (
-                                  <span
-                                  style={
-                                    language === "ur" || language === "sd"
-                                      ? {
-                                        display: "flex",
-                                        marginLeft: "-70px",
-                                      }
-                                      : { display: "contents" }
-                                  }
-                                    className="minus"
-                                    onClick={() => handleIconClick(10)} // Click on icon to open/close the dropdown
-                                    onMouseEnter={() => handleIconClick(10)} // Hover on icon to open/close the dropdown
-                                    onMouseLeave={() => closeDropdown(10)} // Leave ico icon to close the dropdown
-                                  ></span>
-                                ) : (
-                                  <span
-                                    className="plus"
-                                    style={
-                                      language === "ur" || language === "sd"
-                                        ? {
-                                          display: "flex",
-                                          marginLeft: "-70px",
-                                        }
-                                        : { display: "contents" }
-                                    }
-                                    onClick={() => handleIconClick(10)} // Click on icon to open/close the dropdown
-                                    onMouseEnter={() => handleIconClick(10)} // Hover on icon to open/close the dropdown
-                                    onMouseLeave={() => closeDropdown(10)} // Leave ico icon eave icon to close the dropdown
-                                  ></span>
-                                )}
-                              </label>
-                              <input type="checkbox" id="drop-4" />
-                              <ul>
-                                <li className="borderline" style={
-                                  language === "ur" || language === "sd"
-                                    ? {
-                                      textAlign: "right"
-                                    }
-                                    : {}
-                                }>
-                                  <Link
-                                    className="link toggle2 mobilenesteddropdowntoggle"
-                                    to={"/aboutus"}
-                                    style={
-                                      language === "ur" || language === "sd"
-                                        ? {
-                                          display: "flex",
-                                          flexDirection: "row-reverse",
-                                          textAlign: "right"
-                                        }
-                                        : {}
-                                    }
-                                  >
-                                    {
-                                      translations["CLICKSID"][
-                                        language
-                                      ]
-                                    }
-                                  </Link>
-                                </li>
-                                <li className="b-none" style={
-                                  language === "ur" || language === "sd"
-                                    ? {
-                                      textAlign: "right"
-                                    }
-                                    : {}
-                                }>
-                                  <Link
-                                  style={
-                                    language === "ur" || language === "sd"
-                                      ? {
-                                        display: "flex",
-                                        flexDirection: "row-reverse",
-                                        textAlign: "right"
-                                      }
-                                      : {}
-                                  }
-                                    className="link toggle2 mobilenesteddropdowntoggle"
-                                    to={"/aboutus"}
-                                  >
-                                    {
-                                      translations["OurTeam"][
-                                        language
-                                      ]
-                                    }
-                                  </Link>
-                                </li>
-                              </ul>
-                            </li>
-                            <li className="b-none" >
-                              <label style={
-                            language === "ur" || language === "sd"
-                              ? {
-                                display: "flex",
-                                flexDirection: "row-reverse",
-                                marginLeft:"0px"
                               }
-                              : { }
-                                }   for="drop-4" className="d-flex toggle toggle2 mobiledropdowntoggle highlightable">
-                                <Link 
-                                 style={
-                                  language === "ur" || language === "sd"
-                                    ? {
-                                      width: "195px", padding: "0px", marginLeft: "8px",
-                                      display: "flex",
-                                      flexDirection: "row-reverse",
-                                    }
-                                    : {width: "195px", padding: "0px", marginLeft: "8px"  }
-                                      }
-                                to={"/aboutus"}>
-                                {translations["CLICKSID"][language]}
-                                </Link>
-                              </label>
+                                className="link toggle2 mobilenesteddropdowntoggle2"
+                                to={"/contactUs"}
+                              >
+                               {translations["Contactus"][language]}
+                              </Link>
                             </li>
                           </ul>
-                        </li> */}
+                        </li>
                         {/* <li
                           style={
                             language === "ur" || language === "sd"
@@ -1636,7 +1676,7 @@ function MobileHome(props) {
             >
               <div>
                 <p
-                className="highlightable"
+                className="highlightable hero_para"
                   style={{
                     fontSize: "16px",
                     color: "white",

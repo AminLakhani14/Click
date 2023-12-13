@@ -4,6 +4,7 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import Resource from "./Components/Resource";
+import ContactUs from "./Components/ContactUs"
 import Home from "./Components/Home";
 import FeedBack from "./Components/feedback";
 import AboutUs from "./Components/aboutus";
@@ -38,6 +39,10 @@ import Energy from "./Components/energy";
 import Dashboard from "./Components/Dashboard";
 import Tutorial from "./Components/Tutorial";
 import Watch from "./Components/Watch";
+import Introduction from "./Components/Introduction";
+import Presentation from "./Components/Presentation";
+import ProjectObjectives from "./Components/PrjectObjectives";
+import Achievement from "./Components/Achievement";
 
 
 export let searchText = '';
@@ -124,6 +129,11 @@ export const router = createHashRouter([
   {
     path: "/resource",
     element: <Resource />,
+    //   loader: rootLoader,
+  },
+  {
+    path: "/contactUs",
+    element: <ContactUs />,
     //   loader: rootLoader,
   },
   {
@@ -257,6 +267,22 @@ export const router = createHashRouter([
   {
     path: "/watch/:department/:id",
     element: <Watch/>,
+  },
+  {
+    path: "/introduction",
+    element: <Introduction/>,
+  },
+  {
+    path: "/presentation",
+    element: <Presentation/>,
+  },
+  {
+    path: "/projectobjectives",
+    element: <ProjectObjectives/>,
+  },
+  {
+    path: "/acheivement",
+    element: <Achievement/>,
   },
 
 ]);

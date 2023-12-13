@@ -163,7 +163,7 @@ const Dashboard = () => {
       text: "Excise, Taxation & Narcotics Control Department",
     },
     { value: "Agriculture Department", text: "Agriculture Department" },
-    { value: "Industrial Department", text: "Industrial Department" },
+    { value: "Industrial Department", text: "Industries Department" },
     { value: "Health Department", text: "Health Department" },
     { value: "Sindh Revenue Board", text: "Sindh Revenue Board" },
   ];
@@ -329,7 +329,7 @@ const Dashboard = () => {
     subDropdownFilter = [1, 2, 3, 4, 5];
   }
   const add = () => {
-    debugger;
+    
     // if (subDropdownFilter) {
     //   return dataForDonut[0]?.yearWiseData;
     // }
@@ -390,23 +390,39 @@ const Dashboard = () => {
       {windowWidth <= 500 ? (
         <div></div>
       ) : (
-        <div style={{ height: "150px" }}></div>
+        <div style={{ height: "160px" }}></div>
       )}
       <div className="parent_con  px-md-5  px-2">
         <div className="statistics ">
           <div className="row g-0 mb-4 d-flex justify-content-center">
-            <div className="d-flex justify-content-center ">
-              {/* <Fade top> */}
-              <h1 className="title">Business Registrations in Karachi</h1>
-              {/* </Fade> */}
-            </div>
+          <div
+        className="row "
+      >
+        <div
+          className="col-lg-12"
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            marginTop: "50px",
+            margin:"auto",
+            position:"relative"
+          }}
+        >
+       <div className="" >
+       <h1 className={window.innerWidth <= 540 ?"ReportRegulatorybefore mt-4 mb-4":"ReportRegulatoryDifficulties"}>Business Registrations in Karachi</h1>
+         <p
+            className={window.innerWidth <= 540 ? "mobileparaforfeedback" : "feedbackpara col-8"} style={{fontSize:window.innerWidth === 280 || window.innerWidth ===320 ? "17.5px": " ",textAlign:"center",}}
+          >
+The aim of this portal is to bring out the analytical overview of business competitiveness in Karachi. This analysis gives you an insight into the historical business registrations in various areas in Karachi such as schools, colleges, pharmacies, hospitals, food businesses, vehicle registrations, partnership registrations, etc.
+
+You can also contact us for further details on your specific queries at feedback@business.gos.pk
+          </p>
+       </div>
+        </div>
+      </div>
           </div>
           <div className="row mb-sm-5 mb-md-4  justify-content-between g-0 ">
             <div className="col-md-4 ">
-              {/* <Fade left>
-                <h3 className="title">Sindh Statistics Dashboard</h3>
-              </Fade> */}
-              {/* <Fade left> */}
               <div className="">
                 <Select
                   size="small"
@@ -650,7 +666,7 @@ const Dashboard = () => {
                       className={`box1_container 
 
          `}
-                      style={{
+                      style={windowWidth <=500?{width:"100%"}:{
                         width:
                           dataForDonut[0]?.sun?.length == 3 ? "20%" : "17.9%",
                         marginRight: (index + 1) % 5 == 0 ? 0 : 0,
@@ -679,7 +695,7 @@ const Dashboard = () => {
                       className={`box1_container  ${
                         subDropdownFilter[0]?.sun?.length > 5 && "mb-5"
                       } `}
-                      style={{
+                      style={windowWidth <=500?{width:"100%"}:{
                         width:
                           dataForDonut[0]?.sun?.length == 3 ? "30%" : "17.9%",
                       }}
@@ -732,7 +748,7 @@ const Dashboard = () => {
                 </div> */}
 
             <div className="row g-0 ">
-              <div className="col-md-12 col-lg-6 xxl-4 pe-xxl-4 mt-md-0 mt-5 mt-lg-5 mt-xxl-0 ">
+              <div className="col-md-12 col-lg-6 xxl-4 pe-xxl-4 mt-md-0   mt-sm-5 mt-lg-5 mt-xxl-0 ">
                 {/* <Donut/> */}
                 {/* <PieChart
       
@@ -782,7 +798,7 @@ const Dashboard = () => {
                   stroke={false}
                   height={
                     windowWidth <= 500
-                      ? 410
+                      ? 320
                       : windowWidth >= 768 && windowWidth <= 991
                       ? 300
                       : windowWidth >= 992 && windowWidth <= 1199
@@ -797,7 +813,7 @@ const Dashboard = () => {
                   }
                   width={
                     windowWidth <= 500
-                      ? 390
+                      ? 320
                       : windowWidth >= 768 && windowWidth <= 991
                       ? 300
                       : windowWidth >= 992 && windowWidth <= 1199
@@ -837,7 +853,7 @@ const Dashboard = () => {
          /> */}
               </div>
 
-              <div className="col-md-12   col-sm-12 bg-primary col-lg-5 col-xxl-4 justify-content-end lable_parent">
+              <div className="col-sm-12 bg-primary col-lg-5 col-xxl-4 justify-content-end lable_parent">
                 <div className="wappper ms-md-3 ms-xxl-0">
                   {dataForDonut.map((item, id) => {
                     return (

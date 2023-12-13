@@ -6,6 +6,7 @@ import infoLogo from "../assets/infoaccess.png";
 import { TextField } from "@mui/material";
 import { translations } from "../Transalation/Transalation";
 import { useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 function Footer(props) {
   const {language} = useSelector((state)=>state.language)
 
@@ -347,7 +348,8 @@ function Footer(props) {
                 windowWidth < 500 ? {} 
                 : {textAlign: "inherit"}}>
                 {translations["Resources"][language]}</h3>
-              <a href="comingsoon.html" className="resource-link">
+ <Link to={'/presentation'} className="resource-link">
+ <a href="comingsoon.html" className="resource-link">
                 <span
                   className={
                     window.innerWidth <= 1366
@@ -356,30 +358,28 @@ function Footer(props) {
                   }
                 >{translations["Presentations"][language]}</span>
               </a>
+ </Link>
               <br />
-              <a href="comingsoon.html" className="resource-link">
-                <span className={
-                  window.innerWidth <= 1366
-                    ? "sub-footertitle ft-links"
-                    : "sub-title ft-links"
-                }>{translations["Notifications"][language]}</span>
-              </a>
-              <br />
-              <a href="comingsoon.html" className="resource-link">
+             
+           <Link to={'/resource'} className="resource-link">
+           <a href="" className="resource-link">
                 <span className={
                   window.innerWidth <= 1366
                     ? "sub-footertitle ft-links"
                     : "sub-title ft-links"
                 }>{translations["Downloads"][language]} </span>
               </a>{" "}
+           </Link>
               <br />
-              <a href="comingsoon.html" className="resource-link">
+              <Link to={"/regulatorycatalog"}  className="resource-link">
+              <a href="" className="resource-link">
                 <span className={
                   window.innerWidth <= 1366
                     ? "sub-footertitle ft-links"
                     : "sub-title ft-links"
                 }>{translations["RegulatoryCatalog"][language]}</span>
               </a>
+              </Link>
             </div>
             <form action="" style={windowWidth < 500 ? { marginBottom: "-30px", marginTop: "20px" } : {}}>
               <div className="row" style={language === "ur" ||language === "sd" ? {display: "flex",flexDirection: "row-reverse"}: windowWidth < 500 ? { gap: "20px" } : { marginTop: "15px" }}>
@@ -388,9 +388,9 @@ function Footer(props) {
                   style={
                     windowWidth < 500
                       ? {
-                        marginLeft: "5px",
+                        // marginLeft: "5px",
                         // backgroundColor:"red",
-                        width:"100%"
+                        width:"100%",
                       }
                       : { paddingLeft: "45px" }
                   }
@@ -402,6 +402,7 @@ function Footer(props) {
                     style={{padding:"0px",width:"100%"}}
                     placeholder="Enter email address"
                     className={"email"}
+                    width={'100%'}
                   />
                   {/* <input type="email" placeholder="Enter email address" /> */}
                 </div>
