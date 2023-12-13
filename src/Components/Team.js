@@ -12,11 +12,14 @@ import fatimaSaleem from '../assets/teamsPic/fatimaSaleem.png';
 import anwarAli from '../assets/teamsPic/anwarAli.jpg';
 import asifKhan from '../assets/teamsPic/asifKhan.png';
 import tahirAli from '../assets/teamsPic/tahirAli.png';
+import PDF from '../assets/DownloadDocument/CAREER_PROFILE_Asif_Karim.pdf';
+import PDF1 from '../assets/DownloadDocument/DRAP-Reforms-Evaluation-Final.pdf';
 
 const members = [
   
   
    { dp: anwarAli,
+    PDF: PDF1,
     name: "Mr. Anwar Ali Shar, PAS",
     designation: "Project Director CLICK",
     email:"pd@business.gos.pk"
@@ -24,6 +27,7 @@ const members = [
     
   {
     dp: asifKhan,
+    PDF: PDF,
     name: "Mr. Asif Karim",
     designation: "Senior Manager (Business Process Regulation)",
     email:'asif.karim@business.gos.pk'
@@ -31,12 +35,14 @@ const members = [
  
   {
     dp: hiraPirzada,
+    PDF: PDF,
     name: "Ms. Hira Pirzada",
     designation: "Communication Specialist",
     email:'hira.pirzada@business.gos.pk'
   },
   {
     dp: fatimaSaleem,
+    PDF: PDF,
     name: "Ms. Fatima Saleem Butt",
     designation: "Legal Specialist",
     email:'fatima.saleem@business.gos.pk'
@@ -44,6 +50,7 @@ const members = [
   },
   {
     dp: tahirAli,
+    PDF: PDF,
     name: "Mr. Tahir Ali Khan",
     designation: "Senior Automation Specialist ",
     email:'tahir@business.gos.pk'
@@ -199,17 +206,17 @@ function Team() {
    
         <div className="card_containers">
       
-          {members?.map((items) => {
-            const {dp,name,designation}=items
+          {members?.map((items,index) => {
+            const {dp,PDF,name,designation}=items
             return (
               <>
-                <div className="cards">
+                <div className="cards" key={index}>
                   <div className="img_container">
                     <img src={dp} alt="" />
                   </div>
                   <div className="members_information_container">
                     <div className="name">
-                      <h5>{name}</h5>
+                      <h5> <a href={PDF} target="_blank">{name}</a></h5>
                     </div>
                     <div className="emai_container">
                     <a href={`https://mail.google.com/mail/?view=cm&fs=1&to=${items?.email}`} target="_blank"><i class="fa-solid fa-envelope fa-beat-fade email"></i></a>
@@ -227,5 +234,6 @@ function Team() {
       <Footer />
     </>
   );
+  
 }
 export default Team;
