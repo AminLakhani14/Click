@@ -1779,7 +1779,7 @@ const {language} = useSelector((state)=>state.language)
                     {/* <li>
                       <a title="" className={"link"}>
                         <Link className="link" to={"/regulatorycatalog"}>
-                          {translations["InteractiveRegularity"][language]}
+                          {translations["Interactiveregulatory"][language]}
                         </Link>
                       </a>
                     </li> */}
@@ -1805,7 +1805,7 @@ const {language} = useSelector((state)=>state.language)
                           className={"link"}
                         >
                           {" "}
-                          {translations["InteractiveRegularity"][language]}
+                          {translations["Interactiveregulatory"][language]}
                         </span>
                         <i
                           // style={{ marginTop: "5px", marginRight: "5px",}}

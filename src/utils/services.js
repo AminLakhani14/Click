@@ -8,9 +8,10 @@ import axios from "axios";
 const BaseUrl='https://business.gos.pk/Feedback/api'
 // http://business.gos.pk/Feedback
 export const postService = (url, body ) => {
-  const {name,email,mobileNumber,address,companyName,companyWebsite,country,comments}=body
+  const {name,email,mobileNumber,address,companyName,companyWebsite,country,comments,department,license}=body
+  const Url= url==='/contact-us'? `${BaseUrl}${url}?Name=${name}&MobileNo=${mobileNumber}&Email=${email}&Comments=${comments}&Address=${address}&CompanyName=${companyName}&Country_City=${country}&Department=${department}&Company_Website=${companyWebsite}&License=${license}`:url
   return axios.post(
-    `${BaseUrl}${url}?Name=${name}&MobileNo=${mobileNumber}&Email=${email}&Comments=${comments}&Address=${address}&CompanyName=${companyName}&Country_City=${country}&Department=z&Company_Website=${companyWebsite}&License=z`, 
+    Url,
     body, 
     {
     headers: {
@@ -18,3 +19,7 @@ export const postService = (url, body ) => {
     },
   });
 };
+export const getService=async(url)=>{
+  const response=await axios.get(url)
+  return response.data
+}

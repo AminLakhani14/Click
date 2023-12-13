@@ -123,13 +123,13 @@ const para=[
                                 Licenses, Certificates and Other Permits required for registering and doing business in
                                 Sindh completed.  </p>
                             <p className={window.innerWidth <= 540 ? "mobileparaforfeedback mb-0" : "feedbackpara col-8"} style={{ fontSize: window.innerWidth === 280 || window.innerWidth === 320 ? "17.5px" : " ", fontWeight: "bold" }}>(B) TRANSPARENCY IN PUBLIC SECTOR REGULATORY FRAMEWORK:</p>
-                            <p className={window.innerWidth <= 540 ? "mobileparaforfeedback mb-0" : "feedbackpara col-8"} style={{ fontSize: window.innerWidth === 280 || window.innerWidth === 320 ? "17.5px" : " ", paddingLeft: 40 }}>Online repository of regulatory knowledge base established at www.business.gos.pk
+                            <p className={window.innerWidth <= 540 ? "mobileparaforfeedback mb-0" : "feedbackpara col-8"} style={{ fontSize: window.innerWidth === 280 || window.innerWidth === 320 ? "17.5px" : " ", paddingLeft: 40 }}>Online repository of Regulatory knowledge base established at www.business.gos.pk
                                 to facilitate entrepreneurs in exploring business and investment opportunities in
                                 Sindh. </p>
                             <p className={window.innerWidth <= 540 ? "mobileparaforfeedback mb-0" : "feedbackpara col-8"} style={{ fontSize: window.innerWidth === 280 || window.innerWidth === 320 ? "17.5px" : " ", fontWeight: "bold" }}> (C) SIMPLIFICATION AND MODERNIZATION OF REGULATORY FRAMEWORK IN SINDH:  </p>
                             <p className={window.innerWidth <= 540 ? "mobileparaforfeedback mb-0" : "feedbackpara col-8"} style={{ fontSize: window.innerWidth === 280 || window.innerWidth === 320 ? "17.5px" : " ", paddingLeft: 40 }}>President of Pakistan and Prime Minister Office (BoI) awards appreciation to GoS for
-                                making 19 obsolete and redundant regulatory laws, rules, etc., simplified and
-                                automation of key obstacle areas in regulatory framework of Sindh</p>
+                                making 19 obsolete and redundant Regulatory laws, rules, etc., simplified and
+                                automation of key obstacle areas in Regulatory framework of Sindh</p>
                                {
                                 para?.map(({text},id)=>{
                                     return <p className={window.innerWidth <= 540 ? "mobileparaforfeedback mb-0" : "feedbackpara col-8"} style={{ fontSize: window.innerWidth === 280 || window.innerWidth === 320 ? "17.5px" : " ", paddingLeft: 40 }}>{`${id +1} )`}{ text}</p>
@@ -187,7 +187,7 @@ const para=[
                                 <p className={window.innerWidth <= 540 ? "mobileparaforfeedback mb-0" : "feedbackpara col-8"} style={{ fontSize: window.innerWidth === 280 || window.innerWidth === 320 ? "17.5px" : " ", paddingLeft: 40 }}>Operationalization of Sindh business One Stop Shop (S-BoSS)—A portal to provide
                                     online licensing of 132 approvals, NOCs, registrations and permits to business
                                     community during next FY 2023-24, to enhance international competitiveness score
-                                    of Pakistan in terms of regulatory ease in doing business in the upcoming BE-Ready
+                                    of Pakistan in terms of Regulatory ease in doing business in the upcoming BE-Ready
                                     Report of World Bank.</p><p className={window.innerWidth <= 540 ? "mobileparaforfeedback mb-0" : "feedbackpara col-8"} style={{ fontSize: window.innerWidth === 280 || window.innerWidth === 320 ? "17.5px" : " ", fontWeight: "bold" }}> (B) STUDY ON CONSTRAINTS FACED BY WOMEN-RUN BUSINESS IN KARACHI
                                 </p>
                                 <p className={window.innerWidth <= 540 ? "mobileparaforfeedback mb-0" : "feedbackpara col-8"} style={{ fontSize: window.innerWidth === 280 || window.innerWidth === 320 ? "17.5px" : " ", paddingLeft: 40 }}> (B) STUDY ON CONSTRAINTS FACED BY WOMEN-RUN BUSINESS IN KARACHI

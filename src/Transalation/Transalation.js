@@ -10,7 +10,7 @@ export const translations = {
     sd: 'سنڌ جي صوبائي ڪھيتريءَ ڏسو ۽ اهو جي بہت سان ھُڪرپئِوءَ ۽ مواد قوت پڇائيو آهي۔',
   },
   'investButton': {
-    en: 'Regularity Directory',
+    en: 'Regulatory Directory',
     ur: ' ریگولرٹی ڈائرکٹری',
     sd: ' ريگولرٽي ڊائريٽري',
   },
@@ -29,8 +29,8 @@ export const translations = {
     ur: 'تاثرات ',
     sd: 'رائے ',
   },
-  'InteractiveRegularity':{
-    en: ' Regularity Directory',
+  'Interactiveregulatory':{
+    en: ' Regulatory Directory',
     ur: ' ریگولرٹی ڈائرکٹری',
     sd: ' ریگولرٽي ڊائريڪٽري',
   },

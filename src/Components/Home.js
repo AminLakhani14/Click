@@ -21,7 +21,8 @@ import NewsLetterModal from "./NewsLetterModal";
 function Home(props) {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
    const dispatch = useDispatch()
-   const {language} = useSelector((state)=>state.language)
+  //  const isNewsletterModalOpen=useSelector((state)=>state.NewsLetterModal)
+   const {language,isNewsletterModalOpen} = useSelector((state)=>state.language)
   useEffect(() => {
     // Function to update the windowWidth state when the resize event occurs
     const handleResize = () => {
@@ -73,7 +74,9 @@ function Home(props) {
      {windowWidth <=500 ?<MobileHome SindhitoggleLanguage={SindhitoggleLanguage} toggleLanguage={toggleLanguage} />:
      <Header  SindhitoggleLanguage={SindhitoggleLanguage} toggleLanguage={toggleLanguage}/>
     }
-    {/* <NewsLetterModal/> */}
+    {/* {
+      isNewsletterModalOpen && <NewsLetterModal/>
+    } */}
     {windowWidth <=500 ?<MobileMarque  toggleLanguage={toggleLanguage}/>:""
     // <Marque />
    }
