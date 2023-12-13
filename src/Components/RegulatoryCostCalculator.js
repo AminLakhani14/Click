@@ -999,7 +999,7 @@ export default function RegulatoryCatalogCalculator(props) {
          <p
             className={window.innerWidth <= 540 ? "mobileparaforfeedback" : "feedbackpara col-8"} style={{fontSize:window.innerWidth === 280 || window.innerWidth ===320 ? "17.5px": " ",textAlign:"center",}}
           >
-          Please select the desired regulatory approval to get to know the applicable fee to obtain the same. 
+          Please select the desired Regulatory approval to get to know the applicable fee to obtain the same. 
 
 You can select multiple permits/licenses to view the details consolidated too. 
 

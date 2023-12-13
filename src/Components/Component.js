@@ -74,7 +74,7 @@ export default function Component() {
             }}
             className="highlightable highlightable"
           >
-          In today's rapidly evolving global marketplace, cities are constantly seeking to enhance their competitiveness and attract investments. One key aspect that significantly impacts a city's business environment is the streamlining and integration of business regulations. By simplifying and harmonizing regulatory frameworks, cities can create a more favorable and conducive ecosystem for businesses to thrive. This strategic approach reduces bureaucratic hurdles, improves transparency, and fosters innovation. Embracing a comprehensive strategy to streamline and integrate business regulations not only attracts local and foreign investments but also stimulates economic growth, job creation, and overall prosperity for the city and its residents.
+          In today's rapidly evolving global marketplace, cities are constantly seeking to enhance their competitiveness and attract investments. One key aspect that significantly impacts a city's business environment is the streamlining and integration of business regulations. By simplifying and harmonizing Regulatory frameworks, cities can create a more favorable and conducive ecosystem for businesses to thrive. This strategic approach reduces bureaucratic hurdles, improves transparency, and fosters innovation. Embracing a comprehensive strategy to streamline and integrate business regulations not only attracts local and foreign investments but also stimulates economic growth, job creation, and overall prosperity for the city and its residents.
           </p>
         </div>
       </div>

@@ -151,7 +151,7 @@ function Team() {
          <p
             className={window.innerWidth <= 540 ? "mobileparaforfeedback" : "feedbackpara col-8 mb-5"} style={{fontSize:window.innerWidth === 280 || window.innerWidth ===320 ? "17.5px": " ",textAlign:"center",}}
           >
-          Project Implementation Unit CLICK has developed an interactive guide to registration of various licenses and permits required for doing business in Sindh. These tutorials provide a simple guide through the regulatory requirements to obtain a specific business license or permit.
+          Project Implementation Unit CLICK has developed an interactive guide to registration of various licenses and permits required for doing business in Sindh. These tutorials provide a simple guide through the Regulatory requirements to obtain a specific business license or permit.
           </p>
        </div>
         </div>

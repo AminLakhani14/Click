@@ -239,7 +239,7 @@ function MobileHome(props) {
                           }
                         >
                           {/* <Link className="link toggle2" to={"/regulatorycatalog"}>
-                          {translations["InteractiveRegularity"][language]}
+                          {translations["Interactiveregulatory"][language]}
                           </Link> */}
                           <li style={
                             language === "ur" || language === "sd"
@@ -260,7 +260,7 @@ function MobileHome(props) {
                           >
                             <Link to={""} 
                             style={{ width: "212px", padding: "0px", fontSize: "20px" }}>
-                               {translations["InteractiveRegularity"][language]}
+                               {translations["Interactiveregulatory"][language]}
                             </Link>
                             {dropdownStates[11] ? (
                               <span

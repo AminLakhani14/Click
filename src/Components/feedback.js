@@ -20,6 +20,8 @@ import TextArea from "antd/es/input/TextArea";
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 import FeedBackForm from "./FeedBackForm";
+import { getService } from "../utils/services";
+import { error } from "jquery";
 // import Drop2Data, { Dropdown } from "../Components/RegulatoryCostCalculator"
 export const Drop2Data = (value) => {
   let array = [];
@@ -848,6 +850,17 @@ export default function FeedBack() {
     };
   }, []);
   
+const getRegisteredUser=async()=>{
+  try {
+    const result=await getService("https://localhost:7163/api/EmailAddress/GetEmailAddress")
+    console.log(result)
+  } catch (error) {
+    console.log(error)
+  }
+}
+  useEffect(()=>{
+    // getRegisteredUser()
+  },[])
   const [isTextareaFocused, setIsTextareaFocused] = useState(false);
   const [enableAreas, setEnableAreas] = useState(true);
   const [arr1, setArr1] = React.useState(["college"]);
@@ -1348,7 +1361,7 @@ export default function FeedBack() {
          <p
             className={window.innerWidth <= 540 ? "mobileparaforfeedback" : "feedbackpara col-8"} style={{fontSize:window.innerWidth === 280 || window.innerWidth ===320 ? "17.5px": " ",textAlign:"center"}}
           >
-           Please contact us to share the regulatory constraints which you or your business has faced with Government of Sindh institutions.
+           Please contact us to share the Regulatory constraints which you or your business has faced with Government of Sindh institutions.
            Your response shall be kept confidential and will only be used to review the legislation for its improvement.
           </p>
        </div>

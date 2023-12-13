@@ -6,6 +6,8 @@ import { postService } from "../utils/services";
 import { Toaster, Toastersuccess } from "./Toaster";
 import { CircularProgress, TextField } from "@mui/material";
 import SVG from 'react-inlinesvg';
+import { useDispatch } from "react-redux";
+import { News_Letter_Modal } from "../Redux/Reducer/languageSlice";
 
 
 const { modal_container, popup, news_letter_intput,news_letter_button,close_icon,message_icon } = style;
@@ -14,6 +16,7 @@ const NewsLetterModal = () => {
   const [isloading, setisloading] = useState(false);
   const [closePopUp, setclosePopUp] = useState(true)
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const dispatch=useDispatch()
   useEffect(() => {
     // Function to update the windowWidth state when the resize event occurs
     const handleResize = () => {
@@ -51,7 +54,10 @@ const NewsLetterModal = () => {
         closePopUp &&  <div className={modal_container}>
         <div class={popup} id="myPopup">
         <div className="d-flex justify-content-end"> 
-        <i class={`fa-solid fa-xmark ${close_icon}`} onClick={()=>setclosePopUp(false)}></i>
+        <i class={`fa-solid fa-xmark ${close_icon}`} onClick={()=>{
+          dispatch(News_Letter_Modal(false))
+          setclosePopUp(false)
+        }}></i>
         </div>
         <div className="d-flex justify-content-center">
         <i class={`fa-solid fa-envelope mb-2 ${message_icon}`}></i>
