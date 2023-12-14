@@ -486,6 +486,11 @@ function Footer(props) {
         <div className="row mt-3 marginBtm"
         // style={windowWidth < 500?{marginBottom:"26%"}:windowWidth < 390 ?{marginBottom:"12%"}:{}}
         >
+          <div>
+              <p className="highlightable" style={windowWidth < 500 ? { fontSize: "8px", textAlign: "center" } : { textAlign: "center" }}>
+              <b>Disclaimer:</b> The contents of this website are for public information only and have no legal validity. Information on this website is updated and corrected periodically and may change without notice. CLICK Sindh Investment Department, GoS is not responsible for any errors/inaccuracies in the data.
+              </p>
+            </div>
           <div
             className="col-12 mb-2 copy-right"
             style={
@@ -498,8 +503,9 @@ function Footer(props) {
             }
             }
           >
+
             <div>
-              <p className="highlightable" style={windowWidth < 500 ? { fontWeight: "bold", fontSize: "10px" } : { fontWeight: "bold", marginTop: "11px" }}>
+              <p className="highlightable" style={windowWidth < 500 ? { fontWeight: "bold", fontSize: "10px" } : { fontWeight: "bold" }}>
               {translations["Version"][language]} 0.05.09.0023
               </p>
             </div>
@@ -512,7 +518,7 @@ function Footer(props) {
             >
               <p
                 className="sub-title highlightable"
-                style={windowWidth < 500 ? { marginTop: "0px" } : { fontWeight: "bold", marginTop: "11px" }}
+                style={windowWidth < 500 ? { marginTop: "0px" } : { fontWeight: "bold"}}
               >
                 {translations["Copyright"][language]}
               </p>
@@ -536,7 +542,7 @@ function Footer(props) {
             >
               <p
                 className="sub-title highlightable"
-                style={windowWidth < 500 ? { marginTop: "0px" } : { fontWeight: "bold", marginTop: "10px" }}
+                style={windowWidth < 500 ? { marginTop: "0px" } : { fontWeight: "bold"}}
               >
                 {translations["Powered"][language]}
               </p>

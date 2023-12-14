@@ -12,14 +12,13 @@ import fatimaSaleem from '../assets/teamsPic/fatimaSaleem.png';
 import anwarAli from '../assets/teamsPic/anwarAli.jpg';
 import asifKhan from '../assets/teamsPic/asifKhan.png';
 import tahirAli from '../assets/teamsPic/tahirAli.png';
-import PDF from '../assets/DownloadDocument/CAREER_PROFILE_Asif_Karim.pdf';
-import PDF1 from '../assets/DownloadDocument/DRAP-Reforms-Evaluation-Final.pdf';
+import PDF1 from '../assets/DownloadDocument/CAREER_PROFILE_Asif_Karim.pdf';
 
 const members = [
   
   
    { dp: anwarAli,
-    PDF: PDF1,
+    // PDF: PDF,
     name: "Mr. Anwar Ali Shar, PAS",
     designation: "Project Director CLICK",
     email:"pd@business.gos.pk"
@@ -27,7 +26,7 @@ const members = [
     
   {
     dp: asifKhan,
-    PDF: PDF,
+    PDF: PDF1,
     name: "Mr. Asif Karim",
     designation: "Senior Manager (Business Process Regulation)",
     email:'asif.karim@business.gos.pk'
@@ -35,14 +34,14 @@ const members = [
  
   {
     dp: hiraPirzada,
-    PDF: PDF,
+    // PDF: PDF2,
     name: "Ms. Hira Pirzada",
     designation: "Communication Specialist",
     email:'hira.pirzada@business.gos.pk'
   },
   {
     dp: fatimaSaleem,
-    PDF: PDF,
+    // PDF: PDF3,
     name: "Ms. Fatima Saleem Butt",
     designation: "Legal Specialist",
     email:'fatima.saleem@business.gos.pk'
@@ -50,7 +49,7 @@ const members = [
   },
   {
     dp: tahirAli,
-    PDF: PDF,
+    // PDF: PDF4,
     name: "Mr. Tahir Ali Khan",
     designation: "Senior Automation Specialist ",
     email:'tahir@business.gos.pk'
@@ -63,6 +62,7 @@ const members = [
   // },
   {
     dp: user,
+    // PDF: PDF5,
     name: "Mr. Irshad Siddiqui",
     designation: "Procurement Specialist",
     email:"irshad@business.gos.pk"
