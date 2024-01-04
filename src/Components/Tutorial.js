@@ -30,6 +30,10 @@ import IndustriesAndCommerceDepartment from "../assets/thumbnail/IndustriesAndCo
 import labourDepartment from "../assets/thumbnail/labourDepartment.png"
 import sindhHealthcare from "../assets/thumbnail/sindhHealthcare.png"
 import CollegeEducationDepartment from "../assets/thumbnail/CollegeEducationDepartment.png"
+import sepa_001 from "../assets/tutorial/sepa-001.mp4";
+import SBCA_006 from "../assets/tutorial/SBCA-006.mp4";
+import BOR_001 from "../assets/tutorial/BOR-001.mp4";
+
 
 
 const {parent_container,video_container,video,zainn,title_container,video_title,player,totlal_videos,full_videos}=style
@@ -38,7 +42,6 @@ export const tutorial = [
     id: 1,
     tutorial: healthVideo,
     department: "Health Department",
-    license:'dummy license',
     thumbnail:healthDepartment,
     length:3
   },
@@ -47,7 +50,6 @@ export const tutorial = [
     id: 2,
     tutorial: ICD_001,
     department: "Industries and Commerce Department",
-    license:'dummy license',
     thumbnail:IndustriesAndCommerceDepartment,
     length:7
   },
@@ -55,7 +57,6 @@ export const tutorial = [
     id: 3,
     tutorial: Ld_001,
     department: "Labour Department",
-    license:'dummy license',
     thumbnail:labourDepartment,
     length:2
   },
@@ -63,7 +64,6 @@ export const tutorial = [
     id: 4,
     tutorial: sindhHealthcarevideo,
     department: "Sindh Healthcare Commission",
-    license:'dummy license',
     thumbnail:sindhHealthcare,
     length:1
   },
@@ -71,7 +71,6 @@ export const tutorial = [
     id:5,
     tutorial: schooleDepartmentVideo,
     department: "School Education and Literacy Department",
-    license:'dummy license',
     thumbnail:schoolEducationDepartment,
     length:1
   },
@@ -79,8 +78,28 @@ export const tutorial = [
     id:6,
     tutorial: schooleDepartmentVideo,
     department: "School Education and Literacy Department",
-    license:'dummy license',
     thumbnail:CollegeEducationDepartment,
+    length:1
+  },
+  {
+    id:7,
+    tutorial: sepa_001,
+    department: "Labour and Human Resources Department",
+    thumbnail:sepa_001,
+    length:1
+  },
+  {
+    id:8,
+    tutorial: SBCA_006,
+    department: "Sindh Building Control Authority (SBCA)",
+    thumbnail:SBCA_006,
+    length:1
+  },
+  {
+    id:9,
+    tutorial: BOR_001,
+    department: "Board of Revenue",
+    thumbnail:SBCA_006,
     length:1
   },
 ];

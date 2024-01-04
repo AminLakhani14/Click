@@ -51,6 +51,9 @@ import licenseToManufactureDrug from "../assets/tutorial/LIcensetomanufacturedru
 import licenseToSaleDrugByWholeSale from "../assets/tutorial/LIcensetosaledrugbyholesale.mp4"
 import LIcensetosaledrugbytretail from "../assets/tutorial/LIcensetosaledrugbytretail.mp4"
 import sindhHealthcarevideo from "../assets/tutorial/sindhHealthcare.mp4";
+import sepa_001 from "../assets/tutorial/sepa-001.mp4";
+import SBCA_006 from "../assets/tutorial/SBCA-006.mp4";
+import BOR_001 from "../assets/tutorial/BOR-001.mp4";
 
 
 
@@ -838,6 +841,7 @@ const arr = [
       downloaddocument: `${process.env.PUBLIC_URL}../assets/sindhkatciabadiact1987.pdf`,
       pdf:TheHazardousSubstancesRule2014,
       logo:SindhEnviromentalProtection,
+      video:sepa_001,
       l1:"▪ Covering letter;",
       l2:"▪ Hazardous substances management plan; and",
       l3:"▪ Pay order of PKR 50,000/- as prescribed in the Schedule-III of Hazardous Substances Rules, 2014.",
@@ -1565,6 +1569,7 @@ const arr = [
       rlcoID: "SBCA-006",
       details: "Permit to Demolish Buildings for Category (I To IV)",
       type: "Other",
+      video:SBCA_006,
       // prevailing: "Karachi Building &amp;Town Planning Regulations, 2002.",
       // jurisdiction: "Karachi",
       timeLine: "15 Days",
@@ -2237,6 +2242,7 @@ const arr = [
       details: "Issuance of the True Copy of Land Record",
       type: "Other",
       prevailing: "Land revenue Act, 1967",
+      video:BOR_001,
       // jurisdiction: "Sindh",
       timeLine: "Same Day",
       fee: "Rs.300 Per Page",
