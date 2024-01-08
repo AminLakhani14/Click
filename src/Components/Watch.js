@@ -30,6 +30,9 @@ import ICD_005 from "../assets/tutorial/ICD-005.mp4";
 import ICD_006 from "../assets/tutorial/ICD-006.mp4";
 import ICD_007 from "../assets/tutorial/ICD-007.mp4";
 import sindhHealthcarevideo from "../assets/tutorial/sindhHealthcare.mp4";
+import sepa_001 from "../assets/tutorial/sepa-001.mp4";
+import SBCA_006 from "../assets/tutorial/SBCA-006.mp4";
+import BOR_001 from "../assets/tutorial/BOR-001.mp4";
 import { Link, useParams } from "react-router-dom";
 import { ahmer } from "./Tutorial";
 
@@ -38,6 +41,9 @@ import CollegeEducationDepartment from "../assets/thumbnail/CollegeEducationDepa
 import healthDepartment from "../assets/thumbnail/healthDepartment.png";
 import labourDepartment from "../assets/thumbnail/labourDepartment.png";
 import IndustriesAndCommerceDepartment from "../assets/thumbnail/IndustriesAndCommerceDepartmetn.png"
+import BoardOfRevenue from "../assets/thumbnail/BoardOfRevenue.png"
+import sindhbuildingcontrol from "../assets/thumbnail/sindhbuildingcontrol.png"
+import sindhEnviromentalProtection from "../assets/thumbnail/sindhEnviromentalProtection.png"
 
 
 export const videos = [
@@ -87,13 +93,32 @@ export const videos = [
   },
   {
     id: 7,
+    tutorial: sepa_001,
+    department: "Sindh Environmental Protection Agency (SEPA)",
+    license: "License For Handling Of Hazardous Substance",
+    thumbnail: sindhEnviromentalProtection,
+  },{
+    id: 8,
+    tutorial: SBCA_006,
+    department: "Sindh Building Control Authority (SBCA)",
+    license: "Permit to Demolish Buildings for Catergory(1-4)",
+    thumbnail: sindhbuildingcontrol,
+  },{
+    id: 9,
+    tutorial: BOR_001,
+    department: "Board of Revenue",
+    license: "Issuance Of True Copy Of Land Record",
+    thumbnail: BoardOfRevenue,
+  },
+  {
+    id: 10,
     tutorial: licenseToSaleDrugByWholeSale,
     department: "Health Department",
     license: "License to sell Drugs by Way of Retail Sale (Form-6)",
     thumbnail: healthDepartment,
   },
   {
-    id: 8,
+    id: 11,
     tutorial: LIcensetosaledrugbytretail,
     department: "Health Department",
     license: "License to sell Drugs by Way of Wholesale 7A",
@@ -101,7 +126,7 @@ export const videos = [
   },
 
   {
-    id: 9,
+    id: 12,
     tutorial: ICD_002,
     department: "Industries and Commerce Department",
     license: "Registration Certificate of Amendment/Dissolution /Rectification in Partnership Firm",
@@ -109,7 +134,7 @@ export const videos = [
   },
 
   {
-    id: 10,
+    id: 13,
     tutorial: Ld_002,
     department: "Labour Department",
     license: "Registration of Factories",
@@ -118,41 +143,41 @@ export const videos = [
   },
   
   {
-    id: 11,
+    id: 14,
     tutorial: ICD_003,
     department: "Industries and Commerce Department",
     license: "Registration of New Boiler",
     thumbnail: IndustriesAndCommerceDepartment,
   },
   {
-    id: 12,
+    id: 15,
     tutorial: ICD_004,
     department: "Industries and Commerce Department",
     license: "Registration of Old Boiler",
     thumbnail: IndustriesAndCommerceDepartment,
   },
   {
-    id: 13,
+    id: 16,
     tutorial: ICD_005,
     department: "Industries and Commerce Department",
     license: "Approval of Plan and Particulars of Boilers Acceptable for Registration (New Boiler)",
     thumbnail: IndustriesAndCommerceDepartment,
   },
   {
-    id: 14,
+    id: 17,
     tutorial: ICD_006,
     department: "Industries and Commerce Department",
     license: "Approval of Plan and Particulars of Boilers Acceptable for Registration (Used Boiler)",
     thumbnail: IndustriesAndCommerceDepartment,
   },
   {
-    id: 15,
+    id: 18,
     tutorial: ICD_007,
     department: "Industries and Commerce Department",
     license: "Transfer of Ownership",
     thumbnail: IndustriesAndCommerceDepartment,
   },
-  
+
 ];
 
 const Watch = () => {

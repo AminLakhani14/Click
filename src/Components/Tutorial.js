@@ -23,6 +23,9 @@ import sindhHealthcarevideo from "../assets/tutorial/sindhHealthcare.mp4";
 import ICD_001 from "../assets/tutorial/ICD-001.mp4"
 import Ld_001 from "../assets/tutorial/led-001.mp4"
 import ICD_002 from "../assets/tutorial/ICD-002.mp4"
+import sepa_001 from "../assets/tutorial/sepa-001.mp4";
+import SBCA_006 from "../assets/tutorial/SBCA-006.mp4";
+import BOR_001 from "../assets/tutorial/BOR-001.mp4";
 //////////////////////THUMBNAIL/////////////////////
 import schoolEducationDepartment from "../assets/thumbnail/schoolEducationaAndLitercaDepartment.png"
 import healthDepartment from "../assets/thumbnail/healthDepartment.png"
@@ -30,9 +33,10 @@ import IndustriesAndCommerceDepartment from "../assets/thumbnail/IndustriesAndCo
 import labourDepartment from "../assets/thumbnail/labourDepartment.png"
 import sindhHealthcare from "../assets/thumbnail/sindhHealthcare.png"
 import CollegeEducationDepartment from "../assets/thumbnail/CollegeEducationDepartment.png"
-import sepa_001 from "../assets/tutorial/sepa-001.mp4";
-import SBCA_006 from "../assets/tutorial/SBCA-006.mp4";
-import BOR_001 from "../assets/tutorial/BOR-001.mp4";
+import BoardOfRevenue from "../assets/thumbnail/BoardOfRevenue.png"
+import sindhbuildingcontrol from "../assets/thumbnail/sindhbuildingcontrol.png"
+import sindhEnviromentalProtection from "../assets/thumbnail/sindhEnviromentalProtection.png"
+
 
 
 
@@ -84,22 +88,22 @@ export const tutorial = [
   {
     id:7,
     tutorial: sepa_001,
-    department: "Labour and Human Resources Department",
-    thumbnail:sepa_001,
+    department: "Sindh Environmental Protection Agency (SEPA)",
+    thumbnail:sindhEnviromentalProtection,
     length:1
   },
   {
     id:8,
     tutorial: SBCA_006,
     department: "Sindh Building Control Authority (SBCA)",
-    thumbnail:SBCA_006,
+    thumbnail:sindhbuildingcontrol,
     length:1
   },
   {
     id:9,
     tutorial: BOR_001,
     department: "Board of Revenue",
-    thumbnail:SBCA_006,
+    thumbnail:BoardOfRevenue,
     length:1
   },
 ];
