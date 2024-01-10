@@ -787,6 +787,53 @@ export default function GenericHeader(props) {
                   </div>
                 </div>
               </li> */}
+                            <li className="HeaderPaddingRight ">
+                <div class="dropdown"   style={{ marginRight: "10px" }}>
+                  <span
+                    style={{ marginRight: "5px" }}
+                    title=""
+                    className={"link2"}
+                  >
+                   Business Facilitation
+                  </span>
+                  <i
+                    style={{ marginTop: "0px", marginLeft: "3px" }}
+                    class=" dropbtn hover-rotate fa fa-chevron-right"
+                  ></i>
+                  <div class="dropdown-content">
+                      <a style={{ fontWeight:"bold",}} href="https://smeda.org/index.php?option=com_content&view=article&id=146&Itemid=676" target="_blank"> GUIDS  </a>
+                      <a   style={{marginLeft:'10px'}}    href="https://smeda.org/index.php?option=com_phocadownload&view=category&id=122&Itemid=308" target="_blank">Pre-Feasibility Studies </a>
+                      <a  style={{marginLeft:'10px'}}  target="_blank"       href="https://smeda.org/index.php?option=com_phocadownload&view=category&id=164&Itemid=981">
+                      Business Guides
+                      </a>
+               
+                      <a   style={{marginLeft:'10px'}}     href="https://smeda.org/index.php?option=com_phocadownload&view=category&id=7&Itemid=363">Commercial Contracts (English)</a>
+                      <a    style={{marginLeft:'10px'}}       href="https://smeda.org/index.php?option=com_phocadownload&view=category&id=7&Itemid=363">CommercialContracts(Urdu)</a>
+                      <a style={{marginLeft:'10px'}}  target="_blank"       href="https://smeda.org/index.php?option=com_phocadownload&view=category&id=15&Itemid=138">
+                      Regulatory Procedures
+                      </a>
+                      <a style={{ fontWeight:"bold"}} target="_blank" href="">
+                      REPORTS
+                      </a>
+                      <a style={{marginLeft:'10px'}}  target="_blank"     href="https://smeda.org/index.php?option=com_phocadownload&view=category&id=40&Itemid=742">
+                      Cluster Profiles
+                      </a>
+                      <a style={{marginLeft:'10px'}}  target="_blank"  href="https://smeda.org/index.php?option=com_phocadownload&view=category&id=186&Itemid=1024">
+                      District Economic Profiles
+                      </a>
+                      <a style={{marginLeft:'10px'}}  target="_blank"   href="https://smeda.org/index.php?option=com_phocadownload&view=category&id=28&Itemid=139">
+                      Sector Briefs
+                      </a>
+
+                      <a style={{marginLeft:'10px'}}  target="_blank"     href="https://smeda.org/index.php?option=com_phocadownload&view=category&id=188&Itemid=1027">
+                      Study Reports
+                      </a>
+                      <a style={{marginLeft:'10px'}}  target="_blank"      href="https://smeda.org/index.php?option=com_phocadownload&view=category&id=168&Itemid=996">
+                      Trade Analysis Series
+                      </a>
+                  </div>
+                </div>
+              </li>
               <li className="HeaderPaddingRight">
                 <a href="https://business.gov.pk/home_prmi/" title="Home Page" target="_blank" className={"link2"}>
                    PRMI

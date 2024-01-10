@@ -104,6 +104,73 @@ export const translations = {
     ur: 'خبروں اور معلومات',
     sd: 'خبريون ۽ انفارميشن ',
   },
+  'BusinessFacilitation':{
+    en: 'Business Facilitation',
+    ur: 'کاروبار کی سہولت',
+    sd: 'ڪاروباري سهولت',
+  },
+  'Guids':{
+    en: 'GUIDS',
+    ur: 'گائیڈز',
+    sd: 'رهنما',
+  },
+  'PreFeasibilityStudies':{
+    en: 'Pre-Feasibility Studies',
+    ur: 'پری فزیبلٹی اسٹڈیز',
+    sd: 'پري فزيبلٽي اڀياس',
+  },
+  'BusinessGuides':{
+    en: 'Business Guides',
+    ur: 'بزنس گائیڈز',
+    sd: 'ڪاروباري ھدايتون',
+  },
+
+    'CommercialContracts(English)':{
+    en: 'Commercial Contracts (English)',
+    ur: 'تجارتی معاہدے (انگریزی)',
+    sd: 'تجارتي معاهدو (انگريزي)',
+  }, 
+   'CommercialContracts(Urdu)':{
+    en: 'Commercial Contracts (Urdu)',
+    ur: 'تجارتی معاہدے (اردو)',
+    sd: 'تجارتي معاهدو (اردو)',
+  },
+  'RegulatoryProcedures':{
+    en: 'Regulatory Procedures',
+    ur: 'ریگولیٹری طریقہ کار',
+    sd: 'ريگيوليٽري طريقا',
+  },
+  'Reports':{
+    en: 'REPORTS',
+    ur: 'رپورٹس',
+    sd: 'رپورٽون',
+  },
+  'ClusterProfiles':{
+    en: 'Cluster Profiles',
+    ur: 'کلسٹر پروفائلز',
+    sd: 'ڪلستر پروفائلز',
+  },
+  'DistrictEconomicProfiles':{
+    en: 'District Economic Profiles',
+    ur: 'ڈسٹرکٹ اکنامک پروفائلز',
+    sd: 'ضلعي اقتصادي پروفائل',
+  },
+  'SectorBriefs':{
+    en: 'Sector Briefs',
+    ur: 'سيڪٽر بريف',
+    sd: 'سيڪٽر بريف',
+  },
+  'StudyReports':{
+    en: 'Study Reports',
+    ur: 'مطالعاتی رپورٹس',
+    sd: 'مطالعي جون رپورٽون',
+  },
+  'TradeAnalysisSeries':{
+    en:'Trade Analysis Series',
+    ur:'تجارتی تجزیہ سیریز',
+    sd:'واپاري تجزيو سيريز'
+  },
+
   'Resources': {
     en: 'Resources',
     ur: 'وسائل',

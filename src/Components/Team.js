@@ -14,40 +14,41 @@ import asifKhan from '../assets/teamsPic/asifKhan.png';
 import tahirAli from '../assets/teamsPic/tahirAli.png';
 
 const members = [
-  
-  
-   { dp: anwarAli,
+
+
+  {
+    dp: anwarAli,
     name: "Mr. Anwar Ali Shar, PAS",
-    designation: "Project Director CLICK",
-    email:"pd@business.gos.pk"
+    designation: "Project Director",
+    email: "pd@business.gos.pk"
   },
-    
+
   {
     dp: asifKhan,
     name: "Mr. Asif Karim",
-    designation: "Senior Manager (Business Process Regulation)",
-    email:'asif.karim@business.gos.pk'
+    designation: "Senior Manager BPR",
+    email: 'asif.karim@business.gos.pk'
   },
- 
+
   {
     dp: hiraPirzada,
     name: "Ms. Hira Pirzada",
     designation: "Communication Specialist",
-    email:'hira.pirzada@business.gos.pk'
+    email: 'hira.pirzada@business.gos.pk'
   },
   {
     dp: fatimaSaleem,
     name: "Ms. Fatima Saleem Butt",
     designation: "Legal Specialist",
-    email:'fatima.saleem@business.gos.pk'
+    email: 'fatima.saleem@business.gos.pk'
 
   },
   {
     dp: tahirAli,
     name: "Mr. Tahir Ali Khan",
     designation: "Senior Automation Specialist ",
-    email:'tahir@business.gos.pk'
-  }, 
+    email: 'tahir@business.gos.pk'
+  },
   // {
 
   //   dp: user,
@@ -58,9 +59,9 @@ const members = [
     dp: user,
     name: "Mr. Irshad Siddiqui",
     designation: "Procurement Specialist",
-    email:"irshad@business.gos.pk"
+    email: "irshad@business.gos.pk"
   }
-    
+
 ];
 function Team() {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
@@ -82,125 +83,16 @@ function Team() {
   return (
     <>
       {windowWidth <= 500 ? <MobileHeaderGeneric /> : <GenericHeader />}
-      {windowWidth <= 500 ? <div></div> :       <div className="" style={{ height: 133 }}></div>}
-      {/* <div className="" style={{ height: 133 }}></div> */}
-      {/* <div className="siteHeader" style={{ background: `url(${AboutUsImg})` }}> */}
-        {/* <h1 className="highlightable" style={{ color: "white" }}>
-          Meet our Team
-        </h1>
-        <p className="w-50 text-center text-white">
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laboriosam a
-          reprehenderit pariatur quam accusamus fugiat hic quasi, odio excepturi
-          ullam, at obcaecati. Ratione fugit exercitationem illo ullam
-          aspernatur ipsam quos, velit tempore omnis, voluptates placeat sed
-          assumenda sunt nulla suscipit amet maxime tempora, distinctio
-          voluptas. Voluptate alias assumenda aut hic!
-        </p> */}
-        {/* <div className="card_container">
-          
-          <div className="cards">
-           <div className="image_container">
-            <img src={AboutUsImg} alt="" />
-           </div>
-           <div className="about_container">
-            <div className="name">
-              <h3>Mr. Asif Karim</h3>
-            </div>
-            <div className="socialmedia">
-              email
-            </div>
-           </div>
-           <div className="designation">
-            <h4>Senior Manager Business Process Regulation (BPR)</h4>
-           </div>
-          </div>
-        </div> */}
-        {/* <Gallery/> */}
-        {/* <div className="parent">
-        <div className="card_container justify-content-between px-5 w-80">
-  <div className="col-4 cards ">
-    <div className="image_container">
-            <img src={AboutUsImg} alt="" />
-           </div>
-           <div className="about_container">
-            <div className="name">
-              <h3>Mr. Asif Karim</h3>
-            </div>
-            <div className="socialmedia">
-              email
-            </div>
-           </div>
-           <div className="designation">
-            <h4>Senior Manager Business Process Regulation (BPR)</h4>
-           </div>
-  </div>
-  <div className="col-4 cards "></div>
-  <div className="col-4 cards "></div>
-</div>
-        </div> */}
-      {/* </div> */}
-
-      {/* <div className="row">
-        <div className="col-lg-4">
-        <div className="box1">
-        </div>
-        </div>
-        <div className="media-body col-lg-4">
-        <h3 className="TeamCardHeader highlightable">Name</h3>
-        <p className="TeamCardDesignation highlightable" style={{ fontWeight: "400", color: "rgb(163, 163, 163)" }}>
-        Designation
-        </p>
-        <p className="TeamCardAbout highlightable">
-        About the team member
-        </p>
-        </div>
-        </div>
-
-        <div className="row">
-        <div className="col-lg-4">
-        <div className="box1">
-        </div>
-        </div>
-        <div className="media-body col-lg-4">
-        <h3 className="TeamCardHeader highlightable">Name</h3>
-        <p className="TeamCardDesignation highlightable" style={{ fontWeight: "400", color: "rgb(163, 163, 163)" }}>
-        Designation
-        </p>
-        <p className="TeamCardAbout highlightable">
-        About the team member
-        </p>
-        </div>
-        </div>
-
-        <div className="row">
-        <div className="col-lg-4">
-        <div className="box1">
-        </div>
-        </div>
-        <div className="media-body col-lg-4">
-        <h3 className="TeamCardHeader highlightable">Name</h3>
-        <p className="TeamCardDesignation highlightable" style={{ fontWeight: "400", color: "rgb(163, 163, 163)" }}>
-        Designation
-        </p>
-        <p className="TeamCardAbout highlightable">
-        About the team member
-        </p>
-        </div>
-        </div> */}
-
-      {/* <TeamCards/> */}
+      {windowWidth <= 500 ? <div></div> : <div className="" style={{ height: 133 }}></div>}
       <h1 className="highlightable Meet MeetourTeam" style={{ color: "whit" }}>
-          Meet our Team
-        </h1>
-<div className="">
-
-</div>
+        Meet our Team
+      </h1>
+      <div className="">
+      </div>
       <div className="parent_container">
-   
         <div className="card_containers">
-      
           {members?.map((items) => {
-            const {dp,name,designation}=items
+            const { dp, name, designation } = items
             return (
               <>
                 <div className="cards">
@@ -212,8 +104,7 @@ function Team() {
                       <h5>{name}</h5>
                     </div>
                     <div className="emai_container">
-                    <a href={`https://mail.google.com/mail/?view=cm&fs=1&to=${items?.email}`} target="_blank"><i class="fa-solid fa-envelope fa-beat-fade email"></i></a>
-                      
+                      <a href={`https://mail.google.com/mail/?view=cm&fs=1&to=${items?.email}`} target="_blank"><i class="fa-solid fa-envelope fa-beat-fade email"></i></a>
                     </div>
                   </div>
                   <div className="">{designation}</div>
@@ -223,7 +114,6 @@ function Team() {
           })}
         </div>
       </div>
- {/* <div className="" style={{height:300}}></div> */}
       <Footer />
     </>
   );

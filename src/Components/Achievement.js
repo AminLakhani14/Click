@@ -113,7 +113,7 @@ const para=[
                     >
                         <div className="" >
                             <h1 className={window.innerWidth <= 540 ? "introductionTitle mt-4 mb-4" : "introductionTitle mt-4"}>Achievement</h1>
-                            <p className={window.innerWidth <= 540 ? "mobileparaforfeedback mb-0" : "feedbackpara col-8"} style={{ fontSize: window.innerWidth === 280 || window.innerWidth === 320 ? "17.5px" : " ", textAlign:"center" }}>WORLD BANK’S CLICK SUB-COMPONENT 3.1
+                            <p className={window.innerWidth <= 540 ? "mobileparaforfeedback mb-0" : "feedbackpara col-8"} style={{ fontSize: window.innerWidth === 280 || window.innerWidth === 320 ? "17.5px" : " ", textAlign:"center" }}>CLICK Sindh Investment Department Sub Component 3.1
  </p>
                             <p className={window.innerWidth <= 540 ? "mobileparaforfeedback mb-0" : "feedbackpara col-8"} style={{ fontSize: window.innerWidth === 280 || window.innerWidth === 320 ? "17.5px" : " ", fontWeight: "bold" }}>STREAMLINING AND INTEGRATING BUSINESS REGULATIONS FOR CITY COMPETITIVENESS
  </p>

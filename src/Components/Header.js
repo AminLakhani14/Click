@@ -2074,6 +2074,286 @@ const {language} = useSelector((state)=>state.language)
                       </div>
                     </li>
                     <li>
+                    <div
+                        class="dropdown"
+                        style={
+                          language === "ur" || language === "sd"
+                            ? {
+                              display: "flex",
+                              flexDirection: "row-reverse",
+                            }
+                            : {
+                              marginRight:10
+                            }
+                        }
+                      >
+                        <span
+                          style={{
+                            marginRight: "5px",
+                            textDecoration: "none",
+                          }}
+                          className={"link"}
+                        >
+                          {" "}
+                          {translations["BusinessFacilitation"][language]}
+                        </span>
+                        <i
+                          // style={{ marginTop: "5px", marginRight: "5px",}}
+                          style={
+                            language === "ur" ||
+                              language === "sd"
+                              ? {
+                                marginTop: "5px", marginRight: "5px"
+                              }
+                              : {
+                                marginTop: "0px", marginLeft: "3px",
+                                marginRight:-7
+                              }
+                          }
+                          class="dropbtn iconDown hover-rotate fa fa-chevron-right"
+                        ></i>
+                        <div
+                          class="dropdown-content"
+                          style={
+                            language === "ur" || language === "sd"
+                              ? { marginTop: "30px" }
+                              : {
+                                marginLeft:0
+                              }
+                          }
+                        >
+                         
+                            <a
+                              target="_blank"
+                              href="https://smeda.org/index.php?option=com_content&view=article&id=146&Itemid=676"
+                              style={
+                                language === "ur" ||
+                                  language === "sd"
+                                  ? {
+                                    display: "flex",
+                                    flexDirection: "row-reverse",
+                                    marginRight: "-16px",
+                                    fontWeight:"bold",
+                                  }
+                                  : {
+                                    fontWeight:"bold",
+                                  }
+                              }
+                            >
+                              {translations["Guids"][language]}
+                            </a>
+                         
+                            <a
+                            target="_blank"
+                              href="https://smeda.org/index.php?option=com_phocadownload&view=category&id=122&Itemid=308"
+                              style={
+                                language === "ur" ||
+                                  language === "sd"
+                                  ? {
+                                    display: "flex",
+                                    flexDirection: "row-reverse",
+                                    marginRight: "-16px",
+                                  }
+                                  : {
+                                    marginLeft:"10px"
+                                  }
+                              }
+                            >
+                              {translations["PreFeasibilityStudies"][language]}
+                            </a>
+                            <a
+                            target="_blank"
+                              href="https://smeda.org/index.php?option=com_phocadownload&view=category&id=164&Itemid=981"
+                              style={
+                                language === "ur" ||
+                                  language === "sd"
+                                  ? {
+                                    display: "flex",
+                                    flexDirection: "row-reverse",
+                                    marginRight: "-16px",
+                                  }
+                                  : {
+                                    marginLeft:"10px"
+
+                                  }
+                              }
+                            >
+                              {translations["BusinessGuides"][language]}
+                            </a>
+                            <a
+                              target="_blank"
+                              href="https://smeda.org/index.php?option=com_phocadownload&view=category&id=7&Itemid=363"
+                              style={
+                                language === "ur" ||
+                                  language === "sd"
+                                  ? {
+                                    display: "flex",
+                                    flexDirection: "row-reverse",
+                                    marginRight: "-16px",
+                                  }
+                                  : {
+                                    marginLeft:"10px"
+
+                                  }
+                              }
+                            >
+                              {translations["CommercialContracts(English)"][language]}
+                            </a>
+                            <a
+                              target="_blank"
+                              href="https://smeda.org/index.php?option=com_phocadownload&view=category&id=7&Itemid=363"
+                              style={
+                                language === "ur" ||
+                                  language === "sd"
+                                  ? {
+                                    display: "flex",
+                                    flexDirection: "row-reverse",
+                                    marginRight: "-16px",
+                                  }
+                                  : {
+                                    marginLeft:"10px"
+
+                                  }
+                              }
+                            >
+                              {translations["CommercialContracts(Urdu)"][language]}
+                            </a>
+                            <a
+                              target="_blank"
+                              href="https://smeda.org/index.php?option=com_phocadownload&view=category&id=15&Itemid=138"
+                              style={
+                                language === "ur" ||
+                                  language === "sd"
+                                  ? {
+                                    display: "flex",
+                                    flexDirection: "row-reverse",
+                                    marginRight: "-16px",
+                                  }
+                                  : {
+                                    marginLeft:"10px"
+
+                                  }
+                              }
+                            >
+                              {translations["RegulatoryProcedures"][language]}
+                            </a>
+
+                            <a
+                              target="_blank"
+                              href=""
+                              style={
+                                language === "ur" ||
+                                  language === "sd"
+                                  ? {
+                                    display: "flex",
+                                    flexDirection: "row-reverse",
+                                    marginRight: "-16px",
+                                    fontWeight:"bold",
+                                  }
+                                  : {
+                                    fontWeight:"bold",
+                                    marginTop:5
+
+                                  }
+                              }
+                            >
+                              {translations["Reports"][language]}
+                            </a>
+                            <a
+                              target="_blank"
+                              href="https://smeda.org/index.php?option=com_phocadownload&view=category&id=40&Itemid=742"
+                              style={
+                                language === "ur" ||
+                                  language === "sd"
+                                  ? {
+                                    display: "flex",
+                                    flexDirection: "row-reverse",
+                                    marginRight: "-16px",
+                                  }
+                                  : {
+                                    marginLeft:"10px"
+                                  }
+                              }
+                            >
+                              {translations["ClusterProfiles"][language]}
+                            </a>
+                            <a
+                              target="_blank"
+                              href="https://smeda.org/index.php?option=com_phocadownload&view=category&id=186&Itemid=1024"
+                              style={
+                                language === "ur" ||
+                                  language === "sd"
+                                  ? {
+                                    display: "flex",
+                                    flexDirection: "row-reverse",
+                                    marginRight: "-16px",
+                                  }
+                                  : {
+                                    marginLeft:"10px"
+
+                                  }
+                              }
+                            >
+                              {translations["DistrictEconomicProfiles"][language]}
+                            </a>
+                            <a
+                              target="_blank"
+                              href="https://smeda.org/index.php?option=com_phocadownload&view=category&id=28&Itemid=139"
+                              style={
+                                language === "ur" ||
+                                  language === "sd"
+                                  ? {
+                                    display: "flex",
+                                    flexDirection: "row-reverse",
+                                    marginRight: "-16px",
+                                  }
+                                  : {
+                                    marginLeft:"10px"
+                                  }
+                              }
+                            >
+                              {translations["SectorBriefs"][language]}
+                            </a>
+                            <a
+                              target="_blank"
+                              href="https://smeda.org/index.php?option=com_phocadownload&view=category&id=188&Itemid=1027"
+                              style={
+                                language === "ur" ||
+                                  language === "sd"
+                                  ? {
+                                    display: "flex",
+                                    flexDirection: "row-reverse",
+                                    marginRight: "-16px",
+                                  }
+                                  : {
+                                    marginLeft:"10px"
+                                  }
+                              }
+                            >
+                              {translations["StudyReports"][language]}
+                            </a>
+                            <a
+                              target="_blank"
+                              href="https://smeda.org/index.php?option=com_phocadownload&view=category&id=168&Itemid=996"
+                              style={
+                                language === "ur" ||
+                                  language === "sd"
+                                  ? {
+                                    display: "flex",
+                                    flexDirection: "row-reverse",
+                                    marginRight: "-16px",
+                                  }
+                                  : {
+                                    marginLeft:"10px"
+                                  }
+                              }
+                            >
+                              {translations["TradeAnalysisSeries"][language]}
+                            </a>
+                        </div>
+                      </div>
+                    </li>      
+                    <li>
                       <a
                         href="https://business.gov.pk/home_prmi/"
                         title="Home Page"
@@ -2085,6 +2365,8 @@ const {language} = useSelector((state)=>state.language)
                         {/* </Link> */}
                       </a>
                     </li>
+
+              
                     <li>
                     <div
                         class="dropdown"
