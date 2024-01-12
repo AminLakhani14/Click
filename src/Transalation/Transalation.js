@@ -145,6 +145,11 @@ export const translations = {
     ur: 'ریگولیٹری طریقہ کار',
     sd: 'ريگيوليٽري طريقا',
   },
+  'TradeInformationPortal':{
+en:'Trade Information Portal',
+ur:'تجارتی معلومات کا پورٹل',
+sd:'واپاري معلومات پورٽل',
+  },
   'Reports':{
     en: 'REPORTS',
     ur: 'رپورٹس',

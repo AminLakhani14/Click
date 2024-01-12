@@ -2237,6 +2237,26 @@ const {language} = useSelector((state)=>state.language)
                             >
                               {translations["RegulatoryProcedures"][language]}
                             </a>
+                            <a
+                              target="_blank"
+                              href="https://tipp.gov.pk/"
+                              style={
+                                language === "ur" ||
+                                  language === "sd"
+                                  ? {
+                                    display: "flex",
+                                    flexDirection: "row-reverse",
+                                    marginRight: "-16px",
+                                  }
+                                  : {
+                                    marginLeft:"10px"
+
+                                  }
+                              }
+                            >
+                              {translations["TradeInformationPortal"][language]}
+                            </a>
+
 
                             <a
                               target="_blank"

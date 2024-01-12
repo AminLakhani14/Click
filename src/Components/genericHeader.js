@@ -812,6 +812,9 @@ export default function GenericHeader(props) {
                       <a style={{marginLeft:'10px'}}  target="_blank"       href="https://smeda.org/index.php?option=com_phocadownload&view=category&id=15&Itemid=138">
                       Regulatory Procedures
                       </a>
+                      <a style={{marginLeft:'10px'}}  target="_blank"       href="https://tipp.gov.pk/">
+                      Trade Information Portal
+                      </a>
                       <a style={{ fontWeight:"bold"}} target="_blank" href="">
                       REPORTS
                       </a>

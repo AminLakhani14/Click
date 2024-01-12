@@ -1,17 +1,7 @@
 import React, { useEffect, useState } from "react";
-import { Link, useParams } from "react-router-dom";
-import accessibility from "../assets/accessibility.png";
 import "../Css/header.css";
-import sindh from "../assets/logo-sindh.png";
-import pak from "../assets/pak.png";
-import urdu from "../assets/urdu.png";
 import "../Css/resource.css";
-import click from "../assets/click-logo.png";
-import cardImage from "../assets/cardresource1.png";
-import businesscard1 from "../assets/businesscard1.jpg";
-import ListofLegalDocuments from "../assets/ListofLegalDocumentsSBOSS.pdf";
 import GenericHeader from "./genericHeader";
-import { green } from "@mui/material/colors";
 import ss1 from "../assets/ScreenShot/s.s1.png"
 import ss2 from "../assets/ScreenShot/s.s2.png"
 import ss3 from "../assets/ScreenShot/s.s3.png"
@@ -188,11 +178,6 @@ export default function Resource() {
                 </div>
 
             </div>
-
-      
-     
- 
-
        <div className="card_wrapper"
       >
        {
@@ -208,14 +193,9 @@ export default function Resource() {
                    height="250px" />
               </div>
               <div className="cardInnerRight" style={{boxShadow: '5px 8px 5px rgba(0, 0, 0, 0.2)'}}>
-                <h2 className="cardHeading" style={item?.link&& {height:113}}>
+                <h2 className="cardHeading">
                {item?.titlte}
                 </h2>
-                {
-                   item?.link &&  <button type="button" className="resourceButton mb-2">
-                     <a href={item?.link} style={{color:"white",textDecoration:"none",marginBottom:"15px"}} target="_blank">View Link</a>
-                   </button>
-                }
                 <button type="button" className="resourceButton">
                   <a href={item?.pdf} style={{color:"white",textDecoration:"none"}} target="_blank">View Documents</a>
                 </button>
