@@ -52,7 +52,9 @@ import licenseToSaleDrugByWholeSale from "../assets/tutorial/LIcensetosaledrugby
 import LIcensetosaledrugbytretail from "../assets/tutorial/LIcensetosaledrugbytretail.mp4"
 import sindhHealthcarevideo from "../assets/tutorial/sindhHealthcare.mp4";
 import sepa_001 from "../assets/tutorial/sepa-001.mp4";
+import sepa_003 from "../assets/tutorial/sepa-003.mp4";
 import SBCA_006 from "../assets/tutorial/SBCA-006.mp4";
+import SBCA_007 from "../assets/tutorial/SBCA-007.mp4";
 import BOR_001 from "../assets/tutorial/BOR-001.mp4";
 
 
@@ -889,6 +891,7 @@ const arr = [
       rlcoID: "SEPA-003",
       details: "Approval Under Section 17 (IEE/EIA/EC)",
       type: "Other",
+      video:sepa_003,
       // prevailing:
       //   "1. The Sindh Environmental Protection Act, 2014. 2. Sindh Environmental Protection Agency (Environmental Assessment) Regulations, 2021.",
       // jurisdiction: "Sindh",
@@ -913,6 +916,8 @@ const arr = [
       rlcoID: "SEPA-003",
       details: "Approval Under Section 17 (IEE/EIA/EC)",
       type: "Other",
+      video:sepa_003,
+
       // prevailing:
       //   "1. The Sindh Environmental Protection Act, 2014. 2. Sindh Environmental Protection Agency (Environmental Assessment) Regulations, 2021.",
       // jurisdiction: "Sindh",
@@ -936,6 +941,8 @@ const arr = [
       contactno:"(021) 35065950",
       rlcoID: "SEPA-003",
       details: "Approval Under Section 17 (IEE/EIA/EC)",
+      video:sepa_003,
+
       type: "Other",
       // prevailing:
       //   "1. The Sindh Environmental Protection Act, 2014. 2. Sindh Environmental Protection Agency (Environmental Assessment) Regulations, 2021.",
@@ -959,6 +966,8 @@ const arr = [
       address:"ST-21،, Sector 23 Korangi Industrial Area, Karachi, Karachi City, Sindh",
       contactno:"(021) 35065950",
       rlcoID: "SEPA-003",
+      video:sepa_003,
+
       details: "Approval Under Section 17 (IEE/EIA/EC)",
       type: "Other",
       // prevailing:
@@ -983,6 +992,8 @@ const arr = [
       address:"ST-21،, Sector 23 Korangi Industrial Area, Karachi, Karachi City, Sindh",
       contactno:"(021) 35065950",
       rlcoID: "SEPA-003",
+      video:sepa_003,
+
       details: "Approval Under Section 17 (IEE/EIA/EC)",
       type: "Other",
       // prevailing:
@@ -1007,6 +1018,8 @@ const arr = [
       address:"ST-21،, Sector 23 Korangi Industrial Area, Karachi, Karachi City, Sindh",
       contactno:"(021) 35065950",
       rlcoID: "SEPA-003",
+      video:sepa_003,
+
       details: "Approval Under Section 17 (IEE/EIA/EC)",
       type: "Other",
       // prevailing:
@@ -1586,6 +1599,7 @@ const arr = [
       rlcoID: "SBCA-007",
       details: "Attestation Fee",
       type: "Other",
+      video:SBCA_007,
       // prevailing: "Karachi Building &amp;Town Planning Regulations, 2002.",
       // jurisdiction: "Karachi",
       timeLine: "3 Days",

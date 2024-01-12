@@ -2599,6 +2599,23 @@ const {language} = useSelector((state)=>state.language)
                               {translations["Downloads"][language]}
                             </a>
                           </Link>
+                          <Link className={""} to={"/faqs"}>
+                            <a
+                              href="#"
+                              style={
+                                language === "ur" ||
+                                  language === "sd"
+                                  ? {
+                                    display: "flex",
+                                    flexDirection: "row-reverse",
+                                    marginRight: "-16px",
+                                  }
+                                  : {}
+                              }
+                            >
+                              {translations["FAQ"][language]}
+                            </a>
+                          </Link>
                           <Link className={""} to={"/contactUs"}>
                             <a
                               href="#"

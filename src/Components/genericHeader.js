@@ -869,6 +869,8 @@ export default function GenericHeader(props) {
                     </Link>
                     <Link className={""} to={"/resource"}>
                       <a href="#"> Downloads</a>
+                    </Link>  <Link className={""} to={"/faqs"}>
+                      <a href="#"> FAQ</a>
                     </Link>
                     <Link className={""} to={"/contactUs"}>
                       <a href="#"> Contact us</a>

@@ -31,7 +31,9 @@ import ICD_006 from "../assets/tutorial/ICD-006.mp4";
 import ICD_007 from "../assets/tutorial/ICD-007.mp4";
 import sindhHealthcarevideo from "../assets/tutorial/sindhHealthcare.mp4";
 import sepa_001 from "../assets/tutorial/sepa-001.mp4";
+import sepa_003 from "../assets/tutorial/sepa-003.mp4";
 import SBCA_006 from "../assets/tutorial/SBCA-006.mp4";
+import SBCA_007 from "../assets/tutorial/SBCA-007.mp4";
 import BOR_001 from "../assets/tutorial/BOR-001.mp4";
 import { Link, useParams } from "react-router-dom";
 import { ahmer } from "./Tutorial";
@@ -176,6 +178,20 @@ export const videos = [
     department: "Industries and Commerce Department",
     license: "Transfer of Ownership",
     thumbnail: IndustriesAndCommerceDepartment,
+  }, 
+   {
+    id: 19,
+    tutorial: SBCA_007,
+    department: "Sindh Building Control Authority (SBCA)",
+    license: "Attestation Of Fee",
+    thumbnail: sindhbuildingcontrol,
+  },
+  {
+    id: 20,
+    tutorial: sepa_003,
+    department: "Sindh Environmental Protection Agency (SEPA)",
+    license: "Approval Under Section 17 (IEE,EIA,EC)",
+    thumbnail: sindhEnviromentalProtection,
   },
 
 ];
@@ -220,7 +236,7 @@ const Watch = () => {
 
   useEffect(() => {
     setplay(true);
-  });
+  },[]);
   return (
     <>
       {windowWidth <= 500 ? <MobileHeaderGeneric /> : <GenericHeader />}
@@ -235,7 +251,7 @@ const Watch = () => {
       <div className=""></div>
       <div className="parent_container">
         <div className="main_video">
-          {filtervideo?.map(({ tutorial, department, license, id }) => {
+          {filtervideo?.map(({ tutorial, department,thumbnail, license, id }) => {
             return (
               <>
                 <ReactPlayer
@@ -243,17 +259,15 @@ const Watch = () => {
                   controls={true}
                   width={"100%"}
                   height={windowWidth <=500?200 :windowWidth  >= 1020 ? 500 : windowWidth >=1400 && 600}
-
                   style={{
                     border: "1px solid rgba(0, 0, 0, 0.12)",
                     overflow: "hidden",
                     borderRadius: 10,
                     boxShadow: "0 0.2rem 1rem rgba(0, 0, 0, 0.12)",
                   }}
-                  // height={500}
-                  // light={<img src={zain}/>}
+                  light={<img  style={{height:"100%",width:'100%'}} src={thumbnail}/>}
                   playing={play}
-                  pip={true}
+                  autoPlay={true}
                 />
                 <div className="video_discription">
                   <h1 class="text-2xl lg:text-3xl flex font-semibold">

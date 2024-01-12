@@ -3,9 +3,6 @@ import GenericHeader from "./genericHeader";
 import Footer from "./footer";
 import "../Css/investnow.css";
 import MobileHeaderGeneric from "./MobileHeaderGeneric";
-import AboutUsImg from "../assets/city.png";
-import Gallery from "./Gallery";
-import TeamCards from "./TeamCards";
 import user from "../assets/teamsPic/irshad.jpg"
 import hiraPirzada from '../assets/teamsPic/hiraPirzada.png';
 import fatimaSaleem from '../assets/teamsPic/fatimaSaleem.png';
@@ -19,7 +16,7 @@ const members = [
   {
     dp: anwarAli,
     name: "Mr. Anwar Ali Shar, PAS",
-    designation: "Project Director",
+    designation: "Project Director CLICK",
     email: "pd@business.gos.pk"
   },
 
@@ -29,12 +26,25 @@ const members = [
     designation: "Senior Manager BPR",
     email: 'asif.karim@business.gos.pk'
   },
-
+  {
+    dp: tahirAli,
+    name: "Mr. Tahir Ali Khan",
+    designation: "Senior Automation Specialist ",
+    email: 'tahir@business.gos.pk',
+    link:"https://www.linkedin.com/in/tahirakhan/"
+  },
+  {
+    dp: user,
+    name: "Mr. Irshad Siddiqui",
+    designation: "Procurement Specialist",
+    email: "irshad@business.gos.pk"
+  },
   {
     dp: hiraPirzada,
     name: "Ms. Hira Pirzada",
     designation: "Communication Specialist",
-    email: 'hira.pirzada@business.gos.pk'
+    email: 'hira.pirzada@business.gos.pk',
+    link:'https://www.linkedin.com/in/hira-pirzada-01109b1a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app'
   },
   {
     dp: fatimaSaleem,
@@ -43,24 +53,14 @@ const members = [
     email: 'fatima.saleem@business.gos.pk'
 
   },
-  {
-    dp: tahirAli,
-    name: "Mr. Tahir Ali Khan",
-    designation: "Senior Automation Specialist ",
-    email: 'tahir@business.gos.pk'
-  },
+ 
   // {
 
   //   dp: user,
   //   name: "Mr. Mohammad Moosa",
   //   designation: "Deputy Finance Manager/ Accountant",
   // },
-  {
-    dp: user,
-    name: "Mr. Irshad Siddiqui",
-    designation: "Procurement Specialist",
-    email: "irshad@business.gos.pk"
-  }
+
 
 ];
 function Team() {
@@ -101,7 +101,9 @@ function Team() {
                   </div>
                   <div className="members_information_container">
                     <div className="name">
+                      <a href={items?.link} className={items.link && "teams_social_link"}>
                       <h5>{name}</h5>
+                      </a>
                     </div>
                     <div className="emai_container">
                       <a href={`https://mail.google.com/mail/?view=cm&fs=1&to=${items?.email}`} target="_blank"><i class="fa-solid fa-envelope fa-beat-fade email"></i></a>

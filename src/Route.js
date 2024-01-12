@@ -43,6 +43,7 @@ import Introduction from "./Components/Introduction";
 import Presentation from "./Components/Presentation";
 import ProjectObjectives from "./Components/PrjectObjectives";
 import Achievement from "./Components/Achievement";
+import Faq from "./Components/Faq";
 
 
 export let searchText = '';
@@ -284,5 +285,10 @@ export const router = createHashRouter([
     path: "/acheivement",
     element: <Achievement/>,
   },
+  {
+    path: "/faqs",
+    element: <Faq/>,
+  },
+
 
 ]);

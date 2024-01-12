@@ -23,6 +23,14 @@
 
   /* margin-left: 100px; */
 }
+.teams_social_link{
+  text-decoration: none;
+  color: black;
+}
+.teams_social_link:hover{
+  text-decoration: underline;
+  color: maroon;
+}
 .steps {
   display: flex;
   flex-direction: row;

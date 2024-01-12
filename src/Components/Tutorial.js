@@ -40,7 +40,7 @@ import sindhEnviromentalProtection from "../assets/thumbnail/sindhEnviromentalPr
 
 
 
-const {parent_container,video_container,video,zainn,title_container,video_title,player,totlal_videos,full_videos}=style
+const {parent_container,video_container,video,video_overlay,title_container,video_title,player,totlal_videos,full_videos}=style
 export const tutorial = [
   {
     id: 1,
@@ -90,14 +90,14 @@ export const tutorial = [
     tutorial: sepa_001,
     department: "Sindh Environmental Protection Agency (SEPA)",
     thumbnail:sindhEnviromentalProtection,
-    length:1
+    length:2
   },
   {
     id:8,
     tutorial: SBCA_006,
     department: "Sindh Building Control Authority (SBCA)",
     thumbnail:sindhbuildingcontrol,
-    length:1
+    length:2
   },
   {
     id:9,
@@ -111,24 +111,6 @@ function Team() {
   const [ hover ,setHover]=useState(false)
   const [hoverID,sethoverID]=useState()
   const [playListLength, setplayListLength] = useState(0)
-//   const {id}=useParams()
-//   // const [filtervideo,setfiltervideo]=useState(videos)
-//   const [play, setplay] = useState(true)
-//   console.log(id)
-
-//   const [filtervideo,setfiltervideo]=useState([])
-//   useEffect(()=>{
-//      let zain= videos?.filter((item)=>{
-//           return item.id==id?item:null
-//       })
-//       setfiltervideo(zain)
-//   },[id])
-
-// useEffect(()=>{
-//   setplay(true)
-// })
-
-
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
   useEffect(() => {
@@ -153,9 +135,7 @@ function Team() {
       <div
         className="row "
         style={{
-          // height: "250px",
           background: "",
-          // backgroundColor:"red"
         }}
       >
         <div
@@ -163,9 +143,6 @@ function Team() {
           style={{
             display: "flex",
             justifyContent: "center",
-            // marginTop: "33px",
-            // textAlign:"justify",
-            // margin:"auto",
             position:"relative"
           }}
         >
@@ -179,16 +156,11 @@ function Team() {
        </div>
         </div>
       </div>
-      {/* <div className="row g-0 mb-4 d-flex justify-content-center">
-        <div className="d-flex justify-content-center ">
-          <h1 className="tutorial">Tutorials</h1>
-        </div>
-      </div> */}
       <div className=""></div>
       <div className={parent_container}>
         
           <div className={video_container}>
-        {tutorial?.map(({ id,  tutorial,department,thumbnail,length},index) => {
+        {tutorial?.map(({ id,department,thumbnail,length},index) => {
                         return <>
                         <div className={video} onMouseEnter={()=>{
                                    setHover(true)
@@ -196,9 +168,8 @@ function Team() {
                                 }} onMouseLeave={()=>{
                                  setHover(false)
                                 }}>
-                        <Link to={`/watch/${department}/${id}`} >
-                         {length >1 &&  <div className={zainn}>
-                          {/* <i class="fa-solid fa-list-music"></i> */}
+                        <Link to={`/watch/${department}/${id}` }  style={{position:'relative'}}>
+                         {length >1 &&  <div className={video_overlay}>
                             <p className={totlal_videos}> <i class="fa-solid fa-play"  style={{color:"white"}}></i> {length} videos</p>
                           </div>}
                                     {/* <ReactPlayer

@@ -16,9 +16,9 @@
     margin-bottom: 35px;
   
   }
-  .zainn{
+  .video_overlay{
     position: absolute;
-    bottom: 50px;
+    bottom: 14px;
     right: 10px;
     background-color: #2d2929c9;
     color:white ;
