@@ -9,7 +9,7 @@ import fatimaSaleem from '../assets/teamsPic/fatimaSaleem.png';
 import anwarAli from '../assets/teamsPic/anwarAli.jpg';
 import asifKhan from '../assets/teamsPic/asifKhan.png';
 import tahirAli from '../assets/teamsPic/tahirAli.png';
-
+import PDF1 from '../assets/DownloadDocument/CAREER_PROFILE_Asif_Karim.pdf';
 const members = [
 
 
@@ -24,7 +24,8 @@ const members = [
     dp: asifKhan,
     name: "Mr. Asif Karim",
     designation: "Senior Manager BPR",
-    email: 'asif.karim@business.gos.pk'
+    email: 'asif.karim@business.gos.pk',
+    link: PDF1,
   },
   {
     dp: tahirAli,
