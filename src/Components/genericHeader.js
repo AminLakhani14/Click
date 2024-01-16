@@ -17,6 +17,8 @@ import { useMemo } from "react";
 import { Tooltip } from "antd";
 import { handleSearch } from "../Route";
 import { translations } from "../Transalation/Transalation";
+import InvestmentDepartment from "../assets/DownloadDocument/CompetitivenessofSindh.pdf"
+
 
 export default function GenericHeader(props) {
   const [isSticky, setIsSticky] = useState(false);
@@ -814,6 +816,9 @@ export default function GenericHeader(props) {
                       </a>
                       <a style={{marginLeft:'10px'}}  target="_blank"       href="https://tipp.gov.pk/">
                       Trade Information Portal
+                      </a>
+                      <a style={{marginLeft:'10px'}}  target="_blank"       href={InvestmentDepartment}>
+                      Investment Department
                       </a>
                       <a style={{ fontWeight:"bold"}} target="_blank" href="">
                       REPORTS

@@ -150,6 +150,11 @@ en:'Trade Information Portal',
 ur:'تجارتی معلومات کا پورٹل',
 sd:'واپاري معلومات پورٽل',
   },
+  'InvestmentDepartment':{
+    en:'Investment Department',
+    ur:'انوسٹمنٹ ڈیپارٹمنٹ',
+    sd:'سيڙپڪاري ڊپارٽمينٽ'
+  },
   'Reports':{
     en: 'REPORTS',
     ur: 'رپورٹس',

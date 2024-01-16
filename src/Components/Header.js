@@ -34,7 +34,7 @@ import { useSelector } from "react-redux";
 import { Button, TextField } from "@mui/material";
 import Search from "antd/es/input/Search";
 import { handleSearch, searchText } from "../Route";
-
+import InvestmentDepartment from "../assets/DownloadDocument/CompetitivenessofSindh.pdf"
 
 function Header(props) {
 const {language} = useSelector((state)=>state.language)
@@ -2255,6 +2255,25 @@ const {language} = useSelector((state)=>state.language)
                               }
                             >
                               {translations["TradeInformationPortal"][language]}
+                            </a>
+                            <a
+                              target="_blank"
+                              href={InvestmentDepartment}
+                              style={
+                                language === "ur" ||
+                                  language === "sd"
+                                  ? {
+                                    display: "flex",
+                                    flexDirection: "row-reverse",
+                                    marginRight: "-16px",
+                                  }
+                                  : {
+                                    marginLeft:"10px"
+
+                                  }
+                              }
+                            >
+                              {translations["InvestmentDepartment"][language]}
                             </a>
 
 
