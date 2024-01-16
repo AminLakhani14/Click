@@ -240,7 +240,7 @@ const Watch = () => {
   return (
     <>
       {windowWidth <= 500 ? <MobileHeaderGeneric /> : <GenericHeader />}
-      {windowWidth >=500 && <div className="" style={{ height: 133 }}></div>}
+      {windowWidth >=500 && <div className="" style={{ height: 120 }}></div>}
 
 
       <div className="row g-0 mb-4 d-flex justify-content-center">

@@ -43,6 +43,13 @@ function MobileHome(props) {
     false, // For "Eduction"
     false, // For "Energy"
     false, // For "Health"
+    false, // For "Health"
+    false, // For "Health"
+    false, // For "Health"
+    false, // For "Information Technology
+    false, // For "Information Technology
+    false, // For "Information Technology
+    false, // For "Information Technology
     false, // For "Information Technology
   ]);
 
@@ -55,6 +62,7 @@ function MobileHome(props) {
 
 
   const handleIconClick = (index) => {
+    debugger
     // Toggle the dropdown state
     const newDropdownStates = [...dropdownStates];
     newDropdownStates[index] = !newDropdownStates[index];
@@ -62,6 +70,8 @@ function MobileHome(props) {
   };
 
   const closeDropdown = (index) => {
+    debugger
+    
     // Close the dropdown
     const newDropdownStates = [...dropdownStates];
     newDropdownStates[index] = false;
@@ -415,6 +425,392 @@ function MobileHome(props) {
                           </ul>
                         </li>
                         </li>
+                        <li style={
+                            language === "ur" || language === "sd"
+                              ? {
+                                textAlign:"right",
+                              }
+                              : { }
+                          } >
+                          <label
+                          
+                            for="drop-3"
+                            style={
+                              language === "ur" || language === "sd"
+                                ? {
+                                  display: "flex",
+                                  flexDirection: "row-reverse",
+                                }
+                                : { }
+                            }
+                            className="d-flex toggle toggle2 highlightable">
+                            <a  style={{ width: "212px", padding: "0px", fontSize: "20px" }}>
+                            {translations["BusinessFacilitation"][language]}
+                            </a>
+                            {dropdownStates[12] ? (
+                              <span
+                              style={
+                                language === "ur" || language === "sd"
+                                  ? {
+                                    display: "flex",
+                                    marginLeft: "-70px",
+                                  }
+                                  : { display: "contents" }
+                              }
+                                className="minus"
+                                onClick={() => closeDropdown(12)} // Click on icon to open/close the dropdown
+                                onMouseEnter={() => handleIconClick(12)} // Hover on icon to open/close the dropdown
+                                onMouseLeave={() => closeDropdown(12)} // Leave icon to close the dropdown
+                              ></span>
+                            ) : (
+                              <span
+                              style={
+                                language === "ur" || language === "sd"
+                                  ? {
+                                    display: "flex",
+                                    marginLeft: "-70px",
+                                  }
+                                  : { display: "contents" }
+                              }
+                                className="plus"
+                                onClick={() => handleIconClick(12)} // Click on icon to open/close the dropdown
+                                onMouseEnter={() => handleIconClick(12)} // Hover on icon to open/close the dropdown
+                                onMouseLeave={() => closeDropdown(12)} // Leave ico/ Leave icon to close the dropdown
+                              ></span>
+                            )}
+                          </label>
+                          <input type="checkbox" id="drop-3" />
+                          <ul>
+                            <li className="borderline"
+                            style={
+                              language === "ur" || language === "sd"
+                                ? {
+                                  textAlign: "right"
+                                }
+                                : {}
+                            }
+                            >
+                              <a 
+                               target="_blank"
+                               href="https://smeda.org/index.php?option=com_content&view=article&id=146&Itemid=676"
+                              style={
+                                language === "ur" || language === "sd"
+                                  ? {
+                                    display: "flex",
+                                    flexDirection: "row-reverse",
+                                    textAlign: "right"
+                                  }
+                                  : {}
+                              }
+                              className="link toggle2 mobilenesteddropdowntoggle2" to={"/introduction"}>
+                                {translations["Guids"][language]}
+                              </a>
+                            </li>
+
+                            <li className="borderline"
+                            style={
+                              language === "ur" || language === "sd"
+                                ? {
+                                  textAlign: "right"
+                                }
+                                : {}
+                            }
+                            >
+                              <a 
+                                target="_blank"
+                                href="https://smeda.org/index.php?option=com_phocadownload&view=category&id=122&Itemid=308"
+                              style={
+                                language === "ur" || language === "sd"
+                                  ? {
+                                    display: "flex",
+                                    flexDirection: "row-reverse",
+                                    textAlign: "right"
+                                  }
+                                  : {}
+                              }
+                              className="link toggle2 mobilenesteddropdowntoggle2" to={"/projectobjectives"}>
+                                 {translations["PreFeasibilityStudies"][language]}
+                              </a>
+                            </li> 
+                            <li className="borderline"
+                            style={
+                              language === "ur" || language === "sd"
+                                ? {
+                                  textAlign: "right"
+                                }
+                                : {}
+                            }
+                            >
+                              <a 
+                               target="_blank"
+                               href="https://smeda.org/index.php?option=com_phocadownload&view=category&id=164&Itemid=981"
+                              style={
+                                language === "ur" || language === "sd"
+                                  ? {
+                                    display: "flex",
+                                    flexDirection: "row-reverse",
+                                    textAlign: "right"
+                                  }
+                                  : {}
+                              }
+                              className="link toggle2 mobilenesteddropdowntoggle2" to={"/acheivement"}>
+                                {translations["BusinessGuides"][language]}
+                              </a>
+                            </li>
+                            <li className="borderline"
+                            style={
+                              language === "ur" || language === "sd"
+                                ? {
+                                  textAlign: "right"
+                                }
+                                : {}
+                            }
+                            >
+                              <a 
+                                target="_blank"
+                                href="https://smeda.org/index.php?option=com_phocadownload&view=category&id=7&Itemid=363"
+                              style={
+                                language === "ur" || language === "sd"
+                                  ? {
+                                    display: "flex",
+                                    flexDirection: "row-reverse",
+                                    textAlign: "right"
+                                  }
+                                  : {}
+                              }
+                              className="link toggle2 mobilenesteddropdowntoggle2" to={"/resource"}>
+                                {translations["CommercialContracts(English)"][language]}
+                              </a>
+                            </li>
+                            
+                             <li className="borderline"
+                            style={
+                              language === "ur" || language === "sd"
+                                ? {
+                                  textAlign: "right"
+                                }
+                                : {}
+                            }
+                            >
+                              <a 
+                               target="_blank"
+                               href="https://smeda.org/index.php?option=com_phocadownload&view=category&id=7&Itemid=363"
+                              style={
+                                language === "ur" || language === "sd"
+                                  ? {
+                                    display: "flex",
+                                    flexDirection: "row-reverse",
+                                    textAlign: "right"
+                                  }
+                                  : {}
+                              }
+                              className="link toggle2 mobilenesteddropdowntoggle2" to={"/Team"}>
+                                      {translations["CommercialContracts(Urdu)"][language]}
+                              </a>
+                            </li>
+                            <li className="borderline"
+                            style={
+                              language === "ur" || language === "sd"
+                                ? {
+                                  textAlign: "right"
+                                }
+                                : {}
+                            }
+                            >
+                              <a 
+                                target="_blank"
+                                href="https://smeda.org/index.php?option=com_phocadownload&view=category&id=15&Itemid=138"
+                              style={
+                                language === "ur" || language === "sd"
+                                  ? {
+                                    display: "flex",
+                                    flexDirection: "row-reverse",
+                                    textAlign: "right"
+                                  }
+                                  : {}
+                              }
+                              className="link toggle2 mobilenesteddropdowntoggle2" to={"/faqs"}>
+                                      {translations["RegulatoryProcedures"][language]}
+                              </a>
+                            </li>
+                            <li className="borderline"
+                            style={
+                              language === "ur" || language === "sd"
+                                ? {
+                                  textAlign: "right"
+                                }
+                                : {}
+                            }>
+                              <a
+                                 target="_blank"
+                                 href="https://tipp.gov.pk/"
+                              style={
+                                language === "ur" || language === "sd"
+                                  ? {
+                                    display: "flex",
+                                    flexDirection: "row-reverse",
+                                    textAlign: "right"
+                                  }
+                                  : {}
+                              }
+                                className="link toggle2 mobilenesteddropdowntoggle2"
+                              >
+                               {translations["TradeInformationPortal"][language]}
+                              </a>
+                            </li>
+                            <li className="borderline"
+                            style={
+                              language === "ur" || language === "sd"
+                                ? {
+                                  textAlign: "right"
+                                }
+                                : {}
+                            }>
+                              <a
+                                 target="_blank"
+                                 href=""
+                              style={
+                                language === "ur" || language === "sd"
+                                  ? {
+                                    display: "flex",
+                                    flexDirection: "row-reverse",
+                                    textAlign: "right"
+                                  }
+                                  : {}
+                              }
+                                className="link toggle2 mobilenesteddropdowntoggle2"
+                              >
+                               {translations["Reports"][language]}
+                              </a>
+                            </li>
+                            <li className="borderline"
+                            style={
+                              language === "ur" || language === "sd"
+                                ? {
+                                  textAlign: "right"
+                                }
+                                : {}
+                            }>
+                              <a
+                              target="_blank"
+                              href="https://smeda.org/index.php?option=com_phocadownload&view=category&id=40&Itemid=742"
+                             style={
+                                language === "ur" || language === "sd"
+                                  ? {
+                                    display: "flex",
+                                    flexDirection: "row-reverse",
+                                    textAlign: "right"
+                                  }
+                                  : {}
+                              }
+                                className="link toggle2 mobilenesteddropdowntoggle2"
+                              >
+                               {translations["ClusterProfiles"][language]}
+                              </a>
+                            </li>
+                            <li className="borderline"
+                            style={
+                              language === "ur" || language === "sd"
+                                ? {
+                                  textAlign: "right"
+                                }
+                                : {}
+                            }>
+                              <a
+                              target="_blank"
+                              href="https://smeda.org/index.php?option=com_phocadownload&view=category&id=186&Itemid=1024"
+                              style={
+                                language === "ur" || language === "sd"
+                                  ? {
+                                    display: "flex",
+                                    flexDirection: "row-reverse",
+                                    textAlign: "right"
+                                  }
+                                  : {}
+                              }
+                                className="link toggle2 mobilenesteddropdowntoggle2"
+                              >
+                               {translations["DistrictEconomicProfiles"][language]}
+                              </a>
+                            </li>
+                            <li className="borderline"
+                            style={
+                              language === "ur" || language === "sd"
+                                ? {
+                                  textAlign: "right"
+                                }
+                                : {}
+                            }>
+                              <a
+                              target="_blank"
+                              href="https://smeda.org/index.php?option=com_phocadownload&view=category&id=28&Itemid=139"
+                              style={
+                                language === "ur" || language === "sd"
+                                  ? {
+                                    display: "flex",
+                                    flexDirection: "row-reverse",
+                                    textAlign: "right"
+                                  }
+                                  : {}
+                              }
+                                className="link toggle2 mobilenesteddropdowntoggle2"
+                              >
+                               {translations["SectorBriefs"][language]}
+                              </a>
+                            </li>
+                            <li className="borderline"
+                            style={
+                              language === "ur" || language === "sd"
+                                ? {
+                                  textAlign: "right"
+                                }
+                                : {}
+                            }>
+                              <a
+                               target="_blank"
+                               href="https://smeda.org/index.php?option=com_phocadownload&view=category&id=188&Itemid=1027"
+                               style={
+                                language === "ur" || language === "sd"
+                                  ? {
+                                    display: "flex",
+                                    flexDirection: "row-reverse",
+                                    textAlign: "right"
+                                  }
+                                  : {}
+                              }
+                                className="link toggle2 mobilenesteddropdowntoggle2"
+                              >
+                               {translations["StudyReports"][language]}
+                              </a>
+                            </li>
+                            <li className="borderline"
+                            style={
+                              language === "ur" || language === "sd"
+                                ? {
+                                  textAlign: "right"
+                                }
+                                : {}
+                            }>
+                              <a
+                              target="_blank"
+                              href="https://smeda.org/index.php?option=com_phocadownload&view=category&id=168&Itemid=996"
+                               style={
+                                language === "ur" || language === "sd"
+                                  ? {
+                                    display: "flex",
+                                    flexDirection: "row-reverse",
+                                    textAlign: "right"
+                                  }
+                                  : {}
+                              }
+                                className="link toggle2 mobilenesteddropdowntoggle2"
+                              >
+                               {translations["TradeAnalysisSeries"][language]}
+                              </a>
+                            </li>
+                          </ul>
+                        </li>
+                      
                         {/* <li style={
                             language === "ur" || language === "sd"
                               ? {
@@ -1450,8 +1846,8 @@ function MobileHome(props) {
                               }
                                 className="minus"
                                 onClick={() => handleIconClick(9)} // Click on icon to open/close the dropdown
-                                onMouseEnter={() => handleIconClick(9)} // Hover on icon to open/close the dropdown
-                                onMouseLeave={() => closeDropdown(9)} // Leave icon to close the dropdown
+                                // onMouseEnter={() => handleIconClick(9)} // Hover on icon to open/close the dropdown
+                                // onMouseLeave={() => closeDropdown(9)} // Leave icon to close the dropdown
                               ></span>
                             ) : (
                               <span
@@ -1465,8 +1861,8 @@ function MobileHome(props) {
                               }
                                 className="plus"
                                 onClick={() => handleIconClick(9)} // Click on icon to open/close the dropdown
-                                onMouseEnter={() => handleIconClick(9)} // Hover on icon to open/close the dropdown
-                                onMouseLeave={() => closeDropdown(9)} // Leave ico/ Leave icon to close the dropdown
+                                // onMouseEnter={() => handleIconClick(9)} // Hover on icon to open/close the dropdown
+                                // onMouseLeave={() => closeDropdown(9)} // Leave ico/ Leave icon to close the dropdown
                               ></span>
                             )}
                           </label>
@@ -1587,6 +1983,29 @@ function MobileHome(props) {
                               }
                               className="link toggle2 mobilenesteddropdowntoggle2" to={"/Team"}>
                                       {translations["Team"][language]}
+                              </Link>
+                            </li>
+                            <li className="borderline"
+                            style={
+                              language === "ur" || language === "sd"
+                                ? {
+                                  textAlign: "right"
+                                }
+                                : {}
+                            }
+                            >
+                              <Link 
+                              style={
+                                language === "ur" || language === "sd"
+                                  ? {
+                                    display: "flex",
+                                    flexDirection: "row-reverse",
+                                    textAlign: "right"
+                                  }
+                                  : {}
+                              }
+                              className="link toggle2 mobilenesteddropdowntoggle2" to={"/faqs"}>
+                                      {translations["FAQ"][language]}
                               </Link>
                             </li>
                             <li className="b-none"

@@ -18,6 +18,7 @@ import ss13 from "../assets/ScreenShot/worldBank.png"
 import ss14 from "../assets/ScreenShot/Monthly_report.png"
 import ss15 from "../assets/ScreenShot/TradePolicy.png"
 import ss16 from "../assets/ScreenShot/PAKISTANINVESTMENTPOLICY2023 .png"
+import ss17 from "../assets/ScreenShot/CompetitivenessofSindh.png"
 
 import pdf1 from "../assets/DownloadDocument/Final_PRMI_Book_2_New.pdf"
 import pdf2 from "../assets/DownloadDocument/Final_PRMI_Book_1.pdf"
@@ -35,6 +36,7 @@ import pdf13 from "../assets/DownloadDocument/WorldBank.pptm"
 import pdf14 from "../assets/DownloadDocument/Monthly-report.pdf"
 import pdf15 from "../assets/DownloadDocument/Tradepolicy.pdf"
 import pdf16 from "../assets/DownloadDocument/FinalPakistanInvestmentPolicy.pdf"
+import pdf17 from "../assets/DownloadDocument/CompetitivenessofSindh.pdf"
 
 
 
@@ -146,6 +148,14 @@ export default function Resource() {
       link:'https://invest.gov.pk/sites/default/files/inline-files/Final%20PIP%202023-cs.pdf'
 
     }
+    ,
+    {
+      screenShot:ss17,
+      titlte:"Investment Department",
+      pdf:pdf17,
+      link:'https://invest.gov.pk/sites/default/files/inline-files/Final%20PIP%202023-cs.pdf'
+
+    }
   ]
   useEffect(()=>{
     window.scrollTo(0,0)
@@ -156,7 +166,7 @@ export default function Resource() {
             {windowWidth <= 500 ? (
                 <div></div>
             ) : (
-                <div style={{ height: "150px" }}></div>
+                <div style={{ height: "120px" }}></div>
             )}
 
 <div className='container_fluid'>

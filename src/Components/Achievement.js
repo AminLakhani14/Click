@@ -90,7 +90,7 @@ const para=[
             {windowWidth <= 500 ? (
                 <div></div>
             ) : (
-                <div style={{ height: "150px" }}></div>
+                <div style={{ height: "120px" }}></div>
             )}
             <div className='container_fluid'>
                 <div

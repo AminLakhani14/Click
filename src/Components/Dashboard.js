@@ -87,28 +87,6 @@ const Dashboard = () => {
             label.push(i.name);
             data.push(i.id);
           }
-          // setData(
-          //   {
-          //     datasets: [{
-          //       data: data,
-          //       backgroundColor: [
-          //         'pink',
-          //         'skyblue',
-          //         'yellow'
-          //       ]
-          //     },
-          //     ],
-          //     labels: label,
-          //     color: function (context) {
-          //       const index = context.dataIndex;
-          //       const value = context.dataset.data[index];
-          //       return value < 0 ? 'red' :  // draw negative values in red
-          //         index % 2 ? 'blue' :    // else, alternate values in blue and green
-          //           'green';
-          //     },
-          //   },
-
-          // )
         })
         .catch((e) => {
           console.log("error", e);
@@ -116,30 +94,8 @@ const Dashboard = () => {
     };
     fetchData();
   }, []);
-  // const options = {
-  //   // Customize the appearance of the labels
-  //   plugins: {
-  //     legend: {
-  //       display: true, // Display the legend
-  //       position: 'right', // Position the legend on the right side
-  //     },
-  //   },
-  //   // Customize label font settings
-  //   scales: {
-  //     y: {
-  //       ticks: {
-  //         color: 'black', // Label text color
-  //         font: {
-  //           size: 16, // Label text font size
-  //           weight: 'bold', // Label text font weight
-  //         },
-  //       },
-  //     },
-  //   },
-  // };
   const handleDepartment = (event) => {
     setSelectedDepartment(event.target.value);
-    // setshowDropdown(true)
   };
   const handleDepart = (event) => {
     setSelectedDepart(event.target.value);
@@ -390,7 +346,7 @@ const Dashboard = () => {
       {windowWidth <= 500 ? (
         <div></div>
       ) : (
-        <div style={{ height: "160px" }}></div>
+        <div style={{ height: "120px" }}></div>
       )}
       <div className="parent_con  px-md-5  px-2">
         <div className="statistics ">
@@ -463,7 +419,6 @@ You can also contact us for further details on your specific queries at feedback
                 </Select>
               </div>
             </Fade> */}
-            {/* {dataForDonut?.length > 1 && (
               <div className="col-4">
                 <Select
                   size="small"
@@ -482,7 +437,6 @@ You can also contact us for further details on your specific queries at feedback
                   })}
                 </Select>
               </div>
-            )} */}
             {/* <div className="row g-0 ">
               <div className="col-12 d-flex justify-content-end">
                 {dataForDonut[1] && (
