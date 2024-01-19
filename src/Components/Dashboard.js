@@ -308,23 +308,6 @@ const Dashboard = () => {
 
       // isEmpty: true,
     },
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     {
       id: 3,
       label: "Jinan",
@@ -378,57 +361,57 @@ const Dashboard = () => {
 
     // isEmpty: true,
   }
-  // ,{
-  //   id: 3,
-  //   label: "HARLEY DAVIDSON",
-  //   value: 111,
-  //   text: "Excise Taxation Department",
-  //   yearWiseData: [29, 32, 13, 5, 32],
-  //   sun: xAxis,
-  //   vehicleType:'Four-Wheelers (Cars)'
+  ,{
+    id: 3,
+    label: "Cultus",
+    value: 31767,
+    text: "Excise Taxation Department",
+    yearWiseData: [7526, 7022, 4321, 7919, 4979],
+    sun: xAxis,
+    vehicleType:'Four-Wheelers (Cars)'
 
-  //   // isEmpty: true,
-  // },{
-  //   id: 3,
-  //   label: "HARLEY DAVIDSON",
-  //   value: 111,
-  //   text: "Excise Taxation Department",
-  //   yearWiseData: [29, 32, 13, 5, 32],
-  //   sun: xAxis,
-  //   vehicleType:'Four-Wheelers (Cars)'
+    // isEmpty: true,
+  },{
+    id: 3,
+    label: "Aqua",
+    value: 8731,
+    text: "Excise Taxation Department",
+    yearWiseData: [3189, 1457, 480, 1039, 566],
+    sun: xAxis,
+    vehicleType:'Four-Wheelers (Cars)'
 
-  //   // isEmpty: true,
-  // },{
-  //   id: 3,
-  //   label: "HARLEY DAVIDSON",
-  //   value: 111,
-  //   text: "Excise Taxation Department",
-  //   yearWiseData: [29, 32, 13, 5, 32],
-  //   sun: xAxis,
-  //   vehicleType:'Four-Wheelers (Cars)'
+    // isEmpty: true,
+  },{
+    id: 3,
+    label: "Swift",
+    value: 10203,
+    text: "Excise Taxation Department",
+    yearWiseData: [2194, 1530, 674, 853, 3952],
+    sun: xAxis,
+    vehicleType:'Four-Wheelers (Cars)'
 
-  //   // isEmpty: true,
-  // },{
-  //   id: 3,
-  //   label: "HARLEY DAVIDSON",
-  //   value: 111,
-  //   text: "Excise Taxation Department",
-  //   yearWiseData: [29, 32, 13, 5, 32],
-  //   sun: xAxis,
-  //   vehicleType:'Four-Wheelers (Cars)'
+    // isEmpty: true,
+  },{
+    id: 3,
+    label: "Sportage",
+    value: 8051,
+    text: "Excise Taxation Department",
+    yearWiseData: [6, 513, 2028, 3787, 2717],
+    sun: xAxis,
+    vehicleType:'Four-Wheelers (Cars)'
 
-  //   // isEmpty: true,
-  // },{
-  //   id: 3,
-  //   label: "HARLEY DAVIDSON",
-  //   value: 111,
-  //   text: "Excise Taxation Department",
-  //   yearWiseData: [29, 32, 13, 5, 32],
-  //   sun: xAxis,
-  //   vehicleType:'Four-Wheelers (Cars)'
+    // isEmpty: true,
+  },{
+    id: 3,
+    label: "Fortuner",
+    value: 5320,
+    text: "Excise Taxation Department",
+    yearWiseData: [1167, 616, 472, 1481, 1584],
+    sun: xAxis,
+    vehicleType:'Four-Wheelers (Cars)'
 
-  //   // isEmpty: true,
-  // },
+    // isEmpty: true,
+  },
 ,
     //////////////////////Private College
     {
