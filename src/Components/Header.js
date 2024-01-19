@@ -1,7 +1,7 @@
 
 import React, { useEffect, useRef, useState } from "react";
 // import click from "../assets/click-logo1.png";
-import Group8364 from "../assets/Group8364.png";
+import Group8364 from "../assets/click-logo1.png";
 import accessibility from "../assets/accessibility.png";
 import "../Css/header.css";
 import "../Css/highlight.css";
@@ -1732,7 +1732,7 @@ const {language} = useSelector((state)=>state.language)
               // </div>
               
               <div className={`header `}>
-              <div className={"row "}>
+              <div className={"row "} style={{height:"5px"}}>
                 <div
                   className={" navbar boxshadowNavBar justify-content-end"}
                   style={language === "ur" || language === "sd"?{marginTop:-46}:{ width: "100%", paddingRight: "0px", marginTop:-52,}}
@@ -2388,6 +2388,24 @@ const {language} = useSelector((state)=>state.language)
                               }
                             >
                               {translations["TradeAnalysisSeries"][language]}
+                            </a>
+                            <a
+                              target="_blank"
+                              href="https://tipp.gov.pk/?r=site/display&id=230"
+                              style={
+                                language === "ur" ||
+                                  language === "sd"
+                                  ? {
+                                    display: "flex",
+                                    flexDirection: "row-reverse",
+                                    marginRight: "-16px",
+                                  }
+                                  : {
+                                    marginLeft:"10px"
+                                  }
+                              }
+                            >
+                              {translations["TradeStatistics"][language]}
                             </a>
                         </div>
                       </div>

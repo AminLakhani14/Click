@@ -115,7 +115,7 @@ export const translations = {
     sd: 'ڪاروباري سهولت',
   },
   'Guids':{
-    en: 'GUIDS',
+    en: 'GUIDES',
     ur: 'گائیڈز',
     sd: 'رهنما',
   },
@@ -151,9 +151,9 @@ ur:'تجارتی معلومات کا پورٹل',
 sd:'واپاري معلومات پورٽل',
   },
   'InvestmentDepartment':{
-    en:'Investment Department',
-    ur:'انوسٹمنٹ ڈیپارٹمنٹ',
-    sd:'سيڙپڪاري ڊپارٽمينٽ'
+    en:'Investment in Sindh',
+    ur:'سندھ میں سرمایہ کاری',
+    sd:'سنڌ ۾ سيڙپڪاري'
   },
   'Reports':{
     en: 'REPORTS',
@@ -184,6 +184,11 @@ sd:'واپاري معلومات پورٽل',
     en:'Trade Analysis Series',
     ur:'تجارتی تجزیہ سیریز',
     sd:'واپاري تجزيو سيريز'
+  },
+  'TradeStatistics':{
+    en:'Trade Statistics',
+    ur:'تجارتی اعدادوشمار',
+    sd:'واپاري شماريات'
   },
 
   'Resources': {

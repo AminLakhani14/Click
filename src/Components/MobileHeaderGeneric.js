@@ -7,6 +7,8 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 import { useEffect } from "react";
 import "../Css/newcss.css";
+import InvestmentDepartment from "../assets/DownloadDocument/CompetitivenessofSindh.pdf"
+
 function MobileHeaderGeneric() {
   const [toggleMenu, setToggleMenu] = useState(true);
   const [screenWidth, setscreenWidth] = useState(window.innerWidth);
@@ -612,6 +614,168 @@ const handleLabelTextClick = (index) => {
                             </li>
                           </ul>
                         </li> */}
+                          <li>
+                          <label 
+                          for="drop-4"
+                           className="d-flex toggle toggle2">
+                            <a  style={{width:"212px",padding:"0px",fontSize:"20px"}}>
+                            Business Facilitation
+                             </a>
+                             {dropdownStates[12] ? (
+                                <span
+                                style={{display:"contents"}}
+                                  className="minus"
+                                  onClick={() => handleIconClick(12)} // Click on icon to open/close the dropdown
+                                  onMouseEnter={() => handleIconClick(12)} // Hover on icon to open/close the dropdown
+                                   onMouseLeave={() => closeDropdown(12)} // Leave icon to close the dropdown
+                                ></span>
+                              ) : (
+                                <span 
+                                style={{display:"contents"}}
+                                  className="plus"
+                                  onClick={() => handleIconClick(12)} // Click on icon to open/close the dropdown
+                                  onMouseEnter={() => handleIconClick(12)} // Hover on icon to open/close the dropdown
+                                  onMouseLeave={() => closeDropdown(12)} // Leave ico/ Leave icon to close the dropdown
+                                ></span>
+                              )}
+                          </label>
+                          <input type="checkbox" id="drop-4" />
+                          <ul>
+                            <li className="borderline"
+                            >
+                              <a 
+                               target="_blank"
+                               href="https://smeda.org/index.php?option=com_content&view=article&id=146&Itemid=676"
+                              className="link toggle2 mobilenesteddropdowntoggle2" to={"/introduction"}>
+                                GUIDS
+                              </a>
+                            </li>
+                            <li className="borderline"
+                            >
+                              <a 
+                                target="_blank"
+                                href="https://smeda.org/index.php?option=com_phocadownload&view=category&id=122&Itemid=308"
+                              className="link toggle2 mobilenesteddropdowntoggle2" to={"/projectobjectives"}>
+                                 Pre-Feasibility Studies
+                              </a>
+                            </li> 
+                            <li className="borderline"
+                            >
+                              <a 
+                               target="_blank"
+                               href="https://smeda.org/index.php?option=com_phocadownload&view=category&id=164&Itemid=981"
+                              className="link toggle2 mobilenesteddropdowntoggle2" to={"/acheivement"}>
+                                Business Guides
+                              </a>
+                            </li>
+                            <li className="borderline"
+                            >
+                              <a 
+                                target="_blank"
+                                href="https://smeda.org/index.php?option=com_phocadownload&view=category&id=7&Itemid=363"
+                              className="link toggle2 mobilenesteddropdowntoggle2" to={"/resource"}>
+                               Commercial Contracts (English)
+                              </a>
+                            </li>
+                             <li className="borderline"
+                            >
+                              <a 
+                               target="_blank"
+                               href="https://smeda.org/index.php?option=com_phocadownload&view=category&id=7&Itemid=363"
+                              className="link toggle2 mobilenesteddropdowntoggle2" to={"/Team"}>
+                                      Commercial Contracts (Urdu)
+                              </a>
+                            </li>
+                            <li className="borderline"
+                            >
+                              <a 
+                                target="_blank"
+                                href="https://smeda.org/index.php?option=com_phocadownload&view=category&id=15&Itemid=138"
+                              className="link toggle2 mobilenesteddropdowntoggle2" to={"/faqs"}>
+                                     Regulatory Procedures
+                              </a>
+                            </li>
+                            <li className="borderline"
+                           >
+                              <a
+                                 target="_blank"
+                                 href="https://tipp.gov.pk/"
+                                className="link toggle2 mobilenesteddropdowntoggle2"
+                              >
+                               Trade Information Portal
+                              </a>
+                            </li>
+                            <li>
+                            <a
+                              target="_blank"
+                              href={InvestmentDepartment}
+                            >
+                              Investment Department
+                            </a>
+                            </li>
+                            <li className="borderline"
+                           >
+                              <a
+                                 target="_blank"
+                                 href=""
+                                className="link toggle2 mobilenesteddropdowntoggle2"
+                              >
+                               REPORTS
+                              </a>
+                            </li>
+
+                            <li className="borderline"
+                           >
+                              <a
+                              target="_blank"
+                              href="https://smeda.org/index.php?option=com_phocadownload&view=category&id=40&Itemid=742"
+                                className="link toggle2 mobilenesteddropdowntoggle2"
+                              >
+                               Cluster Profiles
+                              </a>
+                            </li>
+                            <li className="borderline"
+                           >
+                              <a
+                              target="_blank"
+                              href="https://smeda.org/index.php?option=com_phocadownload&view=category&id=186&Itemid=1024"
+                                className="link toggle2 mobilenesteddropdowntoggle2"
+                              >
+                             District Economic Profiles
+                              </a>
+                            </li>
+                            <li className="borderline"
+                           >
+                              <a
+                              target="_blank"
+                              href="https://smeda.org/index.php?option=com_phocadownload&view=category&id=28&Itemid=139"
+                                className="link toggle2 mobilenesteddropdowntoggle2"
+                              >
+                              Sector Briefs
+                              </a>
+                            </li>
+                            <li className="borderline"
+                           >
+                              <a
+                               target="_blank"
+                               href="https://smeda.org/index.php?option=com_phocadownload&view=category&id=188&Itemid=1027"
+                                className="link toggle2 mobilenesteddropdowntoggle2"
+                              >
+                               Study Reports
+                              </a>
+                            </li>
+                            <li className="borderline"
+                           >
+                              <a
+                              target="_blank"
+                              href="https://smeda.org/index.php?option=com_phocadownload&view=category&id=168&Itemid=996"
+                                className="link toggle2 mobilenesteddropdowntoggle2"
+                              >
+                               Trade Analysis Series
+                              </a>
+                            </li>
+                          </ul>
+                        </li>
                           <li
                           style={{
                             borderBottom: "1px solid transparent !important",

@@ -1,4 +1,4 @@
-import React, { useCallback } from "react";
+import React, { useCallback, useMemo } from "react";
 import GenericHeader from "./genericHeader";
 import { useState } from "react";
 import { useEffect } from "react";
@@ -17,12 +17,13 @@ import {
 import { Chart, Doughnut } from "react-chartjs-2";
 
 import "../Css/dashboard.css";
-import { Select } from "@mui/material";
+import { InputLabel, Select } from "@mui/material";
 
 import { Bar } from "react-chartjs-2";
 import Donut from "./Donut";
 import CountUp from "react-countup";
 import BarChart from "./BarChart";
+import Item from "antd/es/list/Item";
 
 ChartJS.register(
   CategoryScale,
@@ -39,15 +40,24 @@ const color = [
   "#F54AA6",
   "#F2D14F",
   "#D99AC9",
+  "maroon",
   "#9ACCDB",
   "#FDC263",
   "#CBC4AA",
+///////////////////
+  "#8CD3FF",
+  "#9ACCDB",
+  "#CBC4AA",
+  "#D99AC9",
+  "#F54AA6",
+  "#003280",
+  "#F54AA6",
 ];
 const Dashboard = () => {
   const [selectedDepartment, setSelectedDepartment] =
     useState("Private Colleges");
   const [selectedDepart, setSelectedDepart] = useState(
-    "License For Pesticide Dealership"
+    "ALL"
   );
   const [showDepartment, setShowDepartment] = useState("Labour Department");
   const [toggle, setToggle] = useState(false);
@@ -57,7 +67,10 @@ const Dashboard = () => {
   const [showDropdown, setshowDropdown] = useState(false);
   const [lableHover, setlableHover] = useState("Private Colleges");
   //  let [subDropdownFilter, setsubDropdownFilter] = useState([])
+  const vehicleType=['Two-Wheelers (Bikes)','Four-Wheelers (Cars)']
+  const [getVehicleType, setgetVehicleType] = useState(vehicleType[0])
 
+ 
   ///////////////////////////////
   const [count, setCount] = useState(0);
 
@@ -94,12 +107,7 @@ const Dashboard = () => {
     };
     fetchData();
   }, []);
-  const handleDepartment = (event) => {
-    setSelectedDepartment(event.target.value);
-  };
-  const handleDepart = (event) => {
-    setSelectedDepart(event.target.value);
-  };
+ 
 
   const xAxis = [
     "2018-19 Year",
@@ -144,14 +152,284 @@ const Dashboard = () => {
     ////////////////Excise deparment ///////////////
     {
       id: 3,
-      label: "ExciseTaxation",
-      value: 30,
+      label: "Honda",
+      value: 632610,
       text: "Excise Taxation Department",
-      yearWiseData: [9, 2, 12, 26, 16],
+      yearWiseData: [180073, 113991, 116171, 124597, 96778],
       sun: xAxis,
+      vehicleType:'Two-Wheelers (Bikes)',
       // isEmpty: true,
     },
-   
+    {
+      id: 4,
+      label: "United",
+      value: 46932,
+      text: "Excise Taxation Department",
+      yearWiseData: [7777, 8056, 9898, 13200, 8901],
+      sun: xAxis,
+      vehicleType:'Two-Wheelers (Bikes)'
+
+      // isEmpty: true,
+    },{
+      id: 3,
+      label: "Super Power",
+      value: 246605,
+      text: "Excise Taxation Department",
+      yearWiseData: [81866, 53952, 37246, 42679, 30862],
+      sun: xAxis,
+      vehicleType:'Two-Wheelers (Bikes)'
+
+      // isEmpty: true,
+    },{
+      id: 3,
+      label: "BMW",
+      value: 28,
+      text: "Excise Taxation Department",
+      yearWiseData: [10, 9, 3, 1, 5],
+      sun: xAxis,
+      vehicleType:'Two-Wheelers (Bikes)'
+
+      // isEmpty: true,
+    },{
+      id: 3,
+      label: "Benelli",
+      value: 165,
+      text: "Excise Taxation Department",
+      yearWiseData: [9, 42, 33, 49, 32],
+      sun: xAxis,
+      vehicleType:'Two-Wheelers (Bikes)'
+
+      // isEmpty: true,
+    },
+    {
+      id: 3,
+      label: "Grace",
+      value: 5432,
+      text: "Excise Taxation Department",
+      yearWiseData: [1755, 1720, 860, 787, 310],
+      sun: xAxis,
+      vehicleType:'Two-Wheelers (Bikes)'
+
+      // isEmpty: true,
+    },{
+      id: 3,
+      label: "Suzuki",
+      value: 47535,
+      text: "Excise Taxation Department",
+      yearWiseData: [7462, 7988, 7036, 12048, 13001],
+      sun: xAxis,
+      vehicleType:'Two-Wheelers (Bikes)'
+
+      // isEmpty: true,
+    },{
+      id: 3,
+      label: "Road Prince",
+      value: 7849,
+      text: "Excise Taxation Department",
+      yearWiseData: [3665, 974, 725, 1457, 1028],
+      sun: xAxis,
+      vehicleType:'Two-Wheelers (Bikes)'
+
+      // isEmpty: true,
+    },{
+      id: 3,
+      label: "Harley  Davidson",
+      value: 111,
+      text: "Excise Taxation Department",
+      yearWiseData: [29, 32, 13, 5, 32],
+      sun: xAxis,
+      vehicleType:'Two-Wheelers (Bikes)'
+
+      // isEmpty: true,
+    },
+    ,{
+      id: 3,
+      label: "Super Star",
+      value: 167820,
+      text: "Excise Taxation Department",
+      yearWiseData: [50936, 35027, 30285, 31137, 20435],
+      sun: xAxis,
+      vehicleType:'Two-Wheelers (Bikes)'
+
+      // isEmpty: true,
+    },
+    {
+      id: 3,
+      label: "Unique",
+      value: 380723,
+      text: "Excise Taxation Department",
+      yearWiseData: [99113, 97669, 77446, 73377, 33118],
+      sun: xAxis,
+      vehicleType:'Two-Wheelers (Bikes)'
+
+      // isEmpty: true,
+    },
+    {
+      id: 3,
+      label: "Crown Motor",
+      value: 32383,
+      text: "Excise Taxation Department",
+      yearWiseData: [10633, 7351, 4456, 2898, 1845],
+      sun: xAxis,
+      vehicleType:'Two-Wheelers (Bikes)'
+
+      // isEmpty: true,
+    },
+    {
+      id: 3,
+      label: "Racer",
+      value: 4500,
+      text: "Excise Taxation Department",
+      yearWiseData: [2761, 731, 289, 461, 258],
+      sun: xAxis,
+      vehicleType:'Two-Wheelers (Bikes)'
+
+      // isEmpty: true,
+    },
+    {
+      id: 3,
+      label: "Bionic",
+      value: 20195,
+      text: "Excise Taxation Department",
+      yearWiseData: [10734, 5579, 1941, 1521, 320],
+      sun: xAxis,
+      vehicleType:'Two-Wheelers (Bikes)'
+
+      // isEmpty: true,
+    },
+    {
+      id: 3,
+      label: "Hero",
+      value: 692,
+      text: "Excise Taxation Department",
+      yearWiseData: [514, 176, 0, 0, 2],
+      sun: xAxis,
+      vehicleType:'Two-Wheelers (Bikes)'
+
+      // isEmpty: true,
+    },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    {
+      id: 3,
+      label: "Jinan",
+      value: 5903,
+      text: "Excise Taxation Department",
+      yearWiseData: [1989, 2001, 1227, 552, 134],
+      sun: xAxis,
+      vehicleType:'Two-Wheelers (Bikes)'
+
+      // isEmpty: true,
+    }, 
+   //////////////////////Cars///////////////////
+   {
+    id: 3,
+    label: "Alto",
+    value: 111,
+    text: "Excise Taxation Department",
+    yearWiseData: [857, 6363, 8746, 16012, 24228],
+    sun: xAxis,
+    vehicleType:'Four-Wheelers (Cars)'
+
+    // isEmpty: true,
+  },{
+    id: 3,
+    label: "Corolla",
+    value: 111,
+    text: "Excise Taxation Department",
+    yearWiseData: [24228, 11244, 5630, 2258, 1953],
+    sun: xAxis,
+    vehicleType:'Four-Wheelers (Cars)'
+
+    // isEmpty: true,
+  },{
+    id: 3,
+    label: "Civic",
+    value: 111,
+    text: "Excise Taxation Department",
+    yearWiseData: [4099, 2301, 1741, 2788, 1722],
+    sun: xAxis,
+    vehicleType:'Four-Wheelers (Cars)'
+
+    // isEmpty: true,
+  },{
+    id: 3,
+    label: "Mira",
+    value: 111,
+    text: "Excise Taxation Department",
+    yearWiseData: [2742, 1067, 708, 1762, 1300],
+    sun: xAxis,
+    vehicleType:'Four-Wheelers (Cars)'
+
+    // isEmpty: true,
+  }
+  // ,{
+  //   id: 3,
+  //   label: "HARLEY DAVIDSON",
+  //   value: 111,
+  //   text: "Excise Taxation Department",
+  //   yearWiseData: [29, 32, 13, 5, 32],
+  //   sun: xAxis,
+  //   vehicleType:'Four-Wheelers (Cars)'
+
+  //   // isEmpty: true,
+  // },{
+  //   id: 3,
+  //   label: "HARLEY DAVIDSON",
+  //   value: 111,
+  //   text: "Excise Taxation Department",
+  //   yearWiseData: [29, 32, 13, 5, 32],
+  //   sun: xAxis,
+  //   vehicleType:'Four-Wheelers (Cars)'
+
+  //   // isEmpty: true,
+  // },{
+  //   id: 3,
+  //   label: "HARLEY DAVIDSON",
+  //   value: 111,
+  //   text: "Excise Taxation Department",
+  //   yearWiseData: [29, 32, 13, 5, 32],
+  //   sun: xAxis,
+  //   vehicleType:'Four-Wheelers (Cars)'
+
+  //   // isEmpty: true,
+  // },{
+  //   id: 3,
+  //   label: "HARLEY DAVIDSON",
+  //   value: 111,
+  //   text: "Excise Taxation Department",
+  //   yearWiseData: [29, 32, 13, 5, 32],
+  //   sun: xAxis,
+  //   vehicleType:'Four-Wheelers (Cars)'
+
+  //   // isEmpty: true,
+  // },{
+  //   id: 3,
+  //   label: "HARLEY DAVIDSON",
+  //   value: 111,
+  //   text: "Excise Taxation Department",
+  //   yearWiseData: [29, 32, 13, 5, 32],
+  //   sun: xAxis,
+  //   vehicleType:'Four-Wheelers (Cars)'
+
+  //   // isEmpty: true,
+  // },
+,
     //////////////////////Private College
     {
       id: 4,
@@ -273,17 +551,7 @@ const Dashboard = () => {
     // setSelectedDepart(item?.label)
     return selectedDepartment == item?.text ? item : null;
   });
-  useEffect(() => {
-    setSelectedDepart(dataForDonut[0]?.label);
-  }, [selectedDepartment]);
-  let subDropdownFilter;
-  if (dataForDonut[0]) {
-    subDropdownFilter = dataForDonut?.filter((item) => {
-      return item?.label == selectedDepart && item;
-    });
-  } else {
-    subDropdownFilter = [1, 2, 3, 4, 5];
-  }
+
   const add = () => {
     
     // if (subDropdownFilter) {
@@ -298,6 +566,66 @@ const Dashboard = () => {
     //   return [1, 1, 1, 1, 1];
     // }
   };
+  const handleDepartment = (event) => {
+    let value = event.target.value
+    if(value == 'Excise Taxation Department'){
+      setgetVehicleType('Two-Wheelers (Bikes)')
+      setVehicleName('Honda')
+    }
+    setSelectedDepartment(value);
+  };
+   
+  // let vehicleName= dataForDonut.filter((item)=>{
+  
+  //     return  item?.vehicleType == getVehicleType ? item:null
+  //  })
+   const vehicleName = useMemo(()=> {
+    let selectedData =  dataForDonut.filter((item)=>{
+  
+            return  item?.vehicleType == getVehicleType ? item:null
+         })
+         return selectedData
+   },[getVehicleType,selectedDepartment])
+
+ const [getVehicleName, setVehicleName] = useState(vehicleName[0]?.label)
+ 
+  const handleVehicleType=(event)=>{
+    let {value} = event.target
+    setgetVehicleType(value)
+    let selectedData = dataForDonut.filter((item)=>{
+      return  item?.vehicleType == value ? item:null
+   })
+   setVehicleName(selectedData[0].label)
+  }
+
+const handleVehicleName=(event)=>{
+  setVehicleName(event.target.value)
+}
+
+ let singleBar= vehicleName.filter((item)=>{
+    return  item?.label == getVehicleName ? item:null
+ })
+
+ useEffect(() => {
+  setSelectedDepart(dataForDonut[0]?.label);
+}, [selectedDepartment]);
+let subDropdownFilter;
+if(vehicleName[0]){
+  debugger
+  subDropdownFilter = dataForDonut?.filter((item) => {
+    return item?.label == getVehicleName  && item;
+  });
+}
+else  if (dataForDonut[0]) {
+  debugger
+  subDropdownFilter = dataForDonut?.filter((item) => {
+    return item?.label == getVehicleName || item?.label == selectedDepart && item;
+  });
+}
+
+else {
+  subDropdownFilter = [1, 2, 3, 4, 5];
+}
   const options = {
     responsive: true,
     plugins: {
@@ -323,6 +651,8 @@ const Dashboard = () => {
     "2021-22",
     "2022-23",
   ];
+var randomNumber = Math.floor(Math.random() * 13);
+ 
   const data = {
     labels: lable,
     // datasets: [
@@ -332,14 +662,28 @@ const Dashboard = () => {
     //     backgroundColor:color[Math.floor(Math.random() * 6) + 1] ,
     //   },
     // ],
-    datasets: dataForDonut.map((item, index) => {
+    datasets:singleBar.length > 0 ? singleBar.map((item, index) => {
+      debugger
+      return {
+        label: subDropdownFilter[0]?.label,
+        data: item?.yearWiseData,
+        backgroundColor: color[randomNumber],
+      };
+    }
+    
+    ):  dataForDonut.map((item, index) => {
       return {
         label: subDropdownFilter[0]?.label,
         data: item?.yearWiseData,
         backgroundColor: color[index],
       };
-    }),
+    }
+    
+    )
   };
+
+
+
   return (
     <>
       {windowWidth <= 500 ? <MobileHeaderGeneric /> : <GenericHeader />}
@@ -378,8 +722,11 @@ You can also contact us for further details on your specific queries at feedback
       </div>
           </div>
           <div className="row mb-sm-5 mb-md-4  justify-content-between g-0 ">
-            <div className="col-md-4 ">
-              <div className="">
+            <div className={  selectedDepartment === 'Excise Taxation Department'?"col-md-3 ":"col-md-4 "}>
+              <div className="">    
+                 <InputLabel shrink htmlFor="Department">
+                 Department
+                </InputLabel>
                 <Select
                   size="small"
                   native
@@ -389,7 +736,7 @@ You can also contact us for further details on your specific queries at feedback
                   onChange={handleDepartment}
                   inputProps={{
                     name: "case",
-                    id: "outlined-age-native-simple",
+                    id: "Department",
                   }}
                 >
                   {department?.map((item) => {
@@ -399,107 +746,63 @@ You can also contact us for further details on your specific queries at feedback
               </div>
               {/* </Fade> */}
             </div>
-            {/* <Fade right>
-              <div className="col-md-4">
-                <Select
-                  size="small"
-                  native
-                  style={{ width: "100%" }}
-                  defaultValue={selectedDepartment}
-                  value={selectedDepartment}
-                  onChange={handleDepartment}
-                  inputProps={{
-                    name: "case",
-                    id: "outlined-age-native-simple",
-                  }}
-                >
-                  {department.map((item) => {
-                    return <option value={item.value}>{item.text}</option>;
-                  })}
-                </Select>
-              </div>
-            </Fade> */}
-              <div className="col-4">
-                <Select
-                  size="small"
-                  native
-                  style={{ width: "100%" }}
-                  defaultValue={selectedDepart}
-                  value={selectedDepart}
-                  onChange={handleDepart}
-                  inputProps={{
-                    name: "case",
-                    id: "outlined-age-native-simple",
-                  }}
-                >
-                  {dataForDonut?.map((item) => {
-                    return <option value={item?.label}>{item?.label}</option>;
-                  })}
-                </Select>
-              </div>
-            {/* <div className="row g-0 ">
-              <div className="col-12 d-flex justify-content-end">
-                {dataForDonut[1] && (
-                  <div className="col-4 ">
-                    {dataForDonut?.map((item, index) => {
-                      return (
-                        <>
-                          {index == 0 ? (
-                            <>
-                              <div className="d-flex">
-                              <Checkbox
-                                defaultValue={selectedDepart}
-                                value={item.label}
-                                onChange={handleDepart}
-                                defaultChecked
-                                {...label}
-                              />
-                              <p  className="mt-3">{item.label}</p>
-                              </div>
-                            </>
-                          ) : (
+         {
+  selectedDepartment === 'Excise Taxation Department' && (
+    <div className="col-3">
+      <InputLabel shrink htmlFor=" Vehicle Type">
+        Vehicle Type
+      </InputLabel>
+      <Select
+        size="small"
+        native
+        style={{ width: '100%' }}
+        defaultValue={getVehicleType}
+        value={getVehicleType}
+        onChange={handleVehicleType}
+        inputProps={{
+          name: 'case',
+          id: ' Vehicle Type',
+        }}
+      >
+        {vehicleType?.map((item) => (
+          <option key={item} value={item}>
+            {item}
+          </option>
+        ))}
+      </Select>
+    </div>
+  )
+        }
 
-                            <>
-                            <div className="d-flex">
-                            <Checkbox
-                              defaultValue={selectedDepart}
-                              value={item.label}
-                              onChange={handleDepart}
-                              {...label}
-                            />
-                            <p  className="mt-3">{item.label}</p>
-                            </div>
-                          </>
-                          )}
-                        </>
-                      );
-                    })}
-                  </div>
-                )}
-              </div>
-            </div> */}
+              
+{
+  selectedDepartment === 'Excise Taxation Department' && (
+    <div className="col-3 ">
+      <InputLabel shrink htmlFor=" Vehicle ">
+        Vehicle 
+      </InputLabel>
+      <Select
+        size="small"
+        native
+        style={{ width: '100%' }}
+        defaultValue={vehicleName[0]?.label}
+        value={getVehicleName}
+        onChange={handleVehicleName}
+        inputProps={{
+          name: 'case',
+          id: ' Vehicle ',
+        }}
+      >
+        {vehicleName?.map((item) => (
+          <option key={item.label} value={item.label}>
+            {item.label}
+          </option>
+        ))}
+      </Select>
+    </div>
+  )
+        }
           </div>
-          {/* <div className="row g-0 bg-secondary ">
-            {year.map((item, index) => {
-              return (
-                <Zoom>
-                  <div
-                    className={`col-sm-12 bg-primary ${
-                      year.length == index + 1 ? 0 : "me-3"
-                    }  box`}
-                  >
-                    <div className="department">
-                      <h4>{item}</h4>
-                    </div>
-                    <div className="tolat_department">
-                      <h1>{add()[index]}</h1>
-                    </div>
-                  </div>
-                  
-                </Zoom>
-              );
-            })}
-          </div> */}
           <div
             className={` row g-0 justify-content-between mt-4 mt-sm-0 bg-primary `}
           >
@@ -655,6 +958,7 @@ You can also contact us for further details on your specific queries at feedback
                       }}
                     >
                       <div className="department">
+
                         <h4>{item}</h4>
                       </div>
                       <div className="tolat_department">
@@ -678,29 +982,6 @@ You can also contact us for further details on your specific queries at feedback
         <div className="chart_container">
           {/* <Fade > */}
           <div className="pie_chart ">
-            {/* <div className="row justify-content-between g-0  mb-3">
-              <div className="col ">
-                <h4 className='title'>{selectedDepart}</h4>
-              </div>
-              <div className="col-4">
-                <Select
-                  size='small'
-                  native
-                  style={{ width: "100%", }}
-                  defaultValue={selectedDepart}
-                  value={selectedDepart}
-                  onChange={handleDepart}
-                  inputProps={{
-                    name: "case",
-                    id: "outlined-age-native-simple",
-                  }}
-                  >
-                  <option value={"Labour Department"}>Labour Department</option>;
-                  <option value={"Health Department"}>Health Department</option>;
-                  </Select>
-                  </div>
-                </div> */}
-
             <div className="row g-0 ">
               <div className="col-md-12 col-lg-6 xxl-4 pe-xxl-4 mt-md-0   mt-sm-5 mt-lg-5 mt-xxl-0 ">
                 {/* <Donut/> */}
@@ -731,23 +1012,22 @@ You can also contact us for further details on your specific queries at feedback
       height={350}
     /> */}
                 <DonutChart
-                  onMouseEnter={(item) => {
-                    console.log(item);
-                  }}
                   innerWidth={500}
                   legend={false}
                   clickToggle={false}
                   colors={color}
                   data={
-                    dataForDonut || [
-                      {
-                        id: 4,
-                        label: "License For Pesticide Dealership",
-                        value: 73,
-                        text: "Agriculture Department",
-                        yearWiseData: [12, 13, 14, 17, 17],
-                      },
-                    ]
+                      selectedDepartment == "Excise Taxation Department"? 
+                      vehicleName
+                  :    dataForDonut || [
+                    {
+                      id: 4,
+                      label: "License For Pesticide Dealership",
+                      value: 73,
+                      text: "Agriculture Department",
+                      yearWiseData: [12, 13, 14, 17, 17],
+                    },
+                  ]
                   }
                   stroke={false}
                   height={
@@ -794,22 +1074,42 @@ You can also contact us for further details on your specific queries at feedback
                 />
                 {/* <Donut/> */}
                 {/* ////////////////////////////////////////////////////////////////////// */}
-                {/* <Doughnut data={d}
-         options={options}
-         onAnimationStart={true}
-         borderRadius={50}
-         borderJoinStyle='round'
-         hoverBackgroundColor='red'
-         borderColor='red'
-         label={false}
-         legend={false}
-         color='red'
-         /> */}
               </div>
 
-              <div className="col-sm-12 bg-primary col-lg-5 col-xxl-4 justify-content-end lable_parent">
-                <div className="wappper ms-md-3 ms-xxl-0">
-                  {dataForDonut.map((item, id) => {
+              <div  className="col-sm-12 col-lg-5 col-xxl-4 justify-content-end lable_parent">
+                <div className="wappper ms-md-3 ms-xxl-0 " >
+                  {
+                  selectedDepartment === 'Excise Taxation Department'? vehicleName.map((item, id) => {
+                  return (
+                    <>
+                      <div className="lable_container ">
+                        <div
+                          style={{
+                            height: 15,
+                            minWidth: 15,
+                            borderRadius: 2,
+                            backgroundColor: color[id],
+                            marginRight: 5,
+                            marginTop: 5,
+                          }}
+                          className="lable_box"
+                        ></div>
+                        <p
+                          style={{
+                            backgroundColor: Color == item.id && "",
+                            padding: 0,
+                          }}
+                          className="lable mt-n5"
+                          id={id + 1}
+                        >
+                          {item?.label}
+                        </p>
+                      </div>
+                    </>
+                  );
+                }):
+
+                  dataForDonut.map((item, id) => {
                     return (
                       <>
                         <div className="lable_container ">
@@ -837,7 +1137,9 @@ You can also contact us for further details on your specific queries at feedback
                         </div>
                       </>
                     );
-                  })}
+                  })
+                  
+                  }
                 </div>
               </div>
             </div>
@@ -850,7 +1152,7 @@ You can also contact us for further details on your specific queries at feedback
               <div className="col">
                 <h3>
                   {dataForDonut?.length > 1
-                    ? selectedDepart
+                    ? getVehicleName
                     : selectedDepartment}
                 </h3>
               </div>

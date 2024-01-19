@@ -803,7 +803,7 @@ export default function GenericHeader(props) {
                     class=" dropbtn hover-rotate fa fa-chevron-right"
                   ></i>
                   <div class="dropdown-content">
-                      <a style={{ fontWeight:"bold",}} href="https://smeda.org/index.php?option=com_content&view=article&id=146&Itemid=676" target="_blank"> GUIDS  </a>
+                      <a style={{ fontWeight:"bold",}} href="https://smeda.org/index.php?option=com_content&view=article&id=146&Itemid=676" target="_blank"> GUIDES  </a>
                       <a   style={{marginLeft:'10px'}}    href="https://smeda.org/index.php?option=com_phocadownload&view=category&id=122&Itemid=308" target="_blank">Pre-Feasibility Studies </a>
                       <a  style={{marginLeft:'10px'}}  target="_blank"       href="https://smeda.org/index.php?option=com_phocadownload&view=category&id=164&Itemid=981">
                       Business Guides
@@ -818,7 +818,7 @@ export default function GenericHeader(props) {
                       Trade Information Portal
                       </a>
                       <a style={{marginLeft:'10px'}}  target="_blank"       href={InvestmentDepartment}>
-                      Investment Department
+                      Investment in Sindh
                       </a>
                       <a style={{ fontWeight:"bold"}} target="_blank" href="">
                       REPORTS
@@ -838,6 +838,9 @@ export default function GenericHeader(props) {
                       </a>
                       <a style={{marginLeft:'10px'}}  target="_blank"      href="https://smeda.org/index.php?option=com_phocadownload&view=category&id=168&Itemid=996">
                       Trade Analysis Series
+                      </a>
+                      <a style={{marginLeft:'10px'}}  target="_blank"      href="https://tipp.gov.pk/?r=site/display&id=230">
+                      Trade Statsitics
                       </a>
                   </div>
                 </div>

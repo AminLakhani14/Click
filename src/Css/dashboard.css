@@ -128,19 +128,35 @@ p {
    position: absolute;
    top: 24px;
    right: 0px;
-   background-color: #720d1d;
+   overflow-y: auto;
+   min-height: 400px;
    /* flex-direction: column; */
   }
   .lable_container{
     display: flex;
-    /* justify-content: space-between; */
-    /* align-items: baseline; */
-    /* gap: 20px; */
-  height: 100%;
-  /* background-color: red; */
- 
-  
 }
+.lable_parent::-webkit-scrollbar {
+  width: 5px;
+  height: 10px !important;
+}
+
+.lable_parent::-webkit-scrollbar-thumb {
+  background: #054a91;
+  border-radius: 6px;
+}
+
+.lable_parent::-webkit-scrollbar-thumb:hover {
+  background: #720d1d;
+}
+
+.lable_parent::-webkit-scrollbar-button:start:decrement {
+  display: none;
+}
+
+.lable_parent::-webkit-scrollbar-button:end:increment {
+  display: none;
+}
+
 .wappper{
   position: absolute;
   top:px;

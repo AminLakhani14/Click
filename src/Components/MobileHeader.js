@@ -13,6 +13,8 @@ import urdu from "../assets/urdu.png";
 import Sindhi from "../assets/Sindhi.png";
 import { translations } from "../Transalation/Transalation";
 import { useSelector } from "react-redux";
+import InvestmentDepartment from "../assets/DownloadDocument/CompetitivenessofSindh.pdf"
+
 function MobileHome(props) {
   const {language} = useSelector((state)=>state.language)
 
@@ -43,13 +45,6 @@ function MobileHome(props) {
     false, // For "Eduction"
     false, // For "Energy"
     false, // For "Health"
-    false, // For "Health"
-    false, // For "Health"
-    false, // For "Health"
-    false, // For "Information Technology
-    false, // For "Information Technology
-    false, // For "Information Technology
-    false, // For "Information Technology
     false, // For "Information Technology
   ]);
 
@@ -64,10 +59,16 @@ function MobileHome(props) {
   const handleIconClick = (index) => {
     debugger
     // Toggle the dropdown state
-    const newDropdownStates = [...dropdownStates];
+    let newDropdownStates = [...dropdownStates];
     newDropdownStates[index] = !newDropdownStates[index];
     setDropdownStates(newDropdownStates);
   };
+
+  const [isAbout, setIsAbout] = useState(false);
+
+  const handleAbout = () => {
+    setIsAbout(!isAbout);
+  }
 
   const closeDropdown = (index) => {
     debugger
@@ -434,7 +435,7 @@ function MobileHome(props) {
                           } >
                           <label
                           
-                            for="drop-3"
+                            for="drop-4"
                             style={
                               language === "ur" || language === "sd"
                                 ? {
@@ -479,7 +480,7 @@ function MobileHome(props) {
                               ></span>
                             )}
                           </label>
-                          <input type="checkbox" id="drop-3" />
+                          <input type="checkbox" id="drop-4" />
                           <ul>
                             <li className="borderline"
                             style={
@@ -658,6 +659,28 @@ function MobileHome(props) {
                                {translations["TradeInformationPortal"][language]}
                               </a>
                             </li>
+                            <li>
+                            <a
+                              target="_blank"
+                              href={InvestmentDepartment}
+                              style={
+                                language === "ur" ||
+                                  language === "sd"
+                                  ? {
+                                    display: "flex",
+                                    flexDirection: "row-reverse",
+                                    marginRight: "-16px",
+                                  }
+                                  : {
+                                    marginLeft:"10px"
+
+                                  }
+                              }
+                            >
+                              {translations["InvestmentDepartment"][language]}
+                            </a>
+                            </li>
+                           
                             <li className="borderline"
                             style={
                               language === "ur" || language === "sd"
@@ -1834,37 +1857,24 @@ function MobileHome(props) {
                             <Link to={"/aboutus"} style={{ width: "212px", padding: "0px", fontSize: "20px" }}>
                             {translations["Aboutus"][language]}
                             </Link>
-                            {dropdownStates[9] ? (
-                              <span
-                              style={
-                                language === "ur" || language === "sd"
-                                  ? {
-                                    display: "flex",
-                                    marginLeft: "-70px",
-                                  }
-                                  : { display: "contents" }
-                              }
-                                className="minus"
-                                onClick={() => handleIconClick(9)} // Click on icon to open/close the dropdown
-                                // onMouseEnter={() => handleIconClick(9)} // Hover on icon to open/close the dropdown
-                                // onMouseLeave={() => closeDropdown(9)} // Leave icon to close the dropdown
-                              ></span>
-                            ) : (
-                              <span
-                              style={
-                                language === "ur" || language === "sd"
-                                  ? {
-                                    display: "flex",
-                                    marginLeft: "-70px",
-                                  }
-                                  : { display: "contents" }
-                              }
-                                className="plus"
-                                onClick={() => handleIconClick(9)} // Click on icon to open/close the dropdown
-                                // onMouseEnter={() => handleIconClick(9)} // Hover on icon to open/close the dropdown
-                                // onMouseLeave={() => closeDropdown(9)} // Leave ico/ Leave icon to close the dropdown
-                              ></span>
-                            )}
+                            {/* {dropdownStates[9] ? ( */}
+                            {dropdownStates[14] ? (
+                                <span
+                                style={{display:"contents"}}
+                                  className="minus"
+                                  onClick={() => handleIconClick(14)} // Click on icon to open/close the dropdown
+                                  onMouseEnter={() => handleIconClick(14)} // Hover on icon to open/close the dropdown
+                                   onMouseLeave={() => closeDropdown(14)} // Leave icon to close the dropdown
+                                ></span>
+                              ) : (
+                                <span 
+                                style={{display:"contents"}}
+                                  className="plus"
+                                  onClick={() => handleIconClick(14)} // Click on icon to open/close the dropdown
+                                  onMouseEnter={() => handleIconClick(14)} // Hover on icon to open/close the dropdown
+                                  onMouseLeave={() => closeDropdown(14)} // Leave ico/ Leave icon to close the dropdown
+                                ></span>
+                              )}
                           </label>
                           <input type="checkbox" id="drop-3" />
                           <ul>
