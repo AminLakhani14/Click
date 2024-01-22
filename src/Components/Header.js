@@ -567,12 +567,13 @@ const {language} = useSelector((state)=>state.language)
                   placement="bottom"
                   title={schoolEnergyDepartment}
                   arrow={mergedArrow}
+                  zIndex={10000}
                 >
                   <img
                     className="headerLogoImages"
                     src={accessibility}
                     alt=""
-                    style={{ cursor: "pointer" }}
+                    style={{ cursor: "pointer", }}
                   />
                 </Tooltip>
                 {/* <img
@@ -614,9 +615,7 @@ const {language} = useSelector((state)=>state.language)
               </div>
             </div>
             {isSticky === true ? (
-              <div style={{ position: "relative", zIndex: "99999999999" }}>
                 <GenericHeader toggleLanguage={props.toggleLanguage} SindhitoggleLanguage={props.SindhitoggleLanguage} handleSearch={props.handleSearch}  searchTextRef={props.searchTextRef}/>
-              </div>
             ) : 
             (
               // <div className={`header `}>
@@ -671,7 +670,7 @@ const {language} = useSelector((state)=>state.language)
               //         </li>
               //         <li>
               //           <div
-              //             class="dropdown"
+              //             class="dropdown1"
               //             style={
               //               language === "ur" || language === "sd"
               //                 ? {
@@ -711,7 +710,7 @@ const {language} = useSelector((state)=>state.language)
               //               }
               //             ></i>
               //             <div
-              //               class="dropdown-content"
+              //               class="dropdown-content1"
               //               style={
               //                 language === "ur" || language === "sd"
               //                   ? { marginTop: "30px" }
@@ -719,7 +718,7 @@ const {language} = useSelector((state)=>state.language)
               //               }
               //             >
               //               <div
-              //                 class="nested-dropdown"
+              //                 class="nested-dropdown1"
               //                 style={{ width: "100%" }}
               //               >
               //                 <span
@@ -800,7 +799,7 @@ const {language} = useSelector((state)=>state.language)
               //                   ></i>
               //                 </span>
               //                 <div
-              //                   class="dropdown-content nested-content nested-right"
+              //                   class="dropdown-content1 nested-content nested-right"
               //                   style={{ width: "200px" }}
               //                 >
               //                   <Link className={""} to={"/manufacturing#expertform"}>
@@ -887,7 +886,7 @@ const {language} = useSelector((state)=>state.language)
               //                   ></i>
               //                 </span>
               //                 <div
-              //                   class="dropdown-content nested-content nested-right"
+              //                   class="dropdown-content1 nested-content nested-right"
               //                   style={{ width: "200px", marginTop: "40px" }}
               //                 >
               //                   <Link className={""} to={"/textile#expertform"}>
@@ -903,7 +902,7 @@ const {language} = useSelector((state)=>state.language)
               //               </div>
 
               //               <div
-              //                 class="nested-dropdown"
+              //                 class="nested-dropdown1"
               //                 style={{ width: "100%" }}
               //               >
               //                 <span
@@ -976,7 +975,7 @@ const {language} = useSelector((state)=>state.language)
               //                   ></i>
               //                 </span>
               //                 <div
-              //                   class="dropdown-content nested-content nested-right"
+              //                   class="dropdown-content1 nested-content nested-right"
               //                   style={{ width: "200px", marginTop: "80px" }}
               //                 >
               //                   <Link className={""} to={"/tourism#expertform"} >
@@ -992,7 +991,7 @@ const {language} = useSelector((state)=>state.language)
               //               </div>
 
               //               <div
-              //                 class="nested-dropdown"
+              //                 class="nested-dropdown1"
               //                 style={{ width: "100%" }}
               //               >
               //                 <span
@@ -1065,7 +1064,7 @@ const {language} = useSelector((state)=>state.language)
               //                   ></i>
               //                 </span>
               //                 <div
-              //                   class="dropdown-content nested-content nested-right"
+              //                   class="dropdown-content1 nested-content nested-right"
               //                   style={{ width: "200px", marginTop: "120px" }}
               //                 >
               //                   <Link className={""} to={"/agriculture#expertform"}>
@@ -1081,7 +1080,7 @@ const {language} = useSelector((state)=>state.language)
               //               </div>
 
               //               <div
-              //                 class="nested-dropdown"
+              //                 class="nested-dropdown1"
               //                 style={{ width: "100%" }}
               //               >
               //                 <span
@@ -1157,7 +1156,7 @@ const {language} = useSelector((state)=>state.language)
               //                   ></i>
               //                 </span>
               //                 <div
-              //                   class="dropdown-content nested-content nested-right"
+              //                   class="dropdown-content1 nested-content nested-right"
               //                   style={{ width: "200px", marginTop: "160px" }}
               //                 >
               //                   <Link className={""} to={"/education#expertform"}>
@@ -1173,7 +1172,7 @@ const {language} = useSelector((state)=>state.language)
               //               </div>
 
               //               <div
-              //                 class="nested-dropdown"
+              //                 class="nested-dropdown1"
               //                 style={{ width: "100%" }}
               //               >
               //                 <span
@@ -1246,7 +1245,7 @@ const {language} = useSelector((state)=>state.language)
               //                   ></i>
               //                 </span>
               //                 <div
-              //                   class="dropdown-content nested-content nested-right"
+              //                   class="dropdown-content1 nested-content nested-right"
               //                   style={{ width: "200px", marginTop: "200px" }}
               //                 >
               //                   <Link  className={""} to={"/energy#expertform"}>
@@ -1262,7 +1261,7 @@ const {language} = useSelector((state)=>state.language)
               //               </div>
 
               //               <div
-              //                 class="nested-dropdown"
+              //                 class="nested-dropdown1"
               //                 style={{ width: "100%" }}
               //               >
               //                 <span
@@ -1333,7 +1332,7 @@ const {language} = useSelector((state)=>state.language)
               //                   ></i>
               //                 </span>
               //                 <div
-              //                   class="dropdown-content nested-content nested-right"
+              //                   class="dropdown-content1 nested-content nested-right"
               //                   style={{ width: "200px", marginTop: "240px" }}
               //                 >
               //                   <Link  className={""} to={"/health#expertform"}>
@@ -1349,7 +1348,7 @@ const {language} = useSelector((state)=>state.language)
               //               </div>
 
               //               <div
-              //                 class="nested-dropdown"
+              //                 class="nested-dropdown1"
               //                 style={{ width: "100%" }}
               //               >
               //                 <span
@@ -1425,7 +1424,7 @@ const {language} = useSelector((state)=>state.language)
               //                   ></i>
               //                 </span>
               //                 <div
-              //                   class="dropdown-content nested-content nested-right"
+              //                   class="dropdown-content1 nested-content nested-right"
               //                   style={{ width: "200px", marginTop: "280px" }}
               //                 >
               //                   <Link  className={""}  to={"/informationtech#expertform"}>
@@ -1455,7 +1454,7 @@ const {language} = useSelector((state)=>state.language)
               //         </li>
               //         <li>
               //           <div
-              //             class="dropdown"
+              //             class="dropdown1"
               //             style={
               //               language === "ur" || language === "sd"
               //                 ? {
@@ -1489,7 +1488,7 @@ const {language} = useSelector((state)=>state.language)
               //               class=" dropbtn iconDown hover-rotate fa fa-chevron-right"
               //             ></i>
               //             <div
-              //               class="dropdown-content"
+              //               class="dropdown-content1"
               //               style={
               //                 language === "ur" || language === "sd"
               //                   ? { marginTop: "30px" }
@@ -1516,7 +1515,7 @@ const {language} = useSelector((state)=>state.language)
               //         </li>
               //         <li>
               //           <div
-              //             class="dropdown"
+              //             class="dropdown1"
               //             style={
               //               language === "ur" || language === "sd"
               //                 ? {
@@ -1551,7 +1550,7 @@ const {language} = useSelector((state)=>state.language)
               //               class="dropbtn iconDown hover-rotate fa fa-chevron-right"
               //             ></i>
               //             <div
-              //               class="dropdown-content"
+              //               class="dropdown-content1"
               //               style={
               //                 language === "ur" || language === "sd"
               //                   ? { marginTop: "30px" }
@@ -1577,7 +1576,7 @@ const {language} = useSelector((state)=>state.language)
               //                 </a>
               //               </Link>
               //               <div
-              //                 class="nested-dropdown"
+              //                 class="nested-dropdown1"
               //                 style={{ width: "100%" }}
               //               >
               //                 <span
@@ -1650,7 +1649,7 @@ const {language} = useSelector((state)=>state.language)
               //                   ></i>
               //                 </span>
               //                 <div
-              //                   class="dropdown-content nested-content nested-right"
+              //                   class="dropdown-content1 nested-content nested-right"
               //                   style={{ left: "auto" }}
               //                 >
               //                   <Link className={""} to={"/Component"}>
@@ -1783,9 +1782,9 @@ const {language} = useSelector((state)=>state.language)
                         </Link>
                       </a>
                     </li> */}
-                    <li>
+                    <li >
                     <div
-                        class="dropdown"
+                        class="dropdown1"
                         style={
                           language === "ur" || language === "sd"
                             ? {
@@ -1823,7 +1822,7 @@ const {language} = useSelector((state)=>state.language)
                           class="dropbtn iconDown hover-rotate fa fa-chevron-right"
                         ></i>
                         <div
-                          class="dropdown-content"
+                          class="dropdown-content1"
                           style={
                             language === "ur" || language === "sd"
                               ? { marginTop: "30px" }
@@ -1834,7 +1833,7 @@ const {language} = useSelector((state)=>state.language)
                         >
                          
                           {/* <div
-                            class="nested-dropdown"
+                            class="nested-dropdown1"
                             style={{ width: "100%" }}
                           >
                             <span
@@ -1907,7 +1906,7 @@ const {language} = useSelector((state)=>state.language)
                               ></i>
                             </span>
                             <div
-                              class="dropdown-content nested-content nested-right"
+                              class="dropdown-content1 nested-content nested-right"
                               style={{ left: "auto" }}
                             >
                               <Link className={""} to={"/Component"}>
@@ -2073,9 +2072,9 @@ const {language} = useSelector((state)=>state.language)
                         </div>
                       </div>
                     </li>
-                    <li>
+                    <li >
                     <div
-                        class="dropdown"
+                        class="dropdown1"
                         style={
                           language === "ur" || language === "sd"
                             ? {
@@ -2113,7 +2112,7 @@ const {language} = useSelector((state)=>state.language)
                           class="dropbtn iconDown hover-rotate fa fa-chevron-right"
                         ></i>
                         <div
-                          class="dropdown-content"
+                          class="dropdown-content1"
                           style={
                             language === "ur" || language === "sd"
                               ? { marginTop: "30px" }
@@ -2424,9 +2423,9 @@ const {language} = useSelector((state)=>state.language)
                     </li>
 
               
-                    <li>
+                    <li >
                     <div
-                        class="dropdown"
+                        class="dropdown1"
                         style={
                           language === "ur" || language === "sd"
                             ? {
@@ -2462,7 +2461,7 @@ const {language} = useSelector((state)=>state.language)
                           class="dropbtn iconDown hover-rotate fa fa-chevron-right"
                         ></i>
                         <div
-                          class="dropdown-content"
+                          class="dropdown-content1"
                           style={
                             language === "ur" || language === "sd"
                               ? { marginTop: "30px" }
@@ -2473,7 +2472,7 @@ const {language} = useSelector((state)=>state.language)
                         >
                      
                           {/* <div
-                            class="nested-dropdown"
+                            class="nested-dropdown1"
                             style={{ width: "100%" }}
                           >
                             <span
@@ -2546,7 +2545,7 @@ const {language} = useSelector((state)=>state.language)
                               ></i>
                             </span>
                             <div
-                              class="dropdown-content nested-content nested-right"
+                              class="dropdown-content1 nested-content nested-right"
                               style={{ left: "auto" }}
                             >
                               <Link className={""} to={"/Component"}>
@@ -2706,7 +2705,7 @@ const {language} = useSelector((state)=>state.language)
                     </li> */}
                     {/* <li>
                       <div
-                        class="dropdown"
+                        class="dropdown1"
                         style={
                           language === "ur" || language === "sd"
                             ? {
@@ -2739,7 +2738,7 @@ const {language} = useSelector((state)=>state.language)
                           class=" dropbtn iconDown hover-rotate fa fa-chevron-right"
                         ></i>
                         <div
-                          class="dropdown-content"
+                          class="dropdown-content1"
                           style={
                             language === "ur" || language === "sd"
                               ? { marginTop: "30px" }
@@ -2765,7 +2764,7 @@ const {language} = useSelector((state)=>state.language)
                     </li> */}
                     {/* <li>
                       <div
-                        class="dropdown"
+                        class="dropdown1"
                         style={
                           language === "ur" || language === "sd"
                             ? {
@@ -2800,7 +2799,7 @@ const {language} = useSelector((state)=>state.language)
                           class="dropbtn iconDown hover-rotate fa fa-chevron-right"
                         ></i>
                         <div
-                          class="dropdown-content"
+                          class="dropdown-content1"
                           style={
                             language === "ur" || language === "sd"
                               ? { marginTop: "30px" }
@@ -2826,7 +2825,7 @@ const {language} = useSelector((state)=>state.language)
                             </a>
                           </Link>
                           <div
-                            class="nested-dropdown"
+                            class="nested-dropdown1"
                             style={{ width: "100%" }}
                           >
                             <span
@@ -2899,7 +2898,7 @@ const {language} = useSelector((state)=>state.language)
                               ></i>
                             </span>
                             <div
-                              class="dropdown-content nested-content nested-right"
+                              class="dropdown-content1 nested-content nested-right"
                               style={{ left: "auto" }}
                             >
                               <Link className={""} to={"/Component"}>
@@ -2986,7 +2985,7 @@ const {language} = useSelector((state)=>state.language)
        
 
           {/* <div className="row sticky-icon"></div> */}
-          {/* <h1>zain</h1> */}
+          {/* <h1>dropdown-content1</h1> */}
         </div>
       <div className="container-fluid" style={{ overflowX: "hidden", position:'relative'}}>
         <div className="" style={{ position:"absolute",zIndex:999}}>
