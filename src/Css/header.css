@@ -1723,7 +1723,7 @@ path {
   margin-top: 60px;
 }
 
-@media only screen and (min-width: 1024px) and (max-width: 1440px) and (min-width: 1366px) {
+@media only screen and (min-width: 1024px) and (max-width: 1440px) {
   .HeaderPaddingRight {
     padding: 5px;
   }
@@ -1769,7 +1769,15 @@ path {
     font-size: 16px;
   }
 }
-
+@media only screen and (max-width: 1024px) {
+  .HeaderPaddingRight{
+    padding: 0px;
+  }
+  
+  .link2 {
+    font-size: 15px !important;
+  }
+}
 .subHeroHeading {
   font-size: var(--main-heading);
 }
@@ -1894,5 +1902,9 @@ path {
 @media only screen and (min-width: 1200px) and (max-width: 1920px) {
   .vl {
     margin-left: 15px;
+  }
+}@media only screen and (max-width:1279px) {
+  .vl{
+    margin-left: 13px;
   }
 }

@@ -186,7 +186,7 @@ export default function GenericHeader(props) {
               </Link>
           </div>
           <div className="navbarRight d-flex justify-content-end" >
-            <ul>
+            <ul className="p-0">
               <div className="r-side d-inline" >
                 <img
                   className="headerLogoImages"

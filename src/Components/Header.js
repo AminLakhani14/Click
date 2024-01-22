@@ -513,7 +513,7 @@ const {language} = useSelector((state)=>state.language)
             // height: "400px",
             // width: "100vw",
             zIndex: 9999,
-            paddingRight: "13px",
+            // paddingRight: "13px",
             paddingTop: 5,
 
             // paddingBottom:10
@@ -1734,7 +1734,7 @@ const {language} = useSelector((state)=>state.language)
               <div className={"row "} style={{height:"5px"}}>
                 <div
                   className={" navbar boxshadowNavBar justify-content-end"}
-                  style={language === "ur" || language === "sd"?{marginTop:-46}:{ width: "100%", paddingRight: "0px", marginTop:-52,}}
+                  style={language === "ur" || language === "sd"?{marginTop:-46}:windowWidth <1280?{position:'relative',zIndex:-1,background:"white",marginTop:-25,}: { width: "100%", paddingRight: "0px", marginTop:-52,}}
                 >
                   <ul
                     style={
