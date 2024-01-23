@@ -124,6 +124,11 @@ export const translations = {
     ur: 'پری فزیبلٹی اسٹڈیز',
     sd: 'پري فزيبلٽي اڀياس',
   },
+  'Studies':{
+    en:'Studies',
+    ur:'مطالعے',
+    sd:'مطالعو'
+  },
   'BusinessGuides':{
     en: 'Business Guides',
     ur: 'بزنس گائیڈز',
@@ -605,9 +610,9 @@ sd:"ٽيم"
     sd: "پهرين منزل، FTC بلڊنگ",
   },
   'Shahrah': {
-    en: 'Main Shahrah-e-Faisal Rd, Block A Faisal Cantonment',
-    ur: "مین شاہراہ فیصل روڈ، بلاک اے فیصل کنٹونمنٹ",
-    sd: "مين شاهراهه فيصل روڊ، بلاڪ اي فيصل کنٽونمينٽ",
+    en: '1st Floor, Block-A, FTC Building Shahrah-e-Faisal, Karachi.',
+    ur: "پہلی منزل، بلاک اے، ایف ٹی سی بلڈنگ شاہراہ فیصل، کراچی۔",
+    sd: "فرسٽ فلور، بلاڪ اي، ايف ٽي سي بلڊنگ شاهراه فيصل، ڪراچي."
   },
   'Karachi': {
     en: 'Karachi, Karachi City, Sindh',
@@ -645,9 +650,9 @@ sd:"ٽيم"
     sd: "نيوز ليٽر لاءِ سائن اپ ڪريو",
   },
   'Copyright': {
-    en: 'Copyright © 2023, All Rights are Reserved',
-    ur: "کاپی رائٹ © 2023، جملہ حقوق محفوظ ہیں",
-    sd: "ڪاپي رائيٽ © 2023، سڀ حق محفوظ آهن",
+    en: 'Copyright © 2024, All Rights are Reserved',
+    ur: "کاپی رائٹ © 2024، جملہ حقوق محفوظ ہیں",
+    sd: "ڪاپي رائيٽ © 2024، سڀ حق محفوظ آهن",
   },
   'Powered': {
     en: 'Powered by Infoaccess',

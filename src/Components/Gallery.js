@@ -12,6 +12,7 @@ import { useEffect } from "react";
 import { useState } from "react";
 import { getTranslatedText, translations } from "../Transalation/Transalation";
 import { useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 
 function Gallery(props) {
   const {language} = useSelector((state)=>state.language)
@@ -89,6 +90,7 @@ function Gallery(props) {
                 <div>
                   {" "}
                   <li className="card">
+                  <a href="https://www.worldbank.org/en/businessready" className="link" target="_blank">
                     <div className="img">
                       <img
                         src={world}
@@ -97,6 +99,7 @@ function Gallery(props) {
                       ></img>
                     </div>
                     <p className="card__name highlightable">{translations["BREADY"][language]}</p>
+                    </a>
                   </li>
                 </div>
                 </div>
@@ -122,10 +125,12 @@ function Gallery(props) {
                 <div>
                   {" "}
                   <li className="card">
+                    <Link to={'/feedback'} className="link">
                     <div className="img">
                       <img src={feedback} alt="img" draggable="false" style={{width:"67px"}}></img>
                     </div>
                     <p className="card__name highlightable">{translations["Feedback"][language]}</p>
+                    </Link>
                   </li>
                   ‍
                 </div>
@@ -134,12 +139,14 @@ function Gallery(props) {
                 <div>
                   {" "}
                   <li className="card">
+                    <Link to={'/RegulatoryCatalogCalculator'} className="link">
                     <div className="img">
                       <img src={calculators} alt="img" draggable="false" style={{width:"67px"}}></img>
                     </div>
                     <p className="card__name highlightable" style={{marginBottom: "-28px"}}>
                     {translations["RegulatoryCost"][language]} <br /> {translations["Calculator"][language]}
                     </p>
+                    </Link>
                   </li>
                 </div>
                 </div>
@@ -155,7 +162,7 @@ function Gallery(props) {
                         draggable="false"
                       ></img>
                     </div>
-                    <p className="card__name highlightable">{translations["KarachiFund"][language]}</p>
+                    <p className="card__name highlightable">{translations["Studies"][language]}</p>
                   </li>
                 </div>
                 </div>

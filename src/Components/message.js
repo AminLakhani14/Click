@@ -3,27 +3,31 @@ import "../Css/wheeler.css";
 import "../Css/header.css";
 import qasim from "../assets/qasim.png";
 import qasimBW from "../assets/qasimBW.jpeg";
+import CMsindh from "../assets/CMsindh.png";
 import mng1 from "../assets/teamsPic/MohammadMureedRahimoon.jpg";
 import mng2 from "../assets/teamsPic/anwarAli.jpg";
 import mng2BW from "../assets/mng2BW.jpeg";
 import quote from "../assets/quote.png";
 import muradAli from "../assets/muradalishah.png";
 import muradalishahBW from "../assets/muradalishahBW.jpeg";
+import ChiefSecretarySindh from "../assets/ChiefSecretarySindh.png";
 import { Carousel } from "@trendyol-js/react-carousel";
 import { translations } from "../Transalation/Transalation";
 import { useSelector } from "react-redux";
 
 const imageMapColor = {
-  "qasim_Id": qasim,
+  // "qasim_Id": qasim,
   "img2": mng1,
   "img3": mng2,
-  "img4": muradAli
+  "img4": CMsindh,
+  "img5":ChiefSecretarySindh
 };  
 const imageMapBW = {
-  "qasim_Id": qasimBW,
+  // "qasim_Id": qasimBW,
   "img2": mng1,
-  "img3": mng2BW,
-  "img4": muradalishahBW
+  "img3": mng2,
+  "img4": CMsindh,
+  "img5":ChiefSecretarySindh
 };
 
 let ID = "qasim_Id"
@@ -108,6 +112,78 @@ function Message(props) {
 
       },
     },
+    {
+      id:"img4",
+      img:CMsindh,
+      name: {
+        en: "Justice (Rtd.) Maqbool Baqir",
+        ur:'جسٹس (ر) مقبول باقر',
+        sd:'جسٽس (رطس) مقبول باقر'
+      },
+      subtitle: {
+        en: "Chief Minister of Sindh",
+        ur:'چیف منسٹر سندھ',
+         sd:'سنڌ جو چيف وزير'
+      },
+      desc: {
+        en: `Government of Sindh attaches a high priority to investment facilitation which it believes will take the province onto a path of progress and socio-economic development and enable it to reach its potential. The creation of Sindh Investment Department is an endorsement of Sindh Government’s commitment to improving the investment climate in the province. Sindh Investment is tasked to develop investment opportunities for large, medium, and small investors, which includes technical assistance in conducting market research and feasibility studies. Sindh has been successful in signing joint venture project where the provincial government is committed to investing with a private sector company (Sindh Engro Coal Mining Company SECMC) on a US$ 1 billion coal mining project. Sindh Government has provided the legal structure for public-private collaborations by enacting Sindh Public-Private Partnership Act, 2010. The first successful PPP project, a joint venture between the Government of Sindh and Deokjae Construction Company of Korea, the Hyderabad - Mirpurkhas Dual Carriageway has been completed, marking the beginning of a new era of infrastructure development. On March 08, 2013 former President Asif Ali Zardari inaugurated this world-class dual carriageway. President Zardari also laid the foundation stone of the Jhirk-Mulla Katiar Bridge project which is completed in 2017, it links important cities of lower Sindh, another milestone in the development of Sindh through sound joint ventures. Sindh Enterprise Development Fund is another unique initiative whereby the government provides subsidies to private sector initiatives for value addition in agro-processing, fisheries, livestock, and dairy sectors. The Government of Sindh is actively pursuing its goal to bring prosperity to its people by creating jobs and economic opportunities by facilitating investment and business.`,
+ ur:`حکومت سندھ سرمایہ کاری کی سہولت کو اعلیٰ ترجیح دیتی ہے جو اس کے خیال میں صوبے کو ترقی اور سماجی و اقتصادی ترقی کی راہ پر گامزن کرے گی اور اسے اپنی صلاحیتوں تک پہنچنے کے قابل بنائے گی۔ سندھ انویسٹمنٹ ڈیپارٹمنٹ کا قیام صوبے میں سرمایہ کاری کے ماحول کو بہتر بنانے کے لیے سندھ حکومت کے عزم کی توثیق ہے۔ سندھ انویسٹمنٹ کو بڑے، درمیانے اور چھوٹے سرمایہ کاروں کے لیے سرمایہ کاری کے مواقع تیار کرنے کا کام سونپا گیا ہے، جس میں مارکیٹ ریسرچ اور فزیبلٹی اسٹڈیز کے انعقاد میں تکنیکی مدد شامل ہے۔
+
+ سندھ مشترکہ منصوبے پر دستخط کرنے میں کامیاب رہا ہے جہاں صوبائی حکومت نجی شعبے کی کمپنی (سندھ اینگرو کول مائننگ کمپنی SECMC) کے ساتھ 1 بلین امریکی ڈالر کے کوئلے کی کان کنی کے منصوبے پر سرمایہ کاری کرنے کے لیے پرعزم ہے۔
+ 
+ سندھ حکومت نے سندھ پبلک پرائیویٹ پارٹنرشپ ایکٹ، 2010 نافذ کرکے پبلک پرائیویٹ تعاون کے لیے قانونی ڈھانچہ فراہم کیا ہے۔ پی پی پی کا پہلا کامیاب منصوبہ، حکومت سندھ اور کوریا کی ڈیوکجے کنسٹرکشن کمپنی کے درمیان مشترکہ منصوبہ، حیدرآباد - میرپورخاص ڈوئل کیریج وے بنیادی ڈھانچے کی ترقی کے ایک نئے دور کا آغاز کرتے ہوئے مکمل کر لیا گیا ہے۔ 08 مارچ 2013 کو سابق صدر آصف علی زرداری نے اس عالمی معیار کے ڈبل کیرج وے کا افتتاح کیا۔ صدر زرداری نے جھڑک ملا کٹیار پل منصوبے کا سنگ بنیاد بھی رکھا جو 2017 میں مکمل ہوا، یہ زیریں سندھ کے اہم شہروں کو آپس میں جوڑتا ہے، جو سندھ کی ترقی میں ایک اور سنگ میل کی حیثیت رکھتا ہے۔
+ 
+ سندھ انٹرپرائز ڈویلپمنٹ فنڈ ایک اور منفرد اقدام ہے جس کے تحت حکومت زرعی پروسیسنگ، فشریز، لائیو اسٹاک اور ڈیری کے شعبوں میں ویلیو ایڈیشن کے لیے نجی شعبے کے اقدامات کو سبسڈی فراہم کرتی ہے۔
+ 
+ حکومت سندھ سرمایہ کاری اور کاروبار کو آسان بنا کر روزگار کے مواقع اور معاشی مواقع پیدا کرکے اپنے لوگوں کی خوشحالی لانے کے اپنے مقصد کے لیے سرگرم عمل ہے۔`,
+ sd:`سنڌ حڪومت سيڙپڪاري جي سهولتن کي اعليٰ ترجيح ڏئي ٿي جيڪا ان کي يقين ڏياري ٿي ته صوبي کي ترقي ۽ سماجي ۽ اقتصادي ترقي جي راهه تي گامزن ڪندي ۽ ان کي ان جي صلاحيت تائين پهچڻ جي قابل بڻائيندي. سنڌ انويسٽمينٽ ڊپارٽمينٽ جو قيام صوبي ۾ سيڙپڪاري جي ماحول کي بهتر بڻائڻ لاءِ سنڌ حڪومت جي عزم جي تصديق آهي. سنڌ انويسٽمينٽ کي وڏي، وچولي ۽ ننڍڙن سيڙپڪارن لاءِ سيڙپڪاري جا موقعا پيدا ڪرڻ جو ڪم ڏنو ويو آهي، جنهن ۾ مارڪيٽ ريسرچ ۽ فزيبلٽي اسٽڊيز ڪرڻ ۾ ٽيڪنيڪل مدد شامل آهي.
+
+ سنڌ حڪومت جوائنٽ وينچر پروجيڪٽ تي صحيح ڪرڻ ۾ ڪامياب ٿي وئي آهي جتي صوبائي حڪومت خانگي شعبي جي ڪمپني (سنڌ اينگرو ڪول مائننگ ڪمپني SECMC) سان 1 بلين آمريڪي ڊالرن جي ڪوئلي جي مائننگ منصوبي تي سيڙپڪاري ڪرڻ لاءِ پرعزم آهي.
+ 
+ سنڌ حڪومت پبلڪ پرائيويٽ پارٽنرشپ ايڪٽ 2010 ذريعي پبلڪ-پرائيويٽ پارٽنرشپ لاءِ قانوني ڍانچو مهيا ڪيو آهي. پهريون ڪامياب PPP پروجيڪٽ، سنڌ حڪومت ۽ ڪوريا جي ڊيوڪجي ڪنسٽرڪشن ڪمپني جي وچ ۾ گڏيل منصوبو، حيدرآباد-ميرپورخاص ڊبل ڪيريج وي. مڪمل ڪيو ويو آهي، بنيادي ڍانچي جي ترقي جي نئين دور جي شروعات کي نشان لڳايو. 08 مارچ 2013 تي اڳوڻي صدر آصف علي زرداري هن عالمي معيار جي ڊبل ڪيريج وي جو افتتاح ڪيو. صدر زرداري 2017ع ۾ مڪمل ٿيڻ واري جهرڪ-مولا کٽيار پل منصوبي جو پڻ پيڙهه جو پٿر رکيو، اهو هيٺئين سنڌ جي اهم شهرن کي ڳنڍيندو، گڏيل گڏيل منصوبن ذريعي سنڌ جي ترقي ۾ هڪ ٻيو سنگ ميل آهي.
+ 
+ سنڌ انٽرپرائز ڊولپمينٽ فنڊ هڪ ٻيو منفرد قدم آهي جنهن تحت حڪومت زرعي پروسيسنگ، فشريز، لائيو اسٽاڪ ۽ ڊيري شعبن ۾ قدر ۾ اضافو ڪرڻ لاءِ نجي شعبي جي شروعاتن کي سبسڊي فراهم ڪري ٿي.
+ 
+ سنڌ حڪومت سيڙپڪاري ۽ ڪاروبار ۾ سهولتون فراهم ڪري روزگار ۽ معاشي موقعا پيدا ڪري پنهنجي عوام جي خوشحالي لاءِ پنهنجي مقصد تي سرگرم عمل آهي.`,
+      },
+    },
+    {
+      id:"img5",
+      img:ChiefSecretarySindh,
+      name: {
+        en: "Chief Secretary, Sindh",
+       ur:"چیف سیکریٹری، سندھ",
+       sd:'چيف سيڪريٽري، سنڌ'
+      },
+      subtitle: {
+        en: "Project Director CLICK, Investment Department Government of Sindh.",
+        ur: "پراجیکٹ ڈائریکٹر کلک کریں، محکمہ سرمایہ کاری حکومت سندھ۔",
+        sd: "پراجيڪٽ ڊائريڪٽر انويسٽمينٽ ڊپارٽمينٽ حڪومت سنڌ تي ڪلڪ ڪريو.",
+      },
+      desc: {
+        en: `Sindh is the most resilient and attractive investment destination for international and local investors. With Karachi as the financial capital of Pakistan and nucleus of major financial institutions and business houses, largely agricultural, industrial, and aquaculture base as well as emerging opportunities in the energy sector provides the province with an unmatched competitive advantage to attract investment. To capitalize on this competitive advantage, Sindh Investment Department has been established to strengthen a business-friendly environment in the province with efficient mechanisms of governance to enhance the comfort level of the investors by acting as a bridge between the Government and the business community.
+
+        Sindh Investment Department facilitates by offering the potential investors viable projects with basic technical knowledge. Through Sindh Enterprise Development Fund, the Government of Sindh has established a credit assistance window where the idea is to work closely with financial institutions and subsidize the interest rates for attracting investment in agro-based industries to support the rural economy of the province. The commencement of mega projects like Karachi Education City, Special Economic Zones, Textile City, Marble City, will provide immense employment opportunities and usher in a new era of economic activity in the province.
+        
+        With prudent policies of the Government, new investment opportunities are emerging in Sindh every day making it a top choice for foreign and local investment including relocation of industries from the developed economies.
+        
+        The Department looks forward to joining thousands of investors already benefiting from investment in Sindh as we offer a winning combination of advantages and opportunities to be your preferred investment destination.`,
+       ur:`سندھ بین الاقوامی اور مقامی سرمایہ کاروں کے لیے سرمایہ کاری کا سب سے زیادہ لچکدار اور پرکشش مقام ہے۔ کراچی پاکستان کے مالیاتی دارالحکومت کے طور پر اور بڑے مالیاتی اداروں اور کاروباری گھرانوں کے مرکز کے طور پر، بڑی حد تک زرعی، صنعتی، اور آبی زراعت کی بنیاد کے ساتھ ساتھ توانائی کے شعبے میں ابھرتے ہوئے مواقع صوبے کو سرمایہ کاری کو راغب کرنے کے لیے بے مثال مسابقتی فائدہ فراہم کرتے ہیں۔ اس مسابقتی فائدہ سے فائدہ اٹھانے کے لیے، حکومت اور کاروباری برادری کے درمیان پل کا کام کرتے ہوئے سرمایہ کاروں کے آرام کی سطح کو بڑھانے کے لیے حکومتی نظام کے موثر میکانزم کے ساتھ صوبے میں کاروبار کے لیے سازگار ماحول کو مضبوط کرنے کے لیے محکمہ سرمایہ کاری سندھ قائم کیا گیا ہے۔
+
+       محکمہ سرمایہ کاری سندھ ممکنہ سرمایہ کاروں کو بنیادی تکنیکی معلومات کے ساتھ قابل عمل منصوبوں کی پیشکش کر کے سہولت فراہم کرتا ہے۔ سندھ انٹرپرائز ڈویلپمنٹ فنڈ کے ذریعے حکومت سندھ نے کریڈٹ اسسٹنس ونڈو قائم کیا ہے جس کا خیال مالیاتی اداروں کے ساتھ مل کر کام کرنا ہے اور صوبے کی دیہی معیشت کو سہارا دینے کے لیے زرعی صنعتوں میں سرمایہ کاری کو راغب کرنے کے لیے شرح سود پر سبسڈی دینا ہے۔ کراچی ایجوکیشن سٹی، اسپیشل اکنامک زونز، ٹیکسٹائل سٹی، ماربل سٹی جیسے میگا پراجیکٹس کے آغاز سے روزگار کے بے پناہ مواقع میسر ہوں گے اور صوبے میں معاشی سرگرمیوں کے ایک نئے دور کا آغاز ہوگا۔
+       
+       حکومت کی دانشمندانہ پالیسیوں کی بدولت سندھ میں ہر روز سرمایہ کاری کے نئے مواقع ابھر رہے ہیں جو کہ ترقی یافتہ معیشتوں سے صنعتوں کی منتقلی سمیت غیر ملکی اور مقامی سرمایہ کاری کے لیے سرفہرست انتخاب بن رہے ہیں۔
+       
+       محکمہ پہلے سے ہی سندھ میں سرمایہ کاری سے مستفید ہونے والے ہزاروں سرمایہ کاروں میں شامل ہونے کا منتظر ہے کیونکہ ہم آپ کی ترجیحی سرمایہ کاری کی منزل بننے کے لیے فوائد اور مواقع کا ایک جیتنے والا مجموعہ پیش کرتے ہیں۔`,
+       sd:`سنڌ عالمي ۽ مقامي سيڙپڪارن لاءِ سڀ کان وڌيڪ لچڪدار ۽ پرڪشش سيڙپڪار ملڪ آهي. ڪراچي پاڪستان جي مالياتي راڄڌاني جي حيثيت سان ۽ وڏن مالياتي ادارن ۽ ڪاروباري گهرن جو مرڪز هجڻ سان گڏ، وڏي پيماني تي زرعي، صنعتي ۽ آبي زراعت جو بنياد ۽ گڏوگڏ توانائي جي شعبي ۾ اڀرندڙ موقعا صوبي کي سيڙپڪاري کي راغب ڪرڻ لاءِ بي مثال مقابلي جو فائدو فراهم ڪري ٿو. ان مقابلي واري فائدي مان فائدو حاصل ڪرڻ لاءِ، سنڌ انويسٽمينٽ ڊپارٽمينٽ قائم ڪيو ويو آهي ته جيئن صوبي ۾ ڪاروبار لاءِ سازگار ماحول کي مضبوط ڪري، حڪومت ۽ ڪاروباري برادريءَ جي وچ ۾ پل جي حيثيت سان ڪم ڪندي سيڙپڪارن جي آرام جي سطح کي بهتر بنائڻ لاءِ حڪومت جي موثر ميکانيزم سان.
+
+       سنڌ سيڙپڪاريءَ جو کاتو ممڪن سيڙپڪارن کي بنيادي ٽيڪنيڪل ڄاڻ سان قابل عمل منصوبا پيش ڪرڻ ۾ مدد ڪري ٿو. سنڌ انٽرپرائز ڊولپمينٽ فنڊ ذريعي، سنڌ حڪومت هڪ ڪريڊٽ اسسٽنٽ ونڊو قائم ڪيو آهي، جنهن جو خيال آهي ته مالياتي ادارن سان گڏجي ڪم ڪيو وڃي ۽ زرعي صنعتن ۾ سيڙپڪاري کي راغب ڪرڻ لاءِ سود جي شرحن تي سبسڊي ڏني وڃي ته جيئن صوبي جي ڳوٺاڻي معيشت کي هٿي وٺرائي سگهجي. ڪراچي ايجوڪيشن سٽي، اسپيشل اڪنامڪ زونز، ٽيڪسٽائيل سٽي، ماربل سٽي جهڙن ميگا پروجيڪٽس جي شروعات سان صوبي ۾ معاشي سرگرمين جي هڪ نئين دور جو آغاز ٿيندو ۽ روزگار جا وسيع موقعا فراهم ٿيندا.
+       
+       حڪومت جي دانشمندي وارين پاليسين سان سنڌ ۾ هر روز نوان سيڙپڪاري جا موقعا پيدا ٿي رهيا آهن، جنهن ڪري سنڌ کي پرڏيهي ۽ مقامي سيڙپڪاري لاءِ اعليٰ اختيار بڻايو ويو آهي، جنهن ۾ ترقي يافته معيشتن مان صنعتن جي منتقلي به شامل آهي.
+       
+       ڊپارٽمينٽ هزارين سيڙپڪارن سان شامل ٿيڻ جو منتظر آهي جيڪي اڳ ۾ ئي سنڌ ۾ سيڙپڪاري مان فائدو وٺي رهيا آهن جيئن اسان توهان جي ترجيحي سيڙپڪاري جي منزل ٿيڻ لاءِ فائدن ۽ موقعن جو هڪ کٽندڙ ميلاپ پيش ڪريون ٿا.`
+      },
+    },
   ]
 
   const [imgFormData, setimgFormData] = useState({img: array[0]?.img, name: array[0]?.name, subtitle: array[0]?.subtitle, desc: array[0]?.desc })
@@ -168,8 +244,8 @@ function Message(props) {
 
               <Carousel
                 show={2}
-                slide={1}
-                swiping={false}
+                slide={2}
+                // swiping={false}
                 onRightArrowClick={handleArrowClick}
               onLeftArrowClick={handleArrowClick}
                 responsive={windowWidth >=1900?false:""}
@@ -206,7 +282,7 @@ function Message(props) {
                   <div className="item" onClick={clickCarouselImage}>
                     <img
                     id="qasim_Id"
-                      src={array[0].img}
+                      src={array[1].img}
                       // src={qasimBW}
                       alt=""
                       width="100"
@@ -245,6 +321,41 @@ function Message(props) {
                       style={{ borderRadius: "50%" }}
                     ></img>
                   </div>
+                  
+                </div>
+                <div>
+                  <div className="item "  onClick={clickCarouselImage}>
+                    {" "}
+                    <img
+                     id="img4"
+                      // src={array[2].img}
+                     src={array[2]?.img}
+
+                      // src={mng2BW}
+                      alt=""
+                      width="100"
+                      height="100"
+                      style={{ borderRadius: "50%" }}
+                    ></img>
+                  </div>
+                  
+                </div>
+                <div>
+                  <div className="item "  onClick={clickCarouselImage}>
+                    {" "}
+                    <img
+                     id="img5"
+                      // src={array[2].img}
+                     src={array[3]?.img}
+
+                      // src={mng2BW}
+                      alt=""
+                      width="100"
+                      height="100"
+                      style={{ borderRadius: "50%" }}
+                    ></img>
+                  </div>
+                  
                 </div>
               </Carousel>
             </div>
@@ -281,7 +392,7 @@ function Message(props) {
                   </a>
                   <div className="media-body">
                     {/* <h3 className="title">Syed Qasim Naveed Qamar </h3> */}
-                    <h3 className="title highlightable">{imgFormData.name[language]}</h3>
+                    <h3 className="title highlightable">{imgFormData?.name[language]}</h3>
                     <p
                       className="card-subtitle highlightable"
                       style={
@@ -290,7 +401,7 @@ function Message(props) {
                           : {fontWeight: "400", color: "rgb(163, 163, 163)" }
                       }
                     >
-                     {imgFormData.subtitle[language]}
+                     {imgFormData?.subtitle[language]}
                     </p>
                   </div>
                 </div>
@@ -302,7 +413,7 @@ function Message(props) {
                       : "sub-title text-md-start highlightable"
                   }
                   >
-                  {imgFormData.desc[language]}
+                  {imgFormData?.desc[language]}
                   </p>
                 </div>
               </div>

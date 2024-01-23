@@ -137,7 +137,7 @@ export default function GenericHeader(props) {
   const SearchBox = ( 
     <div
       className="d-flex justify-content-between"
-      style={{ width: "325px", height: "60px" }}
+      style={{ width: "325px", height: "60px" ,}}
     >
       <input
           type="text"
@@ -905,6 +905,7 @@ export default function GenericHeader(props) {
                     placement="bottomLeft"
                     title={SearchBox}
                     arrow={mergedArrow}
+                    zIndex={9999}
                   >
                     <i
                      className="fa-sharp fa-solid fa-magnifying-glass"

@@ -16,6 +16,8 @@ import { ReactComponent as Face2 } from "../assets/facebook.svg";
 import { ReactComponent as Face } from "../assets/facebookColor.svg";
 import { ReactComponent as Twitter } from "../assets/twitter.svg";
 import { ReactComponent as TwitterColor } from "../assets/TwitterColor.svg";
+import { ReactComponent as Instagram } from "../assets/Instagram.svg";
+import { ReactComponent as InstagramWhite } from "../assets/InstagramWhite.svg";
 import { ReactComponent as Youtube } from "../assets/youtube.svg";
 import { ReactComponent as YoutubeColor } from "../assets/youtubeColor.svg";
 import { ReactComponent as LinkedIn } from "../assets/linkedin.svg";
@@ -66,6 +68,17 @@ const {language} = useSelector((state)=>state.language)
   const handleMouseLeaveYoutube = () => {
     setIsHoveredYoutube(false);
   };
+  const [isHoverdInsta, setisHoverdInsta] = useState(false)
+
+  const handleMouseEnterInsta = () => {
+    setisHoverdInsta(true);
+  };
+
+  const handleMouseLeaveInsta = () => {
+    setisHoverdInsta(false);
+  };
+
+
   const [isHoveredLinkedIn, setIsHoveredLinkedIn] = useState(false);
 
   const handleMouseEnterLinkedIn = () => {
@@ -124,6 +137,7 @@ const {language} = useSelector((state)=>state.language)
   // ... the rest of your code ...
 
   const [isSticky, setIsSticky] = useState(false);
+  const [isHeaderSticky, setisHeaderSticky] = useState(false)
 
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
@@ -143,9 +157,13 @@ const {language} = useSelector((state)=>state.language)
   }, []);
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 195) {
+      if(window.scrollY>195){
+        setisHeaderSticky(true)
+      }
+      if (window.scrollY > 210) {
         setIsSticky(true);
       } else {
+        setisHeaderSticky(false)
         setIsSticky(false);
       }
     };
@@ -614,7 +632,7 @@ const {language} = useSelector((state)=>state.language)
                 </Link>
               </div>
             </div>
-            {isSticky === true ? (
+            {isHeaderSticky === true ? (
                 <GenericHeader toggleLanguage={props.toggleLanguage} SindhitoggleLanguage={props.SindhitoggleLanguage} handleSearch={props.handleSearch}  searchTextRef={props.searchTextRef}/>
             ) : 
             (
@@ -3061,7 +3079,7 @@ const {language} = useSelector((state)=>state.language)
                   ? "Nonsticky-icon"
                   : "sticky-icon"
               }>
-              <a href="" target="_blank" className="">
+              <a href="https://www.facebook.com/Clicksindh" target="_blank" className="">
                 {" "}
                 <div>
                   {isHovered ? (
@@ -3078,6 +3096,8 @@ const {language} = useSelector((state)=>state.language)
                   )}
                 </div>{" "}
               </a>
+             
+
               <a
                 href="https://twitter.com/ClickSindh?t=8K_w3Bl-z1SgSvedJykmsQ&s=08"
                 target="_blank"
@@ -3090,7 +3110,26 @@ const {language} = useSelector((state)=>state.language)
                   )}
                 </div>{" "}
               </a>
-
+              <a
+                href="https://www.instagram.com/sindhboss/"
+                target="_blank"
+              >
+                <div style={{ marginLeft:9,marginTop:10 }}>
+                  {isHoverdInsta ? (
+                    <Instagram  style={{
+                      height: "35px",
+                      width: "35px",
+                      // marginBottom: "-12px",
+                    }}onMouseLeave={handleMouseLeaveInsta} />
+                  ) : (
+                    <InstagramWhite  style={{
+                      height: "35px",
+                      width: "35px",
+                      // marginBottom: "-12px",
+                    }}onMouseEnter={handleMouseEnterInsta} />
+                  )}
+                </div>{" "}
+              </a>
               <a
                 href="https://www.linkedin.com/company/competitive-and-livable-city-of-karachi-click/"
                 target="_blank"
@@ -3162,6 +3201,18 @@ const {language} = useSelector((state)=>state.language)
               >
                 <div style={{ marginBottom: "-12px" }}>
                   <TwitterColor onMouseLeave={handleMouseLeaveTwitter} />
+                </div>{" "}
+              </a>
+              <a
+              href="https://www.instagram.com/sindhboss/"
+                target="_blank"
+              >
+                <div style={{marginLeft:9,marginTop:10 }}>
+                  <Instagram style={{
+                      height: "35px",
+                      width: "35px",
+                      // marginBottom: "-12px",
+                    }} onMouseLeave={handleMouseLeaveTwitter} />
                 </div>{" "}
               </a>
 

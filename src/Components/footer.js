@@ -13,6 +13,7 @@ function Footer(props) {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
   useEffect(() => {
+    
     // Function to update the windowWidth state when the resize event occurs
     const handleResize = () => {
       setWindowWidth(window.innerWidth);
@@ -26,6 +27,10 @@ function Footer(props) {
       window.removeEventListener('resize', handleResize);
     };
   }, []);
+
+  useEffect(()=>{
+    window.scrollTo(0,0)
+  },[])
   return (
     <>
       <footer className={
@@ -298,10 +303,10 @@ function Footer(props) {
                     }
                 }
               >
-                {translations["Floor"][language]}, <br />
+                {/* {translations["Floor"][language]}, <br /> */}
                 {translations["Shahrah"][language]},
                 <br />
-                {translations["Karachi"][language]}
+                {/* {translations["Karachi"][language]} */}
               </address>
               <p
                 className={
@@ -318,8 +323,8 @@ function Footer(props) {
                     : { textAlign: "inherit" }
                 }
               >
-                +92 21 99218874 <br />
-                +92 21 99218875 <br />
+                +92-2199207557 <br />
+                +92-2199207558 <br />
                 info@business.gos.pk
               </p>
             </div>
