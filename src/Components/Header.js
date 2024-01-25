@@ -528,58 +528,24 @@ const {language} = useSelector((state)=>state.language)
     <div
           style={{
             position: "relative",
-            // height: "400px",
-            // width: "100vw",
             zIndex: 9999,
-            // paddingRight: "13px",
-            paddingTop: 5,
-
-            // paddingBottom:10
             backgroundColor:"transparent"
           }}
         >
-          <div className="boxshadowNavBar2">
+          <div className="boxshadowNavBar2 py-2">
             <div className="row">
-              <div className="col-lg-6 l-side px-5">
-                <div
-                  style={
-                    // windowWidth <= 1440
-                    //   ? { width: "21%", height: "130px" }
-                    //   : { width: "16%", height: "150px" }
-                    windowWidth <= 1366
-                    ? {
-                      // marginLeft: "15px",
-                      marginRight: "-4px",
-                      // marginTop: "39px",
-                    }
-                    : {
-                      marginLeft: "22px",
-                      marginRight: "7px",
-                      // marginTop: "39px",
-                    }
-                  }
-                >
-                  <a href="https://www.sindh.gov.pk/" target="_blank">
-                  <img
-                    src={sindh}
-                    alt=""
-                    className="marginDPI"
-                    width={windowWidth <= 1440 ? "95" : "115"}
-                    height={windowWidth <= 1440 ? "115" : "135"}
-                  />
-                </a>
-                </div>
-                <div className="vl"></div>
+              <div className="col-lg-3 l-side px-5">
                 <img
                   className="clickMainHeaderLogo"
-                  style={{ marginLeft: "10px" }}
                   src={Group8364}
                   alt=""
                 ></img>
               </div>
 
-              <div className="col-lg-6 col-md-6 col-sm-12 col-xs-12 r-side  " style={{marginTop:-22}}>
-                <Tooltip
+              <div className="col-lg-9 col-md-6 col-sm-12 col-xs-12 r-side " style={{display:'flex',justifyContent:'end',alignItems:'center'}}>
+<div style={{display:'flex',flexDirection:'column',alignItems:'end',}}>
+<div>
+<Tooltip
                   overlayInnerStyle={{ borderRadius: "0px" }}
                   color={"#Ffffff"}
                   placement="bottom"
@@ -630,1129 +596,1243 @@ const {language} = useSelector((state)=>state.language)
                     </span>
                   </button>
                 </Link>
-              </div>
-            </div>
-            {isHeaderSticky === true ? (
+</div>
+                {isHeaderSticky === true ? (
                 <GenericHeader toggleLanguage={props.toggleLanguage} SindhitoggleLanguage={props.SindhitoggleLanguage} handleSearch={props.handleSearch}  searchTextRef={props.searchTextRef}/>
             ) : 
             (
-              // <div className={`header `}>
-              //   <div className={"row "}>
-              //     <div
-              //       className={" navbar boxshadowNavBar justify-content-end"}
-              //       style={{ width: "100%", paddingRight: "8px" }}
-              //     >
-              //       <ul
-              //         style={
-              //           language === "ur" || language === "sd"
-              //             ? {
-              //               display: "flex",
-              //               marginBottom: "0px",
-              //               flexDirection: "row-reverse",
-              //             }
-              //             : { marginBottom: "0px" }
-              //         }
-              //       >
-              //         <li>
-              //           <a
-              //             href="comingsoon.html"
-              //             title="Home Page"
-              //             className={"link"}
-              //           >
-              //             <Link className={"link"} to={"/home"}>
-              //               {translations["home"][language]}
-              //             </Link>
-              //           </a>
-              //         </li>
-              //         <li>
-              //           <a
-              //             href="comingsoon.html"
-              //             title="Home Page"
-              //             className={"link"}
-              //           >
-              //             <Link className={"link"} to={"/WhySindh"}>
-              //               {
-              //                 translations["sindhATglance"][
-              //                 language
-              //                 ]
-              //               }
-              //             </Link>
-              //           </a>
-              //         </li>
-              //         <li>
-              //           <a title="" className={"link"}>
-              //             <Link className="link" to={"/InvestNow"}>
-              //               {translations["InvestNow"][language]}
-              //             </Link>
-              //           </a>
-              //         </li>
-              //         <li>
-              //           <div
-              //             class="dropdown1"
-              //             style={
-              //               language === "ur" || language === "sd"
-              //                 ? {
-              //                   display: "flex",
-              //                   flexDirection: "row-reverse",
-              //                 }
-              //                 : {}
-              //             }
-              //           >
-              //             <span
-              //               style={{
-              //                 marginRight: "5px",
-              //                 textDecoration: "none",
-              //               }}
-              //               className={"link"}
-              //             >
-              //               <Link className={"link"} to={"/Opportunity"}>
-              //                 {
-              //                   translations["Opportunities"][
-              //                   language
-              //                   ]
-              //                 }
-              //               </Link>
-              //             </span>
-              //             <i
-              //               // style={{ marginTop: "0px", marginLeft: "0px" }}
-              //               class="dropbtn iconDown hover-rotate fa fa-chevron-right"
-              //               style={
-              //                 language === "ur" ||
-              //                   language === "sd"
-              //                   ? {
-              //                     marginTop: "5px", marginRight: "3px"
-              //                   }
-              //                   : {
-              //                     marginTop: "0px", marginLeft: "0px"
-              //                   }
-              //               }
-              //             ></i>
-              //             <div
-              //               class="dropdown-content1"
-              //               style={
-              //                 language === "ur" || language === "sd"
-              //                   ? { marginTop: "30px" }
-              //                   : {}
-              //               }
-              //             >
-              //               <div
-              //                 class="nested-dropdown1"
-              //                 style={{ width: "100%" }}
-              //               >
-              //                 <span
-              //                   style={
-              //                     language === "ur" ||
-              //                       language === "sd"
-              //                       ? {
-              //                         display: "flex",
-              //                         width: "100%",
-              //                         flexDirection: "row-reverse",
-              //                       }
-              //                       : {
-              //                         display: "flex",
-              //                         position: "relative",
-              //                         width: "100%",
-              //                       }
-              //                   }
-              //                 >
-              //                   <a
-              //                     // style={{
-              //                     //   width: "300px",
-              //                     //   paddingLeft: "15px",
-              //                     //   height: "40px",
-              //                     //   paddingTop: "8px",
-              //                     // }}
-              //                     style={
-              //                       language === "ur" ||
-              //                         language === "sd"
-              //                         ? {
-              //                           width: "210px",
-              //                           paddingLeft: "15px",
-              //                           height: "40px",
-              //                           paddingTop: "8px",
-              //                           display: "flex",
-              //                           flexDirection: "row-reverse",
-              //                         }
-              //                         : {
-              //                           width: "300px",
-              //                           paddingLeft: "15px",
-              //                           height: "40px",
-              //                           paddingTop: "8px",
-              //                         }
-              //                     }
-              //                     href="#"
-              //                   >
-              //                     <Link
-              //                       className={"link"}
-              //                       to={"/manufacturing"}
-              //                       onClick={() => { window.scrollTo({ top: 0, left: 0, behavior: "smooth" }); }}
-              //                     >
-              //                       {
-              //                         translations["Manufacturing"][
-              //                         language
-              //                         ]
-              //                       }
-              //                     </Link>
-              //                   </a>
-              //                   <i
-              //                     style={
-              //                       language === "ur" ||
-              //                         language === "sd"
-              //                         ? {
-              //                           marginTop: "10px",
-              //                           marginLeft: "0px",
-              //                           position: "absolute",
-              //                           left: "10px",
-              //                           display: "flex",
-              //                           flexDirection: "row-reverse",
-              //                         }
-              //                         : {
-              //                           marginTop: "10px",
-              //                           marginLeft: "0px",
-              //                           position: "absolute",
-              //                           right: "15px",
-              //                         }
-              //                     }
-              //                     class="dropbtn unique-iconDown unique-hover-rotate component fa fa-chevron-right"
-              //                   ></i>
-              //                 </span>
-              //                 <div
-              //                   class="dropdown-content1 nested-content nested-right"
-              //                   style={{ width: "200px" }}
-              //                 >
-              //                   <Link className={""} to={"/manufacturing#expertform"}>
-              //                     <a href="#" >
-              //                       {
-              //                         translations["Talktoexpert"][
-              //                         language
-              //                         ]
-              //                       }
-              //                     </a>
-              //                   </Link>
-              //                 </div>
-              //               </div>
+            windowWidth >1024 &&    <div className={`header `}>
+            <div className={"row "} style={{height:"5px"}}>
+              <div
+                className={" navbar boxshadowNavBar justify-content-end"}
+                style={language === "ur" || language === "sd"?{marginTop:0}:windowWidth <1280?{position:'relative',zIndex:-1,background:"white"}: { width: "100%", paddingRight: "0px", }}
+              >
+                <ul
+                  style={
+                    language === "ur" || language === "sd"
+                      ? {
+                        display: "flex",
+                        marginBottom: "0px",
+                        flexDirection: "row-reverse",
+                       
+                      }
+                      : { marginBottom: "0px" ,marginTop:5,display:'flx',justifyContent:'flex-en',padding:0}
+                  }
+                >
+                  <li>
+                    <a
+                      href="comingsoon.html"
+                      title="Home Page"
+                      className={"link"}
+                    >
+                      <Link className={"link"} to={"/home"}>
+                        {translations["home"][language]}
+                      </Link>
+                    </a>
+                  </li>
+                  
+                  <li>
+                    <a
+                      href="comingsoon.html"
+                      title="Home Page"
+                      className={"link"}
+                    >
+                      <Link className={"link"} to={"/feedback"}>
+                        {
+                          translations["Feedback"][
+                          language
+                          ]
+                        }
+                      </Link>
+                    </a>
+                  </li>
+                  {/* <li>
+                    <a title="" className={"link"}>
+                      <Link className="link" to={"/regulatorycatalog"}>
+                        {translations["Interactiveregulatory"][language]}
+                      </Link>
+                    </a>
+                  </li> */}
+                  <li >
+                  <div
+                      class="dropdown1"
+                      style={
+                        language === "ur" || language === "sd"
+                          ? {
+                            display: "flex",
+                            flexDirection: "row-reverse",
+                          }
+                          : {
+                            marginRight:10
+                          }
+                      }
+                    >
+                      <span
+                        style={{
+                          marginRight: "5px",
+                          textDecoration: "none",
+                        }}
+                        className={"link"}
+                      >
+                        {" "}
+                        {translations["Interactiveregulatory"][language]}
+                      </span>
+                      <i
+                        // style={{ marginTop: "5px", marginRight: "5px",}}
+                        style={
+                          language === "ur" ||
+                            language === "sd"
+                            ? {
+                              marginTop: "5px", marginRight: "5px"
+                            }
+                            : {
+                              marginTop: "0px", marginLeft: "3px",
+                              marginRight:-7
+                            }
+                        }
+                        class="dropbtn iconDown hover-rotate fa fa-chevron-right"
+                      ></i>
+                      <div
+                        class="dropdown-content1"
+                        style={
+                          language === "ur" || language === "sd"
+                            ? { marginTop: "30px" }
+                            : {
+                              marginLeft:0
+                            }
+                        }
+                      >
+                     <Link className="" to={"/Maps"}>
+                          <a
+                            target="_blank"
+                            href=""
+                            style={
+                              language === "ur" ||
+                                language === "sd"
+                                ? {
+                                  display: "flex",
+                                  flexDirection: "row-reverse",
+                                  marginRight: "-16px",
+                                }
+                                : {}
+                            }
+                          >
+                            {translations["Maps"][language]}
+                          </a>
+                        </Link>
+                       
+                        <Link className={""} to={"/regulatorycatalog"}>
+                          <a
+                            href="#"
+                            style={
+                              language === "ur" ||
+                                language === "sd"
+                                ? {
+                                  display: "flex",
+                                  flexDirection: "row-reverse",
+                                  marginRight: "-16px",
+                                }
+                                : {}
+                            }
+                          >
+                            {translations["RegulatoryCatalog"][language]}
+                          </a>
+                        </Link>
+                        <Link className={""} to={"/RegulatoryCatalogCalculator"}>
+                          <a
+                            href="#"
+                            style={
+                              language === "ur" ||
+                                language === "sd"
+                                ? {
+                                  display: "flex",
+                                  flexDirection: "row-reverse",
+                                  marginRight: "-16px",
+                                }
+                                : {}
+                            }
+                          >
+                            {translations["calculatorButton"][language]}
+                          </a>
+                        </Link>
+                        <Link className="" to={"/Dashboard"}>
+                          <a
+                            target="_blank"
+                            href=""
+                            style={
+                              language === "ur" ||
+                                language === "sd"
+                                ? {
+                                  display: "flex",
+                                  flexDirection: "row-reverse",
+                                  marginRight: "-16px",
+                                }
+                                : {}
+                            }
+                          >
+                            {translations["statistics"][language]}
+                          </a>
+                        </Link>
+                        <Link className="" to={"/tutorial"}>
+                          <a
+                            target="_blank"
+                            href=""
+                            style={
+                              language === "ur" ||
+                                language === "sd"
+                                ? {
+                                  display: "flex",
+                                  flexDirection: "row-reverse",
+                                  marginRight: "-16px",
+                                }
+                                : {}
+                            }
+                          >
+                            {translations["Tutorial"][language]}
+                          </a>
+                        </Link>
+                        {/* <Link className={""} to={"/resource"}>
+                          <a
+                            href="#"
+                            style={
+                              language === "ur" ||
+                                language === "sd"
+                                ? {
+                                  display: "flex",
+                                  flexDirection: "row-reverse",
+                                  marginRight: "-16px",
+                                }
+                                : {}
+                            }
+                          >
+                            {translations["Downloads"][language]}
+                          </a>
+                        </Link>
+                        <Link className={""} to={"/Team"}>
+                          <a
+                            href="#"
+                            style={
+                              language === "ur" ||
+                                language === "sd"
+                                ? {
+                                  display: "flex",
+                                  flexDirection: "row-reverse",
+                                  marginRight: "-16px",
+                                }
+                                : {}
+                            }
+                          >
+                            {translations["Team"][language]}
+                          </a>
+                        </Link>
+                        <Link className={""} to={""}>
+                          <a
+                            href="#"
+                            style={
+                              language === "ur" ||
+                                language === "sd"
+                                ? {
+                                  display: "flex",
+                                  flexDirection: "row-reverse",
+                                  marginRight: "-16px",
+                                }
+                                : {}
+                            }
+                          >
+                            {translations["Contactus"][language]}
+                          </a>
+                        </Link> */}
+                      </div>
+                    </div>
+                  </li>
+                  <li >
+                  <div
+                      class="dropdown1"
+                      style={
+                        language === "ur" || language === "sd"
+                          ? {
+                            display: "flex",
+                            flexDirection: "row-reverse",
+                          }
+                          : {
+                            marginRight:10
+                          }
+                      }
+                    >
+                      <span
+                        style={{
+                          marginRight: "5px",
+                          textDecoration: "none",
+                        }}
+                        className={"link"}
+                      >
+                        {" "}
+                        {translations["BusinessFacilitation"][language]}
+                      </span>
+                      <i
+                        // style={{ marginTop: "5px", marginRight: "5px",}}
+                        style={
+                          language === "ur" ||
+                            language === "sd"
+                            ? {
+                              marginTop: "5px", marginRight: "5px"
+                            }
+                            : {
+                              marginTop: "0px", marginLeft: "3px",
+                              marginRight:-7
+                            }
+                        }
+                        class="dropbtn iconDown hover-rotate fa fa-chevron-right"
+                      ></i>
+                      <div
+                        class="dropdown-content1"
+                        style={
+                          language === "ur" || language === "sd"
+                            ? { marginTop: "30px" }
+                            : {
+                              marginLeft:0
+                            }
+                        }
+                      >
+                       
+                          <a
+                            target="_blank"
+                            href="https://smeda.org/index.php?option=com_content&view=article&id=146&Itemid=676"
+                            style={
+                              language === "ur" ||
+                                language === "sd"
+                                ? {
+                                  display: "flex",
+                                  flexDirection: "row-reverse",
+                                  marginRight: "-16px",
+                                  fontWeight:"bold",
+                                }
+                                : {
+                                  fontWeight:"bold",
+                                }
+                            }
+                          >
+                            {translations["Guids"][language]}
+                          </a>
+                       
+                          <a
+                          target="_blank"
+                            href="https://smeda.org/index.php?option=com_phocadownload&view=category&id=122&Itemid=308"
+                            style={
+                              language === "ur" ||
+                                language === "sd"
+                                ? {
+                                  display: "flex",
+                                  flexDirection: "row-reverse",
+                                  marginRight: "-16px",
+                                }
+                                : {
+                                  marginLeft:"10px"
+                                }
+                            }
+                          >
+                            {translations["PreFeasibilityStudies"][language]}
+                          </a>
+                          <a
+                          target="_blank"
+                            href="https://smeda.org/index.php?option=com_phocadownload&view=category&id=164&Itemid=981"
+                            style={
+                              language === "ur" ||
+                                language === "sd"
+                                ? {
+                                  display: "flex",
+                                  flexDirection: "row-reverse",
+                                  marginRight: "-16px",
+                                }
+                                : {
+                                  marginLeft:"10px"
 
-              //               <div
-              //                 class="nested-dropdown"
-              //                 style={{ width: "100%" }}
-              //               >
-              //                 <span
-              //                   style={
-              //                     language === "ur" ||
-              //                       language === "sd"
-              //                       ? {
-              //                         display: "flex",
-              //                         width: "100%",
-              //                         flexDirection: "row-reverse",
-              //                       }
-              //                       : {
-              //                         display: "flex",
-              //                         position: "relative",
-              //                         width: "100%",
-              //                       }
-              //                   }
-              //                 >
-              //                   <a
-              //                     style={
-              //                       language === "ur" ||
-              //                         language === "sd"
-              //                         ? {
-              //                           width: "210px",
-              //                           paddingLeft: "15px",
-              //                           height: "40px",
-              //                           paddingTop: "8px",
-              //                           display: "flex",
-              //                           flexDirection: "row-reverse",
-              //                         }
-              //                         : {
-              //                           width: "300px",
-              //                           paddingLeft: "15px",
-              //                           height: "40px",
-              //                           paddingTop: "8px",
-              //                         }
-              //                     }
-              //                     href="#"
-              //                   >
-              //                     <Link onClick={() => { window.scrollTo({ top: 0, left: 0, behavior: "smooth" }); }} className={"link"} to={"/textile"}>
-              //                       {
-              //                         translations["Textile"][
-              //                         language
-              //                         ]
-              //                       }
-              //                     </Link>
-              //                   </a>
-              //                   <i
-              //                     style={
-              //                       language === "ur" ||
-              //                         language === "sd"
-              //                         ? {
-              //                           marginTop: "10px",
-              //                           marginLeft: "0px",
-              //                           position: "absolute",
-              //                           left: "10px",
-              //                           display: "flex",
-              //                           flexDirection: "row-reverse",
-              //                         }
-              //                         : {
-              //                           marginTop: "10px",
-              //                           marginLeft: "0px",
-              //                           position: "absolute",
-              //                           right: "15px",
-              //                         }
-              //                     }
-              //                     class="dropbtn unique-iconDown unique-hover-rotate component fa fa-chevron-right"
-              //                   ></i>
-              //                 </span>
-              //                 <div
-              //                   class="dropdown-content1 nested-content nested-right"
-              //                   style={{ width: "200px", marginTop: "40px" }}
-              //                 >
-              //                   <Link className={""} to={"/textile#expertform"}>
-              //                     <a  href="#">
-              //                       {
-              //                         translations["Talktoexpert"][
-              //                         language
-              //                         ]
-              //                       }
-              //                     </a>
-              //                   </Link>
-              //                 </div>
-              //               </div>
+                                }
+                            }
+                          >
+                            {translations["BusinessGuides"][language]}
+                          </a>
+                          <a
+                            target="_blank"
+                            href="https://smeda.org/index.php?option=com_phocadownload&view=category&id=7&Itemid=363"
+                            style={
+                              language === "ur" ||
+                                language === "sd"
+                                ? {
+                                  display: "flex",
+                                  flexDirection: "row-reverse",
+                                  marginRight: "-16px",
+                                }
+                                : {
+                                  marginLeft:"10px"
 
-              //               <div
-              //                 class="nested-dropdown1"
-              //                 style={{ width: "100%" }}
-              //               >
-              //                 <span
-              //                   style={
-              //                     language === "ur" ||
-              //                       language === "sd"
-              //                       ? {
-              //                         display: "flex",
-              //                         width: "100%",
-              //                         flexDirection: "row-reverse",
-              //                       }
-              //                       : {
-              //                         display: "flex",
-              //                         position: "relative",
-              //                         width: "100%",
-              //                       }
-              //                   }
-              //                 >
-              //                   <a
-              //                     style={
-              //                       language === "ur" ||
-              //                         language === "sd"
-              //                         ? {
-              //                           width: "210px",
-              //                           paddingLeft: "15px",
-              //                           height: "40px",
-              //                           paddingTop: "8px",
-              //                           display: "flex",
-              //                           flexDirection: "row-reverse",
-              //                         }
-              //                         : {
-              //                           width: "300px",
-              //                           paddingLeft: "15px",
-              //                           height: "40px",
-              //                           paddingTop: "8px",
-              //                         }
-              //                     }
-              //                     href="#"
-              //                   >
-              //                     <Link
-              //                       onClick={() => { window.scrollTo({ top: 0, left: 0, behavior: "smooth" }); }}
-              //                       className={"link"} to={"/tourism"}>
-              //                       {
-              //                         translations["Tourism"][
-              //                         language
-              //                         ]
-              //                       }
-              //                     </Link>
-              //                   </a>
-              //                   <i
-              //                     style={
-              //                       language === "ur" ||
-              //                         language === "sd"
-              //                         ? {
-              //                           marginTop: "10px",
-              //                           marginLeft: "0px",
-              //                           position: "absolute",
-              //                           left: "10px",
-              //                           display: "flex",
-              //                           flexDirection: "row-reverse",
-              //                         }
-              //                         : {
-              //                           marginTop: "10px",
-              //                           marginLeft: "0px",
-              //                           position: "absolute",
-              //                           right: "15px",
-              //                         }
-              //                     }
-              //                     class="dropbtn unique-iconDown unique-hover-rotate component fa fa-chevron-right"
-              //                   ></i>
-              //                 </span>
-              //                 <div
-              //                   class="dropdown-content1 nested-content nested-right"
-              //                   style={{ width: "200px", marginTop: "80px" }}
-              //                 >
-              //                   <Link className={""} to={"/tourism#expertform"} >
-              //                     <a  href="#">
-              //                       {
-              //                         translations["Talktoexpert"][
-              //                         language
-              //                         ]
-              //                       }
-              //                     </a>
-              //                   </Link>
-              //                 </div>
-              //               </div>
+                                }
+                            }
+                          >
+                            {translations["CommercialContracts(English)"][language]}
+                          </a>
+                          <a
+                            target="_blank"
+                            href="https://smeda.org/index.php?option=com_phocadownload&view=category&id=7&Itemid=363"
+                            style={
+                              language === "ur" ||
+                                language === "sd"
+                                ? {
+                                  display: "flex",
+                                  flexDirection: "row-reverse",
+                                  marginRight: "-16px",
+                                }
+                                : {
+                                  marginLeft:"10px"
 
-              //               <div
-              //                 class="nested-dropdown1"
-              //                 style={{ width: "100%" }}
-              //               >
-              //                 <span
-              //                   style={
-              //                     language === "ur" ||
-              //                       language === "sd"
-              //                       ? {
-              //                         display: "flex",
-              //                         width: "100%",
-              //                         flexDirection: "row-reverse",
-              //                       }
-              //                       : {
-              //                         display: "flex",
-              //                         position: "relative",
-              //                         width: "100%",
-              //                       }
-              //                   }
-              //                 >
-              //                   <a
-              //                     style={
-              //                       language === "ur" ||
-              //                         language === "sd"
-              //                         ? {
-              //                           width: "210px",
-              //                           paddingLeft: "15px",
-              //                           height: "40px",
-              //                           paddingTop: "8px",
-              //                           display: "flex",
-              //                           flexDirection: "row-reverse",
-              //                         }
-              //                         : {
-              //                           width: "300px",
-              //                           paddingLeft: "15px",
-              //                           height: "40px",
-              //                           paddingTop: "8px",
-              //                         }
-              //                     }
-              //                     href="#"
-              //                   >
-              //                     <Link
-              //                       onClick={() => { window.scrollTo({ top: 0, left: 0, behavior: "smooth" }); }}
-              //                       className={"link"} to={"/agriculture"}>
-              //                       {
-              //                         translations["Agriculture"][
-              //                         language
-              //                         ]
-              //                       }
-              //                     </Link>
-              //                   </a>
-              //                   <i
-              //                     style={
-              //                       language === "ur" ||
-              //                         language === "sd"
-              //                         ? {
-              //                           marginTop: "10px",
-              //                           marginLeft: "0px",
-              //                           display: "flex",
-              //                           flexDirection: "row-reverse",
-              //                           position: "absolute",
-              //                           left: "10px",
-              //                         }
-              //                         : {
-              //                           marginTop: "10px",
-              //                           marginLeft: "0px",
-              //                           position: "absolute",
-              //                           right: "15px",
-              //                         }
-              //                     }
-              //                     class="dropbtn unique-iconDown unique-hover-rotate component fa fa-chevron-right"
-              //                   ></i>
-              //                 </span>
-              //                 <div
-              //                   class="dropdown-content1 nested-content nested-right"
-              //                   style={{ width: "200px", marginTop: "120px" }}
-              //                 >
-              //                   <Link className={""} to={"/agriculture#expertform"}>
-              //                     <a  href="#"  >
-              //                       {
-              //                         translations["Talktoexpert"][
-              //                         language
-              //                         ]
-              //                       }
-              //                     </a>
-              //                   </Link>
-              //                 </div>
-              //               </div>
+                                }
+                            }
+                          >
+                            {translations["CommercialContracts(Urdu)"][language]}
+                          </a>
+                          <a
+                            target="_blank"
+                            href="https://smeda.org/index.php?option=com_phocadownload&view=category&id=15&Itemid=138"
+                            style={
+                              language === "ur" ||
+                                language === "sd"
+                                ? {
+                                  display: "flex",
+                                  flexDirection: "row-reverse",
+                                  marginRight: "-16px",
+                                }
+                                : {
+                                  marginLeft:"10px"
 
-              //               <div
-              //                 class="nested-dropdown1"
-              //                 style={{ width: "100%" }}
-              //               >
-              //                 <span
-              //                   style={
-              //                     language === "ur" ||
-              //                       language === "sd"
-              //                       ? {
-              //                         display: "flex",
-              //                         width: "100%",
-              //                         flexDirection: "row-reverse",
-              //                       }
-              //                       : {
-              //                         display: "flex",
-              //                         position: "relative",
-              //                         width: "100%",
-              //                       }
-              //                   }
-              //                 >
-              //                   <a
-              //                     style={
-              //                       language === "ur" ||
-              //                         language === "sd"
-              //                         ? {
-              //                           width: "210px",
-              //                           paddingLeft: "15px",
-              //                           height: "40px",
-              //                           paddingTop: "8px",
-              //                           display: "flex",
-              //                           flexDirection: "row-reverse",
-              //                         }
-              //                         : {
-              //                           width: "300px",
-              //                           paddingLeft: "15px",
-              //                           height: "40px",
-              //                           paddingTop: "8px",
-              //                         }
-              //                     }
-              //                     href="#"
-              //                   >
-              //                     <Link
-              //                       onClick={() => {
-              //                         window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
-              //                       }} className={"link"} to={"/education"}>
-              //                       {
-              //                         translations["Education"][
-              //                         language
-              //                         ]
-              //                       }
-              //                     </Link>
-              //                   </a>
-              //                   <i
-              //                     style={
-              //                       language === "ur" ||
-              //                         language === "sd"
-              //                         ? {
-              //                           marginTop: "10px",
-              //                           marginLeft: "0px",
-              //                           position: "absolute",
-              //                           left: "10px",
-              //                           display: "flex",
-              //                           flexDirection: "row-reverse",
-              //                           position: "absolute",
-              //                           left: "10px",
-              //                         }
-              //                         : {
-              //                           marginTop: "10px",
-              //                           marginLeft: "0px",
-              //                           position: "absolute",
-              //                           right: "15px",
-              //                         }
-              //                     }
-              //                     class="dropbtn unique-iconDown unique-hover-rotate component fa fa-chevron-right"
-              //                   ></i>
-              //                 </span>
-              //                 <div
-              //                   class="dropdown-content1 nested-content nested-right"
-              //                   style={{ width: "200px", marginTop: "160px" }}
-              //                 >
-              //                   <Link className={""} to={"/education#expertform"}>
-              //                     <a  href="#">
-              //                       {
-              //                         translations["Talktoexpert"][
-              //                         language
-              //                         ]
-              //                       }
-              //                     </a>
-              //                   </Link>
-              //                 </div>
-              //               </div>
+                                }
+                            }
+                          >
+                            {translations["RegulatoryProcedures"][language]}
+                          </a>
+                          <a
+                            target="_blank"
+                            href="https://tipp.gov.pk/"
+                            style={
+                              language === "ur" ||
+                                language === "sd"
+                                ? {
+                                  display: "flex",
+                                  flexDirection: "row-reverse",
+                                  marginRight: "-16px",
+                                }
+                                : {
+                                  marginLeft:"10px"
 
-              //               <div
-              //                 class="nested-dropdown1"
-              //                 style={{ width: "100%" }}
-              //               >
-              //                 <span
-              //                   style={
-              //                     language === "ur" ||
-              //                       language === "sd"
-              //                       ? {
-              //                         display: "flex",
-              //                         width: "100%",
-              //                         flexDirection: "row-reverse",
-              //                       }
-              //                       : {
-              //                         display: "flex",
-              //                         position: "relative",
-              //                         width: "100%",
-              //                       }
-              //                   }
-              //                 >
-              //                   <a
-              //                     style={
-              //                       language === "ur" ||
-              //                         language === "sd"
-              //                         ? {
-              //                           width: "210px",
-              //                           paddingLeft: "15px",
-              //                           height: "40px",
-              //                           paddingTop: "8px",
-              //                           display: "flex",
-              //                           flexDirection: "row-reverse",
-              //                         }
-              //                         : {
-              //                           width: "300px",
-              //                           paddingLeft: "15px",
-              //                           height: "40px",
-              //                           paddingTop: "8px",
-              //                         }
-              //                     }
-              //                     href="#"
-              //                   >
-              //                     <Link
-              //                       onClick={() => { window.scrollTo({ top: 0, left: 0, behavior: "smooth" }); }}
-              //                       className={"link"} to={"/energy"}>
-              //                       {
-              //                         translations["Energy"][
-              //                         language
-              //                         ]
-              //                       }
-              //                     </Link>
-              //                   </a>
-              //                   <i
-              //                     style={
-              //                       language === "ur" ||
-              //                         language === "sd"
-              //                         ? {
-              //                           marginTop: "10px",
-              //                           marginLeft: "0px",
-              //                           position: "absolute",
-              //                           left: "10px",
-              //                           display: "flex",
-              //                           flexDirection: "row-reverse",
-              //                         }
-              //                         : {
-              //                           marginTop: "10px",
-              //                           marginLeft: "0px",
-              //                           position: "absolute",
-              //                           right: "15px",
-              //                         }
-              //                     }
-              //                     class="dropbtn unique-iconDown unique-hover-rotate component fa fa-chevron-right"
-              //                   ></i>
-              //                 </span>
-              //                 <div
-              //                   class="dropdown-content1 nested-content nested-right"
-              //                   style={{ width: "200px", marginTop: "200px" }}
-              //                 >
-              //                   <Link  className={""} to={"/energy#expertform"}>
-              //                     <a href="#">
-              //                       {
-              //                         translations["Talktoexpert"][
-              //                         language
-              //                         ]
-              //                       }
-              //                     </a>
-              //                   </Link>
-              //                 </div>
-              //               </div>
+                                }
+                            }
+                          >
+                            {translations["TradeInformationPortal"][language]}
+                          </a>
+                          <a
+                            target="_blank"
+                            href={InvestmentDepartment}
+                            style={
+                              language === "ur" ||
+                                language === "sd"
+                                ? {
+                                  display: "flex",
+                                  flexDirection: "row-reverse",
+                                  marginRight: "-16px",
+                                }
+                                : {
+                                  marginLeft:"10px"
 
-              //               <div
-              //                 class="nested-dropdown1"
-              //                 style={{ width: "100%" }}
-              //               >
-              //                 <span
-              //                   style={
-              //                     language === "ur" ||
-              //                       language === "sd"
-              //                       ? {
-              //                         display: "flex",
-              //                         width: "100%",
-              //                         flexDirection: "row-reverse",
-              //                       }
-              //                       : {
-              //                         display: "flex",
-              //                         position: "relative",
-              //                         width: "100%",
-              //                       }
-              //                   }
-              //                 >
-              //                   <a
-              //                     style={
-              //                       language === "ur" ||
-              //                         language === "sd"
-              //                         ? {
-              //                           width: "210px",
-              //                           paddingLeft: "15px",
-              //                           height: "40px",
-              //                           paddingTop: "8px",
-              //                           display: "flex",
-              //                           flexDirection: "row-reverse",
-              //                         }
-              //                         : {
-              //                           width: "300px",
-              //                           paddingLeft: "15px",
-              //                           height: "40px",
-              //                           paddingTop: "8px",
-              //                         }
-              //                     }
-              //                     href="#"
-              //                   >
-              //                     <Link onClick={() => { window.scrollTo({ top: 0, left: 0, behavior: "smooth" }); }} className={"link"} to={"/health"}>
-              //                       {
-              //                         translations["Health"][
-              //                         language
-              //                         ]
-              //                       }
-              //                     </Link>
-              //                   </a>
-              //                   <i
-              //                     style={
-              //                       language === "ur" ||
-              //                         language === "sd"
-              //                         ? {
-              //                           marginTop: "10px",
-              //                           marginLeft: "0px",
-              //                           display: "flex",
-              //                           position: "absolute",
-              //                           left: "10px",
-              //                           flexDirection: "row-reverse",
-              //                         }
-              //                         : {
-              //                           marginTop: "10px",
-              //                           marginLeft: "0px",
-              //                           position: "absolute",
-              //                           right: "15px",
-              //                         }
-              //                     }
-              //                     class="dropbtn unique-iconDown unique-hover-rotate component fa fa-chevron-right"
-              //                   ></i>
-              //                 </span>
-              //                 <div
-              //                   class="dropdown-content1 nested-content nested-right"
-              //                   style={{ width: "200px", marginTop: "240px" }}
-              //                 >
-              //                   <Link  className={""} to={"/health#expertform"}>
-              //                     <a  href="#">
-              //                       {
-              //                         translations["Talktoexpert"][
-              //                         language
-              //                         ]
-              //                       }
-              //                     </a>
-              //                   </Link>
-              //                 </div>
-              //               </div>
+                                }
+                            }
+                          >
+                            {translations["InvestmentDepartment"][language]}
+                          </a>
 
-              //               <div
-              //                 class="nested-dropdown1"
-              //                 style={{ width: "100%" }}
-              //               >
-              //                 <span
-              //                   style={
-              //                     language === "ur" ||
-              //                       language === "sd"
-              //                       ? {
-              //                         display: "flex",
-              //                         width: "100%",
-              //                         flexDirection: "row-reverse",
-              //                       }
-              //                       : {
-              //                         display: "flex",
-              //                         position: "relative",
-              //                         width: "100%",
-              //                       }
-              //                   }
-              //                 >
-              //                   <a
-              //                     style={
-              //                       language === "ur" ||
-              //                         language === "sd"
-              //                         ? {
-              //                           width: "210px",
-              //                           paddingLeft: "15px",
-              //                           height: "40px",
-              //                           paddingTop: "8px",
-              //                           display: "flex",
-              //                           flexDirection: "row-reverse",
-              //                         }
-              //                         : {
-              //                           width: "300px",
-              //                           paddingLeft: "15px",
-              //                           height: "40px",
-              //                           paddingTop: "8px",
-              //                         }
-              //                     }
-              //                     href="#"
-              //                   >
-              //                     <Link
-              //                       onClick={() => { window.scrollTo({ top: 0, left: 0, behavior: "smooth" }); }}
-              //                       className={"link"}
-              //                       to={"/informationtech"}
 
-              //                     >
-              //                       {
-              //                         translations[
-              //                         "InformationTechnology"
-              //                         ][language]
-              //                       }
-              //                     </Link>
-              //                   </a>
-              //                   <i
-              //                     style={
-              //                       language === "ur" ||
-              //                         language === "sd"
-              //                         ? {
-              //                           marginTop: "10px",
-              //                           marginLeft: "0px",
-              //                           display: "flex",
-              //                           position: "absolute",
-              //                           left: "10px",
-              //                           flexDirection: "row-reverse",
-              //                         }
-              //                         : {
-              //                           marginTop: "10px",
-              //                           marginLeft: "0px",
-              //                           position: "absolute",
-              //                           right: "15px",
-              //                         }
-              //                     }
-              //                     class="dropbtn unique-iconDown unique-hover-rotate component fa fa-chevron-right"
-              //                   ></i>
-              //                 </span>
-              //                 <div
-              //                   class="dropdown-content1 nested-content nested-right"
-              //                   style={{ width: "200px", marginTop: "280px" }}
-              //                 >
-              //                   <Link  className={""}  to={"/informationtech#expertform"}>
-              //                     <a  href="#">
-              //                       {
-              //                         translations["Talktoexpert"][
-              //                         language
-              //                         ]
-              //                       }
-              //                     </a>
-              //                   </Link>
-              //                 </div>
-              //               </div>
-              //             </div>
-              //           </div>
-              //         </li>
-              //         <li>
-              //           <a title="" className={"link"}>
-              //             <Link className="link" to={"/NewsAndInformation"}>
-              //               {
-              //                 translations["NewsInformation"][
-              //                 language
-              //                 ]
-              //               }
-              //             </Link>
-              //           </a>
-              //         </li>
-              //         <li>
-              //           <div
-              //             class="dropdown1"
-              //             style={
-              //               language === "ur" || language === "sd"
-              //                 ? {
-              //                   display: "flex",
-              //                   flexDirection: "row-reverse",
-              //                 }
-              //                 : {}
-              //             }
-              //           >
-              //             <span
-              //               style={{
-              //                 marginRight: "5px",
-              //                 textDecoration: "none",
-              //               }}
-              //               className={"link"}
-              //             >
-              //               {translations["Resources"][language]}
-              //             </span>
-              //             <i
-              //               // style={{ marginTop: "0px", marginLeft: "0px" }}
-              //               style={
-              //                 language === "ur" ||
-              //                   language === "sd"
-              //                   ? {
-              //                     marginTop: "5px", marginRight: "5px"
-              //                   }
-              //                   : {
-              //                     marginTop: "0px", marginLeft: "0px"
-              //                   }
-              //               }
-              //               class=" dropbtn iconDown hover-rotate fa fa-chevron-right"
-              //             ></i>
-              //             <div
-              //               class="dropdown-content1"
-              //               style={
-              //                 language === "ur" || language === "sd"
-              //                   ? { marginTop: "30px" }
-              //                   : {}
-              //               }
-              //             >
-              //               <Link className={""} to={"/resource"}>
-              //                 <a target="_blank" href="">
-              //                   {/* <Link className="link" to={"/ComingSoon"}> */}
-              //                   {translations["Download"][language]}
-              //                 </a>
-              //               </Link>
-              //               <Link className={""} to={"/regulatorycatalog"}>
-              //                 <a href="#">
-              //                   {
-              //                     translations["RegulatoryCatalog"][
-              //                     language
-              //                     ]
-              //                   }
-              //                 </a>
-              //               </Link>
-              //             </div>
-              //           </div>
-              //         </li>
-              //         <li>
-              //           <div
-              //             class="dropdown1"
-              //             style={
-              //               language === "ur" || language === "sd"
-              //                 ? {
-              //                   display: "flex",
-              //                   flexDirection: "row-reverse",
-              //                 }
-              //                 : {}
-              //             }
-              //           >
-              //             <span
-              //               style={{
-              //                 marginRight: "5px",
-              //                 textDecoration: "none",
-              //               }}
-              //               className={"link"}
-              //             >
-              //               {" "}
-              //               {translations["Aboutus"][language]}
-              //             </span>
-              //             <i
-              //               // style={{ marginTop: "5px", marginRight: "5px",}}
-              //               style={
-              //                 language === "ur" ||
-              //                   language === "sd"
-              //                   ? {
-              //                     marginTop: "5px", marginRight: "5px"
-              //                   }
-              //                   : {
-              //                     marginTop: "0px", marginLeft: "0px"
-              //                   }
-              //               }
-              //               class="dropbtn iconDown hover-rotate fa fa-chevron-right"
-              //             ></i>
-              //             <div
-              //               class="dropdown-content1"
-              //               style={
-              //                 language === "ur" || language === "sd"
-              //                   ? { marginTop: "30px" }
-              //                   : {}
-              //               }
-              //             >
-              //               <Link className="" to={"/aboutus"}>
-              //                 <a
-              //                   target="_blank"
-              //                   href=""
-              //                   style={
-              //                     language === "ur" ||
-              //                       language === "sd"
-              //                       ? {
-              //                         display: "flex",
-              //                         flexDirection: "row-reverse",
-              //                         marginRight: "-16px",
-              //                       }
-              //                       : {}
-              //                   }
-              //                 >
-              //                   {translations["Vision"][language]}
-              //                 </a>
-              //               </Link>
-              //               <div
-              //                 class="nested-dropdown1"
-              //                 style={{ width: "100%" }}
-              //               >
-              //                 <span
-              //                   style={
-              //                     language === "ur" ||
-              //                       language === "sd"
-              //                       ? {
-              //                         display: "flex",
-              //                         flexDirection: "row-reverse",
-              //                         width: "100%",
-              //                       }
-              //                       : {
-              //                         display: "flex",
-              //                         position: "relative",
-              //                         width: "100%",
-              //                       }
-              //                   }
-              //                 >
-              //                   <a
-              //                     style={
-              //                       language === "ur" ||
-              //                         language === "sd"
-              //                         ? {
-              //                           width: "88%",
-              //                           paddingLeft: "30px",
-              //                           height: "40px",
-              //                           paddingTop: "8px",
-              //                           display: "flex",
-              //                           flexDirection: "row-reverse",
-              //                         }
-              //                         : {
-              //                           width: "100%",
-              //                           paddingLeft: "30px",
-              //                           height: "40px",
-              //                           paddingTop: "8px",
-              //                         }
-              //                     }
-              //                     href="#"
-              //                   >
-              //                     {
-              //                       translations["Components"][
-              //                       language
-              //                       ]
-              //                     }
-              //                   </a>
-              //                   <i
-              //                     // style={{
-              //                     //   marginTop: "10px",
-              //                     //   marginLeft: "0px",
-              //                     //   position: "absolute",
-              //                     //   right: "15px",
-              //                     // }}
-              //                     style={
-              //                       language === "ur" ||
-              //                         language === "sd"
-              //                         ? {
-              //                           marginTop: "10px",
-              //                           marginLeft: "0px",
-              //                           display: "flex",
-              //                           flexDirection: "row-reverse",
-              //                         }
-              //                         : {
-              //                           marginTop: "10px",
-              //                           marginLeft: "0px",
-              //                           position: "absolute",
-              //                           right: "15px",
-              //                         }
-              //                     }
-              //                     class="dropbtn unique-iconDown unique-hover-rotate component fa fa-chevron-right"
-              //                   ></i>
-              //                 </span>
-              //                 <div
-              //                   class="dropdown-content1 nested-content nested-right"
-              //                   style={{ left: "auto" }}
-              //                 >
-              //                   <Link className={""} to={"/Component"}>
-              //                     <a href="#">
-              //                       {
-              //                         translations["CLICKSID"][
-              //                         language
-              //                         ]
-              //                       }
-              //                     </a>
-              //                   </Link>
-              //                   <Link className={""} to={"/Team"}>
-              //                     <a href="#">
-              //                       {
-              //                         translations["OurTeam"][
-              //                         language
-              //                         ]
-              //                       }
-              //                     </a>
-              //                   </Link>
-              //                 </div>
-              //               </div>
-              //               <Link className={""} to={"/Team"}>
-              //                 <a
-              //                   href="#"
-              //                   style={
-              //                     language === "ur" ||
-              //                       language === "sd"
-              //                       ? {
-              //                         display: "flex",
-              //                         flexDirection: "row-reverse",
-              //                         marginRight: "-16px",
-              //                       }
-              //                       : {}
-              //                   }
-              //                 >
-              //                   {translations["CLICKSID"][language]}
-              //                 </a>
-              //               </Link>
-              //             </div>
-              //           </div>
-              //         </li>
+                          <a
+                            target="_blank"
+                            href=""
+                            style={
+                              language === "ur" ||
+                                language === "sd"
+                                ? {
+                                  display: "flex",
+                                  flexDirection: "row-reverse",
+                                  marginRight: "-16px",
+                                  fontWeight:"bold",
+                                }
+                                : {
+                                  fontWeight:"bold",
+                                  marginTop:5
 
-              //         <li>
-              //           <a href="comingsoon.html" title="" className={"link"}>
-              //             <Link className="link" to={"/Maps"}>
-              //               {translations["Maps"][language]}
-              //             </Link>
-              //           </a>
-              //         </li>
-              //         <li>
-              //           <a  title="" width="10">
-              //             <Tooltip
-              //               overlayInnerStyle=
-              //               {{ borderRadius: "0px",
-              //               width: "350px",
-              //               minWidth: "350px",
-              //                position: "relative",
-              //                right: "100px"}}
-              //               color={"#Ffffff"}
-              //               placement="bottomLeft"
-              //               title={SearchBox}
-              //               arrow={mergedArrow}
-              //             >
-              //               <i
-              //                 className="fa-sharp fa-solid fa-magnifying-glass"
-              //                 style={
-              //                   isSticky
-              //                     ? { color: "#000000" }
-              //                     : { color: "#ffffff" }
-              //                 }
-              //               ></i>
-              //             </Tooltip>
-              //           </a>
-              //         </li>
-              //       </ul>
-              //     </div>
-              //   </div>
-              // </div>
-              
+                                }
+                            }
+                          >
+                            {translations["Reports"][language]}
+                          </a>
+                          <a
+                            target="_blank"
+                            href="https://smeda.org/index.php?option=com_phocadownload&view=category&id=40&Itemid=742"
+                            style={
+                              language === "ur" ||
+                                language === "sd"
+                                ? {
+                                  display: "flex",
+                                  flexDirection: "row-reverse",
+                                  marginRight: "-16px",
+                                }
+                                : {
+                                  marginLeft:"10px"
+                                }
+                            }
+                          >
+                            {translations["ClusterProfiles"][language]}
+                          </a>
+                          <a
+                            target="_blank"
+                            href="https://smeda.org/index.php?option=com_phocadownload&view=category&id=186&Itemid=1024"
+                            style={
+                              language === "ur" ||
+                                language === "sd"
+                                ? {
+                                  display: "flex",
+                                  flexDirection: "row-reverse",
+                                  marginRight: "-16px",
+                                }
+                                : {
+                                  marginLeft:"10px"
+
+                                }
+                            }
+                          >
+                            {translations["DistrictEconomicProfiles"][language]}
+                          </a>
+                          <a
+                            target="_blank"
+                            href="https://smeda.org/index.php?option=com_phocadownload&view=category&id=28&Itemid=139"
+                            style={
+                              language === "ur" ||
+                                language === "sd"
+                                ? {
+                                  display: "flex",
+                                  flexDirection: "row-reverse",
+                                  marginRight: "-16px",
+                                }
+                                : {
+                                  marginLeft:"10px"
+                                }
+                            }
+                          >
+                            {translations["SectorBriefs"][language]}
+                          </a>
+                          <a
+                            target="_blank"
+                            href="https://smeda.org/index.php?option=com_phocadownload&view=category&id=188&Itemid=1027"
+                            style={
+                              language === "ur" ||
+                                language === "sd"
+                                ? {
+                                  display: "flex",
+                                  flexDirection: "row-reverse",
+                                  marginRight: "-16px",
+                                }
+                                : {
+                                  marginLeft:"10px"
+                                }
+                            }
+                          >
+                            {translations["StudyReports"][language]}
+                          </a>
+                          <a
+                            target="_blank"
+                            href="https://smeda.org/index.php?option=com_phocadownload&view=category&id=168&Itemid=996"
+                            style={
+                              language === "ur" ||
+                                language === "sd"
+                                ? {
+                                  display: "flex",
+                                  flexDirection: "row-reverse",
+                                  marginRight: "-16px",
+                                }
+                                : {
+                                  marginLeft:"10px"
+                                }
+                            }
+                          >
+                            {translations["TradeAnalysisSeries"][language]}
+                          </a>
+                          <a
+                            target="_blank"
+                            href="https://tipp.gov.pk/?r=site/display&id=230"
+                            style={
+                              language === "ur" ||
+                                language === "sd"
+                                ? {
+                                  display: "flex",
+                                  flexDirection: "row-reverse",
+                                  marginRight: "-16px",
+                                }
+                                : {
+                                  marginLeft:"10px"
+                                }
+                            }
+                          >
+                            {translations["TradeStatistics"][language]}
+                          </a>
+                      </div>
+                    </div>
+                  </li>      
+                  <li>
+                    <a
+                      href="https://business.gov.pk/home_prmi/"
+                      title="Home Page"
+                      className={"link"}
+                      target="_blank"
+                    >
+                      {/* <Link className={"link"} to={"/home"}> */}
+                        {"PRMI"}
+                      {/* </Link> */}
+                    </a>
+                  </li>
+
+            
+                  <li >
+                  <div
+                      class="dropdown1"
+                      style={
+                        language === "ur" || language === "sd"
+                          ? {
+                            display: "flex",
+                            flexDirection: "row-reverse",
+                          }
+                          : {}
+                      }
+                    >
+                      <span
+                        style={{
+                          marginRight: "5px",
+                          textDecoration: "none",
+                        }}
+                        className={"link"}
+                      >
+                        {" "}
+                        {translations["Aboutus"][language]}
+                      </span>
+                      <i
+                        // style={{ marginTop: "5px", marginRight: "5px",}}
+                        style={
+                          language === "ur" ||
+                            language === "sd"
+                            ? {
+                              marginTop: "5px", marginRight: "5px"
+                            }
+                            : {
+                              marginTop: "0px", marginLeft: "3px",
+                              marginRight:10
+                            }
+                        }
+                        class="dropbtn iconDown hover-rotate fa fa-chevron-right"
+                      ></i>
+                      <div
+                        class="dropdown-content1"
+                        style={
+                          language === "ur" || language === "sd"
+                            ? { marginTop: "30px" }
+                            : {
+                              marginLeft:-100
+                            }
+                        }
+                      >
+                   
+                        {/* <div
+                          class="nested-dropdown1"
+                          style={{ width: "100%" }}
+                        >
+                          <span
+                            style={
+                              language === "ur" ||
+                                language === "sd"
+                                ? {
+                                  display: "flex",
+                                  flexDirection: "row-reverse",
+                                  width: "100%",
+                                }
+                                : {
+                                  display: "flex",
+                                  position: "relative",
+                                  width: "100%",
+                                }
+                            }
+                          >
+                            <a
+                              style={
+                                language === "ur" ||
+                                  language === "sd"
+                                  ? {
+                                    width: "88%",
+                                    paddingLeft: "30px",
+                                    height: "40px",
+                                    paddingTop: "8px",
+                                    display: "flex",
+                                    flexDirection: "row-reverse",
+                                  }
+                                  : {
+                                    width: "100%",
+                                    paddingLeft: "30px",
+                                    height: "40px",
+                                    paddingTop: "8px",
+                                  }
+                              }
+                              href="#"
+                            >
+                              {
+                                translations["Components"][
+                                language
+                                ]
+                              }
+                            </a>
+                            <i
+                              // style={{
+                              //   marginTop: "10px",
+                              //   marginLeft: "0px",
+                              //   position: "absolute",
+                              //   right: "15px",
+                              // }}
+                              style={
+                                language === "ur" ||
+                                  language === "sd"
+                                  ? {
+                                    marginTop: "10px",
+                                    marginLeft: "0px",
+                                    display: "flex",
+                                    flexDirection: "row-reverse",
+                                  }
+                                  : {
+                                    marginTop: "10px",
+                                    marginLeft: "0px",
+                                    position: "absolute",
+                                    right: "15px",
+                                  }
+                              }
+                              class="dropbtn unique-iconDown unique-hover-rotate component fa fa-chevron-right"
+                            ></i>
+                          </span>
+                          <div
+                            class="dropdown-content1 nested-content nested-right"
+                            style={{ left: "auto" }}
+                          >
+                            <Link className={""} to={"/Component"}>
+                              <a href="#">
+                                {
+                                  translations["CLICKSID"][
+                                  language
+                                  ]
+                                }
+                              </a>
+                            </Link>
+                            <Link className={""} to={"/Team"}>
+                              <a href="#">
+                                {
+                                  translations["OurTeam"][
+                                  language
+                                  ]
+                                }
+                              </a>
+                            </Link>
+                          </div>
+                        </div> */}
+                        <Link className="" to={"/introduction"}>
+                          <a
+                            target="_blank"
+                            href=""
+                            style={
+                              language === "ur" ||
+                                language === "sd"
+                                ? {
+                                  display: "flex",
+                                  flexDirection: "row-reverse",
+                                  marginRight: "-16px",
+                                }
+                                : {}
+                            }
+                          >
+                            {translations["Introduction"][language]}
+                          </a>
+                        </Link>
+                        <Link className={""} to={"/projectobjectives"}>
+                          <a
+                            href="#"
+                            style={
+                              language === "ur" ||
+                                language === "sd"
+                                ? {
+                                  display: "flex",
+                                  flexDirection: "row-reverse",
+                                  marginRight: "-16px",
+                                }
+                                : {}
+                            }
+                          >
+                            {translations["projectobjectives"][language]}
+                          </a>
+                        </Link>
+                        <Link className={""} to={"/acheivement"}>
+                          <a
+                            href="#"
+                            style={
+                              language === "ur" ||
+                                language === "sd"
+                                ? {
+                                  display: "flex",
+                                  flexDirection: "row-reverse",
+                                  marginRight: "-16px",
+
+                                }
+                                : {}
+                            }
+                          >
+                            {translations["Achievements"][language]}
+                          </a>
+                        </Link>
+                        <Link className={""} to={"/Team"}>
+                          <a
+                            href="#"
+                            style={
+                              language === "ur" ||
+                                language === "sd"
+                                ? {
+                                  display: "flex",
+                                  flexDirection: "row-reverse",
+                                  marginRight: "-16px",
+                                }
+                                : {}
+                            }
+                          >
+                            {translations["Team"][language]}
+                          </a>
+                        </Link>
+                        <Link className={""} to={"/resource"}>
+                          <a
+                            href="#"
+                            style={
+                              language === "ur" ||
+                                language === "sd"
+                                ? {
+                                  display: "flex",
+                                  flexDirection: "row-reverse",
+                                  marginRight: "-16px",
+                                }
+                                : {}
+                            }
+                          >
+                            {translations["Downloads"][language]}
+                          </a>
+                        </Link>
+                        <Link className={""} to={"/faqs"}>
+                          <a
+                            href="#"
+                            style={
+                              language === "ur" ||
+                                language === "sd"
+                                ? {
+                                  display: "flex",
+                                  flexDirection: "row-reverse",
+                                  marginRight: "-16px",
+                                }
+                                : {}
+                            }
+                          >
+                            {translations["FAQ"][language]}
+                          </a>
+                        </Link>
+                        <Link className={""} to={"/contactUs"}>
+                          <a
+                            href="#"
+                            style={
+                              language === "ur" ||
+                                language === "sd"
+                                ? {
+                                  display: "flex",
+                                  flexDirection: "row-reverse",
+                                  marginRight: "-16px",
+                                }
+                                : {}
+                            }
+                          >
+                            {translations["Contactus"][language]}
+                          </a>
+                        </Link>
+                      </div>
+                    </div>
+                  </li>
+                  {/* <li>
+                    <a title="" className={"link"}>
+                      <Link className="link" to={"/NewsAndInformation"}>
+                        {
+                          translations["NewsInformation"][
+                          language
+                          ]
+                        }
+                      </Link>
+                    </a>
+                  </li> */}
+                  {/* <li>
+                    <div
+                      class="dropdown1"
+                      style={
+                        language === "ur" || language === "sd"
+                          ? {
+                            display: "flex",
+                            flexDirection: "row-reverse",
+                          }
+                          : {}
+                      }
+                    >
+                      <span
+                        style={{
+                          marginRight: "5px",
+                          textDecoration: "none",
+                        }}
+                        className={"link"}
+                      >
+                        {translations["Resources"][language]}
+                      </span>
+                      <i
+                        style={
+                          language === "ur" ||
+                            language === "sd"
+                            ? {
+                              marginTop: "5px", marginRight: "5px"
+                            }
+                            : {
+                              marginTop: "0px", marginLeft: "0px"
+                            }
+                        }
+                        class=" dropbtn iconDown hover-rotate fa fa-chevron-right"
+                      ></i>
+                      <div
+                        class="dropdown-content1"
+                        style={
+                          language === "ur" || language === "sd"
+                            ? { marginTop: "30px" }
+                            : {}
+                        }
+                      >
+                        <Link className={""} to={"/resource"}>
+                          <a target="_blank" href="">
+                            {translations["Download"][language]}
+                          </a>
+                        </Link>
+                        <Link className={""} to={"/regulatorycatalog"}>
+                          <a href="#">
+                            {
+                              translations["RegulatoryCatalog"][
+                              language
+                              ]
+                            }
+                          </a>
+                        </Link>
+                      </div>
+                    </div>
+                  </li> */}
+                  {/* <li>
+                    <div
+                      class="dropdown1"
+                      style={
+                        language === "ur" || language === "sd"
+                          ? {
+                            display: "flex",
+                            flexDirection: "row-reverse",
+                          }
+                          : {}
+                      }
+                    >
+                      <span
+                        style={{
+                          marginRight: "5px",
+                          textDecoration: "none",
+                        }}
+                        className={"link"}
+                      >
+                        {" "}
+                        {translations["Aboutus"][language]}
+                      </span>
+                      <i
+                        // style={{ marginTop: "5px", marginRight: "5px",}}
+                        style={
+                          language === "ur" ||
+                            language === "sd"
+                            ? {
+                              marginTop: "5px", marginRight: "5px"
+                            }
+                            : {
+                              marginTop: "0px", marginLeft: "0px"
+                            }
+                        }
+                        class="dropbtn iconDown hover-rotate fa fa-chevron-right"
+                      ></i>
+                      <div
+                        class="dropdown-content1"
+                        style={
+                          language === "ur" || language === "sd"
+                            ? { marginTop: "30px" }
+                            : {}
+                        }
+                      >
+                        <Link className="" to={"/aboutus"}>
+                          <a
+                            target="_blank"
+                            href=""
+                            style={
+                              language === "ur" ||
+                                language === "sd"
+                                ? {
+                                  display: "flex",
+                                  flexDirection: "row-reverse",
+                                  marginRight: "-16px",
+                                }
+                                : {}
+                            }
+                          >
+                            {translations["Vision"][language]}
+                          </a>
+                        </Link>
+                        <div
+                          class="nested-dropdown1"
+                          style={{ width: "100%" }}
+                        >
+                          <span
+                            style={
+                              language === "ur" ||
+                                language === "sd"
+                                ? {
+                                  display: "flex",
+                                  flexDirection: "row-reverse",
+                                  width: "100%",
+                                }
+                                : {
+                                  display: "flex",
+                                  position: "relative",
+                                  width: "100%",
+                                }
+                            }
+                          >
+                            <a
+                              style={
+                                language === "ur" ||
+                                  language === "sd"
+                                  ? {
+                                    width: "88%",
+                                    paddingLeft: "30px",
+                                    height: "40px",
+                                    paddingTop: "8px",
+                                    display: "flex",
+                                    flexDirection: "row-reverse",
+                                  }
+                                  : {
+                                    width: "100%",
+                                    paddingLeft: "30px",
+                                    height: "40px",
+                                    paddingTop: "8px",
+                                  }
+                              }
+                              href="#"
+                            >
+                              {
+                                translations["Components"][
+                                language
+                                ]
+                              }
+                            </a>
+                            <i
+                              // style={{
+                              //   marginTop: "10px",
+                              //   marginLeft: "0px",
+                              //   position: "absolute",
+                              //   right: "15px",
+                              // }}
+                              style={
+                                language === "ur" ||
+                                  language === "sd"
+                                  ? {
+                                    marginTop: "10px",
+                                    marginLeft: "0px",
+                                    display: "flex",
+                                    flexDirection: "row-reverse",
+                                  }
+                                  : {
+                                    marginTop: "10px",
+                                    marginLeft: "0px",
+                                    position: "absolute",
+                                    right: "15px",
+                                  }
+                              }
+                              class="dropbtn unique-iconDown unique-hover-rotate component fa fa-chevron-right"
+                            ></i>
+                          </span>
+                          <div
+                            class="dropdown-content1 nested-content nested-right"
+                            style={{ left: "auto" }}
+                          >
+                            <Link className={""} to={"/Component"}>
+                              <a href="#">
+                                {
+                                  translations["CLICKSID"][
+                                  language
+                                  ]
+                                }
+                              </a>
+                            </Link>
+                            <Link className={""} to={"/Team"}>
+                              <a href="#">
+                                {
+                                  translations["OurTeam"][
+                                  language
+                                  ]
+                                }
+                              </a>
+                            </Link>
+                          </div>
+                        </div>
+                        <Link className={""} to={"/Team"}>
+                          <a
+                            href="#"
+                            style={
+                              language === "ur" ||
+                                language === "sd"
+                                ? {
+                                  display: "flex",
+                                  flexDirection: "row-reverse",
+                                  marginRight: "-16px",
+                                }
+                                : {}
+                            }
+                          >
+                            {translations["CLICKSID"][language]}
+                          </a>
+                        </Link>
+                      </div>
+                    </div>
+                  </li> */}
+
+                  {/* <li>
+                    <a href="comingsoon.html" title="" className={"link"}>
+                      <Link className="link" to={"/Maps"}>
+                        {translations["Maps"][language]}
+                      </Link>
+                    </a>
+                  </li> */}
+                  <li style={{marginLeft:10}}>
+                    <a  title="" width="10">
+                      <Tooltip
+                        overlayInnerStyle=
+                        {{ borderRadius: "0px",
+                        width: "350px",
+                        minWidth: "350px",
+                         position: "relative",
+                         right: "100px"
+                         }}
+                        color={"#Ffffff"}
+                        placement="bottomLeft"
+                        title={SearchBox}
+                        arrow={mergedArrow}
+                      >
+                        <i
+                          className="fa-sharp fa-solid fa-magnifying-glass"
+                          style={
+                            isSticky
+                              ? { color: "" }
+                              : { color: "black" }
+                          }
+                        ></i>
+                      </Tooltip>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+           
+            )
+            }
+</div>
+
+                <div
+                className="d-flex px-4"
+                  style={
+                    windowWidth <= 1366
+                    ? {
+                      marginRight: "-4px",
+                    }
+                    : {
+                      marginLeft: "22px",
+                      marginRight: "7px",
+                    }
+                  }
+                >
+                  <img
+                    src={sindh}
+                    alt=""
+                    className="marginDPI"
+                    width={windowWidth <= 1440 ? "95" : "115"}
+                    height={windowWidth <= 1440 ? "115" : "135"}
+                  />
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+
+
+            </div>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            {windowWidth <=1024&&
               <div className={`header `}>
               <div className={"row "} style={{height:"5px"}}>
                 <div
-                  className={" navbar boxshadowNavBar justify-content-end"}
-                  style={language === "ur" || language === "sd"?{marginTop:-46}:windowWidth <1280?{position:'relative',zIndex:-1,background:"white",marginTop:-25,}: { width: "100%", paddingRight: "0px", marginTop:-52,}}
+                  className={" navbar boxshadowNavBar"}
+                  style={language === "ur" || language === "sd"?{marginTop:-46}:{marginTop:-38,display:'flex',justifyContent:'center',paddingRight:54}}
                 >
                   <ul
                     style={
@@ -2997,7 +3077,6 @@ const {language} = useSelector((state)=>state.language)
                 </div>
               </div>
             </div>
-            )
             }
           </div>
        
@@ -3006,12 +3085,12 @@ const {language} = useSelector((state)=>state.language)
           {/* <h1>dropdown-content1</h1> */}
         </div>
       <div className="container-fluid" style={{ overflowX: "hidden", position:'relative'}}>
-        <div className="" style={{ position:"absolute",zIndex:999}}>
+        <div className="" style={{ position:"absolute",zIndex:999,width:"100%" }}>
         <div
             className=" px-5"
             style={
               language === "ur" || language === "sd"
-                ? { display: "flex", justifyContent: "end" }
+                ? { display: "flex", justifyContent: "end",}
                 : {}
             }
           >
@@ -3263,31 +3342,19 @@ const {language} = useSelector((state)=>state.language)
               style={
                 language === "ur" || language === "sd"
                   ? {
-                    // paddingRight: "60px",
-                    // position: "relative",
-                    // // height: "96vh",
-                    // display: "flex",
-                    // alignItems: "end",
-                    // display: "flex",
-                    // flexDirection: "row-reverse",
                     position: "fixed",
                     bottom:-5.5,
-                    // height: "96vh",
-                    // paddingRight: "60px",
-                    // right:200,
                     display: "flex",
                     flexDirection: "row-reverse",
-                    // justifyContent:'start',
                     marginLeft: language === "ur" || language === "sd" ?-42:0,
                     alignItems: "end",
                     zIndex:99999,
                     paddingBottom:0
                   }
-                  : windowWidth <= 1440
+                  : windowWidth <= 2000
                     ? {
                       position: "fixed",
                       bottom:-5.5,
-                      // height: "96vh",
                       display: "flex",
                       alignItems: "end",
                       zIndex:99999,

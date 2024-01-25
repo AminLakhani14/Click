@@ -97,7 +97,7 @@ export const tutorial = [
     tutorial: SBCA_006,
     department: "Sindh Building Control Authority (SBCA)",
     thumbnail:sindhbuildingcontrol,
-    length:2
+    length:5
   },
   {
     id:9,

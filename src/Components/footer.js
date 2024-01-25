@@ -304,7 +304,7 @@ function Footer(props) {
                 }
               >
                 {/* {translations["Floor"][language]}, <br /> */}
-                {translations["Shahrah"][language]},
+                {translations["Shahrah"][language]}
                 <br />
                 {/* {translations["Karachi"][language]} */}
               </address>
@@ -469,18 +469,6 @@ function Footer(props) {
             </form>
           </div>
         </div>
-
-
-
-
-
-
-
-
-
-
-
-
         <div className="row mb-3">
           <div
             className={windowWidth <500 ? "mt-5":"mt-1"}
@@ -508,17 +496,11 @@ function Footer(props) {
             }
             }
           >
-
-            <div>
-              <p className="highlightable" style={windowWidth < 500 ? { fontWeight: "bold", fontSize: "10px" } : { fontWeight: "bold" }}>
-              {translations["Version"][language]} 0.05.09.0023
-              </p>
-            </div>
             <div
               style={
                 windowWidth <= 600
-                  ? { width: "50%", textAalign: "start" }
-                  : { width: "55%", textAlign: "end" }
+                  ? { width: "100%", textAalign: "start", }
+                  : { width: "100%", textAlign: "center" ,}
               }
             >
               <p
@@ -528,7 +510,7 @@ function Footer(props) {
                 {translations["Copyright"][language]}
               </p>
             </div>
-            <div
+            {/* <div
               style={
                 windowWidth <= 600
                   ? {
@@ -558,7 +540,7 @@ function Footer(props) {
                 width={windowWidth < 500 ? "80" : "115"}
                 height="50"
               ></img>
-            </div>
+            </div> */}
           </div>
         </div>
       </footer>

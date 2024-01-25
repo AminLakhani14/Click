@@ -53,9 +53,13 @@ import LIcensetosaledrugbytretail from "../assets/tutorial/LIcensetosaledrugbytr
 import sindhHealthcarevideo from "../assets/tutorial/sindhHealthcare.mp4";
 import sepa_001 from "../assets/tutorial/sepa-001.mp4";
 import sepa_003 from "../assets/tutorial/sepa-003.mp4";
+import SBCA_002 from "../assets/tutorial/SBCA-002.mp4";
 import SBCA_006 from "../assets/tutorial/SBCA-006.mp4";
 import SBCA_007 from "../assets/tutorial/SBCA-007.mp4";
 import BOR_001 from "../assets/tutorial/BOR-001.mp4";
+import SBCA_003 from "../assets/tutorial/SBCA-003.mp4";
+import SBCA_001_B from "../assets/tutorial/SBCA-001(B).mp4";
+
 
 
 
@@ -1132,6 +1136,7 @@ const arr = [
       address:" V3XF+X36، Civic Center, University Road, Pakistan, Block 14 Gulshan-e-Iqbal, Karachi, Karachi City, Sindh",
       contactno:"(021) 99230329",
       rlcoID: "SBCA-001 (A)",
+      video:null,
       details: "Approval of proposed building plan for Category-I",
       type: "Other",
       timeLine: "5 days for Cat-I \n&amp; 60 Days for Cat-II, III &amp; IV",
@@ -1210,6 +1215,7 @@ const arr = [
       address:" V3XF+X36، Civic Center, University Road, Pakistan, Block 14 Gulshan-e-Iqbal, Karachi, Karachi City, Sindh",
       contactno:"(021) 99230329",
       rlcoID: "SBCA-001 (B)",
+      video:SBCA_001_B,
       details: "Approval of proposed building plan for Category-II, III, IV",
       type: "Other",
       // prevailing:
@@ -1228,6 +1234,8 @@ const arr = [
       address:" V3XF+X36، Civic Center, University Road, Pakistan, Block 14 Gulshan-e-Iqbal, Karachi, Karachi City, Sindh",
       contactno:"(021) 99230329",
       rlcoID: "SBCA-001 (B)",
+      video:SBCA_001_B,
+
       details: "Approval of proposed building plan for Category-II, III, IV",
       type: "Other",
       // prevailing:
@@ -1246,6 +1254,8 @@ const arr = [
       address:" V3XF+X36، Civic Center, University Road, Pakistan, Block 14 Gulshan-e-Iqbal, Karachi, Karachi City, Sindh",
       contactno:"(021) 99230329",
       rlcoID: "SBCA-001 (B)",
+      video:SBCA_001_B,
+
       details: "Approval of proposed building plan for Category-II, III, IV",
       type: "Other",
       // prevailing:
@@ -1264,6 +1274,8 @@ const arr = [
       address:" V3XF+X36، Civic Center, University Road, Pakistan, Block 14 Gulshan-e-Iqbal, Karachi, Karachi City, Sindh",
       contactno:"(021) 99230329",
       rlcoID: "SBCA-001 (B)",
+      video:SBCA_001_B,
+
       details: "Approval of proposed building plan for Category-II, III, IV",
       type: "Other",
       // prevailing:
@@ -1282,6 +1294,8 @@ const arr = [
       address:" V3XF+X36، Civic Center, University Road, Pakistan, Block 14 Gulshan-e-Iqbal, Karachi, Karachi City, Sindh",
       contactno:"(021) 99230329",
       rlcoID: "SBCA-001 (B)",
+      video:SBCA_001_B,
+
       details: "Approval of proposed building plan for Category-II, III, IV",
       type: "Other",
       // prevailing:
@@ -1300,6 +1314,8 @@ const arr = [
       address:" V3XF+X36، Civic Center, University Road, Pakistan, Block 14 Gulshan-e-Iqbal, Karachi, Karachi City, Sindh",
       contactno:"(021) 99230329",
       rlcoID: "SBCA-001 (B)",
+      video:SBCA_001_B,
+
       details: "Approval of proposed building plan for Category-II, III, IV",
       type: "Other",
       // prevailing:
@@ -1320,6 +1336,7 @@ const arr = [
       rlcoID: "SBCA-002",
       details: "Notice of Completion (Category I to IV",
       type: "Other",
+      video:SBCA_002,
       // prevailing: "Karachi Building &amp;Town Planning Regulations, 2002",
       // jurisdiction: "Karachi",
       timeLine: "5 days for Cat-I \n&amp; 60 Days for Cat-II, III &amp; IV",
@@ -1337,6 +1354,8 @@ const arr = [
       rlcoID: "SBCA-002",
       details: "Notice of Completion (Category I to IV",
       type: "Other",
+      video:SBCA_002,
+
       // prevailing: "Karachi Building &amp;Town Planning Regulations, 2002",
       // jurisdiction: "Karachi",
       timeLine: "5 days for Cat-I \n&amp; 60 Days for Cat-II, III &amp; IV",
@@ -1354,6 +1373,8 @@ const arr = [
       rlcoID: "SBCA-002",
       details: "Notice of Completion (Category I to IV",
       type: "Other",
+      video:SBCA_002,
+
       // prevailing: "Karachi Building &amp;Town Planning Regulations, 2002",
       // jurisdiction: "Karachi",
       timeLine: "5 days for Cat-I \n&amp; 60 Days for Cat-II, III &amp; IV",
@@ -1371,6 +1392,8 @@ const arr = [
       rlcoID: "SBCA-002",
       details: "Notice of Completion (Category I to IV",
       type: "Other",
+      video:SBCA_002,
+
       // prevailing: "Karachi Building &amp;Town Planning Regulations, 2002",
       // jurisdiction: "Karachi",
       timeLine: "5 days for Cat-I \n&amp; 60 Days for Cat-II, III &amp; IV",
@@ -1388,6 +1411,8 @@ const arr = [
       rlcoID: "SBCA-002",
       details: "Notice of Completion (Category I to IV",
       type: "Other",
+      video:SBCA_002,
+
       // prevailing: "Karachi Building &amp;Town Planning Regulations, 2002",
       // jurisdiction: "Karachi",
       timeLine: "5 days for Cat-I \n&amp; 60 Days for Cat-II, III &amp; IV",
@@ -1405,6 +1430,8 @@ const arr = [
       rlcoID: "SBCA-002",
       details: "Notice of Completion (Category I to IV",
       type: "Other",
+      video:SBCA_002,
+
       // prevailing: "Karachi Building &amp;Town Planning Regulations, 2002",
       // jurisdiction: "Karachi",
       timeLine: "5 days for Cat-I \n&amp; 60 Days for Cat-II, III &amp; IV",
@@ -1420,6 +1447,7 @@ const arr = [
       address:" V3XF+X36، Civic Center, University Road, Pakistan, Block 14 Gulshan-e-Iqbal, Karachi, Karachi City, Sindh",
       contactno:"(021) 99230329",
       rlcoID: "SBCA-003",
+      video:SBCA_003,
       details:
         "Additional floor Charges for Category (I) / Betterment Charges for Category (II, III &amp; IV",
       type: "Other",
@@ -1438,6 +1466,7 @@ const arr = [
       address:" V3XF+X36، Civic Center, University Road, Pakistan, Block 14 Gulshan-e-Iqbal, Karachi, Karachi City, Sindh",
       contactno:"(021) 99230329",
       rlcoID: "SBCA-003",
+      video:SBCA_003,
       details:
         "Additional floor Charges for Category (I) / Betterment Charges for Category (II, III &amp; IV",
       type: "Other",
@@ -1456,6 +1485,7 @@ const arr = [
       address:" V3XF+X36، Civic Center, University Road, Pakistan, Block 14 Gulshan-e-Iqbal, Karachi, Karachi City, Sindh",
       contactno:"(021) 99230329",
       rlcoID: "SBCA-003",
+      video:SBCA_003,
       details:
         "Additional floor Charges for Category (I) / Betterment Charges for Category (II, III &amp; IV",
       type: "Other",
@@ -1474,6 +1504,7 @@ const arr = [
       address:" V3XF+X36، Civic Center, University Road, Pakistan, Block 14 Gulshan-e-Iqbal, Karachi, Karachi City, Sindh",
       contactno:"(021) 99230329",
       rlcoID: "SBCA-003",
+      video:SBCA_003,
       details:
         "Additional floor Charges for Category (I) / Betterment Charges for Category (II, III &amp; IV",
       type: "Other",
@@ -1492,6 +1523,7 @@ const arr = [
       address:" V3XF+X36، Civic Center, University Road, Pakistan, Block 14 Gulshan-e-Iqbal, Karachi, Karachi City, Sindh",
       contactno:"(021) 99230329",
       rlcoID: "SBCA-003",
+      video:SBCA_003,
       details:
         "Additional floor Charges for Category (I) / Betterment Charges for Category (II, III &amp; IV",
       type: "Other",
@@ -1510,6 +1542,7 @@ const arr = [
       address:" V3XF+X36، Civic Center, University Road, Pakistan, Block 14 Gulshan-e-Iqbal, Karachi, Karachi City, Sindh",
       contactno:"(021) 99230329",
       rlcoID: "SBCA-003",
+      video:SBCA_003,
       details:
         "Additional floor Charges for Category (I) / Betterment Charges for Category (II, III &amp; IV",
       type: "Other",
@@ -1528,6 +1561,7 @@ const arr = [
       address:" V3XF+X36، Civic Center, University Road, Pakistan, Block 14 Gulshan-e-Iqbal, Karachi, Karachi City, Sindh",
       contactno:"(021) 99230329",
       rlcoID: "SBCA-003",
+      video:SBCA_003,
       details:
         "Additional floor Charges for Category (I) / Betterment Charges for Category (II, III &amp; IV",
       type: "Other",

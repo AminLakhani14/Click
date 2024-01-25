@@ -4,7 +4,7 @@ import "../Css/header.css";
 import qasim from "../assets/qasim.png";
 import qasimBW from "../assets/qasimBW.jpeg";
 import CMsindh from "../assets/CMsindh.png";
-import mng1 from "../assets/teamsPic/MohammadMureedRahimoon.jpg";
+import SecretaryInvestment from "../assets/teamsPic/SecretaryInvestment.JPG";
 import mng2 from "../assets/teamsPic/anwarAli.jpg";
 import mng2BW from "../assets/mng2BW.jpeg";
 import quote from "../assets/quote.png";
@@ -17,14 +17,14 @@ import { useSelector } from "react-redux";
 
 const imageMapColor = {
   // "qasim_Id": qasim,
-  "img2": mng1,
+  "img2": SecretaryInvestment,
   "img3": mng2,
   "img4": CMsindh,
   "img5":ChiefSecretarySindh
 };  
 const imageMapBW = {
   // "qasim_Id": qasimBW,
-  "img2": mng1,
+  "img2": SecretaryInvestment,
   "img3": mng2,
   "img4": CMsindh,
   "img5":ChiefSecretarySindh
@@ -75,7 +75,7 @@ function Message(props) {
     // },
     {
       id:"img2",
-      img:mng1,
+      img:SecretaryInvestment,
       name: {
         en: "Mohammad Mureed Rahimoon",
         ur: "تمیز الدین خیرو",
@@ -106,10 +106,9 @@ function Message(props) {
         sd: "پراجيڪٽ ڊائريڪٽر انويسٽمينٽ ڊپارٽمينٽ حڪومت سنڌ تي ڪلڪ ڪريو.",
       },
       desc: {
-        en: `Introducing the Sindh Investment website by CLICK, your gateway to profitable opportunities in our vibrant province. As Chief Minister of Sindh, I understand the crucial role investments play in driving economic growth. This comprehensive platform provides essential information, incentives, and seamless connections with authorities across various sectors. Join us in shaping a prosperous future for Sindh through strategic investments and unlocking its immense potential.`,
-        ur: "کلک پر سندھ انویسٹمنٹ ویب سائٹ کا مشہوری پذیر کریں، آپ کے منافع کی ممکنات کی راہ کھولنے والے آپ کے دروازے کے طور پر. سندھ کے وزیراعلیٰ کے طور پر، میں سمجھتا ہوں کہ سرمایہ کاری کی کردار اقتصادی ترقی کو بڑھانے میں کردار ادا کرتی ہے۔ یہ مکمل پلیٹ فارم ضروری معلومات، مراعات، اور مختلف شعبوں میں اختیارات کے ساتھ بے رکاوٹ رابطے فراہم کرتا ہے. ہمارے ساتھ آئیں اور سندھ کے لئے ایک خوشحال مستقبل کو شکل دینے میں استراتیجی سرمایہ کاری کے ذریعے اور اس کے عظیم ممکنات کو کھولنے میں شامل ہوں",
-        sd: "اسان جي متحرڪ صوبي ۾ منافعي جي موقعن لاءِ پنهنجي گيٽ وي تي ڪلڪ ڪري سنڌ انويسٽمينٽ ويب سائيٽ متعارف ڪرايو. سنڌ جي وڏي وزير جي حيثيت ۾، مان سمجهان ٿو ته سيڙپڪاري جو اهم ڪردار معاشي ترقي کي هلائڻ ۾ ادا ڪندو آهي. هي جامع پليٽ فارم مختلف شعبن ۾ اختيارين سان ضروري معلومات، ترغيب، ۽ بي ترتيب رابطا فراهم ڪري ٿو. اسٽريٽجڪ سيڙپڪاري ذريعي سنڌ جي خوشحال مستقبل کي ترتيب ڏيڻ ۽ ان جي وسيع امڪانن کي کولڻ ۾ اسان سان شامل ٿيو."
-
+        en: `Striding towards improving investment climate and city competitiveness, Government of Sindh is upgrading its E-Licensing portal Sindh Business Registration Portal (SBRP)---a pilot initiative to provide E-Licensing facility for four (04) major business registration approvals-- into Sindh Business One Stop Shop (S-BOSS) under CLICK project. \n\nS-BOSS would be an e-Licensing portal to provide online approvals of all registrations, licenses, certificates and other permits (RLCOs) required to register and operate business in Sindh. The 1st phase of the portal would be launched between July-Dec 2024 for 140 RLCOs.`,
+        ur:'سرمایہ کاری کے ماحول اور شہر کی مسابقت کو بہتر بنانے کی طرف بڑھتے ہوئے، حکومت سندھ اپنے ای-لائسنسنگ پورٹل سندھ بزنس رجسٹریشن پورٹل (SBRP) کو اپ گریڈ کر رہی ہے --- چار (04) بڑی کاروباری رجسٹریشن کی منظوریوں کے لیے ای-لائسنسنگ کی سہولت فراہم کرنے کے لیے ایک پائلٹ اقدام ہے۔ کلک پروجیکٹ کے تحت سندھ بزنس ون اسٹاپ شاپ (S-BOSS)۔ \n\nS-BOSS ایک ای-لائسنسنگ پورٹل ہوگا جو سندھ میں کاروبار کو رجسٹر کرنے اور چلانے کے لیے درکار تمام رجسٹریشن، لائسنس، سرٹیفکیٹس اور دیگر اجازت ناموں (RLCOs) کی آن لائن منظوری فراہم کرے گا۔ پورٹل کا پہلا مرحلہ جولائی تا دسمبر 2024 کے درمیان 140 RLCOs کے لیے شروع کیا جائے گا۔',
+        sd:'سيڙپڪاري جي ماحول ۽ شهر جي مقابلي کي بهتر بڻائڻ جي لاءِ، سنڌ حڪومت پنهنجي اي-لائسنسنگ پورٽل کي اپ گريڊ ڪري رهي آهي سنڌ بزنس رجسٽريشن پورٽل (SBRP)--- چئن (04) وڏن ڪاروباري رجسٽريشن جي منظورين لاءِ اي-لائسنسنگ جي سهولت فراهم ڪرڻ لاءِ هڪ پائلٽ اقدام- سنڌ بزنس ون اسٽاپ شاپ (S-BOSS) CLICK منصوبي تحت. \n\nS-BOSS هڪ اي-لائسنسنگ پورٽل هوندو جيڪو سڀني رجسٽريشنن، لائسنسن، سرٽيفڪيٽن ۽ ٻين اجازتن (RLCOs) جي آن لائن منظوري فراهم ڪري ٿو جيڪو سنڌ ۾ ڪاروبار کي رجسٽر ڪرڻ ۽ هلائڻ لاءِ گهربل آهي. پورٽل جو پهريون مرحلو 140 RLCOs لاءِ جولاءِ-ڊسمبر 2024 جي وچ ۾ شروع ڪيو ويندو.'
       },
     },
     {
@@ -203,7 +202,7 @@ function Message(props) {
   const clickCarouselImage = (event) => {
     try {
        ;
-      if(event) {
+      if(event?.target?.id) {
         let Id = event?.target?.id
         resetImageSlider(ID)
         // document.getElementById(Id).src = muradAli;  // when click image change
@@ -293,7 +292,7 @@ function Message(props) {
                 </div> */}
                 <div>
                   {" "}
-                  <div className="item "  onClick={clickCarouselImage}>
+                  <div className="item "   onClick={clickCarouselImage}>
                     <img
                     id="img2"
                     //  src={array[1].img}
@@ -301,7 +300,7 @@ function Message(props) {
                       alt=""
                       width="100"
                       height="100"
-                      style={{ borderRadius: "45%" }}
+                      style={{ borderRadius: "45%" ,maxWidth:'none',objectFit:'cover'}}
                     ></img>
                   </div>
                   ‍
@@ -318,7 +317,7 @@ function Message(props) {
                       alt=""
                       width="100"
                       height="100"
-                      style={{ borderRadius: "50%" }}
+                      style={{ borderRadius: "50%" ,maxWidth:'none',objectFit:'cover'}}
                     ></img>
                   </div>
                   
@@ -335,7 +334,7 @@ function Message(props) {
                       alt=""
                       width="100"
                       height="100"
-                      style={{ borderRadius: "50%" }}
+                      style={{ borderRadius: "50%" ,maxWidth:'none',objectFit:'cover'}}
                     ></img>
                   </div>
                   
@@ -352,7 +351,7 @@ function Message(props) {
                       alt=""
                       width="100"
                       height="100"
-                      style={{ borderRadius: "50%" }}
+                      style={{ borderRadius: "50%",maxWidth:'none',objectFit:'cover' }}
                     ></img>
                   </div>
                   
@@ -363,17 +362,17 @@ function Message(props) {
           <div className="col-lg-4"></div>
           <div className="row">
             {/* shahab */}
-            <div className="col-lg-4 mag-image">
+            <div className="col-lg-4 mag-image" >
               <img
                 // src={qasim}
                 src={imgFormData?.img}
                 alt=""
                 width={windowWidth <=1400?"320":"500"}
                 height={windowWidth <=1400?"320":"500"}
-                style={{ border: "0", borderRadius: "275px" }}
+                style={{ border: "0", borderRadius: "275px",objectFit:'cover'}}
               ></img>
             </div>
-            <div className="col-lg-8" style={windowWidth <=1440?{marginTop:"15px"}:{marginTop:"-120px"}}>
+            <div className="col-lg-8" style={windowWidth <=1440?{marginTop:"15px"}:{marginTop:"0px",minHeight:400}}>
               {/* <!-- Bordered Card --> */}
               <div
                 className=" "
@@ -392,7 +391,10 @@ function Message(props) {
                   </a>
                   <div className="media-body">
                     {/* <h3 className="title">Syed Qasim Naveed Qamar </h3> */}
+                    <div className="">
                     <h3 className="title highlightable">{imgFormData?.name[language]}</h3>
+
+                    </div>
                     <p
                       className="card-subtitle highlightable"
                       style={
@@ -407,13 +409,15 @@ function Message(props) {
                 </div>
                 <div className="mt-3">
                   <p 
+                
                    className={
                     language === "ur" || language === "sd"
                       ? "sub-title paragraphAlign"
                       : "sub-title text-md-start highlightable"
                   }
                   >
-                  {imgFormData?.desc[language]}
+                   <span  dangerouslySetInnerHTML={{ __html: imgFormData?.desc[language]}} 
+                  style={{ whiteSpace: "pre-line"}}></span>
                   </p>
                 </div>
               </div>

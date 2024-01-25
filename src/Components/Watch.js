@@ -32,7 +32,10 @@ import ICD_007 from "../assets/tutorial/ICD-007.mp4";
 import sindhHealthcarevideo from "../assets/tutorial/sindhHealthcare.mp4";
 import sepa_001 from "../assets/tutorial/sepa-001.mp4";
 import sepa_003 from "../assets/tutorial/sepa-003.mp4";
+import SBCA_001_B from "../assets/tutorial/SBCA-001(B).mp4";
 import SBCA_006 from "../assets/tutorial/SBCA-006.mp4";
+import SBCA_002 from "../assets/tutorial/SBCA-002.mp4";
+import SBCA_003 from "../assets/tutorial/SBCA-003.mp4";
 import SBCA_007 from "../assets/tutorial/SBCA-007.mp4";
 import BOR_001 from "../assets/tutorial/BOR-001.mp4";
 import { Link, useParams } from "react-router-dom";
@@ -185,9 +188,29 @@ export const videos = [
     department: "Sindh Building Control Authority (SBCA)",
     license: "Attestation Of Fee",
     thumbnail: sindhbuildingcontrol,
+  },  {
+    id: 20,
+    tutorial: SBCA_002,
+    department: "Sindh Building Control Authority (SBCA)",
+    license: "Notice of Completion (I-IV)",
+    thumbnail: sindhbuildingcontrol,
   },
   {
-    id: 20,
+    id: 21,
+    tutorial: SBCA_003,
+    department: "Sindh Building Control Authority (SBCA)",
+    license: "ADditional Floor Charges For Category I Betterment Charges For Category(II, III & IV)",
+    thumbnail: sindhbuildingcontrol,
+  },
+  {
+    id: 22,
+    tutorial: SBCA_001_B,
+    department: "Sindh Building Control Authority (SBCA)",
+    license: "Approval Of Building Plan For Category (II, III & IV)",
+    thumbnail: sindhbuildingcontrol,
+  },
+  {
+    id: 23,
     tutorial: sepa_003,
     department: "Sindh Environmental Protection Agency (SEPA)",
     license: "Approval Under Section 17 (IEE,EIA,EC)",

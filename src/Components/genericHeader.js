@@ -159,12 +159,10 @@ export default function GenericHeader(props) {
       style={{ flexDirection: "column" }}
     >
       <div className={""} style={{ width: "100%" }}>
-        <div className={"navbar"}>
-          <div className="navbarLeft">
-            <a href="https://www.sindh.gov.pk/" target="" style={{ display: "flex" }}>
-              <img className=" navlogo1" src={sindh} alt=""></img>
-              </a>
-              <div
+        <div className={"navbar row"}>
+          <div className=" col-lg-2 navbarLeft">
+             
+              {/* <div
                 className="vl"
                 style={
                   windowWidth <= 1366
@@ -179,13 +177,14 @@ export default function GenericHeader(props) {
                       marginTop: "39px",
                     }
                 }
-              ></div>
+              ></div> */}
               <Link to={"/home"}>
 
               <img src={click} alt="" className="navlogo2"></img>
               </Link>
           </div>
-          <div className="navbarRight d-flex justify-content-end" >
+          <div className="col-lg-10" style={{display:"flex",alignItems:'baseline',justifyContent:"end"}}>
+          <div className=" navbaright d-flex " >
             <ul className="p-0">
               <div className="r-side d-inline" >
                 <img
@@ -916,6 +915,11 @@ export default function GenericHeader(props) {
               </li>
             </ul>
           </div>
+          <div className=" pe-4">
+          <img className=" navlogo1" src={sindh} alt=""></img>
+          </div>
+          </div>
+         
         </div>
       </div>
     </div>
