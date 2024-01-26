@@ -59,6 +59,10 @@ import SBCA_007 from "../assets/tutorial/SBCA-007.mp4";
 import BOR_001 from "../assets/tutorial/BOR-001.mp4";
 import SBCA_003 from "../assets/tutorial/SBCA-003.mp4";
 import SBCA_001_B from "../assets/tutorial/SBCA-001(B).mp4";
+import SBCA_004 from "../assets/tutorial/SBCA-004.mp4";
+import SRB_001 from "../assets/tutorial/SRB-001.mp4";
+import SBCA_005 from "../assets/tutorial/SBCA-005.mp4";
+
 
 
 
@@ -1580,8 +1584,9 @@ const arr = [
       address:" V3XF+X36، Civic Center, University Road, Pakistan, Block 14 Gulshan-e-Iqbal, Karachi, Karachi City, Sindh",
       contactno:"(021) 99230329",
       rlcoID: "SBCA-004",
-      details: "Renewal of Building Plan for Category (I To IV",
+      details: "Renewal of Building Plan for Category (I To IV)",
       type: "Other",
+      video:SBCA_004,
       // prevailing: "Karachi Building &amp;Town Planning Regulations, 2002.",
       // jurisdiction: "Karachi",
       timeLine: "15 days for Cat I \nand 60 Days for Cat-II, III &amp; IV",
@@ -1600,6 +1605,8 @@ const arr = [
       details:
         "Addition / Alteration / Revision of Building Plan for Category (I To IV)",
       type: "Other",
+      video:SBCA_005,
+      // video:SBCA_005,
       // prevailing: "Karachi Building &amp;Town Planning Regulations, 2002.",
       // jurisdiction: "Karachi",
       timeLine: "15 days for Cat I \nand 60 Days for Cat-II, III &amp; IV",
@@ -4162,6 +4169,7 @@ const arr = [
       prevailing:
         "▪ . Sindh Sales Tax on Services Act, 2011\n▪ Sales Tax on Services Rules, 2011",
       // jurisdiction: "Sindh",
+      video:SRB_001,
       timeLine: "Same Day",
       fee: "Free of cost",
       officials: "▪ Deputy Commissioner (IT)",

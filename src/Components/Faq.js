@@ -12,10 +12,6 @@ import { TextField } from '@mui/material';
 
 
 const allFaqQuestions = departmentsFaq.flatMap(department => department.FaqQuestion);
-console.log("🚀 ~ allFaqQuestions:", allFaqQuestions)
-
-// console.log("FaqQuestion",FaqQuestion)
- 
 const Faq = () => {
     const [windowWidth, setWindowWidth] = useState(window.innerWidth);
     const [filteredFaq, setfilteredFaq] = useState([])
@@ -37,9 +33,8 @@ const Faq = () => {
     }, []);
     const filterData = (event) => {
         setisFilterOn(false)
-        debugger
         try {
-            if(event.target.value !=''){
+            if(event.target.value !==''){
                 let filterValue = event.target.value.toLowerCase();
     
             const getFilterData = allFaqQuestions.filter(question => {

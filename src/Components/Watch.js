@@ -20,7 +20,7 @@ import licenseToSaleDrugByWholeSale from "../assets/tutorial/LIcensetosaledrugby
 import LIcensetosaledrugbytretail from "../assets/tutorial/LIcensetosaledrugbytretail.mp4";
 import Ld_001 from "../assets/tutorial/led-001.mp4";
 import Ld_002 from "../assets/tutorial/ld002.mp4";
-
+import SRB_001 from "../assets/tutorial/SRB-001.mp4";
 import CED_001 from "../assets/tutorial/CED_001.mp4";
 import ICD_001 from "../assets/tutorial/ICD-001.mp4";
 import ICD_002 from "../assets/tutorial/ICD-002.mp4";
@@ -36,11 +36,11 @@ import SBCA_001_B from "../assets/tutorial/SBCA-001(B).mp4";
 import SBCA_006 from "../assets/tutorial/SBCA-006.mp4";
 import SBCA_002 from "../assets/tutorial/SBCA-002.mp4";
 import SBCA_003 from "../assets/tutorial/SBCA-003.mp4";
+import SBCA_004 from "../assets/tutorial/SBCA-004.mp4";
+import SBCA_005 from "../assets/tutorial/SBCA-005.mp4";
 import SBCA_007 from "../assets/tutorial/SBCA-007.mp4";
 import BOR_001 from "../assets/tutorial/BOR-001.mp4";
 import { Link, useParams } from "react-router-dom";
-import { ahmer } from "./Tutorial";
-
 import sindhHealthcare from "../assets/thumbnail/sindhHealthcare.png";
 import CollegeEducationDepartment from "../assets/thumbnail/CollegeEducationDepartment.png";
 import healthDepartment from "../assets/thumbnail/healthDepartment.png";
@@ -49,6 +49,7 @@ import IndustriesAndCommerceDepartment from "../assets/thumbnail/IndustriesAndCo
 import BoardOfRevenue from "../assets/thumbnail/BoardOfRevenue.png"
 import sindhbuildingcontrol from "../assets/thumbnail/sindhbuildingcontrol.png"
 import sindhEnviromentalProtection from "../assets/thumbnail/sindhEnviromentalProtection.png"
+import sindhBoardRevenue from "../assets/thumbnail/sindhBoardRevenue.png"
 
 
 export const videos = [
@@ -117,13 +118,20 @@ export const videos = [
   },
   {
     id: 10,
+    tutorial: SRB_001,
+    department: "Sindh Board Revenue",
+    license: "Sindh Sales Tax on Services (SST)",
+    thumbnail: sindhBoardRevenue,
+  },
+  {
+    id: 11,
     tutorial: licenseToSaleDrugByWholeSale,
     department: "Health Department",
     license: "License to sell Drugs by Way of Retail Sale (Form-6)",
     thumbnail: healthDepartment,
   },
   {
-    id: 11,
+    id: 12,
     tutorial: LIcensetosaledrugbytretail,
     department: "Health Department",
     license: "License to sell Drugs by Way of Wholesale 7A",
@@ -131,7 +139,7 @@ export const videos = [
   },
 
   {
-    id: 12,
+    id: 13,
     tutorial: ICD_002,
     department: "Industries and Commerce Department",
     license: "Registration Certificate of Amendment/Dissolution /Rectification in Partnership Firm",
@@ -139,7 +147,7 @@ export const videos = [
   },
 
   {
-    id: 13,
+    id: 14,
     tutorial: Ld_002,
     department: "Labour Department",
     license: "Registration of Factories",
@@ -148,69 +156,83 @@ export const videos = [
   },
   
   {
-    id: 14,
+    id: 15,
     tutorial: ICD_003,
     department: "Industries and Commerce Department",
     license: "Registration of New Boiler",
     thumbnail: IndustriesAndCommerceDepartment,
   },
   {
-    id: 15,
+    id: 16,
     tutorial: ICD_004,
     department: "Industries and Commerce Department",
     license: "Registration of Old Boiler",
     thumbnail: IndustriesAndCommerceDepartment,
   },
   {
-    id: 16,
+    id: 17,
     tutorial: ICD_005,
     department: "Industries and Commerce Department",
     license: "Approval of Plan and Particulars of Boilers Acceptable for Registration (New Boiler)",
     thumbnail: IndustriesAndCommerceDepartment,
   },
   {
-    id: 17,
+    id: 18,
     tutorial: ICD_006,
     department: "Industries and Commerce Department",
     license: "Approval of Plan and Particulars of Boilers Acceptable for Registration (Used Boiler)",
     thumbnail: IndustriesAndCommerceDepartment,
   },
   {
-    id: 18,
+    id: 19,
     tutorial: ICD_007,
     department: "Industries and Commerce Department",
     license: "Transfer of Ownership",
     thumbnail: IndustriesAndCommerceDepartment,
   }, 
    {
-    id: 19,
+    id: 20,
     tutorial: SBCA_007,
     department: "Sindh Building Control Authority (SBCA)",
     license: "Attestation Of Fee",
     thumbnail: sindhbuildingcontrol,
   },  {
-    id: 20,
+    id: 21,
     tutorial: SBCA_002,
     department: "Sindh Building Control Authority (SBCA)",
     license: "Notice of Completion (I-IV)",
     thumbnail: sindhbuildingcontrol,
   },
   {
-    id: 21,
+    id: 22,
     tutorial: SBCA_003,
     department: "Sindh Building Control Authority (SBCA)",
     license: "ADditional Floor Charges For Category I Betterment Charges For Category(II, III & IV)",
     thumbnail: sindhbuildingcontrol,
   },
   {
-    id: 22,
+    id: 23,
     tutorial: SBCA_001_B,
     department: "Sindh Building Control Authority (SBCA)",
     license: "Approval Of Building Plan For Category (II, III & IV)",
     thumbnail: sindhbuildingcontrol,
   },
   {
-    id: 23,
+    id: 24,
+    tutorial: SBCA_004,
+    department: "Sindh Building Control Authority (SBCA)",
+    license: "Renewal of Building Plan for Category (I To IV)",
+    thumbnail: sindhbuildingcontrol,
+  },
+  {
+    id: 25,
+    tutorial: SBCA_005,
+    department: "Sindh Building Control Authority (SBCA)",
+    license: "Addition / Alteration / Revision of Building Plan for Category (I To IV)",
+    thumbnail: sindhbuildingcontrol,
+  },
+  {
+    id: 26,
     tutorial: sepa_003,
     department: "Sindh Environmental Protection Agency (SEPA)",
     license: "Approval Under Section 17 (IEE,EIA,EC)",
@@ -266,13 +288,13 @@ const Watch = () => {
       {windowWidth >=500 && <div className="" style={{ height: 120 }}></div>}
 
 
-      <div className="row g-0 mb-4 d-flex justify-content-center">
+      {/* <div className="row g-0 mb-4 d-flex justify-content-center">
         <div className="d-flex justify-content-center ">
           <h1 className="tutorial">Tutorials</h1>
         </div>
-      </div>
+      </div> */}
       <div className=""></div>
-      <div className="parent_container">
+      <div className="parent_container mt-5">
         <div className="main_video">
           {filtervideo?.map(({ tutorial, department,thumbnail, license, id }) => {
             return (

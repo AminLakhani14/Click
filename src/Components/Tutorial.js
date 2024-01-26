@@ -36,6 +36,7 @@ import CollegeEducationDepartment from "../assets/thumbnail/CollegeEducationDepa
 import BoardOfRevenue from "../assets/thumbnail/BoardOfRevenue.png"
 import sindhbuildingcontrol from "../assets/thumbnail/sindhbuildingcontrol.png"
 import sindhEnviromentalProtection from "../assets/thumbnail/sindhEnviromentalProtection.png"
+import sindhBoardRevenue from "../assets/thumbnail/sindhBoardRevenue.png"
 
 
 
@@ -97,13 +98,20 @@ export const tutorial = [
     tutorial: SBCA_006,
     department: "Sindh Building Control Authority (SBCA)",
     thumbnail:sindhbuildingcontrol,
-    length:5
+    length:7
   },
   {
     id:9,
     tutorial: BOR_001,
     department: "Board of Revenue",
     thumbnail:BoardOfRevenue,
+    length:1
+  },
+  {
+    id:10,
+    tutorial: BOR_001,
+    department: "Sindh Board Revenue",
+    thumbnail:sindhBoardRevenue,
     length:1
   },
 ];
