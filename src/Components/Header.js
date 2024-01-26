@@ -3122,11 +3122,15 @@ const {language} = useSelector((state)=>state.language)
               <h2 className="subHeroHeading highlightable">
                 {translations["subHeroHeading"][language]}
               </h2>
-              <div className="row mt-5 ">
+              <div className="row mt-5 "   style={
+                    language === "ur" || language ==="sd" 
+                      ? { justifyContent: "end" }
+                      : {}
+                  }>
                 <div
                   className="col-lg-11 col-md-7 col-sm-7 col-xs-12 px-0"
                   style={
-                    language === "ur"
+                    language === "ur" || language ==="sd" 
                       ? { display: "flex", justifyContent: "end" }
                       : {}
                   }
