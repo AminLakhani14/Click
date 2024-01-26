@@ -7,14 +7,6 @@ export default class RegulatoryCatalogCalculatorGrid extends React.PureComponent
 
     this.state = {
       columns: [
-        // {
-        //   text: "Validity",
-        //   datafield: "validityYear",
-        //   width: "30%",
-        //   cellsalign: "left",
-        //   align: "left",
-        //   editable: false,
-        // },
         {
           text: "Department",
           datafield: "departments",
@@ -23,15 +15,6 @@ export default class RegulatoryCatalogCalculatorGrid extends React.PureComponent
           align: "left",
           editable: false,
         },
-        // {
-        //   text: "Time Line",
-        //   datafield: "timeLineText",
-        //   width: "25%",
-        //   cellsalign: "left",
-        //   align: "left",
-        //   editable: false,
-        // },
-
         {
           text: "Fee",
           datafield: "feeValue",
@@ -87,7 +70,14 @@ export default class RegulatoryCatalogCalculatorGrid extends React.PureComponent
   }
 
   render() {
-    const rowRenderer = (row, datafield, value, defaultHtml, column, rowdata) => {
+    const rowRenderer = (
+      row,
+      datafield,
+      value,
+      defaultHtml,
+      column,
+      rowdata
+    ) => {
       const isEvenRow = row % 2 === 0;
       const backgroundColor = isEvenRow ? "red" : "blue";
       const style = `background-color: ${backgroundColor};`;
@@ -100,10 +90,9 @@ export default class RegulatoryCatalogCalculatorGrid extends React.PureComponent
       const feeValue = parseFloat(item.feeValue);
       return isNaN(feeValue) ? total : total + feeValue;
     }, 0);
-    
+
     // Format totalValue with commas
     const formattedTotalValue = parseFloat(totalValue).toLocaleString();
-    
 
     return (
       <div style={{ position: "relative" }}>
@@ -130,19 +119,41 @@ export default class RegulatoryCatalogCalculatorGrid extends React.PureComponent
         <div
           style={{
             borderTop: "1px solid #ddd",
-            height:"50px",
-            display:"flex",
+            height: "50px",
+            display: "flex",
             position: "absolute",
             bottom: 0, // Stick to the bottom
             left: 0,
             right: 0,
             background: "#f2f2f2", // Gray background color
             zIndex: 10, // Ensure it stays on top of the grid
-            width:"100%"
+            width: "100%",
           }}
         >
-          <div style={{ fontWeight: "bold" ,width:"501px",borderRight:"1px solid #E0E0E0",paddingTop:"11px",paddingLeft:"10px",width:"75%"}}>Total:</div>{" "}
-          <div style={{paddingTop:"11px",paddingLeft:"3px",width:"25%",marginLeft:"-2px",textAlign:"right",fontSize:20}}><b>{formattedTotalValue}</b></div>
+          <div
+            style={{
+              fontWeight: "bold",
+              width: "501px",
+              borderRight: "1px solid #E0E0E0",
+              paddingTop: "11px",
+              paddingLeft: "10px",
+              width: "75%",
+            }}
+          >
+            Total:
+          </div>{" "}
+          <div
+            style={{
+              paddingTop: "11px",
+              paddingLeft: "3px",
+              width: "25%",
+              marginLeft: "-2px",
+              textAlign: "right",
+              fontSize: 20,
+            }}
+          >
+            <b>{formattedTotalValue}</b>
+          </div>
         </div>
       </div>
     );

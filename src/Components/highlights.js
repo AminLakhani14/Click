@@ -9,7 +9,7 @@ import { useState } from "react";
 import { translations } from "../Transalation/Transalation";
 import { useSelector } from "react-redux";
 function Highlights(props) {
-  const {language} = useSelector((state)=>state.language)
+  const { language } = useSelector((state) => state.language)
 
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
@@ -42,12 +42,12 @@ function Highlights(props) {
                 style={
                   windowWidth < 500
                     ? {
-                        marginTop: "50px",
-                      }
+                      marginTop: "50px",
+                    }
                     : {
-                        display: "flex",
-                        justifyContent: "center",
-                      }
+                      display: "flex",
+                      justifyContent: "center",
+                    }
                 }
               >
                 {translations["Highlights"][language]}
@@ -56,15 +56,32 @@ function Highlights(props) {
           </div>
           <div
             className="row justify-content-center overflow-hidden gap"
-            style={windowWidth < 500?{gap:"25px"}:{ gap: "10px" }}
+            style={windowWidth < 500 ? { gap: "25px" } : { gap: "10px" }}
           >
-            <div class="cardHighLight" style={windowWidth < 500?{ width: "85%" }:{ width: "24%" }}>
+            <div class="cardHighLight" style={windowWidth < 500 ? { width: "85%" } : { width: "24%" }}>
               <img src={card1} alt="" />
               <div class="overlay"></div>
               <div className="cardMain">
                 <p className="cardHeaderHeading highlightable">{translations["EasYdata"][language]}</p>
                 <p className="HigParagraphh cardinner highlightable">
-                {translations["facilitatedTEXT"][language]}
+                  {translations["facilitatedTEXT"][language]}
+                </p>
+              </div>
+              <div className="verticalTabGrid1">
+                <div class="info">
+                  <a href="#" class="updateBtn">
+                    {translations["UpdatedData"][language]}
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="cardHighLight" style={windowWidth < 500 ? { width: "85%" } : { width: "24%" }}>
+              <img src={card2} alt="" />
+              <div class="overlay"></div>
+              <div className="cardMain">
+                <p className="cardHeaderHeading highlightable">{translations["Economies"][language]}</p>
+                <p className="HigParagraphh cardinner highlightable">
+                  {translations["EconTEXT"][language]}
                 </p>
               </div>
               <div className="verticalTabGrid1">
@@ -76,32 +93,12 @@ function Highlights(props) {
               </div>
             </div>
 
-            <div class="cardHighLight" style={windowWidth < 500?{ width: "85%" }:{ width: "24%" }}>
-              <img src={card2} alt="" />
-              <div class="overlay"></div>
-              <div className="cardMain">
-                <p className="cardHeaderHeading highlightable">{translations["Economies"][language]}</p>
-                <p className="HigParagraphh cardinner highlightable">
-                {translations["EconTEXT"][language]}
-                </p>
-              </div>
-              <div className="verticalTabGrid1">
-                <div class="info">
-                  {/* <h1>Heading</h1> */}
-
-                  <a href="#" class="updateBtn">
-                  {translations["UpdatedData"][language]}
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            <div class="cardHighLight" style={windowWidth < 500?{ width: "85%" }:{ width: "24%" }}>
+            <div class="cardHighLight" style={windowWidth < 500 ? { width: "85%" } : { width: "24%" }}>
               <img src={card3} alt="" />
               <div class="overlay"></div>
               <div className="cardMain">
                 <p className="cardHeaderHeading highlightable">
-                {translations["iNVEstText"][language]}
+                  {translations["iNVEstText"][language]}
                 </p>
                 <p className="HigParagraphh cardinner highlightable">
                   {" "}
@@ -110,28 +107,26 @@ function Highlights(props) {
               </div>
               <div className="verticalTabGrid1">
                 <div class="info">
-                  {/* <h1>Heading</h1> */}
-
                   <a href="#" class="updateBtn">
-                  {translations["UpdatedData"][language]}
+                    {translations["UpdatedData"][language]}
                   </a>
                 </div>
               </div>
             </div>
-            <div class="cardHighLight" style={windowWidth < 500?{ width: "85%" }:{ width: "24%" }}>
+            <div class="cardHighLight" style={windowWidth < 500 ? { width: "85%" } : { width: "24%" }}>
               <img src={card4} alt="" />
               <div class="overlay"></div>
               <div className="cardMain">
                 <p className="cardHeaderHeading highlightable"> {translations["EconomicZonesText"][language]}</p>
                 <p className="HigParagraphh cardinner highlightable">
-                {translations["blanketText"][language]}
+                  {translations["blanketText"][language]}
                 </p>
               </div>
 
               <div className="verticalTabGrid1">
                 <div class="info">
                   <a href="#" class="updateBtn">
-                  {translations["UpdatedData"][language]}
+                    {translations["UpdatedData"][language]}
                   </a>
                 </div>
               </div>

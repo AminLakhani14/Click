@@ -2,20 +2,17 @@ body {
   padding: 0;
   margin: 0;
   background-color: #eff2f4;
-  /* background-image: url("./assets/bg.png"); */
   background-size: 100% 100%;
   background-position: center center;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  /* background-size: cover; */
-
 }
 
-.chatbot_selected_question{
+.chatbot_selected_question {
   background-color: white !important;
 }
-.chatbot_selected_question:hover{
-  background:linear-gradient(180deg, #720d1d 0%, #1f0308 100%) !important;
+.chatbot_selected_question:hover {
+  background: linear-gradient(180deg, #720d1d 0%, #1f0308 100%) !important;
   color: white !important;
 }
 .container {
@@ -23,12 +20,11 @@ body {
   padding-left: 8px;
   padding-right: 8px;
   box-sizing: border-box;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 .row {
   display: flex;
-  /* justify-content: space-around; */
   align-items: center;
   margin-left: 0px !important;
   margin-right: 0px !important;
@@ -40,24 +36,11 @@ body {
 .click-logoline {
   padding-top: 5px;
 }
-
-/* .heading {
-  padding-top: 20px;
-  text-align: center;
-  font-weight: 800;
-  font-size: 70px;
-  background: linear-gradient(90deg, #215F7E 0%, #379ED1 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-} */
-
 .detail {
   font-weight: 400;
   font-size: 22px;
   text-align: center;
   color: #000000;
-  /**/
 }
 
 .sub-detail {
@@ -75,16 +58,15 @@ body {
 
 a {
   padding: 5px;
-  color:#054a91;
+  color: #054a91;
 }
 
 .click-heading {
   padding-top: 20px;
-  color: #72121D;
+  color: #72121d;
   text-align: center;
   font-weight: 800;
   font-size: 70px;
-
 }
 
 .click-detail {
@@ -94,120 +76,100 @@ a {
   font-family: "Times New Roman", Times, serif;
 }
 
-
-
-@media only screen and (min-width:200px) and (max-width:767px) {
-
-   body {
-
-  background-color: #eff2f4;
-  /* background-image: url("./assets/bg.png"); */
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-  } 
+@media only screen and (min-width: 200px) and (max-width: 767px) {
+  body {
+    background-color: #eff2f4;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+  }
 
   .container {
-      width: 100%;
-      flex-direction: column;
+    width: 100%;
+    flex-direction: column;
   }
 
   .heading,
   .click-heading {
-
-      font-size: 50px;
+    font-size: 50px;
   }
 
   .detail {
-      font-size: 15px;
+    font-size: 15px;
   }
 
   .sub-detail {
-      font-size: 14px;
+    font-size: 14px;
   }
 
   .click-detail {
-      font-size: 18px;
+    font-size: 18px;
   }
 
   .click-logoline {
-      width: 70%;
-      align-items: center;
+    width: 70%;
+    align-items: center;
   }
 
   .sindh-logo {
-      width: 30%;
-      align-items: center;
+    width: 30%;
+    align-items: center;
   }
-
 }
 
-@media only screen and (min-width:200px) and (max-width:406px) {
+@media only screen and (min-width: 200px) and (max-width: 406px) {
   .container {
-      width: 100%;
-      flex-direction: column;
+    width: 100%;
+    flex-direction: column;
   }
 
   .heading,
   .click-heading {
-
-      font-size: 30px;
+    font-size: 30px;
   }
 
   .click-detail {
-      font-weight: 600;
-      font-size: 15px;
+    font-weight: 600;
+    font-size: 15px;
   }
 
   .click-logoline {
-      width: 70%;
-      align-items: center;
+    width: 70%;
+    align-items: center;
   }
 
   .sindh-logo {
-      width: 30%;
-      align-items: center;
+    width: 30%;
+    align-items: center;
   }
-
 }
 
-@media only screen and (min-width:200px) and (max-width:350px) {
+@media only screen and (min-width: 200px) and (max-width: 350px) {
   .sindh-logo {
-      width: 30%;
-      align-items: center;
+    width: 30%;
+    align-items: center;
   }
 
   .click-logoline {
-      width: 70%;
-      align-items: center;
+    width: 70%;
+    align-items: center;
   }
-
-
 }
 
-
-.jqx-grid-column-header{
+.jqx-grid-column-header {
   font-size: 18px;
   background: transparent !important;
   font-weight: 600 !important;
   color: #323232 !important;
   font-family: "Crimson Pro" !important;
 }
-.jqx-item{
+.jqx-item {
   font-weight: 500 !important;
   font-size: 18px !important;
   font-family: "Crimson Pro" !important;
-  color:#595959 !important
+  color: #595959 !important;
 }
-.jqx-widget-header{
+.jqx-widget-header {
   background: transparent !important;
 }
-
-
-
-
-
-
-
-

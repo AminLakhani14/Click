@@ -1,4 +1,3 @@
-
 import React, { useEffect, useMemo, useState } from "react";
 import mapbackground from "../assets/mapbackground.png";
 import "../Css/resource.css";
@@ -8,16 +7,13 @@ import cricle from "../assets/cricle.svg";
 import MobileHeaderGeneric from "./MobileHeaderGeneric";
 import { Tooltip } from "antd";
 import karachimap from "../assets/karachimap.png";
-import { Link } from "react-router-dom";
 import { InputLabel } from "@mui/material";
-import OutlinedInput from '@mui/material/OutlinedInput';
-import {Button} from '@mui/material';
-import MenuItem from '@mui/material/MenuItem';
-import FormControl from '@mui/material/FormControl';
-import ListItemText from '@mui/material/ListItemText';
-import Select, { SelectChangeEvent } from '@mui/material/Select';
-import Checkbox from '@mui/material/Checkbox';
-
+import OutlinedInput from "@mui/material/OutlinedInput";
+import MenuItem from "@mui/material/MenuItem";
+import FormControl from "@mui/material/FormControl";
+import ListItemText from "@mui/material/ListItemText";
+import Select from "@mui/material/Select";
+import Checkbox from "@mui/material/Checkbox";
 
 const ITEM_HEIGHT = 48;
 const ITEM_PADDING_TOP = 8;
@@ -31,28 +27,28 @@ const MenuProps = {
 };
 
 const Deps = [
-  'All',
-  'Sindh Investment department',
-  'Labour Department',
-  'Local Government Department',
-  'Excise, Taxation & Taxation',
-  'Energy Department',
-  'School Education Department',
-  'Sindh Revenue Board',
-  'College Department',
-  'CS Sindh',
-  'Sindh Environment Protection Agency',
-  'Sindh Building Control Authority',
-  'Industrial Department',
-  'Sindh Food Authority',
-  'Board of Revenue Sindh',
-  'EDUCATION CITY',
-  'SEDF',
-  'Agriculture Department',
-  'P&D',
-  'CM Sindh',
-  'SEZMC',
-  'Sindh Employees Social Security Institution'
+  "All",
+  "Sindh Investment department",
+  "Labour Department",
+  "Local Government Department",
+  "Excise, Taxation & Taxation",
+  "Energy Department",
+  "School Education Department",
+  "Sindh Revenue Board",
+  "College Department",
+  "CS Sindh",
+  "Sindh Environment Protection Agency",
+  "Sindh Building Control Authority",
+  "Industrial Department",
+  "Sindh Food Authority",
+  "Board of Revenue Sindh",
+  "EDUCATION CITY",
+  "SEDF",
+  "Agriculture Department",
+  "P&D",
+  "CM Sindh",
+  "SEZMC",
+  "Sindh Employees Social Security Institution",
 ];
 
 export default function Maps() {
@@ -64,16 +60,16 @@ export default function Maps() {
     };
 
     // Attach the event listener
-    window.addEventListener('resize', handleResize);
+    window.addEventListener("resize", handleResize);
 
     // Clean up the event listener on component unmount
     return () => {
-      window.removeEventListener('resize', handleResize);
+      window.removeEventListener("resize", handleResize);
     };
   }, []);
 
   const [departmentDisplay, setDepartmentDisplay] = useState({});
-  const [DepName, setDepName] = useState(['All']);
+  const [DepName, setDepName] = useState(["All"]);
 
   useEffect(() => {
     // Initialize departmentDisplay with all departments set to 1
@@ -82,72 +78,63 @@ export default function Maps() {
       initialDisplay[dep] = 1;
     });
     setDepartmentDisplay(initialDisplay);
-    setDepName(['All', ...Deps]);
+    setDepName(["All", ...Deps]);
   }, []);
-     
+
   const HandleChange = (event) => {
     const {
       target: { value: newValue },
     } = event;
-console.log(newValue)
+    console.log(newValue);
     const updatedDisplay = { ...departmentDisplay };
 
-    if (newValue.includes('All')) {
-      
-        if (DepName.includes('All')) {
-          // Unselect all departments and "All"
-         
-          if(newValue[0]=="All" && newValue[1] != "All"){
-            setDepName([]);
-            Deps.forEach((dep) => {
-                updatedDisplay[dep] = 0; 
-            });
-          }else{
-            setDepName(newValue.filter((dep) => dep !== 'All' && dep !== ''));
-            Deps.forEach((dep) => {
-              updatedDisplay["All"] = 0;
-              if(dep != "All"){
-                updatedDisplay[dep] = newValue.includes(dep) ? 1 : 0;
-              }else{
-                updatedDisplay[dep] = 0;
-              }
-              
-            });
-          }
-        }
+    if (newValue.includes("All")) {
+      if (DepName.includes("All")) {
+        // Unselect all departments and "All"
 
-        else {
-          // Select all departments and "All"
-        
-          setDepName(['All', ...Deps]);
+        if (newValue[0] == "All" && newValue[1] != "All") {
+          setDepName([]);
           Deps.forEach((dep) => {
-            updatedDisplay[dep] = 1;
+            updatedDisplay[dep] = 0;
+          });
+        } else {
+          setDepName(newValue.filter((dep) => dep !== "All" && dep !== ""));
+          Deps.forEach((dep) => {
+            updatedDisplay["All"] = 0;
+            if (dep != "All") {
+              updatedDisplay[dep] = newValue.includes(dep) ? 1 : 0;
+            } else {
+              updatedDisplay[dep] = 0;
+            }
           });
         }
-     
-        
-      
+      } else {
+        // Select all departments and "All"
+
+        setDepName(["All", ...Deps]);
+        Deps.forEach((dep) => {
+          updatedDisplay[dep] = 1;
+        });
+      }
     } else {
       // For individual department checkboxes, update the corresponding flag
       Deps.forEach((dep) => {
-        console.log("Indivisual func2")
+        console.log("Indivisual func2");
         updatedDisplay[dep] = newValue.includes(dep) ? 1 : 0;
       });
 
       // Update individual department checkboxes
-      setDepName(newValue.filter((dep) => dep !== 'All' && dep !== ''));  
-     
+      setDepName(newValue.filter((dep) => dep !== "All" && dep !== ""));
     }
 
-    if(newValue.length == 21){
+    if (newValue.length == 21) {
       console.log("fix all checbox");
-      setDepName(["All",...Deps]);
+      setDepName(["All", ...Deps]);
     }
     // Update the departmentDisplay state with the new object
     setDepartmentDisplay(updatedDisplay);
-    
   };
-  
+
   useEffect(() => {
     if ("scrollRestoration" in window.history) {
       window.history.scrollRestoration = "manual";
@@ -162,26 +149,6 @@ console.log(newValue)
       }
     };
   }, []);
-    
-    
-  
-
-  // useEffect(() => {
-  //   // Function to update the windowWidth state when the resize event occurs
-  //   const handleResize = () => {
-  //     setWindowWidth(window.innerWidth);
-  //   };
-
-  //   // Attach the event listener
-  //   window.addEventListener("resize", handleResize);
-
-  //   // Clean up the event listener on component unmount
-  //   return () => {
-  //     window.removeEventListener("resize", handleResize);
-  //   };
-  // }, []);
-
-  
 
   const [isSticky, setIsSticky] = useState(false);
   const energyDepartment = (
@@ -220,7 +187,7 @@ console.log(newValue)
     </div>
   );
   const SindhRevenueBoard = (
-    <div >
+    <div>
       <a
         style={{ textDecoration: "none", color: "white" }}
         href="https://www.google.com/maps/dir//Sindh+Revenue+Board+Karachi,+Shaheen+Complex,+3rd,+6th,+9th+and+12th+floor,+Civil+Lines,+Karachi,+Karachi+City,+Sindh,+Pakistan/@24.8509623,66.9782336,13z/data=!3m1!5s0x3eb33e0bb3bf44e7:0xde47060d5f31a781!4m8!4m7!1m0!1m5!1m1!1s0x3eb33e0a54d24ab3:0xa79dcdbd2b4625a!2m2!1d67.0194336!2d24.8508901?entry=ttu"
@@ -549,7 +516,7 @@ console.log(newValue)
           justifyContent: "center",
           alignItems: "center",
           textAlign: "center",
-          paddingTop:  window.innerWidth < 500? "22px": "175px"
+          paddingTop: window.innerWidth < 500 ? "22px" : "175px",
         }}
       >
         <h1 className="mainHeading">Discover Sindh</h1>
@@ -577,36 +544,21 @@ console.log(newValue)
         className="mt-3"
         style={{ display: "flex", justifyContent: "center" }}
       >
-        <div className="zoominopts"
-          // style={windowWidth <= 500 ? 
-          style={
-            {
+        <div
+          className="zoominopts"
+          // style={windowWidth <= 500 ?
+          style={{
             display: "flex",
             justifyContent: "end",
             width: "380px",
             position: "absolute",
             zIndex: "1",
             gap: "5px",
-            marginLeft:"500px"
-            
+            marginLeft: "500px",
           }}
-        // {
-        //   display: "flex",
-        //     justifyContent: "end",
-        //     width: "800px",
-        //     position: "absolute",
-        //     zIndex: "1",
-        //     gap: "5px",
-        //     marginLeft: (window.innerWidth === 820) || (window.innerWidth === 912) || (window.innerWidth <= 1042)
-        //     ? "-50px":"500px"
-           
-           
-          
-            
-        // }}
         >
           <Tooltip
-            overlayInnerStyle={{ borderRadius: "0px", }}
+            overlayInnerStyle={{ borderRadius: "0px" }}
             color={"#0F5789"}
             placement="top"
             title={"Zoom In"}
@@ -632,68 +584,72 @@ console.log(newValue)
           </Tooltip>
         </div>
         <div
-        style={{
-          textAlign: "center",
-          justifyContent: "center",
-          display: "flex",
-          paddingBottom: "40px",
-          marginTop: "-7.5px",
-          marginLeft:windowWidth <= 500 ?"30px":""
-        }}
-      >
-         
-    
-         <FormControl sx={{ m: 1, width: 300, zIndex:2}}>
-  <InputLabel style={{ color: 'black' }}>View All Departments</InputLabel>
-  <Select
-    labelId="demo-multiple-checkbox-label"
-    id="demo-multiple-checkbox"
-    style={{textAlign:'left'}}
-    multiple
-    value={DepName}
-    onChange={HandleChange}
-    input={<OutlinedInput label="View All Departments" />}
-    renderValue={(selected) => {
-      if (selected.includes('All')) {
-        return 'All';
-      }
-      return selected.join(', ');
-    }}
-  >
-    
-    {Deps.map((Dep) => (
-      <MenuItem 
-      key={Dep} value={Dep}>
-        <Checkbox style={window.innerWidth <= 500? {
-          width:"30%"
-        }:{
-         
-        }} 
-        checked={DepName.includes(Dep)} />
-        <ListItemText primary={Dep} />
-      </MenuItem>
-    ))}
-  </Select>
-</FormControl>
+          style={{
+            textAlign: "center",
+            justifyContent: "center",
+            display: "flex",
+            paddingBottom: "40px",
+            marginTop: "-7.5px",
+            marginLeft: windowWidth <= 500 ? "30px" : "",
+          }}
+        >
+          <FormControl sx={{ m: 1, width: 300, zIndex: 2 }}>
+            <InputLabel style={{ color: "black" }}>
+              View All Departments
+            </InputLabel>
+            <Select
+              labelId="demo-multiple-checkbox-label"
+              id="demo-multiple-checkbox"
+              style={{ textAlign: "left" }}
+              multiple
+              value={DepName}
+              onChange={HandleChange}
+              input={<OutlinedInput label="View All Departments" />}
+              renderValue={(selected) => {
+                if (selected.includes("All")) {
+                  return "All";
+                }
+                return selected.join(", ");
+              }}
+            >
+              {Deps.map((Dep) => (
+                <MenuItem key={Dep} value={Dep}>
+                  <Checkbox
+                    style={
+                      window.innerWidth <= 500
+                        ? {
+                          width: "30%",
+                        }
+                        : {}
+                    }
+                    checked={DepName.includes(Dep)}
+                  />
+                  <ListItemText primary={Dep} />
+                </MenuItem>
+              ))}
+            </Select>
+          </FormControl>
 
-    {/* </a> */}
-      </div>
+          {/* </a> */}
+        </div>
         <div
-          // className="mt-5"
-          
           style={{
             height: "850px",
             width: "900px",
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
-            marginTop: window.innerWidth < 500? "-3rem": "5rem",
-            marginLeft: window.innerWidth < 500? "-22rem": "",
-            marginRight: window.innerWidth < 500? "-50px" :"320px"
+            marginTop: window.innerWidth < 500 ? "-3rem" : "5rem",
+            marginLeft: window.innerWidth < 500 ? "-22rem" : "",
+            marginRight: window.innerWidth < 500 ? "-50px" : "320px",
           }}
         >
-          <img className="mapbgheight" 
-          src={mapbackground} width={"800px"} height="950px"></img>
+          <img
+            className="mapbgheight"
+            src={mapbackground}
+            width={"800px"}
+            height="950px"
+          ></img>
           <div
             style={{
               position: "absolute",
@@ -701,17 +657,20 @@ console.log(newValue)
               display: "flex",
               justifyContent: "center",
               alignItems: "center",
-              // marginLeft:"600px"
             }}
           >
-            <img className="mapheight"
+            <img
+              className="mapheight"
               style={{ borderRadius: "377px" }}
               src={karachimap}
               width={width}
               height={width}
             ></img>
             <Tooltip
-              overlayInnerStyle={{ borderRadius: "0px",textDecoration:"underline"  }}
+              overlayInnerStyle={{
+                borderRadius: "0px",
+                textDecoration: "underline",
+              }}
               color={"#0F5789"}
               placement="top"
               title={schoolEnergyDepartment}
@@ -722,9 +681,10 @@ console.log(newValue)
                   position: "absolute",
                   marginTop: "23px",
                   marginLeft: "-104px",
-                  display: departmentDisplay["School Education Department"] === 1 ? "block" : "none",
-
-
+                  display:
+                    departmentDisplay["School Education Department"] === 1
+                      ? "block"
+                      : "none",
                 }}
                 className="cursorTooltip"
                 src={cricle}
@@ -733,7 +693,10 @@ console.log(newValue)
               ></img>
             </Tooltip>
             <Tooltip
-              overlayInnerStyle={{ borderRadius: "0px" ,textDecoration:"underline" }}
+              overlayInnerStyle={{
+                borderRadius: "0px",
+                textDecoration: "underline",
+              }}
               color={"#0F5789"}
               placement="top"
               title={CMSindh}
@@ -744,8 +707,8 @@ console.log(newValue)
                   position: "absolute",
                   marginTop: `${160 + marginTop}px`,
                   marginLeft: `${-120 + marginLeft}px`,
-                  display: departmentDisplay["CM Sindh"] === 1 ? "block" : "none",
-
+                  display:
+                    departmentDisplay["CM Sindh"] === 1 ? "block" : "none",
                 }}
                 src={cricle}
                 className="cursorTooltip"
@@ -754,7 +717,10 @@ console.log(newValue)
               ></img>
             </Tooltip>
             <Tooltip
-              overlayInnerStyle={{ borderRadius: "0px" ,textDecoration:"underline" }}
+              overlayInnerStyle={{
+                borderRadius: "0px",
+                textDecoration: "underline",
+              }}
               color={"#0F5789"}
               placement="top"
               title={SindhRevenueBoard}
@@ -765,9 +731,10 @@ console.log(newValue)
                   position: "absolute",
                   marginTop: `${158 + marginTop}px`,
                   marginLeft: `${-50 + marginLeft}px`,
-                  display: departmentDisplay["Sindh Revenue Board"] === 1 ? "block" : "none",
-
-
+                  display:
+                    departmentDisplay["Sindh Revenue Board"] === 1
+                      ? "block"
+                      : "none",
                 }}
                 className="cursorTooltip"
                 src={cricle}
@@ -776,7 +743,10 @@ console.log(newValue)
               ></img>
             </Tooltip>
             <Tooltip
-              overlayInnerStyle={{ borderRadius: "0px",textDecoration:"underline"  }}
+              overlayInnerStyle={{
+                borderRadius: "0px",
+                textDecoration: "underline",
+              }}
               color={"#0F5789"}
               placement="top"
               title={energyDepartment}
@@ -787,8 +757,10 @@ console.log(newValue)
                   position: "absolute",
                   marginTop: `${238 + marginTop}px`,
                   marginLeft: `${-38 + marginLeft}px`,
-                  display: departmentDisplay["Energy Department"] === 1 ? "block" : "none",
-
+                  display:
+                    departmentDisplay["Energy Department"] === 1
+                      ? "block"
+                      : "none",
                 }}
                 src={cricle}
                 className="cursorTooltip"
@@ -797,7 +769,10 @@ console.log(newValue)
               ></img>
             </Tooltip>
             <Tooltip
-              overlayInnerStyle={{ borderRadius: "0px",textDecoration:"underline"  }}
+              overlayInnerStyle={{
+                borderRadius: "0px",
+                textDecoration: "underline",
+              }}
               color={"#0F5789"}
               placement="top"
               title={collegeEducationalDept}
@@ -808,8 +783,10 @@ console.log(newValue)
                   position: "absolute",
                   marginTop: `${175 + marginTop}px`,
                   marginLeft: `${-100 + marginLeft}px`,
-                  display: departmentDisplay["College Department"] === 1 ? "block" : "none",
-
+                  display:
+                    departmentDisplay["College Department"] === 1
+                      ? "block"
+                      : "none",
                 }}
                 src={cricle}
                 className="cursorTooltip"
@@ -818,7 +795,10 @@ console.log(newValue)
               ></img>
             </Tooltip>
             <Tooltip
-              overlayInnerStyle={{ borderRadius: "0px" ,textDecoration:"underline" }}
+              overlayInnerStyle={{
+                borderRadius: "0px",
+                textDecoration: "underline",
+              }}
               color={"#0F5789"}
               placement="top"
               title={CSSindh}
@@ -829,8 +809,8 @@ console.log(newValue)
                   position: "absolute",
                   marginTop: `${103 + marginTop}px`,
                   marginLeft: `${-164 + marginLeft}px`,
-                  display: departmentDisplay["CS Sindh"] === 1 ? "block" : "none",
-
+                  display:
+                    departmentDisplay["CS Sindh"] === 1 ? "block" : "none",
                 }}
                 src={cricle}
                 className="cursorTooltip"
@@ -839,7 +819,11 @@ console.log(newValue)
               ></img>
             </Tooltip>
             <Tooltip
-              overlayInnerStyle={{ borderRadius: "0px", minWidth: "max-content" ,textDecoration:"underline" }}
+              overlayInnerStyle={{
+                borderRadius: "0px",
+                minWidth: "max-content",
+                textDecoration: "underline",
+              }}
               color={"#0F5789"}
               placement="top"
               title={SindhEnvironmentalProtection}
@@ -850,8 +834,11 @@ console.log(newValue)
                   position: "absolute",
                   marginTop: `${140 + marginTop}px`,
                   marginLeft: `${-162 + marginLeft}px`,
-                  display: departmentDisplay["Sindh Environment Protection Agency"] === 1 ? "block" : "none",
-
+                  display:
+                    departmentDisplay["Sindh Environment Protection Agency"] ===
+                      1
+                      ? "block"
+                      : "none",
                 }}
                 src={cricle}
                 className="cursorTooltip"
@@ -860,7 +847,11 @@ console.log(newValue)
               ></img>
             </Tooltip>
             <Tooltip
-              overlayInnerStyle={{ borderRadius: "0px", minWidth: "max-content",textDecoration:"underline"  }}
+              overlayInnerStyle={{
+                borderRadius: "0px",
+                minWidth: "max-content",
+                textDecoration: "underline",
+              }}
               color={"#0F5789"}
               placement="top"
               title={SindhBuildingControl}
@@ -871,9 +862,10 @@ console.log(newValue)
                   position: "absolute",
                   marginTop: `${149 + marginTop}px`,
                   marginLeft: `${-179 + marginLeft}px`,
-                  display: departmentDisplay["Sindh Building Control Authority"] === 1 ? "block" : "none",
-                  
-
+                  display:
+                    departmentDisplay["Sindh Building Control Authority"] === 1
+                      ? "block"
+                      : "none",
                 }}
                 src={cricle}
                 className="cursorTooltip"
@@ -882,7 +874,10 @@ console.log(newValue)
               ></img>
             </Tooltip>
             <Tooltip
-              overlayInnerStyle={{ borderRadius: "0px",textDecoration:"underline"  }}
+              overlayInnerStyle={{
+                borderRadius: "0px",
+                textDecoration: "underline",
+              }}
               color={"#0F5789"}
               placement="top"
               title={SindhIndustrialTrading}
@@ -893,7 +888,10 @@ console.log(newValue)
                   position: "absolute",
                   marginTop: `${189 + marginTop}px`,
                   marginLeft: `${-79 + marginLeft}px`,
-                  display: departmentDisplay["Industrial Department"] === 1 ? "block" : "none",
+                  display:
+                    departmentDisplay["Industrial Department"] === 1
+                      ? "block"
+                      : "none",
                 }}
                 src={cricle}
                 className="cursorTooltip"
@@ -902,7 +900,10 @@ console.log(newValue)
               ></img>
             </Tooltip>
             <Tooltip
-              overlayInnerStyle={{ borderRadius: "0px",textDecoration:"underline"  }}
+              overlayInnerStyle={{
+                borderRadius: "0px",
+                textDecoration: "underline",
+              }}
               color={"#0F5789"}
               placement="top"
               title={SindhFoodAut}
@@ -913,7 +914,10 @@ console.log(newValue)
                   position: "absolute",
                   marginTop: `${201 + marginTop}px`,
                   marginLeft: `${-61 + marginLeft}px`,
-                  display: departmentDisplay["Sindh Food Authority"] === 1 ? "block" : "none",
+                  display:
+                    departmentDisplay["Sindh Food Authority"] === 1
+                      ? "block"
+                      : "none",
                 }}
                 src={cricle}
                 className="cursorTooltip"
@@ -922,7 +926,10 @@ console.log(newValue)
               ></img>
             </Tooltip>
             <Tooltip
-              overlayInnerStyle={{ borderRadius: "0px",textDecoration:"underline"  }}
+              overlayInnerStyle={{
+                borderRadius: "0px",
+                textDecoration: "underline",
+              }}
               color={"#0F5789"}
               placement="top"
               title={BoardOfRevenue}
@@ -933,7 +940,10 @@ console.log(newValue)
                   position: "absolute",
                   marginTop: `${200 + marginTop}px`,
                   marginLeft: `${-156 + marginLeft}px`,
-                  display: departmentDisplay["Board of Revenue Sindh"] === 1 ? "block" : "none",
+                  display:
+                    departmentDisplay["Board of Revenue Sindh"] === 1
+                      ? "block"
+                      : "none",
                 }}
                 src={cricle}
                 className="cursorTooltip"
@@ -942,7 +952,10 @@ console.log(newValue)
               ></img>
             </Tooltip>
             <Tooltip
-              overlayInnerStyle={{ borderRadius: "0px",textDecoration:"underline"  }}
+              overlayInnerStyle={{
+                borderRadius: "0px",
+                textDecoration: "underline",
+              }}
               color={"#0F5789"}
               placement="top"
               title={PnD}
@@ -962,7 +975,10 @@ console.log(newValue)
               ></img>
             </Tooltip>
             <Tooltip
-              overlayInnerStyle={{ borderRadius: "0px",textDecoration:"underline"  }}
+              overlayInnerStyle={{
+                borderRadius: "0px",
+                textDecoration: "underline",
+              }}
               color={"#0F5789"}
               placement="top"
               title={healthCareComm}
@@ -973,7 +989,10 @@ console.log(newValue)
                   position: "absolute",
                   marginTop: `${82 + marginTop}px`,
                   marginLeft: `${12 + marginLeft}px`,
-                  display: departmentDisplay["Sindh Healthcare Commission"] === 1 ? "block" : "none",
+                  display:
+                    departmentDisplay["Sindh Healthcare Commission"] === 1
+                      ? "block"
+                      : "none",
                 }}
                 src={cricle}
                 className="cursorTooltip"
@@ -982,7 +1001,10 @@ console.log(newValue)
               ></img>
             </Tooltip>
             <Tooltip
-              overlayInnerStyle={{ borderRadius: "0px" ,textDecoration:"underline" }}
+              overlayInnerStyle={{
+                borderRadius: "0px",
+                textDecoration: "underline",
+              }}
               color={"#0F5789"}
               placement="top"
               title={healthDepartment}
@@ -993,8 +1015,10 @@ console.log(newValue)
                   position: "absolute",
                   marginTop: `${108 + marginTop}px`,
                   marginLeft: `${19 + marginLeft}px`,
-                  display: departmentDisplay["Health Department"] === 1 ? "block" : "none",
-
+                  display:
+                    departmentDisplay["Health Department"] === 1
+                      ? "block"
+                      : "none",
                 }}
                 src={cricle}
                 className="cursorTooltip"
@@ -1003,7 +1027,11 @@ console.log(newValue)
               ></img>
             </Tooltip>
             <Tooltip
-              overlayInnerStyle={{ borderRadius: "0px", minWidth: "max-content" ,textDecoration:"underline" }}
+              overlayInnerStyle={{
+                borderRadius: "0px",
+                minWidth: "max-content",
+                textDecoration: "underline",
+              }}
               color={"#0F5789"}
               placement="top"
               title={SindhEmployeesSecurity}
@@ -1014,7 +1042,12 @@ console.log(newValue)
                   position: "absolute",
                   marginTop: `${94 + marginTop}px`,
                   marginLeft: `${100 + marginLeft}px`,
-                  display: departmentDisplay["Sindh Employees Social Security Institution"] === 1 ? "block" : "none",
+                  display:
+                    departmentDisplay[
+                      "Sindh Employees Social Security Institution"
+                    ] === 1
+                      ? "block"
+                      : "none",
                 }}
                 src={cricle}
                 className="cursorTooltip"
@@ -1023,7 +1056,10 @@ console.log(newValue)
               ></img>
             </Tooltip>
             <Tooltip
-              overlayInnerStyle={{ borderRadius: "0px" ,textDecoration:"underline" }}
+              overlayInnerStyle={{
+                borderRadius: "0px",
+                textDecoration: "underline",
+              }}
               color={"#0F5789"}
               placement="top"
               title={ExciseTaxation}
@@ -1034,7 +1070,10 @@ console.log(newValue)
                   position: "absolute",
                   marginTop: `${63 + marginTop}px`,
                   marginLeft: `${236 + marginLeft}px`,
-                  display: departmentDisplay["Excise, Taxation & Taxation"] === 1 ? "block" : "none",
+                  display:
+                    departmentDisplay["Excise, Taxation & Taxation"] === 1
+                      ? "block"
+                      : "none",
                 }}
                 src={cricle}
                 className="cursorTooltip"
@@ -1043,7 +1082,10 @@ console.log(newValue)
               ></img>
             </Tooltip>
             <Tooltip
-              overlayInnerStyle={{ borderRadius: "0px",textDecoration:"underline"  }}
+              overlayInnerStyle={{
+                borderRadius: "0px",
+                textDecoration: "underline",
+              }}
               color={"#0F5789"}
               placement="top"
               title={LocalGovernment}
@@ -1054,8 +1096,10 @@ console.log(newValue)
                   position: "absolute",
                   marginTop: `${23 + marginTop}px`,
                   marginLeft: `${201 + marginLeft}px`,
-                  display: departmentDisplay["Local Government Department"] === 1 ? "block" : "none",
-
+                  display:
+                    departmentDisplay["Local Government Department"] === 1
+                      ? "block"
+                      : "none",
                 }}
                 src={cricle}
                 className="cursorTooltip"
@@ -1064,7 +1108,10 @@ console.log(newValue)
               ></img>
             </Tooltip>
             <Tooltip
-              overlayInnerStyle={{ borderRadius: "0px",textDecoration:"underline"  }}
+              overlayInnerStyle={{
+                borderRadius: "0px",
+                textDecoration: "underline",
+              }}
               color={"#0F5789"}
               placement="top"
               title={LabourDept}
@@ -1074,10 +1121,11 @@ console.log(newValue)
                 style={{
                   position: "absolute",
                   marginTop: `${-25 + marginTop}px`,
-                  marginLeft: `${129 + marginLeft}px`,  
-                  display: departmentDisplay["Labour Department"] === 1 ? "block" : "none",
-
-                 
+                  marginLeft: `${129 + marginLeft}px`,
+                  display:
+                    departmentDisplay["Labour Department"] === 1
+                      ? "block"
+                      : "none",
                 }}
                 src={cricle}
                 className="cursorTooltip"
@@ -1086,7 +1134,10 @@ console.log(newValue)
               ></img>
             </Tooltip>
             <Tooltip
-              overlayInnerStyle={{ borderRadius: "0px",textDecoration:"underline"  }}
+              overlayInnerStyle={{
+                borderRadius: "0px",
+                textDecoration: "underline",
+              }}
               color={"#0F5789"}
               placement="top"
               title={AgriculturalDept}
@@ -1097,7 +1148,10 @@ console.log(newValue)
                   position: "absolute",
                   marginTop: `${146 + marginTop}px`,
                   marginLeft: `${126 + marginLeft}px`,
-                  display: departmentDisplay["Agriculture Department"] === 1 ? "block" : "none",
+                  display:
+                    departmentDisplay["Agriculture Department"] === 1
+                      ? "block"
+                      : "none",
                 }}
                 src={cricle}
                 className="cursorTooltip"
@@ -1106,7 +1160,10 @@ console.log(newValue)
               ></img>
             </Tooltip>
             <Tooltip
-              overlayInnerStyle={{ borderRadius: "0px",textDecoration:"underline" }}
+              overlayInnerStyle={{
+                borderRadius: "0px",
+                textDecoration: "underline",
+              }}
               className="circle"
               color={"#0F5789"}
               placement="top"
@@ -1118,7 +1175,10 @@ console.log(newValue)
                   position: "absolute",
                   marginTop: `${-125 + marginTop}px`,
                   marginLeft: `${20 + marginLeft}px`,
-                  display: departmentDisplay["Sindh Investment department"] === 1 ? "block" : "none",
+                  display:
+                    departmentDisplay["Sindh Investment department"] === 1
+                      ? "block"
+                      : "none",
                 }}
                 src={cricle}
                 className="cursorTooltip"
@@ -1127,7 +1187,10 @@ console.log(newValue)
               ></img>
             </Tooltip>
             <Tooltip
-              overlayInnerStyle={{ borderRadius: "0px" ,textDecoration:"underline" }}
+              overlayInnerStyle={{
+                borderRadius: "0px",
+                textDecoration: "underline",
+              }}
               color={"#0F5789"}
               placement="top"
               title={EODB}
@@ -1139,8 +1202,6 @@ console.log(newValue)
                   marginTop: `${150 + marginTop}px`,
                   marginLeft: `${160 + marginLeft}px`,
                   display: departmentDisplay["EODB"] === 1 ? "block" : "none",
-
-                  
                 }}
                 src={cricle}
                 className="cursorTooltip"
@@ -1149,7 +1210,10 @@ console.log(newValue)
               ></img>
             </Tooltip>
             <Tooltip
-              overlayInnerStyle={{ borderRadius: "0px",textDecoration:"underline"  }}
+              overlayInnerStyle={{
+                borderRadius: "0px",
+                textDecoration: "underline",
+              }}
               color={"#0F5789"}
               placement="top"
               title={SEZMC}
@@ -1169,7 +1233,10 @@ console.log(newValue)
               ></img>
             </Tooltip>
             <Tooltip
-              overlayInnerStyle={{ borderRadius: "0px",textDecoration:"underline"  }}
+              overlayInnerStyle={{
+                borderRadius: "0px",
+                textDecoration: "underline",
+              }}
               color={"#0F5789"}
               placement="top"
               title={SEDF}
@@ -1181,8 +1248,7 @@ console.log(newValue)
                   marginTop: `${127 + marginTop}px`,
                   marginLeft: `${-98 + marginLeft}px`,
                   display: departmentDisplay["SEDF"] === 1 ? "block" : "none",
-
-                  }}
+                }}
                 src={cricle}
                 className="cursorTooltip"
                 width={"10px"}
@@ -1190,18 +1256,24 @@ console.log(newValue)
               ></img>
             </Tooltip>
             <Tooltip
-              overlayInnerStyle={{ borderRadius: "0px",textDecoration:"underline"  }}
+              overlayInnerStyle={{
+                borderRadius: "0px",
+                textDecoration: "underline",
+              }}
               color={"#0F5789"}
               placement="top"
               title={eduCity}
               arrow={mergedArrow}
             >
-              <img 
+              <img
                 style={{
                   position: "absolute",
                   marginTop: `${209 + marginTop}px`,
                   marginLeft: `${-98 + marginLeft}px`,
-                  display: departmentDisplay["EDUCATION CITY"] === 1 ? "block" : "none",
+                  display:
+                    departmentDisplay["EDUCATION CITY"] === 1
+                      ? "block"
+                      : "none",
                 }}
                 src={cricle}
                 className="cursorTooltip"
@@ -1212,8 +1284,8 @@ console.log(newValue)
           </div>
         </div>
       </div>
-      
+
       <Footer />
     </>
   );
-          }
+}

@@ -61,7 +61,6 @@ function InvestNow() {
       )}
       <div style={{ background: `url(${investNowImg})` }} className="SiteMain2">
         <h1 data-aos="fade-up" className="Investnow-h1 highlightable">
-        {/* {translations["InvestNow"][data.language]} */}
         {translations["InvestNow"][language]}
         </h1>
       </div>

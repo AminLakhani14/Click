@@ -1,5 +1,3 @@
-
-
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "../Css/header.css";
@@ -7,22 +5,13 @@ import "../Css/resource.css";
 import Footer from "./footer";
 import GenericHeader from "./genericHeader";
 import "../Css/investnow.css";
-import BG1 from "../assets/BG1.jpg";
 import { useEffect } from "react";
 import { Fade } from "react-reveal";
 import { Button, FormControl, MenuItem, Select } from "@mui/material";
-import InputLabel from "@mui/material/InputLabel";
-
-
-import { Box, TextField, TextareaAutosize } from "@mui/material";
 import MobileHeaderGeneric from "./MobileHeaderGeneric";
-import TextArea from "antd/es/input/TextArea";
-import { Formik, Form, Field, ErrorMessage } from 'formik';
-import * as Yup from 'yup';
 import FeedBackForm from "./FeedBackForm";
 import { getService } from "../utils/services";
-import { error } from "jquery";
-// import Drop2Data, { Dropdown } from "../Components/RegulatoryCostCalculator"
+
 export const Drop2Data = (value) => {
   let array = [];
   let label = "";
@@ -35,7 +24,7 @@ export const Drop2Data = (value) => {
           timeLineText: "10-12 Days",
           feeValue: "15000",
           validityYear: "3 Years",
-          departments:"Registration of Privately Managed Colleges (Urban)",
+          departments: "Registration of Privately Managed Colleges (Urban)",
           text: "Registration of Privately Managed Colleges (Urban)",
           value: "Registration of Privately Managed Colleges (Urban)",
         },
@@ -47,7 +36,7 @@ export const Drop2Data = (value) => {
           timeLineText: "10-12 Days",
           feeValue: "20000",
           validityYear: "3 Years",
-          departments:"Registration of Privately Managed Colleges (Rural)",
+          departments: "Registration of Privately Managed Colleges (Rural)",
         },
       ];
       label = "Area";
@@ -60,7 +49,7 @@ export const Drop2Data = (value) => {
           timeLineText: "10-12 Days",
           feeValue: "15000",
           validityYear: "3 Years",
-          departments:"Registration of Shops & Establishment(Same Day)",
+          departments: "Registration of Shops & Establishment(Same Day)",
           text: "Registration of Shops & Establishment (Same Day)",
           value: "Registration of Shops & Establishment (Same Day)",
         },
@@ -69,7 +58,7 @@ export const Drop2Data = (value) => {
           timeLineText: "10 days",
           feeValue: "",
           validityYear: "2 year",
-          departments:"Registration of Factories(10 Days)",
+          departments: "Registration of Factories(10 Days)",
           text: "Registration of Factories (10 Day)",
           value: "10 Days",
         },
@@ -84,7 +73,7 @@ export const Drop2Data = (value) => {
           timeLineText: "7 Days",
           feeValue: "500",
           validityYear: "",
-          departments:"Registration and Licensing of Food Business Operator",
+          departments: "Registration and Licensing of Food Business Operator",
           text: "SFA",
           value: "SFA",
         },
@@ -99,7 +88,7 @@ export const Drop2Data = (value) => {
           timeLineText: "1 Month Pesticide",
           feeValue: "200000",
           validityYear: "",
-          departments:"Distributor Registration / License (for Pesticides)",
+          departments: "Distributor Registration / License (for Pesticides)",
           text: "Distributor Registration / License (for Pesticides)",
         },
         {
@@ -108,7 +97,7 @@ export const Drop2Data = (value) => {
           timeLineText: "1 Month Fertilizer",
           feeValue: "50000",
           validityYear: "",
-          departments:"Distributor Registration / License (for Fertilizer)",
+          departments: "Distributor Registration / License (for Fertilizer)",
           text: "Distributor Registration / License (for Fertilizer)",
         },
         {
@@ -117,26 +106,26 @@ export const Drop2Data = (value) => {
           timeLineText: "1 Month Lab Fee",
           feeValue: "5000",
           validityYear: "",
-          departments:"Product License for Fertilizer Micronutrients",
+          departments: "Product License for Fertilizer Micronutrients",
           text: "Product License for Fertilizer Micronutrients",
         },
-    
+
         {
           id: "Agriculture",
           value: "Factories",
           timeLineText: "1 Month Lab Fee",
           feeValue: "1000",
           validityYear: "",
-          departments:"Market Committee License For Factories(Group-A)",
+          departments: "Market Committee License For Factories(Group-A)",
           text: "Market Committee License For Factories(Group-A)",
-        },    
+        },
         {
           id: "Agriculture",
           value: "WholeSaler",
           timeLineText: "1 Month Lab Fee",
           feeValue: "500",
           validityYear: "",
-          departments:"Market Committee License For Wholesaler(Group-B)",
+          departments: "Market Committee License For Wholesaler(Group-B)",
           text: "Market Committee License For Wholesaler(Group-B)",
         },
         {
@@ -145,9 +134,9 @@ export const Drop2Data = (value) => {
           timeLineText: "1 Month Lab Fee",
           feeValue: "100",
           validityYear: "",
-          departments:"Market Committee License For Retailer(Group-C)",
+          departments: "Market Committee License For Retailer(Group-C)",
           text: "Market Committee License For Retailer(Group-C)",
-        }, 
+        },
       ];
       label = "Agriculture";
       break;
@@ -159,7 +148,7 @@ export const Drop2Data = (value) => {
           timeLineText: "3 Month",
           feeValue: "5000",
           validityYear: "",
-          departments:"License to sell Drugs by Way of Retail Sale (Form-6)",
+          departments: "License to sell Drugs by Way of Retail Sale (Form-6)",
           text: "License to sell Drugs by Way of Retail Sale (Form-6)",
         },
         {
@@ -168,7 +157,7 @@ export const Drop2Data = (value) => {
           timeLineText: "3 Month",
           feeValue: "5000",
           validityYear: "",
-          departments:"License to sell Drugs by Way of Wholesale 7A",
+          departments: "License to sell Drugs by Way of Wholesale 7A",
           text: "License to sell Drugs by Way of Wholesale 7A",
         },
         {
@@ -177,7 +166,7 @@ export const Drop2Data = (value) => {
           timeLineText: "3 Month",
           feeValue: "5000",
           validityYear: "",
-          departments:"License to sell Drugs in Pharmacy (Form-8)",
+          departments: "License to sell Drugs in Pharmacy (Form-8)",
           text: "License to sell Drugs in Pharmacy (Form-8)",
         },
         {
@@ -186,7 +175,8 @@ export const Drop2Data = (value) => {
           timeLineText: "3 Month",
           feeValue: "5000",
           validityYear: "",
-          departments:"License to sell Narcotics and Other Controlled Drugs/ Substances (Form-9)",
+          departments:
+            "License to sell Narcotics and Other Controlled Drugs/ Substances (Form-9)",
           text: "License to sell Narcotics and Other Controlled Drugs/ Substances (Form-9)",
         },
         {
@@ -195,53 +185,54 @@ export const Drop2Data = (value) => {
           timeLineText: "3 Month",
           feeValue: "5000",
           validityYear: "",
-          departments:"License to Manufacturer /Importer /Indenter of Drugs (Form-7)",
+          departments:
+            "License to Manufacturer /Importer /Indenter of Drugs (Form-7)",
           text: "License to Manufacturer /Importer /Indenter of Drugs (Form-7)",
         },
       ];
       label = "Health Department";
       break;
     case "MontToMatric":
-        array = [
-          {
-            id: "MontToMatric",
-            value: "MontToMatric",
-            timeLineText: "30 Days",
-            feeValue: "7000",
-            validityYear: "",
-            departments:"",
-            text: "Institutions from Montessori up to Class-X",
-          },
-          {
-            id: "MontToMatric",
-            timeLineText: "30 Days",
-            feeValue: "15000",
-            validityYear: "",
-            departments:"",
-            value: "HigherAndSecondary",
-            text: "Higher Secondary School",
-          },
-          {
-            id: "MontToMatric",
-            value: "OALevel",
-            timeLineText: "30 Days",
-            feeValue: "30000",
-            validityYear: "",
-            departments:"",
-            text: 'Institutions of "O" & "A" Level',
-          },
-          {
-            id: "MontToMatric",
-            value: "HigherLearning",
-            timeLineText: "30 Days",
-            feeValue: "20000",
-            validityYear: "",
-            departments:"",
-            text: "Degree awarding institutes and universities including Institutions having academic linkage / foreign collaboration/affiliation with any other institutions of higher learning",
-          },
-        ];
-        label = "School Education and Literacy Department";
-        break;
+      array = [
+        {
+          id: "MontToMatric",
+          value: "MontToMatric",
+          timeLineText: "30 Days",
+          feeValue: "7000",
+          validityYear: "",
+          departments: "",
+          text: "Institutions from Montessori up to Class-X",
+        },
+        {
+          id: "MontToMatric",
+          timeLineText: "30 Days",
+          feeValue: "15000",
+          validityYear: "",
+          departments: "",
+          value: "HigherAndSecondary",
+          text: "Higher Secondary School",
+        },
+        {
+          id: "MontToMatric",
+          value: "OALevel",
+          timeLineText: "30 Days",
+          feeValue: "30000",
+          validityYear: "",
+          departments: "",
+          text: 'Institutions of "O" & "A" Level',
+        },
+        {
+          id: "MontToMatric",
+          value: "HigherLearning",
+          timeLineText: "30 Days",
+          feeValue: "20000",
+          validityYear: "",
+          departments: "",
+          text: "Degree awarding institutes and universities including Institutions having academic linkage / foreign collaboration/affiliation with any other institutions of higher learning",
+        },
+      ];
+      label = "School Education and Literacy Department";
+      break;
     case "SindhHealthCareCommission":
       array = [
         {
@@ -250,7 +241,7 @@ export const Drop2Data = (value) => {
           timeLineText: "30 Days",
           feeValue: "500",
           validityYear: "",
-          departments:"",
+          departments: "",
           text: " Single specialty (i.e general practitioner, homeo, tibb, detist, nursing/ maternity home, laboratories, radiology centre etc.",
         },
         {
@@ -259,7 +250,7 @@ export const Drop2Data = (value) => {
           timeLineText: "30 Days",
           feeValue: "2000",
           validityYear: "",
-          departments:"",
+          departments: "",
           text: "2 1-24 bedded Medical Centre/ Hospital",
         },
         {
@@ -268,7 +259,7 @@ export const Drop2Data = (value) => {
           timeLineText: "30 Days",
           feeValue: "5000",
           validityYear: "",
-          departments:"",
+          departments: "",
           text: " 25 and above bedded Hospital",
         },
         {
@@ -277,7 +268,7 @@ export const Drop2Data = (value) => {
           timeLineText: "30 Days",
           feeValue: "1000",
           validityYear: "",
-          departments:"",
+          departments: "",
           text: "Any change in the already registered HCE",
         },
       ];
@@ -291,7 +282,7 @@ export const Drop2Data = (value) => {
           timeLineText: "3 Days",
           feeValue: "110",
           validityYear: "",
-          departments:"",
+          departments: "",
           text: "Registration Certificate of Partnership Firm",
         },
         {
@@ -300,7 +291,7 @@ export const Drop2Data = (value) => {
           timeLineText: "5 Days",
           feeValue: "55",
           validityYear: "",
-          departments:"",
+          departments: "",
           text: "Registration Certificate of Amendment/Dissolution /Rectification in Partnership Firm",
         },
         {
@@ -309,7 +300,7 @@ export const Drop2Data = (value) => {
           timeLineText: "10-15 Days",
           feeValue: "S.R.O.88(I)/2008)",
           validityYear: "",
-          departments:"",
+          departments: "",
           text: "Registration of New Boiler",
         },
         {
@@ -318,7 +309,7 @@ export const Drop2Data = (value) => {
           timeLineText: "10-15 Days",
           feeValue: "S.R.O.88(I)/2008)",
           validityYear: "",
-          departments:"",
+          departments: "",
           text: "Registration of Old Boiler",
         },
         {
@@ -327,7 +318,7 @@ export const Drop2Data = (value) => {
           timeLineText: "10-15 Days",
           feeValue: "S.R.O.88(I)/2008)",
           validityYear: "",
-          departments:"",
+          departments: "",
           text: "Approval of Plan and Particulars of Boilers Acceptable for Registration (New Boiler)",
         },
         {
@@ -336,7 +327,7 @@ export const Drop2Data = (value) => {
           timeLineText: "10-15 Days",
           feeValue: "S.R.O.88(I)/2008)",
           validityYear: "",
-          departments:"",
+          departments: "",
           text: "Approval of Plan and Particulars of Boilers Acceptable for Registration (Used Boiler)",
         },
         {
@@ -345,7 +336,7 @@ export const Drop2Data = (value) => {
           timeLineText: "10-15 Days",
           feeValue: "S.R.O.88(I)/2008)",
           validityYear: "",
-          departments:"",
+          departments: "",
           text: "Transfer of Ownership",
         },
       ];
@@ -359,7 +350,7 @@ export const Drop2Data = (value) => {
           timeLineText: "7 Days",
           feeValue: "50000",
           validityYear: "",
-          departments:"",
+          departments: "",
           text: "License for Handling of Hazardous Substances",
         },
         {
@@ -368,7 +359,7 @@ export const Drop2Data = (value) => {
           timeLineText: "7 Days",
           feeValue: "50000",
           validityYear: "",
-          departments:"",
+          departments: "",
           text: "License to Waste Contractor for Handling of Hazardous Substances and Non-Hazardous substances",
         },
         {
@@ -377,7 +368,7 @@ export const Drop2Data = (value) => {
           timeLineText: "EC (15 days)  ▪ IEE (30 days) ▪ EIA (60 days)",
           feeValue: "1000",
           validityYear: "",
-          departments:"",
+          departments: "",
           text: "Approval Under Section 17 (IEE/EIA/EC)",
         },
         {
@@ -386,7 +377,7 @@ export const Drop2Data = (value) => {
           timeLineText: "7-10 Days Up to 20 Million",
           feeValue: "50000",
           validityYear: "",
-          departments:"",
+          departments: "",
           text: "Approval of an Environmental Management Plan 7-10 Days Up to 20 Million",
         },
         {
@@ -395,7 +386,7 @@ export const Drop2Data = (value) => {
           timeLineText: "7-10 Days Above 20 Million up to 100 Million",
           feeValue: "100000",
           validityYear: "",
-          departments:"",
+          departments: "",
           text: "Approval of an Environmental Management Plan 7-10 Days Above 20 Million up to 100 Million",
         },
         {
@@ -404,7 +395,7 @@ export const Drop2Data = (value) => {
           timeLineText: "7-10 Days Above 100 Milliion up to 200 Million",
           feeValue: "200000",
           validityYear: "",
-          departments:"",
+          departments: "",
           text: "Approval of an Environmental Management Plan 7-10 Days Above 100 Milliion up to 200 Million",
         },
         {
@@ -413,7 +404,7 @@ export const Drop2Data = (value) => {
           timeLineText: "7-10 Days Above 200 Million up to 500 Million",
           feeValue: "400000",
           validityYear: "",
-          departments:"",
+          departments: "",
           text: "Approval of an Environmental Management Plan 7-10 Days Above 200 Million up to 500 Million",
         },
         {
@@ -422,7 +413,7 @@ export const Drop2Data = (value) => {
           timeLineText: "7-10 Days Above 500 Million",
           feeValue: "600000",
           validityYear: "",
-          departments:"",
+          departments: "",
           text: "Approval of an Environmental Management Plan 7-10 Days Above 500 Million",
         },
         {
@@ -432,7 +423,7 @@ export const Drop2Data = (value) => {
             "7-10 Days Review fee for Environmental Checklist or EMP",
           feeValue: "40000",
           validityYear: "",
-          departments:"",
+          departments: "",
           text: "Approval of an Environmental Management Plan Review fee for Environmental Checklist or EMP",
         },
         {
@@ -441,7 +432,7 @@ export const Drop2Data = (value) => {
           timeLineText: "7 Days Security Fee",
           feeValue: "20000",
           validityYear: "",
-          departments:"",
+          departments: "",
           text: "Approval of an Environmental Management Plan 7 Days Security Fee",
         },
         {
@@ -450,7 +441,7 @@ export const Drop2Data = (value) => {
           timeLineText: "7 Days Certificate Fee",
           feeValue: "50000",
           validityYear: "",
-          departments:"",
+          departments: "",
           text: "Approval of an Environmental Management Plan 7 Days Certificate Fee",
         },
         {
@@ -459,7 +450,7 @@ export const Drop2Data = (value) => {
           timeLineText: "7 Days",
           feeValue: "50000",
           validityYear: "",
-          departments:"",
+          departments: "",
           text: "Approval of Hospital Waste Management Plan",
         },
       ];
@@ -473,7 +464,7 @@ export const Drop2Data = (value) => {
           timeLineText: "60 days",
           feeValue: "",
           validityYear: "",
-          departments:"",
+          departments: "",
           text: "Allotment of Land/ Plot",
         },
         {
@@ -482,7 +473,7 @@ export const Drop2Data = (value) => {
           timeLineText: "14 days",
           feeValue: "",
           validityYear: "",
-          departments:"",
+          departments: "",
           text: "Approval of Building Drawing",
         },
         {
@@ -491,7 +482,7 @@ export const Drop2Data = (value) => {
           timeLineText: "7 days",
           feeValue: "",
           validityYear: "",
-          departments:"",
+          departments: "",
           text: "Approval of Completion (Block) Plan",
         },
         {
@@ -500,7 +491,7 @@ export const Drop2Data = (value) => {
           timeLineText: "14 days",
           feeValue: "",
           validityYear: "",
-          departments:"",
+          departments: "",
           text: "Collection of Additional Trade Fee",
         },
         {
@@ -509,7 +500,7 @@ export const Drop2Data = (value) => {
           timeLineText: "14 days",
           feeValue: "",
           validityYear: "",
-          departments:"",
+          departments: "",
           text: "Subdivision/ Amalgamation/ Transfer/ Subletting/ Extension of Land or Plot/ Change in Constitution/ change in Constitution",
         },
         {
@@ -518,7 +509,7 @@ export const Drop2Data = (value) => {
           timeLineText: "14 days",
           feeValue: "",
           validityYear: "",
-          departments:"",
+          departments: "",
           text: "Issuance of Lease Deed",
         },
         {
@@ -527,7 +518,7 @@ export const Drop2Data = (value) => {
           timeLineText: "14 days",
           feeValue: "",
           validityYear: "",
-          departments:"",
+          departments: "",
           text: "NOC for Utilities (Electricity, Gas, Cable, PTCL)",
         },
         {
@@ -536,7 +527,7 @@ export const Drop2Data = (value) => {
           timeLineText: "14 days",
           feeValue: "50000",
           validityYear: "",
-          departments:"",
+          departments: "",
           text: "NOC for Mortgage",
         },
         {
@@ -545,7 +536,7 @@ export const Drop2Data = (value) => {
           timeLineText: "14 days",
           feeValue: "",
           validityYear: "",
-          departments:"",
+          departments: "",
           text: "NOC for Road Cutting",
         },
         {
@@ -554,7 +545,7 @@ export const Drop2Data = (value) => {
           timeLineText: "14 days",
           feeValue: "",
           validityYear: "",
-          departments:"",
+          departments: "",
           text: "NOC for car parking/ beautification",
         },
       ];
@@ -568,7 +559,7 @@ export const Drop2Data = (value) => {
           timeLineText: "15 Days",
           feeValue: "",
           validityYear: "",
-          departments:"",
+          departments: "",
           text: "Allotment Order of Land/ Plot",
         },
         {
@@ -577,7 +568,7 @@ export const Drop2Data = (value) => {
           timeLineText: "5-10 Days",
           feeValue: "",
           validityYear: "",
-          departments:"",
+          departments: "",
           text: "Approval of Drawing",
         },
         {
@@ -586,7 +577,7 @@ export const Drop2Data = (value) => {
           timeLineText: "5-10 Days",
           feeValue: "",
           validityYear: "",
-          departments:"",
+          departments: "",
           text: "Subdivision/Transfer/ Amalgamation/ Change in constitution (Corporate Setup)/ Change in Trade/ Subletting trade/ Conversion of plot from Industrial to Commercial/ CNG petroleum station/ Godowns & Distribution",
         },
         {
@@ -595,7 +586,7 @@ export const Drop2Data = (value) => {
           timeLineText: "5-10 Days",
           feeValue: "",
           validityYear: "",
-          departments:"",
+          departments: "",
           text: "NOC for Utilities (Electricity, Telephone, Gas, Water)",
         },
         {
@@ -604,7 +595,7 @@ export const Drop2Data = (value) => {
           timeLineText: "5-10 Days",
           feeValue: "",
           validityYear: "",
-          departments:"",
+          departments: "",
           text: "NOC for Road Cutting",
         },
         {
@@ -613,7 +604,7 @@ export const Drop2Data = (value) => {
           timeLineText: "15-25 Days",
           feeValue: "",
           validityYear: "",
-          departments:"",
+          departments: "",
           text: "Issuance of Lease Draft",
         },
         {
@@ -622,7 +613,7 @@ export const Drop2Data = (value) => {
           timeLineText: "15-25 Days",
           feeValue: "",
           validityYear: "",
-          departments:"",
+          departments: "",
           text: "NOC for Mortgage",
         },
         {
@@ -631,7 +622,7 @@ export const Drop2Data = (value) => {
           timeLineText: "15-25 Days",
           feeValue: "",
           validityYear: "",
-          departments:"",
+          departments: "",
           text: "Un- authorized Construction",
         },
       ];
@@ -642,10 +633,11 @@ export const Drop2Data = (value) => {
         {
           id: "BoardOfRevenue",
           value: "BoardOfRevenue",
-          timeLineText: "Registration of Shops & Establishment (Same Day) Day Per Page",
+          timeLineText:
+            "Registration of Shops & Establishment (Same Day) Day Per Page",
           feeValue: "300",
           validityYear: "",
-          departments:"",
+          departments: "",
           text: "Issuance of the True Copy of Land Record",
         },
         {
@@ -654,7 +646,7 @@ export const Drop2Data = (value) => {
           timeLineText: "10 Days",
           feeValue: "",
           validityYear: "",
-          departments:"",
+          departments: "",
           text: "Registration of Document",
         },
       ];
@@ -738,12 +730,12 @@ export const Dropdown = (props) => {
       timeLineText: "10-12 Days",
       feeValue: "15000",
       validityYear: "3 Years",
-      departments:"Registration of Privately Managed Colleges (Urban)",
+      departments: "Registration of Privately Managed Colleges (Urban)",
       id: "Registration of Privately Managed Colleges (Urban)",
     },
   ]);
   const handleChange = (event) => {
-    debugger;
+    ;
     setSelectedValue(event.target.value);
     let arr = [...props.arr];
     arr.splice(props.ind, 1, event.target.value);
@@ -756,43 +748,35 @@ export const Dropdown = (props) => {
 
   return (
     <Fade left>
-      <FormControl variant="outlined" size="small" className="dropdown-width col-12" >
-      {/* <InputLabel
-        shrink={true}
-        style={{
-          background: "white",
-          width: "107px",
-          paddingLeft: "9px",
-          marginLeft: "-5px",
-        }}
-        htmlFor="my-select"
+      <FormControl
+        variant="outlined"
+        size="small"
+        className="dropdown-width col-12"
       >
-        Departments
-      </InputLabel> */}
-       <h4>Department</h4>
-       <Select
-        onChange={handleChange}
-        style={{ width: "96%",}}
-        native
-        id="my-select"
-        value={props.val}
-        inputProps={{
-          name: "case",
-          id: "outlined-age-native-simple",
-        }}
-      >
-        {Drop1Data.map((val, ind) => {
-          return <option value={val.value}>{val.text}</option>;
-        })}
-      </Select>
-    </FormControl>
+        <h4>Department</h4>
+        <Select
+          onChange={handleChange}
+          style={{ width: "96%" }}
+          native
+          id="my-select"
+          value={props.val}
+          inputProps={{
+            name: "case",
+            id: "outlined-age-native-simple",
+          }}
+        >
+          {Drop1Data.map((val, ind) => {
+            return <option value={val.value}>{val.text}</option>;
+          })}
+        </Select>
+      </FormControl>
     </Fade>
   );
 };
 export const Dropdown1 = (props) => {
   const [selectedValue, setSelectedValue] = React.useState("");
   const handleChange = (event) => {
-    debugger;
+    ;
     setSelectedValue(event.target.value);
     let arr = [...props.arr];
     arr.splice(
@@ -806,61 +790,61 @@ export const Dropdown1 = (props) => {
   return (
     <Fade right>
       <FormControl
-      variant="outlined"
-      size="small"
-      onChange={handleChange}
-      className="dropdown-width col-12 "
-    >
-      <h4>License</h4>
-      <Select
-        native
-        style={{ width: "96%",}}
-        defaultValue={selectedValue}
-        value={selectedValue}
+        variant="outlined"
+        size="small"
         onChange={handleChange}
-        inputProps={{
-          name: "case",
-          id: "outlined-age-native-simple",
-        }}
+        className="dropdown-width col-12 "
       >
-        {Drop2Data(props.arr1)?.array.map((val, ind) => {
-          return <option value={val.value}>{val.text}</option>;
-        })}
-      </Select>
-    </FormControl>
+        <h4>License</h4>
+        <Select
+          native
+          style={{ width: "96%" }}
+          defaultValue={selectedValue}
+          value={selectedValue}
+          onChange={handleChange}
+          inputProps={{
+            name: "case",
+            id: "outlined-age-native-simple",
+          }}
+        >
+          {Drop2Data(props.arr1)?.array.map((val, ind) => {
+            return <option value={val.value}>{val.text}</option>;
+          })}
+        </Select>
+      </FormControl>
     </Fade>
   );
 };
 export default function FeedBack() {
-
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   useEffect(() => {
-
     // Function to update the windowWidth state when the resize event occurs
     const handleResize = () => {
       setWindowWidth(window.innerWidth);
     };
 
     // Attach the event listener
-    window.addEventListener('resize', handleResize);
+    window.addEventListener("resize", handleResize);
 
     // Clean up the event listener on component unmount
     return () => {
-      window.removeEventListener('resize', handleResize);
+      window.removeEventListener("resize", handleResize);
     };
   }, []);
-  
-const getRegisteredUser=async()=>{
-  try {
-    const result=await getService("https://localhost:7163/api/EmailAddress/GetEmailAddress")
-    console.log(result)
-  } catch (error) {
-    console.log(error)
-  }
-}
-  useEffect(()=>{
+
+  const getRegisteredUser = async () => {
+    try {
+      const result = await getService(
+        "https://localhost:7163/api/EmailAddress/GetEmailAddress"
+      );
+      console.log(result);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+  useEffect(() => {
     // getRegisteredUser()
-  },[])
+  }, []);
   const [isTextareaFocused, setIsTextareaFocused] = useState(false);
   const [enableAreas, setEnableAreas] = useState(true);
   const [arr1, setArr1] = React.useState(["college"]);
@@ -874,7 +858,7 @@ const getRegisteredUser=async()=>{
       timeLineText: "10-12 Days",
       feeValue: "15000",
       validityYear: "3 Years",
-      departments:"Registration of Privately Managed Colleges (Urban)",
+      departments: "Registration of Privately Managed Colleges (Urban)",
       text: "Registration of Privately Managed Colleges (Urban)",
       value: "Registration of Privately Managed Colleges (Urban)",
     },
@@ -1238,11 +1222,11 @@ const getRegisteredUser=async()=>{
     },
   ];
   const handleDepartments = (e, param) => {
-    debugger;
+    ;
     const selectedValue = e.target.value;
     const departmentLabels = {
       Urban: "Areas",
-      labour:"Labour",
+      labour: "Labour",
       MontToMatric: "School Education and Literacy Department",
       SindhHealthCareCommission: "Sindh Health Care Commission",
       HealthDepartment: "Health Department",
@@ -1264,23 +1248,12 @@ const getRegisteredUser=async()=>{
       setLabel(departmentLabels[selectedValue]);
       filterAreaData = subData.filter((x) => x.id === selectedValue);
       setAreaDropdown(filterAreaData);
-      // filterData = data.filter((x) => x.id === selectedValue);
       setEnableAreas(true);
     } else if (selectedValue !== "") {
       setEnableAreas(false);
-      // filterData = data.filter((x) => x.id === selectedValue);
     }
 
-    // !param ? setChangeValue(filterData) : (filterData = filterData);
     return filterData;
-  };
-  const handleArea = (e) => {
-    debugger;
-    const selectedValue = e.target.value;
-    let filterData = [];
-    // if (selectedValue !== "") {
-    //   filterData = data.filter((x) => x.id === selectedValue);
-    // }
   };
   return (
     <>
@@ -1296,7 +1269,6 @@ const getRegisteredUser=async()=>{
         style={{
           height: "250px",
           background: "",
-          // backgroundColor:"red"
         }}
       >
         <div
@@ -1305,273 +1277,44 @@ const getRegisteredUser=async()=>{
             display: "flex",
             justifyContent: "center",
             marginTop: "50px",
-            // textAlign:"justify",
-            margin:"auto",
-            position:"relative"
+            margin: "auto",
+            position: "relative",
           }}
         >
-       <div className="" >
-       <h1 className={window.innerWidth <= 540 ?"ReportRegulatorybefore":"ReportRegulatoryDifficulties"}>Report Regulatory Difficulties</h1>
-         {/* <div className="row g-0 "    style={{width:"100%",marginBottom:20}}>
-         {arr1.map((val, ind) => {
-                return (
-                  <>
-                    <div
-                    className="col-md-6"
-                      // style={{
-                      //   display: "flex",
-                      //   flexDirection: "row",
-                      //   gap: "15px",
-                      // }}
-                    >
-                      <Dropdown
-                        ind={ind}
-                        arr={arr1}
-                        setArr={setArr1}
-                        arr2={arr2}
-                        setArr2={setArr2}
-                        val={val}
-                      />
-                      <div
-                      className="col-md-6"
-                        // style={{
-                        //   display: "flex",
-                        //   flexDirection: "column",
-                        //   gap: "20px",
-                        // }}
-                      >
-                      </div>
-                    </div>
-
-                    {arr1[ind] !== "SFA" && (
-                      <>
-                        {" "}
-                        <Dropdown1
-                          ind={ind}
-                          arr={arr2}
-                          setArr={setArr2}
-                          arr1={val}
-                        />
-                      </>
-                    )}
-                  </>
-                );
-              })}
-         </div> */}
-         <p
-            className={window.innerWidth <= 540 ? "mobileparaforfeedback" : "feedbackpara col-8"} style={{fontSize:window.innerWidth === 280 || window.innerWidth ===320 ? "17.5px": " ",textAlign:"center"}}
-          >
-           Please contact us to share the Regulatory constraints which you or your business has faced with Government of Sindh institutions.
-           Your response shall be kept confidential and will only be used to review the legislation for its improvement.
-          </p>
-       </div>
+          <div className="">
+            <h1
+              className={
+                window.innerWidth <= 540
+                  ? "ReportRegulatorybefore"
+                  : "ReportRegulatoryDifficulties"
+              }
+            >
+              Report Regulatory Difficulties
+            </h1>
+            <p
+              className={
+                window.innerWidth <= 540
+                  ? "mobileparaforfeedback"
+                  : "feedbackpara col-8"
+              }
+              style={{
+                fontSize:
+                  window.innerWidth === 280 || window.innerWidth === 320
+                    ? "17.5px"
+                    : " ",
+                textAlign: "center",
+              }}
+            >
+              Please contact us to share the Regulatory constraints which you or
+              your business has faced with Government of Sindh institutions.
+              Your response shall be kept confidential and will only be used to
+              review the legislation for its improvement.
+            </p>
+          </div>
         </div>
       </div>
-
-      {/* <div
-        className="row justify-content-center feedbackMUI"
-        style={{
-          height: window.innerWidth <= 912 ? "930px":"700px",
-          background: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(${BG1})`,
-          backgroundSize: "cover",
-          backgroundRepeat: "no-repeat",
-        }}
-      >
-        <div className="col-lg-9" style={{height:window.innerWidth <= 912? "950px" :" ",marginTop: window.innerWidth >= 1024? "-49px": "30px"}} >
-          <div className="row justify-content-center px-5 mt-5 gapbwfields">
-            <div className="col-lg-4">
-              <TextField
-                className="feedBackTextField"
-                type="text"
-                variant="outlined"
-                placeholder="Enter your Name"
-                label="Name"
-                InputProps={{
-                  style: { borderRadius: "30px", border: "none" }, 
-                }}
-              />
-            </div>
-            <div className="col-lg-4">
-              <TextField
-                className="feedBackTextField"
-                type="text"
-                placeholder="Enter your Company Name"
-                label="Company Name"
-                InputProps={{
-                  style: { borderRadius: "30px", border: "none" }, 
-                }}
-              />
-            </div>
-            <div className="col-lg-4">
-              <TextField
-                className="feedBackTextField"
-                type="text"
-                placeholder="Enter your Address"
-                label="Address"
-                InputProps={{
-                  style: { borderRadius: "30px", border: "none" }, 
-                }}
-              />
-            </div>
-          </div>
-          <div className="row justify-content-center px-5  gapbwfields" style={{marginTop:window.innerWidth <= 912? "1.5rem": "3rem"}}>
-            <div className="col-lg-4">
-              <TextField
-                className="feedBackTextField"
-                type="text"
-                placeholder="Enter your Country/City"
-                label="Country-City"
-                InputProps={{
-                  style: { borderRadius: "30px", border: "none" }, 
-                }}
-              />
-            </div>
-            <div className="col-lg-4">
-              <TextField
-                className="feedBackTextField"
-                type="text"
-                placeholder="Enter your Mobile Number"
-                label="Mobile Number"
-                InputProps={{
-                  style: { borderRadius: "30px", border: "none" }, 
-                }}
-              />
-            </div>
-            <div className="col-lg-4">
-              <TextField
-                className="feedBackTextField"
-                type="text"
-                placeholder="Enter your Email"
-                label=" Email Address"
-                InputProps={{
-                  style: { borderRadius: "30px", border: "none" }, 
-                }}
-              />
-            </div>
-          </div>
-          <div className=  "row  px-5  gapbwfields" style={{marginTop:window.innerWidth <= 912? "1.5rem": "3rem"}}>
-            <div className="col-lg-4">
-              <TextField
-                className="feedBackTextField"
-                type="text"
-                placeholder="Enter your Website link"
-                label="Company Website"
-                InputProps={{
-                  style: { borderRadius: "30px", border: "none" }, 
-                }}
-              />
-            </div>
-            <div className="col-lg-4 ">
-              <select
-                type="select"
-                onChange={handleDepartments}
-                className="textField"
-                label="Department"
-                style={{
-                  height: "53.5px",
-                  width: "100%", 
-                  color: "#757775",
-                  paddingTop: "10px",
-                  paddingRight: "30px", 
-                  borderRadius: "25px",
-                  fontFamily: "sans-serif",
-                  padding: "10px",
-                  position: "relative" 
-                }}
-              >
-                {department.map((Val, index) => {
-                  return (
-                    <option key={index} value={Val.value}>
-                      {Val.text}
-                    </option>
-                  );
-                })}
-              </select>
-            </div>
-            <div className="col-lg-4 ">
-              {enableAreas === true ? (<>
-                <select
-                  type="select"
-                  onChange={handleArea}
-                  className="textField"
-                  label={label}
-                  renderValue={areas[0]}
-                  style={{
-                    height: "53.5px",
-                    width: "100%", 
-                    color: "#757775",
-                    paddingTop: "10px",
-                   borderRadius: "25px",
-                    fontFamily: "sans-serif",
-                    padding: "10px 36px 10px 10px",
-                    position: "relative" 
-                  }}
-                >
-                  {areaDropdown.map((Val, index) => {
-                    return (
-                      <option key={index} value={Val.value}>
-                        {Val.text}
-                      </option>
-                    );
-                  })}
-                </select>
-              </>) : (
-                <div className="col-lg-3"></div>
-              )}
-            </div>
-          </div>
-          <div
-            className="row justify-content-center px-5 gapfields "
-            style={{marginTop:window.innerWidth <= 912? "1rem": "3rem"}} 
-          >
-            <div className="col-lg-12">
-              <Box>
-                <textarea
-                  className={isTextareaFocused ? "textarea-focused" : ""}
-                  style={{
-                    borderRadius: "55px",
-                    height: "100px",
-                    color: "rgba(0, 0, 0, 0.87)",
-                    padding: "20px",
-                    width: "100%",
-                    fontSize: "1.0rem",
-                    fontWeight: "200",
-                    fontFamily: "sans-serif",
-                    resize: "none",
-                    border: "none", // Remove the default border
-                    outline: "none", // Remove the default outline
-                    transition: "border-color 0.3s",
-                    overflow: "hidden",
-                  }}
-                  placeholder="Give your valuable feedback here…"
-                  onFocus={() => setIsTextareaFocused(true)}
-                  onBlur={() => setIsTextareaFocused(false)}
-                />
-              </Box>
-            </div>
-          </div>
-          <div className="row">
-            <div className="col-lg-12 mt-4 tocentersubmitbutton" style={{marginLeft: window.innerWidth >= 1024? "52px": "0px"}} >
-              <button type="button" className="submitButton">
-                <span>Submit</span>
-              </button>
-            </div>
-          </div>
-          </div>
-    
-      </div> */}
-<FeedBackForm/>
-  <Footer />
+      <FeedBackForm />
+      <Footer />
     </>
   );
 }
-
-
-
-
-
-
-
-
-
-

@@ -44,7 +44,7 @@ import MobileHeaderGeneric from "./MobileHeaderGeneric";
 import Footer from "./footer";
 export default function Resource() {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-  debugger
+  
   console.log( window.location.href)
 
   useEffect(() => {

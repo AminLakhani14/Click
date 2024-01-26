@@ -7,7 +7,7 @@ import { translations } from "../Transalation/Transalation";
 import { useSelector } from "react-redux";
 
 function Wheeler(props) {
-  const {language} = useSelector((state)=>state.language)
+  const { language } = useSelector((state) => state.language)
 
   const wheelerInitialState = {
     deg: 45,
@@ -68,7 +68,7 @@ function Wheeler(props) {
 
   // console.log("Data", data);
 
-  console.log("wheeler",translations)
+  console.log("wheeler", translations)
 
 
   return (
@@ -76,16 +76,16 @@ function Wheeler(props) {
       <div
         className="bg-ring"
       >
-      <SVG
-        src={asset1}
-        width={windowWidth <=1440?600:700}
-        height={windowWidth <=1440?600:700}
-        style={{
-          position:"absolute"
-        }}
-        fill={data.boxColor}
-        title="React"
-      />
+        <SVG
+          src={asset1}
+          width={windowWidth <= 1440 ? 600 : 700}
+          height={windowWidth <= 1440 ? 600 : 700}
+          style={{
+            position: "absolute"
+          }}
+          fill={data.boxColor}
+          title="React"
+        />
         <div className="body-box">
           <div className="row ">
             <div className="col-12 highlit-heading">
@@ -97,19 +97,19 @@ function Wheeler(props) {
             <div className="col-lg-2"></div>
             <div className="col-lg-8 ph-reason">
               <p className="paragraphGeneric highlightable" style={{ color: "#5f5f5f" }}>
-              {translations["Attractives"][language]}
+                {translations["Attractives"][language]}
               </p>
             </div>
             <div className="col-lg-2"></div>
           </div>
         </div>
-        <div className="container" style={{position:"relative",zIndex:"1"}}>
+        <div className="container" style={{ position: "relative", zIndex: "1" }}>
           <div
             className="row"
             style={{ display: "flex", alignItems: "inherit" }}
           >
             <div className="col-lg-6">
-              <CircleSeg translations={translations} language={language}  getSegmentData={getSegmentData} setData={setData} />
+              <CircleSeg translations={translations} language={language} getSegmentData={getSegmentData} setData={setData} />
             </div>
             <div className="col-lg-6">
               <div
@@ -127,18 +127,18 @@ function Wheeler(props) {
                         >
                           <i
                             className="fa fa-angle-up"
-                            style={windowWidth <=1440?{
-                              color:`${data.boxColor}`,
+                            style={windowWidth <= 1440 ? {
+                              color: `${data.boxColor}`,
                               marginTop: "10px",
                               fontSize: "24px",
                               fontWeight: "bold",
-                              cursor:"pointer",
-                            }:{
-                              color:`${data.boxColor}`,
+                              cursor: "pointer",
+                            } : {
+                              color: `${data.boxColor}`,
                               marginTop: "10px",
                               fontSize: "30px",
                               fontWeight: "bold",
-                              cursor:"pointer",
+                              cursor: "pointer",
                             }}
                           ></i>
                         </div>
@@ -151,18 +151,18 @@ function Wheeler(props) {
                         >
                           <i
                             className="fa fa-angle-down"
-                            style={windowWidth  <=1440?{
-                              color:`${data.boxColor}`,
+                            style={windowWidth <= 1440 ? {
+                              color: `${data.boxColor}`,
                               marginTop: "10px",
                               fontSize: "24px",
                               fontWeight: "bold",
-                              cursor:"pointer",
-                            }:{
-                              color:`${data.boxColor}`,
+                              cursor: "pointer",
+                            } : {
+                              color: `${data.boxColor}`,
                               marginTop: "10px",
                               fontSize: "30px",
                               fontWeight: "bold",
-                              cursor:"pointer",
+                              cursor: "pointer",
                             }}
                           ></i>
                         </div>
@@ -170,16 +170,16 @@ function Wheeler(props) {
                     )}
                   </div>
                   {isVisible2 === true ? (
-                    <div style={{userSelect: "none"}}>
+                    <div style={{ userSelect: "none" }}>
                       <div className="row text-center">
                         <div className="col-sm-6">
                           <label
                             id="segmentTitle"
                             className="heading-1 highlightable"
-                            style={windowWidth  <=1440?{
+                            style={windowWidth <= 1440 ? {
                               marginTop: "-11px",
                               color: `${data.boxColor}`
-                            }:{
+                            } : {
                               marginTop: "-11px",
                               color: `${data.boxColor}`
                             }}
@@ -189,7 +189,7 @@ function Wheeler(props) {
                         </div>
 
                         <div className="col-sm-6">
-                          <h4 className="heading-1 highlightable" style={{color:`${data.boxColor}`}}>{translations["SectorStatistics"][language]}</h4>
+                          <h4 className="heading-1 highlightable" style={{ color: `${data.boxColor}` }}>{translations["SectorStatistics"][language]}</h4>
                         </div>
                         <div>
                           <div className="hr"></div>
@@ -198,10 +198,10 @@ function Wheeler(props) {
 
                       <div className="row">
                         <div className="col-sm-10 ">
-                          <h1 className="heading-1 highlightable" style={{color:`${data.boxColor}`}} id="">
-                          {translations["Crops"][language]}
+                          <h1 className="heading-1 highlightable" style={{ color: `${data.boxColor}` }} id="">
+                            {translations["Crops"][language]}
                           </h1>
-                          <p id="segmentText" style={{color:`${data.boxColor}`}} className="phra-2 highlightable">
+                          <p id="segmentText" style={{ color: `${data.boxColor}` }} className="phra-2 highlightable">
                             {/* Approx US$1.6 Billion (2019-2020) */}
                             {translations["Dollor"][language]}
                           </p>
@@ -213,23 +213,23 @@ function Wheeler(props) {
                       <div className="text-center">
                         <div className="row">
                           <div className="col-sm-6">
-                            <h1 id="box-title1" style={{color:`${data.boxColor}`}} className="heading-1 highlightable">
+                            <h1 id="box-title1" style={{ color: `${data.boxColor}` }} className="heading-1 highlightable">
                               {/* 4 Million */}
                               {/* {wheelerFormData.wheat} */}
                               4{translations["Million"][language]}
                             </h1>
-                            <p id="box-subtitle1" style={{color:`${data.boxColor}`}} className="phra-2 highlightable">
+                            <p id="box-subtitle1" style={{ color: `${data.boxColor}` }} className="phra-2 highlightable">
                               {/* tons of wheat */}
                               {translations["Wheat"][language]}
                             </p>
                           </div>
                           <div className="col-sm-6">
-                            <h1 id="box-title2" style={{color:`${data.boxColor}`}}  className="heading-1 highlightable">
+                            <h1 id="box-title2" style={{ color: `${data.boxColor}` }} className="heading-1 highlightable">
                               {/* 1.9 Million */}
                               {/* {wheelerFormData.Rice} */}
                               1.9{translations["Million"][language]}
                             </h1>
-                            <p id="box-subtitle2" style={{color:`${data.boxColor}`}} className="phra-2 highlightable">
+                            <p id="box-subtitle2" style={{ color: `${data.boxColor}` }} className="phra-2 highlightable">
                               {/* tons of rice */}
                               {translations["Rice"][language]}
                             </p>
@@ -237,25 +237,25 @@ function Wheeler(props) {
                         </div>
                         <div className="row">
                           <div className="col-sm-6">
-                            <h1 id="box-title3" style={{color:`${data.boxColor}`}} className="heading-1 highlightable">
+                            <h1 id="box-title3" style={{ color: `${data.boxColor}` }} className="heading-1 highlightable">
                               {/* 4.2 Million */}
                               {/* {wheelerFormData.sugarcane} */}
                               4.2{translations["Million"][language]}
 
                             </h1>
-                            <p id="box-subtitle3" style={{color:`${data.boxColor}`}} className="phra-2 highlightable">
+                            <p id="box-subtitle3" style={{ color: `${data.boxColor}` }} className="phra-2 highlightable">
                               {/* tons of sugarcane */}
                               {translations["Sugarcane"][language]}
                             </p>
                           </div>
                           <div className="col-sm-6">
-                            <h1 id="box-title4" style={{color:`${data.boxColor}`}} className="heading-1 highlightable">
+                            <h1 id="box-title4" style={{ color: `${data.boxColor}` }} className="heading-1 highlightable">
                               {/* 2.3 Million */}
                               {/* {wheelerFormData.cotton} */}
                               2.3{translations["Million"][language]}
 
                             </h1>
-                            <p id="box-subtitle4" style={{color:`${data.boxColor}`}} className="phra-2 highlightable">
+                            <p id="box-subtitle4" style={{ color: `${data.boxColor}` }} className="phra-2 highlightable">
                               {/* bales of cotton */}
                               {translations["Cotton"][language]}
                             </p>
@@ -269,7 +269,7 @@ function Wheeler(props) {
                               <button
                                 type="button"
                                 className="feedback"
-                                style={{ width: "100%",background:`${data.boxColor}` }}
+                                style={{ width: "100%", background: `${data.boxColor}` }}
                               >
                                 <span>{translations["B1"][language]}</span>
                               </button>
@@ -281,7 +281,7 @@ function Wheeler(props) {
                               <button
                                 type="button"
                                 className="feedback"
-                                style={{ width: "100%" ,background:`${data.boxColor}`}}
+                                style={{ width: "100%", background: `${data.boxColor}` }}
                               >
                                 <span>{translations["B2"][language]}</span>
                               </button>
@@ -296,8 +296,6 @@ function Wheeler(props) {
                 </div>
               </div>
             </div>
-            {/* <Circle/> */}
-            {/* <div className="col-sm-6 " id="pieChart"> </div> */}
           </div>
         </div>
       </div>

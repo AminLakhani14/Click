@@ -929,7 +929,7 @@ const ContactUsForm = () => {
   };
   const onHandleSubmit = (values) => {
     setisloading(true);
-    debugger;
+    ;
     const RespObj = { ...values };
     postService("/contact-us", RespObj)
       .then((response) => {

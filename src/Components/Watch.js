@@ -3,18 +3,11 @@ import GenericHeader from "./genericHeader";
 import { useState } from "react";
 import { useEffect } from "react";
 import MobileHeaderGeneric from "./MobileHeaderGeneric";
-import membersDp from "../assets/membersDp.avif";
 import Footer from "./footer";
 import "../Css/watch.css";
-import user from "../assets/Unknown_person.jpg";
-
 import ReactPlayer from "react-player";
-import healthVideo from "../assets/tutorial/healthDepartment.mp4";
-import healthWholesale from "../assets/tutorial/heathDepartmentwholesale.mp4";
-import regionalOffice from "../assets/tutorial/regionalDirectorOffice.mp4";
 import schooleDepartmentVideo from "../assets/tutorial/schoolEducationAndLiteracyDepartment.mp4";
 import schoolEducationDepartment from "../assets/thumbnail/schoolEducationaAndLitercaDepartment.png";
-
 import licenseToManufactureDrug from "../assets/tutorial/LIcensetomanufacturedrug.mp4";
 import licenseToSaleDrugByWholeSale from "../assets/tutorial/LIcensetosaledrugbyholesale.mp4";
 import LIcensetosaledrugbytretail from "../assets/tutorial/LIcensetosaledrugbytretail.mp4";
@@ -103,13 +96,13 @@ export const videos = [
     department: "Sindh Environmental Protection Agency (SEPA)",
     license: "License For Handling Of Hazardous Substance",
     thumbnail: sindhEnviromentalProtection,
-  },{
+  }, {
     id: 8,
     tutorial: SBCA_006,
     department: "Sindh Building Control Authority (SBCA)",
     license: "Permit to Demolish Buildings for Catergory(1-4)",
     thumbnail: sindhbuildingcontrol,
-  },{
+  }, {
     id: 9,
     tutorial: BOR_001,
     department: "Board of Revenue",
@@ -154,7 +147,7 @@ export const videos = [
     thumbnail: labourDepartment,
     length: 2,
   },
-  
+
   {
     id: 15,
     tutorial: ICD_003,
@@ -189,14 +182,14 @@ export const videos = [
     department: "Industries and Commerce Department",
     license: "Transfer of Ownership",
     thumbnail: IndustriesAndCommerceDepartment,
-  }, 
-   {
+  },
+  {
     id: 20,
     tutorial: SBCA_007,
     department: "Sindh Building Control Authority (SBCA)",
     license: "Attestation Of Fee",
     thumbnail: sindhbuildingcontrol,
-  },  {
+  }, {
     id: 21,
     tutorial: SBCA_002,
     department: "Sindh Building Control Authority (SBCA)",
@@ -242,7 +235,7 @@ export const videos = [
 ];
 
 const Watch = () => {
-  
+
   let { id, department } = useParams();
   const [departmentFilter, setdepartmentFilter] = useState(videos);
   useEffect(() => {
@@ -267,50 +260,42 @@ const Watch = () => {
       window.removeEventListener("resize", handleResize);
     };
   });
-
   const [play, setplay] = useState(true);
   console.log(id);
 
   const [filtervideo, setfiltervideo] = useState(videos);
   useEffect(() => {
-    let zain = departmentFilter?.filter((item) => {
+    let filteredVideoWithId = departmentFilter?.filter((item) => {
       return item?.id == id ? item : undefined;
     });
-    setfiltervideo(zain);
+    setfiltervideo(filteredVideoWithId);
   }, [id]);
 
   useEffect(() => {
     setplay(true);
-  },[]);
+  }, []);
   return (
     <>
       {windowWidth <= 500 ? <MobileHeaderGeneric /> : <GenericHeader />}
-      {windowWidth >=500 && <div className="" style={{ height: 120 }}></div>}
-
-
-      {/* <div className="row g-0 mb-4 d-flex justify-content-center">
-        <div className="d-flex justify-content-center ">
-          <h1 className="tutorial">Tutorials</h1>
-        </div>
-      </div> */}
+      {windowWidth >= 500 && <div className="" style={{ height: 120 }}></div>}
       <div className=""></div>
       <div className="parent_container mt-5">
         <div className="main_video">
-          {filtervideo?.map(({ tutorial, department,thumbnail, license, id }) => {
+          {filtervideo?.map(({ tutorial, department, thumbnail, license, id }) => {
             return (
               <>
                 <ReactPlayer
                   url={tutorial}
                   controls={true}
                   width={"100%"}
-                  height={windowWidth <=500?200 :windowWidth  >= 1020 ? 500 : windowWidth >=1400 && 600}
+                  height={windowWidth <= 500 ? 200 : windowWidth >= 1020 ? 500 : windowWidth >= 1400 && 600}
                   style={{
                     border: "1px solid rgba(0, 0, 0, 0.12)",
                     overflow: "hidden",
                     borderRadius: 10,
                     boxShadow: "0 0.2rem 1rem rgba(0, 0, 0, 0.12)",
                   }}
-                  light={<img  style={{height:"100%",width:'100%'}} src={thumbnail}/>}
+                  light={<img style={{ height: "100%", width: '100%' }} src={thumbnail} />}
                   playing={play}
                   autoPlay={true}
                 />
@@ -318,7 +303,7 @@ const Watch = () => {
                   <h1 class="text-2xl lg:text-3xl flex font-semibold">
                     {department}
                   </h1>
-                  <p class=""style={{color:'red!important'}}>{license}</p>
+                  <p class="" style={{ color: 'red!important' }}>{license}</p>
                 </div>
               </>
             );
@@ -337,8 +322,8 @@ const Watch = () => {
                         src={thumbnail}
                         style={{ borderRadius: 5, objectFit: "cover" }}
                         alt=""
-                        onClick={()=>{
-                          window.scrollTo(0,0)
+                        onClick={() => {
+                          window.scrollTo(0, 0)
                         }}
                       />
                     </Link>

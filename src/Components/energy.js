@@ -4,10 +4,8 @@ import Footer from "./footer";
 import { Link, useLocation } from "react-router-dom";
 import "../Css/investnow.css";
 import "../Css/textField.css";
-import agriAndFood from "../assets/agriAndFood.png";
 import MobileHeaderGeneric from "./MobileHeaderGeneric";
 import TextField from "@mui/material/TextField";
-import sindhAssembly from "../assets/sindhAssemblywomen.png";
 import buildingBridge from "../assets/buildingBridge.png";
 import energybg from "../assets/energybg.png";
 import energyinnerpic1 from "../assets/energyinnerpic1.jpg";
@@ -17,15 +15,14 @@ function Energy(props) {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const loc = useLocation();
   useEffect(() => {
-    let lm  = document.getElementById(loc.hash.slice(1));
-    
+    let lm = document.getElementById(loc.hash.slice(1));
+
     if (lm) {
       lm.scrollIntoView({ behavior: 'smooth' });
     }
-    else
-    {
-      window.scrollTo({top:0, left:0, behavior:'smooth'})
-      }
+    else {
+      window.scrollTo({ top: 0, left: 0, behavior: 'smooth' })
+    }
   }, [loc])
   useEffect(() => {
 
@@ -42,7 +39,7 @@ function Energy(props) {
       window.removeEventListener('resize', handleResize);
     };
   }, []);
- 
+
   const [isVisible, setIsVisible] = useState(false);
   const [parentData, setParentData] = useState();
   const [showFullText, setShowFullText] = useState(false);
@@ -62,7 +59,7 @@ function Energy(props) {
   let value = ">";
   const location = useLocation();
   useEffect(() => {
-     ;
+    ;
     const data = location.state;
     setParentData(data);
   }, [location]);
@@ -100,27 +97,26 @@ function Energy(props) {
         className="SiteMain2"
       >
         <h1
-          className={`slide-in-left Investnow-h1 highlightable ${
-            isVisible ? "" : "slide-out-left"
-          }`}
+          className={`slide-in-left Investnow-h1 highlightable ${isVisible ? "" : "slide-out-left"
+            }`}
         >
           Energy
         </h1>
       </div>
       <div className="row breadCrumb">
         <div
-          style={{ display: "flex", justifyContent: "center", width: "100%",  flexDirection:(window.innerWidth>= 280) && (window.innerWidth <=320)? "column": "row"   }}
+          style={{ display: "flex", justifyContent: "center", width: "100%", flexDirection: (window.innerWidth >= 280) && (window.innerWidth <= 320) ? "column" : "row" }}
         >
           <Link
             to={"/home"}
             style={{
               color: "#720D1D",
-              fontSize: (window.innerWidth>= 280) && (window.innerWidth <=320)? "0px": "30px",
+              fontSize: (window.innerWidth >= 280) && (window.innerWidth <= 320) ? "0px" : "30px",
               textDecoration: "none",
             }}
           >
             <h5
-              style={{ display: "contents", color: "black", fontSize: window.innerWidth <= 500? "20px": "30px" }}
+              style={{ display: "contents", color: "black", fontSize: window.innerWidth <= 500 ? "20px" : "30px" }}
             >
               Home {value}
             </h5>
@@ -129,39 +125,32 @@ function Energy(props) {
             to={"/Opportunity"}
             style={{
               color: "#720D1D",
-              fontSize: (window.innerWidth>= 280) && (window.innerWidth <=320)? "0px": "30px",
+              fontSize: (window.innerWidth >= 280) && (window.innerWidth <= 320) ? "0px" : "30px",
               textDecoration: "none",
             }}
           >
             <h4
-              style={{ display: "contents", color: "black", fontSize:window.innerWidth <= 500? "20px": "30px",}}
+              style={{ display: "contents", color: "black", fontSize: window.innerWidth <= 500 ? "20px" : "30px", }}
             >
               Opportunities {value}
             </h4>
           </Link>
-          {/* <Link
-            to={"/home"}
-            style={{
-              color: "#720D1D",
-              fontSize: "30px",
-              textDecoration: "none",
-            }}
-          > */}
-          <div style={ {paddingTop:(window.innerWidth >= 280 && window.innerWidth <= 320)?"4px":
-              (window.innerWidth <= 500)? "19px":
-            "9px" }}>
+          <div style={{
+            paddingTop: (window.innerWidth >= 280 && window.innerWidth <= 320) ? "4px" :
+              (window.innerWidth <= 500) ? "19px" :
+                "9px"
+          }}>
             <h4
               style={{
                 display: "contents",
                 cursor: "pointer",
                 color: "#720D1D",
-                fontSize: window.innerWidth <= 500? "20px": "30px",
+                fontSize: window.innerWidth <= 500 ? "20px" : "30px",
               }}
             >
               Energy
             </h4>
           </div>
-          {/* </Link> */}
         </div>
       </div>
       <div
@@ -205,7 +194,7 @@ function Energy(props) {
           className="col-lg-9 descriptionImageforsectorsandopport"
           style={{
             background: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),url(${energyinnerpic2})`,
-            backgroundSize:"100% 100%"
+            backgroundSize: "100% 100%"
           }}
         >
           <label className="agriAndFoodHeading highlightable">
@@ -324,7 +313,7 @@ function Energy(props) {
             className="InvestInSindhButton"
             onClick={handleLearnMoreClick2}
           >
-            <span id="expertform"   style={{ width: "179px", height: "33px" }}>
+            <span id="expertform" style={{ width: "179px", height: "33px" }}>
               {showFullText2 ? "Read Less" : "Read More"}
             </span>
           </button>
@@ -343,7 +332,7 @@ function Energy(props) {
           style={{
             display: "flex",
             justifyContent: "center",
-        textAlign:"center",
+            textAlign: "center",
             paddingTop: "50px",
             marginBottom: "75px",
           }}
@@ -354,46 +343,46 @@ function Energy(props) {
         <div
           className="col-lg-12 sectorMUI"
           style={{
-            background: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(${energybg})`,backgroundSize: "cover",
-            backgroundPosition: window.innerWidth <= 500 ? "center" : " " , 
+            background: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(${energybg})`, backgroundSize: "cover",
+            backgroundPosition: window.innerWidth <= 500 ? "center" : " ",
             height: window.innerWidth <= 500 ? "760px" :
-            window.innerWidth === 540? 700: 
-            window.innerWidth >= 768 && window.innerWidth <= 912? 
-            "700px":"600px", 
+              window.innerWidth === 540 ? 700 :
+                window.innerWidth >= 768 && window.innerWidth <= 912 ?
+                  "700px" : "600px",
             backgroundRepeat: "no-repeat",
             marginTop: "-20px",
             padding: "60px 60px 0px 60px",
           }}
         >
-          <div className="row sectornestedscreens"  style={{ marginTop:window.innerWidth >= 1024? "48px ":  "-16px" }}>
+          <div className="row sectornestedscreens" style={{ marginTop: window.innerWidth >= 1024 ? "48px " : "-16px" }}>
             <div className="col-lg-4">
               {/* <div class="textField"> */}
-                <TextField
-                  id="outlined-controlled"
-                  style={{ width: "100%" }}
-                  className="feedBackTextField"
-                  label="Name"
-                  size="small"
-                  InputProps={{
-                    style: { borderRadius: "30px", border: "none" }, // Remove the border
-                  }}
-                  placeholder="Enter your name"
-                />
+              <TextField
+                id="outlined-controlled"
+                style={{ width: "100%" }}
+                className="feedBackTextField"
+                label="Name"
+                size="small"
+                InputProps={{
+                  style: { borderRadius: "30px", border: "none" }, // Remove the border
+                }}
+                placeholder="Enter your name"
+              />
               {/* </div> */}
             </div>
             <div className="col-lg-4">
               {/* <div class="textField"> */}
-                <TextField
-                  id="outlined-controlled"
-                  style={{ width: "100%" }}
-                  className="feedBackTextField"
-                  InputProps={{
-                    style: { borderRadius: "30px", border: "none" }, // Remove the border
-                  }}
-                  label="Company Name"
-                  size="small"
-                  placeholder="Enter your company name"
-                />
+              <TextField
+                id="outlined-controlled"
+                style={{ width: "100%" }}
+                className="feedBackTextField"
+                InputProps={{
+                  style: { borderRadius: "30px", border: "none" }, // Remove the border
+                }}
+                label="Company Name"
+                size="small"
+                placeholder="Enter your company name"
+              />
               {/* </div> */}
             </div>
             <div className="col-lg-4">
@@ -413,72 +402,72 @@ function Energy(props) {
           <div className="row mt-4 sectornestedscreens">
             <div className="col-lg-4">
               {/* <div class="textField"> */}
-                <TextField
+              <TextField
                 className="feedBackTextField"
-                  id="outlined-controlled"
-                  style={{ width: "100%" }}
-                  size="small"
-                  label="Email"
-                  InputProps={{
-                    style: { borderRadius: "30px", border: "none" }, // Remove the border
-                  }}
-                  placeholder="Enter your Email"
-                />
+                id="outlined-controlled"
+                style={{ width: "100%" }}
+                size="small"
+                label="Email"
+                InputProps={{
+                  style: { borderRadius: "30px", border: "none" }, // Remove the border
+                }}
+                placeholder="Enter your Email"
+              />
               {/* </div> */}
             </div>
             <div className="col-lg-4">
               {/* <div class="textField"> */}
-                <TextField
+              <TextField
                 className="feedBackTextField"
-                  id="outlined-controlled"
-                  style={{ width: "100%" }}
-                  size="small"
-                  label="Phone"
-                  InputProps={{
-                    style: { borderRadius: "30px", border: "none" }, // Remove the border
-                  }}
-                  placeholder="92123567901"
-                />
+                id="outlined-controlled"
+                style={{ width: "100%" }}
+                size="small"
+                label="Phone"
+                InputProps={{
+                  style: { borderRadius: "30px", border: "none" }, // Remove the border
+                }}
+                placeholder="92123567901"
+              />
               {/* </div> */}
             </div>
             <div className="col-lg-4">
               {/* <div class="textField"> */}
-                <TextField
+              <TextField
                 className="feedBackTextField"
-                  id="outlined-controlled"
-                  style={{ width: "100%" }}
-                  size="small"
-                  InputProps={{
-                    style: { borderRadius: "30px", border: "none" }, // Remove the border
-                  }}
-                  label="Subject"
-                  placeholder="Write your feedback subject"
-                />
+                id="outlined-controlled"
+                style={{ width: "100%" }}
+                size="small"
+                InputProps={{
+                  style: { borderRadius: "30px", border: "none" }, // Remove the border
+                }}
+                label="Subject"
+                placeholder="Write your feedback subject"
+              />
               {/* </div> */}
             </div>
           </div>
-          <div className="row  sectornestedscreens"style={{marginTop:"0.3rem"}} >
+          <div className="row  sectornestedscreens" style={{ marginTop: "0.3rem" }} >
             <div className="col-lg-12 mt-4">
               {/* <div class="textField"> */}
-                <TextField
-                  id="outlined-controlled"
-                  size="small"
-                 className="feedBackTextField"
-                  style={{
-                    width: "100%",
-                    borderRadius: "38px",
-                    marginLeft:"0px",
-                    marginTop:"-4px"
-                  }}
-                  label="Message"
-                  multiline
-                  rows={4}
-                  InputProps={{
-                    style: { borderRadius: "30px", border: "none" }, // Remove the border
-                  }}
-                  placeholder="Write your feedback subject"
-                />
-              </div>
+              <TextField
+                id="outlined-controlled"
+                size="small"
+                className="feedBackTextField"
+                style={{
+                  width: "100%",
+                  borderRadius: "38px",
+                  marginLeft: "0px",
+                  marginTop: "-4px"
+                }}
+                label="Message"
+                multiline
+                rows={4}
+                InputProps={{
+                  style: { borderRadius: "30px", border: "none" }, // Remove the border
+                }}
+                placeholder="Write your feedback subject"
+              />
+            </div>
             {/* </div> */}
           </div>
           <div className="row">
@@ -491,7 +480,7 @@ function Energy(props) {
         </div>
       </div>
       <div className="footerTop">
-      <Footer  />
+        <Footer />
       </div>
     </>
   );

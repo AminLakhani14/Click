@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { Carousel } from "@trendyol-js/react-carousel";
-import Highlight from "react-highlight";
 import "../Css/wheeler.css";
 import userInterface from "../assets/user-interface.png";
 import rate from "../assets/rate.png";
@@ -12,7 +11,7 @@ import { translations } from "../Transalation/Transalation";
 import { useSelector } from "react-redux";
 
 function MobileGallery(props) {
-  const {language} = useSelector((state)=>state.language)
+  const { language } = useSelector((state) => state.language)
 
   const carouselRef = useRef(null);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
@@ -40,7 +39,7 @@ function MobileGallery(props) {
     // Render the Carousel component or perform any other necessary actions
     // once the parent container element exists.
   }, []);
-    const [languageChangeKey, setLanguageChangeKey] = useState(0); // Track language change
+  const [languageChangeKey, setLanguageChangeKey] = useState(0); // Track language change
 
   useEffect(() => {
     // Update the key to trigger a re-render
@@ -49,12 +48,12 @@ function MobileGallery(props) {
 
   return (
     <>
-      <div className=" bg-help" style={{height:"460px"}}>
+      <div className=" bg-help" style={{ height: "460px" }}>
         <div className="body-box">
           <div className="row mt-4 mb-3">
             <div className="col-12 -">
               <h1
-              className="highlightable"
+                className="highlightable"
                 style={{
                   color: "#054a91",
                   fontWeight: "700",
@@ -74,10 +73,10 @@ function MobileGallery(props) {
               ref={carouselRef}
             >
               <Carousel
-              key={languageChangeKey} 
+                key={languageChangeKey}
                 show={1}
                 slide={1}
-                swiping={false} 
+                swiping={false}
                 responsive={windowWidth >= 1900 ? false : ""}
                 leftArrow={
                   <div
@@ -106,20 +105,20 @@ function MobileGallery(props) {
                   </div>
                 }
               >
-                 <div style={{marginRight:"10px"}}>
-                <div>
-                  {" "}
-                  <li className="card">
-                    <div className="img">
-                      <img
-                        src={world}
-                        alt="img"
-                        draggable="false"
-                      ></img>
-                    </div>
-                    <p className="card__name highlightable">{translations["BREADY"][language]}</p>
-                  </li>
-                </div>
+                <div style={{ marginRight: "10px" }}>
+                  <div>
+                    {" "}
+                    <li className="card">
+                      <div className="img">
+                        <img
+                          src={world}
+                          alt="img"
+                          draggable="false"
+                        ></img>
+                      </div>
+                      <p className="card__name highlightable">{translations["BREADY"][language]}</p>
+                    </li>
+                  </div>
                 </div>
                 <div style={{ marginRight: "10px" }}>
                   <div>
@@ -155,9 +154,9 @@ function MobileGallery(props) {
                       <div className="img">
                         <img src={calculator} alt="img" draggable="false"></img>
                       </div>
-                      <p className="card__name highlightable" style={{marginBottom: "-28px"}}>
-                    {translations["RegulatoryCost"][language]} <br /> {translations["Calculator"][language]}
-                    </p>
+                      <p className="card__name highlightable" style={{ marginBottom: "-28px" }}>
+                        {translations["RegulatoryCost"][language]} <br /> {translations["Calculator"][language]}
+                      </p>
                     </li>
                   </div>
                 </div>

@@ -24,11 +24,11 @@ function MobileHeaderGeneric() {
     false, // For "Information Technology
   ]);
 
-const handleLabelTextClick = (index) => {
+  const handleLabelTextClick = (index) => {
     // Proceed with redirection
     if (index === 0) {
       window.location.href = "/#/Opportunity";
-    } 
+    }
   };
 
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
@@ -53,7 +53,7 @@ const handleLabelTextClick = (index) => {
     newDropdownStates[index] = !newDropdownStates[index];
     setDropdownStates(newDropdownStates);
   };
-  
+
   const closeDropdown = (index) => {
     // Close the dropdown
     const newDropdownStates = [...dropdownStates];
@@ -74,12 +74,11 @@ const handleLabelTextClick = (index) => {
     <>
       <div
         className={"mobileheader   "}
-        // style={{ backgroundColor:"white",position:"fixed",top:"0px", zIndex:999,}}
       >
         <div className={"navbar mt-6"}>
           <div
             className="col-lg-6 navbarLeft"
-            style={{ position: "absolute", top: "0"}}
+            style={{ position: "absolute", top: "0" }}
           >
             <Link to={"/home"} style={{ display: "flex" }}>
               <img className=" navlogo1" src={sindh} alt="" width="35%"></img>
@@ -91,7 +90,6 @@ const handleLabelTextClick = (index) => {
                 alt=""
                 width="60%"
                 className="navlogo2"
-                // style={{ marginLeft: "-14px" }}
               ></img>
             </Link>
           </div>
@@ -111,7 +109,7 @@ const handleLabelTextClick = (index) => {
                 src={accessibility}
                 alt=""
                 width="25"
-                style={{ marginLeft: "10px",marginRight:10 }}
+                style={{ marginLeft: "10px", marginRight: 10 }}
               />
               <a href="comingsoon.html" title="" width="10">
                 <i className="fa-sharp fa-solid fa-magnifying-glass me-2"></i>
@@ -129,8 +127,6 @@ const handleLabelTextClick = (index) => {
                       >
                         <i
                           style={{ Top: "-25px" }}
-                          // onClick={toggleNav}
-                          //   onClick={showtoggleNav}
                           className="fa-solid fa-bars toggleMenu"
                         ></i>
                       </label>
@@ -151,694 +147,287 @@ const handleLabelTextClick = (index) => {
                           }}
                         >
                           <Link className="link toggle2" to={"/feedback"}>
-                          Feedback
+                            Feedback
                           </Link>
                         </li>
                         <li className="">
                           <label for="drop-2" className="d-flex toggle toggle2">
-                          <Link to={"/regulatorycatalog"} style={{width:"212px",padding:"0px",fontSize:"20px"}}>
-                          Interactive Regulatory Directory
+                            <Link to={"/regulatorycatalog"} style={{ width: "212px", padding: "0px", fontSize: "20px" }}>
+                              Interactive Regulatory Directory
                             </Link>
                             {dropdownStates[11] ? (
-                                <span
-                                style={{display:"contents"}}
-                                  className="minus"
-                                  onClick={() => handleIconClick(11)} // Click on icon to open/close the dropdown
-                                  onMouseEnter={() => handleIconClick(11)} // Hover on icon to open/close the dropdown
-                                  onMouseLeave={() => closeDropdown(11)} // Leave ico icon to close the dropdown
-                                ></span>
-                              ) : (
-                                <span
-                                  className="plus"
-                                style={{display:"contents"}}
-                                  onClick={() => handleIconClick(11)} // Click on icon to open/close the dropdown
-                                  onMouseEnter={() => handleIconClick(11)} // Hover on icon to open/close the dropdown
-                                  onMouseLeave={() => closeDropdown(11)} // Leave ico icon eave icon to close the dropdown
-                                ></span>
-                              )}
+                              <span
+                                style={{ display: "contents" }}
+                                className="minus"
+                                onClick={() => handleIconClick(11)} // Click on icon to open/close the dropdown
+                                onMouseEnter={() => handleIconClick(11)} // Hover on icon to open/close the dropdown
+                                onMouseLeave={() => closeDropdown(11)} // Leave ico icon to close the dropdown
+                              ></span>
+                            ) : (
+                              <span
+                                className="plus"
+                                style={{ display: "contents" }}
+                                onClick={() => handleIconClick(11)} // Click on icon to open/close the dropdown
+                                onMouseEnter={() => handleIconClick(11)} // Hover on icon to open/close the dropdown
+                                onMouseLeave={() => closeDropdown(11)} // Leave ico icon eave icon to close the dropdown
+                              ></span>
+                            )}
                           </label>
                           <input type="checkbox" id="drop-2" />
                           <ul>
                             <li className="borderline">
                               <Link className="link toggle2 mobilenesteddropdowntoggle2" to={"/RegulatoryCatalogCalculator"}>
-                              Regulatory Cost Calculator
+                                Regulatory Cost Calculator
                               </Link>
                             </li>
                             <li className="borderline">
                               <Link className="link toggle2 mobilenesteddropdowntoggle2" to={"/regulatorycatalog"}>
-                              Regulatory Catalog
+                                Regulatory Catalog
                               </Link>
                             </li>
                             <li className="borderline">
                               <Link className="link toggle2 mobilenesteddropdowntoggle2" to={"/Maps"}>
-                              Maps 
+                                Maps
                               </Link>
                             </li>
                             <li className="borderline">
                               <Link className="link toggle2 mobilenesteddropdowntoggle2" to={"/Dashboard"}>
-                              Sindh Statistics
+                                Sindh Statistics
                               </Link>
-                           
+
                             </li>
                             <li className="borderline">
                               <Link className="link toggle2 mobilenesteddropdowntoggle2" to={"/tutorial"}>
-                              Tutorials
+                                Tutorials
                               </Link>
                             </li>
                           </ul>
                         </li>
-                        {/* <li>
-                        <label
-                        htmlFor="drop-5"
-                        className={`d-flex toggle toggle2`}
-                      >
-                      <Link to={"/manufacturing"} style={{width:"212px",padding:"0px",fontSize:"20px"}}>
-                        Sectors and Opportunities
-                        </Link>
-                        {dropdownStates[0] ? (
-                          <span
-                          style={{display:"contents"}}
-                            className="minus"
-                            onClick={() => handleIconClick(0)} // Click on icon to open/close the dropdown
-                            onMouseEnter={() => handleIconClick(0)} // Hover on icon to open/close the dropdown
-                             onMouseLeave={() => closeDropdown(0)} // Leave icon to close the dropdown
-                          ></span>
-                        ) : (
-                          <span 
-                          style={{display:"contents"}}
-                            className="plus"
-                            onClick={() => handleIconClick(0)} // Click on icon to open/close the dropdown
-                            onMouseEnter={() => handleIconClick(0)} // Hover on icon to open/close the dropdown
-                            onMouseLeave={() => closeDropdown(0)} // Leave ico/ Leave icon to close the dropdown
-                          ></span>
-                        )}
-                      </label>
-
-                          <input type="checkbox" id="drop-5" />
-                          <ul>
-                            <li className="borderline">
-                            <label
-                            htmlFor="drop-6"
-                            className="d-flex mobiledropdowntoggle toggle toggle2"
-                          >
-                          <Link to={"/manufacturing"} style={{width:"195px",padding:"0px"}}>
-                            Manufacturing
-                            </Link>
-                            {dropdownStates[1] ? (
+                        <li>
+                          <label
+                            for="drop-4"
+                            className="d-flex toggle toggle2">
+                            <a style={{ width: "212px", padding: "0px", fontSize: "20px" }}>
+                              Business Facilitation
+                            </a>
+                            {dropdownStates[12] ? (
                               <span
-                              style={{display:"contents"}}
+                                style={{ display: "contents" }}
                                 className="minus"
-                                onClick={() => handleIconClick(1)} // Click on icon to open/close the dropdown
-                                onMouseEnter={() => handleIconClick(1)} // Hover on icon to open/close the dropdown
-                                onMouseLeave={() => closeDropdown(1)} // Leave ico icon to close the dropdown
+                                onClick={() => handleIconClick(12)} // Click on icon to open/close the dropdown
+                                onMouseEnter={() => handleIconClick(12)} // Hover on icon to open/close the dropdown
+                                onMouseLeave={() => closeDropdown(12)} // Leave icon to close the dropdown
                               ></span>
                             ) : (
                               <span
+                                style={{ display: "contents" }}
                                 className="plus"
-                              style={{display:"contents"}}
-                                onClick={() => handleIconClick(1)} // Click on icon to open/close the dropdown
-                                onMouseEnter={() => handleIconClick(1)} // Hover on icon to open/close the dropdown
-                                onMouseLeave={() => closeDropdown(1)} // Leave ico icon eave icon to close the dropdown
+                                onClick={() => handleIconClick(12)} // Click on icon to open/close the dropdown
+                                onMouseEnter={() => handleIconClick(12)} // Hover on icon to open/close the dropdown
+                                onMouseLeave={() => closeDropdown(12)} // Leave ico/ Leave icon to close the dropdown
                               ></span>
                             )}
-                          
-                          </label>
-                              <input type="checkbox" id="drop-6" />
-                              <ul>
-                                <li className="b-none borderline">
-                                  <Link
-                                    className="link toggle2 mobilenesteddropdowntoggle2"
-                                    to={"/aboutus"}
-                                  >
-                                    Talk to Expert
-                                  </Link>
-                                </li>
-                              </ul>
-                            </li>
-                            <li className="">
-                              <label
-                                for="drop-7"
-                                className="d-flex mobiledropdowntoggle toggle toggle2"
-                              >
-                                <Link to={"/textile"} style={{width:"195px",padding:"0px"}}>
-                                Textile
-                                </Link>
-                                {dropdownStates[2] ? (
-                                    <span
-                                      className="minus"
-                                      style={{display:"contents"}}
-                                      onClick={() => handleIconClick(2)} // Click on icon to open/close the dropdown
-                                          onMouseEnter={() => handleIconClick(2)} // Hover on icon to open/close the dropdown
-                                      onMouseLeave={() => closeDropdown(2)} eave icon to close the dropdown
-                                    ></span>
-                                  ) : (
-                                    <span
-                                        style={{display:"contents"}}
-                                      className="plus"
-                                      onClick={() => handleIconClick(2)} // Click on icon to open/close the dropdown
-                                      onMouseEnter={() => handleIconClick(2)} // Hover on icon to open/close the dropdown
-                                            onMouseLeave={() => closeDropdown(2)} // Leave icon to close the dropdown
-                                    ></span>
-                                  )}
-                              </label>
-                              <input type="checkbox" id="drop-7" />
-                              <ul>
-                                <li className="b-none borderline">
-                                  <Link
-                                    className="link toggle2 mobilenesteddropdowntoggle2"
-                                    to={"/aboutus"}
-                                  >
-                                    Talk to Expert
-                                  </Link>
-                                </li>
-                              </ul>
-                            </li>
-                            <li className="">
-                              <label
-                                for="drop-8"
-                                className="d-flex mobiledropdowntoggle toggle toggle2"
-                              >
-                                 <Link to={"/tourism"} style={{width:"195px",padding:"0px"}}>
-                                Tourism 
-                            </Link>
-                                {dropdownStates[3] ? (
-                                    <span
-                                      style={{display:"contents"}}
-                                      className="minus"
-                                      onClick={() => handleIconClick(3)} // Click on icon to open/close the dropdown
-                                      onMouseEnter={() => handleIconClick(3)} // Hover on icon to open/close the dropdown
-                                      onMouseLeave={() => closeDropdown(3)} // Leave icon to close the dropdown
-                                    ></span>
-                                  ) : (
-                                    <span
-                                      style={{display:"contents"}}
-                                      className="plus"
-                                      onClick={() => handleIconClick(3)} // Click on icon to open/close the dropdown
-                                      onMouseEnter={() => handleIconClick(3)} // Hover on icon to open/close the dropdown
-                                      onMouseLeave={() => closeDropdown(3)} // Leave icon to close the dropdown
-                                    ></span>
-                                  )}
-                              </label>
-                              <input type="checkbox" id="drop-8" />
-                              <ul>
-                                <li className="b-none borderline">
-                                  <Link
-                                    className="link toggle2 mobilenesteddropdowntoggle2"
-                                    to={"/aboutus"}
-                                  >
-                                    Talk to Expert
-                                  </Link>
-                                </li>
-                              </ul>
-                            </li>
-                            <li className="">
-                              <label
-                                for="drop-9"
-                                className="d-flex mobiledropdowntoggle toggle toggle2"
-                              >
-                               <Link to={"/agriculture"} style={{width:"195px",padding:"0px"}}>
-                                Agriculture  
-                                </Link>
-                                {dropdownStates[4] ? (
-                                    <span
-                                    style={{display:"contents"}}
-                                      className="minus"
-                                      onClick={() => handleIconClick(4)} // Click on icon to open/close the dropdown
-                                      onMouseEnter={() => handleIconClick(4)} // Hover on icon to open/close the dropdown
-                                      onMouseLeave={() => closeDropdown(4)} // Leave icon to close the dropdown
-                                    ></span>
-                                  ) : (
-                                    <span
-                                      className="plus"
-                                    style={{display:"contents"}}
-                                      onClick={() => handleIconClick(4)} // Click on icon to open/close the dropdown
-                                      onMouseEnter={() => handleIconClick(4)} // Hover on icon to open/close the dropdown
-                                      onMouseLeave={() => closeDropdown(4)} // Leave icon to close the dropdown
-                                    ></span>
-                                  )}
-                              </label>
-                              <input type="checkbox" id="drop-9" />
-                              <ul>
-                                <li className="b-none borderline">
-                                  <Link
-                                    className="link toggle2 mobilenesteddropdowntoggle2"
-                                    to={"/aboutus"}
-                                  >
-                                    Talk to Expert
-                                  </Link>
-                                </li>
-                              </ul>
-                            </li>
-                            <li className="">
-                              <label
-                                for="drop-10"
-                                className="d-flex mobiledropdowntoggle toggle toggle2"
-                              >
-                              <Link to={"/education"} style={{width:"195px",padding:"0px"}}>
-                                Eduction  
-                                </Link>
-                                {dropdownStates[5] ? (
-                                    <span
-                                      className="minus"
-                                    style={{display:"contents"}}
-                                      onClick={() => handleIconClick(5)} // Click on icon to open/close the dropdown
-                                      onMouseEnter={() => handleIconClick(5)} // Hover on icon to open/close the dropdown
-                                      onMouseLeave={() => closeDropdown(5)} // Leave icon to close the dropdown
-                                    ></span>
-                                  ) : (
-                                    <span
-                                      className="plus"
-                                      style={{display:"contents"}}
-                                      onClick={() => handleIconClick(5)} // Click on icon to open/close the dropdown
-                                      onMouseEnter={() => handleIconClick(5)} // Hover on icon to open/close the dropdown
-                                      onMouseLeave={() => closeDropdown(5)} // Leave icon to close the dropdown
-                                    ></span>
-                                  )}
-                              </label>
-                              <input type="checkbox" id="drop-10" />
-                              <ul>
-                                <li className="b-none borderline">
-                                  <Link
-                                    className="link toggle2 mobilenesteddropdowntoggle2"
-                                    to={"/aboutus"}
-                                  >
-                                    Talk to Expert
-                                  </Link>
-                                </li>
-                              </ul>
-                            </li>
-                            <li className="">
-                              <label
-                                for="drop-11"
-                                className="d-flex mobiledropdowntoggle toggle toggle2"
-                              >
-                              <Link to={"/energy"} style={{width:"195px",padding:"0px"}}>
-                                Energy 
-                                </Link>
-                                {dropdownStates[6] ? (
-                                    <span
-                                      className="minus"
-                                      style={{display:"contents"}}
-                                      onClick={() => handleIconClick(6)} // Click on icon to open/close the dropdown
-                                      onMouseEnter={() => handleIconClick(6)} // Hover on icon to open/close the dropdown
-                                      onMouseLeave={() => closeDropdown(6)} // Leave icon to close the dropdown
-                                    ></span>
-                                  ) : (
-                                    <span
-                                      className="plus"
-                                      style={{display:"contents"}}
-                                      onClick={() => handleIconClick(6)} // Click on icon to open/close the dropdown
-                                      onMouseEnter={() => handleIconClick(6)} // Hover on icon to open/close the dropdown
-                                      onMouseLeave={() => closeDropdown(6)} // Leave icon to close the dropdown
-                                    ></span>
-                                  )}
-                              </label>
-                              <input type="checkbox" id="drop-11" />
-                              <ul>
-                                <li className="b-none borderline">
-                                  <Link
-                                    className="link toggle2 mobilenesteddropdowntoggle2"
-                                    to={"/aboutus"}
-                                  >
-                                    Talk to Expert
-                                  </Link>
-                                </li>
-                              </ul>
-                            </li>
-                            <li className="">
-                              <label
-                                for="drop-12"
-                                className="d-flex mobiledropdowntoggle toggle toggle2"
-                                onClick={() => handleLabelTextClick(7)}
-                              >
-                              <Link to={"/health"} style={{width:"195px",padding:"0px"}}>
-                                Health 
-                                </Link>
-                                {dropdownStates[7] ? (
-                                    <span style={{display:"contents"}}
-                                      className="minus"
-                                      onClick={() => handleIconClick(7)} // Click on icon to open/close the dropdown
-                                      onMouseEnter={() => handleIconClick(7)} // Hover on icon to open/close the dropdown
-                                      onMouseLeave={() => closeDropdown(7)} // Leave icon to close the dropdown
-                                    ></span>
-                                  ) : (
-                                    <span 
-                                    style={{display:"contents"}}
-                                      className="plus"
-                                      onClick={() => handleIconClick(7)} // Click on icon to open/close the dropdown
-                                      onMouseEnter={() => handleIconClick(7)} // Hover on icon to open/close the dropdown
-                                      onMouseLeave={() => closeDropdown(7)} // Leave icon to close the dropdown
-                                    ></span>
-                                  )}
-                              </label>
-                              <input type="checkbox" id="drop-12" />
-                              <ul>
-                                <li className="b-none borderline">
-                                  <Link
-                                    className="link toggle2 mobilenesteddropdowntoggle2"
-                                    to={"/aboutus"}
-                                  >
-                                    Talk to Expert
-                                  </Link>
-                                </li>
-                              </ul>
-                            </li>
-                            <li className="b-none ">
-                              <label
-                                for="drop-13"
-                                className="d-flex mobiledropdowntoggle toggle toggle2"
-                              >
-                                <Link to={"/informationtech"} style={{width:"195px",padding:"0px"}}>
-                                Information Technology  
-                                </Link>
-                                {dropdownStates[8] ? (
-                                    <span style={{display:"contents"}}
-                                      className="minus"
-                                      onClick={() => handleIconClick(8)} // Click on icon to open/close the dropdown
-                                      onMouseEnter={() => handleIconClick(8)} // Hover on icon to open/close the dropdown
-                                      onMouseLeave={() => closeDropdown(8)} // Leave icon to close the dropdown
-                                    ></span>
-                                  ) : (
-                                    <span style={{display:"contents"}}
-                                      className="plus"
-                                      onClick={() => handleIconClick(8)} // Click on icon to open/close the dropdown
-                                      onMouseEnter={() => handleIconClick(8)} // Hover on icon to open/close the dropdown
-                                      onMouseLeave={() => closeDropdown(8)} // Leave icon to close the dropdown
-                                    ></span>
-                                  )}
-                              </label>
-                              <input type="checkbox" id="drop-13" />
-                              <ul>
-                                <li className="b-none borderline">
-                                  <Link
-                                    className="link toggle2 mobilenesteddropdowntoggle2"
-                                    to={"/aboutus"}
-                                  >
-                                    Talk to Expert
-                                  </Link>
-                                </li>
-                              </ul>
-                            </li>
-                          </ul>
-                        </li> */}
-                        {/* <li
-                          style={{
-                            borderBottom: "1px solid transparent !important",
-                          }}
-                        >
-                          <Link
-                            className="link toggle2"
-                            to={"/NewsAndInformation"}
-                          >
-                            News & Information
-                          </Link>
-                        </li> */}
-                        {/* <li className="">
-                          <label for="drop-2" className="d-flex toggle toggle2">
-                          <Link to={"/resource"} style={{width:"212px",padding:"0px",fontSize:"20px"}}>
-                           About Us
-                            </Link>
-                            {dropdownStates[12] ? (
-                                <span
-                                style={{display:"contents"}}
-                                  className="minus"
-                                  onClick={() => handleIconClick(12)} // Click on icon to open/close the dropdown
-                                  onMouseEnter={() => handleIconClick(12)} // Hover on icon to open/close the dropdown
-                                  onMouseLeave={() => closeDropdown(12)} // Leave ico icon to close the dropdown
-                                ></span>
-                              ) : (
-                                <span
-                                  className="plus"
-                                style={{display:"contents"}}
-                                  onClick={() => handleIconClick(12)} // Click on icon to open/close the dropdown
-                                  onMouseEnter={() => handleIconClick(12)} // Hover on icon to open/close the dropdown
-                                  onMouseLeave={() => closeDropdown(12)} // Leave ico icon eave icon to close the dropdown
-                                ></span>
-                              )}
-                          </label>
-                          <input type="checkbox" id="drop-2" />
-                          <ul>
-                            <li className="borderline">
-                              <Link className="link toggle2 mobilenesteddropdowntoggle2" to={""}>
-                              Introduction 
-                              </Link>
-                            </li>
-                            <li className="borderline">
-                              <Link className="link toggle2 mobilenesteddropdowntoggle2" to={""}>
-                              project objectives 
-                              </Link>
-                            </li>
-                            <li className="borderline">
-                              <Link className="link toggle2 mobilenesteddropdowntoggle2" to={""}>
-                              Achievements  
-                              </Link>
-                            </li>
-                            <li className="borderline">
-                              <Link className="link toggle2 mobilenesteddropdowntoggle2" to={"/resource"}>
-                              Downloads 
-                              </Link>
-                            </li>
-                            <li className="borderline">
-                              <Link className="link toggle2 mobilenesteddropdowntoggle2" to={"/Team"}>
-                              Team 
-                              </Link>
-                            </li>
-
-                            <li className="b-none">
-                              <Link
-                                className="link toggle2 mobilenesteddropdowntoggle2"
-                                to={""}
-                              >
-                               Contact us
-                              </Link>
-                            </li>
-                          </ul>
-                        </li> */}
-                          <li>
-                          <label 
-                          for="drop-4"
-                           className="d-flex toggle toggle2">
-                            <a  style={{width:"212px",padding:"0px",fontSize:"20px"}}>
-                            Business Facilitation
-                             </a>
-                             {dropdownStates[12] ? (
-                                <span
-                                style={{display:"contents"}}
-                                  className="minus"
-                                  onClick={() => handleIconClick(12)} // Click on icon to open/close the dropdown
-                                  onMouseEnter={() => handleIconClick(12)} // Hover on icon to open/close the dropdown
-                                   onMouseLeave={() => closeDropdown(12)} // Leave icon to close the dropdown
-                                ></span>
-                              ) : (
-                                <span 
-                                style={{display:"contents"}}
-                                  className="plus"
-                                  onClick={() => handleIconClick(12)} // Click on icon to open/close the dropdown
-                                  onMouseEnter={() => handleIconClick(12)} // Hover on icon to open/close the dropdown
-                                  onMouseLeave={() => closeDropdown(12)} // Leave ico/ Leave icon to close the dropdown
-                                ></span>
-                              )}
                           </label>
                           <input type="checkbox" id="drop-4" />
                           <ul>
                             <li className="borderline"
                             >
-                              <a 
-                               target="_blank"
-                               href="https://smeda.org/index.php?option=com_content&view=article&id=146&Itemid=676"
-                              className="link toggle2 mobilenesteddropdowntoggle2" to={"/introduction"}>
+                              <a
+                                target="_blank"
+                                href="https://smeda.org/index.php?option=com_content&view=article&id=146&Itemid=676"
+                                className="link toggle2 mobilenesteddropdowntoggle2" to={"/introduction"}>
                                 GUIDS
                               </a>
                             </li>
                             <li className="borderline"
                             >
-                              <a 
+                              <a
                                 target="_blank"
                                 href="https://smeda.org/index.php?option=com_phocadownload&view=category&id=122&Itemid=308"
-                              className="link toggle2 mobilenesteddropdowntoggle2" to={"/projectobjectives"}>
-                                 Pre-Feasibility Studies
+                                className="link toggle2 mobilenesteddropdowntoggle2" to={"/projectobjectives"}>
+                                Pre-Feasibility Studies
                               </a>
-                            </li> 
+                            </li>
                             <li className="borderline"
                             >
-                              <a 
-                               target="_blank"
-                               href="https://smeda.org/index.php?option=com_phocadownload&view=category&id=164&Itemid=981"
-                              className="link toggle2 mobilenesteddropdowntoggle2" to={"/acheivement"}>
+                              <a
+                                target="_blank"
+                                href="https://smeda.org/index.php?option=com_phocadownload&view=category&id=164&Itemid=981"
+                                className="link toggle2 mobilenesteddropdowntoggle2" to={"/acheivement"}>
                                 Business Guides
                               </a>
                             </li>
                             <li className="borderline"
                             >
-                              <a 
+                              <a
                                 target="_blank"
                                 href="https://smeda.org/index.php?option=com_phocadownload&view=category&id=7&Itemid=363"
-                              className="link toggle2 mobilenesteddropdowntoggle2" to={"/resource"}>
-                               Commercial Contracts (English)
-                              </a>
-                            </li>
-                             <li className="borderline"
-                            >
-                              <a 
-                               target="_blank"
-                               href="https://smeda.org/index.php?option=com_phocadownload&view=category&id=7&Itemid=363"
-                              className="link toggle2 mobilenesteddropdowntoggle2" to={"/Team"}>
-                                      Commercial Contracts (Urdu)
+                                className="link toggle2 mobilenesteddropdowntoggle2" to={"/resource"}>
+                                Commercial Contracts (English)
                               </a>
                             </li>
                             <li className="borderline"
                             >
-                              <a 
+                              <a
+                                target="_blank"
+                                href="https://smeda.org/index.php?option=com_phocadownload&view=category&id=7&Itemid=363"
+                                className="link toggle2 mobilenesteddropdowntoggle2" to={"/Team"}>
+                                Commercial Contracts (Urdu)
+                              </a>
+                            </li>
+                            <li className="borderline"
+                            >
+                              <a
                                 target="_blank"
                                 href="https://smeda.org/index.php?option=com_phocadownload&view=category&id=15&Itemid=138"
-                              className="link toggle2 mobilenesteddropdowntoggle2" to={"/faqs"}>
-                                     Regulatory Procedures
+                                className="link toggle2 mobilenesteddropdowntoggle2" to={"/faqs"}>
+                                Regulatory Procedures
                               </a>
                             </li>
                             <li className="borderline"
-                           >
+                            >
                               <a
-                                 target="_blank"
-                                 href="https://tipp.gov.pk/"
+                                target="_blank"
+                                href="https://tipp.gov.pk/"
                                 className="link toggle2 mobilenesteddropdowntoggle2"
                               >
-                               Trade Information Portal
+                                Trade Information Portal
                               </a>
                             </li>
                             <li>
-                            <a
-                              target="_blank"
-                              href={InvestmentDepartment}
-                            >
-                              Investment Department
-                            </a>
+                              <a
+                                target="_blank"
+                                href={InvestmentDepartment}
+                              >
+                                Investment Department
+                              </a>
                             </li>
                             <li className="borderline"
-                           >
+                            >
                               <a
-                                 target="_blank"
-                                 href=""
+                                target="_blank"
+                                href=""
                                 className="link toggle2 mobilenesteddropdowntoggle2"
                               >
-                               REPORTS
+                                REPORTS
                               </a>
                             </li>
 
                             <li className="borderline"
-                           >
+                            >
                               <a
-                              target="_blank"
-                              href="https://smeda.org/index.php?option=com_phocadownload&view=category&id=40&Itemid=742"
+                                target="_blank"
+                                href="https://smeda.org/index.php?option=com_phocadownload&view=category&id=40&Itemid=742"
                                 className="link toggle2 mobilenesteddropdowntoggle2"
                               >
-                               Cluster Profiles
+                                Cluster Profiles
                               </a>
                             </li>
                             <li className="borderline"
-                           >
+                            >
                               <a
-                              target="_blank"
-                              href="https://smeda.org/index.php?option=com_phocadownload&view=category&id=186&Itemid=1024"
+                                target="_blank"
+                                href="https://smeda.org/index.php?option=com_phocadownload&view=category&id=186&Itemid=1024"
                                 className="link toggle2 mobilenesteddropdowntoggle2"
                               >
-                             District Economic Profiles
+                                District Economic Profiles
                               </a>
                             </li>
                             <li className="borderline"
-                           >
+                            >
                               <a
-                              target="_blank"
-                              href="https://smeda.org/index.php?option=com_phocadownload&view=category&id=28&Itemid=139"
+                                target="_blank"
+                                href="https://smeda.org/index.php?option=com_phocadownload&view=category&id=28&Itemid=139"
                                 className="link toggle2 mobilenesteddropdowntoggle2"
                               >
-                              Sector Briefs
+                                Sector Briefs
                               </a>
                             </li>
                             <li className="borderline"
-                           >
+                            >
                               <a
-                               target="_blank"
-                               href="https://smeda.org/index.php?option=com_phocadownload&view=category&id=188&Itemid=1027"
+                                target="_blank"
+                                href="https://smeda.org/index.php?option=com_phocadownload&view=category&id=188&Itemid=1027"
                                 className="link toggle2 mobilenesteddropdowntoggle2"
                               >
-                               Study Reports
+                                Study Reports
                               </a>
                             </li>
                             <li className="borderline"
-                           >
+                            >
                               <a
-                              target="_blank"
-                              href="https://smeda.org/index.php?option=com_phocadownload&view=category&id=168&Itemid=996"
+                                target="_blank"
+                                href="https://smeda.org/index.php?option=com_phocadownload&view=category&id=168&Itemid=996"
                                 className="link toggle2 mobilenesteddropdowntoggle2"
                               >
-                               Trade Analysis Series
+                                Trade Analysis Series
                               </a>
                             </li>
                           </ul>
                         </li>
-                          <li
+                        <li
                           style={{
                             borderBottom: "1px solid transparent !important",
                           }}
                         >
                           <a
-                              href="https://business.gov.pk/home_prmi/"
-                              className="link toggle2"
-                              target="_blank"
-                            >
-                               {"PRMI"}
-                            </a>
+                            href="https://business.gov.pk/home_prmi/"
+                            className="link toggle2"
+                            target="_blank"
+                          >
+                            {"PRMI"}
+                          </a>
                         </li>
                         <li>
-                          <label 
-                          for="drop-3"
-                           className="d-flex toggle toggle2">
-                            <Link to={"/aboutus"} style={{width:"212px",padding:"0px",fontSize:"20px"}}>
-                            About Us 
-                             </Link>
-                             {dropdownStates[9] ? (
-                                <span
-                                style={{display:"contents"}}
-                                  className="minus"
-                                  onClick={() => handleIconClick(9)} // Click on icon to open/close the dropdown
-                                  onMouseEnter={() => handleIconClick(9)} // Hover on icon to open/close the dropdown
-                                   onMouseLeave={() => closeDropdown(9)} // Leave icon to close the dropdown
-                                ></span>
-                              ) : (
-                                <span 
-                                style={{display:"contents"}}
-                                  className="plus"
-                                  onClick={() => handleIconClick(9)} // Click on icon to open/close the dropdown
-                                  onMouseEnter={() => handleIconClick(9)} // Hover on icon to open/close the dropdown
-                                  onMouseLeave={() => closeDropdown(9)} // Leave ico/ Leave icon to close the dropdown
-                                ></span>
-                              )}
+                          <label
+                            for="drop-3"
+                            className="d-flex toggle toggle2">
+                            <Link to={"/aboutus"} style={{ width: "212px", padding: "0px", fontSize: "20px" }}>
+                              About Us
+                            </Link>
+                            {dropdownStates[9] ? (
+                              <span
+                                style={{ display: "contents" }}
+                                className="minus"
+                                onClick={() => handleIconClick(9)} // Click on icon to open/close the dropdown
+                                onMouseEnter={() => handleIconClick(9)} // Hover on icon to open/close the dropdown
+                                onMouseLeave={() => closeDropdown(9)} // Leave icon to close the dropdown
+                              ></span>
+                            ) : (
+                              <span
+                                style={{ display: "contents" }}
+                                className="plus"
+                                onClick={() => handleIconClick(9)} // Click on icon to open/close the dropdown
+                                onMouseEnter={() => handleIconClick(9)} // Hover on icon to open/close the dropdown
+                                onMouseLeave={() => closeDropdown(9)} // Leave ico/ Leave icon to close the dropdown
+                              ></span>
+                            )}
                           </label>
                           <input type="checkbox" id="drop-3" />
                           <ul>
                             <li className="borderline">
                               <Link className="link toggle2 mobilenesteddropdowntoggle2" to={"/introduction"}>
-                              Introduction 
+                                Introduction
                               </Link>
                             </li>
                             <li className="borderline">
                               <Link className="link toggle2 mobilenesteddropdowntoggle2" to={"/projectobjectives"}>
-                              project objectives 
+                                project objectives
                               </Link>
                             </li>
                             <li className="borderline">
                               <Link className="link toggle2 mobilenesteddropdowntoggle2" to={"/acheivement"}>
-                              Achievements  
+                                Achievements
                               </Link>
                             </li>
                             <li className="borderline">
                               <Link className="link toggle2 mobilenesteddropdowntoggle2" to={"/resource"}>
-                              Downloads 
+                                Downloads
                               </Link>
                             </li>
                             <li className="borderline">
                               <Link className="link toggle2 mobilenesteddropdowntoggle2" to={"/Team"}>
-                              Team 
+                                Team
                               </Link>
                             </li>
 
@@ -847,7 +436,7 @@ const handleLabelTextClick = (index) => {
                                 className="link toggle2 mobilenesteddropdowntoggle2"
                                 to={"/contactUs"}
                               >
-                               Contact us
+                                Contact us
                               </Link>
                             </li>
                           </ul>

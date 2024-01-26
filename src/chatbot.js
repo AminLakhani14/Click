@@ -1,18 +1,10 @@
 import React, { useEffect, useMemo, useRef, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faCommentAlt,
-  faL,
-  faPaperPlane,
-} from "@fortawesome/free-solid-svg-icons";
+import { faPaperPlane } from "@fortawesome/free-solid-svg-icons";
 import SVG from "react-inlinesvg";
-
 import "./chatbot.css";
-import chatbotIcon from "./assets/chatbotIcon.svg";
-import chatgpt from "./assets/chatgpt.svg";
-import VirtualAssistant from "./assets/VirtualAssistant.png";
 import { Tooltip } from "antd";
-import rishta from "./assets/rishta.svg";
+import chatbot from "./assets/chatbot.svg";
 
 const arr = [
   "By investing in Sindh, you will be part of a global hub with strong connections to major markets and a knowledge-based economy that is opening to the world.",
@@ -38,12 +30,12 @@ const arr1 = [
   "How can I setup a business in Sindh?",
   "How can I contact support?",
   "I have a question",
-'What Are The Requirment For Registration Of Partnership Firm Under Partnership ACT 1932 ? ',
-'How Can We Generate Challan And Where It Can Be ID?  ',
-' How Much Time Is Consumed For Issuing Certificate? ',
-'How To Verify The Registration Certificate?',
-'Is There Any Monthly Or Yearly Renewal Fee Of Registration Certificate?',
-' How a Partnership Firm Gets It NTN?',
+  "What Are The Requirment For Registration Of Partnership Firm Under Partnership ACT 1932 ? ",
+  "How Can We Generate Challan And Where It Can Be ID?  ",
+  " How Much Time Is Consumed For Issuing Certificate? ",
+  "How To Verify The Registration Certificate?",
+  "Is There Any Monthly Or Yearly Renewal Fee Of Registration Certificate?",
+  " How a Partnership Firm Gets It NTN?",
 
   // Add more predefined questions as needed
 ];
@@ -59,14 +51,13 @@ const Chatbot = () => {
     "How can I setup a business in Sindh?",
     "How can I contact support?",
     "I have a question",
-  'What Are The Requirment For Registration Of Partnership Firm Under Partnership ACT 1932 ? ',
-  'How Can We Generate Challan And Where It Can Be ID?  ',
-  ' How Much Time Is Consumed For Issuing Certificate? ',
-  'How To Verify The Registration Certificate?',
-  'Is There Any Monthly Or Yearly Renewal Fee Of Registration Certificate?',
-  ' How a Partnership Firm Gets It NTN?',
+    "What Are The Requirment For Registration Of Partnership Firm Under Partnership ACT 1932 ? ",
+    "How Can We Generate Challan And Where It Can Be ID?  ",
+    " How Much Time Is Consumed For Issuing Certificate? ",
+    "How To Verify The Registration Certificate?",
+    "Is There Any Monthly Or Yearly Renewal Fee Of Registration Certificate?",
+    " How a Partnership Firm Gets It NTN?",
 
-    
     // Add more predefined questions as needed
   ]);
   const [askingAnythingElse, setAskingAnythingElse] = useState(false);
@@ -80,14 +71,14 @@ const Chatbot = () => {
     addMessage(question, true); // Add the user's selected question to the chat
     setHideInput(false);
     // Remove the selected question from the predefinedQuestions list
-    window.scrollTo(-0,-0)
+    window.scrollTo(-0, -0);
     setPredefinedQuestions((prevQuestions) =>
       prevQuestions.filter((q) => q !== question)
     );
 
     // Simulate processing time for the chatbot response
     setTimeout(() => {
-      debugger;
+      ;
       let response;
       for (let a = 0; a < arr1.length; a++) {
         if (arr1[a] == question) {
@@ -140,65 +131,13 @@ const Chatbot = () => {
         }
       }
       addMessage(response);
-      // switch (question) {
-      //   case  "Why should I invest in Sindh?" :
-      //     response =
-      //       "By investing in Sindh, you will be part of a global hub with strong connections to major markets and a knowledge-based economy that is opening to the world.";
-      //       setAskingAnythingElse(true);
-      //       setConversationEnded(false)
-
-      //     break;
-      //   case "How can I setup a business in Sindh?":
-      //     response =
-      //       "Sindh is constantly expanding opportunities for international companies.";
-      //       setAskingAnythingElse(true);
-      //       setConversationEnded(false)
-      //     break;
-
-      //   case "How can I contact support?":
-      //     response = "Our Contact Number is: +92 21 99218874";
-      //     setAskingAnythingElse(true);
-      //     setConversationEnded(false)
-
-      //     break;
-      //   // Add more cases and responses for other predefined questions here
-      //   case "I have a question":
-      //     response="How can I help you?"
-      //     setAskingAnythingElse(false);
-      //     setConversationEnded(true)
-
-      //     ;
-      //     break;
-
-      //     // case Reply[0].includes(userInput):
-      //     // response=arr[0];
-      //     // break
-      //   default:
-      //     for(let a=0; a<arr.length; a++){
-      //       if(arr[a].includes(question)){
-      //         response=Reply[a]
-      //       }
-      //     }
-      //     // response = "I am sorry, but I could not understand your question.";
-      // setAskingAnythingElse(true);
-      // setConversationEnded(false)
-
-      //     break;
-      // }
-      // addMessage(response); // Add the chatbot's response to the chat
-
-      // After answering, set the state to ask "Anything else"
-      // setAskingAnythingElse(true);
     }, 2000); // Delay of 1 second for the chatbot response (adjust as needed)
   };
-
-
   const handleUserInput = (event) => {
     setUserInput(event.target.value);
   };
-
   function handleKeyDown(event) {
-    debugger;
+    ;
     console.log(event);
     if (event.key === "Enter") {
       if (userInput !== "") {
@@ -251,14 +190,13 @@ const Chatbot = () => {
       "How can I setup a business in Sindh?",
       "How can I contact support?",
       "I have a question",
-    'What Are The Requirment For Registration Of Partnership Firm Under Partnership ACT 1932 ? ',
-    'How Can We Generate Challan And Where It Can Be ID?  ',
-    ' How Much Time Is Consumed For Issuing Certificate? ',
-    'How To Verify The Registration Certificate?',
-    'Is There Any Monthly Or Yearly Renewal Fee Of Registration Certificate?',
-    ' How a Partnership Firm Gets It NTN?',
-  
-      
+      "What Are The Requirment For Registration Of Partnership Firm Under Partnership ACT 1932 ? ",
+      "How Can We Generate Challan And Where It Can Be ID?  ",
+      " How Much Time Is Consumed For Issuing Certificate? ",
+      "How To Verify The Registration Certificate?",
+      "Is There Any Monthly Or Yearly Renewal Fee Of Registration Certificate?",
+      " How a Partnership Firm Gets It NTN?",
+
       // Add more predefined questions as needed
     ]);
     setHideInput(true);
@@ -314,77 +252,49 @@ const Chatbot = () => {
               Ask me anything
             </p>
           </div>
-          {/* <div className="chat-messages" ref={chatContainerRef}>
-            {messages.map((message, index) => (
-              <div
-                key={index}
-                className={message.isUser ? "user-message" : "bot-message"}
-              >
-                {!message.isUser && (
-                  <div className="bot-response">
-                    <span className="bot-name">{message.botName}</span>
-                    <span className="timestamp">{message.timestamp}</span>
-                    {message.content}
-                  </div>
-                )}
-                {message.isUser && message.content}
-              </div>
-            ))}
-          </div> */}
-          {/* {askingAnythingElse && !conversationEnded && (
-            <div className="any-thing-else">
-              <p>Anything else?</p>
-              <div className="d-flex">
-                <button onClick={handleYesButtonClick}>Yes</button>
-                <button onClick={handleNoButtonClick}>No</button>
-              </div>
-            </div>
-          )} */}
-            <div className="predefined-questions">
-                <div className="chat-messages" ref={chatContainerRef}>
-            {messages.map((message, index) => (
-              <div
-                key={index}
-                className={message.isUser ? "user-message" : "bot-message"}
-              >
-                {!message.isUser && (
-                  <div className="bot-response">
-                    <span className="bot-name">{message.botName}</span>
-                    <span className="timestamp">{message.timestamp}</span>
-                    {message.content}
-                  </div>
-                )}
-                {message.isUser && message.content}
-              </div>
-            ))}
-          </div>
-              {askingAnythingElse && !conversationEnded && (
-           <div className="d-flex justify-content-center w-100">
-             <div className="any-thing-else">
-              <p>Anything else?</p>
-              <div className="d-flex">
-                <button onClick={handleYesButtonClick}>Yes</button>
-                <button onClick={handleNoButtonClick}>No</button>
-              </div>
-            </div>
-          </div>
-          )}
-          {!askingAnythingElse && !conversationEnded && (
-          <>
-               
-              {predefinedQuestions.map((question) => (
-                <button
-                  // style={{backgroundColor:"red"}}
-                  className="chatbot_selected_question"
-                  key={question}
-                  onClick={() => handleOptionClick(question)}
+          <div className="predefined-questions">
+            <div className="chat-messages" ref={chatContainerRef}>
+              {messages.map((message, index) => (
+                <div
+                  key={index}
+                  className={message.isUser ? "user-message" : "bot-message"}
                 >
-                  {question}
-                </button>
+                  {!message.isUser && (
+                    <div className="bot-response">
+                      <span className="bot-name">{message.botName}</span>
+                      <span className="timestamp">{message.timestamp}</span>
+                      {message.content}
+                    </div>
+                  )}
+                  {message.isUser && message.content}
+                </div>
               ))}
-          </>
-          )}
             </div>
+            {askingAnythingElse && !conversationEnded && (
+              <div className="d-flex justify-content-center w-100">
+                <div className="any-thing-else">
+                  <p>Anything else?</p>
+                  <div className="d-flex">
+                    <button onClick={handleYesButtonClick}>Yes</button>
+                    <button onClick={handleNoButtonClick}>No</button>
+                  </div>
+                </div>
+              </div>
+            )}
+            {!askingAnythingElse && !conversationEnded && (
+              <>
+                {predefinedQuestions.map((question) => (
+                  <button
+                    className="chatbot_selected_question"
+                    key={question}
+                    onClick={() => handleOptionClick(question)}
+                  >
+                    {question}
+                  </button>
+                ))}
+              </>
+            )}
+          </div>
           {!hideInput && (
             <div className="chat-input">
               <input
@@ -392,25 +302,22 @@ const Chatbot = () => {
                 placeholder="Type your message..."
                 value={userInput}
                 onKeyDown={handleKeyDown}
-                // onKeyPress={handleEnterButton}
                 onChange={handleUserInput}
               />
               <button
                 className="send-button"
                 onClick={(event) => {
-                  // handleSendButton()
-                  debugger;
+                  ;
                   if (userInput !== "") {
                     handleOptionClick(userInput);
                     setUserInput("");
-                    // if(arr[0].includes(userInput)){
-                    //   handleOptionClick(userInput)
-                    //   setUserInput("")
-                    // }
                   }
                 }}
               >
-                <FontAwesomeIcon icon={faPaperPlane} style={{height:"1.3em"}} />
+                <FontAwesomeIcon
+                  icon={faPaperPlane}
+                  style={{ height: "1.3em" }}
+                />
               </button>
             </div>
           )}
@@ -428,7 +335,7 @@ const Chatbot = () => {
       >
         <div className="chatbot-toggle-button" onClick={toggleChatbot}>
           <SVG
-            src={rishta}
+            src={chatbot}
             className="heart"
             height={55}
             width={55}
@@ -438,7 +345,6 @@ const Chatbot = () => {
             fill={"#0f5789"}
             title="React"
           />
-          {/* <img className="heart" src={rishta} alt="" /> */}
         </div>
       </Tooltip>
     </div>

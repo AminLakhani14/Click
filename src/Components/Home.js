@@ -1,6 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
 import Header from "./Header";
-import Marque from './marque';
 import StatisticsBar from "./statisticsBar";
 import Wheeler from "./wheeler";
 import Highlights from "./highlights";
@@ -17,12 +16,11 @@ import MobileTestimonial from "./MobileTestimonial";
 import MobileGallery from "./MobileGallery";
 import { useDispatch, useSelector } from "react-redux";
 import { setLanguage } from "../Redux/Reducer/languageSlice";
-import NewsLetterModal from "./NewsLetterModal";
 function Home(props) {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-   const dispatch = useDispatch()
+  const dispatch = useDispatch()
   //  const isNewsletterModalOpen=useSelector((state)=>state.NewsLetterModal)
-   const {language,isNewsletterModalOpen} = useSelector((state)=>state.language)
+  const { language, isNewsletterModalOpen } = useSelector((state) => state.language)
   useEffect(() => {
     // Function to update the windowWidth state when the resize event occurs
     const handleResize = () => {
@@ -51,50 +49,50 @@ function Home(props) {
 
   // Function to toggle language between English, Urdu, and Sindhi
   const toggleLanguage = () => {
-      if(language == 'ur'){
-        dispatch(setLanguage('en'));
-      }else{
-        dispatch(setLanguage('ur'));
-      }
-    
+    if (language == 'ur') {
+      dispatch(setLanguage('en'));
+    } else {
+      dispatch(setLanguage('ur'));
+    }
+
   };
 
   const SindhitoggleLanguage = () => {
-    if(language == 'sd'){
+    if (language == 'sd') {
       dispatch(setLanguage('en'));
-    }else{
+    } else {
       dispatch(setLanguage('sd'));
     }
-      
+
   };
 
 
   return (
     <>
-     {windowWidth <=500 ?<MobileHome SindhitoggleLanguage={SindhitoggleLanguage} toggleLanguage={toggleLanguage} />:
-     <Header  SindhitoggleLanguage={SindhitoggleLanguage} toggleLanguage={toggleLanguage}/>
-    }
-    {/* {
+      {windowWidth <= 500 ? <MobileHome SindhitoggleLanguage={SindhitoggleLanguage} toggleLanguage={toggleLanguage} /> :
+        <Header SindhitoggleLanguage={SindhitoggleLanguage} toggleLanguage={toggleLanguage} />
+      }
+      {/* {
       isNewsletterModalOpen && <NewsLetterModal/>
     } */}
-    {windowWidth <=500 ?<MobileMarque  toggleLanguage={toggleLanguage}/>:""
-    // <Marque />
-   }
-     <StatisticsBar />
-     {windowWidth <=500 ?<MobileWheeler  isVisible2={isVisible2} toggleVisibility={toggleVisibility} toggleVisibility2={toggleVisibility2}/>:
-     <Wheeler    isVisible2={isVisible2} toggleVisibility={toggleVisibility} toggleVisibility2={toggleVisibility2}/>
-    }
-     <Highlights />
-     <WhySindh  />
-     {windowWidth <=500 ?<MobileMessage  />:
-     <Message />}
-     {windowWidth <=500 ?<MobileTestimonial />:
-     <Testimonial />}
+      {windowWidth <= 500 ? <MobileMarque toggleLanguage={toggleLanguage} /> : ""
+        // <Marque />
+      }
+      <StatisticsBar />
+      {windowWidth <= 500 ? <MobileWheeler isVisible2={isVisible2} toggleVisibility={toggleVisibility} toggleVisibility2={toggleVisibility2} /> :
+        <Wheeler isVisible2={isVisible2} toggleVisibility={toggleVisibility} toggleVisibility2={toggleVisibility2} />
+      }
+      <Highlights />
+      <WhySindh />
+      {windowWidth <= 500 ? <MobileMessage /> :
+        <Message />}
+      {windowWidth <= 500 ? <MobileTestimonial /> :
+        <Testimonial />}
 
-     {windowWidth <=500 ?<MobileGallery />:
-     <Gallery />}
-     
-     <Footer isVisible2={isVisible2} />
+      {windowWidth <= 500 ? <MobileGallery /> :
+        <Gallery />}
+
+      <Footer isVisible2={isVisible2} />
     </>
   );
 }

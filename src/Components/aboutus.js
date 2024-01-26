@@ -1,15 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import accessibility from "../assets/accessibility.png";
-import sindh from "../assets/logo-sindh.png";
-import pak from "../assets/pak.png";
-import urdu from "../assets/urdu.png";
-import click from "../assets/click-logo.png";
 import "../Css/resource.css";
 import GenericHeader from "./genericHeader";
 import Gallery from "./Gallery";
 import Footer from "./footer";
-import AboutUsImg from "../assets/city.png"
+import AboutUsImg from "../assets/city.png";
 import MobileHeaderGeneric from "./MobileHeaderGeneric";
 export default function AboutUs() {
   const [isSticky, setIsSticky] = useState(false);
@@ -22,11 +17,11 @@ export default function AboutUs() {
     };
 
     // Attach the event listener
-    window.addEventListener('resize', handleResize);
+    window.addEventListener("resize", handleResize);
 
     // Clean up the event listener on component unmount
     return () => {
-      window.removeEventListener('resize', handleResize);
+      window.removeEventListener("resize", handleResize);
     };
   }, []);
   useEffect(() => {
@@ -46,11 +41,12 @@ export default function AboutUs() {
   let value = ">";
   return (
     <>
-           {windowWidth <=500 ? <MobileHeaderGeneric/> : <GenericHeader />}
+      {windowWidth <= 500 ? <MobileHeaderGeneric /> : <GenericHeader />}
 
-      <div className="siteHeader"style={{background: `url(${AboutUsImg})`}} >
-        <h1 data-aos="fade-up"
-        className="Investnow-h1 highlightable">About Us</h1>
+      <div className="siteHeader" style={{ background: `url(${AboutUsImg})` }}>
+        <h1 data-aos="fade-up" className="Investnow-h1 highlightable">
+          About Us
+        </h1>
       </div>
       <div
         className="row"
@@ -62,29 +58,29 @@ export default function AboutUs() {
           textAlign: "center",
         }}
       >
-      <Link
-      to={"/home"}
-      style={
-        windowWidth < 500
-          ? {
-              color: "#720D1D",
-              fontSize: "24px",
-              textDecoration: "none",
-            }
-          : {
-              color: "#720D1D",
-              fontSize: "30px",
-              textDecoration: "none",
-            }
-      }
-    >
+        <Link
+          to={"/home"}
+          style={
+            windowWidth < 500
+              ? {
+                color: "#720D1D",
+                fontSize: "24px",
+                textDecoration: "none",
+              }
+              : {
+                color: "#720D1D",
+                fontSize: "30px",
+                textDecoration: "none",
+              }
+          }
+        >
           <div>
             <h5
-            style={
-              windowWidth < 500
-                ? { display: "contents", color: "black", fontSize: "24px" }
-                : { display: "contents", color: "black", fontSize: "30px" }
-            }
+              style={
+                windowWidth < 500
+                  ? { display: "contents", color: "black", fontSize: "24px" }
+                  : { display: "contents", color: "black", fontSize: "30px" }
+              }
             >
               Home {value}
             </h5>
@@ -92,12 +88,11 @@ export default function AboutUs() {
           </div>
         </Link>
       </div>
-  
-      <div className="shadow-sm bg-white choice-card aboutCard"  style={
-        windowWidth < 500
-          ? {height:"600px"}
-          : { }
-      }>
+
+      <div
+        className="shadow-sm bg-white choice-card aboutCard"
+        style={windowWidth < 500 ? { height: "600px" } : {}}
+      >
         <div className="body-box">
           <div
             className="row"
@@ -108,7 +103,9 @@ export default function AboutUs() {
               textAlign: "center",
             }}
           >
-            <h1 data-aos="fade-up" className="mainHeading highlightable">Vision</h1>
+            <h1 data-aos="fade-up" className="mainHeading highlightable">
+              Vision
+            </h1>
             <div
               className="col-lg-10"
               style={{
@@ -119,8 +116,9 @@ export default function AboutUs() {
             >
               <p className="aboutUsParagraphh highlightable" data-aos="fade-up">
                 The project aims to ensure the fulfillment of SDG (Sustainable
-                Development Goal) 11,<br/>
-                 <b>“Sustainable Cities & Communities”,</b>
+                Development Goal) 11,
+                <br />
+                <b>“Sustainable Cities & Communities”,</b>
                 <br /> and <br />
                 SDG 5,{" "}
                 <b>
@@ -141,12 +139,14 @@ export default function AboutUs() {
             style={{
               width: "100%",
               display: "flex",
-              height:"600px",
+              height: "600px",
               flexDirection: "column",
               textAlign: "center",
             }}
           >
-            <h1 className="mainHeading highlightable" data-aos="fade-up">Mission</h1>
+            <h1 className="mainHeading highlightable" data-aos="fade-up">
+              Mission
+            </h1>
             <div
               className="col-lg-10"
               style={{

@@ -386,7 +386,7 @@ function DocumentGrid({dataForGrid}) {
       editable: false,
       // cellsalign: "left",
       cellsrenderer: (row, columnfield, value) => {
-        debugger;
+        ;
       
         // return value ? `<a style="justify-content: center; display: flex;margin-top: 10px;"  href="${props.dataForGrid.downloaddocument}" target="_blank">${props.dataForGrid.documentname}</a>` : "";
         return value ? `<a style=" display: flex;margin-top: 5px;" 

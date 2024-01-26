@@ -51,7 +51,7 @@ function Opportunity() {
   const navigate = useNavigate();
 
   const OpenGenericOpportunity = (e) => {
-    debugger;
+    ;
     let obj = {
       mainImage: "",
       mainHeading: "",

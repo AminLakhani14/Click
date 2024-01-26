@@ -8,7 +8,7 @@ const HeaderSlice = createSlice({
     initialState,
     reducers : {
         searchCount : (state,action) =>{
-            debugger
+            
          state.count = action.payload
         }
     }

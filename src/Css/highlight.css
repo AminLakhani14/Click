@@ -1,6 +1,6 @@
 :root {
-  --card-heading-font:35px;
-  --card-heading-font-responsive:30px;
+  --card-heading-font: 35px;
+  --card-heading-font-responsive: 30px;
   --font-size: 20px;
   --hig-paragraph: 16px;
 }
@@ -13,20 +13,20 @@ main {
   justify-content: center;
   gap: 2rem;
 }
-.regulatoryCalculatorHead{
+.regulatoryCalculatorHead {
   height: 100px;
-  background-color: #F7F7F7;
+  background-color: #f7f7f7;
   display: flex;
   align-items: center;
   text-align: center;
 }
-.linkFont{
-  color:#720D1D;
+.linkFont {
+  color: #720d1d;
   font-size: 30px;
   text-decoration: none;
 }
-.linkFont2{
-  color:black;
+.linkFont2 {
+  color: black;
   font-size: 30px;
   display: contents;
 }
@@ -62,17 +62,12 @@ main {
 .cardHighLight:before {
   content: "";
   position: absolute;
-  /* top: 0; */
   bottom: 0;
   left: 0;
   display: block;
   width: 100%;
-  /* height: 100%; */
   height: 25%;
-  /* background: linear-gradient(to bottom, rgba(0,176,155,0.5), rgba(150,201,61,1)); */
-  /* background: linear-gradient(rgb(0 0 0 / 67%), rgb(107 7 7 / 94%)); */
   background: linear-gradient(rgb(0 0 0 / 0%), rgb(107 7 7 / 75%));
-
   z-index: 2;
   transition: all 0.5s;
   opacity: 0;
@@ -121,38 +116,29 @@ main {
   font-size: 20px;
   margin: 8px 0 20px;
 }
-.cardMain{
+.cardMain {
   position: absolute;
   display: flex;
   flex-direction: column;
   height: 50%;
-  align-items: center
+  align-items: center;
 }
-.card_wrapper{
+.card_wrapper {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  /* padding-top: 50px; */
 }
-.cardMain1{
-  /* position: absolute; */
-  /* display: flex; */
-  /* background-color: #720D1D; */
-  /* flex-direction: row; */
-  /* justify-content: center; */
+.cardMain1 {
   height: 50%;
-  /* margin-left: -3%; */
-  margin:20px 20px;
+  margin: 20px 20px;
 }
-.cardinner{
-    display: flex;
-    justify-content: center;
-    align-items: center
+.cardinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .cardHighLight .info .updateBtn {
   text-decoration: none;
-  /* padding: 0.5rem 1rem; */
-  /* background: #fff; */
   color: #ffffff !important;
   font-size: 20px;
   cursor: pointer;
@@ -162,7 +148,6 @@ main {
   width: 300px;
   padding-top: 20px;
   border-radius: 0px;
-  /* border-top: 3px solid white; */
   display: flex;
   justify-content: center;
 }
@@ -198,53 +183,40 @@ main {
     opacity: 1;
     transform: translateY(-15px);
   }
-  .cardHeaderHeading{
+  .cardHeaderHeading {
     font-size: var(--card-heading-font-responsive);
     width: 100%;
     text-align: center;
     text-wrap: balance;
-    height:50px;
+    height: 50px;
     color: white !important;
   }
-  .HigParagraphh{
+  .HigParagraphh {
     font-size: var(--hig-paragraph);
-    
-    color: white !important;
 
+    color: white !important;
   }
-  .cardHighLight{
-    height:auto;
+  .cardHighLight {
+    height: auto;
   }
-  .cardMain{
-    height:60%;
+  .cardMain {
+    height: 60%;
   }
 }
 @media only screen and (min-width: 1400px) and (max-width: 1600px) {
-    .cardHeaderHeading{
-        height:50px
-    }
+  .cardHeaderHeading {
+    height: 50px;
+  }
 }
 @media screen and (max-width: 500px) {
-  /* .cardMain1 {
-    display:flex_wrapper;
- width: 100%;
- background-color: #720D1D;
-   gap: 25px;
-  margin-top: 200px;
-  align-items: center;
-  flex-direction: column;
-  margin-left: -3%;
-  padding: 10%;
-  } */
-  .card_wrapper{
+  .card_wrapper {
     display: block;
     justify-content: center;
     flex-wrap: wrap;
     padding-top: 0px;
-    padding:10px 10px;
+    padding: 10px 10px;
   }
-.cardMain1{
-  margin:20px 5px;
-
-}
+  .cardMain1 {
+    margin: 20px 5px;
+  }
 }

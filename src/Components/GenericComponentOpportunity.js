@@ -19,11 +19,11 @@ function GenericComponentOpportunity(props) {
     };
 
     // Attach the event listener
-    window.addEventListener('resize', handleResize);
+    window.addEventListener("resize", handleResize);
 
     // Clean up the event listener on component unmount
     return () => {
-      window.removeEventListener('resize', handleResize);
+      window.removeEventListener("resize", handleResize);
     };
   }, []);
   useEffect(() => {
@@ -59,7 +59,6 @@ function GenericComponentOpportunity(props) {
   let value = ">";
   const location = useLocation();
   useEffect(() => {
-     ;
     const data = location.state;
     setParentData(data);
   }, [location]);
@@ -73,14 +72,16 @@ function GenericComponentOpportunity(props) {
     "Sustainable Practices and Organic Farming: There is a growing trend towards sustainable agriculture and organic farming practices. Sindh provides ample opportunities for businesses to capitalize on the increasing consumer preference for organic and sustainable food products, positioning themselves as leaders in the industry.",
     "Collaboration and Research Opportunities: Sindh offers collaborative opportunities between the government, industry stakeholders, and research institutions. By fostering partnerships and supporting research and development initiatives, the sector benefits from innovation, knowledge exchange, and the development of new technologies.",
   ];
-  const imageList2 = ["Abundant Agricultural Resources: Sindh boasts rich and fertile lands, a favorable climate, and ample water resources, making it ideal for agricultural production. The region is known for growing a wide variety of crops, including wheat, rice, cotton, sugarcane, fruits, and vegetables, offering a diverse range of investment opportunities.",
-  "Value Addition Through Food Processing: Sindh presents significant opportunities for value addition through food processing. By leveraging modern processing techniques, packaging, and quality control measures, businesses can enhance the value and shelf life of agricultural produce, catering to both domestic and international markets.",
-  "Access to Growing Consumer Markets: With a large and growing population, both within Sindh and in neighboring regions, the agriculture and food processing sector in Sindh has access to a vast consumer market. There is a growing demand for high-quality and processed agricultural products, providing a lucrative avenue for investment and expansion.",
-  "Technological Advancements and Modern Farming Practices: Sindh has embraced technological advancements and modern farming practices to enhance productivity, efficiency, and sustainability in the agriculture sector. This includes the adoption of precision agriculture techniques, irrigation management systems, and the integration of smart farming technologies, offering investors the opportunity to leverage cutting-edge practices.",
- "Government Support and Incentives: The Sindh government has introduced various initiatives, schemes, and incentives to support and promote the agriculture and food processing sector. These include subsidies for modern machinery, financial assistance for infrastructure development, access to credit facilities, and specialized training programs, creating a conducive environment for business growth.",
- "Export Potential: Sindh's agriculture and food processing sector has significant export potential. With the ability to meet international quality standards, businesses can tap into global markets and benefit from increasing demand for high-quality agricultural products and processed food items.",
- "Sustainable Practices and Organic Farming: There is a growing trend towards sustainable agriculture and organic farming practices. Sindh provides ample opportunities for businesses to capitalize on the increasing consumer preference for organic and sustainable food products, positioning themselves as leaders in the industry.",
- "Collaboration and Research Opportunities: Sindh offers collaborative opportunities between the government, industry stakeholders, and research institutions. By fostering partnerships and supporting research and development initiatives, the sector benefits from innovation, knowledge exchange, and the development of new technologies."]
+  const imageList2 = [
+    "Abundant Agricultural Resources: Sindh boasts rich and fertile lands, a favorable climate, and ample water resources, making it ideal for agricultural production. The region is known for growing a wide variety of crops, including wheat, rice, cotton, sugarcane, fruits, and vegetables, offering a diverse range of investment opportunities.",
+    "Value Addition Through Food Processing: Sindh presents significant opportunities for value addition through food processing. By leveraging modern processing techniques, packaging, and quality control measures, businesses can enhance the value and shelf life of agricultural produce, catering to both domestic and international markets.",
+    "Access to Growing Consumer Markets: With a large and growing population, both within Sindh and in neighboring regions, the agriculture and food processing sector in Sindh has access to a vast consumer market. There is a growing demand for high-quality and processed agricultural products, providing a lucrative avenue for investment and expansion.",
+    "Technological Advancements and Modern Farming Practices: Sindh has embraced technological advancements and modern farming practices to enhance productivity, efficiency, and sustainability in the agriculture sector. This includes the adoption of precision agriculture techniques, irrigation management systems, and the integration of smart farming technologies, offering investors the opportunity to leverage cutting-edge practices.",
+    "Government Support and Incentives: The Sindh government has introduced various initiatives, schemes, and incentives to support and promote the agriculture and food processing sector. These include subsidies for modern machinery, financial assistance for infrastructure development, access to credit facilities, and specialized training programs, creating a conducive environment for business growth.",
+    "Export Potential: Sindh's agriculture and food processing sector has significant export potential. With the ability to meet international quality standards, businesses can tap into global markets and benefit from increasing demand for high-quality agricultural products and processed food items.",
+    "Sustainable Practices and Organic Farming: There is a growing trend towards sustainable agriculture and organic farming practices. Sindh provides ample opportunities for businesses to capitalize on the increasing consumer preference for organic and sustainable food products, positioning themselves as leaders in the industry.",
+    "Collaboration and Research Opportunities: Sindh offers collaborative opportunities between the government, industry stakeholders, and research institutions. By fostering partnerships and supporting research and development initiatives, the sector benefits from innovation, knowledge exchange, and the development of new technologies.",
+  ];
   return (
     <>
       {windowWidth <= 500 ? <MobileHeaderGeneric /> : <GenericHeader />}
@@ -131,14 +132,6 @@ function GenericComponentOpportunity(props) {
               Opportunities {value}
             </h4>
           </Link>
-          {/* <Link
-            to={"/home"}
-            style={{
-              color: "#720D1D",
-              fontSize: "30px",
-              textDecoration: "none",
-            }}
-          > */}
           <div style={{ paddingTop: "9px" }}>
             <h4
               style={{
@@ -151,7 +144,6 @@ function GenericComponentOpportunity(props) {
               Sector
             </h4>
           </div>
-          {/* </Link> */}
         </div>
       </div>
       <div
@@ -166,7 +158,9 @@ function GenericComponentOpportunity(props) {
           paddingTop: "35px",
         }}
       >
-        <h1 className="mainHeading highlightable">Agriculture And Food Processing</h1>
+        <h1 className="mainHeading highlightable">
+          Agriculture And Food Processing
+        </h1>
         <div
           className="col-lg-10"
           style={{
@@ -270,8 +264,17 @@ function GenericComponentOpportunity(props) {
       >
         <div className="col-lg-1"></div>
         <div className="col-lg-10">
-          <label className="f-size highlightable" style={{ marginBottom: "25px" }}>
-          The Sindh government is committed to fostering a thriving agriculture and food processing sector by implementing proactive measures and offering comprehensive support to businesses. Recognizing the pivotal role of this sector in the province's economic growth, the government has introduced various initiatives to facilitate investment, promote innovation, and ensure sustainability.
+          <label
+            className="f-size highlightable"
+            style={{ marginBottom: "25px" }}
+          >
+            The Sindh government is committed to fostering a thriving
+            agriculture and food processing sector by implementing proactive
+            measures and offering comprehensive support to businesses.
+            Recognizing the pivotal role of this sector in the province's
+            economic growth, the government has introduced various initiatives
+            to facilitate investment, promote innovation, and ensure
+            sustainability.
           </label>
           <ul
             className="circle-list f-size"

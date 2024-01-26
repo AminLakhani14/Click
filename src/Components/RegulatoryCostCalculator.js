@@ -1,15 +1,13 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
 import InputLabel from "@mui/material/InputLabel";
-import { Button, FormControl, MenuItem, Select } from "@mui/material";
+import { FormControl, MenuItem, Select } from "@mui/material";
 import "../Css/highlight.css";
 import "../Css/resource.css";
 import GenericHeader from "./genericHeader";
 import Footer from "./footer";
-import AboutUsImg from "../assets/city.png";
 import MobileHeaderGeneric from "./MobileHeaderGeneric";
 import RegulatoryCatalogCalculatorGrid from "./Grid/RegulatoryCatalogCalculatorGrid";
-// import { Button } from "bootstrap";
+
 export const Drop2Data = (value) => {
   let array = [];
   let label = "";
@@ -22,7 +20,7 @@ export const Drop2Data = (value) => {
           timeLineText: "10-12 Days",
           feeValue: "15000",
           validityYear: "3 Years",
-          departments:"Registration of Privately Managed Colleges (Urban)",
+          departments: "Registration of Privately Managed Colleges (Urban)",
           text: "Registration of Privately Managed Colleges (Urban)",
           value: "Registration of Privately Managed Colleges (Urban)",
         },
@@ -34,7 +32,7 @@ export const Drop2Data = (value) => {
           timeLineText: "10-12 Days",
           feeValue: "20000",
           validityYear: "3 Years",
-          departments:"Registration of Privately Managed Colleges (Rural)",
+          departments: "Registration of Privately Managed Colleges (Rural)",
         },
       ];
       label = "Area";
@@ -47,7 +45,7 @@ export const Drop2Data = (value) => {
           timeLineText: "10-12 Days",
           feeValue: "15000",
           validityYear: "3 Years",
-          departments:"Registration of Shops & Establishment(Same Day)",
+          departments: "Registration of Shops & Establishment(Same Day)",
           text: "Registration of Shops & Establishment (Same Day)",
           value: "Registration of Shops & Establishment (Same Day)",
         },
@@ -56,7 +54,7 @@ export const Drop2Data = (value) => {
           timeLineText: "10 days",
           feeValue: "",
           validityYear: "2 year",
-          departments:"Registration of Factories(10 Days)",
+          departments: "Registration of Factories(10 Days)",
           text: "Registration of Factories (10 Day)",
           value: "10 Days",
         },
@@ -71,7 +69,7 @@ export const Drop2Data = (value) => {
           timeLineText: "7 Days",
           feeValue: "500",
           validityYear: "",
-          departments:"Registration and Licensing of Food Business Operator",
+          departments: "Registration and Licensing of Food Business Operator",
           text: "SFA",
           value: "SFA",
         },
@@ -86,7 +84,7 @@ export const Drop2Data = (value) => {
           timeLineText: "1 Month Pesticide",
           feeValue: "200000",
           validityYear: "",
-          departments:"Distributor Registration / License (for Pesticides)",
+          departments: "Distributor Registration / License (for Pesticides)",
           text: "Distributor Registration / License (for Pesticides)",
         },
         {
@@ -95,7 +93,7 @@ export const Drop2Data = (value) => {
           timeLineText: "1 Month Fertilizer",
           feeValue: "50000",
           validityYear: "",
-          departments:"Distributor Registration / License (for Fertilizer)",
+          departments: "Distributor Registration / License (for Fertilizer)",
           text: "Distributor Registration / License (for Fertilizer)",
         },
         {
@@ -104,26 +102,26 @@ export const Drop2Data = (value) => {
           timeLineText: "1 Month Lab Fee",
           feeValue: "5000",
           validityYear: "",
-          departments:"Product License for Fertilizer Micronutrients",
+          departments: "Product License for Fertilizer Micronutrients",
           text: "Product License for Fertilizer Micronutrients",
         },
-    
+
         {
           id: "Agriculture",
           value: "Factories",
           timeLineText: "1 Month Lab Fee",
           feeValue: "1000",
           validityYear: "",
-          departments:"Market Committee License For Factories(Group-A)",
+          departments: "Market Committee License For Factories(Group-A)",
           text: "Market Committee License For Factories(Group-A)",
-        },    
+        },
         {
           id: "Agriculture",
           value: "WholeSaler",
           timeLineText: "1 Month Lab Fee",
           feeValue: "500",
           validityYear: "",
-          departments:"Market Committee License For Wholesaler(Group-B)",
+          departments: "Market Committee License For Wholesaler(Group-B)",
           text: "Market Committee License For Wholesaler(Group-B)",
         },
         {
@@ -132,9 +130,9 @@ export const Drop2Data = (value) => {
           timeLineText: "1 Month Lab Fee",
           feeValue: "100",
           validityYear: "",
-          departments:"Market Committee License For Retailer(Group-C)",
+          departments: "Market Committee License For Retailer(Group-C)",
           text: "Market Committee License For Retailer(Group-C)",
-        }, 
+        },
       ];
       label = "Agriculture";
       break;
@@ -146,7 +144,7 @@ export const Drop2Data = (value) => {
           timeLineText: "3 Month",
           feeValue: "5000",
           validityYear: "",
-          departments:"License to sell Drugs by Way of Retail Sale (Form-6)",
+          departments: "License to sell Drugs by Way of Retail Sale (Form-6)",
           text: "License to sell Drugs by Way of Retail Sale (Form-6)",
         },
         {
@@ -155,7 +153,7 @@ export const Drop2Data = (value) => {
           timeLineText: "3 Month",
           feeValue: "5000",
           validityYear: "",
-          departments:"License to sell Drugs by Way of Wholesale 7A",
+          departments: "License to sell Drugs by Way of Wholesale 7A",
           text: "License to sell Drugs by Way of Wholesale 7A",
         },
         {
@@ -164,7 +162,7 @@ export const Drop2Data = (value) => {
           timeLineText: "3 Month",
           feeValue: "5000",
           validityYear: "",
-          departments:"License to sell Drugs in Pharmacy (Form-8)",
+          departments: "License to sell Drugs in Pharmacy (Form-8)",
           text: "License to sell Drugs in Pharmacy (Form-8)",
         },
         {
@@ -173,7 +171,8 @@ export const Drop2Data = (value) => {
           timeLineText: "3 Month",
           feeValue: "5000",
           validityYear: "",
-          departments:"License to sell Narcotics and Other Controlled Drugs/ Substances (Form-9)",
+          departments:
+            "License to sell Narcotics and Other Controlled Drugs/ Substances (Form-9)",
           text: "License to sell Narcotics and Other Controlled Drugs/ Substances (Form-9)",
         },
         {
@@ -182,53 +181,54 @@ export const Drop2Data = (value) => {
           timeLineText: "3 Month",
           feeValue: "5000",
           validityYear: "",
-          departments:"License to Manufacturer /Importer /Indenter of Drugs (Form-7)",
+          departments:
+            "License to Manufacturer /Importer /Indenter of Drugs (Form-7)",
           text: "License to Manufacturer /Importer /Indenter of Drugs (Form-7)",
         },
       ];
       label = "Health Department";
       break;
     case "MontToMatric":
-        array = [
-          {
-            id: "MontToMatric",
-            value: "MontToMatric",
-            timeLineText: "30 Days",
-            feeValue: "7000",
-            validityYear: "",
-            departments:"",
-            text: "Institutions from Montessori up to Class-X",
-          },
-          {
-            id: "MontToMatric",
-            timeLineText: "30 Days",
-            feeValue: "15000",
-            validityYear: "",
-            departments:"",
-            value: "HigherAndSecondary",
-            text: "Higher Secondary School",
-          },
-          {
-            id: "MontToMatric",
-            value: "OALevel",
-            timeLineText: "30 Days",
-            feeValue: "30000",
-            validityYear: "",
-            departments:"",
-            text: 'Institutions of "O" & "A" Level',
-          },
-          {
-            id: "MontToMatric",
-            value: "HigherLearning",
-            timeLineText: "30 Days",
-            feeValue: "20000",
-            validityYear: "",
-            departments:"",
-            text: "Degree awarding institutes and universities including Institutions having academic linkage / foreign collaboration/affiliation with any other institutions of higher learning",
-          },
-        ];
-        label = "School Education and Literacy Department";
-        break;
+      array = [
+        {
+          id: "MontToMatric",
+          value: "MontToMatric",
+          timeLineText: "30 Days",
+          feeValue: "7000",
+          validityYear: "",
+          departments: "",
+          text: "Institutions from Montessori up to Class-X",
+        },
+        {
+          id: "MontToMatric",
+          timeLineText: "30 Days",
+          feeValue: "15000",
+          validityYear: "",
+          departments: "",
+          value: "HigherAndSecondary",
+          text: "Higher Secondary School",
+        },
+        {
+          id: "MontToMatric",
+          value: "OALevel",
+          timeLineText: "30 Days",
+          feeValue: "30000",
+          validityYear: "",
+          departments: "",
+          text: 'Institutions of "O" & "A" Level',
+        },
+        {
+          id: "MontToMatric",
+          value: "HigherLearning",
+          timeLineText: "30 Days",
+          feeValue: "20000",
+          validityYear: "",
+          departments: "",
+          text: "Degree awarding institutes and universities including Institutions having academic linkage / foreign collaboration/affiliation with any other institutions of higher learning",
+        },
+      ];
+      label = "School Education and Literacy Department";
+      break;
     case "SindhHealthCareCommission":
       array = [
         {
@@ -237,7 +237,7 @@ export const Drop2Data = (value) => {
           timeLineText: "30 Days",
           feeValue: "500",
           validityYear: "",
-          departments:"",
+          departments: "",
           text: " Single specialty (i.e general practitioner, homeo, tibb, detist, nursing/ maternity home, laboratories, radiology centre etc.",
         },
         {
@@ -246,7 +246,7 @@ export const Drop2Data = (value) => {
           timeLineText: "30 Days",
           feeValue: "2000",
           validityYear: "",
-          departments:"",
+          departments: "",
           text: "2 1-24 bedded Medical Centre/ Hospital",
         },
         {
@@ -255,7 +255,7 @@ export const Drop2Data = (value) => {
           timeLineText: "30 Days",
           feeValue: "5000",
           validityYear: "",
-          departments:"",
+          departments: "",
           text: " 25 and above bedded Hospital",
         },
         {
@@ -264,7 +264,7 @@ export const Drop2Data = (value) => {
           timeLineText: "30 Days",
           feeValue: "1000",
           validityYear: "",
-          departments:"",
+          departments: "",
           text: "Any change in the already registered HCE",
         },
       ];
@@ -278,7 +278,7 @@ export const Drop2Data = (value) => {
           timeLineText: "3 Days",
           feeValue: "110",
           validityYear: "",
-          departments:"",
+          departments: "",
           text: "Registration Certificate of Partnership Firm",
         },
         {
@@ -287,7 +287,7 @@ export const Drop2Data = (value) => {
           timeLineText: "5 Days",
           feeValue: "55",
           validityYear: "",
-          departments:"",
+          departments: "",
           text: "Registration Certificate of Amendment/Dissolution /Rectification in Partnership Firm",
         },
         {
@@ -296,7 +296,7 @@ export const Drop2Data = (value) => {
           timeLineText: "10-15 Days",
           feeValue: "S.R.O.88(I)/2008)",
           validityYear: "",
-          departments:"",
+          departments: "",
           text: "Registration of New Boiler",
         },
         {
@@ -305,7 +305,7 @@ export const Drop2Data = (value) => {
           timeLineText: "10-15 Days",
           feeValue: "S.R.O.88(I)/2008)",
           validityYear: "",
-          departments:"",
+          departments: "",
           text: "Registration of Old Boiler",
         },
         {
@@ -314,7 +314,7 @@ export const Drop2Data = (value) => {
           timeLineText: "10-15 Days",
           feeValue: "S.R.O.88(I)/2008)",
           validityYear: "",
-          departments:"",
+          departments: "",
           text: "Approval of Plan and Particulars of Boilers Acceptable for Registration (New Boiler)",
         },
         {
@@ -323,7 +323,7 @@ export const Drop2Data = (value) => {
           timeLineText: "10-15 Days",
           feeValue: "S.R.O.88(I)/2008)",
           validityYear: "",
-          departments:"",
+          departments: "",
           text: "Approval of Plan and Particulars of Boilers Acceptable for Registration (Used Boiler)",
         },
         {
@@ -332,7 +332,7 @@ export const Drop2Data = (value) => {
           timeLineText: "10-15 Days",
           feeValue: "S.R.O.88(I)/2008)",
           validityYear: "",
-          departments:"",
+          departments: "",
           text: "Transfer of Ownership",
         },
       ];
@@ -346,7 +346,7 @@ export const Drop2Data = (value) => {
           timeLineText: "7 Days",
           feeValue: "50000",
           validityYear: "",
-          departments:"",
+          departments: "",
           text: "License for Handling of Hazardous Substances",
         },
         {
@@ -355,7 +355,7 @@ export const Drop2Data = (value) => {
           timeLineText: "7 Days",
           feeValue: "50000",
           validityYear: "",
-          departments:"",
+          departments: "",
           text: "License to Waste Contractor for Handling of Hazardous Substances and Non-Hazardous substances",
         },
         {
@@ -364,7 +364,7 @@ export const Drop2Data = (value) => {
           timeLineText: "EC (15 days)  ▪ IEE (30 days) ▪ EIA (60 days)",
           feeValue: "1000",
           validityYear: "",
-          departments:"",
+          departments: "",
           text: "Approval Under Section 17 (IEE/EIA/EC)",
         },
         {
@@ -373,7 +373,7 @@ export const Drop2Data = (value) => {
           timeLineText: "7-10 Days Up to 20 Million",
           feeValue: "50000",
           validityYear: "",
-          departments:"",
+          departments: "",
           text: "Approval of an Environmental Management Plan 7-10 Days Up to 20 Million",
         },
         {
@@ -382,7 +382,7 @@ export const Drop2Data = (value) => {
           timeLineText: "7-10 Days Above 20 Million up to 100 Million",
           feeValue: "100000",
           validityYear: "",
-          departments:"",
+          departments: "",
           text: "Approval of an Environmental Management Plan 7-10 Days Above 20 Million up to 100 Million",
         },
         {
@@ -391,7 +391,7 @@ export const Drop2Data = (value) => {
           timeLineText: "7-10 Days Above 100 Milliion up to 200 Million",
           feeValue: "200000",
           validityYear: "",
-          departments:"",
+          departments: "",
           text: "Approval of an Environmental Management Plan 7-10 Days Above 100 Milliion up to 200 Million",
         },
         {
@@ -400,7 +400,7 @@ export const Drop2Data = (value) => {
           timeLineText: "7-10 Days Above 200 Million up to 500 Million",
           feeValue: "400000",
           validityYear: "",
-          departments:"",
+          departments: "",
           text: "Approval of an Environmental Management Plan 7-10 Days Above 200 Million up to 500 Million",
         },
         {
@@ -409,7 +409,7 @@ export const Drop2Data = (value) => {
           timeLineText: "7-10 Days Above 500 Million",
           feeValue: "600000",
           validityYear: "",
-          departments:"",
+          departments: "",
           text: "Approval of an Environmental Management Plan 7-10 Days Above 500 Million",
         },
         {
@@ -419,7 +419,7 @@ export const Drop2Data = (value) => {
             "7-10 Days Review fee for Environmental Checklist or EMP",
           feeValue: "40000",
           validityYear: "",
-          departments:"",
+          departments: "",
           text: "Approval of an Environmental Management Plan Review fee for Environmental Checklist or EMP",
         },
         {
@@ -428,7 +428,7 @@ export const Drop2Data = (value) => {
           timeLineText: "7 Days Security Fee",
           feeValue: "20000",
           validityYear: "",
-          departments:"",
+          departments: "",
           text: "Approval of an Environmental Management Plan 7 Days Security Fee",
         },
         {
@@ -437,7 +437,7 @@ export const Drop2Data = (value) => {
           timeLineText: "7 Days Certificate Fee",
           feeValue: "50000",
           validityYear: "",
-          departments:"",
+          departments: "",
           text: "Approval of an Environmental Management Plan 7 Days Certificate Fee",
         },
         {
@@ -446,7 +446,7 @@ export const Drop2Data = (value) => {
           timeLineText: "7 Days",
           feeValue: "50000",
           validityYear: "",
-          departments:"",
+          departments: "",
           text: "Approval of Hospital Waste Management Plan",
         },
       ];
@@ -460,7 +460,7 @@ export const Drop2Data = (value) => {
           timeLineText: "60 days",
           feeValue: "",
           validityYear: "",
-          departments:"",
+          departments: "",
           text: "Allotment of Land/ Plot",
         },
         {
@@ -469,7 +469,7 @@ export const Drop2Data = (value) => {
           timeLineText: "14 days",
           feeValue: "",
           validityYear: "",
-          departments:"",
+          departments: "",
           text: "Approval of Building Drawing",
         },
         {
@@ -478,7 +478,7 @@ export const Drop2Data = (value) => {
           timeLineText: "7 days",
           feeValue: "",
           validityYear: "",
-          departments:"",
+          departments: "",
           text: "Approval of Completion (Block) Plan",
         },
         {
@@ -487,7 +487,7 @@ export const Drop2Data = (value) => {
           timeLineText: "14 days",
           feeValue: "",
           validityYear: "",
-          departments:"",
+          departments: "",
           text: "Collection of Additional Trade Fee",
         },
         {
@@ -496,7 +496,7 @@ export const Drop2Data = (value) => {
           timeLineText: "14 days",
           feeValue: "",
           validityYear: "",
-          departments:"",
+          departments: "",
           text: "Subdivision/ Amalgamation/ Transfer/ Subletting/ Extension of Land or Plot/ Change in Constitution/ change in Constitution",
         },
         {
@@ -505,7 +505,7 @@ export const Drop2Data = (value) => {
           timeLineText: "14 days",
           feeValue: "",
           validityYear: "",
-          departments:"",
+          departments: "",
           text: "Issuance of Lease Deed",
         },
         {
@@ -514,7 +514,7 @@ export const Drop2Data = (value) => {
           timeLineText: "14 days",
           feeValue: "",
           validityYear: "",
-          departments:"",
+          departments: "",
           text: "NOC for Utilities (Electricity, Gas, Cable, PTCL)",
         },
         {
@@ -523,7 +523,7 @@ export const Drop2Data = (value) => {
           timeLineText: "14 days",
           feeValue: "50000",
           validityYear: "",
-          departments:"",
+          departments: "",
           text: "NOC for Mortgage",
         },
         {
@@ -532,7 +532,7 @@ export const Drop2Data = (value) => {
           timeLineText: "14 days",
           feeValue: "",
           validityYear: "",
-          departments:"",
+          departments: "",
           text: "NOC for Road Cutting",
         },
         {
@@ -541,7 +541,7 @@ export const Drop2Data = (value) => {
           timeLineText: "14 days",
           feeValue: "",
           validityYear: "",
-          departments:"",
+          departments: "",
           text: "NOC for car parking/ beautification",
         },
       ];
@@ -555,7 +555,7 @@ export const Drop2Data = (value) => {
           timeLineText: "15 Days",
           feeValue: "",
           validityYear: "",
-          departments:"",
+          departments: "",
           text: "Allotment Order of Land/ Plot",
         },
         {
@@ -564,7 +564,7 @@ export const Drop2Data = (value) => {
           timeLineText: "5-10 Days",
           feeValue: "",
           validityYear: "",
-          departments:"",
+          departments: "",
           text: "Approval of Drawing",
         },
         {
@@ -573,7 +573,7 @@ export const Drop2Data = (value) => {
           timeLineText: "5-10 Days",
           feeValue: "",
           validityYear: "",
-          departments:"",
+          departments: "",
           text: "Subdivision/Transfer/ Amalgamation/ Change in constitution (Corporate Setup)/ Change in Trade/ Subletting trade/ Conversion of plot from Industrial to Commercial/ CNG petroleum station/ Godowns & Distribution",
         },
         {
@@ -582,7 +582,7 @@ export const Drop2Data = (value) => {
           timeLineText: "5-10 Days",
           feeValue: "",
           validityYear: "",
-          departments:"",
+          departments: "",
           text: "NOC for Utilities (Electricity, Telephone, Gas, Water)",
         },
         {
@@ -591,7 +591,7 @@ export const Drop2Data = (value) => {
           timeLineText: "5-10 Days",
           feeValue: "",
           validityYear: "",
-          departments:"",
+          departments: "",
           text: "NOC for Road Cutting",
         },
         {
@@ -600,7 +600,7 @@ export const Drop2Data = (value) => {
           timeLineText: "15-25 Days",
           feeValue: "",
           validityYear: "",
-          departments:"",
+          departments: "",
           text: "Issuance of Lease Draft",
         },
         {
@@ -609,7 +609,7 @@ export const Drop2Data = (value) => {
           timeLineText: "15-25 Days",
           feeValue: "",
           validityYear: "",
-          departments:"",
+          departments: "",
           text: "NOC for Mortgage",
         },
         {
@@ -618,7 +618,7 @@ export const Drop2Data = (value) => {
           timeLineText: "15-25 Days",
           feeValue: "",
           validityYear: "",
-          departments:"",
+          departments: "",
           text: "Un- authorized Construction",
         },
       ];
@@ -629,10 +629,11 @@ export const Drop2Data = (value) => {
         {
           id: "BoardOfRevenue",
           value: "BoardOfRevenue",
-          timeLineText: "Registration of Shops & Establishment (Same Day) Day Per Page",
+          timeLineText:
+            "Registration of Shops & Establishment (Same Day) Day Per Page",
           feeValue: "300",
           validityYear: "",
-          departments:"",
+          departments: "",
           text: "Issuance of the True Copy of Land Record",
         },
         {
@@ -641,7 +642,7 @@ export const Drop2Data = (value) => {
           timeLineText: "10 Days",
           feeValue: "",
           validityYear: "",
-          departments:"",
+          departments: "",
           text: "Registration of Document",
         },
       ];
@@ -741,12 +742,11 @@ export const Dropdown = (props) => {
       timeLineText: "10-12 Days",
       feeValue: "15000",
       validityYear: "3 Years",
-      departments:"Registration of Privately Managed Colleges (Urban)",
+      departments: "Registration of Privately Managed Colleges (Urban)",
       id: "Registration of Privately Managed Colleges (Urban)",
     },
   ]);
   const handleChange = (event) => {
-    
     setSelectedValue(event.target.value);
     let arr = [...props.arr];
     arr.splice(props.ind, 1, event.target.value);
@@ -773,7 +773,7 @@ export const Dropdown = (props) => {
       </InputLabel>
       <Select
         onChange={handleChange}
-        style={windowWidth <=500?{ width:"100%"}: { width: "450px" }}
+        style={windowWidth <= 500 ? { width: "100%" } : { width: "450px" }}
         native
         labelId="my-select"
         id="my-select"
@@ -796,7 +796,6 @@ export const Dropdown1 = (props) => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
   const handleChange = (event) => {
-    
     setSelectedValue(event.target.value);
     let arr = [...props.arr];
     arr.splice(
@@ -830,7 +829,7 @@ export const Dropdown1 = (props) => {
       <InputLabel htmlFor="outlined-age-native-simple"></InputLabel>
       <Select
         native
-        style={windowWidth <=500?{ width:"100%"}: { width: "450px" }}
+        style={windowWidth <= 500 ? { width: "100%" } : { width: "450px" }}
         defaultValue={selectedValue}
         value={selectedValue}
         onChange={handleChange}
@@ -847,7 +846,7 @@ export const Dropdown1 = (props) => {
   );
 };
 export default function RegulatoryCatalogCalculator(props) {
-  debugger
+  ;
   const [isSticky, setIsSticky] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
@@ -896,7 +895,7 @@ export default function RegulatoryCatalogCalculator(props) {
       timeLineText: "10-12 Days",
       feeValue: "15000",
       validityYear: "3 Years",
-      departments:"Registration of Privately Managed Colleges (Urban)",
+      departments: "Registration of Privately Managed Colleges (Urban)",
       text: "Registration of Privately Managed Colleges (Urban)",
       value: "Registration of Privately Managed Colleges (Urban)",
     },
@@ -913,7 +912,7 @@ export default function RegulatoryCatalogCalculator(props) {
       timeLineText: "10-12 Days",
       feeValue: "15000",
       validityYear: "3Years",
-      departments:"Registration of Privately Managed Colleges (Urban)",
+      departments: "Registration of Privately Managed Colleges (Urban)",
       text: "Registration of Privately Managed Colleges (Urban)",
       value: "Registration of Privately Managed Colleges (Urban)",
     });
@@ -921,10 +920,7 @@ export default function RegulatoryCatalogCalculator(props) {
   };
   const DeleteItems = (id) => {
     console.log(id);
-
     arr1.splice(id, 1);
-    // const getindex = arr1.findIndex((x) => x.id === id )
-
     const UpdatedArray2 = arr2.filter((val, ind) => {
       return ind !== id;
     });
@@ -934,80 +930,62 @@ export default function RegulatoryCatalogCalculator(props) {
   return (
     <>
       {windowWidth <= 500 ? <MobileHeaderGeneric /> : <GenericHeader />}
-
-      {/* <div className="siteHeader" style={{ background: `url(${AboutUsImg})` }}>
-        <h1
-          className={`slide-in-left Investnow-h1 highlightable ${
-            isVisible ? "" : "slide-out-left"
-          }`}
-        >
-          Regulatory Catalog
-        </h1>
-      </div> */}
-      {/* <div className="row regulatoryCalculatorHead">
-        <Link to={"/home"} className="linkFont">
-          <div>
-            <h5 className="linkFont2 highlightable">Home {value}</h5>
-            Regulatory Catalog
-          </div>
-        </Link>
-      </div> */}
-   {windowWidth <= 500 ? (
+      {windowWidth <= 500 ? (
         <div></div>
       ) : (
         <div style={{ height: "120px" }}></div>
       )}
-      <div
-        className="shadow-sm bg-white  "
-        // style={{ paddingTop: "30px", height: "auto",paddingBottom:"50px" }}
-      >
-        {/* <div
-          className="row"
+      <div className="shadow-sm bg-white  ">
+        <div
+          className="row "
           style={{
-            width: "100%",
-            display: "flex",
-            flexDirection: "column",
-            textAlign: "center",
+            height: "250px",
+            background: "",
           }}
         >
-          <h1 className="mainHeading">Regulatory Tax Calculator</h1>
-        </div> */}
-
-
-
-        <div
-        className="row "
-        style={{
-          height: "250px",
-          background: "",
-          // backgroundColor:"red"
-        }}
-      >
-        <div
-          className="col-lg-12"
-          style={{
-            display: "flex",
-            justifyContent: "center",
-            marginTop: "50px",
-            // textAlign:"justify",
-            margin:"auto",
-            position:"relative"
-          }}
-        >
-       <div className="" >
-       <h1 className={window.innerWidth <= 540 ?"ReportRegulatorybefore mt-4 mb-4":"ReportRegulatoryDifficulties"}>Regulatory Cost Calculator</h1>
-         <p
-            className={window.innerWidth <= 540 ? "mobileparaforfeedback" : "feedbackpara col-8"} style={{fontSize:window.innerWidth === 280 || window.innerWidth ===320 ? "17.5px": " ",textAlign:"center",}}
+          <div
+            className="col-lg-12"
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              marginTop: "50px",
+              margin: "auto",
+              position: "relative",
+            }}
           >
-          Please select the desired Regulatory approval to get to know the applicable fee to obtain the same. 
-
-You can select multiple permits/licenses to view the details consolidated too. 
-
-For further details, queries you can write to us at feedback@business.gos.pk.
-          </p>
-       </div>
+            <div className="">
+              <h1
+                className={
+                  window.innerWidth <= 540
+                    ? "ReportRegulatorybefore mt-4 mb-4"
+                    : "ReportRegulatoryDifficulties"
+                }
+              >
+                Regulatory Cost Calculator
+              </h1>
+              <p
+                className={
+                  window.innerWidth <= 540
+                    ? "mobileparaforfeedback"
+                    : "feedbackpara col-8"
+                }
+                style={{
+                  fontSize:
+                    window.innerWidth === 280 || window.innerWidth === 320
+                      ? "17.5px"
+                      : " ",
+                  textAlign: "center",
+                }}
+              >
+                Please select the desired Regulatory approval to get to know the
+                applicable fee to obtain the same. You can select multiple
+                permits/licenses to view the details consolidated too. For
+                further details, queries you can write to us at
+                feedback@business.gos.pk.
+              </p>
+            </div>
+          </div>
         </div>
-      </div>
         <div className="row justify-content-center mt-3 align-items-lg-start">
           <div
             className="col-lg-5"

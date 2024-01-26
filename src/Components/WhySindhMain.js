@@ -12,7 +12,7 @@ import MobileHeaderGeneric from "./MobileHeaderGeneric";
 import { useSelector } from "react-redux";
 import { translations } from "../Transalation/Transalation";
 function WhySindhMain() {
-  const {language} = useSelector((state)=>state.language)
+  const { language } = useSelector((state) => state.language)
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
   useEffect(() => {
@@ -51,7 +51,7 @@ function WhySindhMain() {
 
       <div style={{ background: `url(${whySindh})` }} className="siteHeader">
         <h1 data-aos="fade-up" className="Investnow-h1 highlightable">
-         
+
           {translations["WhySindh"][language]}
         </h1>
       </div>
@@ -89,7 +89,7 @@ function WhySindhMain() {
               : "mainHeading highlightable"
           }
         >
-         {translations["DAOS"][language]}
+          {translations["DAOS"][language]}
         </h1>
         <div
           className="col-lg-10"
@@ -103,26 +103,26 @@ function WhySindhMain() {
             className={
               windowWidth < 500
                 ? "mobilePara"
-                :  "InvestnowParagraphh highlightable" 
+                : "InvestnowParagraphh highlightable"
             }
           >
-           
-           {translations["WhySind1stpara"][language]}
+
+            {translations["WhySind1stpara"][language]}
           </p>
         </div>
       </div>
       <div className="row my-5" style={{ justifyContent: "center" }}>
         <div data-aos="fade-down-right"
-             className={
-              windowWidth < 500
-                ? "descriptionImage"
-                : "col-lg-9 descriptionImage"}
+          className={
+            windowWidth < 500
+              ? "descriptionImage"
+              : "col-lg-9 descriptionImage"}
           style={{ background: `url(${GateWayImage})` }}
         >
           <label className={"agriAndFoodHeading highlightable"}
             data-aos="fade-up"
           >
-          {translations["GatewayToGrowth"][language]}            
+            {translations["GatewayToGrowth"][language]}
           </label>
         </div>
       </div>
@@ -136,7 +136,7 @@ function WhySindhMain() {
             className={"f-size highlightable"}
             data-aos="fade-up"
           >
-           {translations["WhySindh2ndpara"][language]}
+            {translations["WhySindh2ndpara"][language]}
           </label>
         </div>
       </div>
@@ -167,17 +167,17 @@ function WhySindhMain() {
       </div>
       <div className="row my-5" style={{ justifyContent: "center" }}>
         <div data-aos="fade-down-right"
-             className={
-              windowWidth < 500
-                ? "descriptionImage"
-                : "col-lg-9 descriptionImage"}
+          className={
+            windowWidth < 500
+              ? "descriptionImage"
+              : "col-lg-9 descriptionImage"}
           style={{ background: `url(${EconomicPowerHouse})` }}
         >
           <label
             className={"agriAndFoodHeading highlightable"}
             data-aos="fade-up"
           >
-             {translations["EconomicPowerhouse"][language]}
+            {translations["EconomicPowerhouse"][language]}
           </label>
         </div>
       </div>
@@ -190,8 +190,8 @@ function WhySindhMain() {
       >
         <div className="col-lg-5">
           <label
-          className={"f-size highlightable"}
-          data-aos="fade-up"
+            className={"f-size highlightable"}
+            data-aos="fade-up"
           >
             {translations['WhySindh3rdpara'][language]}
           </label>
@@ -226,17 +226,17 @@ function WhySindhMain() {
       </div>
       <div className="row my-5" style={{ justifyContent: "center" }}>
         <div
-         
+
           className={
             windowWidth < 500
               ? "descriptionImage"
               : "col-lg-9 descriptionImage"}
-              data-aos="fade-down-right"
+          data-aos="fade-down-right"
           style={{ background: `url(${buildingBridge})` }}
         >
-          <label 
-          className={"agriAndFoodHeading highlightable"}
-          data-aos="fade-up"
+          <label
+            className={"agriAndFoodHeading highlightable"}
+            data-aos="fade-up"
           >
             {translations["BuildingBridgestoS"][language]}
           </label>
@@ -249,9 +249,9 @@ function WhySindhMain() {
       >
         <div className="col-lg-5">
           <label
-           className={"f-size highlightable"}
-           data-aos="fade-up">
-             {translations["WhySindh4thpara"][language]}
+            className={"f-size highlightable"}
+            data-aos="fade-up">
+            {translations["WhySindh4thpara"][language]}
           </label>
         </div>
       </div>
@@ -265,14 +265,14 @@ function WhySindhMain() {
         >
           <a href="comingsoon.html">
             <button type="button" className="InvestInSindhButton">
-            <span style={{ width: "179px", height: "33px" }}>
+              <span style={{ width: "179px", height: "33px" }}>
                 <Link
                   style={{ textDecoration: "none" }}
                   className={""}
                   to={"/buildingbridges"}
                 >
                   <span style={{ textDecoration: "none", color: "white" }}>
-                  {translations['LearnMore'][language]}
+                    {translations['LearnMore'][language]}
                   </span>
                 </Link>
               </span>
@@ -281,18 +281,18 @@ function WhySindhMain() {
         </div>
       </div>
       <div className="row my-5" style={{ justifyContent: "center" }}>
-        <div 
-           className={
+        <div
+          className={
             windowWidth < 500
               ? "descriptionImage"
               : "col-lg-9 descriptionImage"}
-              data-aos="fade-down-right"
+          data-aos="fade-down-right"
           style={{ background: `url(${diverseHorizon})` }}
         >
           <label
-          className="agriAndFoodHeading highlightable" data-aos="fade-up"
+            className="agriAndFoodHeading highlightable" data-aos="fade-up"
           >
-           {translations["DiverseHorizons"][language]}
+            {translations["DiverseHorizons"][language]}
           </label>
         </div>
       </div>
@@ -305,7 +305,7 @@ function WhySindhMain() {
       >
         <div className="col-lg-5">
           <label
-          className="f-size highlightable" data-aos="fade-up"
+            className="f-size highlightable" data-aos="fade-up"
           >
             {translations["WhySindh5thpara"][language]}
           </label>
@@ -321,7 +321,7 @@ function WhySindhMain() {
         >
           <a href="comingsoon.html">
             <button type="button" className="InvestInSindhButton">
-            <Link
+              <Link
                 style={{ textDecoration: "none" }}
                 className={""}
                 to={"/diversehorizon"}
@@ -354,7 +354,7 @@ function WhySindhMain() {
           }}
         >
           <a href="comingsoon.html">
-            <button type="button" className={language === "en"?"InvestInSindhButton":"InvestinSindhbuttonforUrduandSindhi"}>
+            <button type="button" className={language === "en" ? "InvestInSindhButton" : "InvestinSindhbuttonforUrduandSindhi"}>
               <span style={{ width: "179px", height: "33px" }}>
                 {translations['InvestSindh'][language]}
               </span>

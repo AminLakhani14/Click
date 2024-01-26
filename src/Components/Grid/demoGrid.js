@@ -1,7 +1,5 @@
 import JqxGrid, { jqx } from "jqwidgets-scripts/jqwidgets-react-tsx/jqxgrid";
 import React from "react";
-
-let ClickHeaderFirstTime = true
 export default class DemoGrid extends React.Component {
   constructor(props) {
     super(props);
@@ -13,7 +11,6 @@ export default class DemoGrid extends React.Component {
         { name: "rlcoID", type: "string" },
         { name: "details", type: "string" },
         { name: "type", type: "string" },
-        // { name: "prevailing", type: "string" },
         { name: "timeLine", type: "string" },
         { name: "fee", type: "string" },
         { name: "officials", type: "string" },
@@ -23,24 +20,16 @@ export default class DemoGrid extends React.Component {
 
     const editIcon = (row, columnfield, value) => {
       return '<i class="fas fa-search mt-3" style="color: #4B4B4B;font-size: 13px; cursor:pointer; display:flex; justify-content:center;"></i>'
-  };
-
-
+    };
     this.state = {
       columns: [
         { text: "Issuing Department", datafield: "issuingDepartment", width: "25%" },
         { text: "RLCO ID", datafield: "rlcoID", width: "7%" },
         { text: "RLCO Detail", datafield: "details", width: "34%" },
         { text: "Type", datafield: "type", width: "8%" },
-        // {
-        //   text: "Prevailing Law/Rules", datafield: "prevailing", width: "30%",
-        // },
         { text: "Time Line", datafield: "timeLine", width: "8%" },
         { text: "Fee", datafield: "fee", width: "10%" },
-        // {
-        //   text: "Officials", datafield: "officials", width: "35%",
-        // },
-        { text: "Details", datafield: "detail", width: "8%", cellsrenderer: editIcon,align: "center",},
+        { text: "Details", datafield: "detail", width: "8%", cellsrenderer: editIcon, align: "center", },
       ],
       source: new jqx.dataAdapter(source),
     };
@@ -56,7 +45,7 @@ export default class DemoGrid extends React.Component {
 
   onRowclick(event) {
     try {
-      debugger;
+      ;
       if (event !== null && event !== undefined) {
         const row = event.args.row.bounddata !== undefined ? event.args.row.bounddata : event.args.row
         const body = {
@@ -81,8 +70,6 @@ export default class DemoGrid extends React.Component {
     } catch (error) {
       console.log("Error: ", error)
     }
-
-
 
   }
 
@@ -136,13 +123,13 @@ export default class DemoGrid extends React.Component {
     }
   }
 
-  Cellclick (event) {
-     
+  Cellclick(event) {
+
     if (event.args.datafield === "detail") {
-        this.props.setOpenModal(true);
+      this.props.setOpenModal(true);
     }
 
-}
+  }
   render() {
     return (
       <JqxGrid

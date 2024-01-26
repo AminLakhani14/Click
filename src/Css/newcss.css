@@ -4,155 +4,150 @@
 @import url(https://fonts.googleapis.com/css?family=Bree+Serif);
 
 body {
-	background: #212121;
-	font-size: 22px;
-	line-height: 32px;
-	color: #ffffff;
-	margin: 0;
-	padding: 0;
-	word-wrap: break-word !important;
-	font-family: 'Open Sans', sans-serif;
+  background: #212121;
+  font-size: 22px;
+  line-height: 32px;
+  color: #ffffff;
+  margin: 0;
+  padding: 0;
+  word-wrap: break-word !important;
+  font-family: "Open Sans", sans-serif;
 }
 
-.submit_button{
-background:linear-gradient(180deg, #720d1d 0%, #1f0308 100%) !important;
-color: white;
-border: none;
-padding: 10px;
-font-size: 20px;
-width: 20%;
-border-radius: 5px;
-margin-left: 0px;
-display: flex;
-justify-content: center;
-align-items: center;
+.submit_button {
+  background: linear-gradient(180deg, #720d1d 0%, #1f0308 100%) !important;
+  color: white;
+  border: none;
+  padding: 10px;
+  font-size: 20px;
+  width: 20%;
+  border-radius: 5px;
+  margin-left: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 h1 {
-	font-size: 60px;
-	text-align: center;
-	color: #FFF;
+  font-size: 60px;
+  text-align: center;
+  color: #fff;
 }
-h4{
-	font-size: 18px  !important;
-	margin-bottom: 5px !important;
-	margin-top: 10px !important;
+h4 {
+  font-size: 18px !important;
+  margin-bottom: 5px !important;
+  margin-top: 10px !important;
 }
 h3 {
-	font-size: 30px;
-	line-height: 34px;
-	text-align: center;
-	color: #FFF;
+  font-size: 30px;
+  line-height: 34px;
+  text-align: center;
+  color: #fff;
 }
 
 h3 a {
-	color: #FFF;
+  color: #fff;
 }
 
 a {
-	color: #FFF;
+  color: #fff;
 }
 
 h1 {
-	margin-top: 100px;
-	text-align: center;
-	font-size: 60px;
-	line-height: 70px;
-	font-family: 'Bree Serif', 'serif';
+  margin-top: 100px;
+  text-align: center;
+  font-size: 60px;
+  line-height: 70px;
+  font-family: "Bree Serif", "serif";
 }
 
 #container {
-	margin: 0 auto;
-	max-width: 890px;
-}
-
-p {
-	/* text-align: center; */
+  margin: 0 auto;
+  max-width: 890px;
 }
 
 .toggle,
-[id^=drop] {
-	display: none;
+[id^="drop"] {
+  display: none;
 }
 
 /* Giving a background-color to the nav container. */
 nav {
-	margin: 0;
-	padding: 0;
-	background-color: rgb(113, 36, 36);
+  margin: 0;
+  padding: 0;
+  background-color: rgb(113, 36, 36);
 }
 
 #logo {
-	display: block;
-	padding: 0 30px;
-	float: left;
-	font-size: 20px;
-	line-height: 60px;
+  display: block;
+  padding: 0 30px;
+  float: left;
+  font-size: 20px;
+  line-height: 60px;
 }
 
 /* Since we'll have the "ul li" "float:left"
  * we need to add a clear after the container. */
 
 nav:after {
-	content: "";
-	display: table;
-	clear: both;
+  content: "";
+  display: table;
+  clear: both;
 }
 
 /* Removing padding, margin and "list-style" from the "ul",
  * and adding "position:reltive" */
 nav ul {
-	float: right;
-	padding: 0;
-	margin: 0;
-	list-style: none;
-	position: relative;
+  float: right;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  position: relative;
 }
-.hero_para{
-	color: white !important;
-	text-align: center;
+.hero_para {
+  color: white !important;
+  text-align: center;
 }
 /* Positioning the navigation items inline */
 nav ul li {
-	margin: 0px;
-	display: inline-block;
-	float: left;
-	/* background-color: rgb(113, 36, 36); */
+  margin: 0px;
+  display: inline-block;
+  float: left;
 }
 
 nav a {
-	display: block;
-	padding: 14px 20px;
-	color: #FFF;
-	font-size: 17px;
-	text-decoration: none;
+  display: block;
+  padding: 14px 20px;
+  color: #fff;
+  font-size: 17px;
+  text-decoration: none;
 }
 
 /* Background color change on Hover */
 nav a:hover {
-	background-color: #ffffff;
+  background-color: #ffffff;
 }
 
 /* Hide Dropdowns by Default
  * and giving it a position of absolute */
 nav ul ul {
-	display: none;
-	position: absolute;
-	/* has to be the same number as the "line-height" of "nav a" */
-	top: 60px;
+  display: none;
+  position: absolute;
+  /* has to be the same number as the "line-height" of "nav a" */
+  top: 60px;
 }
 
 /* Display Dropdowns on Hover */
-nav ul li:hover>ul {
-	display: inherit;
+nav ul li:hover > ul {
+  display: inherit;
 }
 
 /* Fisrt Tier Dropdown */
 nav ul ul li {
-	width: 170px;
-	float: none;
-	display: list-item;
-	position: relative;
+  width: 170px;
+  float: none;
+  display: list-item;
+  position: relative;
 }
 
 /* Second, Third and more Tiers	
@@ -160,209 +155,183 @@ nav ul ul li {
  * by the amount of the width of the first tier.
 */
 nav ul ul ul li {
-	position: relative;
-	top: -60px;
-	/* has to be the same number as the "width" of "nav ul ul li" */
-	left: 170px;
+  position: relative;
+  top: -60px;
+  /* has to be the same number as the "width" of "nav ul ul li" */
+  left: 170px;
 }
-
 
 /* Change ' +' in order to change the Dropdown symbol */
-li>a:after {
-	content: ' +';
+li > a:after {
+  content: " +";
 }
 
-li>a:only-child:after {
-	content: '';
+li > a:only-child:after {
+  content: "";
 }
-
 
 /* Media Queries
 --------------------------------------------- */
 
-@media all and (max-width : 768px) {
+@media all and (max-width: 768px) {
+  #logo {
+    display: block;
+    padding: 0;
+    width: 100%;
+    text-align: center;
+    float: none;
+  }
 
-	#logo {
-		display: block;
-		padding: 0;
-		width: 100%;
-		text-align: center;
-		float: none;
-	}
+  nav {
+    margin: 0;
+  }
 
-	nav {
-		margin: 0;
-	}
+  /* Hide the navigation menu by default */
+  /* Also hide the  */
+  .toggle + a,
+  .menu {
+    display: none;
+  }
 
-	/* Hide the navigation menu by default */
-	/* Also hide the  */
-	.toggle+a,
-	.menu {
-		display: none;
-	}
+  /* Stylinf the toggle lable */
+  .toggle {
+    display: contents;
+    padding: 14px 20px;
+    color: #fff;
+    text-decoration: none;
+    border: none;
+    margin-top: -1px;
+    width: 101%;
+  }
 
-	/* Stylinf the toggle lable */
-	.toggle {
-		display: contents;
-		/* background-color: rgb(113, 36, 36); */
-		padding: 14px 20px;
-		color: #FFF;
-		/* font-size: 17px; */
-		text-decoration: none;
-		border: none;
-		margin-top: -1px;
-		width: 101%;
-	}
+  .toggle2 {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 20px;
+    font-size: 20px;
+  }
 
-	.toggle2 {
-		padding-top: 5px;
-		padding-bottom: 5px;
-		padding-left: 20px;
-		font-size: 20px;
-	}
+  /* Display Dropdown when clicked on Parent Lable */
+  [id^="drop"]:checked + ul {
+    display: block;
+    overflow: hidden;
+  }
 
-	.toggle:hover {
-		/* background-color: #000000; */
-	}
+  /* Change menu item's width to 100% */
+  nav ul li {
+    display: block;
+    width: 100%;
+  }
 
-	/* Display Dropdown when clicked on Parent Lable */
-	[id^=drop]:checked+ul {
-		display: block;
-		overflow: hidden;
-	}
+  nav ul ul .toggle,
+  nav ul ul a {
+    padding: 0 40px;
+  }
 
-	/* Change menu item's width to 100% */
-	nav ul li {
-		display: block;
-		width: 100%;
-	}
+  nav ul ul ul a {
+    padding: 0 80px;
+  }
 
-	nav ul ul .toggle,
-	nav ul ul a {
-		padding: 0 40px;
-	}
+  nav ul li ul li .toggle,
+  nav ul ul a,
+  nav ul ul ul a {
+    padding: 14px 20px;
+    color: #fff;
+    font-size: 17px;
+  }
 
-	nav ul ul ul a {
-		padding: 0 80px;
-	}
+  /* Hide Dropdowns by Default */
+  nav ul ul {
+    float: none;
+    position: static;
+    color: #ffffff;
+    /* has to be the same number as the "line-height" of "nav a" */
+  }
 
-	nav a:hover,
-	nav ul ul ul a {
-		/* background-color: #000000; */
-	}
+  /* Hide menus on hover */
+  nav ul ul li:hover > ul,
+  nav ul li:hover > ul {
+    display: none;
+  }
 
-	nav ul li ul li .toggle,
-	nav ul ul a,
-	nav ul ul ul a {
-		padding: 14px 20px;
-		color: #FFF;
-		font-size: 17px;
-	}
+  /* Fisrt Tier Dropdown */
+  nav ul ul li {
+    display: block;
+    width: 100%;
+  }
 
-
-	nav ul li ul li .toggle,
-	nav ul ul a {
-		/* background-color: #212121;  */
-	}
-
-	/* Hide Dropdowns by Default */
-	nav ul ul {
-		float: none;
-		position: static;
-		color: #ffffff;
-		/* has to be the same number as the "line-height" of "nav a" */
-	}
-
-	/* Hide menus on hover */
-	nav ul ul li:hover>ul,
-	nav ul li:hover>ul {
-		display: none;
-	}
-
-	/* Fisrt Tier Dropdown */
-	nav ul ul li {
-		display: block;
-		width: 100%;
-	}
-
-	nav ul ul ul li {
-		position: static;
-		/* has to be the same number as the "width" of "nav ul ul li" */
-
-	}
-
+  nav ul ul ul li {
+    position: static;
+    /* has to be the same number as the "width" of "nav ul ul li" */
+  }
 }
 
 .mobiledropdowntoggle {
-	margin-left: 15px;
-	padding-top: 2px !important;
-	margin-bottom: -8px !important;
-	font-size: 20px !important;
+  margin-left: 15px;
+  padding-top: 2px !important;
+  margin-bottom: -8px !important;
+  font-size: 20px !important;
 }
 
 .mobilenesteddropdowntoggle {
-	margin-left: 25px;
-	margin-top: -8px !important;
-	font-size: 17px !important;
-	padding-top: 10px;
-	/* margin-bottom: -8px !important; */
-	padding-bottom: 2px;
+  margin-left: 25px;
+  margin-top: -8px !important;
+  font-size: 17px !important;
+  padding-top: 10px;
+  padding-bottom: 2px;
 }
 .mobilenesteddropdowntoggle2 {
-	margin-left: 25px;
-	margin-top: -8px !important;
-	font-size: 17px !important;
-	padding-top: 10px;
-	/* margin-bottom: -8px !important; */
-	padding-bottom: 2px;
+  margin-left: 25px;
+  margin-top: -8px !important;
+  font-size: 17px !important;
+  padding-top: 10px;
+  padding-bottom: 2px;
 }
 
 .borderline {
-	border-top: 1px solid;
+  border-top: 1px solid;
 }
 
 .borderline2 {
-	border-top: 1px solid;
-	margin-bottom: 10px;
+  border-top: 1px solid;
+  margin-bottom: 10px;
 }
 
 .plus::after {
-	content: "+";
-	/* / Set the content to a plus sign / */
-	font-size: 16px;
-	/* / Adjust the font size as desired / */
-	font-weight: bold;
-	/* / Adjust the font weight as desired / */
-	color: white;
-	/* / Set the color of the plus icon / */
-	margin-left: 100px;
-	/* / Add some spacing to the left of the plus icon / */
+  content: "+";
+  /* / Set the content to a plus sign / */
+  font-size: 16px;
+  /* / Adjust the font size as desired / */
+  font-weight: bold;
+  /* / Adjust the font weight as desired / */
+  color: white;
+  /* / Set the color of the plus icon / */
+  margin-left: 100px;
+  /* / Add some spacing to the left of the plus icon / */
 }
 
 /* / Minus icon style / */
 .minus::after {
-	content: "-";
-	/* / Set the content to a minus sign / */
-	font-size: 16px;
-	/* / Adjust the font size as desired / */
-	font-weight: bold;
-	/* / Adjust the font weight as desired / */
-	color: white;
-	/* / Set the color of the minus icon / */
-	margin-left: 100px;
-	/* / Add some spacing to the left of the minus icon / */
+  content: "-";
+  /* / Set the content to a minus sign / */
+  font-size: 16px;
+  /* / Adjust the font size as desired / */
+  font-weight: bold;
+  /* / Adjust the font weight as desired / */
+  color: white;
+  /* / Set the color of the minus icon / */
+  margin-left: 100px;
+  /* / Add some spacing to the left of the minus icon / */
 }
 
-@media all and (max-width : 330px) {
-
-	nav ul li {
-		display: block;
-		width: 94%;
-	}
-
+@media all and (max-width: 330px) {
+  nav ul li {
+    display: block;
+    width: 94%;
+  }
 }
-@media screen and (max-width : 500px)  {
-	.submit_button{
-		width: 100%;
-	}
+@media screen and (max-width: 500px) {
+  .submit_button {
+    width: 100%;
+  }
 }

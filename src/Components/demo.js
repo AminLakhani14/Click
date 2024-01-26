@@ -1204,7 +1204,7 @@ export default function RegulatoryCatalogCalculator() {
     setIsVisible(true);
   }, []);
   const handleDepartments = (e, param) => {
-    debugger;
+    ;
     const selectedValue = e.target.value;
     const departmentLabels = {
       Urban: "Areas",
@@ -1240,7 +1240,7 @@ export default function RegulatoryCatalogCalculator() {
     return filterData;
   };
   const handleSubDepartments = (e) => {
-    debugger;
+    ;
     const selectedValue = e.target.value;
     const departmentLabels = {
       Urban: "Areas",
@@ -1277,7 +1277,7 @@ export default function RegulatoryCatalogCalculator() {
   };
 
   const handleArea = (e) => {
-    debugger;
+    ;
     let data = [...gridData];
     const selectedValue = e.target.value;
     let filterData = [];
@@ -1287,7 +1287,7 @@ export default function RegulatoryCatalogCalculator() {
     setChangeValue(filterData);
   };
   const handleSubArea = (e) => {
-    debugger;
+    ;
     let data = [...gridData];
     const selectedValue = e.target.value;
     let filterData = [];

@@ -1,6 +1,4 @@
-
 import React, { useEffect, useRef, useState } from "react";
-// import click from "../assets/click-logo1.png";
 import Group8364 from "../assets/click-logo1.png";
 import accessibility from "../assets/accessibility.png";
 import "../Css/header.css";
@@ -8,7 +6,6 @@ import "../Css/highlight.css";
 import "../Css/investnow.css";
 import sindh from "../assets/logo-sindh.png";
 import English from "../assets/English.png";
-import pak from "../assets/pak.png";
 import urdu from "../assets/urdu.png";
 import Sindhi from "../assets/Sindhi.png";
 import "../Css/resource.css";
@@ -33,13 +30,11 @@ import { Tooltip } from "antd";
 import { useMemo } from "react";
 import { translations } from "../Transalation/Transalation";
 import { useSelector } from "react-redux";
-import { Button, TextField } from "@mui/material";
-import Search from "antd/es/input/Search";
-import { handleSearch, searchText } from "../Route";
-import InvestmentDepartment from "../assets/DownloadDocument/CompetitivenessofSindh.pdf"
+import { handleSearch } from "../Route";
+import InvestmentDepartment from "../assets/DownloadDocument/CompetitivenessofSindh.pdf";
 
 function Header(props) {
-const {language} = useSelector((state)=>state.language)
+  const { language } = useSelector((state) => state.language);
 
   const [isHovered, setIsHovered] = useState(false);
 
@@ -68,7 +63,7 @@ const {language} = useSelector((state)=>state.language)
   const handleMouseLeaveYoutube = () => {
     setIsHoveredYoutube(false);
   };
-  const [isHoverdInsta, setisHoverdInsta] = useState(false)
+  const [isHoverdInsta, setisHoverdInsta] = useState(false);
 
   const handleMouseEnterInsta = () => {
     setisHoverdInsta(true);
@@ -77,7 +72,6 @@ const {language} = useSelector((state)=>state.language)
   const handleMouseLeaveInsta = () => {
     setisHoverdInsta(false);
   };
-
 
   const [isHoveredLinkedIn, setIsHoveredLinkedIn] = useState(false);
 
@@ -137,7 +131,7 @@ const {language} = useSelector((state)=>state.language)
   // ... the rest of your code ...
 
   const [isSticky, setIsSticky] = useState(false);
-  const [isHeaderSticky, setisHeaderSticky] = useState(false)
+  const [isHeaderSticky, setisHeaderSticky] = useState(false);
 
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
@@ -157,13 +151,13 @@ const {language} = useSelector((state)=>state.language)
   }, []);
   useEffect(() => {
     const handleScroll = () => {
-      if(window.scrollY>195){
-        setisHeaderSticky(true)
+      if (window.scrollY > 195) {
+        setisHeaderSticky(true);
       }
       if (window.scrollY > 210) {
         setIsSticky(true);
       } else {
-        setisHeaderSticky(false)
+        setisHeaderSticky(false);
         setIsSticky(false);
       }
     };
@@ -465,1302 +459,905 @@ const {language} = useSelector((state)=>state.language)
       </div>
     </div>
   );
-
-
-
-  // const handleSearch = () => {
-  //   const searchText = searchTextRef.current.value;
-  //   const elements = document.getElementsByClassName('highlightable');
-
-  //   for (const element of elements) {
-  //     const text = element.textContent || element.innerText;
-  //     const matchIndex = text.indexOf(searchText);
-
-  //     if (matchIndex !== -1) {
-  //       const beforeText = text.substring(0, matchIndex);
-  //       const matchText = text.substring(
-  //         matchIndex,
-  //         matchIndex + searchText.length
-  //       );
-  //       const afterText = text.substring(matchIndex + searchText.length);
-
-  //       // Apply bold style to the matching text
-  //       const styledHTML = `
-  //         ${beforeText}<span class="bold">${matchText}</span>${afterText}
-  //       `;
-  //       element.innerHTML = styledHTML;
-
-  //       // Scroll to the element
-  //       element.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-  //       console.log(matchText)
-
-  //       return; // Stop searching after finding the first match
-  //     } else {
-  //       // Reset the element's innerHTML if no match is found
-  //       element.innerHTML = text;
-  //     }
-  //   }
-  // };
-  console.log("naem",props.HeaderSearch)
-  console.log("text",props.Text)
-
-  const [searchInput, setSearchInput] = useState('');
-  const SearchBox = ( 
+  const [searchInput, setSearchInput] = useState("");
+  const SearchBox = (
     <div
       className="d-flex justify-content-between"
       style={{ width: "325px", height: "60px" }}
     >
       <input
-          type="text"
-          id="searchText"
-          style={{ width: "240px", maxWidth: "240px", height: "60px" }}
-          value={searchInput}
-          onChange={(e) => setSearchInput(e.target.value)}
-        />
-        <button className="update" onClick={handleSearch}>Search</button>
+        type="text"
+        id="searchText"
+        style={{ width: "240px", maxWidth: "240px", height: "60px" }}
+        value={searchInput}
+        onChange={(e) => setSearchInput(e.target.value)}
+      />
+      <button className="update" onClick={handleSearch}>
+        Search
+      </button>
     </div>
   );
 
-
-
   return (
     <>
-    <div
-          style={{
-            position: "relative",
-            zIndex: 9999,
-            backgroundColor:"transparent"
-          }}
-        >
-          <div className="boxshadowNavBar2 py-2">
-            <div className="row">
-              <div className="col-lg-3 l-side px-5">
-                <img
-                  className="clickMainHeaderLogo"
-                  src={Group8364}
-                  alt=""
-                ></img>
-              </div>
+      <div
+        style={{
+          position: "relative",
+          zIndex: 9999,
+          backgroundColor: "transparent",
+        }}
+      >
+        <div className="boxshadowNavBar2 py-2">
+          <div className="row">
+            <div className="col-lg-3 l-side px-5">
+              <img className="clickMainHeaderLogo" src={Group8364} alt=""></img>
+            </div>
 
-              <div className="col-lg-9 col-md-6 col-sm-12 col-xs-12 r-side " style={{display:'flex',justifyContent:'end',alignItems:'center'}}>
-<div style={{display:'flex',flexDirection:'column',alignItems:'end',}}>
-<div>
-<Tooltip
-                  overlayInnerStyle={{ borderRadius: "0px" }}
-                  color={"#Ffffff"}
-                  placement="bottom"
-                  title={schoolEnergyDepartment}
-                  arrow={mergedArrow}
-                  zIndex={10000}
-                >
+            <div
+              className="col-lg-9 col-md-6 col-sm-12 col-xs-12 r-side "
+              style={{
+                display: "flex",
+                justifyContent: "end",
+                alignItems: "center",
+              }}
+            >
+              <div
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "end",
+                }}
+              >
+                <div>
+                  <Tooltip
+                    overlayInnerStyle={{ borderRadius: "0px" }}
+                    color={"#Ffffff"}
+                    placement="bottom"
+                    title={schoolEnergyDepartment}
+                    arrow={mergedArrow}
+                    zIndex={10000}
+                  >
+                    <img
+                      className="headerLogoImages"
+                      src={accessibility}
+                      alt=""
+                      style={{ cursor: "pointer" }}
+                    />
+                  </Tooltip>
                   <img
                     className="headerLogoImages"
-                    src={accessibility}
+                    src={language === "ur" ? English : urdu}
                     alt=""
-                    style={{ cursor: "pointer", }}
+                    onClick={props.toggleLanguage}
+                    style={
+                      language == "ur"
+                        ? {
+                          height: "10px",
+                          width: "50px",
+                          marginLeft: "20px",
+                          marginRight: "20px",
+                        }
+                        : { marginLeft: "20px", marginRight: "20px" }
+                    }
                   />
-                </Tooltip>
-                {/* <img
-                  className="headerLogoImages"
-                  src={pak}
-                  alt=""
-                  style={{ marginLeft: "20px" }}
-                /> */}
-                <img
-                  className="headerLogoImages"
-                  src={language === "ur" ? English : urdu}
-                  alt=""
-                  onClick={props.toggleLanguage}
-                  // style={{ marginLeft: "20px", marginRight: "20px" }}
-                  style={language == "ur" ?{height:"10px",width:"50px",marginLeft: "20px", marginRight: "20px"}:{marginLeft: "20px", marginRight: "20px"}}
-                />
-                <img
-                  className="headerLogoImages"
-                  src={language === "sd" ? English : Sindhi}
-                  // src={Sindhi}
-                  alt=""
-                  onClick={props.SindhitoggleLanguage}
-                  // style={{ marginLeft: "20px", marginRight: "20px" }}
-                  style={language == "sd" ?{height:"10px",width:"50px",marginLeft: "20px", marginRight: "20px"}:{marginLeft: "20px", marginRight: "20px"}}
-                />
-                <a href="comingsoon.html">
-                  <button type="button" className="login">
-                    <span>{translations["Login"][language]}</span>
-                  </button>
-                </a>
-                &nbsp;&nbsp;
-                <Link to={"/feedback"} style={{ textDecoration: "none" }}>
-                  <button type="button" className="feedback">
-                    <span>
-                      {translations["Feedback"][language]}
-                    </span>
-                  </button>
-                </Link>
-</div>
+                  <img
+                    className="headerLogoImages"
+                    src={language === "sd" ? English : Sindhi}
+                    alt=""
+                    onClick={props.SindhitoggleLanguage}
+                    style={
+                      language == "sd"
+                        ? {
+                          height: "10px",
+                          width: "50px",
+                          marginLeft: "20px",
+                          marginRight: "20px",
+                        }
+                        : { marginLeft: "20px", marginRight: "20px" }
+                    }
+                  />
+                  <a href="comingsoon.html">
+                    <button type="button" className="login">
+                      <span>{translations["Login"][language]}</span>
+                    </button>
+                  </a>
+                  &nbsp;&nbsp;
+                  <Link to={"/feedback"} style={{ textDecoration: "none" }}>
+                    <button type="button" className="feedback">
+                      <span>{translations["Feedback"][language]}</span>
+                    </button>
+                  </Link>
+                </div>
                 {isHeaderSticky === true ? (
-                <GenericHeader toggleLanguage={props.toggleLanguage} SindhitoggleLanguage={props.SindhitoggleLanguage} handleSearch={props.handleSearch}  searchTextRef={props.searchTextRef}/>
-            ) : 
-            (
-            windowWidth >1024 &&    <div className={`header `}>
-            <div className={"row "} style={{height:"5px"}}>
-              <div
-                className={" navbar boxshadowNavBar justify-content-end"}
-                style={language === "ur" || language === "sd"?{marginTop:0}:windowWidth <1280?{position:'relative',zIndex:-1,background:"white"}: { width: "100%", paddingRight: "0px", }}
-              >
-                <ul
-                  style={
-                    language === "ur" || language === "sd"
-                      ? {
-                        display: "flex",
-                        marginBottom: "0px",
-                        flexDirection: "row-reverse",
-                       
-                      }
-                      : { marginBottom: "0px" ,marginTop:5,display:'flx',justifyContent:'flex-en',padding:0}
-                  }
-                >
-                  <li>
-                    <a
-                      href="comingsoon.html"
-                      title="Home Page"
-                      className={"link"}
-                    >
-                      <Link className={"link"} to={"/home"}>
-                        {translations["home"][language]}
-                      </Link>
-                    </a>
-                  </li>
-                  
-                  <li>
-                    <a
-                      href="comingsoon.html"
-                      title="Home Page"
-                      className={"link"}
-                    >
-                      <Link className={"link"} to={"/feedback"}>
-                        {
-                          translations["Feedback"][
-                          language
-                          ]
-                        }
-                      </Link>
-                    </a>
-                  </li>
-                  {/* <li>
-                    <a title="" className={"link"}>
-                      <Link className="link" to={"/regulatorycatalog"}>
-                        {translations["Interactiveregulatory"][language]}
-                      </Link>
-                    </a>
-                  </li> */}
-                  <li >
-                  <div
-                      class="dropdown1"
-                      style={
-                        language === "ur" || language === "sd"
-                          ? {
-                            display: "flex",
-                            flexDirection: "row-reverse",
-                          }
-                          : {
-                            marginRight:10
-                          }
-                      }
-                    >
-                      <span
-                        style={{
-                          marginRight: "5px",
-                          textDecoration: "none",
-                        }}
-                        className={"link"}
-                      >
-                        {" "}
-                        {translations["Interactiveregulatory"][language]}
-                      </span>
-                      <i
-                        // style={{ marginTop: "5px", marginRight: "5px",}}
-                        style={
-                          language === "ur" ||
-                            language === "sd"
-                            ? {
-                              marginTop: "5px", marginRight: "5px"
-                            }
-                            : {
-                              marginTop: "0px", marginLeft: "3px",
-                              marginRight:-7
-                            }
-                        }
-                        class="dropbtn iconDown hover-rotate fa fa-chevron-right"
-                      ></i>
-                      <div
-                        class="dropdown-content1"
-                        style={
-                          language === "ur" || language === "sd"
-                            ? { marginTop: "30px" }
-                            : {
-                              marginLeft:0
-                            }
-                        }
-                      >
-                     <Link className="" to={"/Maps"}>
-                          <a
-                            target="_blank"
-                            href=""
-                            style={
-                              language === "ur" ||
-                                language === "sd"
-                                ? {
-                                  display: "flex",
-                                  flexDirection: "row-reverse",
-                                  marginRight: "-16px",
-                                }
-                                : {}
-                            }
-                          >
-                            {translations["Maps"][language]}
-                          </a>
-                        </Link>
-                       
-                        <Link className={""} to={"/regulatorycatalog"}>
-                          <a
-                            href="#"
-                            style={
-                              language === "ur" ||
-                                language === "sd"
-                                ? {
-                                  display: "flex",
-                                  flexDirection: "row-reverse",
-                                  marginRight: "-16px",
-                                }
-                                : {}
-                            }
-                          >
-                            {translations["RegulatoryCatalog"][language]}
-                          </a>
-                        </Link>
-                        <Link className={""} to={"/RegulatoryCatalogCalculator"}>
-                          <a
-                            href="#"
-                            style={
-                              language === "ur" ||
-                                language === "sd"
-                                ? {
-                                  display: "flex",
-                                  flexDirection: "row-reverse",
-                                  marginRight: "-16px",
-                                }
-                                : {}
-                            }
-                          >
-                            {translations["calculatorButton"][language]}
-                          </a>
-                        </Link>
-                        <Link className="" to={"/Dashboard"}>
-                          <a
-                            target="_blank"
-                            href=""
-                            style={
-                              language === "ur" ||
-                                language === "sd"
-                                ? {
-                                  display: "flex",
-                                  flexDirection: "row-reverse",
-                                  marginRight: "-16px",
-                                }
-                                : {}
-                            }
-                          >
-                            {translations["statistics"][language]}
-                          </a>
-                        </Link>
-                        <Link className="" to={"/tutorial"}>
-                          <a
-                            target="_blank"
-                            href=""
-                            style={
-                              language === "ur" ||
-                                language === "sd"
-                                ? {
-                                  display: "flex",
-                                  flexDirection: "row-reverse",
-                                  marginRight: "-16px",
-                                }
-                                : {}
-                            }
-                          >
-                            {translations["Tutorial"][language]}
-                          </a>
-                        </Link>
-                        {/* <Link className={""} to={"/resource"}>
-                          <a
-                            href="#"
-                            style={
-                              language === "ur" ||
-                                language === "sd"
-                                ? {
-                                  display: "flex",
-                                  flexDirection: "row-reverse",
-                                  marginRight: "-16px",
-                                }
-                                : {}
-                            }
-                          >
-                            {translations["Downloads"][language]}
-                          </a>
-                        </Link>
-                        <Link className={""} to={"/Team"}>
-                          <a
-                            href="#"
-                            style={
-                              language === "ur" ||
-                                language === "sd"
-                                ? {
-                                  display: "flex",
-                                  flexDirection: "row-reverse",
-                                  marginRight: "-16px",
-                                }
-                                : {}
-                            }
-                          >
-                            {translations["Team"][language]}
-                          </a>
-                        </Link>
-                        <Link className={""} to={""}>
-                          <a
-                            href="#"
-                            style={
-                              language === "ur" ||
-                                language === "sd"
-                                ? {
-                                  display: "flex",
-                                  flexDirection: "row-reverse",
-                                  marginRight: "-16px",
-                                }
-                                : {}
-                            }
-                          >
-                            {translations["Contactus"][language]}
-                          </a>
-                        </Link> */}
-                      </div>
-                    </div>
-                  </li>
-                  <li >
-                  <div
-                      class="dropdown1"
-                      style={
-                        language === "ur" || language === "sd"
-                          ? {
-                            display: "flex",
-                            flexDirection: "row-reverse",
-                          }
-                          : {
-                            marginRight:10
-                          }
-                      }
-                    >
-                      <span
-                        style={{
-                          marginRight: "5px",
-                          textDecoration: "none",
-                        }}
-                        className={"link"}
-                      >
-                        {" "}
-                        {translations["BusinessFacilitation"][language]}
-                      </span>
-                      <i
-                        // style={{ marginTop: "5px", marginRight: "5px",}}
-                        style={
-                          language === "ur" ||
-                            language === "sd"
-                            ? {
-                              marginTop: "5px", marginRight: "5px"
-                            }
-                            : {
-                              marginTop: "0px", marginLeft: "3px",
-                              marginRight:-7
-                            }
-                        }
-                        class="dropbtn iconDown hover-rotate fa fa-chevron-right"
-                      ></i>
-                      <div
-                        class="dropdown-content1"
-                        style={
-                          language === "ur" || language === "sd"
-                            ? { marginTop: "30px" }
-                            : {
-                              marginLeft:0
-                            }
-                        }
-                      >
-                       
-                          <a
-                            target="_blank"
-                            href="https://smeda.org/index.php?option=com_content&view=article&id=146&Itemid=676"
-                            style={
-                              language === "ur" ||
-                                language === "sd"
-                                ? {
-                                  display: "flex",
-                                  flexDirection: "row-reverse",
-                                  marginRight: "-16px",
-                                  fontWeight:"bold",
-                                }
-                                : {
-                                  fontWeight:"bold",
-                                }
-                            }
-                          >
-                            {translations["Guids"][language]}
-                          </a>
-                       
-                          <a
-                          target="_blank"
-                            href="https://smeda.org/index.php?option=com_phocadownload&view=category&id=122&Itemid=308"
-                            style={
-                              language === "ur" ||
-                                language === "sd"
-                                ? {
-                                  display: "flex",
-                                  flexDirection: "row-reverse",
-                                  marginRight: "-16px",
-                                }
-                                : {
-                                  marginLeft:"10px"
-                                }
-                            }
-                          >
-                            {translations["PreFeasibilityStudies"][language]}
-                          </a>
-                          <a
-                          target="_blank"
-                            href="https://smeda.org/index.php?option=com_phocadownload&view=category&id=164&Itemid=981"
-                            style={
-                              language === "ur" ||
-                                language === "sd"
-                                ? {
-                                  display: "flex",
-                                  flexDirection: "row-reverse",
-                                  marginRight: "-16px",
-                                }
-                                : {
-                                  marginLeft:"10px"
-
-                                }
-                            }
-                          >
-                            {translations["BusinessGuides"][language]}
-                          </a>
-                          <a
-                            target="_blank"
-                            href="https://smeda.org/index.php?option=com_phocadownload&view=category&id=7&Itemid=363"
-                            style={
-                              language === "ur" ||
-                                language === "sd"
-                                ? {
-                                  display: "flex",
-                                  flexDirection: "row-reverse",
-                                  marginRight: "-16px",
-                                }
-                                : {
-                                  marginLeft:"10px"
-
-                                }
-                            }
-                          >
-                            {translations["CommercialContracts(English)"][language]}
-                          </a>
-                          <a
-                            target="_blank"
-                            href="https://smeda.org/index.php?option=com_phocadownload&view=category&id=7&Itemid=363"
-                            style={
-                              language === "ur" ||
-                                language === "sd"
-                                ? {
-                                  display: "flex",
-                                  flexDirection: "row-reverse",
-                                  marginRight: "-16px",
-                                }
-                                : {
-                                  marginLeft:"10px"
-
-                                }
-                            }
-                          >
-                            {translations["CommercialContracts(Urdu)"][language]}
-                          </a>
-                          <a
-                            target="_blank"
-                            href="https://smeda.org/index.php?option=com_phocadownload&view=category&id=15&Itemid=138"
-                            style={
-                              language === "ur" ||
-                                language === "sd"
-                                ? {
-                                  display: "flex",
-                                  flexDirection: "row-reverse",
-                                  marginRight: "-16px",
-                                }
-                                : {
-                                  marginLeft:"10px"
-
-                                }
-                            }
-                          >
-                            {translations["RegulatoryProcedures"][language]}
-                          </a>
-                          <a
-                            target="_blank"
-                            href="https://tipp.gov.pk/"
-                            style={
-                              language === "ur" ||
-                                language === "sd"
-                                ? {
-                                  display: "flex",
-                                  flexDirection: "row-reverse",
-                                  marginRight: "-16px",
-                                }
-                                : {
-                                  marginLeft:"10px"
-
-                                }
-                            }
-                          >
-                            {translations["TradeInformationPortal"][language]}
-                          </a>
-                          <a
-                            target="_blank"
-                            href={InvestmentDepartment}
-                            style={
-                              language === "ur" ||
-                                language === "sd"
-                                ? {
-                                  display: "flex",
-                                  flexDirection: "row-reverse",
-                                  marginRight: "-16px",
-                                }
-                                : {
-                                  marginLeft:"10px"
-
-                                }
-                            }
-                          >
-                            {translations["InvestmentDepartment"][language]}
-                          </a>
-
-
-                          <a
-                            target="_blank"
-                            href=""
-                            style={
-                              language === "ur" ||
-                                language === "sd"
-                                ? {
-                                  display: "flex",
-                                  flexDirection: "row-reverse",
-                                  marginRight: "-16px",
-                                  fontWeight:"bold",
-                                }
-                                : {
-                                  fontWeight:"bold",
-                                  marginTop:5
-
-                                }
-                            }
-                          >
-                            {translations["Reports"][language]}
-                          </a>
-                          <a
-                            target="_blank"
-                            href="https://smeda.org/index.php?option=com_phocadownload&view=category&id=40&Itemid=742"
-                            style={
-                              language === "ur" ||
-                                language === "sd"
-                                ? {
-                                  display: "flex",
-                                  flexDirection: "row-reverse",
-                                  marginRight: "-16px",
-                                }
-                                : {
-                                  marginLeft:"10px"
-                                }
-                            }
-                          >
-                            {translations["ClusterProfiles"][language]}
-                          </a>
-                          <a
-                            target="_blank"
-                            href="https://smeda.org/index.php?option=com_phocadownload&view=category&id=186&Itemid=1024"
-                            style={
-                              language === "ur" ||
-                                language === "sd"
-                                ? {
-                                  display: "flex",
-                                  flexDirection: "row-reverse",
-                                  marginRight: "-16px",
-                                }
-                                : {
-                                  marginLeft:"10px"
-
-                                }
-                            }
-                          >
-                            {translations["DistrictEconomicProfiles"][language]}
-                          </a>
-                          <a
-                            target="_blank"
-                            href="https://smeda.org/index.php?option=com_phocadownload&view=category&id=28&Itemid=139"
-                            style={
-                              language === "ur" ||
-                                language === "sd"
-                                ? {
-                                  display: "flex",
-                                  flexDirection: "row-reverse",
-                                  marginRight: "-16px",
-                                }
-                                : {
-                                  marginLeft:"10px"
-                                }
-                            }
-                          >
-                            {translations["SectorBriefs"][language]}
-                          </a>
-                          <a
-                            target="_blank"
-                            href="https://smeda.org/index.php?option=com_phocadownload&view=category&id=188&Itemid=1027"
-                            style={
-                              language === "ur" ||
-                                language === "sd"
-                                ? {
-                                  display: "flex",
-                                  flexDirection: "row-reverse",
-                                  marginRight: "-16px",
-                                }
-                                : {
-                                  marginLeft:"10px"
-                                }
-                            }
-                          >
-                            {translations["StudyReports"][language]}
-                          </a>
-                          <a
-                            target="_blank"
-                            href="https://smeda.org/index.php?option=com_phocadownload&view=category&id=168&Itemid=996"
-                            style={
-                              language === "ur" ||
-                                language === "sd"
-                                ? {
-                                  display: "flex",
-                                  flexDirection: "row-reverse",
-                                  marginRight: "-16px",
-                                }
-                                : {
-                                  marginLeft:"10px"
-                                }
-                            }
-                          >
-                            {translations["TradeAnalysisSeries"][language]}
-                          </a>
-                          <a
-                            target="_blank"
-                            href="https://tipp.gov.pk/?r=site/display&id=230"
-                            style={
-                              language === "ur" ||
-                                language === "sd"
-                                ? {
-                                  display: "flex",
-                                  flexDirection: "row-reverse",
-                                  marginRight: "-16px",
-                                }
-                                : {
-                                  marginLeft:"10px"
-                                }
-                            }
-                          >
-                            {translations["TradeStatistics"][language]}
-                          </a>
-                      </div>
-                    </div>
-                  </li>      
-                  <li>
-                    <a
-                      href="https://business.gov.pk/home_prmi/"
-                      title="Home Page"
-                      className={"link"}
-                      target="_blank"
-                    >
-                      {/* <Link className={"link"} to={"/home"}> */}
-                        {"PRMI"}
-                      {/* </Link> */}
-                    </a>
-                  </li>
-
-            
-                  <li >
-                  <div
-                      class="dropdown1"
-                      style={
-                        language === "ur" || language === "sd"
-                          ? {
-                            display: "flex",
-                            flexDirection: "row-reverse",
-                          }
-                          : {}
-                      }
-                    >
-                      <span
-                        style={{
-                          marginRight: "5px",
-                          textDecoration: "none",
-                        }}
-                        className={"link"}
-                      >
-                        {" "}
-                        {translations["Aboutus"][language]}
-                      </span>
-                      <i
-                        // style={{ marginTop: "5px", marginRight: "5px",}}
-                        style={
-                          language === "ur" ||
-                            language === "sd"
-                            ? {
-                              marginTop: "5px", marginRight: "5px"
-                            }
-                            : {
-                              marginTop: "0px", marginLeft: "3px",
-                              marginRight:10
-                            }
-                        }
-                        class="dropbtn iconDown hover-rotate fa fa-chevron-right"
-                      ></i>
-                      <div
-                        class="dropdown-content1"
-                        style={
-                          language === "ur" || language === "sd"
-                            ? { marginTop: "30px" }
-                            : {
-                              marginLeft:-100
-                            }
-                        }
-                      >
-                   
-                        {/* <div
-                          class="nested-dropdown1"
-                          style={{ width: "100%" }}
-                        >
-                          <span
-                            style={
-                              language === "ur" ||
-                                language === "sd"
-                                ? {
-                                  display: "flex",
-                                  flexDirection: "row-reverse",
-                                  width: "100%",
-                                }
-                                : {
-                                  display: "flex",
-                                  position: "relative",
-                                  width: "100%",
-                                }
-                            }
-                          >
-                            <a
-                              style={
-                                language === "ur" ||
-                                  language === "sd"
-                                  ? {
-                                    width: "88%",
-                                    paddingLeft: "30px",
-                                    height: "40px",
-                                    paddingTop: "8px",
-                                    display: "flex",
-                                    flexDirection: "row-reverse",
-                                  }
-                                  : {
-                                    width: "100%",
-                                    paddingLeft: "30px",
-                                    height: "40px",
-                                    paddingTop: "8px",
-                                  }
-                              }
-                              href="#"
-                            >
-                              {
-                                translations["Components"][
-                                language
-                                ]
-                              }
-                            </a>
-                            <i
-                              // style={{
-                              //   marginTop: "10px",
-                              //   marginLeft: "0px",
-                              //   position: "absolute",
-                              //   right: "15px",
-                              // }}
-                              style={
-                                language === "ur" ||
-                                  language === "sd"
-                                  ? {
-                                    marginTop: "10px",
-                                    marginLeft: "0px",
-                                    display: "flex",
-                                    flexDirection: "row-reverse",
-                                  }
-                                  : {
-                                    marginTop: "10px",
-                                    marginLeft: "0px",
-                                    position: "absolute",
-                                    right: "15px",
-                                  }
-                              }
-                              class="dropbtn unique-iconDown unique-hover-rotate component fa fa-chevron-right"
-                            ></i>
-                          </span>
-                          <div
-                            class="dropdown-content1 nested-content nested-right"
-                            style={{ left: "auto" }}
-                          >
-                            <Link className={""} to={"/Component"}>
-                              <a href="#">
-                                {
-                                  translations["CLICKSID"][
-                                  language
-                                  ]
-                                }
-                              </a>
-                            </Link>
-                            <Link className={""} to={"/Team"}>
-                              <a href="#">
-                                {
-                                  translations["OurTeam"][
-                                  language
-                                  ]
-                                }
-                              </a>
-                            </Link>
-                          </div>
-                        </div> */}
-                        <Link className="" to={"/introduction"}>
-                          <a
-                            target="_blank"
-                            href=""
-                            style={
-                              language === "ur" ||
-                                language === "sd"
-                                ? {
-                                  display: "flex",
-                                  flexDirection: "row-reverse",
-                                  marginRight: "-16px",
-                                }
-                                : {}
-                            }
-                          >
-                            {translations["Introduction"][language]}
-                          </a>
-                        </Link>
-                        <Link className={""} to={"/projectobjectives"}>
-                          <a
-                            href="#"
-                            style={
-                              language === "ur" ||
-                                language === "sd"
-                                ? {
-                                  display: "flex",
-                                  flexDirection: "row-reverse",
-                                  marginRight: "-16px",
-                                }
-                                : {}
-                            }
-                          >
-                            {translations["projectobjectives"][language]}
-                          </a>
-                        </Link>
-                        <Link className={""} to={"/acheivement"}>
-                          <a
-                            href="#"
-                            style={
-                              language === "ur" ||
-                                language === "sd"
-                                ? {
-                                  display: "flex",
-                                  flexDirection: "row-reverse",
-                                  marginRight: "-16px",
-
-                                }
-                                : {}
-                            }
-                          >
-                            {translations["Achievements"][language]}
-                          </a>
-                        </Link>
-                        <Link className={""} to={"/Team"}>
-                          <a
-                            href="#"
-                            style={
-                              language === "ur" ||
-                                language === "sd"
-                                ? {
-                                  display: "flex",
-                                  flexDirection: "row-reverse",
-                                  marginRight: "-16px",
-                                }
-                                : {}
-                            }
-                          >
-                            {translations["Team"][language]}
-                          </a>
-                        </Link>
-                        <Link className={""} to={"/resource"}>
-                          <a
-                            href="#"
-                            style={
-                              language === "ur" ||
-                                language === "sd"
-                                ? {
-                                  display: "flex",
-                                  flexDirection: "row-reverse",
-                                  marginRight: "-16px",
-                                }
-                                : {}
-                            }
-                          >
-                            {translations["Downloads"][language]}
-                          </a>
-                        </Link>
-                        <Link className={""} to={"/faqs"}>
-                          <a
-                            href="#"
-                            style={
-                              language === "ur" ||
-                                language === "sd"
-                                ? {
-                                  display: "flex",
-                                  flexDirection: "row-reverse",
-                                  marginRight: "-16px",
-                                }
-                                : {}
-                            }
-                          >
-                            {translations["FAQ"][language]}
-                          </a>
-                        </Link>
-                        <Link className={""} to={"/contactUs"}>
-                          <a
-                            href="#"
-                            style={
-                              language === "ur" ||
-                                language === "sd"
-                                ? {
-                                  display: "flex",
-                                  flexDirection: "row-reverse",
-                                  marginRight: "-16px",
-                                }
-                                : {}
-                            }
-                          >
-                            {translations["Contactus"][language]}
-                          </a>
-                        </Link>
-                      </div>
-                    </div>
-                  </li>
-                  {/* <li>
-                    <a title="" className={"link"}>
-                      <Link className="link" to={"/NewsAndInformation"}>
-                        {
-                          translations["NewsInformation"][
-                          language
-                          ]
-                        }
-                      </Link>
-                    </a>
-                  </li> */}
-                  {/* <li>
-                    <div
-                      class="dropdown1"
-                      style={
-                        language === "ur" || language === "sd"
-                          ? {
-                            display: "flex",
-                            flexDirection: "row-reverse",
-                          }
-                          : {}
-                      }
-                    >
-                      <span
-                        style={{
-                          marginRight: "5px",
-                          textDecoration: "none",
-                        }}
-                        className={"link"}
-                      >
-                        {translations["Resources"][language]}
-                      </span>
-                      <i
-                        style={
-                          language === "ur" ||
-                            language === "sd"
-                            ? {
-                              marginTop: "5px", marginRight: "5px"
-                            }
-                            : {
-                              marginTop: "0px", marginLeft: "0px"
-                            }
-                        }
-                        class=" dropbtn iconDown hover-rotate fa fa-chevron-right"
-                      ></i>
-                      <div
-                        class="dropdown-content1"
-                        style={
-                          language === "ur" || language === "sd"
-                            ? { marginTop: "30px" }
-                            : {}
-                        }
-                      >
-                        <Link className={""} to={"/resource"}>
-                          <a target="_blank" href="">
-                            {translations["Download"][language]}
-                          </a>
-                        </Link>
-                        <Link className={""} to={"/regulatorycatalog"}>
-                          <a href="#">
-                            {
-                              translations["RegulatoryCatalog"][
-                              language
-                              ]
-                            }
-                          </a>
-                        </Link>
-                      </div>
-                    </div>
-                  </li> */}
-                  {/* <li>
-                    <div
-                      class="dropdown1"
-                      style={
-                        language === "ur" || language === "sd"
-                          ? {
-                            display: "flex",
-                            flexDirection: "row-reverse",
-                          }
-                          : {}
-                      }
-                    >
-                      <span
-                        style={{
-                          marginRight: "5px",
-                          textDecoration: "none",
-                        }}
-                        className={"link"}
-                      >
-                        {" "}
-                        {translations["Aboutus"][language]}
-                      </span>
-                      <i
-                        // style={{ marginTop: "5px", marginRight: "5px",}}
-                        style={
-                          language === "ur" ||
-                            language === "sd"
-                            ? {
-                              marginTop: "5px", marginRight: "5px"
-                            }
-                            : {
-                              marginTop: "0px", marginLeft: "0px"
-                            }
-                        }
-                        class="dropbtn iconDown hover-rotate fa fa-chevron-right"
-                      ></i>
-                      <div
-                        class="dropdown-content1"
-                        style={
-                          language === "ur" || language === "sd"
-                            ? { marginTop: "30px" }
-                            : {}
-                        }
-                      >
-                        <Link className="" to={"/aboutus"}>
-                          <a
-                            target="_blank"
-                            href=""
-                            style={
-                              language === "ur" ||
-                                language === "sd"
-                                ? {
-                                  display: "flex",
-                                  flexDirection: "row-reverse",
-                                  marginRight: "-16px",
-                                }
-                                : {}
-                            }
-                          >
-                            {translations["Vision"][language]}
-                          </a>
-                        </Link>
+                  <GenericHeader
+                    toggleLanguage={props.toggleLanguage}
+                    SindhitoggleLanguage={props.SindhitoggleLanguage}
+                    handleSearch={props.handleSearch}
+                    searchTextRef={props.searchTextRef}
+                  />
+                ) : (
+                  windowWidth > 1024 && (
+                    <div className={`header `}>
+                      <div className={"row "} style={{ height: "5px" }}>
                         <div
-                          class="nested-dropdown1"
-                          style={{ width: "100%" }}
+                          className={
+                            " navbar boxshadowNavBar justify-content-end"
+                          }
+                          style={
+                            language === "ur" || language === "sd"
+                              ? { marginTop: 0 }
+                              : windowWidth < 1280
+                                ? {
+                                  position: "relative",
+                                  zIndex: -1,
+                                  background: "white",
+                                }
+                                : { width: "100%", paddingRight: "0px" }
+                          }
                         >
-                          <span
+                          <ul
                             style={
-                              language === "ur" ||
-                                language === "sd"
+                              language === "ur" || language === "sd"
                                 ? {
                                   display: "flex",
+                                  marginBottom: "0px",
                                   flexDirection: "row-reverse",
-                                  width: "100%",
                                 }
                                 : {
-                                  display: "flex",
-                                  position: "relative",
-                                  width: "100%",
+                                  marginBottom: "0px",
+                                  marginTop: 5,
+                                  display: "flx",
+                                  justifyContent: "flex-en",
+                                  padding: 0,
                                 }
                             }
                           >
-                            <a
-                              style={
-                                language === "ur" ||
-                                  language === "sd"
-                                  ? {
-                                    width: "88%",
-                                    paddingLeft: "30px",
-                                    height: "40px",
-                                    paddingTop: "8px",
-                                    display: "flex",
-                                    flexDirection: "row-reverse",
-                                  }
-                                  : {
-                                    width: "100%",
-                                    paddingLeft: "30px",
-                                    height: "40px",
-                                    paddingTop: "8px",
-                                  }
-                              }
-                              href="#"
-                            >
-                              {
-                                translations["Components"][
-                                language
-                                ]
-                              }
-                            </a>
-                            <i
-                              // style={{
-                              //   marginTop: "10px",
-                              //   marginLeft: "0px",
-                              //   position: "absolute",
-                              //   right: "15px",
-                              // }}
-                              style={
-                                language === "ur" ||
-                                  language === "sd"
-                                  ? {
-                                    marginTop: "10px",
-                                    marginLeft: "0px",
-                                    display: "flex",
-                                    flexDirection: "row-reverse",
-                                  }
-                                  : {
-                                    marginTop: "10px",
-                                    marginLeft: "0px",
-                                    position: "absolute",
-                                    right: "15px",
-                                  }
-                              }
-                              class="dropbtn unique-iconDown unique-hover-rotate component fa fa-chevron-right"
-                            ></i>
-                          </span>
-                          <div
-                            class="dropdown-content1 nested-content nested-right"
-                            style={{ left: "auto" }}
-                          >
-                            <Link className={""} to={"/Component"}>
-                              <a href="#">
-                                {
-                                  translations["CLICKSID"][
-                                  language
-                                  ]
-                                }
+                            <li>
+                              <a
+                                href="comingsoon.html"
+                                title="Home Page"
+                                className={"link"}
+                              >
+                                <Link className={"link"} to={"/home"}>
+                                  {translations["home"][language]}
+                                </Link>
                               </a>
-                            </Link>
-                            <Link className={""} to={"/Team"}>
-                              <a href="#">
-                                {
-                                  translations["OurTeam"][
-                                  language
-                                  ]
-                                }
+                            </li>
+
+                            <li>
+                              <a
+                                href="comingsoon.html"
+                                title="Home Page"
+                                className={"link"}
+                              >
+                                <Link className={"link"} to={"/feedback"}>
+                                  {translations["Feedback"][language]}
+                                </Link>
                               </a>
-                            </Link>
-                          </div>
+                            </li>
+                            <li>
+                              <div
+                                class="dropdown1"
+                                style={
+                                  language === "ur" || language === "sd"
+                                    ? {
+                                      display: "flex",
+                                      flexDirection: "row-reverse",
+                                    }
+                                    : {
+                                      marginRight: 10,
+                                    }
+                                }
+                              >
+                                <span
+                                  style={{
+                                    marginRight: "5px",
+                                    textDecoration: "none",
+                                  }}
+                                  className={"link"}
+                                >
+                                  {" "}
+                                  {
+                                    translations["Interactiveregulatory"][
+                                    language
+                                    ]
+                                  }
+                                </span>
+                                <i
+                                  // style={{ marginTop: "5px", marginRight: "5px",}}
+                                  style={
+                                    language === "ur" || language === "sd"
+                                      ? {
+                                        marginTop: "5px",
+                                        marginRight: "5px",
+                                      }
+                                      : {
+                                        marginTop: "0px",
+                                        marginLeft: "3px",
+                                        marginRight: -7,
+                                      }
+                                  }
+                                  class="dropbtn iconDown hover-rotate fa fa-chevron-right"
+                                ></i>
+                                <div
+                                  class="dropdown-content1"
+                                  style={
+                                    language === "ur" || language === "sd"
+                                      ? { marginTop: "30px" }
+                                      : {
+                                        marginLeft: 0,
+                                      }
+                                  }
+                                >
+                                  <Link className="" to={"/Maps"}>
+                                    <a
+                                      target="_blank"
+                                      href=""
+                                      style={
+                                        language === "ur" || language === "sd"
+                                          ? {
+                                            display: "flex",
+                                            flexDirection: "row-reverse",
+                                            marginRight: "-16px",
+                                          }
+                                          : {}
+                                      }
+                                    >
+                                      {translations["Maps"][language]}
+                                    </a>
+                                  </Link>
+
+                                  <Link
+                                    className={""}
+                                    to={"/regulatorycatalog"}
+                                  >
+                                    <a
+                                      href="#"
+                                      style={
+                                        language === "ur" || language === "sd"
+                                          ? {
+                                            display: "flex",
+                                            flexDirection: "row-reverse",
+                                            marginRight: "-16px",
+                                          }
+                                          : {}
+                                      }
+                                    >
+                                      {
+                                        translations["RegulatoryCatalog"][
+                                        language
+                                        ]
+                                      }
+                                    </a>
+                                  </Link>
+                                  <Link
+                                    className={""}
+                                    to={"/RegulatoryCatalogCalculator"}
+                                  >
+                                    <a
+                                      href="#"
+                                      style={
+                                        language === "ur" || language === "sd"
+                                          ? {
+                                            display: "flex",
+                                            flexDirection: "row-reverse",
+                                            marginRight: "-16px",
+                                          }
+                                          : {}
+                                      }
+                                    >
+                                      {
+                                        translations["calculatorButton"][
+                                        language
+                                        ]
+                                      }
+                                    </a>
+                                  </Link>
+                                  <Link className="" to={"/Dashboard"}>
+                                    <a
+                                      target="_blank"
+                                      href=""
+                                      style={
+                                        language === "ur" || language === "sd"
+                                          ? {
+                                            display: "flex",
+                                            flexDirection: "row-reverse",
+                                            marginRight: "-16px",
+                                          }
+                                          : {}
+                                      }
+                                    >
+                                      {translations["statistics"][language]}
+                                    </a>
+                                  </Link>
+                                  <Link className="" to={"/tutorial"}>
+                                    <a
+                                      target="_blank"
+                                      href=""
+                                      style={
+                                        language === "ur" || language === "sd"
+                                          ? {
+                                            display: "flex",
+                                            flexDirection: "row-reverse",
+                                            marginRight: "-16px",
+                                          }
+                                          : {}
+                                      }
+                                    >
+                                      {translations["Tutorial"][language]}
+                                    </a>
+                                  </Link>
+                                </div>
+                              </div>
+                            </li>
+                            <li>
+                              <div
+                                class="dropdown1"
+                                style={
+                                  language === "ur" || language === "sd"
+                                    ? {
+                                      display: "flex",
+                                      flexDirection: "row-reverse",
+                                    }
+                                    : {
+                                      marginRight: 10,
+                                    }
+                                }
+                              >
+                                <span
+                                  style={{
+                                    marginRight: "5px",
+                                    textDecoration: "none",
+                                  }}
+                                  className={"link"}
+                                >
+                                  {" "}
+                                  {
+                                    translations["BusinessFacilitation"][
+                                    language
+                                    ]
+                                  }
+                                </span>
+                                <i
+                                  style={
+                                    language === "ur" || language === "sd"
+                                      ? {
+                                        marginTop: "5px",
+                                        marginRight: "5px",
+                                      }
+                                      : {
+                                        marginTop: "0px",
+                                        marginLeft: "3px",
+                                        marginRight: -7,
+                                      }
+                                  }
+                                  class="dropbtn iconDown hover-rotate fa fa-chevron-right"
+                                ></i>
+                                <div
+                                  class="dropdown-content1"
+                                  style={
+                                    language === "ur" || language === "sd"
+                                      ? { marginTop: "30px" }
+                                      : {
+                                        marginLeft: 0,
+                                      }
+                                  }
+                                >
+                                  <a
+                                    target="_blank"
+                                    href="https://smeda.org/index.php?option=com_content&view=article&id=146&Itemid=676"
+                                    style={
+                                      language === "ur" || language === "sd"
+                                        ? {
+                                          display: "flex",
+                                          flexDirection: "row-reverse",
+                                          marginRight: "-16px",
+                                          fontWeight: "bold",
+                                        }
+                                        : {
+                                          fontWeight: "bold",
+                                        }
+                                    }
+                                  >
+                                    {translations["Guids"][language]}
+                                  </a>
+
+                                  <a
+                                    target="_blank"
+                                    href="https://smeda.org/index.php?option=com_phocadownload&view=category&id=122&Itemid=308"
+                                    style={
+                                      language === "ur" || language === "sd"
+                                        ? {
+                                          display: "flex",
+                                          flexDirection: "row-reverse",
+                                          marginRight: "-16px",
+                                        }
+                                        : {
+                                          marginLeft: "10px",
+                                        }
+                                    }
+                                  >
+                                    {
+                                      translations["PreFeasibilityStudies"][
+                                      language
+                                      ]
+                                    }
+                                  </a>
+                                  <a
+                                    target="_blank"
+                                    href="https://smeda.org/index.php?option=com_phocadownload&view=category&id=164&Itemid=981"
+                                    style={
+                                      language === "ur" || language === "sd"
+                                        ? {
+                                          display: "flex",
+                                          flexDirection: "row-reverse",
+                                          marginRight: "-16px",
+                                        }
+                                        : {
+                                          marginLeft: "10px",
+                                        }
+                                    }
+                                  >
+                                    {translations["BusinessGuides"][language]}
+                                  </a>
+                                  <a
+                                    target="_blank"
+                                    href="https://smeda.org/index.php?option=com_phocadownload&view=category&id=7&Itemid=363"
+                                    style={
+                                      language === "ur" || language === "sd"
+                                        ? {
+                                          display: "flex",
+                                          flexDirection: "row-reverse",
+                                          marginRight: "-16px",
+                                        }
+                                        : {
+                                          marginLeft: "10px",
+                                        }
+                                    }
+                                  >
+                                    {
+                                      translations[
+                                      "CommercialContracts(English)"
+                                      ][language]
+                                    }
+                                  </a>
+                                  <a
+                                    target="_blank"
+                                    href="https://smeda.org/index.php?option=com_phocadownload&view=category&id=7&Itemid=363"
+                                    style={
+                                      language === "ur" || language === "sd"
+                                        ? {
+                                          display: "flex",
+                                          flexDirection: "row-reverse",
+                                          marginRight: "-16px",
+                                        }
+                                        : {
+                                          marginLeft: "10px",
+                                        }
+                                    }
+                                  >
+                                    {
+                                      translations["CommercialContracts(Urdu)"][
+                                      language
+                                      ]
+                                    }
+                                  </a>
+                                  <a
+                                    target="_blank"
+                                    href="https://smeda.org/index.php?option=com_phocadownload&view=category&id=15&Itemid=138"
+                                    style={
+                                      language === "ur" || language === "sd"
+                                        ? {
+                                          display: "flex",
+                                          flexDirection: "row-reverse",
+                                          marginRight: "-16px",
+                                        }
+                                        : {
+                                          marginLeft: "10px",
+                                        }
+                                    }
+                                  >
+                                    {
+                                      translations["RegulatoryProcedures"][
+                                      language
+                                      ]
+                                    }
+                                  </a>
+                                  <a
+                                    target="_blank"
+                                    href="https://tipp.gov.pk/"
+                                    style={
+                                      language === "ur" || language === "sd"
+                                        ? {
+                                          display: "flex",
+                                          flexDirection: "row-reverse",
+                                          marginRight: "-16px",
+                                        }
+                                        : {
+                                          marginLeft: "10px",
+                                        }
+                                    }
+                                  >
+                                    {
+                                      translations["TradeInformationPortal"][
+                                      language
+                                      ]
+                                    }
+                                  </a>
+                                  <a
+                                    target="_blank"
+                                    href={InvestmentDepartment}
+                                    style={
+                                      language === "ur" || language === "sd"
+                                        ? {
+                                          display: "flex",
+                                          flexDirection: "row-reverse",
+                                          marginRight: "-16px",
+                                        }
+                                        : {
+                                          marginLeft: "10px",
+                                        }
+                                    }
+                                  >
+                                    {
+                                      translations["InvestmentDepartment"][
+                                      language
+                                      ]
+                                    }
+                                  </a>
+
+                                  <a
+                                    target="_blank"
+                                    href=""
+                                    style={
+                                      language === "ur" || language === "sd"
+                                        ? {
+                                          display: "flex",
+                                          flexDirection: "row-reverse",
+                                          marginRight: "-16px",
+                                          fontWeight: "bold",
+                                        }
+                                        : {
+                                          fontWeight: "bold",
+                                          marginTop: 5,
+                                        }
+                                    }
+                                  >
+                                    {translations["Reports"][language]}
+                                  </a>
+                                  <a
+                                    target="_blank"
+                                    href="https://smeda.org/index.php?option=com_phocadownload&view=category&id=40&Itemid=742"
+                                    style={
+                                      language === "ur" || language === "sd"
+                                        ? {
+                                          display: "flex",
+                                          flexDirection: "row-reverse",
+                                          marginRight: "-16px",
+                                        }
+                                        : {
+                                          marginLeft: "10px",
+                                        }
+                                    }
+                                  >
+                                    {translations["ClusterProfiles"][language]}
+                                  </a>
+                                  <a
+                                    target="_blank"
+                                    href="https://smeda.org/index.php?option=com_phocadownload&view=category&id=186&Itemid=1024"
+                                    style={
+                                      language === "ur" || language === "sd"
+                                        ? {
+                                          display: "flex",
+                                          flexDirection: "row-reverse",
+                                          marginRight: "-16px",
+                                        }
+                                        : {
+                                          marginLeft: "10px",
+                                        }
+                                    }
+                                  >
+                                    {
+                                      translations["DistrictEconomicProfiles"][
+                                      language
+                                      ]
+                                    }
+                                  </a>
+                                  <a
+                                    target="_blank"
+                                    href="https://smeda.org/index.php?option=com_phocadownload&view=category&id=28&Itemid=139"
+                                    style={
+                                      language === "ur" || language === "sd"
+                                        ? {
+                                          display: "flex",
+                                          flexDirection: "row-reverse",
+                                          marginRight: "-16px",
+                                        }
+                                        : {
+                                          marginLeft: "10px",
+                                        }
+                                    }
+                                  >
+                                    {translations["SectorBriefs"][language]}
+                                  </a>
+                                  <a
+                                    target="_blank"
+                                    href="https://smeda.org/index.php?option=com_phocadownload&view=category&id=188&Itemid=1027"
+                                    style={
+                                      language === "ur" || language === "sd"
+                                        ? {
+                                          display: "flex",
+                                          flexDirection: "row-reverse",
+                                          marginRight: "-16px",
+                                        }
+                                        : {
+                                          marginLeft: "10px",
+                                        }
+                                    }
+                                  >
+                                    {translations["StudyReports"][language]}
+                                  </a>
+                                  <a
+                                    target="_blank"
+                                    href="https://smeda.org/index.php?option=com_phocadownload&view=category&id=168&Itemid=996"
+                                    style={
+                                      language === "ur" || language === "sd"
+                                        ? {
+                                          display: "flex",
+                                          flexDirection: "row-reverse",
+                                          marginRight: "-16px",
+                                        }
+                                        : {
+                                          marginLeft: "10px",
+                                        }
+                                    }
+                                  >
+                                    {
+                                      translations["TradeAnalysisSeries"][
+                                      language
+                                      ]
+                                    }
+                                  </a>
+                                  <a
+                                    target="_blank"
+                                    href="https://tipp.gov.pk/?r=site/display&id=230"
+                                    style={
+                                      language === "ur" || language === "sd"
+                                        ? {
+                                          display: "flex",
+                                          flexDirection: "row-reverse",
+                                          marginRight: "-16px",
+                                        }
+                                        : {
+                                          marginLeft: "10px",
+                                        }
+                                    }
+                                  >
+                                    {translations["TradeStatistics"][language]}
+                                  </a>
+                                </div>
+                              </div>
+                            </li>
+                            <li>
+                              <a
+                                href="https://business.gov.pk/home_prmi/"
+                                title="Home Page"
+                                className={"link"}
+                                target="_blank"
+                              >
+                                {/* <Link className={"link"} to={"/home"}> */}
+                                {"PRMI"}
+                                {/* </Link> */}
+                              </a>
+                            </li>
+
+                            <li>
+                              <div
+                                class="dropdown1"
+                                style={
+                                  language === "ur" || language === "sd"
+                                    ? {
+                                      display: "flex",
+                                      flexDirection: "row-reverse",
+                                    }
+                                    : {}
+                                }
+                              >
+                                <span
+                                  style={{
+                                    marginRight: "5px",
+                                    textDecoration: "none",
+                                  }}
+                                  className={"link"}
+                                >
+                                  {" "}
+                                  {translations["Aboutus"][language]}
+                                </span>
+                                <i
+                                  style={
+                                    language === "ur" || language === "sd"
+                                      ? {
+                                        marginTop: "5px",
+                                        marginRight: "5px",
+                                      }
+                                      : {
+                                        marginTop: "0px",
+                                        marginLeft: "3px",
+                                        marginRight: 10,
+                                      }
+                                  }
+                                  class="dropbtn iconDown hover-rotate fa fa-chevron-right"
+                                ></i>
+                                <div
+                                  class="dropdown-content1"
+                                  style={
+                                    language === "ur" || language === "sd"
+                                      ? { marginTop: "30px" }
+                                      : {
+                                        marginLeft: -100,
+                                      }
+                                  }
+                                >
+                                  <Link className="" to={"/introduction"}>
+                                    <a
+                                      target="_blank"
+                                      href=""
+                                      style={
+                                        language === "ur" || language === "sd"
+                                          ? {
+                                            display: "flex",
+                                            flexDirection: "row-reverse",
+                                            marginRight: "-16px",
+                                          }
+                                          : {}
+                                      }
+                                    >
+                                      {translations["Introduction"][language]}
+                                    </a>
+                                  </Link>
+                                  <Link
+                                    className={""}
+                                    to={"/projectobjectives"}
+                                  >
+                                    <a
+                                      href="#"
+                                      style={
+                                        language === "ur" || language === "sd"
+                                          ? {
+                                            display: "flex",
+                                            flexDirection: "row-reverse",
+                                            marginRight: "-16px",
+                                          }
+                                          : {}
+                                      }
+                                    >
+                                      {
+                                        translations["projectobjectives"][
+                                        language
+                                        ]
+                                      }
+                                    </a>
+                                  </Link>
+                                  <Link className={""} to={"/acheivement"}>
+                                    <a
+                                      href="#"
+                                      style={
+                                        language === "ur" || language === "sd"
+                                          ? {
+                                            display: "flex",
+                                            flexDirection: "row-reverse",
+                                            marginRight: "-16px",
+                                          }
+                                          : {}
+                                      }
+                                    >
+                                      {translations["Achievements"][language]}
+                                    </a>
+                                  </Link>
+                                  <Link className={""} to={"/Team"}>
+                                    <a
+                                      href="#"
+                                      style={
+                                        language === "ur" || language === "sd"
+                                          ? {
+                                            display: "flex",
+                                            flexDirection: "row-reverse",
+                                            marginRight: "-16px",
+                                          }
+                                          : {}
+                                      }
+                                    >
+                                      {translations["Team"][language]}
+                                    </a>
+                                  </Link>
+                                  <Link className={""} to={"/resource"}>
+                                    <a
+                                      href="#"
+                                      style={
+                                        language === "ur" || language === "sd"
+                                          ? {
+                                            display: "flex",
+                                            flexDirection: "row-reverse",
+                                            marginRight: "-16px",
+                                          }
+                                          : {}
+                                      }
+                                    >
+                                      {translations["Downloads"][language]}
+                                    </a>
+                                  </Link>
+                                  <Link className={""} to={"/faqs"}>
+                                    <a
+                                      href="#"
+                                      style={
+                                        language === "ur" || language === "sd"
+                                          ? {
+                                            display: "flex",
+                                            flexDirection: "row-reverse",
+                                            marginRight: "-16px",
+                                          }
+                                          : {}
+                                      }
+                                    >
+                                      {translations["FAQ"][language]}
+                                    </a>
+                                  </Link>
+                                  <Link className={""} to={"/contactUs"}>
+                                    <a
+                                      href="#"
+                                      style={
+                                        language === "ur" || language === "sd"
+                                          ? {
+                                            display: "flex",
+                                            flexDirection: "row-reverse",
+                                            marginRight: "-16px",
+                                          }
+                                          : {}
+                                      }
+                                    >
+                                      {translations["Contactus"][language]}
+                                    </a>
+                                  </Link>
+                                </div>
+                              </div>
+                            </li>
+                            <li style={{ marginLeft: 10 }}>
+                              <a title="" width="10">
+                                <Tooltip
+                                  overlayInnerStyle={{
+                                    borderRadius: "0px",
+                                    width: "350px",
+                                    minWidth: "350px",
+                                    position: "relative",
+                                    right: "100px",
+                                  }}
+                                  color={"#Ffffff"}
+                                  placement="bottomLeft"
+                                  title={SearchBox}
+                                  arrow={mergedArrow}
+                                >
+                                  <i
+                                    className="fa-sharp fa-solid fa-magnifying-glass"
+                                    style={
+                                      isSticky
+                                        ? { color: "" }
+                                        : { color: "black" }
+                                    }
+                                  ></i>
+                                </Tooltip>
+                              </a>
+                            </li>
+                          </ul>
                         </div>
-                        <Link className={""} to={"/Team"}>
-                          <a
-                            href="#"
-                            style={
-                              language === "ur" ||
-                                language === "sd"
-                                ? {
-                                  display: "flex",
-                                  flexDirection: "row-reverse",
-                                  marginRight: "-16px",
-                                }
-                                : {}
-                            }
-                          >
-                            {translations["CLICKSID"][language]}
-                          </a>
-                        </Link>
                       </div>
                     </div>
-                  </li> */}
-
-                  {/* <li>
-                    <a href="comingsoon.html" title="" className={"link"}>
-                      <Link className="link" to={"/Maps"}>
-                        {translations["Maps"][language]}
-                      </Link>
-                    </a>
-                  </li> */}
-                  <li style={{marginLeft:10}}>
-                    <a  title="" width="10">
-                      <Tooltip
-                        overlayInnerStyle=
-                        {{ borderRadius: "0px",
-                        width: "350px",
-                        minWidth: "350px",
-                         position: "relative",
-                         right: "100px"
-                         }}
-                        color={"#Ffffff"}
-                        placement="bottomLeft"
-                        title={SearchBox}
-                        arrow={mergedArrow}
-                      >
-                        <i
-                          className="fa-sharp fa-solid fa-magnifying-glass"
-                          style={
-                            isSticky
-                              ? { color: "" }
-                              : { color: "black" }
-                          }
-                        ></i>
-                      </Tooltip>
-                    </a>
-                  </li>
-                </ul>
+                  )
+                )}
               </div>
-            </div>
-          </div>
-           
-            )
-            }
-</div>
-
-                <div
+              <div
                 className="d-flex px-4"
-                  style={
-                    windowWidth <= 1366
+                style={
+                  windowWidth <= 1366
                     ? {
                       marginRight: "-4px",
                     }
@@ -1768,71 +1365,33 @@ const {language} = useSelector((state)=>state.language)
                       marginLeft: "22px",
                       marginRight: "7px",
                     }
-                  }
-                >
-                  <img
-                    src={sindh}
-                    alt=""
-                    className="marginDPI"
-                    width={windowWidth <= 1440 ? "95" : "115"}
-                    height={windowWidth <= 1440 ? "115" : "135"}
-                  />
-                </div>
+                }
+              >
+                <img
+                  src={sindh}
+                  alt=""
+                  className="marginDPI"
+                  width={windowWidth <= 1440 ? "95" : "115"}
+                  height={windowWidth <= 1440 ? "115" : "135"}
+                />
+              </div>
             </div>
-
-
-
-
-
-
-
-
-
-
-            </div>
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            {windowWidth <=1024&&
-              <div className={`header `}>
-              <div className={"row "} style={{height:"5px"}}>
+          </div>
+          {windowWidth <= 1024 && (
+            <div className={`header `}>
+              <div className={"row "} style={{ height: "5px" }}>
                 <div
                   className={" navbar boxshadowNavBar"}
-                  style={language === "ur" || language === "sd"?{marginTop:-46}:{marginTop:-38,display:'flex',justifyContent:'center',paddingRight:54}}
+                  style={
+                    language === "ur" || language === "sd"
+                      ? { marginTop: -46 }
+                      : {
+                        marginTop: -38,
+                        display: "flex",
+                        justifyContent: "center",
+                        paddingRight: 54,
+                      }
+                  }
                 >
                   <ul
                     style={
@@ -1841,9 +1400,12 @@ const {language} = useSelector((state)=>state.language)
                           display: "flex",
                           marginBottom: "0px",
                           flexDirection: "row-reverse",
-                         
                         }
-                        : { marginBottom: "0px" ,paddingRight:10,marginTop:10}
+                        : {
+                          marginBottom: "0px",
+                          paddingRight: 10,
+                          marginTop: 10,
+                        }
                     }
                   >
                     <li>
@@ -1857,7 +1419,7 @@ const {language} = useSelector((state)=>state.language)
                         </Link>
                       </a>
                     </li>
-                    
+
                     <li>
                       <a
                         href="comingsoon.html"
@@ -1865,23 +1427,12 @@ const {language} = useSelector((state)=>state.language)
                         className={"link"}
                       >
                         <Link className={"link"} to={"/feedback"}>
-                          {
-                            translations["Feedback"][
-                            language
-                            ]
-                          }
+                          {translations["Feedback"][language]}
                         </Link>
                       </a>
                     </li>
-                    {/* <li>
-                      <a title="" className={"link"}>
-                        <Link className="link" to={"/regulatorycatalog"}>
-                          {translations["Interactiveregulatory"][language]}
-                        </Link>
-                      </a>
-                    </li> */}
-                    <li >
-                    <div
+                    <li>
+                      <div
                         class="dropdown1"
                         style={
                           language === "ur" || language === "sd"
@@ -1890,7 +1441,7 @@ const {language} = useSelector((state)=>state.language)
                               flexDirection: "row-reverse",
                             }
                             : {
-                              marginRight:10
+                              marginRight: 10,
                             }
                         }
                       >
@@ -1905,16 +1456,16 @@ const {language} = useSelector((state)=>state.language)
                           {translations["Interactiveregulatory"][language]}
                         </span>
                         <i
-                          // style={{ marginTop: "5px", marginRight: "5px",}}
                           style={
-                            language === "ur" ||
-                              language === "sd"
+                            language === "ur" || language === "sd"
                               ? {
-                                marginTop: "5px", marginRight: "5px"
+                                marginTop: "5px",
+                                marginRight: "5px",
                               }
                               : {
-                                marginTop: "0px", marginLeft: "3px",
-                                marginRight:-7
+                                marginTop: "0px",
+                                marginLeft: "3px",
+                                marginRight: -7,
                               }
                           }
                           class="dropbtn iconDown hover-rotate fa fa-chevron-right"
@@ -1925,115 +1476,16 @@ const {language} = useSelector((state)=>state.language)
                             language === "ur" || language === "sd"
                               ? { marginTop: "30px" }
                               : {
-                                marginLeft:0
+                                marginLeft: 0,
                               }
                           }
                         >
-                         
-                          {/* <div
-                            class="nested-dropdown1"
-                            style={{ width: "100%" }}
-                          >
-                            <span
-                              style={
-                                language === "ur" ||
-                                  language === "sd"
-                                  ? {
-                                    display: "flex",
-                                    flexDirection: "row-reverse",
-                                    width: "100%",
-                                  }
-                                  : {
-                                    display: "flex",
-                                    position: "relative",
-                                    width: "100%",
-                                  }
-                              }
-                            >
-                              <a
-                                style={
-                                  language === "ur" ||
-                                    language === "sd"
-                                    ? {
-                                      width: "88%",
-                                      paddingLeft: "30px",
-                                      height: "40px",
-                                      paddingTop: "8px",
-                                      display: "flex",
-                                      flexDirection: "row-reverse",
-                                    }
-                                    : {
-                                      width: "100%",
-                                      paddingLeft: "30px",
-                                      height: "40px",
-                                      paddingTop: "8px",
-                                    }
-                                }
-                                href="#"
-                              >
-                                {
-                                  translations["Components"][
-                                  language
-                                  ]
-                                }
-                              </a>
-                              <i
-                                // style={{
-                                //   marginTop: "10px",
-                                //   marginLeft: "0px",
-                                //   position: "absolute",
-                                //   right: "15px",
-                                // }}
-                                style={
-                                  language === "ur" ||
-                                    language === "sd"
-                                    ? {
-                                      marginTop: "10px",
-                                      marginLeft: "0px",
-                                      display: "flex",
-                                      flexDirection: "row-reverse",
-                                    }
-                                    : {
-                                      marginTop: "10px",
-                                      marginLeft: "0px",
-                                      position: "absolute",
-                                      right: "15px",
-                                    }
-                                }
-                                class="dropbtn unique-iconDown unique-hover-rotate component fa fa-chevron-right"
-                              ></i>
-                            </span>
-                            <div
-                              class="dropdown-content1 nested-content nested-right"
-                              style={{ left: "auto" }}
-                            >
-                              <Link className={""} to={"/Component"}>
-                                <a href="#">
-                                  {
-                                    translations["CLICKSID"][
-                                    language
-                                    ]
-                                  }
-                                </a>
-                              </Link>
-                              <Link className={""} to={"/Team"}>
-                                <a href="#">
-                                  {
-                                    translations["OurTeam"][
-                                    language
-                                    ]
-                                  }
-                                </a>
-                              </Link>
-                            </div>
-                          </div> */}
-                       <Link className="" to={"/Maps"}>
+                          <Link className="" to={"/Maps"}>
                             <a
                               target="_blank"
                               href=""
                               style={
-                                language === "ur" ||
-                                  language === "sd"
+                                language === "ur" || language === "sd"
                                   ? {
                                     display: "flex",
                                     flexDirection: "row-reverse",
@@ -2045,13 +1497,12 @@ const {language} = useSelector((state)=>state.language)
                               {translations["Maps"][language]}
                             </a>
                           </Link>
-                         
+
                           <Link className={""} to={"/regulatorycatalog"}>
                             <a
                               href="#"
                               style={
-                                language === "ur" ||
-                                  language === "sd"
+                                language === "ur" || language === "sd"
                                   ? {
                                     display: "flex",
                                     flexDirection: "row-reverse",
@@ -2063,12 +1514,14 @@ const {language} = useSelector((state)=>state.language)
                               {translations["RegulatoryCatalog"][language]}
                             </a>
                           </Link>
-                          <Link className={""} to={"/RegulatoryCatalogCalculator"}>
+                          <Link
+                            className={""}
+                            to={"/RegulatoryCatalogCalculator"}
+                          >
                             <a
                               href="#"
                               style={
-                                language === "ur" ||
-                                  language === "sd"
+                                language === "ur" || language === "sd"
                                   ? {
                                     display: "flex",
                                     flexDirection: "row-reverse",
@@ -2085,8 +1538,7 @@ const {language} = useSelector((state)=>state.language)
                               target="_blank"
                               href=""
                               style={
-                                language === "ur" ||
-                                  language === "sd"
+                                language === "ur" || language === "sd"
                                   ? {
                                     display: "flex",
                                     flexDirection: "row-reverse",
@@ -2103,8 +1555,7 @@ const {language} = useSelector((state)=>state.language)
                               target="_blank"
                               href=""
                               style={
-                                language === "ur" ||
-                                  language === "sd"
+                                language === "ur" || language === "sd"
                                   ? {
                                     display: "flex",
                                     flexDirection: "row-reverse",
@@ -2116,62 +1567,11 @@ const {language} = useSelector((state)=>state.language)
                               {translations["Tutorial"][language]}
                             </a>
                           </Link>
-                          {/* <Link className={""} to={"/resource"}>
-                            <a
-                              href="#"
-                              style={
-                                language === "ur" ||
-                                  language === "sd"
-                                  ? {
-                                    display: "flex",
-                                    flexDirection: "row-reverse",
-                                    marginRight: "-16px",
-                                  }
-                                  : {}
-                              }
-                            >
-                              {translations["Downloads"][language]}
-                            </a>
-                          </Link>
-                          <Link className={""} to={"/Team"}>
-                            <a
-                              href="#"
-                              style={
-                                language === "ur" ||
-                                  language === "sd"
-                                  ? {
-                                    display: "flex",
-                                    flexDirection: "row-reverse",
-                                    marginRight: "-16px",
-                                  }
-                                  : {}
-                              }
-                            >
-                              {translations["Team"][language]}
-                            </a>
-                          </Link>
-                          <Link className={""} to={""}>
-                            <a
-                              href="#"
-                              style={
-                                language === "ur" ||
-                                  language === "sd"
-                                  ? {
-                                    display: "flex",
-                                    flexDirection: "row-reverse",
-                                    marginRight: "-16px",
-                                  }
-                                  : {}
-                              }
-                            >
-                              {translations["Contactus"][language]}
-                            </a>
-                          </Link> */}
                         </div>
                       </div>
                     </li>
-                    <li >
-                    <div
+                    <li>
+                      <div
                         class="dropdown1"
                         style={
                           language === "ur" || language === "sd"
@@ -2180,7 +1580,7 @@ const {language} = useSelector((state)=>state.language)
                               flexDirection: "row-reverse",
                             }
                             : {
-                              marginRight:10
+                              marginRight: 10,
                             }
                         }
                       >
@@ -2195,16 +1595,16 @@ const {language} = useSelector((state)=>state.language)
                           {translations["BusinessFacilitation"][language]}
                         </span>
                         <i
-                          // style={{ marginTop: "5px", marginRight: "5px",}}
                           style={
-                            language === "ur" ||
-                              language === "sd"
+                            language === "ur" || language === "sd"
                               ? {
-                                marginTop: "5px", marginRight: "5px"
+                                marginTop: "5px",
+                                marginRight: "5px",
                               }
                               : {
-                                marginTop: "0px", marginLeft: "3px",
-                                marginRight:-7
+                                marginTop: "0px",
+                                marginLeft: "3px",
+                                marginRight: -7,
                               }
                           }
                           class="dropbtn iconDown hover-rotate fa fa-chevron-right"
@@ -2215,298 +1615,281 @@ const {language} = useSelector((state)=>state.language)
                             language === "ur" || language === "sd"
                               ? { marginTop: "30px" }
                               : {
-                                marginLeft:0
+                                marginLeft: 0,
                               }
                           }
                         >
-                         
-                            <a
-                              target="_blank"
-                              href="https://smeda.org/index.php?option=com_content&view=article&id=146&Itemid=676"
-                              style={
-                                language === "ur" ||
-                                  language === "sd"
-                                  ? {
-                                    display: "flex",
-                                    flexDirection: "row-reverse",
-                                    marginRight: "-16px",
-                                    fontWeight:"bold",
-                                  }
-                                  : {
-                                    fontWeight:"bold",
-                                  }
-                              }
-                            >
-                              {translations["Guids"][language]}
-                            </a>
-                         
-                            <a
+                          <a
                             target="_blank"
-                              href="https://smeda.org/index.php?option=com_phocadownload&view=category&id=122&Itemid=308"
-                              style={
-                                language === "ur" ||
-                                  language === "sd"
-                                  ? {
-                                    display: "flex",
-                                    flexDirection: "row-reverse",
-                                    marginRight: "-16px",
-                                  }
-                                  : {
-                                    marginLeft:"10px"
-                                  }
-                              }
-                            >
-                              {translations["PreFeasibilityStudies"][language]}
-                            </a>
-                            <a
+                            href="https://smeda.org/index.php?option=com_content&view=article&id=146&Itemid=676"
+                            style={
+                              language === "ur" || language === "sd"
+                                ? {
+                                  display: "flex",
+                                  flexDirection: "row-reverse",
+                                  marginRight: "-16px",
+                                  fontWeight: "bold",
+                                }
+                                : {
+                                  fontWeight: "bold",
+                                }
+                            }
+                          >
+                            {translations["Guids"][language]}
+                          </a>
+
+                          <a
                             target="_blank"
-                              href="https://smeda.org/index.php?option=com_phocadownload&view=category&id=164&Itemid=981"
-                              style={
-                                language === "ur" ||
-                                  language === "sd"
-                                  ? {
-                                    display: "flex",
-                                    flexDirection: "row-reverse",
-                                    marginRight: "-16px",
-                                  }
-                                  : {
-                                    marginLeft:"10px"
+                            href="https://smeda.org/index.php?option=com_phocadownload&view=category&id=122&Itemid=308"
+                            style={
+                              language === "ur" || language === "sd"
+                                ? {
+                                  display: "flex",
+                                  flexDirection: "row-reverse",
+                                  marginRight: "-16px",
+                                }
+                                : {
+                                  marginLeft: "10px",
+                                }
+                            }
+                          >
+                            {translations["PreFeasibilityStudies"][language]}
+                          </a>
+                          <a
+                            target="_blank"
+                            href="https://smeda.org/index.php?option=com_phocadownload&view=category&id=164&Itemid=981"
+                            style={
+                              language === "ur" || language === "sd"
+                                ? {
+                                  display: "flex",
+                                  flexDirection: "row-reverse",
+                                  marginRight: "-16px",
+                                }
+                                : {
+                                  marginLeft: "10px",
+                                }
+                            }
+                          >
+                            {translations["BusinessGuides"][language]}
+                          </a>
+                          <a
+                            target="_blank"
+                            href="https://smeda.org/index.php?option=com_phocadownload&view=category&id=7&Itemid=363"
+                            style={
+                              language === "ur" || language === "sd"
+                                ? {
+                                  display: "flex",
+                                  flexDirection: "row-reverse",
+                                  marginRight: "-16px",
+                                }
+                                : {
+                                  marginLeft: "10px",
+                                }
+                            }
+                          >
+                            {
+                              translations["CommercialContracts(English)"][
+                              language
+                              ]
+                            }
+                          </a>
+                          <a
+                            target="_blank"
+                            href="https://smeda.org/index.php?option=com_phocadownload&view=category&id=7&Itemid=363"
+                            style={
+                              language === "ur" || language === "sd"
+                                ? {
+                                  display: "flex",
+                                  flexDirection: "row-reverse",
+                                  marginRight: "-16px",
+                                }
+                                : {
+                                  marginLeft: "10px",
+                                }
+                            }
+                          >
+                            {
+                              translations["CommercialContracts(Urdu)"][
+                              language
+                              ]
+                            }
+                          </a>
+                          <a
+                            target="_blank"
+                            href="https://smeda.org/index.php?option=com_phocadownload&view=category&id=15&Itemid=138"
+                            style={
+                              language === "ur" || language === "sd"
+                                ? {
+                                  display: "flex",
+                                  flexDirection: "row-reverse",
+                                  marginRight: "-16px",
+                                }
+                                : {
+                                  marginLeft: "10px",
+                                }
+                            }
+                          >
+                            {translations["RegulatoryProcedures"][language]}
+                          </a>
+                          <a
+                            target="_blank"
+                            href="https://tipp.gov.pk/"
+                            style={
+                              language === "ur" || language === "sd"
+                                ? {
+                                  display: "flex",
+                                  flexDirection: "row-reverse",
+                                  marginRight: "-16px",
+                                }
+                                : {
+                                  marginLeft: "10px",
+                                }
+                            }
+                          >
+                            {translations["TradeInformationPortal"][language]}
+                          </a>
+                          <a
+                            target="_blank"
+                            href={InvestmentDepartment}
+                            style={
+                              language === "ur" || language === "sd"
+                                ? {
+                                  display: "flex",
+                                  flexDirection: "row-reverse",
+                                  marginRight: "-16px",
+                                }
+                                : {
+                                  marginLeft: "10px",
+                                }
+                            }
+                          >
+                            {translations["InvestmentDepartment"][language]}
+                          </a>
 
-                                  }
-                              }
-                            >
-                              {translations["BusinessGuides"][language]}
-                            </a>
-                            <a
-                              target="_blank"
-                              href="https://smeda.org/index.php?option=com_phocadownload&view=category&id=7&Itemid=363"
-                              style={
-                                language === "ur" ||
-                                  language === "sd"
-                                  ? {
-                                    display: "flex",
-                                    flexDirection: "row-reverse",
-                                    marginRight: "-16px",
-                                  }
-                                  : {
-                                    marginLeft:"10px"
-
-                                  }
-                              }
-                            >
-                              {translations["CommercialContracts(English)"][language]}
-                            </a>
-                            <a
-                              target="_blank"
-                              href="https://smeda.org/index.php?option=com_phocadownload&view=category&id=7&Itemid=363"
-                              style={
-                                language === "ur" ||
-                                  language === "sd"
-                                  ? {
-                                    display: "flex",
-                                    flexDirection: "row-reverse",
-                                    marginRight: "-16px",
-                                  }
-                                  : {
-                                    marginLeft:"10px"
-
-                                  }
-                              }
-                            >
-                              {translations["CommercialContracts(Urdu)"][language]}
-                            </a>
-                            <a
-                              target="_blank"
-                              href="https://smeda.org/index.php?option=com_phocadownload&view=category&id=15&Itemid=138"
-                              style={
-                                language === "ur" ||
-                                  language === "sd"
-                                  ? {
-                                    display: "flex",
-                                    flexDirection: "row-reverse",
-                                    marginRight: "-16px",
-                                  }
-                                  : {
-                                    marginLeft:"10px"
-
-                                  }
-                              }
-                            >
-                              {translations["RegulatoryProcedures"][language]}
-                            </a>
-                            <a
-                              target="_blank"
-                              href="https://tipp.gov.pk/"
-                              style={
-                                language === "ur" ||
-                                  language === "sd"
-                                  ? {
-                                    display: "flex",
-                                    flexDirection: "row-reverse",
-                                    marginRight: "-16px",
-                                  }
-                                  : {
-                                    marginLeft:"10px"
-
-                                  }
-                              }
-                            >
-                              {translations["TradeInformationPortal"][language]}
-                            </a>
-                            <a
-                              target="_blank"
-                              href={InvestmentDepartment}
-                              style={
-                                language === "ur" ||
-                                  language === "sd"
-                                  ? {
-                                    display: "flex",
-                                    flexDirection: "row-reverse",
-                                    marginRight: "-16px",
-                                  }
-                                  : {
-                                    marginLeft:"10px"
-
-                                  }
-                              }
-                            >
-                              {translations["InvestmentDepartment"][language]}
-                            </a>
-
-
-                            <a
-                              target="_blank"
-                              href=""
-                              style={
-                                language === "ur" ||
-                                  language === "sd"
-                                  ? {
-                                    display: "flex",
-                                    flexDirection: "row-reverse",
-                                    marginRight: "-16px",
-                                    fontWeight:"bold",
-                                  }
-                                  : {
-                                    fontWeight:"bold",
-                                    marginTop:5
-
-                                  }
-                              }
-                            >
-                              {translations["Reports"][language]}
-                            </a>
-                            <a
-                              target="_blank"
-                              href="https://smeda.org/index.php?option=com_phocadownload&view=category&id=40&Itemid=742"
-                              style={
-                                language === "ur" ||
-                                  language === "sd"
-                                  ? {
-                                    display: "flex",
-                                    flexDirection: "row-reverse",
-                                    marginRight: "-16px",
-                                  }
-                                  : {
-                                    marginLeft:"10px"
-                                  }
-                              }
-                            >
-                              {translations["ClusterProfiles"][language]}
-                            </a>
-                            <a
-                              target="_blank"
-                              href="https://smeda.org/index.php?option=com_phocadownload&view=category&id=186&Itemid=1024"
-                              style={
-                                language === "ur" ||
-                                  language === "sd"
-                                  ? {
-                                    display: "flex",
-                                    flexDirection: "row-reverse",
-                                    marginRight: "-16px",
-                                  }
-                                  : {
-                                    marginLeft:"10px"
-
-                                  }
-                              }
-                            >
-                              {translations["DistrictEconomicProfiles"][language]}
-                            </a>
-                            <a
-                              target="_blank"
-                              href="https://smeda.org/index.php?option=com_phocadownload&view=category&id=28&Itemid=139"
-                              style={
-                                language === "ur" ||
-                                  language === "sd"
-                                  ? {
-                                    display: "flex",
-                                    flexDirection: "row-reverse",
-                                    marginRight: "-16px",
-                                  }
-                                  : {
-                                    marginLeft:"10px"
-                                  }
-                              }
-                            >
-                              {translations["SectorBriefs"][language]}
-                            </a>
-                            <a
-                              target="_blank"
-                              href="https://smeda.org/index.php?option=com_phocadownload&view=category&id=188&Itemid=1027"
-                              style={
-                                language === "ur" ||
-                                  language === "sd"
-                                  ? {
-                                    display: "flex",
-                                    flexDirection: "row-reverse",
-                                    marginRight: "-16px",
-                                  }
-                                  : {
-                                    marginLeft:"10px"
-                                  }
-                              }
-                            >
-                              {translations["StudyReports"][language]}
-                            </a>
-                            <a
-                              target="_blank"
-                              href="https://smeda.org/index.php?option=com_phocadownload&view=category&id=168&Itemid=996"
-                              style={
-                                language === "ur" ||
-                                  language === "sd"
-                                  ? {
-                                    display: "flex",
-                                    flexDirection: "row-reverse",
-                                    marginRight: "-16px",
-                                  }
-                                  : {
-                                    marginLeft:"10px"
-                                  }
-                              }
-                            >
-                              {translations["TradeAnalysisSeries"][language]}
-                            </a>
-                            <a
-                              target="_blank"
-                              href="https://tipp.gov.pk/?r=site/display&id=230"
-                              style={
-                                language === "ur" ||
-                                  language === "sd"
-                                  ? {
-                                    display: "flex",
-                                    flexDirection: "row-reverse",
-                                    marginRight: "-16px",
-                                  }
-                                  : {
-                                    marginLeft:"10px"
-                                  }
-                              }
-                            >
-                              {translations["TradeStatistics"][language]}
-                            </a>
+                          <a
+                            target="_blank"
+                            href=""
+                            style={
+                              language === "ur" || language === "sd"
+                                ? {
+                                  display: "flex",
+                                  flexDirection: "row-reverse",
+                                  marginRight: "-16px",
+                                  fontWeight: "bold",
+                                }
+                                : {
+                                  fontWeight: "bold",
+                                  marginTop: 5,
+                                }
+                            }
+                          >
+                            {translations["Reports"][language]}
+                          </a>
+                          <a
+                            target="_blank"
+                            href="https://smeda.org/index.php?option=com_phocadownload&view=category&id=40&Itemid=742"
+                            style={
+                              language === "ur" || language === "sd"
+                                ? {
+                                  display: "flex",
+                                  flexDirection: "row-reverse",
+                                  marginRight: "-16px",
+                                }
+                                : {
+                                  marginLeft: "10px",
+                                }
+                            }
+                          >
+                            {translations["ClusterProfiles"][language]}
+                          </a>
+                          <a
+                            target="_blank"
+                            href="https://smeda.org/index.php?option=com_phocadownload&view=category&id=186&Itemid=1024"
+                            style={
+                              language === "ur" || language === "sd"
+                                ? {
+                                  display: "flex",
+                                  flexDirection: "row-reverse",
+                                  marginRight: "-16px",
+                                }
+                                : {
+                                  marginLeft: "10px",
+                                }
+                            }
+                          >
+                            {translations["DistrictEconomicProfiles"][language]}
+                          </a>
+                          <a
+                            target="_blank"
+                            href="https://smeda.org/index.php?option=com_phocadownload&view=category&id=28&Itemid=139"
+                            style={
+                              language === "ur" || language === "sd"
+                                ? {
+                                  display: "flex",
+                                  flexDirection: "row-reverse",
+                                  marginRight: "-16px",
+                                }
+                                : {
+                                  marginLeft: "10px",
+                                }
+                            }
+                          >
+                            {translations["SectorBriefs"][language]}
+                          </a>
+                          <a
+                            target="_blank"
+                            href="https://smeda.org/index.php?option=com_phocadownload&view=category&id=188&Itemid=1027"
+                            style={
+                              language === "ur" || language === "sd"
+                                ? {
+                                  display: "flex",
+                                  flexDirection: "row-reverse",
+                                  marginRight: "-16px",
+                                }
+                                : {
+                                  marginLeft: "10px",
+                                }
+                            }
+                          >
+                            {translations["StudyReports"][language]}
+                          </a>
+                          <a
+                            target="_blank"
+                            href="https://smeda.org/index.php?option=com_phocadownload&view=category&id=168&Itemid=996"
+                            style={
+                              language === "ur" || language === "sd"
+                                ? {
+                                  display: "flex",
+                                  flexDirection: "row-reverse",
+                                  marginRight: "-16px",
+                                }
+                                : {
+                                  marginLeft: "10px",
+                                }
+                            }
+                          >
+                            {translations["TradeAnalysisSeries"][language]}
+                          </a>
+                          <a
+                            target="_blank"
+                            href="https://tipp.gov.pk/?r=site/display&id=230"
+                            style={
+                              language === "ur" || language === "sd"
+                                ? {
+                                  display: "flex",
+                                  flexDirection: "row-reverse",
+                                  marginRight: "-16px",
+                                }
+                                : {
+                                  marginLeft: "10px",
+                                }
+                            }
+                          >
+                            {translations["TradeStatistics"][language]}
+                          </a>
                         </div>
                       </div>
-                    </li>      
+                    </li>
                     <li>
                       <a
                         href="https://business.gov.pk/home_prmi/"
@@ -2514,15 +1897,12 @@ const {language} = useSelector((state)=>state.language)
                         className={"link"}
                         target="_blank"
                       >
-                        {/* <Link className={"link"} to={"/home"}> */}
-                          {"PRMI"}
-                        {/* </Link> */}
+                        {"PRMI"}
                       </a>
                     </li>
 
-              
-                    <li >
-                    <div
+                    <li>
+                      <div
                         class="dropdown1"
                         style={
                           language === "ur" || language === "sd"
@@ -2544,16 +1924,16 @@ const {language} = useSelector((state)=>state.language)
                           {translations["Aboutus"][language]}
                         </span>
                         <i
-                          // style={{ marginTop: "5px", marginRight: "5px",}}
                           style={
-                            language === "ur" ||
-                              language === "sd"
+                            language === "ur" || language === "sd"
                               ? {
-                                marginTop: "5px", marginRight: "5px"
+                                marginTop: "5px",
+                                marginRight: "5px",
                               }
                               : {
-                                marginTop: "0px", marginLeft: "3px",
-                                marginRight:10
+                                marginTop: "0px",
+                                marginLeft: "3px",
+                                marginRight: 10,
                               }
                           }
                           class="dropbtn iconDown hover-rotate fa fa-chevron-right"
@@ -2564,115 +1944,16 @@ const {language} = useSelector((state)=>state.language)
                             language === "ur" || language === "sd"
                               ? { marginTop: "30px" }
                               : {
-                                marginLeft:-100
+                                marginLeft: -100,
                               }
                           }
                         >
-                     
-                          {/* <div
-                            class="nested-dropdown1"
-                            style={{ width: "100%" }}
-                          >
-                            <span
-                              style={
-                                language === "ur" ||
-                                  language === "sd"
-                                  ? {
-                                    display: "flex",
-                                    flexDirection: "row-reverse",
-                                    width: "100%",
-                                  }
-                                  : {
-                                    display: "flex",
-                                    position: "relative",
-                                    width: "100%",
-                                  }
-                              }
-                            >
-                              <a
-                                style={
-                                  language === "ur" ||
-                                    language === "sd"
-                                    ? {
-                                      width: "88%",
-                                      paddingLeft: "30px",
-                                      height: "40px",
-                                      paddingTop: "8px",
-                                      display: "flex",
-                                      flexDirection: "row-reverse",
-                                    }
-                                    : {
-                                      width: "100%",
-                                      paddingLeft: "30px",
-                                      height: "40px",
-                                      paddingTop: "8px",
-                                    }
-                                }
-                                href="#"
-                              >
-                                {
-                                  translations["Components"][
-                                  language
-                                  ]
-                                }
-                              </a>
-                              <i
-                                // style={{
-                                //   marginTop: "10px",
-                                //   marginLeft: "0px",
-                                //   position: "absolute",
-                                //   right: "15px",
-                                // }}
-                                style={
-                                  language === "ur" ||
-                                    language === "sd"
-                                    ? {
-                                      marginTop: "10px",
-                                      marginLeft: "0px",
-                                      display: "flex",
-                                      flexDirection: "row-reverse",
-                                    }
-                                    : {
-                                      marginTop: "10px",
-                                      marginLeft: "0px",
-                                      position: "absolute",
-                                      right: "15px",
-                                    }
-                                }
-                                class="dropbtn unique-iconDown unique-hover-rotate component fa fa-chevron-right"
-                              ></i>
-                            </span>
-                            <div
-                              class="dropdown-content1 nested-content nested-right"
-                              style={{ left: "auto" }}
-                            >
-                              <Link className={""} to={"/Component"}>
-                                <a href="#">
-                                  {
-                                    translations["CLICKSID"][
-                                    language
-                                    ]
-                                  }
-                                </a>
-                              </Link>
-                              <Link className={""} to={"/Team"}>
-                                <a href="#">
-                                  {
-                                    translations["OurTeam"][
-                                    language
-                                    ]
-                                  }
-                                </a>
-                              </Link>
-                            </div>
-                          </div> */}
                           <Link className="" to={"/introduction"}>
                             <a
                               target="_blank"
                               href=""
                               style={
-                                language === "ur" ||
-                                  language === "sd"
+                                language === "ur" || language === "sd"
                                   ? {
                                     display: "flex",
                                     flexDirection: "row-reverse",
@@ -2688,8 +1969,7 @@ const {language} = useSelector((state)=>state.language)
                             <a
                               href="#"
                               style={
-                                language === "ur" ||
-                                  language === "sd"
+                                language === "ur" || language === "sd"
                                   ? {
                                     display: "flex",
                                     flexDirection: "row-reverse",
@@ -2705,13 +1985,11 @@ const {language} = useSelector((state)=>state.language)
                             <a
                               href="#"
                               style={
-                                language === "ur" ||
-                                  language === "sd"
+                                language === "ur" || language === "sd"
                                   ? {
                                     display: "flex",
                                     flexDirection: "row-reverse",
                                     marginRight: "-16px",
-
                                   }
                                   : {}
                               }
@@ -2723,8 +2001,7 @@ const {language} = useSelector((state)=>state.language)
                             <a
                               href="#"
                               style={
-                                language === "ur" ||
-                                  language === "sd"
+                                language === "ur" || language === "sd"
                                   ? {
                                     display: "flex",
                                     flexDirection: "row-reverse",
@@ -2740,8 +2017,7 @@ const {language} = useSelector((state)=>state.language)
                             <a
                               href="#"
                               style={
-                                language === "ur" ||
-                                  language === "sd"
+                                language === "ur" || language === "sd"
                                   ? {
                                     display: "flex",
                                     flexDirection: "row-reverse",
@@ -2757,8 +2033,7 @@ const {language} = useSelector((state)=>state.language)
                             <a
                               href="#"
                               style={
-                                language === "ur" ||
-                                  language === "sd"
+                                language === "ur" || language === "sd"
                                   ? {
                                     display: "flex",
                                     flexDirection: "row-reverse",
@@ -2774,8 +2049,7 @@ const {language} = useSelector((state)=>state.language)
                             <a
                               href="#"
                               style={
-                                language === "ur" ||
-                                  language === "sd"
+                                language === "ur" || language === "sd"
                                   ? {
                                     display: "flex",
                                     flexDirection: "row-reverse",
@@ -2790,273 +2064,16 @@ const {language} = useSelector((state)=>state.language)
                         </div>
                       </div>
                     </li>
-                    {/* <li>
-                      <a title="" className={"link"}>
-                        <Link className="link" to={"/NewsAndInformation"}>
-                          {
-                            translations["NewsInformation"][
-                            language
-                            ]
-                          }
-                        </Link>
-                      </a>
-                    </li> */}
-                    {/* <li>
-                      <div
-                        class="dropdown1"
-                        style={
-                          language === "ur" || language === "sd"
-                            ? {
-                              display: "flex",
-                              flexDirection: "row-reverse",
-                            }
-                            : {}
-                        }
-                      >
-                        <span
-                          style={{
-                            marginRight: "5px",
-                            textDecoration: "none",
-                          }}
-                          className={"link"}
-                        >
-                          {translations["Resources"][language]}
-                        </span>
-                        <i
-                          style={
-                            language === "ur" ||
-                              language === "sd"
-                              ? {
-                                marginTop: "5px", marginRight: "5px"
-                              }
-                              : {
-                                marginTop: "0px", marginLeft: "0px"
-                              }
-                          }
-                          class=" dropbtn iconDown hover-rotate fa fa-chevron-right"
-                        ></i>
-                        <div
-                          class="dropdown-content1"
-                          style={
-                            language === "ur" || language === "sd"
-                              ? { marginTop: "30px" }
-                              : {}
-                          }
-                        >
-                          <Link className={""} to={"/resource"}>
-                            <a target="_blank" href="">
-                              {translations["Download"][language]}
-                            </a>
-                          </Link>
-                          <Link className={""} to={"/regulatorycatalog"}>
-                            <a href="#">
-                              {
-                                translations["RegulatoryCatalog"][
-                                language
-                                ]
-                              }
-                            </a>
-                          </Link>
-                        </div>
-                      </div>
-                    </li> */}
-                    {/* <li>
-                      <div
-                        class="dropdown1"
-                        style={
-                          language === "ur" || language === "sd"
-                            ? {
-                              display: "flex",
-                              flexDirection: "row-reverse",
-                            }
-                            : {}
-                        }
-                      >
-                        <span
-                          style={{
-                            marginRight: "5px",
-                            textDecoration: "none",
-                          }}
-                          className={"link"}
-                        >
-                          {" "}
-                          {translations["Aboutus"][language]}
-                        </span>
-                        <i
-                          // style={{ marginTop: "5px", marginRight: "5px",}}
-                          style={
-                            language === "ur" ||
-                              language === "sd"
-                              ? {
-                                marginTop: "5px", marginRight: "5px"
-                              }
-                              : {
-                                marginTop: "0px", marginLeft: "0px"
-                              }
-                          }
-                          class="dropbtn iconDown hover-rotate fa fa-chevron-right"
-                        ></i>
-                        <div
-                          class="dropdown-content1"
-                          style={
-                            language === "ur" || language === "sd"
-                              ? { marginTop: "30px" }
-                              : {}
-                          }
-                        >
-                          <Link className="" to={"/aboutus"}>
-                            <a
-                              target="_blank"
-                              href=""
-                              style={
-                                language === "ur" ||
-                                  language === "sd"
-                                  ? {
-                                    display: "flex",
-                                    flexDirection: "row-reverse",
-                                    marginRight: "-16px",
-                                  }
-                                  : {}
-                              }
-                            >
-                              {translations["Vision"][language]}
-                            </a>
-                          </Link>
-                          <div
-                            class="nested-dropdown1"
-                            style={{ width: "100%" }}
-                          >
-                            <span
-                              style={
-                                language === "ur" ||
-                                  language === "sd"
-                                  ? {
-                                    display: "flex",
-                                    flexDirection: "row-reverse",
-                                    width: "100%",
-                                  }
-                                  : {
-                                    display: "flex",
-                                    position: "relative",
-                                    width: "100%",
-                                  }
-                              }
-                            >
-                              <a
-                                style={
-                                  language === "ur" ||
-                                    language === "sd"
-                                    ? {
-                                      width: "88%",
-                                      paddingLeft: "30px",
-                                      height: "40px",
-                                      paddingTop: "8px",
-                                      display: "flex",
-                                      flexDirection: "row-reverse",
-                                    }
-                                    : {
-                                      width: "100%",
-                                      paddingLeft: "30px",
-                                      height: "40px",
-                                      paddingTop: "8px",
-                                    }
-                                }
-                                href="#"
-                              >
-                                {
-                                  translations["Components"][
-                                  language
-                                  ]
-                                }
-                              </a>
-                              <i
-                                // style={{
-                                //   marginTop: "10px",
-                                //   marginLeft: "0px",
-                                //   position: "absolute",
-                                //   right: "15px",
-                                // }}
-                                style={
-                                  language === "ur" ||
-                                    language === "sd"
-                                    ? {
-                                      marginTop: "10px",
-                                      marginLeft: "0px",
-                                      display: "flex",
-                                      flexDirection: "row-reverse",
-                                    }
-                                    : {
-                                      marginTop: "10px",
-                                      marginLeft: "0px",
-                                      position: "absolute",
-                                      right: "15px",
-                                    }
-                                }
-                                class="dropbtn unique-iconDown unique-hover-rotate component fa fa-chevron-right"
-                              ></i>
-                            </span>
-                            <div
-                              class="dropdown-content1 nested-content nested-right"
-                              style={{ left: "auto" }}
-                            >
-                              <Link className={""} to={"/Component"}>
-                                <a href="#">
-                                  {
-                                    translations["CLICKSID"][
-                                    language
-                                    ]
-                                  }
-                                </a>
-                              </Link>
-                              <Link className={""} to={"/Team"}>
-                                <a href="#">
-                                  {
-                                    translations["OurTeam"][
-                                    language
-                                    ]
-                                  }
-                                </a>
-                              </Link>
-                            </div>
-                          </div>
-                          <Link className={""} to={"/Team"}>
-                            <a
-                              href="#"
-                              style={
-                                language === "ur" ||
-                                  language === "sd"
-                                  ? {
-                                    display: "flex",
-                                    flexDirection: "row-reverse",
-                                    marginRight: "-16px",
-                                  }
-                                  : {}
-                              }
-                            >
-                              {translations["CLICKSID"][language]}
-                            </a>
-                          </Link>
-                        </div>
-                      </div>
-                    </li> */}
-
-                    {/* <li>
-                      <a href="comingsoon.html" title="" className={"link"}>
-                        <Link className="link" to={"/Maps"}>
-                          {translations["Maps"][language]}
-                        </Link>
-                      </a>
-                    </li> */}
-                    <li style={{marginLeft:10}}>
-                      <a  title="" width="10">
+                    <li style={{ marginLeft: 10 }}>
+                      <a title="" width="10">
                         <Tooltip
-                          overlayInnerStyle=
-                          {{ borderRadius: "0px",
-                          width: "350px",
-                          minWidth: "350px",
-                           position: "relative",
-                           right: "100px"
-                           }}
+                          overlayInnerStyle={{
+                            borderRadius: "0px",
+                            width: "350px",
+                            minWidth: "350px",
+                            position: "relative",
+                            right: "100px",
+                          }}
                           color={"#Ffffff"}
                           placement="bottomLeft"
                           title={SearchBox}
@@ -3065,9 +2082,7 @@ const {language} = useSelector((state)=>state.language)
                           <i
                             className="fa-sharp fa-solid fa-magnifying-glass"
                             style={
-                              isSticky
-                                ? { color: "" }
-                                : { color: "black" }
+                              isSticky ? { color: "" } : { color: "black" }
                             }
                           ></i>
                         </Tooltip>
@@ -3077,20 +2092,22 @@ const {language} = useSelector((state)=>state.language)
                 </div>
               </div>
             </div>
-            }
-          </div>
-       
-
-          {/* <div className="row sticky-icon"></div> */}
-          {/* <h1>dropdown-content1</h1> */}
+          )}
         </div>
-      <div className="container-fluid" style={{ overflowX: "hidden", position:'relative'}}>
-        <div className="" style={{ position:"absolute",zIndex:999,width:"100%" }}>
+      </div>
+      <div
+        className="container-fluid"
+        style={{ overflowX: "hidden", position: "relative" }}
+      >
         <div
+          className=""
+          style={{ position: "absolute", zIndex: 999, width: "100%" }}
+        >
+          <div
             className=" px-5"
             style={
               language === "ur" || language === "sd"
-                ? { display: "flex", justifyContent: "end",}
+                ? { display: "flex", justifyContent: "end" }
                 : {}
             }
           >
@@ -3122,31 +2139,30 @@ const {language} = useSelector((state)=>state.language)
               <h2 className="subHeroHeading highlightable">
                 {translations["subHeroHeading"][language]}
               </h2>
-              <div className="row mt-5 "   style={
-                    language === "ur" || language ==="sd" 
-                      ? { justifyContent: "end" }
-                      : {}
-                  }>
+              <div
+                className="row mt-5 "
+                style={
+                  language === "ur" || language === "sd"
+                    ? { justifyContent: "end" }
+                    : {}
+                }
+              >
                 <div
                   className="col-lg-11 col-md-7 col-sm-7 col-xs-12 px-0"
                   style={
-                    language === "ur" || language ==="sd" 
+                    language === "ur" || language === "sd"
                       ? { display: "flex", justifyContent: "end" }
                       : {}
                   }
                 >
                   <Link className={""} to={"/regulatorycatalog"}>
                     <button type="button" className="feedback highlightable">
-                      <span>
-                        {translations["investButton"][language]}
-                      </span>
+                      <span>{translations["investButton"][language]}</span>
                     </button>
                   </Link>
                   <Link className={""} to={"/RegulatoryCatalogCalculator"}>
                     <button type="button" className="feedback">
-                      <span>
-                        {translations["calculatorButton"][language]}
-                      </span>
+                      <span>{translations["calculatorButton"][language]}</span>
                     </button>
                   </Link>
                 </div>
@@ -3161,8 +2177,13 @@ const {language} = useSelector((state)=>state.language)
                 language === "ur" || language === "sd"
                   ? "Nonsticky-icon"
                   : "sticky-icon"
-              }>
-              <a href="https://www.facebook.com/Clicksindh" target="_blank" className="">
+              }
+            >
+              <a
+                href="https://www.facebook.com/Clicksindh"
+                target="_blank"
+                className=""
+              >
                 {" "}
                 <div>
                   {isHovered ? (
@@ -3179,7 +2200,6 @@ const {language} = useSelector((state)=>state.language)
                   )}
                 </div>{" "}
               </a>
-             
 
               <a
                 href="https://twitter.com/ClickSindh?t=8K_w3Bl-z1SgSvedJykmsQ&s=08"
@@ -3193,23 +2213,24 @@ const {language} = useSelector((state)=>state.language)
                   )}
                 </div>{" "}
               </a>
-              <a
-                href="https://www.instagram.com/sindhboss/"
-                target="_blank"
-              >
-                <div style={{ marginLeft:9,marginTop:10 }}>
+              <a href="https://www.instagram.com/sindhboss/" target="_blank">
+                <div style={{ marginLeft: 9, marginTop: 10 }}>
                   {isHoverdInsta ? (
-                    <Instagram  style={{
-                      height: "35px",
-                      width: "35px",
-                      // marginBottom: "-12px",
-                    }}onMouseLeave={handleMouseLeaveInsta} />
+                    <Instagram
+                      style={{
+                        height: "35px",
+                        width: "35px",
+                      }}
+                      onMouseLeave={handleMouseLeaveInsta}
+                    />
                   ) : (
-                    <InstagramWhite  style={{
-                      height: "35px",
-                      width: "35px",
-                      // marginBottom: "-12px",
-                    }}onMouseEnter={handleMouseEnterInsta} />
+                    <InstagramWhite
+                      style={{
+                        height: "35px",
+                        width: "35px",
+                      }}
+                      onMouseEnter={handleMouseEnterInsta}
+                    />
                   )}
                 </div>{" "}
               </a>
@@ -3261,11 +2282,13 @@ const {language} = useSelector((state)=>state.language)
               </a>
             </div>
           ) : (
-            <div className={
-              language === "ur" || language === "sd"
-                ? "Nonsticky-icon"
-                : "sticky-icon"
-            }>
+            <div
+              className={
+                language === "ur" || language === "sd"
+                  ? "Nonsticky-icon"
+                  : "sticky-icon"
+              }
+            >
               <a href="" target="_blank" className="">
                 {" "}
                 <div>
@@ -3286,16 +2309,15 @@ const {language} = useSelector((state)=>state.language)
                   <TwitterColor onMouseLeave={handleMouseLeaveTwitter} />
                 </div>{" "}
               </a>
-              <a
-              href="https://www.instagram.com/sindhboss/"
-                target="_blank"
-              >
-                <div style={{marginLeft:9,marginTop:10 }}>
-                  <Instagram style={{
+              <a href="https://www.instagram.com/sindhboss/" target="_blank">
+                <div style={{ marginLeft: 9, marginTop: 10 }}>
+                  <Instagram
+                    style={{
                       height: "35px",
                       width: "35px",
-                      // marginBottom: "-12px",
-                    }} onMouseLeave={handleMouseLeaveTwitter} />
+                    }}
+                    onMouseLeave={handleMouseLeaveTwitter}
+                  />
                 </div>{" "}
               </a>
 
@@ -3338,72 +2360,70 @@ const {language} = useSelector((state)=>state.language)
           <source src={design} type="video/mp4" />
           Your Browser Does Not Support The Video Tag.
         </video>
-        
-        
-        <div className=" pt-2 pb-4 g-0" style={{position:"relative"}}>
-        <div
-              className="col-lg-12 updates"
-              style={
-                language === "ur" || language === "sd"
+
+        <div className=" pt-2 pb-4 g-0" style={{ position: "relative" }}>
+          <div
+            className="col-lg-12 updates"
+            style={
+              language === "ur" || language === "sd"
+                ? {
+                  position: "fixed",
+                  bottom: -5.5,
+                  display: "flex",
+                  flexDirection: "row-reverse",
+                  marginLeft:
+                    language === "ur" || language === "sd" ? -42 : 0,
+                  alignItems: "end",
+                  zIndex: 99999,
+                  paddingBottom: 0,
+                }
+                : windowWidth <= 2000
                   ? {
                     position: "fixed",
-                    bottom:-5.5,
+                    bottom: -5.5,
                     display: "flex",
-                    flexDirection: "row-reverse",
-                    marginLeft: language === "ur" || language === "sd" ?-42:0,
                     alignItems: "end",
-                    zIndex:99999,
-                    paddingBottom:0
+                    zIndex: 99999,
+                    paddingBottom: 0,
+                    marginLeft: language === "ur" || language === "sd" ? 0 : 50,
                   }
-                  : windowWidth <= 2000
-                    ? {
-                      position: "fixed",
-                      bottom:-5.5,
-                      display: "flex",
-                      alignItems: "end",
-                      zIndex:99999,
-                      paddingBottom:0,
-                      marginLeft: language === "ur" || language === "sd" ?0:50,
-                      
-                    }
-                    : {
-                      position: "relative",
-                      height: "97vh",
-                      display: "flex",
-                      alignItems: "end",
-                      
-                    }
+                  : {
+                    position: "relative",
+                    height: "97vh",
+                    display: "flex",
+                    alignItems: "end",
+                  }
+            }
+          >
+            <a
+              href="comingsoon.html"
+              className={
+                language === "ur" || language === "sd"
+                  ? "LanguageUpdateHeader"
+                  : "UpdateHeader"
               }
             >
-              <a
-                href="comingsoon.html"
-                className={
-                  language === "ur" || language === "sd"
-                    ? "LanguageUpdateHeader"
-                    : "UpdateHeader"
-                }
-              >
-                <button type="button" className="update">
-                  <span>{translations["Updates"][language]}</span>
-                </button>
-              </a>
-              {language === "ur" || language === "sd" ? (
-                <marquee className="marque" direction="right">
-                  {translations["Headline"][language]}
-                </marquee>
-              ) : (
-                ""
-              )}
-              {language === "en" ? (
-                <marquee className="marque" direction="left">
-                  {translations["Headline"][language]}
-                </marquee>
-              ) : (
-                ""
-              )}
-            </div>
+              <button type="button" className="update">
+                <span>{translations["Updates"][language]}</span>
+              </button>
+            </a>
+            {language === "ur" || language === "sd" ? (
+              <marquee className="marque" direction="right">
+                {translations["Headline"][language]}
+              </marquee>
+            ) : (
+              ""
+            )}
+            {language === "en" ? (
+              <marquee className="marque" direction="left">
+                {translations["Headline"][language]}
+              </marquee>
+            ) : (
+              ""
+            )}
+          </div>
         </div>
-      </div >
+      </div>
     </>
   );
 }

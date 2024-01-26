@@ -8,7 +8,7 @@ import { CircularProgress, FormControl, Select } from "@mui/material";
 
 import { TextField } from "@mui/material";
 import TextArea from "antd/es/input/TextArea";
-import { Formik, Form, ErrorMessage,Field } from "formik";
+import { Formik, Form, ErrorMessage, Field } from "formik";
 import { areas, Drop1Data } from "./constant";
 import * as Yup from "yup";
 import { postService } from "../utils/services";
@@ -702,16 +702,19 @@ const getDropdown2Object = (arr, id) => {
   return selectedOption;
 };
 export const Dropdown = (props) => {
-
   const [selectedValue, setSelectedValue] = React.useState("");
-  const [changeValue, setChangeValue] = useState('');
-useEffect(()=>{
-  
-  props.setdepartmentDropdown({ department:'College Education Department' ,license:props.arr2[0].id})
-},[])
+  const [changeValue, setChangeValue] = useState("");
+  useEffect(() => {
+    props.setdepartmentDropdown({
+      department: "College Education Department",
+      license: props.arr2[0].id,
+    });
+  }, []);
   const handleChange = (event) => {
-
-    props.setdepartmentDropdown({department:event.target.selectedOptions[0].label,license:'zain'})
+    props.setdepartmentDropdown({
+      department: event.target.selectedOptions[0].label,
+      license: "zain",
+    });
     setSelectedValue(event.target.value);
     let arr = [...props.arr];
     arr.splice(props.ind, 1, event.target.value);
@@ -720,7 +723,10 @@ useEffect(()=>{
     let ar = [...props.arr2];
     ar.splice(props.ind, 1, Drop2Data(event.target.value)?.array[0] ?? "");
     props.setArr2(ar);
-    props.setdepartmentDropdown({department:event.target.selectedOptions[0].label,license:ar[0].text})
+    props.setdepartmentDropdown({
+      department: event.target.selectedOptions[0].label,
+      license: ar[0].text,
+    });
   };
 
   return (
@@ -751,11 +757,12 @@ useEffect(()=>{
   );
 };
 export const Dropdown1 = (props) => {
-  
   const [selectedValue, setSelectedValue] = React.useState("");
   const handleChange = (event) => {
-
-    props.setdepartmentDropdown({department:props.departmentDropdown.department, license:event.target.options[event.target.selectedIndex].text})
+    props.setdepartmentDropdown({
+      department: props.departmentDropdown.department,
+      license: event.target.options[event.target.selectedIndex].text,
+    });
     setSelectedValue(event.target.value);
     let arr = [...props.arr];
     arr.splice(
@@ -795,14 +802,14 @@ export const Dropdown1 = (props) => {
   );
 };
 
-const FeedBackForm = () => { 
+const FeedBackForm = () => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-  const [isloading, setisloading] = useState(false)
+  const [isloading, setisloading] = useState(false);
   const [departmentDropdown, setdepartmentDropdown] = useState({
-    department:'',
-    license:''
-  })
-  
+    department: "",
+    license: "",
+  });
+
   useEffect(() => {
     // Function to update the windowWidth state when the resize event occurs
     const handleResize = () => {
@@ -893,7 +900,6 @@ const FeedBackForm = () => {
     },
   ];
   const handleDepartments = (e, param) => {
-    
     const selectedValue = e.target.value;
     const departmentLabels = {
       Urban: "Areas",
@@ -925,40 +931,30 @@ const FeedBackForm = () => {
       // filterData = data.filter((x) => x.id === selectedValue);
     }
 
-    // !param ? setChangeValue(filterData) : (filterData = filterData);
     return filterData;
   };
-  const handleArea = (e) => {
-    
-    const selectedValue = e.target.value;
-    let filterData = [];
-    // if (selectedValue !== "") {
-    //   filterData = data.filter((x) => x.id === selectedValue);
-    // }
-  };
-  const onHandleSubmit = (values,resetForm) => {
-debugger
-    setisloading(true)
+  const onHandleSubmit = (values, resetForm) => {
+    ;
+    setisloading(true);
 
-    const RespObj = { ...values,...departmentDropdown };
+    const RespObj = { ...values, ...departmentDropdown };
     postService("/contact-us", RespObj)
       .then((response) => {
         console.log(response);
-        Toastersuccess('Your Feedback is submitted');
-        setisloading(false)
-        resetForm()
-
+        Toastersuccess("Your Feedback is submitted");
+        setisloading(false);
+        resetForm();
       })
       .catch((error) => {
-        Toaster(error.message,"error");
-       setisloading(false)
-       resetForm()
+        Toaster(error.message, "error");
+        setisloading(false);
+        resetForm();
       });
   };
-  const handleMobileNumberChange = (event,form) => {
+  const handleMobileNumberChange = (event, form) => {
     const inputValue = event.target.value;
     const truncatedValue = inputValue.slice(0, 11);
-    form.setFieldValue('mobileNumber', truncatedValue);
+    form.setFieldValue("mobileNumber", truncatedValue);
   };
   return (
     <>
@@ -966,40 +962,49 @@ debugger
         {/* <Basic/> */}
         <Formik
           initialValues={{
-            name: '',
-            mobileNumber:'',
-            email: '',
-            comments:'',
-            address:'',
-            companyName:'',
-            country:'',
-            department:'',
-            companyWebsite:'',
-            license:'',
-
+            name: "",
+            mobileNumber: "",
+            email: "",
+            comments: "",
+            address: "",
+            companyName: "",
+            country: "",
+            department: "",
+            companyWebsite: "",
+            license: "",
           }}
           validationSchema={Yup.object({
-            name:Yup.string()
-            .matches(/^[A-Za-z]+$/, 'Name must only contain letters')
-            .required('Name is required'),
+            name: Yup.string()
+              .matches(/^[A-Za-z]+$/, "Name must only contain letters")
+              .required("Name is required"),
             email: Yup.string()
               .email("Invalid email address")
               .required("Email is required"),
-            mobileNumber:Yup.string().test('len', 'Number must have exactly 11 digits', (value) => {
-              if (value) {
-                return value.toString().length === 11;
-              }
-              return true;
-            })
-            .required('Number is required'),
+            mobileNumber: Yup.string()
+              .test("len", "Number must have exactly 11 digits", (value) => {
+                if (value) {
+                  return value.toString().length === 11;
+                }
+                return true;
+              })
+              .required("Number is required"),
           })}
-          onSubmit={(values, { setSubmitting ,resetForm}) => {
-            onHandleSubmit(values,resetForm);
+          onSubmit={(values, { setSubmitting, resetForm }) => {
+            onHandleSubmit(values, resetForm);
             setSubmitting(false);
           }}
         >
           {({
-            values:{name,email,mobileNumber,address,companyName,companyWebsite,country,comments},
+            values: {
+              name,
+              email,
+              mobileNumber,
+              address,
+              companyName,
+              companyWebsite,
+              country,
+              comments,
+            },
             errors,
             handleChange,
             handleBlur,
@@ -1007,7 +1012,6 @@ debugger
             isSubmitting,
             touched,
             setFormikState,
-          
           }) => (
             <div
               className="col-md-8 ps-md-3 px-3 justify-content-center  "
@@ -1031,8 +1035,10 @@ debugger
                         onBlur={handleBlur}
                         value={name}
                       />
-                     
-                      {(errors.name && touched.name) && <span className="error">{errors.name}</span>}
+
+                      {errors.name && touched.name && (
+                        <span className="error">{errors.name}</span>
+                      )}
                     </div>
                   </Fade>
                   <Fade right>
@@ -1088,22 +1094,25 @@ debugger
                     <div className="col-md-6">
                       <h4>Mobile Number</h4>
                       <Field name="mobileNumber">
-                      {({ field ,form}) => (
-                      <TextField
-                        placeholder="Enter Your  Moble Number"
-                        size="small"
-                        style={{ width: "96%" }}
-                        type="number"
-                        onChange={(event) => {
-                          handleMobileNumberChange(event,form)
-                        }}
-                        onBlur={handleBlur}
-                        value={field.value}
-                        name="mobileNumber"
-                        inputProps={{ maxLength: 11 }}
-                      />)}
+                        {({ field, form }) => (
+                          <TextField
+                            placeholder="Enter Your  Moble Number"
+                            size="small"
+                            style={{ width: "96%" }}
+                            type="number"
+                            onChange={(event) => {
+                              handleMobileNumberChange(event, form);
+                            }}
+                            onBlur={handleBlur}
+                            value={field.value}
+                            name="mobileNumber"
+                            inputProps={{ maxLength: 11 }}
+                          />
+                        )}
                       </Field>
-                       {(errors.mobileNumber && touched.mobileNumber) &&  <span className="error">{errors.mobileNumber}</span>}
+                      {errors.mobileNumber && touched.mobileNumber && (
+                        <span className="error">{errors.mobileNumber}</span>
+                      )}
                     </div>
                   </Fade>
                 </div>
@@ -1121,7 +1130,9 @@ debugger
                         onChange={handleChange}
                         onBlur={handleBlur}
                       />
-                      {(errors.email && touched.email) && <span className="error">{errors.email}</span>}
+                      {errors.email && touched.email && (
+                        <span className="error">{errors.email}</span>
+                      )}
                     </div>
                   </Fade>
                   <Fade right>
@@ -1164,7 +1175,6 @@ debugger
                             onBlur={handleBlur}
                             setdepartmentDropdown={setdepartmentDropdown}
                             departmentDropdown={departmentDropdown}
-
                           />
                           <div className="col-md-6"></div>
                         </div>
@@ -1179,10 +1189,8 @@ debugger
                                 setArr={setArr2}
                                 arr1={val}
                                 label={false}
-                               setdepartmentDropdown={setdepartmentDropdown}
-                               departmentDropdown={departmentDropdown}
-
-
+                                setdepartmentDropdown={setdepartmentDropdown}
+                                departmentDropdown={departmentDropdown}
                               />
                             </>
                           )}
@@ -1206,7 +1214,6 @@ debugger
                         value={comments}
                         name="comments"
                       />
-
                     </div>
                   </Fade>
                 </div>
@@ -1215,14 +1222,13 @@ debugger
                     <button
                       type="submit"
                       className="submit_button"
-                      disabled={isloading }
+                      disabled={isloading}
                     >
-                           {
-        isloading ? 
-          <CircularProgress size={30} color="inherit"/>
-      :"  Submit"
-      }
-                    
+                      {isloading ? (
+                        <CircularProgress size={30} color="inherit" />
+                      ) : (
+                        "  Submit"
+                      )}
                     </button>
                     {/* ///// */}
                   </div>
@@ -1232,8 +1238,8 @@ debugger
           )}
         </Formik>
       </div>
-     
-      <ToastContainer  />
+
+      <ToastContainer />
     </>
   );
 };

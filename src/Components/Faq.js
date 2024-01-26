@@ -34,12 +34,12 @@ const Faq = () => {
     const filterData = (event) => {
         setisFilterOn(false)
         try {
-            if(event.target.value !==''){
+            if (event.target.value !== '') {
                 let filterValue = event.target.value.toLowerCase();
-    
-            const getFilterData = allFaqQuestions.filter(question => {
-                return question.Question.toLowerCase().includes(filterValue);
-            });
+
+                const getFilterData = allFaqQuestions.filter(question => {
+                    return question.Question.toLowerCase().includes(filterValue);
+                });
                 setfilteredFaq(getFilterData);
             }
             else {
@@ -50,8 +50,8 @@ const Faq = () => {
             console.log(error);
         }
     };
-    
-    
+
+
     return (
         <>
             {windowWidth <= 500 ? <MobileHeaderGeneric /> : <GenericHeader />}
@@ -75,40 +75,40 @@ const Faq = () => {
             </div>
             <div className='d-flex justify-content-center mb-5'>
                 <div className='w-75 mb-5 '>
-                <div className="row g-0">
-        <div className="col-lg-4 col-xxl-5">
-        <TextField
-            className="mb-4"
-            size='small'
-            type="text"
-            placeholder="Search Faq..."
-            onChange={filterData}
-            style={{width:"100%"}}
-          />
-        </div>
-       </div>
-                            {
-                               !isFilterOn&& filteredFaq?.map((faqItem) => {
-                                        return <Accordion >
-                                            <AccordionSummary
-                                                expandIcon={<ExpandMoreIcon />}
-                                                aria-controls="panel1a-content"
-                                                id="panel1a-header"
-                                            >
-                                                <Typography sx={{ fontWeight: 'bold' }}>{faqItem?.Question}</Typography>
-                                            </AccordionSummary>
-                                            <AccordionDetails>
-                                                <Typography>
-                                                    <span style={{ whiteSpace: "pre-line"}}  dangerouslySetInnerHTML={{ __html: faqItem?.Answer }} ></span>
-                                                </Typography>
-                                            </AccordionDetails>
-                                        </Accordion>
-})
-                                }
+                    <div className="row g-0">
+                        <div className="col-lg-4 col-xxl-5">
+                            <TextField
+                                className="mb-4"
+                                size='small'
+                                type="text"
+                                placeholder="Search Faq..."
+                                onChange={filterData}
+                                style={{ width: "100%" }}
+                            />
+                        </div>
+                    </div>
                     {
-                       isFilterOn &&   departmentsFaq?.map((department,index) => (
+                        !isFilterOn && filteredFaq?.map((faqItem) => {
+                            return <Accordion >
+                                <AccordionSummary
+                                    expandIcon={<ExpandMoreIcon />}
+                                    aria-controls="panel1a-content"
+                                    id="panel1a-header"
+                                >
+                                    <Typography sx={{ fontWeight: 'bold' }}>{faqItem?.Question}</Typography>
+                                </AccordionSummary>
+                                <AccordionDetails>
+                                    <Typography>
+                                        <span style={{ whiteSpace: "pre-line" }} dangerouslySetInnerHTML={{ __html: faqItem?.Answer }} ></span>
+                                    </Typography>
+                                </AccordionDetails>
+                            </Accordion>
+                        })
+                    }
+                    {
+                        isFilterOn && departmentsFaq?.map((department, index) => (
                             <div key={index}>
-                                <Typography style={{ fontSize: "22px", marginTop: index >=1 && 40, marginBottom: 10 }}>{department?.department}</Typography>
+                                <Typography style={{ fontSize: "22px", marginTop: index >= 1 && 40, marginBottom: 10 }}>{department?.department}</Typography>
                                 {
                                     department?.FaqQuestion.map((faqItem) => (
                                         <Accordion key={faqItem?.id}>
@@ -121,7 +121,7 @@ const Faq = () => {
                                             </AccordionSummary>
                                             <AccordionDetails>
                                                 <Typography>
-                                                    <span style={{ whiteSpace: "pre-line"}}  dangerouslySetInnerHTML={{ __html: faqItem?.Answer }} ></span>
+                                                    <span style={{ whiteSpace: "pre-line" }} dangerouslySetInnerHTML={{ __html: faqItem?.Answer }} ></span>
                                                 </Typography>
                                             </AccordionDetails>
                                         </Accordion>

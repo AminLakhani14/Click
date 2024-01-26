@@ -32,7 +32,7 @@ const members = [
     name: "Mr. Tahir Ali Khan",
     designation: "Senior Automation Specialist ",
     email: 'tahir@business.gos.pk',
-    link:"https://www.linkedin.com/in/tahirakhan/"
+    link: "https://www.linkedin.com/in/tahirakhan/"
   },
   {
     dp: user,
@@ -45,7 +45,7 @@ const members = [
     name: "Ms. Hira Pirzada",
     designation: "Communication Specialist",
     email: 'hira.pirzada@business.gos.pk',
-    link:'https://www.linkedin.com/in/hira-pirzada-01109b1a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app'
+    link: 'https://www.linkedin.com/in/hira-pirzada-01109b1a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app'
   },
   {
     dp: fatimaSaleem,
@@ -54,14 +54,6 @@ const members = [
     email: 'fatima.saleem@business.gos.pk'
 
   },
- 
-  // {
-
-  //   dp: user,
-  //   name: "Mr. Mohammad Moosa",
-  //   designation: "Deputy Finance Manager/ Accountant",
-  // },
-
 
 ];
 function Team() {
@@ -103,7 +95,7 @@ function Team() {
                   <div className="members_information_container">
                     <div className="name">
                       <a href={items?.link} className={items.link && "teams_social_link"}>
-                      <h5>{name}</h5>
+                        <h5>{name}</h5>
                       </a>
                     </div>
                     <div className="emai_container">

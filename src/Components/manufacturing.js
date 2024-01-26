@@ -9,66 +9,46 @@ import TextField from "@mui/material/TextField";
 import sindhAssembly from "../assets/sindhAssemblywomen.png";
 import buildingBridge from "../assets/buildingBridge.png";
 import manufacturebg from "../assets/manufacturebg.jpg";
- import "../Css/resource.css";
- import manufactinnerpic1 from "../assets/manufactinnerpic1.jpg";
- import manufactinnerpic2 from "../assets/manufactinnerpic2.jpg";
-
+import "../Css/resource.css";
+import manufactinnerpic1 from "../assets/manufactinnerpic1.jpg";
+import manufactinnerpic2 from "../assets/manufactinnerpic2.jpg";
 
 function Manufacturing(props) {
   const loc = useLocation();
   useEffect(() => {
-    let lm  = document.getElementById(loc.hash.slice(1));
-    
+    let lm = document.getElementById(loc.hash.slice(1));
+
     if (lm) {
-      lm.scrollIntoView({ behavior: 'smooth' });
+      lm.scrollIntoView({ behavior: "smooth" });
+    } else {
+      window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
     }
-    else
-    {
-      window.scrollTo({top:0, left:0, behavior:'smooth'})
-      }
-  }, [loc])
+  }, [loc]);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   useEffect(() => {
-
     // Function to update the windowWidth state when the resize event occurs
     const handleResize = () => {
       setWindowWidth(window.innerWidth);
     };
 
     // Attach the event listener
-    window.addEventListener('resize', handleResize);
+    window.addEventListener("resize", handleResize);
 
     // Clean up the event listener on component unmount
     return () => {
-      window.removeEventListener('resize', handleResize);
+      window.removeEventListener("resize", handleResize);
     };
   }, []);
-  // useEffect(() => {
-  //   if ("scrollRestoration" in window.history) {
-  //     window.history.scrollRestoration = "manual";
-  //   }
-
-  //   window.scrollTo(0, 0);
-
-  //   // Restore scroll restoration to its default behavior
-  //   return () => {
-  //     if ("scrollRestoration" in window.history) {
-  //       window.history.scrollRestoration = "auto";
-  //     }
-  //   };
-  // }, []);
-
-  const [language, setLanguage] = useState('en');
+  const [language, setLanguage] = useState("en");
 
   // Function to toggle language between English, Urdu, and Sindhi
   const toggleLanguage = () => {
-    if (language === 'en') {
-      setLanguage('ur');
-    } else if (language === 'ur') {
-      setLanguage('sd');
+    if (language === "en") {
+      setLanguage("ur");
+    } else if (language === "ur") {
+      setLanguage("sd");
     } else {
-      setLanguage('en');
-      
+      setLanguage("en");
     }
   };
 
@@ -129,74 +109,87 @@ function Manufacturing(props) {
         className="SiteMain2"
       >
         <h1
-          className={`slide-in-left Investnow-h1 highlightable ${
-            isVisible ? "" : "slide-out-left"
-          }`}
+          className={`slide-in-left Investnow-h1 highlightable ${isVisible ? "" : "slide-out-left"
+            }`}
         >
           Manufacturing
         </h1>
       </div>
       <div className="row breadCrumb">
         <div
-          style={{ display: "flex", justifyContent: "center", width: "100%", flexDirection:(window.innerWidth>= 280) && (window.innerWidth <=320)? "column": "row" }}
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            width: "100%",
+            flexDirection:
+              window.innerWidth >= 280 && window.innerWidth <= 320
+                ? "column"
+                : "row",
+          }}
         >
           <Link
             to={"/home"}
             style={{
               // color: "#720D1D",
-              fontSize: (window.innerWidth>= 280) && (window.innerWidth <=320)? "0px": "30px",
+              fontSize:
+                window.innerWidth >= 280 && window.innerWidth <= 320
+                  ? "0px"
+                  : "30px",
               textDecoration: "none",
             }}
           >
             <h5
-              style={{ display: "contents", color: "black", fontSize: window.innerWidth <= 500? "20px": "30px" }}
+              style={{
+                display: "contents",
+                color: "black",
+                fontSize: window.innerWidth <= 500 ? "20px" : "30px",
+              }}
             >
               Home {value}
-                
             </h5>
           </Link>
           <Link
             to={"/Opportunity"}
             style={{
               // color: "#720D1D",
-              fontSize: (window.innerWidth>= 280) && (window.innerWidth <=320)? "0px": "30px",
+              fontSize:
+                window.innerWidth >= 280 && window.innerWidth <= 320
+                  ? "0px"
+                  : "30px",
               textDecoration: "none",
             }}
           >
             <h4
-              style={{ display: "contents", color: "black", fontSize: window.innerWidth <= 500? "20px": "30px" }}
+              style={{
+                display: "contents",
+                color: "black",
+                fontSize: window.innerWidth <= 500 ? "20px" : "30px",
+              }}
             >
-
               Opportunities {value}
-                
-               
             </h4>
           </Link>
-          {/* <Link
-            to={"/home"}
+          <div
             style={{
-              color: "#720D1D",
-              fontSize: "30px",
-              textDecoration: "none",
+              paddingTop:
+                window.innerWidth >= 280 && window.innerWidth <= 320
+                  ? "4px"
+                  : window.innerWidth <= 500
+                    ? "19px"
+                    : "9px",
             }}
-          > */}
-          <div style={ 
-            { paddingTop:(window.innerWidth >= 280 && window.innerWidth <= 320)?"4px":
-              (window.innerWidth <= 500)? "19px":
-            "9px" }}>
+          >
             <h4
               style={{
                 display: "contents",
                 cursor: "pointer",
                 color: "#720D1D",
-                fontSize:  window.innerWidth <= 500? "20px": "30px",
-
+                fontSize: window.innerWidth <= 500 ? "20px" : "30px",
               }}
             >
               Manufacturing
             </h4>
           </div>
-          {/* </Link> */}
         </div>
       </div>
       <div
@@ -211,7 +204,9 @@ function Manufacturing(props) {
           paddingTop: "35px",
         }}
       >
-        <h1 className="mainHeading highlightable">Agriculture And Food Processing</h1>
+        <h1 className="mainHeading highlightable">
+          Agriculture And Food Processing
+        </h1>
         <div
           className="col-lg-10"
           style={{
@@ -240,7 +235,6 @@ function Manufacturing(props) {
           className="col-lg-9 descriptionImage"
           style={{
             background: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),url(${manufactinnerpic2})`,
-            
           }}
         >
           <label className="agriAndFoodHeading highlightable">
@@ -300,7 +294,7 @@ function Manufacturing(props) {
           className="col-lg-9 descriptionImageforsectorsandopport"
           style={{
             background: `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),url(${manufactinnerpic1})`,
-            backgroundSize:"100% 124%"
+            backgroundSize: "100% 124%",
           }}
         >
           <label className="agriAndFoodHeading highlightable">
@@ -317,7 +311,10 @@ function Manufacturing(props) {
       >
         <div className="col-lg-1"></div>
         <div className="col-lg-10">
-          <label className="f-size highlightable" style={{ marginBottom: "25px" }}>
+          <label
+            className="f-size highlightable"
+            style={{ marginBottom: "25px" }}
+          >
             The Sindh government is committed to fostering a thriving
             agriculture and food processing sector by implementing proactive
             measures and offering comprehensive support to businesses.
@@ -360,7 +357,7 @@ function Manufacturing(props) {
             className="InvestInSindhButton"
             onClick={handleLearnMoreClick2}
           >
-            <span id="expertform"  style={{ width: "179px", height: "33px" }}>
+            <span id="expertform" style={{ width: "179px", height: "33px" }}>
               {showFullText2 ? "Read Less" : "Read More"}
             </span>
           </button>
@@ -379,7 +376,7 @@ function Manufacturing(props) {
           style={{
             display: "flex",
             justifyContent: "center",
-         textAlign:"center",                               
+            textAlign: "center",
             paddingTop: "50px",
             marginBottom: "75px",
           }}
@@ -392,47 +389,50 @@ function Manufacturing(props) {
           style={{
             background: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(${manufacturebg})`,
             backgroundSize: "cover",
-                backgroundPosition: "center", 
-                backgroundRepeat: "no-repeat", 
-                height: window.innerWidth <= 500 ? "760px" :
-                window.innerWidth === 540? 700: 
-                window.innerWidth >= 768 && window.innerWidth <= 912? 
-                "700px":"600px", 
-                width: "100%",
-                marginTop: "-20px",
-                padding: "60px",
+            backgroundPosition: "center",
+            backgroundRepeat: "no-repeat",
+            height:
+              window.innerWidth <= 500
+                ? "760px"
+                : window.innerWidth === 540
+                  ? 700
+                  : window.innerWidth >= 768 && window.innerWidth <= 912
+                    ? "700px"
+                    : "600px",
+            width: "100%",
+            marginTop: "-20px",
+            padding: "60px",
           }}
         >
-          <div className="row sectornestedscreens"  style={{ marginTop:window.innerWidth >= 1024? "48px ":  "-16px" }}>
+          <div
+            className="row sectornestedscreens"
+            style={{ marginTop: window.innerWidth >= 1024 ? "48px " : "-16px" }}
+          >
             <div className="col-lg-4">
-              {/* <div class="textField"> */}
-                <TextField
-                  id="outlined-controlled"
-                  style={{ width: "100%" }}
-                  className="feedBackTextField"
-                  label="Name"
-                  size="small"
-                  InputProps={{
-                    style: { borderRadius: "30px", border: "none" }, // Remove the border
-                  }}
-                  placeholder="Enter your name"
-                />
-              {/* </div> */}
+              <TextField
+                id="outlined-controlled"
+                style={{ width: "100%" }}
+                className="feedBackTextField"
+                label="Name"
+                size="small"
+                InputProps={{
+                  style: { borderRadius: "30px", border: "none" }, // Remove the border
+                }}
+                placeholder="Enter your name"
+              />
             </div>
             <div className="col-lg-4">
-              {/* <div class="textField"> */}
-                <TextField
-                  id="outlined-controlled"
-                  style={{ width: "100%" }}
-                  className="feedBackTextField"
-                  InputProps={{
-                    style: { borderRadius: "30px", border: "none" }, // Remove the border
-                  }}
-                  label="Company Name"
-                  size="small"
-                  placeholder="Enter your company name"
-                />
-              {/* </div> */}
+              <TextField
+                id="outlined-controlled"
+                style={{ width: "100%" }}
+                className="feedBackTextField"
+                InputProps={{
+                  style: { borderRadius: "30px", border: "none" }, // Remove the border
+                }}
+                label="Company Name"
+                size="small"
+                placeholder="Enter your company name"
+              />
             </div>
             <div className="col-lg-4">
               <TextField
@@ -450,75 +450,74 @@ function Manufacturing(props) {
           </div>
           <div className="row mt-4 sectornestedscreens">
             <div className="col-lg-4">
-              {/* <div class="textField"> */}
-                <TextField
+              <TextField
                 className="feedBackTextField"
-                  id="outlined-controlled"
-                  style={{ width: "100%" }}
-                  size="small"
-                  label="Email"
-                  InputProps={{
-                    style: { borderRadius: "30px", border: "none" }, // Remove the border
-                  }}
-                  placeholder="Enter your Email"
-                />
-              {/* </div> */}
+                id="outlined-controlled"
+                style={{ width: "100%" }}
+                size="small"
+                label="Email"
+                InputProps={{
+                  style: { borderRadius: "30px", border: "none" }, // Remove the border
+                }}
+                placeholder="Enter your Email"
+              />
             </div>
             <div className="col-lg-4">
-              {/* <div class="textField"> */}
-                <TextField
+              <TextField
                 className="feedBackTextField"
-                  id="outlined-controlled"
-                  style={{ width: "100%" }}
-                  size="small"
-                  label="Phone"
-                  InputProps={{
-                    style: { borderRadius: "30px", border: "none" }, // Remove the border
-                  }}
-                  placeholder="92123567901"
-                />
-              {/* </div> */}
+                id="outlined-controlled"
+                style={{ width: "100%" }}
+                size="small"
+                label="Phone"
+                InputProps={{
+                  style: { borderRadius: "30px", border: "none" }, // Remove the border
+                }}
+                placeholder="92123567901"
+              />
             </div>
             <div className="col-lg-4">
-              {/* <div class="textField"> */}
-                <TextField
+              <TextField
                 className="feedBackTextField"
-                  id="outlined-controlled"
-                  style={{ width: "100%" }}
-                  size="small"
-                  InputProps={{
-                    style: { borderRadius: "30px", border: "none" }, // Remove the border
-                  }}
-                  label="Subject"
-                  placeholder="Write your feedback subject"
-                />
-              {/* </div> */}
+                id="outlined-controlled"
+                style={{ width: "100%" }}
+                size="small"
+                InputProps={{
+                  style: { borderRadius: "30px", border: "none" }, // Remove the border
+                }}
+                label="Subject"
+                placeholder="Write your feedback subject"
+              />
             </div>
           </div>
-          <div className="row  sectornestedscreens"style={{marginTop:"0.3rem"}}  >
+          <div
+            className="row  sectornestedscreens"
+            style={{ marginTop: "0.3rem" }}
+          >
             <div className="col-lg-12 mt-4">
-              {/* <div class="textField"> */}
-                <TextField
-                  id="outlined-controlled"
-                  size="small"
-                 className="feedBackTextField"
-                  style={{
-                    width: "100%",
-                    borderRadius: "38px",
-                    marginLeft:"0px",
-                    marginTop:"-4px"
-                  }}
-                  label="Message"
-                  multiline
-                  rows={4}
-                  InputProps={{
-                    style: { borderRadius: "30px", border: "none",   paddingTop:"10px", 
-                    paddingLeft:"20px", 
-                    paddingRight:"27px"}, // Remove the border
-                  }}
-                  placeholder="Write your feedback subject"
-                />
-              {/* </div> */}
+              <TextField
+                id="outlined-controlled"
+                size="small"
+                className="feedBackTextField"
+                style={{
+                  width: "100%",
+                  borderRadius: "38px",
+                  marginLeft: "0px",
+                  marginTop: "-4px",
+                }}
+                label="Message"
+                multiline
+                rows={4}
+                InputProps={{
+                  style: {
+                    borderRadius: "30px",
+                    border: "none",
+                    paddingTop: "10px",
+                    paddingLeft: "20px",
+                    paddingRight: "27px",
+                  }, // Remove the border
+                }}
+                placeholder="Write your feedback subject"
+              />
             </div>
           </div>
           <div className="row">
@@ -531,7 +530,7 @@ function Manufacturing(props) {
         </div>
       </div>
       <div className="footerTop">
-      <Footer  language={language} setLanguage={setLanguage}/>
+        <Footer language={language} setLanguage={setLanguage} />
       </div>
     </>
   );

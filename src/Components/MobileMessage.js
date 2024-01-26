@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import "../Css/wheeler.css";
 import qasim from "../assets/qasim.png";
 import qasimBW from "../assets/qasimBW.jpeg";
@@ -18,7 +18,7 @@ const imageMapColor = {
   "img2": mng1,
   "img3": mng2,
   "img4": muradAli
-};  
+};
 const imageMapBW = {
   "qasim_Id": qasimBW,
   "img2": mng1,
@@ -27,13 +27,11 @@ const imageMapBW = {
 };
 
 let ID = "qasim_Id"
-function  MobileMessage(props) {
-  const [innerWidth,innerHeight] = useState(window)
-  // shahab
-  const array =[
+function MobileMessage(props) {
+  const array = [
     {
       id: "qasim_Id",
-      img:qasim,
+      img: qasim,
       // name:"Syed Qasim Naveed Qamar",
       name: {
         en: "Syed Qasim Naveed Qamar",
@@ -52,8 +50,8 @@ function  MobileMessage(props) {
       },
     },
     {
-      id:"img2",
-      img:mng1,
+      id: "img2",
+      img: mng1,
       name: {
         en: "Tameezuddin Khero",
         ur: "تمیز الدین خیرو",
@@ -71,8 +69,8 @@ function  MobileMessage(props) {
       },
     },
     {
-      id:"img3",
-      img:mng2,
+      id: "img3",
+      img: mng2,
       name: {
         en: "Anwar Ali Shar",
         ur: "تمیز الدین خیرو",
@@ -92,12 +90,12 @@ function  MobileMessage(props) {
     }
   ]
 
-  const [imgFormData, setimgFormData] = useState({img: array[0].img, name: array[0].name, subtitle: array[0].subtitle, desc: array[0].desc })
+  const [imgFormData, setimgFormData] = useState({ img: array[0].img, name: array[0].name, subtitle: array[0].subtitle, desc: array[0].desc })
   const resetImageSlider = (param) => {
     try {
-      if(param && param !== "") {
+      if (param && param !== "") {
 
-        
+
         if (imageMapBW.hasOwnProperty(param)) {
           document.getElementById(param).src = imageMapBW[param];
         }
@@ -108,19 +106,19 @@ function  MobileMessage(props) {
   }
   const clickCarouselImage = (event) => {
     try {
-      debugger;
-      if(event) {
+      ;
+      if (event) {
         let Id = event?.target?.id
         resetImageSlider(ID)
         // document.getElementById(Id).src = muradAli;  // when click image change
-       
+
         if (imageMapColor.hasOwnProperty(Id)) {
           document.getElementById(Id).src = imageMapColor[Id];
         }
-        let CloneArr = array 
-        let data= CloneArr.filter(x=> x.id === Id);
+        let CloneArr = array
+        let data = CloneArr.filter(x => x.id === Id);
         setimgFormData(data[0])
-        ID= Id;
+        ID = Id;
       }
 
     } catch (error) {
@@ -128,14 +126,14 @@ function  MobileMessage(props) {
     }
   }
   const handleArrowClick = () => {
-    if(ID !== "qasim_Id") {
-     setTimeout(() => {
-      document.getElementById("qasim_Id").src = imageMapBW["qasim_Id"];
-      document.getElementById(ID).src = imageMapColor[ID];
-     }, 600);
-    }   
+    if (ID !== "qasim_Id") {
+      setTimeout(() => {
+        document.getElementById("qasim_Id").src = imageMapBW["qasim_Id"];
+        document.getElementById(ID).src = imageMapColor[ID];
+      }, 600);
+    }
   };
-  const {language} = useSelector((state)=>state.language)
+  const { language } = useSelector((state) => state.language)
 
   return (
     <>
@@ -143,21 +141,22 @@ function  MobileMessage(props) {
         <div className="body-box">
           <div className="row">
             <div className="col-12 ">
-            <h1  className="highlightable" style={{color: "#054a91", fontWeight: "700",
-                    fontFamily: "Crimson Pro !important",
-                    fontSize: "30px",
-                    marginLeft: "-30px"
-               }}> {translations["Messages"][language]}</h1>
+              <h1 className="highlightable" style={{
+                color: "#054a91", fontWeight: "700",
+                fontFamily: "Crimson Pro !important",
+                fontSize: "30px",
+                marginLeft: "-30px"
+              }}> {translations["Messages"][language]}</h1>
             </div>
           </div>
           <div className="row justify-content-center mt-3">
-            <div style={{width:"70%"}}>
+            <div style={{ width: "70%" }}>
               <Carousel
                 show={1}
                 slide={1}
                 swiping={true}
                 onRightArrowClick={handleArrowClick}
-              onLeftArrowClick={handleArrowClick}
+                onLeftArrowClick={handleArrowClick}
                 leftArrow={
                   <div
                     style={{
@@ -183,23 +182,23 @@ function  MobileMessage(props) {
                   {" "}
                   <div className="item" onClick={clickCarouselImage}>
                     <img
-                    id="qasim_Id"
+                      id="qasim_Id"
                       src={array[0].img}
                       // src={qasimBW}
                       alt=""
                       width="110"
                       height="110"
-                      style={{ borderRadius: "45%",display:"flex",justifyContent:"center" }}
+                      style={{ borderRadius: "45%", display: "flex", justifyContent: "center" }}
                     ></img>
                   </div>
                 </div>
                 <div>
                   {" "}
-                  <div className="item "  onClick={clickCarouselImage}>
+                  <div className="item " onClick={clickCarouselImage}>
                     <img
-                    id="img2"
-                    //  src={array[1].img}
-                    src={mng1}
+                      id="img2"
+                      //  src={array[1].img}
+                      src={mng1}
                       alt=""
                       width="110"
                       height="110"
@@ -209,10 +208,10 @@ function  MobileMessage(props) {
                   ‍
                 </div>
                 <div>
-                  <div className="item "  onClick={clickCarouselImage}>
+                  <div className="item " onClick={clickCarouselImage}>
                     {" "}
                     <img
-                     id="img3"
+                      id="img3"
                       // src={array[2].img}
                       src={mng2BW}
                       alt=""
@@ -243,15 +242,15 @@ function  MobileMessage(props) {
                   <a className="pmd-avatar-list-img" href="javascript:void(0);">
                     <img src={quote} width="60" height="60"></img>
                   </a>
-                  <div className="media-body" style={{width:"304px"}}>
+                  <div className="media-body" style={{ width: "304px" }}>
                     {/* <h3 className="title">Syed Qasim Naveed Qamar </h3> */}
                     <h3 className="title highlightable">{imgFormData.name[language]}</h3>
                     <p
                       className="card-subtitle highlightable"
                       style={
                         language === "ur" || language === "sd"
-                          ? { display: "contents", fontWeight: "400", color: "rgb(163, 163, 163)",textAlign:"left" }
-                          : {fontWeight: "400", color: "rgb(163, 163, 163)",textAlign:"left" }
+                          ? { display: "contents", fontWeight: "400", color: "rgb(163, 163, 163)", textAlign: "left" }
+                          : { fontWeight: "400", color: "rgb(163, 163, 163)", textAlign: "left" }
                       }
                     >
                       {imgFormData.subtitle[language]}
@@ -260,16 +259,16 @@ function  MobileMessage(props) {
                 </div>
                 <div className="mt-3">
                   <p
-                  style={
-                    language === "ur" || language === "sd"
-                      ? { }
-                      : {textAlign:"initial"}
-                  }
-                  className={
-                    language === "ur" || language === "sd"
-                      ? "sub-title paragraphAlign"
-                      : "sub-title highlightable"
-                  }>
+                    style={
+                      language === "ur" || language === "sd"
+                        ? {}
+                        : { textAlign: "initial" }
+                    }
+                    className={
+                      language === "ur" || language === "sd"
+                        ? "sub-title paragraphAlign"
+                        : "sub-title highlightable"
+                    }>
                     {imgFormData.desc[language]}
                   </p>
                 </div>

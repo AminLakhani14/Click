@@ -1,21 +1,11 @@
 import React, { useRef, useState } from "react";
-import { Button, Modal, Tabs } from "antd";
-import TextArea from "antd/es/input/TextArea";
-import { Input, Space } from "antd";
+import { Modal, Tabs } from "antd";
+import { Input } from "antd";
 import DocumentGrid from "./Grid/DocumentGrid";
 import { TextField } from "@mui/material";
-import { color } from "d3";
-import { createTheme } from '@mui/material/styles';
-import tutorial from "../assets/tutorial.mp4";
-import videoFinal from "../assets/VideoFinal.mp4"
-import { ThemeProvider } from '@mui/material/styles';
+import { createTheme } from "@mui/material/styles";
 import "../Css/resource.css";
 import { useEffect } from "react";
-import Map from "./Map";
-import logo from "../assets/Agriculture.png"
-import labourDepartmentVideo from "../assets/ld002.mp4"
-
-
 
 const DetailModal = (props) => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
@@ -25,25 +15,24 @@ const DetailModal = (props) => {
     const handleResize = () => {
       setWindowWidth(window.innerWidth);
     };
-
     // Attach the event listener
-    window.addEventListener('resize', handleResize);
+    window.addEventListener("resize", handleResize);
 
     // Clean up the event listener on component unmount
     return () => {
-      window.removeEventListener('resize', handleResize);
+      window.removeEventListener("resize", handleResize);
     };
   }, []);
-  debugger
-  console.log('props?.licenceData?', props?.licenceData);
-  console.log('props', props);
+  ;
+  console.log("props?.licenceData?", props?.licenceData);
+  console.log("props", props);
   const theme = createTheme({
     overrides: {
       MuiInput: {
         // Style for disabled TextField
         disabled: {
-          '& input': {
-            color: 'red',
+          "& input": {
+            color: "red",
           },
         },
       },
@@ -69,12 +58,6 @@ const DetailModal = (props) => {
     if (!targetRect) {
       return;
     }
-    // setBounds({
-    //   left: -targetRect.left + uiData.x,
-    //   right: clientWidth - (targetRect.right - uiData.x),
-    //   top: -targetRect.top + uiData.y,
-    //   bottom: clientHeight - (targetRect.bottom - uiData.y),
-    // });
   };
   const { Search } = Input;
 
@@ -97,8 +80,8 @@ const DetailModal = (props) => {
             onMouseOut={() => {
               setDisabled(true);
             }}
-            onFocus={() => { }}
-            onBlur={() => { }}
+            onFocus={() => {}}
+            onBlur={() => {}}
           >
             Interactive Regulatory Directory
           </div>
@@ -110,14 +93,21 @@ const DetailModal = (props) => {
         footer={null}
         aria-selected="true"
         className="modal_container"
-
       >
         <Tabs
           className="regulatoryTab"
           type="card"
           defaultActiveKey="1"
-        style={windowWidth <= 500 ? {overflowY:'scroll',padding:15}:{ paddingBottom: "16px", paddingTop: 24, paddingLeft: 16, paddingRight: 16 }}
-
+          style={
+            windowWidth <= 500
+              ? { overflowY: "scroll", padding: 15 }
+              : {
+                  paddingBottom: "16px",
+                  paddingTop: 24,
+                  paddingLeft: 16,
+                  paddingRight: 16,
+                }
+          }
           items={[
             {
               label: <span className="tabsLabel">Department Info</span>,
@@ -127,7 +117,6 @@ const DetailModal = (props) => {
                   <div className="row align-items-baseline disable_input">
                     <div className="col-lg-6" style={{ marginBottom: "30px" }}>
                       <div className="row">
-                        {/* <ThemeProvider theme={theme}> */}
                         <TextField
                           id="outline-controlled"
                           style={{ marginBottom: "20px" }}
@@ -141,10 +130,6 @@ const DetailModal = (props) => {
                           type="text"
                           value={props?.licenceData?.rlcoID}
                         />
-                        {/* </ThemeProvider> */}
-                        {/* <div style={{border:"2px solid red"}} className="disable">
-                          <p className="ab" style={{color:"black",backgroundColor:"red"}}>{props?.licenceData?.rlcoID}</p>
-                        </div> */}
                       </div>
 
                       <div className="row">
@@ -182,7 +167,9 @@ const DetailModal = (props) => {
                       <div className="row">
                         <TextField
                           label="Contact"
-                          style={windowWidth > 500? { marginBottom: "20px" } :{}}
+                          style={
+                            windowWidth > 500 ? { marginBottom: "20px" } : {}
+                          }
                           disabled={true}
                           size="small"
                           className="modalTextField"
@@ -229,7 +216,9 @@ const DetailModal = (props) => {
                       </div>
                       <div className="row">
                         <a
-                          href={`https://www.google.com/maps/place/${encodeURIComponent(props?.licenceData?.address)}`}
+                          href={`https://www.google.com/maps/place/${encodeURIComponent(
+                            props?.licenceData?.address
+                          )}`}
                           target="_blank"
                           rel="noopener noreferrer"
                           className="px-2 ms-1"
@@ -244,7 +233,7 @@ const DetailModal = (props) => {
                               marginTop: "-6px",
                               marginLeft: "-12px",
                               width: "104%",
-                              pointerEvents: "none"
+                              pointerEvents: "none",
                             }}
                             className="modalTextField"
                             type="text"
@@ -256,90 +245,125 @@ const DetailModal = (props) => {
                           />
                         </a>
                       </div>
-                      {props?.licenceData?.map &&
+                      {props?.licenceData?.map && (
                         <div className="row g-0 ">
-                          <a href={props?.licenceData?.location} target="_blank" className="p-0">
-                            <img src={props?.licenceData?.map} alt="" style={{ height: 140, width: "100%", borderRadius: 5, marginTop: -3, objectFit: "cover" }} />
+                          <a
+                            href={props?.licenceData?.location}
+                            target="_blank"
+                            className="p-0"
+                          >
+                            <img
+                              src={props?.licenceData?.map}
+                              alt=""
+                              style={{
+                                height: 140,
+                                width: "100%",
+                                borderRadius: 5,
+                                marginTop: -3,
+                                objectFit: "cover",
+                              }}
+                            />
                           </a>
                         </div>
-                      }
-
-
-
-                      {/* <div class="input-group d-flex justify-content-end">
-
-                      </div> */}
+                      )}
                     </div>
                   </div>
                 </div>
               ),
             },
             {
-              label: <span className="tabsLabel">List of Requirements to Apply</span>,
+              label: (
+                <span className="tabsLabel">List of Requirements to Apply</span>
+              ),
               key: "2",
               children: (
-                <div style={{ height: "295px", }}>
-                  {props?.licenceData?.logo ? <div className="row g-0">
-                    <div className="col-lg-6 col-xm-12 document" style={{ minHeight: 325 }}>
-                      <div className="row g-0" style={{ textAlign: "left", paddingRight: 16 }}>
-                        <h6>Documents Required</h6>
-                        <div style={windowWidth <=500?{}:{ marginBottom: "8px" }}>
-                          {/* <TextArea rows={4} /> */}
-                          <ul className="document_required">
-                            <li >{props?.licenceData?.l1}</li>
-                            <li >{props?.licenceData?.l2}</li>
-                            <li >{props?.licenceData?.l3}</li>
-                            <li >{props?.licenceData?.l4}</li>
-                            <li >{props?.licenceData?.l5}</li>
-                            <li >{props?.licenceData?.l6}</li>
-                            <li >{props?.licenceData?.l7}</li>
-                            <li >{props?.licenceData?.l8}</li>
-                            <li >{props?.licenceData?.l9}</li>
-                            <li >{props?.licenceData?.l10}</li>
-                            <li >{props?.licenceData?.l11}</li>
-                            <li >{props?.licenceData?.l12}</li>
-                            {/* <li ><img src={props?.licenceData?.table} alt="" /></li> */}
-                          </ul>
+                <div style={{ height: "295px" }}>
+                  {props?.licenceData?.logo ? (
+                    <div className="row g-0">
+                      <div
+                        className="col-lg-6 col-xm-12 document"
+                        style={{ minHeight: 325 }}
+                      >
+                        <div
+                          className="row g-0"
+                          style={{ textAlign: "left", paddingRight: 16 }}
+                        >
+                          <h6>Documents Required</h6>
+                          <div
+                            style={
+                              windowWidth <= 500 ? {} : { marginBottom: "8px" }
+                            }
+                          >
+                            {/* <TextArea rows={4} /> */}
+                            <ul className="document_required">
+                              <li>{props?.licenceData?.l1}</li>
+                              <li>{props?.licenceData?.l2}</li>
+                              <li>{props?.licenceData?.l3}</li>
+                              <li>{props?.licenceData?.l4}</li>
+                              <li>{props?.licenceData?.l5}</li>
+                              <li>{props?.licenceData?.l6}</li>
+                              <li>{props?.licenceData?.l7}</li>
+                              <li>{props?.licenceData?.l8}</li>
+                              <li>{props?.licenceData?.l9}</li>
+                              <li>{props?.licenceData?.l10}</li>
+                              <li>{props?.licenceData?.l11}</li>
+                              <li>{props?.licenceData?.l12}</li>
+                              {/* <li ><img src={props?.licenceData?.table} alt="" /></li> */}
+                            </ul>
+                          </div>
                         </div>
                       </div>
-  
-                    </div>
-                    <div className="col-lg-6 col-xm-12  Procedure_container" style={windowWidth >500?{ borderLeft: '2px solid #c4c4c4', paddingLeft: 16 }:{}}>
-                      {/* <div style={{height:"300px",borderLeft:"2px solid red"}}></div> */}
-                      <h6>Procedure</h6>
-                      <div className="row g-0">
-                        <div style={{ width: "100%" }}>
-                          <a href={props?.licenceData?.logo} target="_blank">
-                            <img
-                              className="procedure"
-                              style={{ height: 300, width: "100%", border: "1px solid grey", marginLeft: -5, borderRadius: 5 }}
-                              src={props?.licenceData?.logo} />
-                          </a>
+                      <div
+                        className="col-lg-6 col-xm-12  Procedure_container"
+                        style={
+                          windowWidth > 500
+                            ? {
+                                borderLeft: "2px solid #c4c4c4",
+                                paddingLeft: 16,
+                              }
+                            : {}
+                        }
+                      >
+                        <h6>Procedure</h6>
+                        <div className="row g-0">
+                          <div style={{ width: "100%" }}>
+                            <a href={props?.licenceData?.logo} target="_blank">
+                              <img
+                                className="procedure"
+                                style={{
+                                  height: 300,
+                                  width: "100%",
+                                  border: "1px solid grey",
+                                  marginLeft: -5,
+                                  borderRadius: 5,
+                                }}
+                                src={props?.licenceData?.logo}
+                              />
+                            </a>
+                          </div>
                         </div>
                       </div>
-                      {/* <div className="row">
-                        <div>
-                          <a href={props?.licenceData?.logo} target="_blank">
-                            <button type="button" className="amin">
-                              <span style={{ width: "179px", height: "33px" }}>
-                                View Procedure Detail
-                              </span>
-               
-                            </button>
-                          </a>
-                        </div>
-                      </div> */}
                     </div>
-                  </div> : <h1>No Records</h1>}
+                  ) : (
+                    <h1>No Records</h1>
+                  )}
                 </div>
               ),
             },
             {
-              label: <span className="tabsLabel">Laws / Rules / Regulations / Documents</span>,
+              label: (
+                <span className="tabsLabel">
+                  Laws / Rules / Regulations / Documents
+                </span>
+              ),
               key: "3",
               children: (
                 <div style={{ height: "295px" }}>
-                  <DocumentGrid dataForGrid={props.licenceData} isuseDepart={props?.licenceData?.fee} id="LD-002" />
+                  <DocumentGrid
+                    dataForGrid={props.licenceData}
+                    isuseDepart={props?.licenceData?.fee}
+                    id="LD-002"
+                  />
                 </div>
               ),
             },
@@ -347,24 +371,31 @@ const DetailModal = (props) => {
               label: <span className="tabsLabel">Tutorials</span>,
               key: "4",
               children: (
-                <div style={{
-                  // height: "560px",
-                  display: 'flex',
-                  flexDirection: 'row',
-                  justifyContent: 'space-evenly',
-                  alignItems: 'center'
-                }}>
-                  {props?.licenceData?.video ?
-                   ( <video 
-                    height={"320px"}
-                    width={"100%"}
-                     autoPlay loop muted
-                     controls={true}
+                <div
+                  style={{
+                    display: "flex",
+                    flexDirection: "row",
+                    justifyContent: "space-evenly",
+                    alignItems: "center",
+                  }}
+                >
+                  {props?.licenceData?.video ? (
+                    <video
+                      height={"320px"}
+                      width={"100%"}
+                      autoPlay
+                      loop
+                      muted
+                      controls={true}
                     >
-                      <source src={props?.licenceData?.video} type="video/mp4" />
-                    </video>)
-                     : ('No Video Found')
-                  }
+                      <source
+                        src={props?.licenceData?.video}
+                        type="video/mp4"
+                      />
+                    </video>
+                  ) : (
+                    "No Video Found"
+                  )}
                 </div>
               ),
             },

@@ -1,7 +1,5 @@
 import {
-  createBrowserRouter,
   createHashRouter,
-  RouterProvider,
 } from "react-router-dom";
 import Resource from "./Components/Resource";
 import ContactUs from "./Components/ContactUs"
@@ -169,7 +167,7 @@ export const router = createHashRouter([
     path: "/WhySindh",
     element: <WhySindhMain />,
   },
-    {
+  {
     path: "/NewsAndInformation",
     element: <NewsAndInformation />,
   },
@@ -179,7 +177,7 @@ export const router = createHashRouter([
   },
   {
     path: "/Dashboard",
-    element: <Dashboard/>,
+    element: <Dashboard />,
   },
   {
     path: "/Component",
@@ -192,7 +190,7 @@ export const router = createHashRouter([
   {
     path: "/Sectors",
     element: <GenericComponentOpportunity />,
-  }, 
+  },
   {
     path: "/RegulatoryCatalogCalculator",
     element: <RegulatoryCatalogCalculator />,
@@ -204,90 +202,90 @@ export const router = createHashRouter([
 
   {
     path: "/frozenfood",
-    element: <FrozenF/>,
+    element: <FrozenF />,
   },
 
   {
     path: "/loan",
-    element: <Loan/>,
+    element: <Loan />,
   },
   {
     path: "/gateway",
-    element: <Gateway/>,
+    element: <Gateway />,
   },
   {
     path: "/economicP",
-    element: <EconomicPowerhouse/>,
+    element: <EconomicPowerhouse />,
   },
   {
     path: "/buildingbridges",
-    element: <BuildingBridges/>,
+    element: <BuildingBridges />,
   },
 
   {
     path: "/manufacturing",
-    element: <Manufacturing/>,
+    element: <Manufacturing />,
   },
   {
     path: "/textile",
-    element: <Textile/>,
+    element: <Textile />,
   },
   {
     path: "/tourism",
-    element: <Tourism/>,
+    element: <Tourism />,
   },
   {
     path: "/education",
-    element: <Education/>,
+    element: <Education />,
   },
-  
+
   {
     path: "/informationtech",
-    element: < InformationTechnology/>,
+    element: < InformationTechnology />,
   },
   {
     path: "/health",
-    element: <Health/>,
+    element: <Health />,
   },
   {
     path: "/diversehorizon",
-    element: <DiverseHorizon/>,
+    element: <DiverseHorizon />,
   },
   {
     path: "/agriculture",
-    element: <Agriculture/>,
+    element: <Agriculture />,
   },
   {
     path: "/energy",
-    element: <Energy/>,
+    element: <Energy />,
   },
   {
     path: "/tutorial",
-    element: <Tutorial/>,
+    element: <Tutorial />,
   },
   {
     path: "/watch/:department/:id",
-    element: <Watch/>,
+    element: <Watch />,
   },
   {
     path: "/introduction",
-    element: <Introduction/>,
+    element: <Introduction />,
   },
   {
     path: "/presentation",
-    element: <Presentation/>,
+    element: <Presentation />,
   },
   {
     path: "/projectobjectives",
-    element: <ProjectObjectives/>,
+    element: <ProjectObjectives />,
   },
   {
     path: "/acheivement",
-    element: <Achievement/>,
+    element: <Achievement />,
   },
   {
     path: "/faqs",
-    element: <Faq/>,
+    element: <Faq />,
   },
 
 
