@@ -91,3 +91,9 @@ a {
     margin-bottom: 20px;
   }
 }
+@media screen and (min-width:1024px) and (max-width: 1180px) {
+  .video_container {
+    width: 99%;
+  }
+}
+

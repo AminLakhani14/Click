@@ -97,7 +97,8 @@ p {
   top: 24px;
   right: 0px;
   overflow-y: auto;
-  min-height: 400px;
+  min-height: 343px;
+  max-height: 400px;
 }
 .lable_container {
   display: flex;
@@ -273,6 +274,13 @@ p {
   .lable_box {
     height: 25px !important;
     width: 25px !important;
+  }
+}
+
+
+@media only  screen and (max-width: 1180px) {
+  .card_container{
+    gap: 23.91px;
   }
 }
 

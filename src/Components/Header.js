@@ -680,7 +680,7 @@ function Header(props) {
                                   class="dropbtn iconDown hover-rotate fa fa-chevron-right"
                                 ></i>
                                 <div
-                                  class="dropdown-content1"
+                                  className={['dropdown-content1', (language === "ur" || language === "sd") && "dropdown-content-translate"].join( " " )}
                                   style={
                                     language === "ur" || language === "sd"
                                       ? { marginTop: "30px" }
@@ -834,7 +834,7 @@ function Header(props) {
                                   class="dropbtn iconDown hover-rotate fa fa-chevron-right"
                                 ></i>
                                 <div
-                                  class="dropdown-content1"
+                                 className={['dropdown-content1', (language === "ur" || language === "sd") && "dropdown-content-translate pe-3"].join( " " )}
                                   style={
                                     language === "ur" || language === "sd"
                                       ? { marginTop: "30px" }
@@ -1189,7 +1189,8 @@ function Header(props) {
                                   class="dropbtn iconDown hover-rotate fa fa-chevron-right"
                                 ></i>
                                 <div
-                                  class="dropdown-content1"
+                                  // className={` dropdown-content1 ${ (language === "ur" || language === "sd") && "dropdown-content-translate" }`}
+                                  className={['dropdown-content1', (language === "ur" || language === "sd") && "dropdown-content-translate"].join( " " )}
                                   style={
                                     language === "ur" || language === "sd"
                                       ? { marginTop: "30px" }
@@ -2289,7 +2290,7 @@ function Header(props) {
                   : "sticky-icon"
               }
             >
-              <a href="" target="_blank" className="">
+              <a  href="https://www.facebook.com/Clicksindh" target="_blank" className="">
                 {" "}
                 <div>
                   <Face

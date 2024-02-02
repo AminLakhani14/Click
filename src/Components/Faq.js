@@ -73,10 +73,10 @@ const Faq = () => {
                     <h1 className={window.innerWidth <= 540 ? "catalog  mb-4" : "catalog "}>Frequently Asked Questions (FAQ)</h1>
                 </div>
             </div>
-            <div className='d-flex justify-content-center mb-5'>
-                <div className='w-75 mb-5 '>
+            <div className='row justify-content-center mb-5'>
+                <div className='col-md-10 col-12 mb-5 '>
                     <div className="row g-0">
-                        <div className="col-lg-4 col-xxl-5">
+                        <div className="col-lg-4 col-12 col-xxl-5">
                             <TextField
                                 className="mb-4"
                                 size='small'
@@ -84,6 +84,7 @@ const Faq = () => {
                                 placeholder="Search Faq..."
                                 onChange={filterData}
                                 style={{ width: "100%" }}
+                                fullWidth
                             />
                         </div>
                     </div>

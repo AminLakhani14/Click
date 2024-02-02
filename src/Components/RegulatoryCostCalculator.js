@@ -773,7 +773,7 @@ export const Dropdown = (props) => {
       </InputLabel>
       <Select
         onChange={handleChange}
-        style={windowWidth <= 500 ? { width: "100%" } : { width: "450px" }}
+        style={windowWidth <= 500 ? { width: "100%" } : windowWidth >= 1024  && windowWidth <=1180? { width: "328px" }:{ width: "450px" }}
         native
         labelId="my-select"
         id="my-select"
@@ -935,7 +935,7 @@ export default function RegulatoryCatalogCalculator(props) {
       ) : (
         <div style={{ height: "120px" }}></div>
       )}
-      <div className="shadow-sm bg-white  ">
+      <div className="bg-white  ">
         <div
           className="row "
           style={{
@@ -986,7 +986,7 @@ export default function RegulatoryCatalogCalculator(props) {
             </div>
           </div>
         </div>
-        <div className="row justify-content-center mt-3 align-items-lg-start">
+        <div className="row justify-content-lg-end   justify-content-xl-center mt-3 align-items-lg-start">
           <div
             className="col-lg-5"
             style={{

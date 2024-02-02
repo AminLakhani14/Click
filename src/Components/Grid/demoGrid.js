@@ -23,13 +23,13 @@ export default class DemoGrid extends React.Component {
     };
     this.state = {
       columns: [
-        { text: "Issuing Department", datafield: "issuingDepartment", width: "25%" },
-        { text: "RLCO ID", datafield: "rlcoID", width: "7%" },
-        { text: "RLCO Detail", datafield: "details", width: "34%" },
-        { text: "Type", datafield: "type", width: "8%" },
-        { text: "Time Line", datafield: "timeLine", width: "8%" },
-        { text: "Fee", datafield: "fee", width: "10%" },
-        { text: "Details", datafield: "detail", width: "8%", cellsrenderer: editIcon, align: "center", },
+        { text: "Issuing Department", datafield: "issuingDepartment", width:props.windowWidth <=500? "60%":'25%' },
+        { text: "RLCO ID", datafield: "rlcoID", width: props.windowWidth <=500? "40%":"7%" },
+        { text: "RLCO Detail", datafield: "details", width: props.windowWidth <=500? "60%":"34%" },
+        { text: "Type", datafield: "type", width: props.windowWidth <=500? "40%":"8%" },
+        { text: "Time Line", datafield: "timeLine", width:props.windowWidth <=500? "40%": "8%" },
+        { text: "Fee", datafield: "fee", width:props.windowWidth <=500? "40%": "10%" },
+        { text: "Details", datafield: "detail", width:props.windowWidth <=500? "40%": "8%", cellsrenderer: editIcon, align: "center", },
       ],
       source: new jqx.dataAdapter(source),
     };

@@ -598,7 +598,7 @@ input.regulatoryTextField[type="text"]:focus {
   }
 
   .navlogo2 {
-    margin-left: 4px;
+    margin-left: -11px;
     object-fit: contain;
     width: 170px;
     height: 138px;

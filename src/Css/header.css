@@ -1232,6 +1232,10 @@ path {
   z-index: 9999;
   padding: 16px 0px;
 }
+.dropdown-content-translate {
+
+  min-width: 160px !important;
+}
 .dropdown-content1 {
   display: none;
   position: absolute;
@@ -1244,7 +1248,9 @@ path {
   z-index: 9999;
   padding: 16px 0px;
 }
-
+.dropdown-content-translate a{
+  text-align: end !important;
+}
 .dropdown-content a,
 .dropdown-content1 a {
   color: black !important;

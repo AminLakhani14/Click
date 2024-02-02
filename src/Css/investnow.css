@@ -598,6 +598,9 @@ display: none;
   .introductionTitle::before {
 display: none;
   }
+  .Progress::before {
+    display: none;
+      }
   .contactus::before {
   display: none;
   }

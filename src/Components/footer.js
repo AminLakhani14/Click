@@ -377,13 +377,14 @@ function Footer(props) {
               </Link>
             </div>
             <form action="" style={windowWidth < 500 ? { marginBottom: "-30px", marginTop: "20px" } : {}}>
-              <div className="row" style={language === "ur" || language === "sd" ? { display: "flex", flexDirection: "row-reverse" } : windowWidth < 500 ? { gap: "20px" } : { marginTop: "15px" }}>
+              <div className="row g-0" style={language === "ur" || language === "sd" ? { display: "flex", flexDirection: "row-reverse" } : windowWidth < 500 ? { gap: "20px" } : { marginTop: "15px" }}>
                 <div
-                  className={windowWidth < 500 ? "col-lg-6 email" : windowWidth <= 1366 ? "col-lg-3" : "col-lg-2"}
+                  className={windowWidth < 500 ? "col-lg-6 px-3 email" : windowWidth <= 1366 ? "col-lg-3" : "col-lg-2"}
                   style={
                     windowWidth < 500
                       ? {
                         width: "100%",
+                        padding:'0px 13px !important'
                       }
                       : { paddingLeft: "45px" }
                   }
@@ -395,9 +396,10 @@ function Footer(props) {
                     placeholder="Enter email address"
                     className={"email"}
                     width={'100%'}
+                    fullWidth
                   />
                 </div>
-                <div className={windowWidth <= 1440 ? "col-lg-3" : "col-lg-2 mt-2"}>
+                <div className={windowWidth <= 1440 ? "col-lg-3 px-3" : "col-lg-2 mt-2"}>
                   <a href="comingsoon.html" className="comingsoon">
                     <button type="button" className="feedback ft-btn">
                       <span>{translations["Newsletter"][language]}</span>
@@ -418,7 +420,7 @@ function Footer(props) {
         <div className="row mt-3 marginBtm"
         >
           <div>
-            <p className="highlightable" style={windowWidth < 500 ? { fontSize: "8px", textAlign: "center" } : { textAlign: "center" }}>
+            <p className="highlightable" style={windowWidth < 500 ? {  textAlign: "center" } : { textAlign: "center" }}>
               <b>Disclaimer:</b> The contents of this website are for public information only and have no legal validity. Information on this website is updated and corrected periodically and may change without notice. CLICK Sindh Investment Department, GoS is not responsible for any errors/inaccuracies in the data.
             </p>
           </div>

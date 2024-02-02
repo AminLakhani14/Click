@@ -43,7 +43,7 @@ const BarChart = React.memo(({ options, data }) => {
             : windowWidth >= 768 && windowWidth <= 991
               ? 310
               : windowWidth >= 992 && windowWidth <= 1199
-                ? 300
+                ? 400
                 : windowWidth >= 1200 && windowWidth <= 1399
                   ? 380
                   : windowWidth >= 1400 && windowWidth < 1600

@@ -645,6 +645,7 @@ function MobileHome(props) {
                               <a
                                 target="_blank"
                                 href={InvestmentDepartment}
+                                className="link toggle2 mobilenesteddropdowntoggle2"
                                 style={
                                   language === "ur" ||
                                     language === "sd"
@@ -654,7 +655,6 @@ function MobileHome(props) {
                                       marginRight: "-16px",
                                     }
                                     : {
-                                      marginLeft: "10px"
 
                                     }
                                 }

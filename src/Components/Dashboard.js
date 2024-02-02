@@ -17,6 +17,7 @@ import "../Css/dashboard.css";
 import { InputLabel, Select } from "@mui/material";
 import CountUp from "react-countup";
 import BarChart from "./BarChart";
+import { dataForDonut } from "./constant";
 
 ChartJS.register(
   CategoryScale,
@@ -97,13 +98,6 @@ const Dashboard = () => {
   }, []);
 
 
-  const xAxis = [
-    "2018-19 Year",
-    "2019-20 Year",
-    "2020-21 Year",
-    "2021-22 Year",
-    "2022-23 Year",
-  ];
   const department = [
     { value: "Private Colleges", text: "Private Colleges" },
     {
@@ -119,348 +113,12 @@ const Dashboard = () => {
     { value: "Health Department", text: "Health Department" },
     { value: "Sindh Revenue Board", text: "Sindh Revenue Board" },
   ];
-  const dataForDonut = [
-    ///////////// labour Department \\\\\\\\\\\\\\\
-    {
-      id: 1,
-      label: "License For Pesticide Dealership",
-      value: 73,
-      text: "Agriculture Department",
-      yearWiseData: [12, 13, 14, 17, 17],
-      sun: xAxis,
-    },
-    {
-      id: 2,
-      label: "License For Fertilizer Dealership",
-      value: 30,
-      text: "Agriculture Department",
-      yearWiseData: [9, 2, 12, 26, 16],
-      sun: xAxis,
-    },
-    ////////////////Excise deparment ///////////////
-    {
-      id: 3,
-      label: "Honda",
-      value: 632610,
-      text: "Excise Taxation Department",
-      yearWiseData: [180073, 113991, 116171, 124597, 96778],
-      sun: xAxis,
-    },
-    {
-      id: 4,
-      label: "United",
-      value: 46932,
-      text: "Excise Taxation Department",
-      yearWiseData: [7777, 8056, 9898, 13200, 8901],
-      sun: xAxis,
-      vehicleType: 'Two-Wheelers (Bikes)'
-    }, {
-      id: 3,
-      label: "Super Power",
-      value: 246605,
-      text: "Excise Taxation Department",
-      yearWiseData: [81866, 53952, 37246, 42679, 30862],
-      sun: xAxis,
-      vehicleType: 'Two-Wheelers (Bikes)'
-    }, {
-      id: 3,
-      label: "BMW",
-      value: 28,
-      text: "Excise Taxation Department",
-      yearWiseData: [10, 9, 3, 1, 5],
-      sun: xAxis,
-      vehicleType: 'Two-Wheelers (Bikes)'
-    }, {
-      id: 3,
-      label: "Benelli",
-      value: 165,
-      text: "Excise Taxation Department",
-      yearWiseData: [9, 42, 33, 49, 32],
-      sun: xAxis,
-      vehicleType: 'Two-Wheelers (Bikes)'
-    },
-    {
-      id: 3,
-      label: "Grace",
-      value: 5432,
-      text: "Excise Taxation Department",
-      yearWiseData: [1755, 1720, 860, 787, 310],
-      sun: xAxis,
-      vehicleType: 'Two-Wheelers (Bikes)'
-    }, {
-      id: 3,
-      label: "Suzuki",
-      value: 47535,
-      text: "Excise Taxation Department",
-      yearWiseData: [7462, 7988, 7036, 12048, 13001],
-      sun: xAxis,
-      vehicleType: 'Two-Wheelers (Bikes)'
-    }, {
-      id: 3,
-      label: "Road Prince",
-      value: 7849,
-      text: "Excise Taxation Department",
-      yearWiseData: [3665, 974, 725, 1457, 1028],
-      sun: xAxis,
-      vehicleType: 'Two-Wheelers (Bikes)'
-    }, {
-      id: 3,
-      label: "Harley  Davidson",
-      value: 111,
-      text: "Excise Taxation Department",
-      yearWiseData: [29, 32, 13, 5, 32],
-      sun: xAxis,
-      vehicleType: 'Two-Wheelers (Bikes)'
-    },
-    , {
-      id: 3,
-      label: "Super Star",
-      value: 167820,
-      text: "Excise Taxation Department",
-      yearWiseData: [50936, 35027, 30285, 31137, 20435],
-      sun: xAxis,
-      vehicleType: 'Two-Wheelers (Bikes)'
-    },
-    {
-      id: 3,
-      label: "Unique",
-      value: 380723,
-      text: "Excise Taxation Department",
-      yearWiseData: [99113, 97669, 77446, 73377, 33118],
-      sun: xAxis,
-      vehicleType: 'Two-Wheelers (Bikes)'
-    },
-    {
-      id: 3,
-      label: "Crown Motor",
-      value: 32383,
-      text: "Excise Taxation Department",
-      yearWiseData: [10633, 7351, 4456, 2898, 1845],
-      sun: xAxis,
-      vehicleType: 'Two-Wheelers (Bikes)'
-    },
-    {
-      id: 3,
-      label: "Racer",
-      value: 4500,
-      text: "Excise Taxation Department",
-      yearWiseData: [2761, 731, 289, 461, 258],
-      sun: xAxis,
-      vehicleType: 'Two-Wheelers (Bikes)'
-    },
-    {
-      id: 3,
-      label: "Bionic",
-      value: 20195,
-      text: "Excise Taxation Department",
-      yearWiseData: [10734, 5579, 1941, 1521, 320],
-      sun: xAxis,
-      vehicleType: 'Two-Wheelers (Bikes)'
-    },
-    {
-      id: 3,
-      label: "Hero",
-      value: 692,
-      text: "Excise Taxation Department",
-      yearWiseData: [514, 176, 0, 0, 2],
-      sun: xAxis,
-      vehicleType: 'Two-Wheelers (Bikes)'
-    },
-    {
-      id: 3,
-      label: "Jinan",
-      value: 5903,
-      text: "Excise Taxation Department",
-      yearWiseData: [1989, 2001, 1227, 552, 134],
-      sun: xAxis,
-      vehicleType: 'Two-Wheelers (Bikes)'
-    },
-    //////////////////////Cars///////////////////
-    {
-      id: 3,
-      label: "Alto",
-      value: 111,
-      text: "Excise Taxation Department",
-      yearWiseData: [857, 6363, 8746, 16012, 24228],
-      sun: xAxis,
-      vehicleType: 'Four-Wheelers (Cars)'
-    }, {
-      id: 3,
-      label: "Corolla",
-      value: 111,
-      text: "Excise Taxation Department",
-      yearWiseData: [24228, 11244, 5630, 2258, 1953],
-      sun: xAxis,
-      vehicleType: 'Four-Wheelers (Cars)'
-    }, {
-      id: 3,
-      label: "Civic",
-      value: 111,
-      text: "Excise Taxation Department",
-      yearWiseData: [4099, 2301, 1741, 2788, 1722],
-      sun: xAxis,
-      vehicleType: 'Four-Wheelers (Cars)'
-    }, {
-      id: 3,
-      label: "Mira",
-      value: 111,
-      text: "Excise Taxation Department",
-      yearWiseData: [2742, 1067, 708, 1762, 1300],
-      sun: xAxis,
-      vehicleType: 'Four-Wheelers (Cars)'
-    }
-    , {
-      id: 3,
-      label: "Cultus",
-      value: 31767,
-      text: "Excise Taxation Department",
-      yearWiseData: [7526, 7022, 4321, 7919, 4979],
-      sun: xAxis,
-      vehicleType: 'Four-Wheelers (Cars)'
-    }, {
-      id: 3,
-      label: "Aqua",
-      value: 8731,
-      text: "Excise Taxation Department",
-      yearWiseData: [3189, 1457, 480, 1039, 566],
-      sun: xAxis,
-      vehicleType: 'Four-Wheelers (Cars)'
-    }, {
-      id: 3,
-      label: "Swift",
-      value: 10203,
-      text: "Excise Taxation Department",
-      yearWiseData: [2194, 1530, 674, 853, 3952],
-      sun: xAxis,
-      vehicleType: 'Four-Wheelers (Cars)'
-    }, {
-      id: 3,
-      label: "Sportage",
-      value: 8051,
-      text: "Excise Taxation Department",
-      yearWiseData: [6, 513, 2028, 3787, 2717],
-      sun: xAxis,
-      vehicleType: 'Four-Wheelers (Cars)'
-    }, {
-      id: 3,
-      label: "Fortuner",
-      value: 5320,
-      text: "Excise Taxation Department",
-      yearWiseData: [1167, 616, 472, 1481, 1584],
-      sun: xAxis,
-      vehicleType: 'Four-Wheelers (Cars)'
-    },
-    ,
-    //////////////////////Private College
-    {
-      id: 4,
-      label: "Private Colleges",
-      value: 106,
-      text: "Private Colleges",
-      yearWiseData: [18, 24, 20, 23, 21],
-      sun: xAxis,
-    },
-
-    /////////////College education department/////////////////
-    {
-      id: 4,
-      label: "Fresh Registration Intermediate Colleges",
-      value: 42,
-      text: "College education department",
-      yearWiseData: [17, 8, 6, 4, 7],
-      total: [51, 23, 32, 32, 55],
-      sun: xAxis,
-    },
-    {
-      id: 4,
-      label: "Renewal Registration Intermediate Colleges",
-      value: 126,
-      text: "College education department",
-      yearWiseData: [26, 14, 20, 24, 42],
-      // total:[51,23,32,32,55],
-      sun: xAxis,
-    },
-    {
-      id: 4,
-      label: "Fresh Registration Degree Colleges",
-      value: 8,
-      text: "College education department",
-      yearWiseData: [3, 1, 1, 0, 3],
-      // total:[51,23,32,32,55],
-      sun: xAxis,
-    },
-    {
-      id: 4,
-      label: "Renewal Registration Degree Colleges",
-      value: 17,
-      text: "College education department",
-      yearWiseData: [5, 0, 5, 4, 3],
-      // total:[51,23,32,32,55],
-      sun: xAxis,
-    },
-    ////////////////Industrial Department/////////////
-    {
-      id: 5,
-      label: "Karachi Region",
-      value: 15,
-      text: "Industrial Department",
-      yearWiseData: [100, 4.68, 50],
-      sun: ["1986-87 Year", "2002-03 Year", "2003-04 Year"],
-    },
-    ///////////////Health Department////////////////
-    {
-      id: 8,
-      label: "Registration Certificate",
-      value: 5448,
-      text: "Health Department",
-      yearWiseData: [3832, 584, 446, 411, 175],
-      total: [3849, 789, 483, 443, 217],
-      sun: xAxis,
-    },
-
-    {
-      id: 9,
-      label: "Provsional License",
-      value: 311,
-      text: "Health Department",
-      yearWiseData: [17, 205, 37, 22, 30],
-      sun: xAxis,
-    },
-    {
-      id: 10,
-      label: "Reguler License",
-      value: 311,
-      text: "Health Department",
-      yearWiseData: [0, 0, 0, 10, 12],
-      sun: xAxis,
-    },
-    /////////////////Sindh Revenue Board/////////////
-    {
-      id: 11,
-      label: "Sindh Revenue Board",
-      value: 153136.40036,
-      text: "Sindh Revenue Board",
-      yearWiseData: [35563, 40036, 149580],
-      sun: ["2018-19 Year", "2019-20 Year", "2020-21 Year"],
-    },
-  ]?.filter((item) => {
+ let donutData=useMemo(()=>{
+ return dataForDonut?.filter((item) => {
     return selectedDepartment == item?.text ? item : null;
   });
+ },[selectedDepartment])
 
-  const add = () => {
-
-    // if (subDropdownFilter) {
-    //   return dataForDonut[0]?.yearWiseData;
-    // }
-    // else if (subDropdownFilter) {
-    //   // setSelectedDepart(subDropdownFilter[0]?.label)
-    //     return subDropdownFilter[0]?.yearWiseData;
-
-    // }
-    // if(!subDropdownFilter) {
-    //   return [1, 1, 1, 1, 1];
-    // }
-  };
   const handleDepartment = (event) => {
     let value = event.target.value
     if (value == 'Excise Taxation Department') {
@@ -470,8 +128,7 @@ const Dashboard = () => {
     setSelectedDepartment(value);
   };
   const vehicleName = useMemo(() => {
-    let selectedData = dataForDonut.filter((item) => {
-
+    let selectedData = donutData.filter((item) => {
       return item?.vehicleType == getVehicleType ? item : null
     })
     return selectedData
@@ -482,7 +139,7 @@ const Dashboard = () => {
   const handleVehicleType = (event) => {
     let { value } = event.target
     setgetVehicleType(value)
-    let selectedData = dataForDonut.filter((item) => {
+    let selectedData = donutData.filter((item) => {
       return item?.vehicleType == value ? item : null
     })
     setVehicleName(selectedData[0].label)
@@ -492,23 +149,24 @@ const Dashboard = () => {
     setVehicleName(event.target.value)
   }
 
-  let singleBar = vehicleName.filter((item) => {
-    return item?.label == getVehicleName ? item : null
-  })
-
+  let singleBar = useMemo(()=>{
+    console.log('zain')
+    return vehicleName.filter((item) => {
+      return item?.label == getVehicleName ? item : null
+    })
+  },[getVehicleName,selectedDepartment])
   useEffect(() => {
-    setSelectedDepart(dataForDonut[0]?.label);
+    setSelectedDepart(donutData[0]?.label);
   }, [selectedDepartment]);
   let subDropdownFilter;
   if (vehicleName[0]) {
     
-    subDropdownFilter = dataForDonut?.filter((item) => {
+    subDropdownFilter = donutData?.filter((item) => {
       return item?.label == getVehicleName && item;
     });
   }
-  else if (dataForDonut[0]) {
-    
-    subDropdownFilter = dataForDonut?.filter((item) => {
+  else if (donutData[0]) {
+    subDropdownFilter = donutData?.filter((item) => {
       return item?.label == getVehicleName || item?.label == selectedDepart && item;
     });
   }
@@ -553,7 +211,7 @@ const Dashboard = () => {
         backgroundColor: color[randomNumber],
       };
     }
-    ) : dataForDonut.map((item, index) => {
+    ) : donutData.map((item, index) => {
       return {
         label: subDropdownFilter[0]?.label,
         data: item?.yearWiseData,
@@ -681,7 +339,7 @@ const Dashboard = () => {
           >
           </div>
           <div
-            className={` card_container ${dataForDonut[0]?.sun?.length == 3 ? "col-7" : ""
+            className={` card_container ${donutData[0]?.sun?.length == 3 ? "col-7" : ""
               }`}
           >
             {subDropdownFilter[0]?.total
@@ -693,7 +351,7 @@ const Dashboard = () => {
          `}
                     style={windowWidth <= 500 ? { width: "100%" } : {
                       width:
-                        dataForDonut[0]?.sun?.length == 3 ? "20%" : "17.9%",
+                        donutData[0]?.sun?.length == 3 ? "20%" : "17.9%",
                       marginRight: (index + 1) % 5 == 0 ? 0 : 0,
                     }}
                   >
@@ -708,20 +366,20 @@ const Dashboard = () => {
                             end={subDropdownFilter[0]?.total[index]}
                             delay={2}
                           ></CountUp>
-                        ) ?? add()[index]}
+                        )}
                       </h1>
                     </div>
                   </div>
                 );
               })
-              : dataForDonut[0]?.sun?.map((item, index) => {
+              : donutData[0]?.sun?.map((item, index) => {
                 return (
                   <div
                     className={`box1_container  ${subDropdownFilter[0]?.sun?.length > 5 && "mb-5"
                       } `}
                     style={windowWidth <= 500 ? { width: "100%" } : {
                       width:
-                        dataForDonut[0]?.sun?.length == 3 ? "30%" : "17.9%",
+                        donutData[0]?.sun?.length == 3 ? "30%" : "17.9%",
                     }}
                   >
                     <div className="department">
@@ -736,7 +394,7 @@ const Dashboard = () => {
                             end={subDropdownFilter[0]?.yearWiseData[index]}
                             delay={0}
                           ></CountUp>
-                        ) ?? add()[index]}
+                        )}
                       </h1>
                     </div>
                   </div>
@@ -756,7 +414,7 @@ const Dashboard = () => {
                   data={
                     selectedDepartment == "Excise Taxation Department" ?
                       vehicleName
-                      : dataForDonut || [
+                      : donutData || [
                         {
                           id: 4,
                           label: "License For Pesticide Dealership",
@@ -835,7 +493,7 @@ const Dashboard = () => {
                       );
                     }) :
 
-                      dataForDonut.map((item, id) => {
+                      donutData.map((item, id) => {
                         return (
                           <>
                             <div className="lable_container ">
@@ -873,9 +531,9 @@ const Dashboard = () => {
             <div className="row g-0 ">
               <div className="col">
                 <h3>
-                  {dataForDonut?.length > 1
-                    ? getVehicleName
-                    : selectedDepartment}
+                  { selectedDepartment === 'Excise Taxation Department'
+                    && getVehicleName
+                    }
                 </h3>
               </div>
             </div>

@@ -136,7 +136,7 @@ export default function GenericHeader(props) {
             </Link>
           </div>
           <div className="col-lg-10" style={{ display: "flex", alignItems: 'baseline', justifyContent: "end" }}>
-            <div className=" navbaright d-flex " >
+            <div className={` navbaright d-flex `} >
               <ul className="p-0">
                 <div className="r-side d-inline" >
                   <img

@@ -58,7 +58,7 @@ const Introduction = () => {
                             <p
                                 className={
                                     window.innerWidth <= 540
-                                        ? "mobileparaforfeedback mb-0"
+                                        ? "mb-0"
                                         : "feedbackpara col-8"
                                 }
                                 style={{
@@ -87,7 +87,7 @@ const Introduction = () => {
                             <p
                                 className={
                                     window.innerWidth <= 540
-                                        ? "mobileparaforfeedback mb-0"
+                                        ? "mb-0"
                                         : "feedbackpara col-8"
                                 }
                                 style={{
@@ -111,7 +111,7 @@ const Introduction = () => {
                             <p
                                 className={
                                     window.innerWidth <= 540
-                                        ? "mobileparaforfeedback mb-0"
+                                        ? "mb-0"
                                         : "feedbackpara col-8"
                                 }
                                 style={{
@@ -138,7 +138,7 @@ const Introduction = () => {
                             <p
                                 className={
                                     window.innerWidth <= 540
-                                        ? "mobileparaforfeedback mb-0"
+                                        ? "mb-0"
                                         : "feedbackpara col-8"
                                 }
                                 style={{

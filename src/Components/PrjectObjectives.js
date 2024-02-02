@@ -237,7 +237,7 @@ const ProjectObjectives = () => {
                             <p
                                 className={
                                     window.innerWidth <= 540
-                                        ? "mobileparaforfeedback mb-0"
+                                        ? "mb-0"
                                         : "feedbackpara col-8"
                                 }
                                 style={{
@@ -265,7 +265,7 @@ const ProjectObjectives = () => {
                             <p
                                 className={
                                     window.innerWidth <= 540
-                                        ? "mobileparaforfeedback mb-0"
+                                        ? "mb-0"
                                         : "feedbackpara col-8"
                                 }
                                 style={{
@@ -301,7 +301,7 @@ const ProjectObjectives = () => {
                             <p
                                 className={
                                     window.innerWidth <= 540
-                                        ? "mobileparaforfeedback mb-0"
+                                        ? "mb-0"
                                         : "feedbackpara col-8"
                                 }
                                 style={{
@@ -327,7 +327,7 @@ const ProjectObjectives = () => {
                             <p
                                 className={
                                     window.innerWidth <= 540
-                                        ? "mobileparaforfeedback mb-0"
+                                        ? "mb-0"
                                         : "feedbackpara col-8"
                                 }
                                 style={{
@@ -351,7 +351,7 @@ const ProjectObjectives = () => {
                             <p
                                 className={
                                     window.innerWidth <= 540
-                                        ? "mobileparaforfeedback mb-0"
+                                        ? "mb-0"
                                         : "feedbackpara col-8"
                                 }
                                 style={{
@@ -383,7 +383,7 @@ const ProjectObjectives = () => {
                             <p
                                 className={
                                     window.innerWidth <= 540
-                                        ? "mobileparaforfeedback mb-0"
+                                        ? "mb-0"
                                         : "feedbackpara col-8"
                                 }
                                 style={{
@@ -415,7 +415,7 @@ const ProjectObjectives = () => {
                             <p
                                 className={
                                     window.innerWidth <= 540
-                                        ? "mobileparaforfeedback mb-0"
+                                        ? "mb-0"
                                         : "feedbackpara col-8"
                                 }
                                 style={{
@@ -438,7 +438,7 @@ const ProjectObjectives = () => {
                             <p
                                 className={
                                     window.innerWidth <= 540
-                                        ? "mobileparaforfeedback mb-0"
+                                        ? "mb-0"
                                         : "feedbackpara col-8"
                                 }
                                 style={{
@@ -473,7 +473,7 @@ const ProjectObjectives = () => {
                             <p
                                 className={
                                     window.innerWidth <= 540
-                                        ? "mobileparaforfeedback mb-0"
+                                        ? "mb-0"
                                         : "feedbackpara col-8"
                                 }
                                 style={{
@@ -509,7 +509,7 @@ const ProjectObjectives = () => {
                             <p
                                 className={
                                     window.innerWidth <= 540
-                                        ? "mobileparaforfeedback mb-0"
+                                        ? "mb-0"
                                         : "feedbackpara col-8"
                                 }
                                 style={{
@@ -540,7 +540,7 @@ const ProjectObjectives = () => {
                             <p
                                 className={
                                     window.innerWidth <= 540
-                                        ? "mobileparaforfeedback mb-0"
+                                        ? "mb-0"
                                         : "feedbackpara col-8"
                                 }
                                 style={{
@@ -583,7 +583,7 @@ const ProjectObjectives = () => {
                             <p
                                 className={
                                     window.innerWidth <= 540
-                                        ? "mobileparaforfeedback mb-0"
+                                        ? "mb-0"
                                         : "feedbackpara col-8"
                                 }
                                 style={{
@@ -601,7 +601,7 @@ const ProjectObjectives = () => {
                             <p
                                 className={
                                     window.innerWidth <= 540
-                                        ? "mobileparaforfeedback mb-0"
+                                        ? "mb-0"
                                         : "feedbackpara col-8"
                                 }
                                 style={{
@@ -621,7 +621,7 @@ const ProjectObjectives = () => {
                             <p
                                 className={
                                     window.innerWidth <= 540
-                                        ? "mobileparaforfeedback mb-0"
+                                        ? "mb-0"
                                         : "feedbackpara col-8"
                                 }
                                 style={{
@@ -640,7 +640,7 @@ const ProjectObjectives = () => {
                             <p
                                 className={
                                     window.innerWidth <= 540
-                                        ? "mobileparaforfeedback mb-0"
+                                        ? "mb-0"
                                         : "feedbackpara col-8"
                                 }
                                 style={{
@@ -658,7 +658,7 @@ const ProjectObjectives = () => {
                             <p
                                 className={
                                     window.innerWidth <= 540
-                                        ? "mobileparaforfeedback mb-0"
+                                        ? "mb-0"
                                         : "feedbackpara col-8"
                                 }
                                 style={{
@@ -677,7 +677,7 @@ const ProjectObjectives = () => {
                             <p
                                 className={
                                     window.innerWidth <= 540
-                                        ? "mobileparaforfeedback mb-0"
+                                        ? "mb-0"
                                         : "feedbackpara col-8"
                                 }
                                 style={{
@@ -695,7 +695,7 @@ const ProjectObjectives = () => {
                             <p
                                 className={
                                     window.innerWidth <= 540
-                                        ? "mobileparaforfeedback mb-0"
+                                        ? "mb-0"
                                         : "feedbackpara col-8"
                                 }
                                 style={{
@@ -722,7 +722,7 @@ const ProjectObjectives = () => {
                             <p
                                 className={
                                     window.innerWidth <= 540
-                                        ? "mobileparaforfeedback mb-0"
+                                        ? "mb-0"
                                         : "feedbackpara col-8"
                                 }
                                 style={{
@@ -738,7 +738,7 @@ const ProjectObjectives = () => {
                             <p
                                 className={
                                     window.innerWidth <= 540
-                                        ? "mobileparaforfeedback mb-0"
+                                        ? "mb-0"
                                         : "feedbackpara col-8"
                                 }
                                 style={{
@@ -754,7 +754,7 @@ const ProjectObjectives = () => {
                             <p
                                 className={
                                     window.innerWidth <= 540
-                                        ? "mobileparaforfeedback mb-0"
+                                        ? "mb-0"
                                         : "feedbackpara col-8"
                                 }
                                 style={{
@@ -775,7 +775,7 @@ const ProjectObjectives = () => {
                                         id={id}
                                         className={
                                             window.innerWidth <= 540
-                                                ? "mobileparaforfeedback mb-0"
+                                                ? "mb-0"
                                                 : "feedbackpara col-8"
                                         }
                                         style={{

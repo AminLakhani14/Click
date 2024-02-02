@@ -118,7 +118,7 @@ const Achievement = () => {
                             <p
                                 className={
                                     window.innerWidth <= 540
-                                        ? "mobileparaforfeedback mb-0"
+                                        ? " mb-0"
                                         : "feedbackpara col-8"
                                 }
                                 style={{
@@ -134,7 +134,7 @@ const Achievement = () => {
                             <p
                                 className={
                                     window.innerWidth <= 540
-                                        ? "mobileparaforfeedback mb-0"
+                                        ? " mb-0"
                                         : "feedbackpara col-8"
                                 }
                                 style={{
@@ -152,7 +152,7 @@ const Achievement = () => {
                             <p
                                 className={
                                     window.innerWidth <= 540
-                                        ? "mobileparaforfeedback mb-0"
+                                        ? " mb-0"
                                         : "feedbackpara col-8"
                                 }
                                 style={{
@@ -168,7 +168,7 @@ const Achievement = () => {
                             <p
                                 className={
                                     window.innerWidth <= 540
-                                        ? "mobileparaforfeedback mb-0"
+                                        ? " mb-0"
                                         : "feedbackpara col-8"
                                 }
                                 style={{
@@ -186,7 +186,7 @@ const Achievement = () => {
                             <p
                                 className={
                                     window.innerWidth <= 540
-                                        ? "mobileparaforfeedback mb-0"
+                                        ? " mb-0"
                                         : "feedbackpara col-8"
                                 }
                                 style={{
@@ -202,7 +202,7 @@ const Achievement = () => {
                             <p
                                 className={
                                     window.innerWidth <= 540
-                                        ? "mobileparaforfeedback mb-0"
+                                        ? " mb-0"
                                         : "feedbackpara col-8"
                                 }
                                 style={{
@@ -220,7 +220,7 @@ const Achievement = () => {
                             <p
                                 className={
                                     window.innerWidth <= 540
-                                        ? "mobileparaforfeedback mb-0"
+                                        ? " mb-0"
                                         : "feedbackpara col-8"
                                 }
                                 style={{
@@ -238,7 +238,7 @@ const Achievement = () => {
                             <p
                                 className={
                                     window.innerWidth <= 540
-                                        ? "mobileparaforfeedback mb-0"
+                                        ? " mb-0"
                                         : "feedbackpara col-8"
                                 }
                                 style={{
@@ -259,7 +259,7 @@ const Achievement = () => {
                                     <p
                                         className={
                                             window.innerWidth <= 540
-                                                ? "mobileparaforfeedback mb-0"
+                                                ? " mb-0"
                                                 : "feedbackpara col-8"
                                         }
                                         style={{
@@ -278,7 +278,7 @@ const Achievement = () => {
                             <p
                                 className={
                                     window.innerWidth <= 540
-                                        ? "mobileparaforfeedback mb-0"
+                                        ? " mb-0"
                                         : "feedbackpara col-8"
                                 }
                                 style={{
@@ -297,7 +297,7 @@ const Achievement = () => {
                                 <p
                                     className={
                                         window.innerWidth <= 540
-                                            ? "mobileparaforfeedback mb-0"
+                                            ? " mb-0"
                                             : "feedbackpara col-8"
                                     }
                                     style={{
@@ -314,7 +314,7 @@ const Achievement = () => {
                                 <p
                                     className={
                                         window.innerWidth <= 540
-                                            ? "mobileparaforfeedback mb-0"
+                                            ? " mb-0"
                                             : "feedbackpara col-8"
                                     }
                                     style={{
@@ -335,7 +335,7 @@ const Achievement = () => {
                                 <p
                                     className={
                                         window.innerWidth <= 540
-                                            ? "mobileparaforfeedback mb-0"
+                                            ? " mb-0"
                                             : "feedbackpara col-8"
                                     }
                                     style={{
@@ -353,7 +353,7 @@ const Achievement = () => {
                                 <p
                                     className={
                                         window.innerWidth <= 540
-                                            ? "mobileparaforfeedback mb-0"
+                                            ? " mb-0"
                                             : "feedbackpara col-8"
                                     }
                                     style={{

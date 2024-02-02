@@ -21,7 +21,7 @@
   bottom: 105px;
   right: 20px;
   width: 350px;
-  max-height: 535px; /* Set the fixed height for the chatbot container */
+  max-height: 515px; /* Set the fixed height for the chatbot container */
   background-color: #ffffff;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);

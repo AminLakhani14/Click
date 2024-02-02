@@ -739,7 +739,7 @@ export const Dropdown = (props) => {
         <h4>Department</h4>
         <Select
           onChange={handleChange}
-          style={{ width: "96%" }}
+          style={{ width: props.windowWidth <= 500 ? "100%" : "96%" }}
           native
           id="my-select"
           value={props.val}
@@ -784,7 +784,7 @@ export const Dropdown1 = (props) => {
         <h4>License</h4>
         <Select
           native
-          style={{ width: "96%" }}
+          style={{ width: props.windowWidth <= 500 ? "100%" : "96%" }}
           defaultValue={selectedValue}
           value={selectedValue}
           onChange={handleChange}
@@ -1014,26 +1014,26 @@ const FeedBackForm = () => {
             setFormikState,
           }) => (
             <div
-              className="col-md-8 ps-md-3 px-3 justify-content-center  "
-              style={{ backgroundColor: "re" }}
+              className="col-lg-10 col-xl-8 ps-md-3 px-3 justify-content-center  "
             >
               <form onSubmit={handleSubmit}>
                 <div
-                  className="row g-0 justify-content-between"
-                  style={{ width: "100%", backgroundColor: "yel" }}
+                  className="row g-0 "
+                  style={{ width: "100%", }}
                 >
                   <Fade left>
-                    <div className="col-sm-6">
+                    <div className="col-sm-6 col-12">
                       <h4> Name</h4>
                       <TextField
                         placeholder="Enter Your First Name"
                         size="small"
-                        style={{ width: "96%" }}
+                        style={{ width: windowWidth <= 500 ? "100%" : "96%" }}
                         inputProps={{ maxLength: 50 }}
                         name="name"
                         onChange={handleChange}
                         onBlur={handleBlur}
                         value={name}
+                        fullWidth
                       />
 
                       {errors.name && touched.name && (
@@ -1042,63 +1042,66 @@ const FeedBackForm = () => {
                     </div>
                   </Fade>
                   <Fade right>
-                    <div className="col-md-6">
+                    <div className="col-md-6 col-12">
                       <h4> Company Name</h4>
                       <TextField
                         placeholder="Enter Your Company Name"
                         size="small"
-                        style={{ width: "96%" }}
+                        style={{ width: windowWidth <= 500 ? "100%" : "96%" }}
                         inputProps={{ maxLength: 50 }}
                         onChange={handleChange}
                         onBlur={handleBlur}
                         value={companyName}
                         name="companyName"
+                        fullWidth
                       />
                     </div>
                   </Fade>
                 </div>
                 <div className="row g-0" style={{ width: "100%" }}>
                   <Fade top>
-                    <div className="col">
+                    <div className="col-12">
                       <h4>Address</h4>
                       <TextField
                         placeholder="Enter Your Address"
                         size="small"
-                        style={{ width: "98%" }}
+                        style={{ width: windowWidth <= 500 ? "100%" : "98%" }}
                         inputProps={{ maxLength: 200 }}
                         onChange={handleChange}
                         onBlur={handleBlur}
                         value={address}
                         name="address"
+                        fullWidth
                       />
                     </div>
                   </Fade>
                 </div>
                 <div className="row g-0" style={{ width: "100%" }}>
                   <Fade left>
-                    <div className="col-md-6">
+                    <div className="col-md-6 col-12">
                       <h4>Country / City</h4>
                       <TextField
                         placeholder="Enter Your Country / City"
                         size="small"
-                        style={{ width: "96%" }}
+                        style={{ width: windowWidth <= 500 ? "100%" : "96%" }}
                         inputProps={{ maxLength: 100 }}
                         onChange={handleChange}
                         onBlur={handleBlur}
                         value={country}
                         name="country"
+                        fullWidth
                       />
                     </div>
                   </Fade>
                   <Fade right>
-                    <div className="col-md-6">
+                    <div className="col-md-6 col-12">
                       <h4>Mobile Number</h4>
                       <Field name="mobileNumber">
                         {({ field, form }) => (
                           <TextField
                             placeholder="Enter Your  Moble Number"
                             size="small"
-                            style={{ width: "96%" }}
+                            style={{ width: windowWidth <= 500 ? "100%" : "96%" }}
                             type="number"
                             onChange={(event) => {
                               handleMobileNumberChange(event, form);
@@ -1107,6 +1110,7 @@ const FeedBackForm = () => {
                             value={field.value}
                             name="mobileNumber"
                             inputProps={{ maxLength: 11 }}
+                            fullWidth
                           />
                         )}
                       </Field>
@@ -1118,17 +1122,18 @@ const FeedBackForm = () => {
                 </div>
                 <div className="row g-0" style={{ width: "100%" }}>
                   <Fade left>
-                    <div className="col-md-6">
+                    <div className="col-md-6 col-12">
                       <h4>Email</h4>
 
                       <TextField
                         placeholder="Enter Your Email Address"
                         size="small"
-                        style={{ width: "96%" }}
+                        style={{ width: windowWidth <= 500 ? "100%" : "96%" }}
                         name="email"
                         value={email}
                         onChange={handleChange}
                         onBlur={handleBlur}
+                        fullWidth
                       />
                       {errors.email && touched.email && (
                         <span className="error">{errors.email}</span>
@@ -1136,7 +1141,7 @@ const FeedBackForm = () => {
                     </div>
                   </Fade>
                   <Fade right>
-                    <div className="col-md-6">
+                    <div className="col-md-6 col-12">
                       <h4>Company Website</h4>
                       <TextField
                         placeholder="Enter Your Company Website"
@@ -1146,6 +1151,7 @@ const FeedBackForm = () => {
                         onBlur={handleBlur}
                         value={companyWebsite}
                         name="companyWebsite"
+                        fullWidth
                       />
                     </div>
                   </Fade>
@@ -1171,6 +1177,7 @@ const FeedBackForm = () => {
                             setArr2={setArr2}
                             val={val}
                             label={false}
+                            windowWidth={windowWidth}
                             onChange={handleChange}
                             onBlur={handleBlur}
                             setdepartmentDropdown={setdepartmentDropdown}
@@ -1189,6 +1196,7 @@ const FeedBackForm = () => {
                                 setArr={setArr2}
                                 arr1={val}
                                 label={false}
+                                windowWidth={windowWidth}
                                 setdepartmentDropdown={setdepartmentDropdown}
                                 departmentDropdown={departmentDropdown}
                               />
@@ -1199,7 +1207,7 @@ const FeedBackForm = () => {
                     );
                   })}
                 </div>
-                <div className="row g-0" style={{ width: "100%" }}>
+                <div className="row g-0 col-12" style={{ width: "100%" }}>
                   <Fade left>
                     <div className="col">
                       <TextArea
@@ -1213,6 +1221,7 @@ const FeedBackForm = () => {
                         onBlur={handleBlur}
                         value={comments}
                         name="comments"
+                        fullWidth
                       />
                     </div>
                   </Fade>

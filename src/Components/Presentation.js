@@ -7,6 +7,7 @@ import ss13 from "../assets/ScreenShot/worldBank.png"
 import pdf12 from "../assets/DownloadDocument/PRMI.pptx"
 import pdf13 from "../assets/DownloadDocument/WorldBank.pptm"
 import MobileHeaderGeneric from "./MobileHeaderGeneric";
+import Footer from "./footer";
 export default function Presentation() {
     const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
@@ -95,6 +96,7 @@ export default function Presentation() {
                     })
                 }
             </div>
+            <Footer/>
         </>
     );
 }

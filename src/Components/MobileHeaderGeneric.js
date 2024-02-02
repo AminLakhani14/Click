@@ -298,6 +298,7 @@ function MobileHeaderGeneric() {
                               <a
                                 target="_blank"
                                 href={InvestmentDepartment}
+                                className="link toggle2 mobilenesteddropdowntoggle2"
                               >
                                 Investment Department
                               </a>
