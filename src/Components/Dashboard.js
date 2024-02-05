@@ -281,7 +281,7 @@ const Dashboard = () => {
             </div>
             {
               selectedDepartment === 'Excise Taxation Department' && (
-                <div className="col-3">
+                <div className="col-md-3 col-12">
                   <InputLabel shrink htmlFor=" Vehicle Type">
                     Vehicle Type
                   </InputLabel>
@@ -308,7 +308,7 @@ const Dashboard = () => {
             }
             {
               selectedDepartment === 'Excise Taxation Department' && (
-                <div className="col-3 ">
+                <div className="col-md-3 col-12">
                   <InputLabel shrink htmlFor=" Vehicle ">
                     Vehicle
                   </InputLabel>

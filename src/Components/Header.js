@@ -576,7 +576,7 @@ function Header(props) {
                     searchTextRef={props.searchTextRef}
                   />
                 ) : (
-                  windowWidth > 1024 && (
+                  windowWidth > 1200 && (
                     <div className={`header `}>
                       <div className={"row "} style={{ height: "5px" }}>
                         <div
@@ -1378,7 +1378,7 @@ function Header(props) {
               </div>
             </div>
           </div>
-          {windowWidth <= 1024 && (
+          {windowWidth <1200 && (
             <div className={`header `}>
               <div className={"row "} style={{ height: "5px" }}>
                 <div

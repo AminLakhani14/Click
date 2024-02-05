@@ -166,7 +166,7 @@ const arr = [
       "Plot B, 12, Sindhi Muslim Cooperative Housing Society Block A Sindhi Muslim CHS (SMCHS), Karachi, Karachi City, Sindh",
     contactno: "(021) 99330164",
     downloaddocument: `${process.env.PUBLIC_URL}../assets/sindhkatciabadiact1987.pdf`,
-    pdf: SindhFoodAuthorityAct2016,
+    // pdf: SindhFoodAuthorityAct2016,
     logo: sindhFood,
     l1: "▪ Copy of CNIC;",
     l2: "▪ Documents of the property/tenancy agreement or affidavit showing ownership;",

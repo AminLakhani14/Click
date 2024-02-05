@@ -74,6 +74,14 @@ import TheKarachiBuildingTownPlanningRegulation2002 from "../../assets/PDF/Sindh
 /////////////////////////////////////////
 import SindhHealthcarecommissionAct2013 from "../../assets/PDF/SindhHealthcarecommission/SindhHealthcarecommissionAct2013.pdf"
 import SindhHealthcarecommissionRegulations2017 from "../../assets/PDF/SindhHealthcarecommission/SindhHealthcarecommissionRegulations2017.pdf"
+import LicenseforbothPesticidesandfertilizers from "../../assets/PDF/AgricultureDepartment/LicenseforbothPesticidesandfertilizers.pdf"
+import RegistrationRenenewalAsPesticideDistributor from "../../assets/PDF/AgricultureDepartment/RegistrationRenenewalAsPesticideDistributor.pdf"
+import Challan from "../../assets/PDF/AgricultureDepartment/Challan.jpg"
+import SindhFoodAuthorityAct2016 from "../../assets/PDF/SindhFoodAuthority/SindhFoodAuthorityAct2016.pdf";
+import APPLICATIONFORLICENSEOFFOODBUSINESS from "../../assets/PDF/SindhFoodAuthority/APPLICATIONFORLICENSEOFFOODBUSINESS.pdf";
+import SindhFoodChallan from "../../assets/PDF/SindhFoodAuthority/SindhFoodChallan.jpg";
+
+
 function DocumentGrid({dataForGrid}) {
   const {issuingDepartment,rlcoID}=dataForGrid
     let CaseData;
@@ -118,9 +126,9 @@ function DocumentGrid({dataForGrid}) {
       ]:issuingDepartment =="Sindh Revenue Board"?
        CaseData = [
         {
-          documentname: "Sindh Sales Tax on Services Act 2011 amended 2021",
+          documentname: "License (for both Pesticides and fertilizers)",
           documenttype: "Law / Rules / Regulations	",
-          downloaddocument:[SindhSalesTaxonServicesAct2011amended,"Sindh Sales Tax on Services Act 2011 amended 2021"]
+          downloaddocument:[SindhSalesTaxonServicesAct2011amended,"License (for both Pesticides and fertilizers)"]
         },
     
         {
@@ -128,6 +136,43 @@ function DocumentGrid({dataForGrid}) {
             documenttype: "Law / Rules / Regulations	",
             downloaddocument:[SindhSalesTaxonServicesRules2011,"Sindh Sales Tax on Services Rules 2011"]
         },
+       
+      ]:issuingDepartment =="Sindh Food Authority (SFA)"?
+      CaseData = [
+       {
+         documentname: "Sindh Food Authority Act 2016",
+         documenttype: "Law / Rules / Regulations	",
+         downloaddocument:[SindhFoodAuthorityAct2016,"Sindh Food Authority Act 2016"]
+       },
+   
+       {
+           documentname: "Application For License Of Food Business",
+           documenttype: "Law / Rules / Regulations	",
+           downloaddocument:[APPLICATIONFORLICENSEOFFOODBUSINESS,"Application Form"]
+       },{
+        documentname: "Challan",
+        documenttype: "Law / Rules / Regulations	",
+        downloaddocument:[SindhFoodChallan,"Challan"]
+    },
+      
+     ]:
+      issuingDepartment =="Agriculture Department"?
+       CaseData = [
+        {
+          documentname: "Requirements In Respect Of Registration License (for both Pesticides and fertilizers)",
+          documenttype: "Law / Rules / Regulations	",
+          downloaddocument:[LicenseforbothPesticidesandfertilizers,"License (for both Pesticides and fertilizers)"]
+        },
+    
+        {
+            documentname: "Application Form For Registration Renenewal As Pesticide Distributor",
+            documenttype: "Law / Rules / Regulations	",
+            downloaddocument:[RegistrationRenenewalAsPesticideDistributor,"Application Form"]
+        },   {
+          documentname: "Challan",
+          documenttype: "Law / Rules / Regulations	",
+          downloaddocument:[Challan,"Challan"]
+      },
        
       ]:issuingDepartment =="Sindh Employees Social Security Institution (SESSI) "?
       CaseData = [
@@ -390,8 +435,8 @@ function DocumentGrid({dataForGrid}) {
       
         // return value ? `<a style="justify-content: center; display: flex;margin-top: 10px;"  href="${props.dataForGrid.downloaddocument}" target="_blank">${props.dataForGrid.documentname}</a>` : "";
         return value ? `<a style=" display: flex;margin-top: 5px;" 
-         href="${issuingDepartment=="Labour and Human Resources Department" || issuingDepartment=="Sindh Revenue Board" ||issuingDepartment =="Sindh Employees Social Security Institution (SESSI) " || rlcoID =="SEPA-001" || rlcoID =="SEPA-003" || rlcoID =="SEPA-004" || rlcoID =="SEPA-005" ||rlcoID =="SEPA-006" || rlcoID =="ED-001\n" || rlcoID =="ED-002\n" || rlcoID =="ED-003\n" || rlcoID =="ED-004" || rlcoID =="ED-005" || rlcoID =="ED-006" || rlcoID =="ED-007" || rlcoID =="KMC-001" || rlcoID =="KMC-002" || rlcoID =="KMC-003" || rlcoID =="KMC-004" || rlcoID =="KMC-005" || rlcoID =="KMC-006" || rlcoID =="KMC-007" || rlcoID =="KMC-008" || rlcoID =="KMC-009" || rlcoID =="KMC-010" || rlcoID =="KMC-011" || rlcoID =="KMC-012" || rlcoID =="KMC-013" || rlcoID =="KMC-014" || rlcoID =="KMC-015" || rlcoID =="KMC-016" || rlcoID =="KMC-017" || rlcoID =="KMC-018" || rlcoID =="KMC-019" || rlcoID =="KMC-020" || rlcoID =="KMC-021" || rlcoID =="KMC-022" || rlcoID =="KMC-023" | rlcoID=="ICD-001" || rlcoID=="ICD-002" || rlcoID=="ICD-003" || rlcoID=="ICD-004" || rlcoID=="ICD-005" || rlcoID=="ICD-006" || rlcoID=="ICD-007" ||rlcoID== "ET&amp;NC-001" || rlcoID== "ET&amp;NC-002" || rlcoID== "ET&amp;NC-003" || rlcoID== "ET&amp;NC-004" || rlcoID== "ET&amp;NC-005" || rlcoID== "ET&amp;NC-006" || rlcoID== "ET&amp;NC-007" || rlcoID== "ET&amp;NC-008" || rlcoID== "ET&amp;NC-009" || rlcoID== "ET&amp;NC-010" || rlcoID== "ET&amp;NC-011" || rlcoID== "ET&amp;NC-012" || rlcoID== "ET&amp;NC-013" || rlcoID== "ET&amp;NC-014" || rlcoID== "ET&amp;NC-015" || rlcoID== "ET&amp;NC-016" || rlcoID== "ET&amp;NC-017" || rlcoID== "ET&amp;NC-018" || rlcoID== "ET&amp;NC-019" || rlcoID== "ET&amp;NC-020" || rlcoID== "ET&amp;NC-021" || rlcoID== "ET&amp;NC-022" || rlcoID== "ET&amp;NC-023" || rlcoID== "ET&amp;NC-023 B" ||rlcoID== "DMC– 001" || rlcoID== "DMC– 002" || rlcoID== "DMC– 003" || rlcoID== "DMC– 004" || rlcoID== "DMC– 005" || rlcoID== "DMC– 006" || rlcoID== "DMC– 007" || issuingDepartment=="Health Department" || rlcoID== "ICD-016" || rlcoID== "ICD-017" || rlcoID== "ICD-018" ||  rlcoID== "ICD-019" ||  rlcoID== "ICD-020" ||  rlcoID== "ICD-021" ||  rlcoID== "ICD-022" ||  rlcoID== "ICD-023" ||rlcoID== "SBCA-001 (A)" || rlcoID== "SBCA-001 (B)" || rlcoID=="SBCA-002" || rlcoID=="SBCA-003" || rlcoID=="SBCA-004" || rlcoID=="SBCA-005" || rlcoID=="SBCA-006" || rlcoID=="SBCA-007" || rlcoID=="SBCA-008" || rlcoID=="SBCA-009" || rlcoID=="SBCA-010" || rlcoID=="SBCA-011" || rlcoID=="SBCA-012" || rlcoID=="SBCA-013" || rlcoID=="SBCA-014" || rlcoID=="SBCA-015" || rlcoID=="SBCA-016" || rlcoID=="SBCA-017" || rlcoID=="SBCA-018" || issuingDepartment=="Sindh Health Care Commission"? value[0]:  dataForGrid.pdf}" target="_blank">
-         ${issuingDepartment=="Labour and Human Resources Department" ||issuingDepartment=="Sindh Revenue Board" ||issuingDepartment =="Sindh Employees Social Security Institution (SESSI) " || rlcoID =="SEPA-001" || rlcoID =="SEPA-003" || rlcoID =="SEPA-004" || rlcoID =="SEPA-005" || rlcoID =="SEPA-006"|| rlcoID =="ED-001\n" || rlcoID =="ED-002\n" || rlcoID =="ED-003\n" || rlcoID =="ED-004" || rlcoID =="ED-005" || rlcoID =="ED-006" || rlcoID =="ED-007" || rlcoID =="KMC-001" || rlcoID =="KMC-002" || rlcoID =="KMC-003" || rlcoID =="KMC-004" || rlcoID =="KMC-005" || rlcoID =="KMC-006" || rlcoID =="KMC-007" || rlcoID =="KMC-008" || rlcoID =="KMC-009" || rlcoID =="KMC-010" || rlcoID =="KMC-011" || rlcoID =="KMC-012" || rlcoID =="KMC-013" || rlcoID =="KMC-014" || rlcoID =="KMC-015" || rlcoID =="KMC-016" || rlcoID =="KMC-017" || rlcoID =="KMC-018" || rlcoID =="KMC-019" || rlcoID =="KMC-020" || rlcoID =="KMC-021" || rlcoID =="KMC-022" || rlcoID =="KMC-023" ||rlcoID=="ICD-001" || rlcoID=="ICD-002" || rlcoID=="ICD-003" || rlcoID=="ICD-004" || rlcoID=="ICD-005" || rlcoID=="ICD-006" || rlcoID=="ICD-007" ||rlcoID== "ET&amp;NC-001" || rlcoID== "ET&amp;NC-002" || rlcoID== "ET&amp;NC-003" || rlcoID== "ET&amp;NC-004" || rlcoID== "ET&amp;NC-005" || rlcoID== "ET&amp;NC-006" || rlcoID== "ET&amp;NC-007" || rlcoID== "ET&amp;NC-008" || rlcoID== "ET&amp;NC-009" || rlcoID== "ET&amp;NC-010" || rlcoID== "ET&amp;NC-011" || rlcoID== "ET&amp;NC-012" || rlcoID== "ET&amp;NC-013" || rlcoID== "ET&amp;NC-014" || rlcoID== "ET&amp;NC-015" || rlcoID== "ET&amp;NC-016" || rlcoID== "ET&amp;NC-017" || rlcoID== "ET&amp;NC-018" || rlcoID== "ET&amp;NC-019" || rlcoID== "ET&amp;NC-020" || rlcoID== "ET&amp;NC-021" || rlcoID== "ET&amp;NC-022" || rlcoID== "ET&amp;NC-023" || rlcoID== "ET&amp;NC-023 B" ||rlcoID== "DMC– 001" || rlcoID== "DMC– 002" || rlcoID== "DMC– 003" || rlcoID== "DMC– 004" || rlcoID== "DMC– 005" || rlcoID== "DMC– 006" || rlcoID== "DMC– 007" || issuingDepartment=="Health Department" || rlcoID== "ICD-016" || rlcoID== "ICD-017" || rlcoID== "ICD-018" ||  rlcoID== "ICD-019" ||  rlcoID== "ICD-020" ||  rlcoID== "ICD-021" ||  rlcoID== "ICD-022" ||  rlcoID== "ICD-023" || rlcoID== "SBCA-001 (A)" || rlcoID== "SBCA-001 (B)" || rlcoID=="SBCA-002" || rlcoID=="SBCA-003" || rlcoID=="SBCA-004" || rlcoID=="SBCA-005" || rlcoID=="SBCA-006" || rlcoID=="SBCA-007" || rlcoID=="SBCA-008" || rlcoID=="SBCA-009" || rlcoID=="SBCA-010" || rlcoID=="SBCA-011" || rlcoID=="SBCA-012" || rlcoID=="SBCA-013" || rlcoID=="SBCA-014" || rlcoID=="SBCA-015" || rlcoID=="SBCA-016" || rlcoID=="SBCA-017" || rlcoID=="SBCA-018" || issuingDepartment=="Sindh Health Care Commission"? value[1]:dataForGrid.documentname}</a>` : "";
+         href="${issuingDepartment=="Labour and Human Resources Department" || issuingDepartment=="Sindh Revenue Board" || issuingDepartment =="Sindh Food Authority (SFA)" || issuingDepartment =="Sindh Employees Social Security Institution (SESSI) " || rlcoID =="SEPA-001" || rlcoID =="SEPA-003" || rlcoID =="SEPA-004" || rlcoID =="SEPA-005" ||rlcoID =="SEPA-006" || rlcoID =="ED-001\n" || rlcoID =="ED-002\n" || rlcoID =="ED-003\n" || rlcoID =="ED-004" || rlcoID =="ED-005" || rlcoID =="ED-006" || rlcoID =="ED-007" || rlcoID =="KMC-001" || rlcoID =="KMC-002" || rlcoID =="KMC-003" || rlcoID =="KMC-004" || rlcoID =="KMC-005" || rlcoID =="KMC-006" || rlcoID =="KMC-007" || rlcoID =="KMC-008" || rlcoID =="KMC-009" || rlcoID =="KMC-010" || rlcoID =="KMC-011" || rlcoID =="KMC-012" || rlcoID =="KMC-013" || rlcoID =="KMC-014" || rlcoID =="KMC-015" || rlcoID =="KMC-016" || rlcoID =="KMC-017" || rlcoID =="KMC-018" || rlcoID =="KMC-019" || rlcoID =="KMC-020" || rlcoID =="KMC-021" || rlcoID =="KMC-022" || rlcoID =="KMC-023" | rlcoID=="ICD-001" || rlcoID=="ICD-002" || rlcoID=="ICD-003" || rlcoID=="ICD-004" || rlcoID=="ICD-005" || rlcoID=="ICD-006" || rlcoID=="ICD-007" ||rlcoID== "ET&amp;NC-001" || rlcoID== "ET&amp;NC-002" || rlcoID== "ET&amp;NC-003" || rlcoID== "ET&amp;NC-004" || rlcoID== "ET&amp;NC-005" || rlcoID== "ET&amp;NC-006" || rlcoID== "ET&amp;NC-007" || rlcoID== "ET&amp;NC-008" || rlcoID== "ET&amp;NC-009" || rlcoID== "ET&amp;NC-010" || rlcoID== "ET&amp;NC-011" || rlcoID== "ET&amp;NC-012" || rlcoID== "ET&amp;NC-013" || rlcoID== "ET&amp;NC-014" || rlcoID== "ET&amp;NC-015" || rlcoID== "ET&amp;NC-016" || rlcoID== "ET&amp;NC-017" || rlcoID== "ET&amp;NC-018" || rlcoID== "ET&amp;NC-019" || rlcoID== "ET&amp;NC-020" || rlcoID== "ET&amp;NC-021" || rlcoID== "ET&amp;NC-022" || rlcoID== "ET&amp;NC-023" || rlcoID== "ET&amp;NC-023 B" ||rlcoID== "DMC– 001" || rlcoID== "DMC– 002" || rlcoID== "DMC– 003" || rlcoID== "DMC– 004" || rlcoID== "DMC– 005" || rlcoID== "DMC– 006" || rlcoID== "DMC– 007" || issuingDepartment=="Health Department" || rlcoID== "ICD-016" || rlcoID== "ICD-017" || rlcoID== "ICD-018" ||  rlcoID== "ICD-019" ||  rlcoID== "ICD-020" ||  rlcoID== "ICD-021" ||  rlcoID== "ICD-022" ||  rlcoID== "ICD-023" ||rlcoID== "SBCA-001 (A)" || rlcoID== "SBCA-001 (B)" || rlcoID=="SBCA-002" || rlcoID=="SBCA-003" || rlcoID=="SBCA-004" || rlcoID=="SBCA-005" || rlcoID=="SBCA-006" || rlcoID=="SBCA-007" || rlcoID=="SBCA-008" || rlcoID=="SBCA-009" || rlcoID=="SBCA-010" || rlcoID=="SBCA-011" || rlcoID=="SBCA-012" || rlcoID=="SBCA-013" || rlcoID=="SBCA-014" || rlcoID=="SBCA-015" || rlcoID=="SBCA-016" || rlcoID=="SBCA-017" || rlcoID=="SBCA-018" || rlcoID=="AD-001" || issuingDepartment=="Sindh Health Care Commission"?   value[0]:  dataForGrid.pdf}" target="_blank">
+         ${issuingDepartment=="Labour and Human Resources Department" ||issuingDepartment=="Sindh Revenue Board" ||issuingDepartment =="Sindh Food Authority (SFA)" ||issuingDepartment =="Sindh Employees Social Security Institution (SESSI) " || rlcoID =="SEPA-001" || rlcoID =="SEPA-003" || rlcoID =="SEPA-004" || rlcoID =="SEPA-005" || rlcoID =="SEPA-006"|| rlcoID =="ED-001\n" || rlcoID =="ED-002\n" || rlcoID =="ED-003\n" || rlcoID =="ED-004" || rlcoID =="ED-005" || rlcoID =="ED-006" || rlcoID =="ED-007" || rlcoID =="KMC-001" || rlcoID =="KMC-002" || rlcoID =="KMC-003" || rlcoID =="KMC-004" || rlcoID =="KMC-005" || rlcoID =="KMC-006" || rlcoID =="KMC-007" || rlcoID =="KMC-008" || rlcoID =="KMC-009" || rlcoID =="KMC-010" || rlcoID =="KMC-011" || rlcoID =="KMC-012" || rlcoID =="KMC-013" || rlcoID =="KMC-014" || rlcoID =="KMC-015" || rlcoID =="KMC-016" || rlcoID =="KMC-017" || rlcoID =="KMC-018" || rlcoID =="KMC-019" || rlcoID =="KMC-020" || rlcoID =="KMC-021" || rlcoID =="KMC-022" || rlcoID =="KMC-023" ||rlcoID=="ICD-001" || rlcoID=="ICD-002" || rlcoID=="ICD-003" || rlcoID=="ICD-004" || rlcoID=="ICD-005" || rlcoID=="ICD-006" || rlcoID=="ICD-007" ||rlcoID== "ET&amp;NC-001" || rlcoID== "ET&amp;NC-002" || rlcoID== "ET&amp;NC-003" || rlcoID== "ET&amp;NC-004" || rlcoID== "ET&amp;NC-005" || rlcoID== "ET&amp;NC-006" || rlcoID== "ET&amp;NC-007" || rlcoID== "ET&amp;NC-008" || rlcoID== "ET&amp;NC-009" || rlcoID== "ET&amp;NC-010" || rlcoID== "ET&amp;NC-011" || rlcoID== "ET&amp;NC-012" || rlcoID== "ET&amp;NC-013" || rlcoID== "ET&amp;NC-014" || rlcoID== "ET&amp;NC-015" || rlcoID== "ET&amp;NC-016" || rlcoID== "ET&amp;NC-017" || rlcoID== "ET&amp;NC-018" || rlcoID== "ET&amp;NC-019" || rlcoID== "ET&amp;NC-020" || rlcoID== "ET&amp;NC-021" || rlcoID== "ET&amp;NC-022" || rlcoID== "ET&amp;NC-023" || rlcoID== "ET&amp;NC-023 B" ||rlcoID== "DMC– 001" || rlcoID== "DMC– 002" || rlcoID== "DMC– 003" || rlcoID== "DMC– 004" || rlcoID== "DMC– 005" || rlcoID== "DMC– 006" || rlcoID== "DMC– 007" || issuingDepartment=="Health Department" || rlcoID== "ICD-016" || rlcoID== "ICD-017" || rlcoID== "ICD-018" ||  rlcoID== "ICD-019" ||  rlcoID== "ICD-020" ||  rlcoID== "ICD-021" ||  rlcoID== "ICD-022" ||  rlcoID== "ICD-023" || rlcoID== "SBCA-001 (A)" || rlcoID== "SBCA-001 (B)" || rlcoID=="SBCA-002" || rlcoID=="SBCA-003" || rlcoID=="SBCA-004" || rlcoID=="SBCA-005" || rlcoID=="SBCA-006" || rlcoID=="SBCA-007" || rlcoID=="SBCA-008" || rlcoID=="SBCA-009" || rlcoID=="SBCA-010" || rlcoID=="SBCA-011" || rlcoID=="SBCA-012" || rlcoID=="SBCA-013" || rlcoID=="SBCA-014" || rlcoID=="SBCA-015" || rlcoID=="SBCA-016" || rlcoID=="SBCA-017" || rlcoID=="SBCA-018" || rlcoID=="AD-001"|| issuingDepartment=="Sindh Health Care Commission"? value[1]:dataForGrid.documentname}</a>` : "";
       },
      
       filtertype: "textField",

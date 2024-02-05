@@ -83,7 +83,7 @@ const DetailModal = (props) => {
             onFocus={() => {}}
             onBlur={() => {}}
           >
-            Interactive Regulatory Directory
+            Interactive Regulatory Directory : { props?.licenceData?.issuingDepartment}
           </div>
         }
         width={1000}
