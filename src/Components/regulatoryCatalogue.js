@@ -45,6 +45,8 @@ import ICD_004 from "../assets/tutorial/ICD-004.mp4";
 import ICD_005 from "../assets/tutorial/ICD-005.mp4";
 import ICD_006 from "../assets/tutorial/ICD-006.mp4";
 import ICD_007 from "../assets/tutorial/ICD-007.mp4";
+import ICD_008A from "../assets/tutorial/ICD-008A.mp4";
+import ICD_016 from "../assets/tutorial/ICD-016.mp4";
 import licenseToManufactureDrug from "../assets/tutorial/LIcensetomanufacturedrug.mp4";
 import licenseToSaleDrugByWholeSale from "../assets/tutorial/LIcensetosaledrugbyholesale.mp4";
 import LIcensetosaledrugbytretail from "../assets/tutorial/LIcensetosaledrugbytretail.mp4";
@@ -60,6 +62,9 @@ import SBCA_001_B from "../assets/tutorial/SBCA-001(B).mp4";
 import SBCA_004 from "../assets/tutorial/SBCA-004.mp4";
 import SRB_001 from "../assets/tutorial/SRB-001.mp4";
 import SBCA_005 from "../assets/tutorial/SBCA-005.mp4";
+import NC_001 from "../assets/tutorial/NC-001.mp4";
+import KMC_001 from "../assets/tutorial/KMC-001.mp4";
+import DMC_001 from "../assets/tutorial/DMC-001.mp4";
 
 const arr = [
   {
@@ -1634,6 +1639,7 @@ const arr = [
     contactno: "(021) 99333152",
     rlcoID: "ICD-008 (A)",
     details: "Allotment of Land/ Plot",
+    video:ICD_008A,
     type: "Other",
     timeLine: "60 days",
     fee: "",
@@ -1844,6 +1850,7 @@ const arr = [
     address: "AM-310, Preedy Street, Saddar, Karachi",
     contactno: "(021) 99332167-68",
     rlcoID: "ICD-016",
+    video:ICD_016,
     details: "Allotment Order of Land/ Plot",
     type: "Other",
     prevailing:
@@ -2033,6 +2040,7 @@ const arr = [
     // jurisdiction: "Sindh",
     timeLine: "1 day",
     fee: "",
+    video:DMC_001,
     officials: "Director (Trade)",
     // validity: "",
     // renewalFee:""
@@ -2164,6 +2172,7 @@ const arr = [
     rlcoID: "KMC-001",
     details: "Transfer/ Mutation of Land",
     type: "Other",
+    video:KMC_001,
     prevailing:
       "Sindh Local Government Act 2013\n\nThe Sindh People’s\nLocal Council (Land) Rules 1975",
     // jurisdiction: "Karachi",
@@ -3067,6 +3076,7 @@ const arr = [
     rlcoID: "ET&amp;NC-001",
     details: "Motor vehicle Registration",
     type: "Registration",
+    video:NC_001,
     prevailing: "Motor Vehicle Registration Act, 1965",
     // jurisdiction: "Sindh",
     timeLine: "7 days",

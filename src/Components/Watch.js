@@ -22,6 +22,8 @@ import ICD_004 from "../assets/tutorial/ICD-004.mp4";
 import ICD_005 from "../assets/tutorial/ICD-005.mp4";
 import ICD_006 from "../assets/tutorial/ICD-006.mp4";
 import ICD_007 from "../assets/tutorial/ICD-007.mp4";
+import ICD_008A from "../assets/tutorial/ICD-008A.mp4";
+import ICD_016 from "../assets/tutorial/ICD-016.mp4";
 import sindhHealthcarevideo from "../assets/tutorial/sindhHealthcare.mp4";
 import sepa_001 from "../assets/tutorial/sepa-001.mp4";
 import sepa_003 from "../assets/tutorial/sepa-003.mp4";
@@ -33,6 +35,10 @@ import SBCA_004 from "../assets/tutorial/SBCA-004.mp4";
 import SBCA_005 from "../assets/tutorial/SBCA-005.mp4";
 import SBCA_007 from "../assets/tutorial/SBCA-007.mp4";
 import BOR_001 from "../assets/tutorial/BOR-001.mp4";
+import DMC_001 from "../assets/tutorial/DMC-001.mp4";
+import KMC_001 from "../assets/tutorial/KMC-001.mp4";
+import NC_001 from "../assets/tutorial/NC-001.mp4";
+
 import { Link, useParams } from "react-router-dom";
 import sindhHealthcare from "../assets/thumbnail/sindhHealthcare.png";
 import CollegeEducationDepartment from "../assets/thumbnail/CollegeEducationDepartment.png";
@@ -43,6 +49,11 @@ import BoardOfRevenue from "../assets/thumbnail/BoardOfRevenue.png"
 import sindhbuildingcontrol from "../assets/thumbnail/sindhbuildingcontrol.png"
 import sindhEnviromentalProtection from "../assets/thumbnail/sindhEnviromentalProtection.png"
 import sindhBoardRevenue from "../assets/thumbnail/sindhBoardRevenue.png"
+import DistrictMunicipalCorporation from "../assets/thumbnail/DistrictMunicipalCorporation.png";
+import KarachiMetopolitanCorporation from "../assets/thumbnail/KarachiMetopolitanCorporation.png";
+import ExcieseTaxationAndNarcotics from "../assets/thumbnail/ExcieseTaxationAndNarcotics.png";
+
+
 
 
 export const videos = [
@@ -58,7 +69,7 @@ export const videos = [
     tutorial: ICD_001,
     department: "Industries and Commerce Department",
     license: "Registration Certificate of Partnership Firm",
-    thumbnail: schoolEducationDepartment,
+    thumbnail: IndustriesAndCommerceDepartment,
   },
   {
     id: 3,
@@ -118,13 +129,36 @@ export const videos = [
   },
   {
     id: 11,
+    tutorial: DMC_001,
+    department: "District Municipal Corporation (DMC)",
+    license: "Trade License",
+    thumbnail: DistrictMunicipalCorporation,
+  },
+  {
+    id: 12,
+    tutorial: KMC_001,
+    department: "Karachi Metropolitan Corporation (KMC)",
+    license:'Transfer Mutation Of Land',
+    thumbnail: KarachiMetopolitanCorporation,
+    length: 1,
+  },
+  {
+    id: 13,
+    tutorial: NC_001,
+    department: "Excise, Taxation &amp; Narcotics Control Department\n",
+    license:'Registering a Motor Vehicle',
+    thumbnail: ExcieseTaxationAndNarcotics,
+    length: 1,
+  },
+  {
+    id: 14,
     tutorial: licenseToSaleDrugByWholeSale,
     department: "Health Department",
     license: "License to sell Drugs by Way of Retail Sale (Form-6)",
     thumbnail: healthDepartment,
   },
   {
-    id: 12,
+    id: 15,
     tutorial: LIcensetosaledrugbytretail,
     department: "Health Department",
     license: "License to sell Drugs by Way of Wholesale 7A",
@@ -132,7 +166,7 @@ export const videos = [
   },
 
   {
-    id: 13,
+    id: 16,
     tutorial: ICD_002,
     department: "Industries and Commerce Department",
     license: "Registration Certificate of Amendment/Dissolution /Rectification in Partnership Firm",
@@ -140,7 +174,7 @@ export const videos = [
   },
 
   {
-    id: 14,
+    id: 17,
     tutorial: Ld_002,
     department: "Labour Department",
     license: "Registration of Factories",
@@ -149,87 +183,101 @@ export const videos = [
   },
 
   {
-    id: 15,
+    id: 18,
     tutorial: ICD_003,
     department: "Industries and Commerce Department",
     license: "Registration of New Boiler",
     thumbnail: IndustriesAndCommerceDepartment,
   },
   {
-    id: 16,
+    id: 19,
     tutorial: ICD_004,
     department: "Industries and Commerce Department",
     license: "Registration of Old Boiler",
     thumbnail: IndustriesAndCommerceDepartment,
   },
   {
-    id: 17,
+    id: 20,
     tutorial: ICD_005,
     department: "Industries and Commerce Department",
     license: "Approval of Plan and Particulars of Boilers Acceptable for Registration (New Boiler)",
     thumbnail: IndustriesAndCommerceDepartment,
   },
   {
-    id: 18,
+    id: 21,
     tutorial: ICD_006,
     department: "Industries and Commerce Department",
     license: "Approval of Plan and Particulars of Boilers Acceptable for Registration (Used Boiler)",
     thumbnail: IndustriesAndCommerceDepartment,
   },
   {
-    id: 19,
+    id: 22,
     tutorial: ICD_007,
     department: "Industries and Commerce Department",
     license: "Transfer of Ownership",
     thumbnail: IndustriesAndCommerceDepartment,
   },
   {
-    id: 20,
+    id: 23,
     tutorial: SBCA_007,
     department: "Sindh Building Control Authority (SBCA)",
     license: "Attestation Of Fee",
     thumbnail: sindhbuildingcontrol,
   }, {
-    id: 21,
+    id: 24,
     tutorial: SBCA_002,
     department: "Sindh Building Control Authority (SBCA)",
     license: "Notice of Completion (I-IV)",
     thumbnail: sindhbuildingcontrol,
   },
   {
-    id: 22,
+    id: 25,
     tutorial: SBCA_003,
     department: "Sindh Building Control Authority (SBCA)",
     license: "ADditional Floor Charges For Category I Betterment Charges For Category(II, III & IV)",
     thumbnail: sindhbuildingcontrol,
   },
   {
-    id: 23,
+    id: 26,
     tutorial: SBCA_001_B,
     department: "Sindh Building Control Authority (SBCA)",
     license: "Approval Of Building Plan For Category (II, III & IV)",
     thumbnail: sindhbuildingcontrol,
   },
   {
-    id: 24,
+    id: 27,
     tutorial: SBCA_004,
     department: "Sindh Building Control Authority (SBCA)",
     license: "Renewal of Building Plan for Category (I To IV)",
     thumbnail: sindhbuildingcontrol,
   },
   {
-    id: 25,
+    id: 28,
     tutorial: SBCA_005,
     department: "Sindh Building Control Authority (SBCA)",
     license: "Addition / Alteration / Revision of Building Plan for Category (I To IV)",
     thumbnail: sindhbuildingcontrol,
   },
   {
-    id: 26,
+    id: 29,
     tutorial: sepa_003,
     department: "Sindh Environmental Protection Agency (SEPA)",
     license: "Approval Under Section 17 (IEE,EIA,EC)",
     thumbnail: sindhEnviromentalProtection,
+  },
+  {
+    id: 30,
+    tutorial: ICD_016,
+    department: "Industries and Commerce Department",
+    license: "Allotment Order",
+    thumbnail: IndustriesAndCommerceDepartment,
+  },
+  {
+    id: 31,
+    tutorial: ICD_008A,
+    department: "Industries and Commerce Department",
+    license: "Allotment Order Of Land",
+    thumbnail: IndustriesAndCommerceDepartment,
   },
 
 ];
@@ -322,9 +370,9 @@ const Watch = () => {
                         src={thumbnail}
                         style={{ borderRadius: 5, objectFit: "cover" }}
                         alt=""
-                        onClick={() => {
-                          window.scrollTo(0, 0)
-                        }}
+                        // onClick={() => {
+                        //   window.scrollTo(0, 0)
+                        // }}
                       />
                     </Link>
                     <div className="title_container">

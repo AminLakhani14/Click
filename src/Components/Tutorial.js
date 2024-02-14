@@ -13,6 +13,10 @@ import Ld_001 from "../assets/tutorial/led-001.mp4";
 import sepa_001 from "../assets/tutorial/sepa-001.mp4";
 import SBCA_006 from "../assets/tutorial/SBCA-006.mp4";
 import BOR_001 from "../assets/tutorial/BOR-001.mp4";
+import DMC_001 from "../assets/tutorial/DMC-001.mp4";
+import KMC_001 from "../assets/tutorial/KMC-001.mp4";
+import NC_001 from "../assets/tutorial/NC-001.mp4";
+import SMPA from "../assets/tutorial/SMPA.mp4";
 //////////////////////THUMBNAIL/////////////////////
 import schoolEducationDepartment from "../assets/thumbnail/schoolEducationaAndLitercaDepartment.png";
 import healthDepartment from "../assets/thumbnail/healthDepartment.png";
@@ -24,6 +28,10 @@ import BoardOfRevenue from "../assets/thumbnail/BoardOfRevenue.png";
 import sindhbuildingcontrol from "../assets/thumbnail/sindhbuildingcontrol.png";
 import sindhEnviromentalProtection from "../assets/thumbnail/sindhEnviromentalProtection.png";
 import sindhBoardRevenue from "../assets/thumbnail/sindhBoardRevenue.png";
+import DistrictMunicipalCorporation from "../assets/thumbnail/DistrictMunicipalCorporation.png";
+import KarachiMetopolitanCorporation from "../assets/thumbnail/KarachiMetopolitanCorporation.png";
+import ExcieseTaxationAndNarcotics from "../assets/thumbnail/ExcieseTaxationAndNarcotics.png";
+import SindhMasterPlan from "../assets/thumbnail/SindhMasterPlan.png";
 
 const {
   parent_container,
@@ -50,7 +58,7 @@ export const tutorial = [
     tutorial: ICD_001,
     department: "Industries and Commerce Department",
     thumbnail: IndustriesAndCommerceDepartment,
-    length: 7,
+    length: 9,
   },
   {
     id: 3,
@@ -108,6 +116,36 @@ export const tutorial = [
     thumbnail: sindhBoardRevenue,
     length: 1,
   },
+  {
+    id: 11,
+    tutorial: DMC_001,
+    department: "District Municipal Corporation (DMC)",
+    thumbnail: DistrictMunicipalCorporation,
+    length: 1,
+  },
+  {
+    id: 12,
+    tutorial: KMC_001,
+    department: "Karachi Metropolitan Corporation (KMC)",
+    thumbnail: KarachiMetopolitanCorporation,
+    length: 1,
+  },
+  {
+    id: 13,
+    tutorial: NC_001,
+    department: "Excise, Taxation &amp; Narcotics Control Department\n",
+    thumbnail: ExcieseTaxationAndNarcotics,
+    length: 1,
+  },
+  // This department is not adding in regulatory catalog
+
+  // {
+  //   id: 14,
+  //   tutorial: SMPA,
+  //   department: "Sindh Master PLan Authority",
+  //   thumbnail: SindhMasterPlan,
+  //   length: 1,
+  // },
 ];
 function Team() {
   const [hover, setHover] = useState(false);
