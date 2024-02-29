@@ -983,7 +983,7 @@ label#\:rd\:-label {
     height: 546px !important;
   }
 }
-@media only screen and (min-width: 1500px) and (max-width: 1700px) {
+@media only screen and (min-width: 1601px) and (max-width: 1920px) {
   .ant-modal-content {
     padding: 0px !important;
     padding-bottom: 16px !important;
@@ -1013,11 +1013,11 @@ label#\:rd\:-label {
     font-size: 20px !important;
   }
 }
-@media only screen and (min-width: 1440px) and (max-width: 1900px) {
+@media only screen and (min-width: 1440px) and (max-width: 1600px) {
   .ant-modal-content {
     padding: 0px !important;
     padding-bottom: 16px !important;
-    height: 700px !important;
+    height: 600px !important;
   }
   .modal_container {
     width: 85% !important;

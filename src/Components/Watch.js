@@ -15,6 +15,8 @@ import Ld_001 from "../assets/tutorial/led-001.mp4";
 import Ld_002 from "../assets/tutorial/ld002.mp4";
 import SRB_001 from "../assets/tutorial/SRB-001.mp4";
 import CED_001 from "../assets/tutorial/CED_001.mp4";
+import AD_001 from "../assets/tutorial/AD-001.mp4";
+import AD_002 from "../assets/tutorial/AD-002.mp4";
 import ICD_001 from "../assets/tutorial/ICD-001.mp4";
 import ICD_002 from "../assets/tutorial/ICD-002.mp4";
 import ICD_003 from "../assets/tutorial/ICD-003.mp4";
@@ -27,6 +29,9 @@ import ICD_016 from "../assets/tutorial/ICD-016.mp4";
 import sindhHealthcarevideo from "../assets/tutorial/sindhHealthcare.mp4";
 import sepa_001 from "../assets/tutorial/sepa-001.mp4";
 import sepa_003 from "../assets/tutorial/sepa-003.mp4";
+import sepa_004 from "../assets/tutorial/sepa-004.mp4";
+import sepa_005 from "../assets/tutorial/sepa-005.mp4";
+import sepa_006 from "../assets/tutorial/sepa-005.mp4";
 import SBCA_001_B from "../assets/tutorial/SBCA-001(B).mp4";
 import SBCA_006 from "../assets/tutorial/SBCA-006.mp4";
 import SBCA_002 from "../assets/tutorial/SBCA-002.mp4";
@@ -52,6 +57,7 @@ import sindhBoardRevenue from "../assets/thumbnail/sindhBoardRevenue.png"
 import DistrictMunicipalCorporation from "../assets/thumbnail/DistrictMunicipalCorporation.png";
 import KarachiMetopolitanCorporation from "../assets/thumbnail/KarachiMetopolitanCorporation.png";
 import ExcieseTaxationAndNarcotics from "../assets/thumbnail/ExcieseTaxationAndNarcotics.png";
+import AgricultureDepartment from "../assets/thumbnail/AgricultureDepartment.png";
 
 
 
@@ -152,13 +158,21 @@ export const videos = [
   },
   {
     id: 14,
+    tutorial: AD_001,
+    department: "Agriculture Department",
+    license:'Distributor Registration / License (for both Pesticides and fertilizers)',
+    thumbnail: AgricultureDepartment,
+    length: 1,
+  },
+  {
+    id: 15,
     tutorial: licenseToSaleDrugByWholeSale,
     department: "Health Department",
     license: "License to sell Drugs by Way of Retail Sale (Form-6)",
     thumbnail: healthDepartment,
   },
   {
-    id: 15,
+    id: 16,
     tutorial: LIcensetosaledrugbytretail,
     department: "Health Department",
     license: "License to sell Drugs by Way of Wholesale 7A",
@@ -166,7 +180,7 @@ export const videos = [
   },
 
   {
-    id: 16,
+    id: 17,
     tutorial: ICD_002,
     department: "Industries and Commerce Department",
     license: "Registration Certificate of Amendment/Dissolution /Rectification in Partnership Firm",
@@ -174,7 +188,7 @@ export const videos = [
   },
 
   {
-    id: 17,
+    id: 18,
     tutorial: Ld_002,
     department: "Labour Department",
     license: "Registration of Factories",
@@ -183,103 +197,131 @@ export const videos = [
   },
 
   {
-    id: 18,
+    id: 19,
     tutorial: ICD_003,
     department: "Industries and Commerce Department",
     license: "Registration of New Boiler",
     thumbnail: IndustriesAndCommerceDepartment,
   },
   {
-    id: 19,
+    id: 20,
     tutorial: ICD_004,
     department: "Industries and Commerce Department",
     license: "Registration of Old Boiler",
     thumbnail: IndustriesAndCommerceDepartment,
   },
   {
-    id: 20,
+    id: 21,
     tutorial: ICD_005,
     department: "Industries and Commerce Department",
     license: "Approval of Plan and Particulars of Boilers Acceptable for Registration (New Boiler)",
     thumbnail: IndustriesAndCommerceDepartment,
   },
   {
-    id: 21,
+    id: 22,
     tutorial: ICD_006,
     department: "Industries and Commerce Department",
     license: "Approval of Plan and Particulars of Boilers Acceptable for Registration (Used Boiler)",
     thumbnail: IndustriesAndCommerceDepartment,
   },
   {
-    id: 22,
+    id: 23,
     tutorial: ICD_007,
     department: "Industries and Commerce Department",
     license: "Transfer of Ownership",
     thumbnail: IndustriesAndCommerceDepartment,
   },
   {
-    id: 23,
+    id: 24,
     tutorial: SBCA_007,
     department: "Sindh Building Control Authority (SBCA)",
     license: "Attestation Of Fee",
     thumbnail: sindhbuildingcontrol,
   }, {
-    id: 24,
+    id: 25,
     tutorial: SBCA_002,
     department: "Sindh Building Control Authority (SBCA)",
     license: "Notice of Completion (I-IV)",
     thumbnail: sindhbuildingcontrol,
   },
   {
-    id: 25,
+    id: 26,
     tutorial: SBCA_003,
     department: "Sindh Building Control Authority (SBCA)",
     license: "ADditional Floor Charges For Category I Betterment Charges For Category(II, III & IV)",
     thumbnail: sindhbuildingcontrol,
   },
   {
-    id: 26,
+    id: 27,
     tutorial: SBCA_001_B,
     department: "Sindh Building Control Authority (SBCA)",
     license: "Approval Of Building Plan For Category (II, III & IV)",
     thumbnail: sindhbuildingcontrol,
   },
   {
-    id: 27,
+    id: 28,
     tutorial: SBCA_004,
     department: "Sindh Building Control Authority (SBCA)",
     license: "Renewal of Building Plan for Category (I To IV)",
     thumbnail: sindhbuildingcontrol,
   },
   {
-    id: 28,
+    id: 29,
     tutorial: SBCA_005,
     department: "Sindh Building Control Authority (SBCA)",
     license: "Addition / Alteration / Revision of Building Plan for Category (I To IV)",
     thumbnail: sindhbuildingcontrol,
   },
   {
-    id: 29,
+    id: 30,
     tutorial: sepa_003,
     department: "Sindh Environmental Protection Agency (SEPA)",
     license: "Approval Under Section 17 (IEE,EIA,EC)",
     thumbnail: sindhEnviromentalProtection,
   },
   {
-    id: 30,
+    id: 31,
     tutorial: ICD_016,
     department: "Industries and Commerce Department",
     license: "Allotment Order",
     thumbnail: IndustriesAndCommerceDepartment,
   },
   {
-    id: 31,
+    id: 32,
     tutorial: ICD_008A,
     department: "Industries and Commerce Department",
     license: "Allotment Order Of Land",
     thumbnail: IndustriesAndCommerceDepartment,
   },
-
+  {
+    id: 33,
+    tutorial: sepa_004,
+    department: "Sindh Environmental Protection Agency (SEPA)",
+    license: "Approval of an Environmental Management Plan",
+    thumbnail: sindhEnviromentalProtection,
+  },
+  {
+    id: 34,
+    tutorial: sepa_005,
+    department: "Sindh Environmental Protection Agency (SEPA)",
+    license: "Certification of Environmental Plan",
+    thumbnail: sindhEnviromentalProtection,
+  },
+  {
+    id: 35,
+    tutorial: sepa_006,
+    department: "Sindh Environmental Protection Agency (SEPA)",
+    license: "Approval of Hospital Waste Management Plan",
+    thumbnail: sindhEnviromentalProtection,
+  },
+  {
+    id: 36,
+    tutorial: AD_002,
+    department: "Agriculture Department",
+    license:'License for Fertilizer Nutrients',
+    thumbnail: AgricultureDepartment,
+    length: 1,
+  },
 ];
 
 const Watch = () => {

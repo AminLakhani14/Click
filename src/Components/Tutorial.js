@@ -9,6 +9,7 @@ import healthVideo from "../assets/tutorial/healthDepartment.mp4";
 import schooleDepartmentVideo from "../assets/tutorial/schoolEducationAndLiteracyDepartment.mp4";
 import sindhHealthcarevideo from "../assets/tutorial/sindhHealthcare.mp4";
 import ICD_001 from "../assets/tutorial/ICD-001.mp4";
+import AD_001 from "../assets/tutorial/AD-001.mp4";
 import Ld_001 from "../assets/tutorial/led-001.mp4";
 import sepa_001 from "../assets/tutorial/sepa-001.mp4";
 import SBCA_006 from "../assets/tutorial/SBCA-006.mp4";
@@ -19,6 +20,7 @@ import NC_001 from "../assets/tutorial/NC-001.mp4";
 import SMPA from "../assets/tutorial/SMPA.mp4";
 //////////////////////THUMBNAIL/////////////////////
 import schoolEducationDepartment from "../assets/thumbnail/schoolEducationaAndLitercaDepartment.png";
+import AgricultureDepartment from "../assets/thumbnail/AgricultureDepartment.png";
 import healthDepartment from "../assets/thumbnail/healthDepartment.png";
 import IndustriesAndCommerceDepartment from "../assets/thumbnail/IndustriesAndCommerceDepartmetn.png";
 import labourDepartment from "../assets/thumbnail/labourDepartment.png";
@@ -93,7 +95,7 @@ export const tutorial = [
     tutorial: sepa_001,
     department: "Sindh Environmental Protection Agency (SEPA)",
     thumbnail: sindhEnviromentalProtection,
-    length: 2,
+    length: 5,
   },
   {
     id: 8,
@@ -136,6 +138,13 @@ export const tutorial = [
     department: "Excise, Taxation &amp; Narcotics Control Department\n",
     thumbnail: ExcieseTaxationAndNarcotics,
     length: 1,
+  },
+  {
+    id: 14,
+    tutorial: AD_001,
+    department: "Agriculture Department",
+    thumbnail: AgricultureDepartment,
+    length: 2,
   },
   // This department is not adding in regulatory catalog
 

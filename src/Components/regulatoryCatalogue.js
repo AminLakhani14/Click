@@ -38,6 +38,8 @@ import ld_002 from "../assets/ld002.mp4";
 import CED_001 from "../assets/tutorial/CED_001.mp4";
 import schooleDepartmentVideo from "../assets/tutorial/schoolEducationAndLiteracyDepartment.mp4";
 import ld_001 from "../assets/tutorial/led-001.mp4";
+import AD_001 from "../assets/tutorial/AD-001.mp4";
+import AD_002 from "../assets/tutorial/AD-002.mp4";
 import ICD_001 from "../assets/tutorial/ICD-001.mp4";
 import ICD_002 from "../assets/tutorial/ICD-002.mp4";
 import ICD_003 from "../assets/tutorial/ICD-003.mp4";
@@ -53,6 +55,9 @@ import LIcensetosaledrugbytretail from "../assets/tutorial/LIcensetosaledrugbytr
 import sindhHealthcarevideo from "../assets/tutorial/sindhHealthcare.mp4";
 import sepa_001 from "../assets/tutorial/sepa-001.mp4";
 import sepa_003 from "../assets/tutorial/sepa-003.mp4";
+import sepa_004 from "../assets/tutorial/sepa-004.mp4";
+import sepa_005 from "../assets/tutorial/sepa-005.mp4";
+import sepa_006 from "../assets/tutorial/sepa-006.mp4";
 import SBCA_002 from "../assets/tutorial/SBCA-002.mp4";
 import SBCA_006 from "../assets/tutorial/SBCA-006.mp4";
 import SBCA_007 from "../assets/tutorial/SBCA-007.mp4";
@@ -925,6 +930,7 @@ const arr = [
     contactno: "(021) 35065950",
     rlcoID: "SEPA-004",
     details: "Approval of an Environmental Management Plan",
+    video:sepa_004,
     type: "Other",
     timeLine: "7-10 Days",
     fee: "PKR 40,000",
@@ -944,6 +950,7 @@ const arr = [
       "ST-21،, Sector 23 Korangi Industrial Area, Karachi, Karachi City, Sindh",
     contactno: "(021) 35065950",
     rlcoID: "SEPA-005",
+    video:sepa_005,
     details: "Certification of Environmental Lab",
     type: "Certifcate",
     timeLine: "7 Days",
@@ -964,6 +971,7 @@ const arr = [
       "ST-21،, Sector 23 Korangi Industrial Area, Karachi, Karachi City, Sindh",
     contactno: "(021) 35065950",
     rlcoID: "SEPA-005",
+    video:sepa_005,
     details: "Certification of Environmental Lab",
     type: "Certifcate",
     timeLine: "7 Days",
@@ -983,6 +991,7 @@ const arr = [
       "ST-21،, Sector 23 Korangi Industrial Area, Karachi, Karachi City, Sindh",
     contactno: "(021) 35065950",
     rlcoID: "SEPA-006",
+    video:sepa_006,
     details: "Approval of Hospital Waste Management Plan",
     type: "Other",
     timeLine: "7 days",
@@ -1523,6 +1532,7 @@ const arr = [
       "Sindh Secretariat Building # 2 (Tughluq House), Ground Floor, Karachi, Pakistan",
     contactno: "00922199211468",
     rlcoID: "AD-001",
+    video:AD_001,
     details:
       "Distributor Registration / License (for both Pesticides and fertilizers)",
     type: "Registration",
@@ -1543,6 +1553,7 @@ const arr = [
       "Sindh Secretariat Building # 2 (Tughluq House), Ground Floor, Karachi, Pakistan",
     contactno: "00922199211468",
     rlcoID: "AD-001",
+    video:AD_001,
     details:
       "Distributor Registration / License (for both Pesticides and fertilizers)",
     type: "Registration",
@@ -1563,6 +1574,7 @@ const arr = [
       "Sindh Secretariat Building # 2 (Tughluq House), Ground Floor, Karachi, Pakistan",
     contactno: "00922199211468",
     rlcoID: "AD-002",
+    video:AD_002,
     details: "Product License for Fertilizer Micronutrients",
     type: "License",
     // prevailing: "Sindh Fertilizer. Control Act, 1994 and Rules, 1999.",

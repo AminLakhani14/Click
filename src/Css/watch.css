@@ -51,7 +51,8 @@ a {
   object-fit: contain;
 }
 .side_video::-webkit-scrollbar {
-  width: 12px;
+  width: 5px;
+  margin: 10px 0;
   height: 10px !important;
 }
 
