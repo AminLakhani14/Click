@@ -74,6 +74,9 @@ p {
   padding-top: 0 !important;
   color: black;
   box-shadow: 0 0.2rem 1rem rgba(0, 0, 0, 0.12);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .box1_container h1 {
   text-align: center;
@@ -102,7 +105,8 @@ p {
   top: 24px;
   right: 0px;
   overflow-y: auto;
-  min-height: 343px;
+  height: 100%;
+  /* min-height: 343px; */
   max-height: 400px;
 }
 .lable_container {
@@ -140,6 +144,9 @@ p {
   box-shadow: 0 0.2rem 1rem rgba(0, 0, 0, 0.12);
   border-radius: 5px;
   width: 48.76%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 .bar_chart h3,
 .bar_chart h4 {
@@ -272,9 +279,13 @@ p {
   .lable {
     font-size: 18px;
   }
+  .box1_container{
+    height: 125px;
+  }
+
 }
 /* /////////////xxl device /////////////// */
-@media only screen and (min-width: 1601px) and (max-width: 1900px) {
+@media only screen and (min-width: 1601px) and (max-width: 2000px) {
   .lable_parent {
     position: absolute;
     top: 20px;
@@ -287,6 +298,9 @@ p {
   .lable_box {
     height: 25px !important;
     width: 25px !important;
+  }
+  .box1_container{
+    height: 140px;
   }
 }
 
@@ -316,7 +330,6 @@ p {
   display: flex;
   flex-wrap: wrap;
 }
-
 .donutchart-innertext-value {
   font-size: 36px;
 }

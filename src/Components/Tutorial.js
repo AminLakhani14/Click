@@ -179,7 +179,7 @@ function Team() {
   return (
     <>
       {windowWidth <= 500 ? <MobileHeaderGeneric /> : <GenericHeader />}
-      {windowWidth >= 500 && <div className="" style={{ height: 120 }}></div>}
+      {windowWidth >= 500 && <div className="" style={{ height: "150px" }}></div>}
 
       <div
         className="row "

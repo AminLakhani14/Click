@@ -283,7 +283,7 @@ export const translations = {
     sd: 'اپ ڊيٽس',
   },
   'Headline': {
-    en: 'PIU-CLICK LGD is soliciting applications for Procurement &Contracts Management Specialist & Manager Finance. Interestedapplicants should carefully read the vacancy announcement on our social media pages.',
+    en: 'PIU-CLICK LGD is soliciting applications for Procurement & Contracts Management Specialist & Manager Finance. Interested applicants should carefully read the vacancy announcement on our social media pages.',
     ur: "پروجیکٹ امپلیمنٹیشن یونٹ (PIU) لوکل گورنمنٹ ڈپارٹمنٹ (LGD) درخواستوں کی درخواست درخواست اختصاصیت کے لئے طلب کر رہا ہے جیکہ تدارکی اور معاہدات کا انتظام کرنے والے ماہرین اور منیجر مالیت۔ دلچسپ امیدواران کو ہمارے سماجی میڈیا صفحات پر خالی درج کردار کی اعلان کو دھیان سے پڑھنا چاہئے۔",
     sd: "پروجيڪٽ امپليمينٽيشن يونٽ (PIU) لوڪل گورنمنٽ ڊپارٽمينٽ (LGD) ڪنٽريکٽ اينڊ ڪنٽريکٽ اينڊ مينيجر فنانس لاءِ درخواستن تلب ڪرڻ جو ڇا اختصاصيت ٿيندي ماهرين ۽ مينيجر ماليت۔ دلچسپ اميدوارن کي ۾ جو اخبار ساماجي ميڊيا صفحن ۾ روزانو آڻي کي درج ته راهيو ٿا چاهيو.",
   },
@@ -649,10 +649,11 @@ export const translations = {
     ur: "نیوز لیٹر کے لیے سائن اپ کریں",
     sd: "نيوز ليٽر لاءِ سائن اپ ڪريو",
   },
+  
   'Copyright': {
-    en: 'Copyright © 2024, All Rights are Reserved',
-    ur: "کاپی رائٹ © 2024، جملہ حقوق محفوظ ہیں",
-    sd: "ڪاپي رائيٽ © 2024، سڀ حق محفوظ آهن",
+    en: '©️ 2024 Click. All rights reserved',
+    ur: "©️ 2024 کلک کریں۔ جملہ حقوق محفوظ ہیں",
+    sd:'©️ 2024 ڪلڪ ڪريو. سڀ حق محفوظ آهن'
   },
   'Powered': {
     en: 'Powered by Infoaccess',

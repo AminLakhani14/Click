@@ -72,6 +72,10 @@
   color: #054a91;
   position: relative;
   margin-bottom: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
 }
 
 .ReportRegulatoryDifficulties::before {
@@ -81,7 +85,6 @@
   position: absolute;
   background-color: #720d1d;
   top: 50px;
-  right: 39%;
   margin-bottom: 10px;
 }
 

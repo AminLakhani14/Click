@@ -227,7 +227,7 @@ const Dashboard = () => {
       {windowWidth <= 500 ? (
         <div></div>
       ) : (
-        <div style={{ height: "120px" }}></div>
+        <div style={{ height: "150px" }}></div>
       )}
       <div className="parent_con  px-md-5  px-2">
         <div className="statistics ">
@@ -432,12 +432,16 @@ const Dashboard = () => {
                         ? 300
                         : windowWidth >= 992 && windowWidth <= 1199
                           ? 300
-                          : windowWidth >= 1200 && windowWidth <= 1399
-                            ? 360
+                          : windowWidth > 1200 && windowWidth <= 1280
+                            ? 
+                            326:windowWidth > 1280 && windowWidth <= 1399
+                            ? 
+                            360:windowWidth >= 1400 && windowWidth < 1440
+                            ? 380
                             : windowWidth >= 1400 && windowWidth <= 1600
                               ? 400
                               : windowWidth > 1600
-                                ? 530
+                                ? 430
                                 : 350
                   }
                   width={
@@ -446,13 +450,16 @@ const Dashboard = () => {
                       : windowWidth >= 768 && windowWidth <= 991
                         ? 300
                         : windowWidth >= 992 && windowWidth <= 1199
-                          ? 300
-                          : windowWidth >= 1200 && windowWidth <= 1399
-                            ? 360
+                          ? 300:windowWidth > 1200 && windowWidth <= 1280
+                          ? 
+                          326
+                          : windowWidth > 1280 && windowWidth <= 1399
+                            ? 360:windowWidth >= 1400 && windowWidth < 1440
+                            ? 380
                             : windowWidth >= 1400 && windowWidth <= 1600
                               ? 400
                               : windowWidth > 1600
-                                ? 530
+                                ? 430
                                 : 350
                   }
                   position="bottom"

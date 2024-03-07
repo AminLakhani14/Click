@@ -76,7 +76,7 @@ function Team() {
   return (
     <>
       {windowWidth <= 500 ? <MobileHeaderGeneric /> : <GenericHeader />}
-      {windowWidth <= 500 ? <div></div> : <div className="" style={{ height: 110 }}></div>}
+      {windowWidth <= 500 ? <div></div> : <div className="" style={{ height: 150 }}></div>}
       <h1 className="highlightable Meet MeetourTeam" style={{ color: "whit" }}>
         Meet our Team
       </h1>

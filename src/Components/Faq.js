@@ -58,7 +58,7 @@ const Faq = () => {
             {windowWidth <= 500 ? (
                 <div></div>
             ) : (
-                <div style={{ height: "120px" }}></div>
+                <div style={{ height: "150px" }}></div>
             )}
             <div
                 className="col-lg-12"

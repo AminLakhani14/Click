@@ -494,7 +494,7 @@ function Header(props) {
             </div>
 
             <div
-              className="col-lg-9 col-md-6 col-sm-12 col-xs-12 r-side "
+              className="col-lg-9  col-sm-12 col-xs-12 r-side "
               style={{
                 display: "flex",
                 justifyContent: "end",
@@ -2112,7 +2112,7 @@ function Header(props) {
                 : {}
             }
           >
-            <div className="col-lg-7 col-md-6 col-sm-12 col-xs-12 marginTopHeader">
+            <div className="col-lg-7  col-sm-12 col-xs-12 marginTopHeader">
               <h1
                 className="hero-heading highlightable"
                 style={
@@ -2136,7 +2136,7 @@ function Header(props) {
                 : { textAlign: "inherit" }
             }
           >
-            <div className="col-lg-7 col-md-6 col-sm-12 col-xs-12">
+            <div className="col-lg-7  col-sm-11 col-xs-12">
               <h2 className="subHeroHeading highlightable">
                 {translations["subHeroHeading"][language]}
               </h2>
@@ -2149,7 +2149,7 @@ function Header(props) {
                 }
               >
                 <div
-                  className="col-lg-11 col-md-7 col-sm-7 col-xs-12 px-0"
+                  className="col-lg-11  col-sm-12 col-xs-12 px-0"
                   style={
                     language === "ur" || language === "sd"
                       ? { display: "flex", justifyContent: "end" }
