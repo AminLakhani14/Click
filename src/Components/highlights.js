@@ -69,7 +69,7 @@ function Highlights(props) {
               </div>
               <div className="verticalTabGrid1">
                 <div class="info">
-                  <a href="#" class="updateBtn">
+                  <a href="https://invest.gov.pk/eodb?language_id=en" class="updateBtn">
                     {translations["UpdatedData"][language]}
                   </a>
                 </div>
@@ -86,7 +86,7 @@ function Highlights(props) {
               </div>
               <div className="verticalTabGrid1">
                 <div class="info">
-                  <a href="#" class="updateBtn">
+                  <a href="https://invest.gov.pk/statistics?language_id=en" class="updateBtn">
                     {translations["UpdatedData"][language]}
                   </a>
                 </div>
@@ -107,7 +107,7 @@ function Highlights(props) {
               </div>
               <div className="verticalTabGrid1">
                 <div class="info">
-                  <a href="#" class="updateBtn">
+                  <a href="https://invest.gov.pk/investment-regime?language_id=en" class="updateBtn">
                     {translations["UpdatedData"][language]}
                   </a>
                 </div>
@@ -125,7 +125,7 @@ function Highlights(props) {
 
               <div className="verticalTabGrid1">
                 <div class="info">
-                  <a href="#" class="updateBtn">
+                  <a href="https://invest.gov.pk/sez?language_id=en" class="updateBtn">
                     {translations["UpdatedData"][language]}
                   </a>
                 </div>

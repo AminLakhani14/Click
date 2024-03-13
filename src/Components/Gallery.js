@@ -115,14 +115,16 @@ function Gallery(props) {
                   <div>
                     {" "}
                     <li className="card">
-                      <div className="img" style={{ width: "100px" }}>
-                        <img
-                          src={computer}
-                          alt="img"
-                          style={{ width: "92px", height: "74px" }}
-                          draggable="false"
-                        ></img>
-                      </div>
+                      <a href="https://business.gos.pk/#/contactUs" >
+                        <div className="img" style={{ width: "100px" }}>
+                          <img
+                            src={computer}
+                            alt="img"
+                            style={{ width: "92px", height: "74px" }}
+                            draggable="false"
+                          ></img>
+                        </div>
+                      </a>
                       <p
                         className="card__name highlightable"
                         style={{ marginBottom: "18px" }}
@@ -137,7 +139,7 @@ function Gallery(props) {
                     {" "}
                     <li className="card">
                       <Link to={"/feedback"} className="link">
-                        <div className="img">
+                        <div className="img" style={{ marginLeft: '30px' }} >
                           <img
                             src={feedback}
                             alt="img"
@@ -161,7 +163,7 @@ function Gallery(props) {
                         to={"/RegulatoryCatalogCalculator"}
                         className="link"
                       >
-                        <div className="img">
+                        <div className="img" style={{ marginLeft: '60px' }} >
                           <img
                             src={calculators}
                             alt="img"

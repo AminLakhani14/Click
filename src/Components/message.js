@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "../Css/wheeler.css";
 import "../Css/header.css";
-import CMsindh from "../assets/CMsindh.png";
+import CMsindh from "../assets/muradalishah.png";
 import SecretaryInvestment from "../assets/teamsPic/SecretaryInvestment.JPG";
 import mng2 from "../assets/teamsPic/anwarAli.jpg";
 import quote from "../assets/quote.png";
@@ -110,7 +110,7 @@ function Message(props) {
       id: "img4",
       img: CMsindh,
       name: {
-        en: "Justice (Rtd.) Maqbool Baqir",
+        en: "Murad Ali Shah",
         ur: "جسٹس (ر) مقبول باقر",
         sd: "جسٽس (رطس) مقبول باقر",
       },
