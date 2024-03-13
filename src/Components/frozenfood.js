@@ -6,7 +6,8 @@ import "../Css/investnow.css";
 import "../Css/textField.css";
 import agriAndFood from "../assets/agriAndFood.png";
 import MobileHeaderGeneric from "./MobileHeaderGeneric";
-import TextField from "@mui/material/TextField";
+
+import { TextField } from "@mui/material";
 import sindhAssembly from "../assets/sindhAssemblywomen.png";
 import frozenFood from "../assets/frozenFood.png";
 
@@ -346,7 +347,7 @@ function FrozenF(props) {
         >
           <div className="row">
             <div className="col-lg-4">
-              <div class="textField">
+              <div class="">
                 <TextField
                   id="outlined-controlled"
                   style={{ width: "100%" }}
@@ -357,7 +358,7 @@ function FrozenF(props) {
               </div>
             </div>
             <div className="col-lg-4">
-              <div class="textField">
+              <div class="">
                 <TextField
                   id="outlined-controlled"
                   style={{ width: "100%" }}
@@ -379,7 +380,7 @@ function FrozenF(props) {
           </div>
           <div className="row mt-4">
             <div className="col-lg-4">
-              <div class="textField">
+              <div class="">
                 <TextField
                   id="outlined-controlled"
                   style={{ width: "100%" }}
@@ -390,7 +391,7 @@ function FrozenF(props) {
               </div>
             </div>
             <div className="col-lg-4">
-              <div class="textField">
+              <div class="">
                 <TextField
                   id="outlined-controlled"
                   style={{ width: "100%" }}
@@ -401,7 +402,7 @@ function FrozenF(props) {
               </div>
             </div>
             <div className="col-lg-4">
-              <div class="textField">
+              <div class="">
                 <TextField
                   id="outlined-controlled"
                   style={{ width: "100%" }}
@@ -414,7 +415,7 @@ function FrozenF(props) {
           </div>
           <div className="row mt-4">
             <div className="col-lg-12">
-              <div class="textField">
+              <div class="">
                 <TextField
                   id="outlined-controlled"
                   size="small"

@@ -346,7 +346,7 @@ function Poultry(props) {
         >
           <div className="row">
             <div className="col-lg-4">
-              <div class="textField">
+              <div class="">
                 <TextField
                   id="outlined-controlled"
                   style={{ width: "100%" }}
@@ -357,7 +357,7 @@ function Poultry(props) {
               </div>
             </div>
             <div className="col-lg-4">
-              <div class="textField">
+              <div class="">
                 <TextField
                   id="outlined-controlled"
                   style={{ width: "100%" }}
@@ -379,7 +379,7 @@ function Poultry(props) {
           </div>
           <div className="row mt-4">
             <div className="col-lg-4">
-              <div class="textField">
+              <div class="">
                 <TextField
                   id="outlined-controlled"
                   style={{ width: "100%" }}
@@ -390,7 +390,7 @@ function Poultry(props) {
               </div>
             </div>
             <div className="col-lg-4">
-              <div class="textField">
+              <div class="">
                 <TextField
                   id="outlined-controlled"
                   style={{ width: "100%" }}
@@ -401,7 +401,7 @@ function Poultry(props) {
               </div>
             </div>
             <div className="col-lg-4">
-              <div class="textField">
+              <div class="">
                 <TextField
                   id="outlined-controlled"
                   style={{ width: "100%" }}
@@ -414,7 +414,7 @@ function Poultry(props) {
           </div>
           <div className="row mt-4">
             <div className="col-lg-12">
-              <div class="textField">
+              <div class="">
                 <TextField
                   id="outlined-controlled"
                   size="small"
