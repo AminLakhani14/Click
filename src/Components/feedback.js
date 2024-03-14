@@ -11,6 +11,7 @@ import { Button, FormControl, MenuItem, Select } from "@mui/material";
 import MobileHeaderGeneric from "./MobileHeaderGeneric";
 import FeedBackForm from "./FeedBackForm";
 import { getService } from "../utils/services";
+import OpportunitiesForm from "./OpportunitiesForm";
 
 export const Drop2Data = (value) => {
   let array = [];
@@ -1313,6 +1314,7 @@ export default function FeedBack() {
           </div>
         </div>
       </div>
+      <OpportunitiesForm/>
       <FeedBackForm />
       <Footer />
     </>

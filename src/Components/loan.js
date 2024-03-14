@@ -9,6 +9,7 @@ import MobileHeaderGeneric from "./MobileHeaderGeneric";
 import TextField from "@mui/material/TextField";
 import sindhAssembly from "../assets/sindhAssemblywomen.png";
 import loan from "../assets/loan.png";
+import OpportunitiesForm from "./OpportunitiesForm";
 
 
 function Loan(props) {
@@ -335,7 +336,7 @@ function Loan(props) {
           {" "}
           Contact Our Loan and Grant Facilitation Expert
         </label>
-        <div
+        {/* <div
           className="col-lg-12 "
           style={{
             height: "350px",
@@ -434,7 +435,8 @@ function Loan(props) {
               </button>
             </div>
           </div>
-        </div>
+        </div> */}
+        <OpportunitiesForm/>
       </div>
       <Footer />
     </>

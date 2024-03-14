@@ -12,6 +12,7 @@ import agricult from "../assets/agricult.png";
 import { useSelector } from "react-redux";
 import { translations } from "../Transalation/Transalation";
 import "../Css/resource.css";
+import OpportunitiesForm from "./OpportunitiesForm";
 
 function Agriculture(props) {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
@@ -350,148 +351,7 @@ function Agriculture(props) {
           {" "}
           Contact Our Agriculture and Food Processing Expert
         </label>
-        <div 
-          className="col-lg-12 sectorMUI"
-          style={{
-            background: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(${agricult})`,backgroundSize:window.innerWidth <= 500 ? "100% 100%": "cover",
-            height: window.innerWidth <= 500 ? "760px" :
-            window.innerWidth === 540? 700: 
-            window.innerWidth >= 768 && window.innerWidth <= 912? 
-            "700px":"600px", 
-            backgroundRepeat: "no-repeat",
-            marginTop: "-20px",
-            padding: "60px 60px 0px 60px",
-          }}
-        >
-          <div className="row sectornestedscreens"  style={{ marginTop:window.innerWidth >= 1024? "48px ":  "-16px" }}>
-            <div className="col-lg-4">
-              {/* <div class="textField"> */}
-                <TextField
-                  id="outlined-controlled"
-                  style={{ width: "100%" }}
-                  className="feedBackTextField"
-                  label="Name"
-                  size="small"
-                  InputProps={{
-                    style: { borderRadius: "30px", border: "none" }, // Remove the border
-                  }}
-                  placeholder="Enter your name"
-                />
-              {/* </div> */}
-            </div>
-            <div className="col-lg-4">
-              {/* <div class="textField"> */}
-                <TextField
-                  id="outlined-controlled"
-                  style={{ width: "100%" }}
-                  className="feedBackTextField"
-                  InputProps={{
-                    style: { borderRadius: "30px", border: "none" }, // Remove the border
-                  }}
-                  label="Company Name"
-                  size="small"
-                  placeholder="Enter your company name"
-                />
-              {/* </div> */}
-            </div>
-            <div className="col-lg-4">
-              <TextField
-                id="outlined-controlled"
-                style={{ width: "100%" }}
-                className="feedBackTextField"
-                label="Job Title"
-                InputProps={{
-                  style: { borderRadius: "30px", border: "none" }, // Remove the border
-                }}
-                size="small"
-                placeholder="Enter your job title"
-              />
-            </div>
-          </div>
-          <div className="row mt-4 sectornestedscreens">
-            <div className="col-lg-4">
-              {/* <div class="textField"> */}
-                <TextField
-                className="feedBackTextField"
-                  id="outlined-controlled"
-                  style={{ width: "100%" }}
-                  size="small"
-                  label="Email"
-                  InputProps={{
-                    style: { borderRadius: "30px", border: "none" }, // Remove the border
-                  }}
-                  placeholder="Enter your Email"
-                />
-              {/* </div> */}
-            </div>
-            <div className="col-lg-4">
-              {/* <div class="textField"> */}
-                <TextField
-                className="feedBackTextField"
-                  id="outlined-controlled"
-                  style={{ width: "100%" }}
-                  size="small"
-                  label="Phone"
-                  InputProps={{
-                    style: { borderRadius: "30px", border: "none" }, // Remove the border
-                  }}
-                  placeholder="92123567901"
-                />
-              {/* </div> */}
-            </div>
-            <div className="col-lg-4">
-              {/* <div class="textField"> */}
-                <TextField
-                className="feedBackTextField"
-                  id="outlined-controlled"
-                  style={{ width: "100%" }}
-                  size="small"
-                  InputProps={{
-                    style: { borderRadius: "30px", border: "none" }, // Remove the border
-                  }}
-                  label="Subject"
-                  placeholder="Write your feedback subject"
-                />
-              {/* </div> */}
-            </div>
-          </div>
-          <div className="row  sectornestedscreens" style={{marginTop:"0.3rem"}}>
-            <div className="col-lg-12 mt-4">
-              {/* <div class="textField"> */}
-                <TextField
-                  // id="fortextarea"
-                  size="small"
-                 className="feedBackTextField"
-                  style={{
-                    width: "100%",
-                    borderRadius: "38px",
-                    marginLeft:"0px",
-                    marginTop:"-4px",
-                  
-                  }}
-                  label="Message"
-                  multiline
-                  rows={4}
-                  InputProps={{
-                    style: { borderRadius: "30px", border: "none",   paddingTop:"10px", 
-                    paddingLeft:"20px", 
-                    paddingRight:"27px",
-                    
-                   }, // Remove the border
-                  }}
-                  placeholder="Write your feedback subject"
-                />
-              </div>
-            {/* </div> */}
-          </div>
-          <div className="row">
-            <div className="col-lg-12 mt-4 tocentersubmitbutton">
-              <button type="button" className="submitButton">
-                <span>Submit</span>
-              </button>
-            </div>
-          </div>
-        </div>
+      <OpportunitiesForm/>
       </div>
       <Footer />
     </>

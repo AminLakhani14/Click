@@ -130,7 +130,7 @@ export const tutorial = [
     tutorial: KMC_001,
     department: "Karachi Metropolitan Corporation (KMC)",
     thumbnail: KarachiMetopolitanCorporation,
-    length: 1,
+    length: 2,
   },
   {
     id: 13,

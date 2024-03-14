@@ -9,6 +9,7 @@ import MobileHeaderGeneric from "./MobileHeaderGeneric";
 import TextField from "@mui/material/TextField";
 import sindhAssembly from "../assets/sindhAssemblywomen.png";
 import Poult from "../assets/Poultry.png";
+import OpportunitiesForm from "./OpportunitiesForm";
 
 function Poultry(props) {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
@@ -335,7 +336,7 @@ function Poultry(props) {
           {" "}
           Contact Our Poultry Expert 
         </label>
-        <div
+        {/* <div
           className="col-lg-12 "
           style={{
             height: "350px",
@@ -434,7 +435,8 @@ function Poultry(props) {
               </button>
             </div>
           </div>
-        </div>
+        </div> */}
+        <OpportunitiesForm/>
       </div>
       <Footer />
     </>

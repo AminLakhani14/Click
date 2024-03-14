@@ -43,6 +43,7 @@ import BOR_001 from "../assets/tutorial/BOR-001.mp4";
 import DMC_001 from "../assets/tutorial/DMC-001.mp4";
 import KMC_001 from "../assets/tutorial/KMC-001.mp4";
 import NC_001 from "../assets/tutorial/NC-001.mp4";
+import KMC_013 from "../assets/tutorial/KMC-013.mp4";
 
 import { Link, useParams } from "react-router-dom";
 import sindhHealthcare from "../assets/thumbnail/sindhHealthcare.png";
@@ -320,6 +321,14 @@ export const videos = [
     department: "Agriculture Department",
     license:'License for Fertilizer Nutrients',
     thumbnail: AgricultureDepartment,
+    length: 1,
+  },
+  {
+    id: 36,
+    tutorial: KMC_013,
+    department: "Karachi Metropolitan Corporation (KMC)",
+    license:'License for Fertilizer Nutrients',
+    thumbnail: KarachiMetopolitanCorporation,
     length: 1,
   },
 ];

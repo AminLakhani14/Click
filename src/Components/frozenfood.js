@@ -10,6 +10,7 @@ import MobileHeaderGeneric from "./MobileHeaderGeneric";
 import { TextField } from "@mui/material";
 import sindhAssembly from "../assets/sindhAssemblywomen.png";
 import frozenFood from "../assets/frozenFood.png";
+import OpportunitiesForm from "./OpportunitiesForm";
 
 
 function FrozenF(props) {
@@ -336,7 +337,7 @@ function FrozenF(props) {
           {" "}
           Contact Our Frozen Food and Processing Expert
         </label>
-        <div
+        {/* <div
           className="col-lg-12 "
           style={{
             height: "350px",
@@ -435,7 +436,8 @@ function FrozenF(props) {
               </button>
             </div>
           </div>
-        </div>
+        </div> */}
+        <OpportunitiesForm/>
       </div>
       <Footer />
     </>
