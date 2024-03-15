@@ -581,8 +581,11 @@ justify-content: center;
   border: none;
   color: rgb(255, 255, 255);
   background: linear-gradient(180deg, #720d1d 0%, #1f0308 100%);
-  padding: 1px 10px 5px 10px;
+  /* padding: 1px 10px 5px 10px; */
   border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 @media screen and (max-width: 500px) {

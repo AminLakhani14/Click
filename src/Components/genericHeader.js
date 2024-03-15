@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Link, } from "react-router-dom";
 import "../Css/header.css";
 import sindh from "../assets/logo-sindh.png";
@@ -101,10 +101,39 @@ export default function GenericHeader(props) {
       pointAtCenter: true,
     };
   }, [arrow]);
+  const [isSearch, setisSearch] = useState(false)
+
+  const TooltipRef=useRef(null)
+  const handleClickSearch=()=>{
+    debugger
+    setisSearch(!isSearch)
+  }
+  
+  
+  
+  
+  const handleKeyDown = (event) => {
+    if (event.key === 'Enter' ) {
+      setisSearch(false); 
+      handleSearch()
+    }
+  };
+  
+  useEffect(() => {
+    const tooltipElement = TooltipRef.current; 
+    if (tooltipElement) {
+      tooltipElement.addEventListener('keydown', handleKeyDown);
+      return () => {
+        tooltipElement.removeEventListener('keydown', handleKeyDown);
+      };
+    }
+  },); 
+  
 
   const [searchInput, setSearchInput] = useState('');
   const SearchBox = (
     <div
+      ref={TooltipRef}
       className="d-flex justify-content-between"
       style={{ width: "325px", height: "60px", }}
     >
@@ -113,9 +142,15 @@ export default function GenericHeader(props) {
         id="searchText"
         style={{ width: "240px", maxWidth: "240px", height: "60px" }}
         value={searchInput}
-        onChange={(e) => setSearchInput(e.target.value)}
+        onChange={(e) =>{
+          setSearchInput(e.target.value)
+          handleSearch()
+        }}
       />
-      <button className="update" onClick={handleSearch}>Search</button>
+        <button className="update" onClick={()=>{
+        setisSearch(false)
+        handleSearch()
+      }}>Search</button>
     </div>
   );
 
@@ -319,12 +354,15 @@ export default function GenericHeader(props) {
                       title={SearchBox}
                       arrow={mergedArrow}
                       zIndex={9999}
+                      visible={isSearch}
                     >
-                      <i
-                        className="fa-sharp fa-solid fa-magnifying-glass"
-                        style={{ color: "#000000" }}
-                      ></i>
+                   
                     </Tooltip>
+                    <i
+                       onClick={handleClickSearch}
+                        className="fa-sharp fa-solid fa-magnifying-glass"
+                        style={{ color: "#000000",cursor:"pointer" }}
+                      ></i>
                   </a>
                 </li>
               </ul>

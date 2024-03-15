@@ -402,7 +402,7 @@ function Footer(props) {
                 <div className={windowWidth <= 1440 ? "col-lg-3 px-3" : "col-lg-2 "}>
                   <a href="comingsoon.html" className="comingsoon">
                     <button type="button" className="feedback ft-btn">
-                      <span>{translations["Newsletter"][language]}</span>
+                      <span className="highlightable">{translations["Newsletter"][language]}</span>
                     </button>
                   </a>
                 </div>

@@ -56,7 +56,7 @@ const updateCurrentIndex = (newIndex) => {
 };
 
 export const handleSearch = () => {
-  searchText = document.getElementById('searchText').value;
+  searchText = document.getElementById('searchText').value.toLowerCase(); 
   currentIndex = 0;
   matchIndices = []; // Reset matchIndices when searching again
   if (!searchText) {
@@ -65,22 +65,32 @@ export const handleSearch = () => {
     return;
   }
   const elements = document.getElementsByClassName('highlightable');
-
+  clearHighlights();
   for (const element of elements) {
-    const text = element.textContent || element.innerText;
+    const text = (element.textContent || element.innerText).toLowerCase(); 
     let matchIndex = text.indexOf(searchText);
+    let offset = 0;
 
     while (matchIndex !== -1) {
-      matchIndices.push({ element, index: matchIndex });
+      // Store each match index along with the corresponding element
+      matchIndices.push({ element, index: matchIndex + offset });
+      offset += matchIndex + searchText.length;
       matchIndex = text.indexOf(searchText, matchIndex + searchText.length);
     }
   }
 
   if (matchIndices.length > 0) {
-    // Highlight the first occurrence
-    updateCurrentIndex(0);
+    // Highlight all occurrences
+    for (const match of matchIndices) {
+      highlightMatch(match);
+    }
+  }
+  else {
+    // alert("0 results found for" + " " + searchText)
   }
 };
+
+
 
 export const clearHighlights = () => {
   const elements = document.getElementsByClassName('highlightable');

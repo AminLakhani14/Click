@@ -103,7 +103,7 @@ function Poultry(props) {
       </div>
       <div className="row breadCrumb">
         <div
-          style={{ display: "flex", justifyContent: "center", width: "100%" }}
+          style={{ display: "flex", justifyContent: "center", width: "100%" ,alignItems:'baseline',}}
         >
           <Link
             to={"/home"}

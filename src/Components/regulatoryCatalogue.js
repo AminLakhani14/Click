@@ -69,7 +69,23 @@ import SRB_001 from "../assets/tutorial/SRB-001.mp4";
 import SBCA_005 from "../assets/tutorial/SBCA-005.mp4";
 import NC_001 from "../assets/tutorial/NC-001.mp4";
 import KMC_001 from "../assets/tutorial/KMC-001.mp4";
+import KMC_013 from "../assets/tutorial/KMC-013.mp4";
+import KMC_022 from "../assets/tutorial/KMC-022.mp4";
+import KMC_019 from "../assets/tutorial/KMC-019.mp4";
+import KMC_017 from "../assets/tutorial/KMC-017.mp4";
+import KMC_016 from "../assets/tutorial/KMC-016.mp4";
+import KMC_021 from "../assets/tutorial/KMC-021.mp4";
+import KMC_005 from "../assets/tutorial/KMC-005.mp4";
+import KMC_NOC_FOR_SALE from "../assets/tutorial/KMC-NOC-for-sale.mp4";
 import DMC_001 from "../assets/tutorial/DMC-001.mp4";
+import ICD_012 from "../assets/tutorial/ICD-012.mp4";
+import ICD_015 from "../assets/tutorial/ICD-015.mp4";
+import ICD_014 from "../assets/tutorial/ICD-014.mp4";
+import ICD_023 from "../assets/tutorial/ICD-023.mp4";
+import ICD_009 from "../assets/tutorial/ICD-009.mp4";
+
+
+
 
 const arr = [
   {
@@ -1712,6 +1728,7 @@ const arr = [
       "W267+673, Estate Ave, SITE Industrial Area, Karachi, Sindh, Sindh Industrial Trading Estate",
     contactno: "(021) 99333152",
     rlcoID: "ICD-009",
+    video:ICD_009,
     details: "Collection of Additional Trade Fee",
     type: "Other",
     // prevailing: "By Laws",
@@ -1778,6 +1795,7 @@ const arr = [
     details: "NOC for Utilities (Electricity, Gas, Cable, PTCL)",
     type: "Other",
     prevailing: "By Laws",
+    video:ICD_012,
     // jurisdiction: "Sindh",
     timeLine: "14 days",
     fee: "",
@@ -1819,6 +1837,7 @@ const arr = [
       "W267+673, Estate Ave, SITE Industrial Area, Karachi, Sindh, Sindh Industrial Trading Estate",
     contactno: "(021) 99333152",
     rlcoID: "ICD-014",
+    video:ICD_014,
     details: "NOC for Road Cutting",
     type: "Other",
     prevailing: "By Laws",
@@ -1844,6 +1863,7 @@ const arr = [
     details: "NOC for car parking/ beautification",
     type: "Other",
     prevailing: "By Laws",
+    video:ICD_015,
     // jurisdiction: "Sindh",
     timeLine: "14 days",
     fee: "",
@@ -1992,6 +2012,7 @@ const arr = [
     rlcoID: "ICD-023",
     details: "Un- authorized Construction",
     type: "Other",
+    video:ICD_023,
     prevailing:
       "SSIC Act, 1972 \nBuilding By-laws/ Procedure for allotment of land/plot in the Small Industries Estate, 1985",
     // jurisdiction: "Sindh",
@@ -2203,6 +2224,7 @@ const arr = [
     rlcoID: "KMC-002",
     details: "NOC for Sale",
     type: "Other",
+    video:KMC_NOC_FOR_SALE,
     prevailing: "",
     // jurisdiction: "Karachi",
     timeLine: "15 days",
@@ -2254,6 +2276,7 @@ const arr = [
     rlcoID: "KMC-005",
     details: "Transfer/ Mutation of Land in Orangi Town",
     type: "Other",
+    video:KMC_005,
     prevailing: "",
     // jurisdiction: "Karachi",
     timeLine: "15 days",
@@ -2271,6 +2294,7 @@ const arr = [
     rlcoID: "KMC-006",
     details: "NOC for Sale",
     type: "Other",
+    video:KMC_NOC_FOR_SALE,
     prevailing: "",
     // jurisdiction: "Karachi",
     timeLine: "15 days",
@@ -2287,6 +2311,7 @@ const arr = [
     contactno: "(021) 99215125",
     rlcoID: "KMC-006",
     details: "NOC for Sale",
+    video:KMC_NOC_FOR_SALE,
     type: "Other",
     prevailing: "",
     // jurisdiction: "Karachi",
@@ -2441,6 +2466,7 @@ const arr = [
     contactno: "(021) 99215125",
     rlcoID: "KMC-012",
     details: "NOC for Sale",
+    video:KMC_NOC_FOR_SALE,
     type: "Other",
     prevailing: "",
     // jurisdiction: "Karachi",
@@ -2460,6 +2486,7 @@ const arr = [
     details: "NOC for Sale",
     type: "Other",
     prevailing: "",
+    video:KMC_NOC_FOR_SALE,
     // jurisdiction: "Karachi",
     timeLine: "15 Days",
     fee: "Commercial Rs.2000",
@@ -2474,6 +2501,7 @@ const arr = [
     address: "Adhumal Oodharam Quarter, Karachi, Karachi City, Sindh",
     contactno: "(021) 99215125",
     rlcoID: "KMC-013",
+    video:KMC_013,
     details: "NOC for Mortgage",
     type: "Other",
     prevailing: "",
@@ -2494,6 +2522,7 @@ const arr = [
     details: "NOC for Mortgage",
     type: "Other",
     prevailing: "",
+    video:KMC_013,
     // jurisdiction: "Karachi",
     timeLine: "15 Days",
     fee: "Residential Cum Commercial Rs.15,000",
@@ -2509,6 +2538,7 @@ const arr = [
     contactno: "(021) 99215125",
     rlcoID: "KMC-013",
     details: "NOC for Mortgage",
+    video:KMC_013,
     type: "Other",
     prevailing: "",
     // jurisdiction: "Karachi",
@@ -2576,6 +2606,7 @@ const arr = [
     address: "Adhumal Oodharam Quarter, Karachi, Karachi City, Sindh",
     contactno: "(021) 99215125",
     rlcoID: "KMC-016",
+    video:KMC_016,
     details:
       "Temporary NOC for Land use for beautification\noutside the premises of private property ",
     type: "Other",
@@ -2598,6 +2629,7 @@ const arr = [
       "Temporary NOC for temporary installation of\nGenerators outside the premises",
     type: "Other",
     prevailing: "",
+    video:KMC_017,
     // jurisdiction: "Karachi",
     timeLine: "15 Days",
     fee: "District Nort Rs.15000",
@@ -2616,6 +2648,7 @@ const arr = [
       "Temporary NOC for temporary installation of\nGenerators outside the premises",
     type: "Other",
     prevailing: "",
+    video:KMC_017,
     // jurisdiction: "Karachi",
     timeLine: "15 Days",
     fee: "District East Rs.10000",
@@ -2630,6 +2663,7 @@ const arr = [
     address: "Adhumal Oodharam Quarter, Karachi, Karachi City, Sindh",
     contactno: "(021) 99215125",
     rlcoID: "KMC-017",
+    video:KMC_017,
     details:
       "Temporary NOC for temporary installation of\nGenerators outside the premises",
     type: "Other",
@@ -2648,6 +2682,7 @@ const arr = [
     address: "Adhumal Oodharam Quarter, Karachi, Karachi City, Sindh",
     contactno: "(021) 99215125",
     rlcoID: "KMC-017",
+    video:KMC_017,
     details:
       "Temporary NOC for temporary installation of\nGenerators outside the premises",
     type: "Other",
@@ -2742,6 +2777,7 @@ const arr = [
     rlcoID: "KCM-019",
     details: "NOC for film and Ad shooting in Safari Park\nand Karachi Zoo",
     type: "Other",
+    video:KMC_019,
     prevailing: "",
     // jurisdiction: "Karachi",
     timeLine: "15 Days",
@@ -2760,6 +2796,7 @@ const arr = [
     details: "NOC for film and Ad shooting in Safari Park\nand Karachi Zoo",
     type: "Other",
     prevailing: "",
+    video:KMC_019,
     // jurisdiction: "Karachi",
     timeLine: "15 Days",
     fee: "Security Deposit Rs.25000",
@@ -2774,6 +2811,7 @@ const arr = [
     address: "Adhumal Oodharam Quarter, Karachi, Karachi City, Sindh",
     contactno: "(021) 99215125",
     rlcoID: "KCM-019",
+    video:KMC_019,
     details: "NOC for film and Ad shooting in Safari Park\nand Karachi Zoo",
     type: "Other",
     prevailing: "",
@@ -2794,6 +2832,7 @@ const arr = [
     details: "NOC for film and Ad shooting in Safari Park\nand Karachi Zoo",
     type: "Other",
     prevailing: "",
+    video:KMC_019,
     // jurisdiction: "Karachi",
     timeLine: "15 Days",
     fee: "Security Deposit Rs.50,000",
@@ -2811,6 +2850,7 @@ const arr = [
     details: "NOC for film and Ad shooting in Safari Park\nand Karachi Zoo",
     type: "Other",
     prevailing: "",
+    video:KMC_019,
     // jurisdiction: "Karachi",
     timeLine: "15 Days",
     fee: "Karachi Safari Park Rs.7,000",
@@ -2828,6 +2868,7 @@ const arr = [
     details: "NOC for film and Ad shooting in Safari Park\nand Karachi Zoo",
     type: "Other",
     prevailing: "",
+    video:KMC_019,
     // jurisdiction: "Karachi",
     timeLine: "15 Days",
     fee: "Secuirty Deposit Rs.25000",
@@ -2862,6 +2903,7 @@ const arr = [
     details: "Road Cutting Permission",
     type: "Other",
     prevailing: "",
+    video:KMC_021,
     // jurisdiction: "Karachi",
     timeLine: "15 Days",
     fee: "As per schedule",
@@ -2878,6 +2920,7 @@ const arr = [
     rlcoID: "KMC-022",
     details: "NOC for organizing temporary Bachat Bazars",
     type: "Other",
+    video:KMC_022,
     prevailing: "",
     // jurisdiction: "Karachi",
     timeLine: "15 Days",

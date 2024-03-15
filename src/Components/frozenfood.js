@@ -105,7 +105,7 @@ function FrozenF(props) {
       </div>
       <div className="row breadCrumb">
         <div
-          style={{ display: "flex", justifyContent: "center", width: "100%" }}
+          style={{ display: "flex",alignItems:'baseline', justifyContent: "center", width: "100%" }}
         >
           <Link
             to={"/home"}

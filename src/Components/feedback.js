@@ -1295,8 +1295,8 @@ export default function FeedBack() {
             <p
               className={
                 window.innerWidth <= 540
-                  ? "mobileparaforfeedback"
-                  : "feedbackpara col-8"
+                  ? "mobileparaforfeedback highlightable"
+                  : "feedbackpara col-8 highlightable"
               }
               style={{
                 fontSize:
@@ -1314,7 +1314,6 @@ export default function FeedBack() {
           </div>
         </div>
       </div>
-      <OpportunitiesForm/>
       <FeedBackForm />
       <Footer />
     </>

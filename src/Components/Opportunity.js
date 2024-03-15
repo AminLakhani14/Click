@@ -164,6 +164,7 @@ function Opportunity() {
           display: "flex",
           flexDirection: "column",
           justifyContent: "center",
+          alignItems:'baseline',
           alignItems: "center",
           textAlign: "center",
           paddingTop: "35px",

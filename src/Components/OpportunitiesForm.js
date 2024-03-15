@@ -6,6 +6,7 @@ import { Formik, Field } from "formik";
 import * as Yup from "yup";
 import { postService } from "../utils/services";
 import { Toaster, Toastersuccess } from "./Toaster";
+import { ToastContainer } from 'react-toastify';
 
 const OpportunitiesForm = () => {
     const [isloading, setisloading] = useState(false);
@@ -36,8 +37,6 @@ const OpportunitiesForm = () => {
     };
     return (
         <>
-
-
             <div
                 className="col-lg-12 "
                 style={{
@@ -102,7 +101,7 @@ const OpportunitiesForm = () => {
                     }) => (
 
                         <form onSubmit={handleSubmit}>
-                            <div className="row">
+                            <div className="row align-items-baseline">
                                 <div className="col-lg-4">
                                     <div class="">
                                         <TextField
@@ -148,7 +147,7 @@ const OpportunitiesForm = () => {
                                     />
                                 </div>
                             </div>
-                            <div className="row mt-4">
+                            <div className="row align-items-baseline mt-4">
                                 <div className="col-lg-4">
                                     <div class="">
                                         <TextField
@@ -256,6 +255,7 @@ const OpportunitiesForm = () => {
                     )}
                 </Formik>
 
+                <ToastContainer />
             </div>
         </>
     )

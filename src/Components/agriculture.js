@@ -110,7 +110,7 @@ function Agriculture(props) {
       </div>
       <div className="row breadCrumb">
         <div
-          style={{ display: "flex", justifyContent: "center", width: "100%", flexDirection:(window.innerWidth>= 280) && (window.innerWidth <=320)? "column": "row" }}
+          style={{ display: "flex", justifyContent: "center", alignItems:'baseline',width: "100%", flexDirection:(window.innerWidth>= 280) && (window.innerWidth <=320)? "column": "row" }}
         >
           <Link
             to={"/home"}

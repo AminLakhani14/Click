@@ -110,9 +110,9 @@ function Message(props) {
       id: "img4",
       img: CMsindh,
       name: {
-        en: "Murad Ali Shah",
-        ur: "جسٹس (ر) مقبول باقر",
-        sd: "جسٽس (رطس) مقبول باقر",
+        en: "Syed Murad Ali Shah",
+        ur:"سید مراد علی شاہ",
+        sd:"سيد مراد علي شاھ"
       },
       subtitle: {
         en: "Chief Minister of Sindh",

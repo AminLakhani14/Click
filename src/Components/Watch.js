@@ -44,6 +44,21 @@ import DMC_001 from "../assets/tutorial/DMC-001.mp4";
 import KMC_001 from "../assets/tutorial/KMC-001.mp4";
 import NC_001 from "../assets/tutorial/NC-001.mp4";
 import KMC_013 from "../assets/tutorial/KMC-013.mp4";
+import KMC_005 from "../assets/tutorial/KMC-005.mp4";
+import KMC_022 from "../assets/tutorial/KMC-022.mp4";
+import KMC_019 from "../assets/tutorial/KMC-019.mp4";
+import KMC_017 from "../assets/tutorial/KMC-017.mp4";
+import KMC_016 from "../assets/tutorial/KMC-016.mp4";
+import KMC_021 from "../assets/tutorial/KMC-021.mp4";
+import KMC_NOC_FOR_SALE from "../assets/tutorial/KMC-NOC-for-sale.mp4";
+import ICD_012 from "../assets/tutorial/ICD-012.mp4";
+import ICD_015 from "../assets/tutorial/ICD-015.mp4";
+import ICD_014 from "../assets/tutorial/ICD-014.mp4";
+import ICD_023 from "../assets/tutorial/ICD-023.mp4";
+import ICD_009 from "../assets/tutorial/ICD-009.mp4";
+
+
+
 
 import { Link, useParams } from "react-router-dom";
 import sindhHealthcare from "../assets/thumbnail/sindhHealthcare.png";
@@ -59,6 +74,7 @@ import DistrictMunicipalCorporation from "../assets/thumbnail/DistrictMunicipalC
 import KarachiMetopolitanCorporation from "../assets/thumbnail/KarachiMetopolitanCorporation.png";
 import ExcieseTaxationAndNarcotics from "../assets/thumbnail/ExcieseTaxationAndNarcotics.png";
 import AgricultureDepartment from "../assets/thumbnail/AgricultureDepartment.png";
+import sindhIndustrialTradingEstateAgency from "../assets/thumbnail/sindhIndustrialTradingEstateAgency.png";
 
 
 
@@ -167,21 +183,29 @@ export const videos = [
   },
   {
     id: 15,
-    tutorial: licenseToSaleDrugByWholeSale,
+    tutorial: ICD_012,
+    department: "Sindh Industrial Trading Estate (S.I.T.E) Limited",
+    license:'NOC For Utilities',
+    thumbnail: sindhIndustrialTradingEstateAgency,
+    length: 1,
+  },
+  {
+    id: 16,
+    tutorial: LIcensetosaledrugbytretail,
     department: "Health Department",
     license: "License to sell Drugs by Way of Retail Sale (Form-6)",
     thumbnail: healthDepartment,
   },
   {
-    id: 16,
-    tutorial: LIcensetosaledrugbytretail,
+    id: 17,
+    tutorial: licenseToSaleDrugByWholeSale,
     department: "Health Department",
     license: "License to sell Drugs by Way of Wholesale 7A",
     thumbnail: healthDepartment,
   },
 
   {
-    id: 17,
+    id: 18,
     tutorial: ICD_002,
     department: "Industries and Commerce Department",
     license: "Registration Certificate of Amendment/Dissolution /Rectification in Partnership Firm",
@@ -189,7 +213,7 @@ export const videos = [
   },
 
   {
-    id: 18,
+    id: 19,
     tutorial: Ld_002,
     department: "Labour Department",
     license: "Registration of Factories",
@@ -198,125 +222,125 @@ export const videos = [
   },
 
   {
-    id: 19,
+    id: 20,
     tutorial: ICD_003,
     department: "Industries and Commerce Department",
     license: "Registration of New Boiler",
     thumbnail: IndustriesAndCommerceDepartment,
   },
   {
-    id: 20,
+    id: 21,
     tutorial: ICD_004,
     department: "Industries and Commerce Department",
     license: "Registration of Old Boiler",
     thumbnail: IndustriesAndCommerceDepartment,
   },
   {
-    id: 21,
+    id: 22,
     tutorial: ICD_005,
     department: "Industries and Commerce Department",
     license: "Approval of Plan and Particulars of Boilers Acceptable for Registration (New Boiler)",
     thumbnail: IndustriesAndCommerceDepartment,
   },
   {
-    id: 22,
+    id: 23,
     tutorial: ICD_006,
     department: "Industries and Commerce Department",
     license: "Approval of Plan and Particulars of Boilers Acceptable for Registration (Used Boiler)",
     thumbnail: IndustriesAndCommerceDepartment,
   },
   {
-    id: 23,
+    id: 24,
     tutorial: ICD_007,
     department: "Industries and Commerce Department",
     license: "Transfer of Ownership",
     thumbnail: IndustriesAndCommerceDepartment,
   },
   {
-    id: 24,
+    id: 25,
     tutorial: SBCA_007,
     department: "Sindh Building Control Authority (SBCA)",
     license: "Attestation Of Fee",
     thumbnail: sindhbuildingcontrol,
   }, {
-    id: 25,
+    id: 26,
     tutorial: SBCA_002,
     department: "Sindh Building Control Authority (SBCA)",
     license: "Notice of Completion (I-IV)",
     thumbnail: sindhbuildingcontrol,
   },
   {
-    id: 26,
+    id: 27,
     tutorial: SBCA_003,
     department: "Sindh Building Control Authority (SBCA)",
     license: "ADditional Floor Charges For Category I Betterment Charges For Category(II, III & IV)",
     thumbnail: sindhbuildingcontrol,
   },
   {
-    id: 27,
+    id: 28,
     tutorial: SBCA_001_B,
     department: "Sindh Building Control Authority (SBCA)",
     license: "Approval Of Building Plan For Category (II, III & IV)",
     thumbnail: sindhbuildingcontrol,
   },
   {
-    id: 28,
+    id: 29,
     tutorial: SBCA_004,
     department: "Sindh Building Control Authority (SBCA)",
     license: "Renewal of Building Plan for Category (I To IV)",
     thumbnail: sindhbuildingcontrol,
   },
   {
-    id: 29,
+    id: 30,
     tutorial: SBCA_005,
     department: "Sindh Building Control Authority (SBCA)",
     license: "Addition / Alteration / Revision of Building Plan for Category (I To IV)",
     thumbnail: sindhbuildingcontrol,
   },
   {
-    id: 30,
+    id: 31,
     tutorial: sepa_003,
     department: "Sindh Environmental Protection Agency (SEPA)",
     license: "Approval Under Section 17 (IEE,EIA,EC)",
     thumbnail: sindhEnviromentalProtection,
   },
   {
-    id: 31,
+    id: 32,
     tutorial: ICD_016,
     department: "Industries and Commerce Department",
     license: "Allotment Order",
     thumbnail: IndustriesAndCommerceDepartment,
   },
   {
-    id: 32,
+    id: 33,
     tutorial: ICD_008A,
     department: "Industries and Commerce Department",
     license: "Allotment Order Of Land",
     thumbnail: IndustriesAndCommerceDepartment,
   },
   {
-    id: 33,
+    id: 34,
     tutorial: sepa_004,
     department: "Sindh Environmental Protection Agency (SEPA)",
     license: "Approval of an Environmental Management Plan",
     thumbnail: sindhEnviromentalProtection,
   },
   {
-    id: 34,
+    id: 35,
     tutorial: sepa_005,
     department: "Sindh Environmental Protection Agency (SEPA)",
     license: "Certification of Environmental Plan",
     thumbnail: sindhEnviromentalProtection,
   },
   {
-    id: 35,
+    id: 36,
     tutorial: sepa_006,
     department: "Sindh Environmental Protection Agency (SEPA)",
     license: "Approval of Hospital Waste Management Plan",
     thumbnail: sindhEnviromentalProtection,
   },
   {
-    id: 36,
+    id: 37,
     tutorial: AD_002,
     department: "Agriculture Department",
     license:'License for Fertilizer Nutrients',
@@ -324,10 +348,98 @@ export const videos = [
     length: 1,
   },
   {
-    id: 36,
+    id: 38,
     tutorial: KMC_013,
     department: "Karachi Metropolitan Corporation (KMC)",
     license:'License for Fertilizer Nutrients',
+    thumbnail: KarachiMetopolitanCorporation,
+    length: 1,
+  },
+  {
+    id: 39,
+    tutorial: KMC_022,
+    department: "Karachi Metropolitan Corporation (KMC)",
+    license:'NOC for organizing temporary Bachat Bazars',
+    thumbnail: KarachiMetopolitanCorporation,
+    length: 1,
+  },
+  {
+    id: 40,
+    tutorial: KMC_019,
+    department: "Karachi Metropolitan Corporation (KMC)",
+    license:'NOC For Film',
+    thumbnail: KarachiMetopolitanCorporation,
+    length: 1,
+  },
+  {
+    id: 41,
+    tutorial: KMC_017,
+    department: "Karachi Metropolitan Corporation (KMC)",
+    license:"Temporary NOC for temporary installation of\nGenerators outside the premises",
+    thumbnail: KarachiMetopolitanCorporation,
+    length: 1,
+  },
+  {
+    id: 42,
+    tutorial: KMC_021,
+    department: "Karachi Metropolitan Corporation (KMC)",
+    license:"Road Cutting Permission",
+    thumbnail: KarachiMetopolitanCorporation,
+    length: 1,
+  },
+  {
+    id: 43,
+    tutorial: KMC_NOC_FOR_SALE,
+    department: "Karachi Metropolitan Corporation (KMC)",
+    license:"NOC For Sale",
+    thumbnail: KarachiMetopolitanCorporation,
+    length: 1,
+  },
+  {
+    id: 44,
+    tutorial: ICD_015,
+    department: "Sindh Industrial Trading Estate (S.I.T.E) Limited",
+    license:'NOC For Beautification Or Car Parking',
+    thumbnail: sindhIndustrialTradingEstateAgency,
+    length: 1,
+  },
+  {
+    id: 45,
+    tutorial: ICD_014,
+    department: "Sindh Industrial Trading Estate (S.I.T.E) Limited",
+    license:'NOC For Road Cutting',
+    thumbnail: sindhIndustrialTradingEstateAgency,
+    length: 1,
+  },
+  {
+    id: 46,
+    tutorial: ICD_023,
+    department: "Sindh Industrial Trading Estate (S.I.T.E) Limited",
+    license:'Approval For UnAuthorized Construction',
+    thumbnail: sindhIndustrialTradingEstateAgency,
+    length: 1,
+  },
+  {
+    id: 47,
+    tutorial: KMC_016,
+    department: "Karachi Metropolitan Corporation (KMC)",
+    license:"NOC For Land Use",
+    thumbnail: KarachiMetopolitanCorporation,
+    length: 1,
+  },
+  {
+    id: 48,
+    tutorial: ICD_009,
+    department: "Sindh Industrial Trading Estate (S.I.T.E) Limited",
+    license:'Collection of Additional Trade Fee',
+    thumbnail: sindhIndustrialTradingEstateAgency,
+    length: 1,
+  },
+  {
+    id: 49,
+    tutorial: KMC_005,
+    department: "Karachi Metropolitan Corporation (KMC)",
+    license:"Transfer / Mutuation Of Land in Orangi Town",
     thumbnail: KarachiMetopolitanCorporation,
     length: 1,
   },

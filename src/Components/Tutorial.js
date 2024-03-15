@@ -9,6 +9,7 @@ import healthVideo from "../assets/tutorial/healthDepartment.mp4";
 import schooleDepartmentVideo from "../assets/tutorial/schoolEducationAndLiteracyDepartment.mp4";
 import sindhHealthcarevideo from "../assets/tutorial/sindhHealthcare.mp4";
 import ICD_001 from "../assets/tutorial/ICD-001.mp4";
+import ICD_012 from "../assets/tutorial/ICD-012.mp4";
 import AD_001 from "../assets/tutorial/AD-001.mp4";
 import Ld_001 from "../assets/tutorial/led-001.mp4";
 import sepa_001 from "../assets/tutorial/sepa-001.mp4";
@@ -34,6 +35,7 @@ import DistrictMunicipalCorporation from "../assets/thumbnail/DistrictMunicipalC
 import KarachiMetopolitanCorporation from "../assets/thumbnail/KarachiMetopolitanCorporation.png";
 import ExcieseTaxationAndNarcotics from "../assets/thumbnail/ExcieseTaxationAndNarcotics.png";
 import SindhMasterPlan from "../assets/thumbnail/SindhMasterPlan.png";
+import sindhIndustrialTradingEstateAgency from "../assets/thumbnail/sindhIndustrialTradingEstateAgency.png";
 
 const {
   parent_container,
@@ -130,7 +132,7 @@ export const tutorial = [
     tutorial: KMC_001,
     department: "Karachi Metropolitan Corporation (KMC)",
     thumbnail: KarachiMetopolitanCorporation,
-    length: 2,
+    length: 9,
   },
   {
     id: 13,
@@ -145,6 +147,13 @@ export const tutorial = [
     department: "Agriculture Department",
     thumbnail: AgricultureDepartment,
     length: 2,
+  },
+  {
+    id: 15,
+    tutorial: ICD_012,
+    department: "Sindh Industrial Trading Estate (S.I.T.E) Limited",
+    thumbnail: sindhIndustrialTradingEstateAgency,
+    length: 5,
   },
   // This department is not adding in regulatory catalog
 

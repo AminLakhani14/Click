@@ -1018,7 +1018,7 @@ const FeedBackForm = () => {
             >
               <form onSubmit={handleSubmit}>
                 <div
-                  className="row g-0 "
+                  className="row g-0 align-items-baseline "
                   style={{ width: "100%", }}
                 >
                   <Fade left>
@@ -1076,7 +1076,7 @@ const FeedBackForm = () => {
                     </div>
                   </Fade>
                 </div>
-                <div className="row g-0" style={{ width: "100%" }}>
+                <div className="row align-items-baseline g-0" style={{ width: "100%" }}>
                   <Fade left>
                     <div className="col-md-6 col-12">
                       <h4>Country / City</h4>
@@ -1120,7 +1120,7 @@ const FeedBackForm = () => {
                     </div>
                   </Fade>
                 </div>
-                <div className="row g-0" style={{ width: "100%" }}>
+                <div className="row g-0 align-items-baseline" style={{ width: "100%" }}>
                   <Fade left>
                     <div className="col-md-6 col-12">
                       <h4>Email</h4>
